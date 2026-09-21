@@ -420,11 +420,12 @@ async def list_oauth_providers():
     return {"status": "success", "providers": providers}
 
 @app.get("/api/v1/oauth/{provider}/authorize")
-async def oauth_authorize(provider: str, request: Request, redirect: Optional[int] = 0):
+async def oauth_authorize(provider: str, request: Request, redirect: Optional[int] = 0, sandbox: Optional[int] = None):
     user = require_auth(request)
     base_url = get_base_url_from_request(request)
     try:
-        data = build_authorization_url(provider, user["id"], base_url)
+        force_sb = bool(sandbox) if sandbox is not None else None
+        data = build_authorization_url(provider, user["id"], base_url, force_sandbox=force_sb)
         if redirect:
             return RedirectResponse(data["auth_url"])
         return {"status": "success", **data}
@@ -432,6 +433,32 @@ async def oauth_authorize(provider: str, request: Request, redirect: Optional[in
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Hiba az OAuth indításakor: {str(e)}")
+
+@app.post("/api/v1/oauth/{provider}/setup")
+async def oauth_setup_credentials(provider: str, req: OAuthAppConfigRequest, request: Request):
+    user = require_auth(request)
+    prov = provider.lower()
+    spec = get_provider_details(prov)
+    if not spec:
+        raise HTTPException(status_code=404, detail=f"Ismeretlen szolgáltató: {provider}")
+
+    save_oauth_app_config(
+        provider=prov,
+        client_id=req.client_id.strip(),
+        client_secret=req.client_secret.strip() if req.client_secret else "",
+        scopes=req.scopes.strip() if req.scopes else spec["default_scopes"],
+        sandbox_mode=req.sandbox_mode,
+        is_enabled=req.is_enabled
+    )
+
+    base_url = get_base_url_from_request(request)
+    auth_data = build_authorization_url(prov, user["id"], base_url, force_sandbox=req.sandbox_mode)
+    return {
+        "status": "success",
+        "message": f"{spec['name']} OAuth adatok elmentve!",
+        "auth_url": auth_data["auth_url"],
+        "is_sandbox": auth_data["is_sandbox"]
+    }
 
 @app.get("/api/v1/oauth/{provider}/callback")
 async def oauth_callback(

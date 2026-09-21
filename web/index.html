@@ -640,6 +640,88 @@
     </div>
   </div>
 
-  <script src="/static/app.js?v=2.1.0"></script>
+  <!-- 5. Interactive OAuth Connect Modal -->
+  <div id="modal-oauth-connect" class="modal-overlay" style="display: none;" onclick="handleOverlayClick(event, 'modal-oauth-connect')">
+    <div class="modal-container modal-md">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="oauth-modal-title">🔐 OAuth 2.0 Összekapcsolás</h3>
+          <p class="modal-subtitle" id="oauth-modal-subtitle">Hivatalos fiók csatlakoztatása az automatizációkhoz</p>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('modal-oauth-connect')">✕</button>
+      </div>
+
+      <div class="modal-body modal-scroll">
+        <input type="hidden" id="oauth-active-provider" value="">
+
+        <!-- Ready to redirect state (when Client ID is already present) -->
+        <div id="oauth-ready-box" style="display: none;">
+          <div class="vault-hero-box" style="margin-bottom: 16px;">
+            <div class="vault-hero-icon" id="oauth-ready-icon">⚡</div>
+            <div class="vault-hero-text">
+              <h4 id="oauth-ready-title">Készen áll az átirányításra!</h4>
+              <p id="oauth-ready-desc">Kattintson az alábbi gombra a hivatalos szolgáltatói engedélyezési ablak megnyitásához.</p>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary btn-block btn-lg" id="btn-oauth-direct-launch" onclick="executeOAuthRedirect()" style="padding: 14px; font-size: 15px;">
+            🚀 Átirányítás a Hivatalos Bejelentkezési Oldalra ↗
+          </button>
+        </div>
+
+        <!-- Needs setup state (when Client ID is missing) -->
+        <div id="oauth-setup-box" style="display: none;">
+          <div class="auth-info-note" style="margin-bottom: 14px;">
+            💡 <strong>Valódi fiók összekapcsolásához</strong> szükséges a szolgáltató által kiadott <code>Client ID</code> és <code>Client Secret</code>. Illessze be alább, vagy válassza a közvetlen szimulációt!
+          </div>
+
+          <div class="form-group" style="margin-bottom: 12px;">
+            <label style="font-size: 12px;">Authorized Redirect URI (Másolja be a fejlesztői felületre):</label>
+            <div class="redirect-uri-box">
+              <span class="redirect-uri-text" id="oauth-modal-redirect-uri">https://...</span>
+              <button type="button" class="btn-copy-sm" onclick="copyModalRedirectUri(this)">Másolás</button>
+            </div>
+          </div>
+
+          <form id="form-oauth-quick-setup" onsubmit="handleOAuthQuickSetup(event)">
+            <div class="form-group">
+              <label>Client ID (Alkalmazás azonosító) *</label>
+              <input type="text" id="modal-client-id" class="form-control" placeholder="pl. 123456...apps.googleusercontent.com vagy Ov23..." required>
+            </div>
+            <div class="form-group">
+              <label>Client Secret (Titkos kulcs) *</label>
+              <div class="password-wrapper">
+                <input type="password" id="modal-client-secret" class="form-control" placeholder="Google / GitHub titkos kulcs" required>
+                <button type="button" class="btn-toggle-eye" onclick="togglePasswordVisibility(this)">👁️</button>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-lg" id="btn-modal-save-oauth">
+              💾 Mentés & Azonnali Átirányítás az OAuth-ra ↗
+            </button>
+          </form>
+        </div>
+
+        <!-- Sandbox Simulation Card (Always available) -->
+        <div class="oauth-app-card" style="margin-top: 20px; border-color: rgba(59, 130, 246, 0.3); background: rgba(15, 23, 42, 0.6);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <strong style="color: #60a5fa; font-size: 13px;">🧪 Azonnali Szimulált Csatlakozás (Sandbox)</strong>
+            <span class="badge badge-needs_setup">Gyors Bemutató</span>
+          </div>
+          <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+            Kipróbálná a rendszert fejlesztői fiók létrehozása nélkül? Egyetlen kattintással összekapcsolhatja szimulált fiókkal, így mind a 62 automatizációs modul azonnal működőképes lesz.
+          </p>
+          <button type="button" class="btn btn-outline btn-block" onclick="executeOAuthSandbox()" id="btn-modal-sandbox-launch" style="border-color: rgba(59, 130, 246, 0.4); color: #93c5fd;">
+            ⚡ Szimulált Csatlakozás Most (1 Kattintás)
+          </button>
+        </div>
+
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn btn-outline" onclick="closeModal('modal-oauth-connect')">Bezárás</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js?v=2.2.0"></script>
 </body>
 </html>

@@ -71,7 +71,7 @@ OAUTH_PROVIDERS = {
 def get_provider_details(provider: str) -> Optional[Dict[str, Any]]:
     return OAUTH_PROVIDERS.get(provider.lower())
 
-def build_authorization_url(provider: str, user_id: int, base_url: str) -> Dict[str, Any]:
+def build_authorization_url(provider: str, user_id: int, base_url: str, force_sandbox: Optional[bool] = None) -> Dict[str, Any]:
     prov = provider.lower()
     spec = get_provider_details(prov)
     if not spec:
@@ -82,23 +82,33 @@ def build_authorization_url(provider: str, user_id: int, base_url: str) -> Dict[
     state = create_oauth_state(user_id=user_id, provider=prov, redirect_uri=redirect_uri)
 
     client_id = config.get("client_id", "") if config else ""
-    sandbox_mode = config.get("sandbox_mode", True) if config else True
+    has_valid_client_id = bool(client_id and not client_id.startswith("123456789") and "mock" not in client_id.lower() and "testapps" not in client_id.lower())
+
+    if force_sandbox is not None:
+        sandbox_mode = force_sandbox
+    else:
+        sandbox_mode = config.get("sandbox_mode", True) if config else True
+
     scopes = (config.get("scopes") or spec["default_scopes"]) if config else spec["default_scopes"]
 
-    # Ha a szuper admin még nem konfigurált éles Client ID-t, vagy sandbox mód van bekapcsolva,
-    # vagy mock / teszt azonosító szerepel, akkor azonnali működőképes sandbox módot biztosítunk!
-    if sandbox_mode or not client_id or "testapps" in client_id.lower() or "mock" in client_id.lower() or client_id.startswith("123456789"):
+    # 1. Ha sandbox módot kérünk vagy nincs még érvényes Client ID
+    if sandbox_mode or not has_valid_client_id:
         sandbox_code = f"mock_code_{prov}_{secrets.token_hex(8)}"
         auth_url = f"{redirect_uri}?code={sandbox_code}&state={state}&sandbox=1"
         return {
             "auth_url": auth_url,
             "provider": prov,
+            "provider_name": spec["name"],
+            "icon": spec["icon"],
             "is_sandbox": True,
+            "has_client_id": has_valid_client_id,
+            "client_id": client_id,
+            "redirect_uri": redirect_uri,
             "state": state,
-            "message": "Sandbox mód aktív (azonnali bemutató és tesztelési lehetőség)."
+            "message": "Sandbox mód aktív."
         }
 
-    # Valós OAuth 2.0 Authorization URL felépítése
+    # 2. Valós OAuth 2.0 Authorization URL felépítése
     params = {
         "client_id": client_id,
         "redirect_uri": redirect_uri,
@@ -117,9 +127,14 @@ def build_authorization_url(provider: str, user_id: int, base_url: str) -> Dict[
     return {
         "auth_url": auth_url,
         "provider": prov,
+        "provider_name": spec["name"],
+        "icon": spec["icon"],
         "is_sandbox": False,
+        "has_client_id": True,
+        "client_id": client_id,
+        "redirect_uri": redirect_uri,
         "state": state,
-        "message": "Átirányítás a hivatalos szolgáltatói jóváhagyó képernyőre."
+        "message": f"Átirányítás a hivatalos {spec['name']} jóváhagyó képernyőre."
     }
 
 def exchange_code_for_tokens(provider: str, code: str, redirect_uri: str, user_id: int) -> Dict[str, Any]:

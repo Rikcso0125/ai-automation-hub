@@ -689,40 +689,93 @@ def list_all_oauth_apps_config() -> List[Dict[str, Any]]:
         return result
 
 def create_oauth_state(user_id: int, provider: str, redirect_uri: str) -> str:
-    state = secrets.token_urlsafe(32)
     now = datetime.now()
-    expires = now + timedelta(minutes=15)
-    with sqlite3.connect(DB_PATH) as conn:
-        cursor = conn.cursor()
-        cursor.execute("""
-            INSERT INTO oauth_states (state, user_id, provider, redirect_uri, created_at, expires_at)
-            VALUES (?, ?, ?, ?, ?, ?)
-        """, (state, user_id, provider, redirect_uri, now.isoformat(), expires.isoformat()))
-        conn.commit()
-    return state
+    exp_ts = int((now + timedelta(minutes=20)).timestamp())
+    payload = {
+        "uid": user_id,
+        "prov": provider,
+        "uri": redirect_uri,
+        "exp": exp_ts,
+        "rnd": secrets.token_hex(8)
+    }
+    p_bytes = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    p_b64 = base64.urlsafe_b64encode(p_bytes).decode("utf-8").rstrip("=")
+    sig = hmac.new(SESSION_SECRET_KEY, p_b64.encode("utf-8"), hashlib.sha256).hexdigest()
+    signed_state = f"{p_b64}.{sig}"
+
+    # Also log to SQLite for local tracking
+    try:
+        with sqlite3.connect(DB_PATH) as conn:
+            cursor = conn.cursor()
+            cursor.execute("""
+                INSERT INTO oauth_states (state, user_id, provider, redirect_uri, created_at, expires_at)
+                VALUES (?, ?, ?, ?, ?, ?)
+            """, (signed_state, user_id, provider, redirect_uri, now.isoformat(), (now + timedelta(minutes=20)).isoformat()))
+            conn.commit()
+    except Exception as e:
+        print(f"create_oauth_state DB note: {e}")
+
+    return signed_state
 
 def verify_and_consume_oauth_state(state: str) -> Optional[Dict[str, Any]]:
-    with sqlite3.connect(DB_PATH) as conn:
-        conn.row_factory = sqlite3.Row
-        cursor = conn.cursor()
-        cursor.execute("SELECT * FROM oauth_states WHERE state = ?", (state,))
-        row = cursor.fetchone()
-        if not row:
-            return None
-        cursor.execute("DELETE FROM oauth_states WHERE state = ?", (state,))
-        conn.commit()
+    if not state:
+        return None
 
-        # Check expiry
-        now_str = datetime.now().isoformat()
-        if row["expires_at"] < now_str:
-            return None
+    # 1. Stateless HMAC-SHA256 State Ellenőrzés (Vercel Serverless független!)
+    if "." in state:
+        try:
+            parts = state.split(".", 1)
+            if len(parts) == 2:
+                p_b64, sig = parts
+                expected_sig = hmac.new(SESSION_SECRET_KEY, p_b64.encode("utf-8"), hashlib.sha256).hexdigest()
+                if secrets.compare_digest(sig, expected_sig):
+                    padded_b64 = p_b64 + "=" * ((4 - len(p_b64) % 4) % 4)
+                    payload = json.loads(base64.urlsafe_b64decode(padded_b64.encode("utf-8")).decode("utf-8"))
+                    now_ts = datetime.now().timestamp()
+                    if payload.get("exp", 0) > now_ts:
+                        # Töröljük a helyi DB-ből ha létezik
+                        try:
+                            with sqlite3.connect(DB_PATH) as conn:
+                                cursor = conn.cursor()
+                                cursor.execute("DELETE FROM oauth_states WHERE state = ?", (state,))
+                                conn.commit()
+                        except Exception:
+                            pass
+                        return {
+                            "state": state,
+                            "user_id": payload["uid"],
+                            "provider": payload["prov"],
+                            "redirect_uri": payload.get("uri", "")
+                        }
+        except Exception as ex:
+            print(f"Stateless state decode note: {ex}")
 
-        return {
-            "state": row["state"],
-            "user_id": row["user_id"],
-            "provider": row["provider"],
-            "redirect_uri": row["redirect_uri"]
-        }
+    # 2. SQLite fallback
+    try:
+        with sqlite3.connect(DB_PATH) as conn:
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM oauth_states WHERE state = ?", (state,))
+            row = cursor.fetchone()
+            if not row:
+                return None
+            cursor.execute("DELETE FROM oauth_states WHERE state = ?", (state,))
+            conn.commit()
+
+            now_str = datetime.now().isoformat()
+            if row["expires_at"] < now_str:
+                return None
+
+            return {
+                "state": row["state"],
+                "user_id": row["user_id"],
+                "provider": row["provider"],
+                "redirect_uri": row["redirect_uri"]
+            }
+    except Exception as e:
+        print(f"DB state lookup note: {e}")
+
+    return None
 
 def update_vault_credentials(integration_id: int, new_credentials: Dict[str, Any]) -> None:
     now = datetime.now().isoformat()

@@ -53,6 +53,7 @@ function setupGlobalEvents() {
       closeModal('modal-log-detail');
       closeModal('modal-auth');
       closeModal('modal-integrations');
+      closeModal('modal-oauth-connect');
       closeModal('modal-admin-clients');
       closeModal('modal-admin-client-details');
     }
@@ -1647,6 +1648,8 @@ function checkOAuthRedirectParams() {
   }
 }
 
+let currentOAuthData = null;
+
 async function startOAuthFlow(provider) {
   if (!currentUser) {
     openAuthModal('login');
@@ -1654,21 +1657,156 @@ async function startOAuthFlow(provider) {
     return;
   }
 
-  showToast(`Átirányítás ${provider.toUpperCase()} OAuth 2.0 hitelesítéshez...`, 'info', 2000);
+  showToast(`OAuth 2.0 opciók betöltése (${provider.toUpperCase()})...`, 'info', 1500);
 
   try {
     const res = await fetch(`/api/v1/oauth/${provider}/authorize`, {
       headers: getAuthHeaders(false)
     });
     const data = await res.json();
-    if (res.ok && data.auth_url) {
-      window.location.href = data.auth_url;
-    } else {
-      showToast(data.detail || 'Nem sikerült elindítani az OAuth folyamatot.', 'error');
+    if (!res.ok || data.status !== 'success') {
+      showToast(data.detail || data.message || 'Nem sikerült lekérni az OAuth adatokat.', 'error');
+      return;
     }
+
+    currentOAuthData = data;
+    const provInput = document.getElementById('oauth-active-provider');
+    if (provInput) provInput.value = provider;
+
+    const titleEl = document.getElementById('oauth-modal-title');
+    if (titleEl) titleEl.innerHTML = `${data.icon || '⚡'} ${escapeHtml(data.provider_name || provider.toUpperCase())} Összekapcsolása`;
+
+    const redUriEl = document.getElementById('oauth-modal-redirect-uri');
+    if (redUriEl) redUriEl.innerText = data.redirect_uri || '';
+
+    const readyBox = document.getElementById('oauth-ready-box');
+    const setupBox = document.getElementById('oauth-setup-box');
+
+    if (data.has_client_id) {
+      if (readyBox) readyBox.style.display = 'block';
+      if (setupBox) setupBox.style.display = 'none';
+      const iconEl = document.getElementById('oauth-ready-icon');
+      if (iconEl) iconEl.innerText = data.icon || '⚡';
+      const rTitle = document.getElementById('oauth-ready-title');
+      if (rTitle) rTitle.innerText = "Készen áll a hivatalos belépésre!";
+      const rDesc = document.getElementById('oauth-ready-desc');
+      if (rDesc) rDesc.innerText = `Kattintson az alábbi gombra a hivatalos ${data.provider_name} jóváhagyási ablak megnyitásához.`;
+    } else {
+      if (readyBox) readyBox.style.display = 'none';
+      if (setupBox) setupBox.style.display = 'block';
+      const cIdInput = document.getElementById('modal-client-id');
+      if (cIdInput) cIdInput.value = data.client_id || '';
+      const cSecInput = document.getElementById('modal-client-secret');
+      if (cSecInput) cSecInput.value = '';
+    }
+
+    const modal = document.getElementById('modal-oauth-connect');
+    if (modal) modal.style.display = 'flex';
+
   } catch (err) {
     showToast(`Hálózati hiba: ${err.message}`, 'error');
   }
+}
+
+function executeOAuthRedirect() {
+  if (!currentOAuthData || !currentOAuthData.provider) return;
+  showToast(`Átirányítás a hivatalos ${currentOAuthData.provider_name || 'OAuth'} oldalra... 🚀`, 'info', 2500);
+
+  fetch(`/api/v1/oauth/${currentOAuthData.provider}/authorize?sandbox=0`, {
+    headers: getAuthHeaders(false)
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.auth_url) {
+      window.location.href = data.auth_url;
+    } else {
+      showToast(data.detail || 'Nem sikerült átirányítani az OAuth oldalra.', 'error');
+    }
+  })
+  .catch(err => showToast(`Hiba: ${err.message}`, 'error'));
+}
+
+async function executeOAuthSandbox() {
+  if (!currentOAuthData || !currentOAuthData.provider) return;
+  const btn = document.getElementById('btn-modal-sandbox-launch');
+  if (btn) {
+    btn.innerText = 'Szimulált csatlakozás folyamatban... ⏳';
+    btn.disabled = true;
+  }
+
+  try {
+    const res = await fetch(`/api/v1/oauth/${currentOAuthData.provider}/authorize?sandbox=1`, {
+      headers: getAuthHeaders(false)
+    });
+    const data = await res.json();
+    if (res.ok && data.auth_url) {
+      closeModal('modal-oauth-connect');
+      showToast(`🧪 Sandbox szimuláció elindítva...`, 'info', 1500);
+      window.location.href = data.auth_url;
+    } else {
+      if (btn) { btn.innerText = '⚡ Szimulált Csatlakozás Most (1 Kattintás)'; btn.disabled = false; }
+      showToast(data.detail || 'Hiba a sandbox indításakor.', 'error');
+    }
+  } catch (err) {
+    if (btn) { btn.innerText = '⚡ Szimulált Csatlakozás Most (1 Kattintás)'; btn.disabled = false; }
+    showToast(`Hiba: ${err.message}`, 'error');
+  }
+}
+
+async function handleOAuthQuickSetup(event) {
+  event.preventDefault();
+  if (!currentOAuthData || !currentOAuthData.provider) return;
+  const provider = currentOAuthData.provider;
+  const client_id = document.getElementById('modal-client-id').value.trim();
+  const client_secret = document.getElementById('modal-client-secret').value.trim();
+  const btn = document.getElementById('btn-modal-save-oauth');
+
+  if (!client_id || !client_secret) {
+    showToast("Kérjük, adja meg a Client ID és Client Secret mezőket!", 'warning');
+    return;
+  }
+
+  btn.innerText = 'Mentés és átirányítás... ⏳';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(`/api/v1/oauth/${provider}/setup`, {
+      method: 'POST',
+      headers: getAuthHeaders(true),
+      body: JSON.stringify({
+        client_id,
+        client_secret,
+        sandbox_mode: false,
+        is_enabled: true
+      })
+    });
+
+    const data = await res.json();
+    if (res.ok && data.auth_url) {
+      showToast(`Adatok mentve! Átirányítás a hivatalos oldalra... 🚀`, 'success', 2000);
+      setTimeout(() => {
+        window.location.href = data.auth_url;
+      }, 500);
+    } else {
+      btn.innerText = '💾 Mentés & Azonnali Átirányítás az OAuth-ra ↗';
+      btn.disabled = false;
+      showToast(data.detail || 'Hiba az adatok mentésekor.', 'error');
+    }
+  } catch (err) {
+    btn.innerText = '💾 Mentés & Azonnali Átirányítás az OAuth-ra ↗';
+    btn.disabled = false;
+    showToast(`Hálózati hiba: ${err.message}`, 'error');
+  }
+}
+
+function copyModalRedirectUri(btn) {
+  const uriEl = document.getElementById('oauth-modal-redirect-uri');
+  const uri = uriEl ? uriEl.innerText : '';
+  navigator.clipboard.writeText(uri).then(() => {
+    const orig = btn.innerText;
+    btn.innerText = '✓ Másolva';
+    setTimeout(() => { btn.innerText = orig; }, 1500);
+  });
 }
 
 function switchAdminTab(tab) {
