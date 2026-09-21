@@ -3,7 +3,7 @@ import os
 import json
 from pathlib import Path
 from typing import Dict, Any, List, Optional
-from core.execution_logger import get_module_config
+from core.execution_logger import get_module_config, get_tenant_module_config
 
 BASE_MODULES_DIR = Path(__file__).resolve().parent.parent / "modules"
 
@@ -15,7 +15,7 @@ CATEGORY_NAMES = {
     "muszaki": "5. Gyártás & Műszaki"
 }
 
-def scan_modules() -> List[Dict[str, Any]]:
+def scan_modules(user_id: Optional[int] = None) -> List[Dict[str, Any]]:
     modules = []
     if not BASE_MODULES_DIR.exists():
         return modules
@@ -53,7 +53,8 @@ def scan_modules() -> List[Dict[str, Any]]:
                     default_config[prop_name] = prop_data["default"]
 
             saved_config = get_module_config(module_id)
-            effective_config = {**default_config, **saved_config}
+            tenant_config = get_tenant_module_config(user_id, module_id) if user_id else {}
+            effective_config = {**default_config, **saved_config, **tenant_config}
 
             # Ellenőrizzük a kötelező mezők kitöltöttségét
             required_fields = schema.get("required", [])
@@ -104,8 +105,8 @@ def scan_modules() -> List[Dict[str, Any]]:
     modules.sort(key=lambda m: (m["category"], m["title"]))
     return modules
 
-def get_module_by_id(module_id: str) -> Optional[Dict[str, Any]]:
-    for m in scan_modules():
+def get_module_by_id(module_id: str, user_id: Optional[int] = None) -> Optional[Dict[str, Any]]:
+    for m in scan_modules(user_id=user_id):
         if m["id"] == module_id or Path(m["dir_path"]).name == module_id:
             return m
     return None

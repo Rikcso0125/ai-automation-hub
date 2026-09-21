@@ -2,12 +2,12 @@
 import time
 import importlib.util
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 from core.module_registry import get_module_by_id
 from core.execution_logger import log_execution, get_module_config
 
-async def dispatch_event(module_id: str, payload: Dict[str, Any]) -> Dict[str, Any]:
-    module_info = get_module_by_id(module_id)
+async def dispatch_event(module_id: str, payload: Dict[str, Any], tenant_user_id: Optional[int] = None) -> Dict[str, Any]:
+    module_info = get_module_by_id(module_id, user_id=tenant_user_id)
     if not module_info:
         raise ValueError(f"Ismeretlen modul azonosító: {module_id}")
 

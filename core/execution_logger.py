@@ -45,11 +45,314 @@ def init_db():
                     updated_at TEXT NOT NULL
                 )
             """)
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS users (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    email TEXT UNIQUE NOT NULL,
+                    password_hash TEXT NOT NULL,
+                    salt TEXT NOT NULL,
+                    full_name TEXT NOT NULL,
+                    company_name TEXT NOT NULL,
+                    phone TEXT,
+                    role TEXT NOT NULL DEFAULT 'client',
+                    created_at TEXT NOT NULL,
+                    last_login TEXT
+                )
+            """)
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS user_sessions (
+                    token TEXT PRIMARY KEY,
+                    user_id INTEGER NOT NULL,
+                    created_at TEXT NOT NULL,
+                    expires_at TEXT NOT NULL,
+                    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+                )
+            """)
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS integrations_vault (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    user_id INTEGER NOT NULL,
+                    service_type TEXT NOT NULL,
+                    service_name TEXT NOT NULL,
+                    credentials_json TEXT NOT NULL,
+                    status TEXT NOT NULL DEFAULT 'connected',
+                    notes TEXT,
+                    updated_at TEXT NOT NULL,
+                    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+                )
+            """)
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS tenant_module_configs (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    user_id INTEGER NOT NULL,
+                    module_id TEXT NOT NULL,
+                    config_json TEXT NOT NULL,
+                    is_active INTEGER DEFAULT 1,
+                    updated_at TEXT NOT NULL,
+                    UNIQUE(user_id, module_id),
+                    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+                )
+            """)
             conn.commit()
     except Exception as e:
         print(f"Warning: could not init_db: {e}")
 
 init_db()
+
+# --- Password & Security Helpers ---
+import hashlib
+import secrets
+from datetime import timedelta
+
+def hash_password(password: str, salt: Optional[str] = None) -> tuple:
+    if not salt:
+        salt = secrets.token_hex(16)
+    pwd_hash = hashlib.pbkdf2_hmac(
+        'sha256',
+        password.encode('utf-8'),
+        salt.encode('utf-8'),
+        100000
+    ).hex()
+    return pwd_hash, salt
+
+def verify_password(password: str, stored_hash: str, salt: str) -> bool:
+    pwd_hash, _ = hash_password(password, salt)
+    return secrets.compare_digest(pwd_hash, stored_hash)
+
+# --- User Management ---
+def create_user(email: str, password: str, full_name: str, company_name: str, phone: str = "", role: str = "client") -> Dict[str, Any]:
+    email = email.lower().strip()
+    full_name = full_name.strip()
+    company_name = company_name.strip()
+    
+    with sqlite3.connect(DB_PATH) as conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT id FROM users WHERE email = ?", (email,))
+        if cursor.fetchone():
+            raise ValueError(f"Ezzel az email címmel ('{email}') már regisztráltak!")
+
+        pwd_hash, salt = hash_password(password)
+        now = datetime.now().isoformat()
+        cursor.execute("""
+            INSERT INTO users (email, password_hash, salt, full_name, company_name, phone, role, created_at, last_login)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, (email, pwd_hash, salt, full_name, company_name, phone, role, now, now))
+        conn.commit()
+        user_id = cursor.lastrowid
+        return {
+            "id": user_id,
+            "email": email,
+            "full_name": full_name,
+            "company_name": company_name,
+            "phone": phone,
+            "role": role
+        }
+
+def authenticate_user(email: str, password: str) -> Optional[Dict[str, Any]]:
+    email = email.lower().strip()
+    with sqlite3.connect(DB_PATH) as conn:
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM users WHERE email = ?", (email,))
+        row = cursor.fetchone()
+        if not row:
+            return None
+
+        if verify_password(password, row["password_hash"], row["salt"]):
+            now = datetime.now().isoformat()
+            cursor.execute("UPDATE users SET last_login = ? WHERE id = ?", (now, row["id"]))
+            conn.commit()
+            return {
+                "id": row["id"],
+                "email": row["email"],
+                "full_name": row["full_name"],
+                "company_name": row["company_name"],
+                "phone": row["phone"],
+                "role": row["role"],
+                "created_at": row["created_at"],
+                "last_login": now
+            }
+        return None
+
+def create_session(user_id: int, duration_days: int = 30) -> str:
+    token = secrets.token_urlsafe(32)
+    now = datetime.now()
+    expires_at = (now + timedelta(days=duration_days)).isoformat()
+    with sqlite3.connect(DB_PATH) as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT INTO user_sessions (token, user_id, created_at, expires_at)
+            VALUES (?, ?, ?, ?)
+        """, (token, user_id, now.isoformat(), expires_at))
+        conn.commit()
+    return token
+
+def get_user_by_session(token: str) -> Optional[Dict[str, Any]]:
+    if not token:
+        return None
+    with sqlite3.connect(DB_PATH) as conn:
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT u.id, u.email, u.full_name, u.company_name, u.phone, u.role, u.created_at, u.last_login
+            FROM user_sessions s
+            JOIN users u ON s.user_id = u.id
+            WHERE s.token = ? AND s.expires_at > ?
+        """, (token, datetime.now().isoformat()))
+        row = cursor.fetchone()
+        if row:
+            return dict(row)
+        return None
+
+def delete_session(token: str):
+    if not token:
+        return
+    with sqlite3.connect(DB_PATH) as conn:
+        cursor = conn.cursor()
+        cursor.execute("DELETE FROM user_sessions WHERE token = ?", (token,))
+        conn.commit()
+
+def list_all_clients() -> List[Dict[str, Any]]:
+    with sqlite3.connect(DB_PATH) as conn:
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT u.id, u.email, u.full_name, u.company_name, u.phone, u.role, u.created_at, u.last_login,
+                   (SELECT COUNT(*) FROM integrations_vault iv WHERE iv.user_id = u.id) AS integration_count,
+                   (SELECT COUNT(*) FROM tenant_module_configs tmc WHERE tmc.user_id = u.id AND tmc.is_active = 1) AS active_modules_count
+            FROM users u
+            ORDER BY u.id DESC
+        """)
+        rows = cursor.fetchall()
+        return [dict(r) for r in rows]
+
+def get_client_by_id(user_id: int) -> Optional[Dict[str, Any]]:
+    with sqlite3.connect(DB_PATH) as conn:
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT id, email, full_name, company_name, phone, role, created_at, last_login
+            FROM users WHERE id = ?
+        """, (user_id,))
+        row = cursor.fetchone()
+        return dict(row) if row else None
+
+# Seed default super admin
+def seed_super_admin():
+    try:
+        with sqlite3.connect(DB_PATH) as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT id FROM users WHERE role = 'superadmin'")
+            if not cursor.fetchone():
+                create_user(
+                    email="admin@automationhub.ai",
+                    password="Admin2026!Secure",
+                    full_name="Központi Rendszergazda",
+                    company_name="AI Automation Hub HQ",
+                    phone="+36301234567",
+                    role="superadmin"
+                )
+                print(">>> Default Super Admin created: admin@automationhub.ai (Password: Admin2026!Secure)")
+    except Exception as e:
+        print(f"seed_super_admin notice: {e}")
+
+seed_super_admin()
+
+# --- Integrations Vault (Client Third-party Credentials) ---
+def save_user_integration(user_id: int, service_type: str, service_name: str,
+                          credentials: Dict[str, Any], status: str = "connected", notes: str = "") -> int:
+    now = datetime.now().isoformat()
+    with sqlite3.connect(DB_PATH) as conn:
+        cursor = conn.cursor()
+        # Check if service of this type already exists for user
+        cursor.execute("""
+            SELECT id FROM integrations_vault
+            WHERE user_id = ? AND service_type = ?
+        """, (user_id, service_type))
+        row = cursor.fetchone()
+        if row:
+            cursor.execute("""
+                UPDATE integrations_vault
+                SET service_name = ?, credentials_json = ?, status = ?, notes = ?, updated_at = ?
+                WHERE id = ?
+            """, (service_name, json.dumps(credentials, ensure_ascii=False), status, notes, now, row[0]))
+            conn.commit()
+            return row[0]
+        else:
+            cursor.execute("""
+                INSERT INTO integrations_vault (user_id, service_type, service_name, credentials_json, status, notes, updated_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+            """, (user_id, service_type, service_name, json.dumps(credentials, ensure_ascii=False), status, notes, now))
+            conn.commit()
+            return cursor.lastrowid
+
+def get_user_integrations(user_id: int, hide_secrets: bool = False) -> List[Dict[str, Any]]:
+    with sqlite3.connect(DB_PATH) as conn:
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT * FROM integrations_vault
+            WHERE user_id = ?
+            ORDER BY id ASC
+        """, (user_id,))
+        rows = cursor.fetchall()
+        result = []
+        for r in rows:
+            creds = json.loads(r["credentials_json"]) if r["credentials_json"] else {}
+            if hide_secrets:
+                masked_creds = {}
+                for k, v in creds.items():
+                    if isinstance(v, str) and len(v) > 6:
+                        masked_creds[k] = v[:3] + "..." + v[-3:]
+                    else:
+                        masked_creds[k] = "******"
+                creds = masked_creds
+            result.append({
+                "id": r["id"],
+                "service_type": r["service_type"],
+                "service_name": r["service_name"],
+                "credentials": creds,
+                "status": r["status"],
+                "notes": r["notes"],
+                "updated_at": r["updated_at"]
+            })
+        return result
+
+def delete_user_integration(user_id: int, integration_id: int):
+    with sqlite3.connect(DB_PATH) as conn:
+        cursor = conn.cursor()
+        cursor.execute("DELETE FROM integrations_vault WHERE id = ? AND user_id = ?", (integration_id, user_id))
+        conn.commit()
+
+# --- Tenant Module Configurations ---
+def save_tenant_module_config(user_id: int, module_id: str, config: Dict[str, Any], is_active: bool = True):
+    now = datetime.now().isoformat()
+    with sqlite3.connect(DB_PATH) as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT INTO tenant_module_configs (user_id, module_id, config_json, is_active, updated_at)
+            VALUES (?, ?, ?, ?, ?)
+            ON CONFLICT(user_id, module_id) DO UPDATE SET
+                config_json = excluded.config_json,
+                is_active = excluded.is_active,
+                updated_at = excluded.updated_at
+        """, (user_id, module_id, json.dumps(config, ensure_ascii=False), 1 if is_active else 0, now))
+        conn.commit()
+
+def get_tenant_module_config(user_id: int, module_id: str) -> Dict[str, Any]:
+    with sqlite3.connect(DB_PATH) as conn:
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT config_json, is_active FROM tenant_module_configs
+            WHERE user_id = ? AND module_id = ?
+        """, (user_id, module_id))
+        row = cursor.fetchone()
+        if row:
+            cfg = json.loads(row["config_json"])
+            cfg["_is_active"] = bool(row["is_active"])
+            return cfg
+        return {}
 
 def log_execution(module_id: str, status: str, duration_ms: int,
                   input_payload: Any, output_payload: Any, error_message: Optional[str] = None) -> int:

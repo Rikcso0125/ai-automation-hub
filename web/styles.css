@@ -1420,3 +1420,441 @@ textarea.form-control {
     align-self: flex-end;
   }
 }
+
+/* ==========================================================================
+   Multi-Tenant User System, Integrations Vault & Super Admin Styles
+   ========================================================================== */
+
+/* --- Navbar User Area --- */
+.nav-user-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  color: var(--text-main);
+}
+
+.user-badge.admin {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+.user-role-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.user-role-badge.admin {
+  background: var(--warning-light);
+  color: var(--warning);
+}
+
+.btn-vault {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.3);
+  color: #93c5fd;
+}
+
+.btn-vault:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* --- Super Admin Active Tenant Banner --- */
+.active-tenant-banner {
+  background: linear-gradient(90deg, #3d1b06 0%, #1e1b4b 100%);
+  border-bottom: 2px solid var(--warning);
+  padding: 10px 24px;
+  position: sticky;
+  top: 57px;
+  z-index: 95;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  animation: bannerSlideDown 0.25s ease-out;
+}
+
+@keyframes bannerSlideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.tenant-banner-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.tenant-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tenant-badge {
+  background: var(--warning);
+  color: #000;
+  font-weight: 800;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.5px;
+}
+
+.tenant-desc {
+  font-size: 13px;
+  color: #fef08a;
+}
+
+.tenant-desc strong {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tenant-banner-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-exit-tenant {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fca5a5;
+}
+
+.btn-exit-tenant:hover {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+}
+
+/* --- Form Utilities --- */
+.form-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* --- Auth Modal Enhancements --- */
+.auth-demo-box {
+  background: #080d1a;
+  border: 1px dashed rgba(59, 130, 246, 0.4);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  margin-top: 14px;
+}
+
+.auth-demo-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #93c5fd;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.auth-demo-item {
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: 4px 6px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  margin-bottom: 2px;
+}
+
+.auth-demo-item:hover {
+  background: rgba(59, 130, 246, 0.15);
+  color: #fff;
+}
+
+.auth-demo-item code {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1px 4px;
+  border-radius: 3px;
+  color: #67e8f9;
+  font-family: var(--font-mono);
+}
+
+.auth-info-note {
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 3px solid var(--success);
+  padding: 10px 12px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 12px;
+  color: #a7f3d0;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* --- Integrations Vault Styles --- */
+.vault-hero-box {
+  display: flex;
+  gap: 16px;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.vault-hero-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.vault-hero-text h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.vault-hero-text p {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.vault-section-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.vault-connected-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.vault-card {
+  background: #0d1322;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+}
+
+.vault-card:hover {
+  border-color: var(--primary);
+  background: #111a2e;
+}
+
+.vault-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.vault-card-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vault-card-body {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.vault-card-field {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  font-size: 11.5px;
+}
+
+.vault-field-key {
+  color: var(--text-subtle);
+}
+
+.vault-field-val {
+  font-family: var(--font-mono);
+  color: #93c5fd;
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vault-preset-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.preset-chip {
+  background: #0f172a;
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.preset-chip:hover {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: var(--primary);
+}
+
+.preset-chip.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.vault-add-box {
+  background: #090d16;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+}
+
+.vault-fields-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* --- Super Admin Clients Table --- */
+.admin-search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.admin-clients-table th, .admin-clients-table td {
+  padding: 10px 14px;
+  font-size: 12.5px;
+}
+
+.client-status-pill {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+}
+
+.client-actions-cell {
+  display: flex;
+  gap: 6px;
+}
+
+/* --- Credentials Inspector View --- */
+.cred-box {
+  background: #0a0f1d;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.cred-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cred-box-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cred-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-size: 12px;
+  gap: 10px;
+}
+
+.cred-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.cred-val-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cred-val {
+  font-family: var(--font-mono);
+  color: #67e8f9;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  word-break: break-all;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tenant-banner-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tenant-banner-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .vault-fields-container {
+    grid-template-columns: 1fr;
+  }
+}

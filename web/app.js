@@ -5,13 +5,29 @@
 
 let allModules = [];
 let allLogs = [];
+let allAdminClients = [];
 let currentCategory = 'all';
 let currentStatusFilter = 'all';
 let currentActiveModule = null;
 
+// Multi-tenant Auth & Tenant State
+let authToken = localStorage.getItem('hub_auth_token') || null;
+let currentUser = null;
+let activeTenant = null; // Set when Super Admin enters a client's environment
+let selectedPresetKey = 'gmail';
+
+// --- Auth Headers Helper ---
+function getAuthHeaders(includeJson = true) {
+  const headers = {};
+  if (includeJson) headers['Content-Type'] = 'application/json';
+  if (authToken) headers['Authorization'] = `Bearer ${authToken}`;
+  return headers;
+}
+
 // --- Initialize App ---
-function initHub() {
+async function initHub() {
   console.log("⚡ AI Automation Hub inicializálása...");
+  await checkAuthStatus();
   loadStats();
   loadModules();
   setupGlobalEvents();
@@ -30,6 +46,10 @@ function setupGlobalEvents() {
       closeModal('modal-wizard');
       closeModal('modal-logs');
       closeModal('modal-log-detail');
+      closeModal('modal-auth');
+      closeModal('modal-integrations');
+      closeModal('modal-admin-clients');
+      closeModal('modal-admin-client-details');
     }
   });
 }
@@ -86,7 +106,11 @@ async function loadStats() {
 async function loadModules() {
   const container = document.getElementById('modules-grid');
   try {
-    const res = await fetch('/api/v1/modules');
+    let url = '/api/v1/modules';
+    if (activeTenant) {
+      url += `?client_id=${activeTenant.id}`;
+    }
+    const res = await fetch(url, { headers: getAuthHeaders(false) });
     if (!res.ok) throw new Error(`HTTP hiba: ${res.status}`);
     allModules = await res.json();
 
@@ -266,8 +290,13 @@ function resetFilters() {
 async function toggleModuleActive(moduleId, event) {
   event.stopPropagation();
   try {
-    const res = await fetch(`/api/v1/modules/${moduleId}/toggle`, {
-      method: 'POST'
+    let url = `/api/v1/modules/${moduleId}/toggle`;
+    if (activeTenant) {
+      url += `?client_id=${activeTenant.id}`;
+    }
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: getAuthHeaders(true)
     });
     const result = await res.json();
     if (result.status === 'success') {
@@ -579,9 +608,13 @@ async function saveCurrentConfig(event) {
   btn.disabled = true;
 
   try {
-    const res = await fetch(`/api/v1/modules/${currentActiveModule.id}/config`, {
+    let url = `/api/v1/modules/${currentActiveModule.id}/config`;
+    if (activeTenant) {
+      url += `?client_id=${activeTenant.id}`;
+    }
+    const res = await fetch(url, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: getAuthHeaders(true),
       body: JSON.stringify({ config, is_active: isActive })
     });
 
@@ -601,7 +634,7 @@ async function saveCurrentConfig(event) {
       loadModules();
       loadStats();
     } else {
-      showToast(`Hiba a mentés során: ${result.error}`, 'error');
+      showToast(`Hiba a mentés során: ${result.error || result.detail || 'Ismeretlen hiba'}`, 'error');
     }
   } catch (err) {
     btn.innerText = '💾 Beállítások Mentése';
@@ -640,9 +673,13 @@ async function runLiveTest() {
   viewer.style.color = '#38bdf8';
 
   try {
-    const res = await fetch(`/api/v1/modules/${currentActiveModule.id}/test`, {
+    let url = `/api/v1/modules/${currentActiveModule.id}/test`;
+    if (activeTenant) {
+      url += `?client_id=${activeTenant.id}`;
+    }
+    const res = await fetch(url, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: getAuthHeaders(true),
       body: JSON.stringify(payload)
     });
 
@@ -772,4 +809,762 @@ function openLogDetailModal(idx) {
   }
   const modal = document.getElementById('modal-log-detail');
   if (modal) modal.style.display = 'flex';
+}
+
+// ==========================================================================
+// Multi-Tenant User System, Integrations Vault & Super Admin Controller
+// ==========================================================================
+
+function escapeHtml(str) {
+  if (str === null || str === undefined) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+// --- Auth State & Navbar Management ---
+async function checkAuthStatus() {
+  if (!authToken) {
+    currentUser = null;
+    renderUserNavbar();
+    return;
+  }
+  try {
+    const res = await fetch('/api/v1/auth/me', {
+      headers: getAuthHeaders(false)
+    });
+    if (res.ok) {
+      const data = await res.json();
+      if (data.authenticated && data.user) {
+        currentUser = data.user;
+      } else {
+        currentUser = null;
+        authToken = null;
+        localStorage.removeItem('hub_auth_token');
+      }
+    } else {
+      currentUser = null;
+      authToken = null;
+      localStorage.removeItem('hub_auth_token');
+    }
+  } catch (e) {
+    console.warn("Auth check failed:", e);
+    currentUser = null;
+  }
+  renderUserNavbar();
+}
+
+function renderUserNavbar() {
+  const container = document.getElementById('nav-user-area');
+  if (!container) return;
+
+  if (!currentUser) {
+    container.innerHTML = `
+      <button class="btn btn-primary btn-sm" onclick="openAuthModal('login')">
+        <span class="icon">👤</span> <span class="action-text">Belépés / Regisztráció</span>
+      </button>
+    `;
+    return;
+  }
+
+  if (currentUser.role === 'superadmin') {
+    container.innerHTML = `
+      <div class="user-badge admin" title="Szuper Adminisztrátori Fiók">
+        <span class="user-role-badge admin">👑 Admin</span>
+        <strong>${escapeHtml(currentUser.email)}</strong>
+      </div>
+      <button class="btn btn-primary btn-sm" onclick="openAdminClientsModal()">
+        <span class="icon">👥</span> <span class="action-text">Ügyfelek</span> (<span id="nav-client-count">...</span>)
+      </button>
+      <button class="btn btn-outline btn-sm" onclick="logoutUser()" title="Kijelentkezés">
+        <span class="icon">🚪</span>
+      </button>
+    `;
+    refreshAdminClientsCount();
+  } else {
+    const displayName = currentUser.company_name || currentUser.full_name || currentUser.email;
+    container.innerHTML = `
+      <div class="user-badge" title="Bejelentkezett vállalati fiók">
+        <span class="user-role-badge">Ügyfél</span>
+        <strong>${escapeHtml(displayName)}</strong>
+      </div>
+      <button class="btn btn-outline btn-sm btn-vault" onclick="openIntegrationsModal()">
+        <span class="icon">🔗</span> <span class="action-text">Hozzáféréseim & Integrációk</span>
+      </button>
+      <button class="btn btn-outline btn-sm" onclick="logoutUser()" title="Kijelentkezés">
+        <span class="icon">🚪</span>
+      </button>
+    `;
+  }
+}
+
+async function refreshAdminClientsCount() {
+  if (!currentUser || currentUser.role !== 'superadmin') return;
+  try {
+    const res = await fetch('/api/v1/admin/clients', {
+      headers: getAuthHeaders(false)
+    });
+    if (res.ok) {
+      const data = await res.json();
+      allAdminClients = data.clients || [];
+      const el = document.getElementById('nav-client-count');
+      if (el) el.innerText = allAdminClients.length;
+    }
+  } catch (_) {}
+}
+
+// --- Auth Modal & Form Handlers ---
+function openAuthModal(tab = 'login') {
+  switchAuthTab(tab);
+  const modal = document.getElementById('modal-auth');
+  if (modal) modal.style.display = 'flex';
+}
+
+function switchAuthTab(tab) {
+  const tabLogin = document.getElementById('tab-auth-login');
+  const tabReg = document.getElementById('tab-auth-register');
+  const formLogin = document.getElementById('form-auth-login');
+  const formReg = document.getElementById('form-auth-register');
+  const title = document.getElementById('auth-modal-title');
+
+  if (tab === 'login') {
+    if (tabLogin) tabLogin.classList.add('active');
+    if (tabReg) tabReg.classList.remove('active');
+    if (formLogin) formLogin.style.display = 'block';
+    if (formReg) formReg.style.display = 'none';
+    if (title) title.innerText = '🔐 Ügyfél Belépés & Szuper Admin';
+    setTimeout(() => { document.getElementById('login-email')?.focus(); }, 100);
+  } else {
+    if (tabLogin) tabLogin.classList.remove('active');
+    if (tabReg) tabReg.classList.add('active');
+    if (formLogin) formLogin.style.display = 'none';
+    if (formReg) formReg.style.display = 'block';
+    if (title) title.innerText = '✨ Új Vállalkozási Fiók Regisztrációja';
+    setTimeout(() => { document.getElementById('reg-company')?.focus(); }, 100);
+  }
+}
+
+function fillDemoCreds(email, pwd) {
+  const emailInput = document.getElementById('login-email');
+  const pwdInput = document.getElementById('login-password');
+  if (emailInput) emailInput.value = email;
+  if (pwdInput) pwdInput.value = pwd;
+  showToast(`Demo adatok betöltve: ${email}`, 'info', 1500);
+}
+
+async function handleLoginSubmit(event) {
+  event.preventDefault();
+  const email = document.getElementById('login-email').value.trim();
+  const password = document.getElementById('login-password').value;
+  const btn = document.getElementById('btn-login-submit');
+
+  btn.innerText = 'Bejelentkezés... ⏳';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch('/api/v1/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    });
+
+    const data = await res.json();
+    btn.innerText = '🚀 Bejelentkezés';
+    btn.disabled = false;
+
+    if (res.ok && data.status === 'success') {
+      authToken = data.token;
+      currentUser = data.user;
+      localStorage.setItem('hub_auth_token', authToken);
+      closeModal('modal-auth');
+      renderUserNavbar();
+      showToast(data.message || 'Sikeres bejelentkezés!', 'success', 3500);
+      loadModules();
+      loadStats();
+    } else {
+      showToast(data.detail || 'Hibás bejelentkezési adatok!', 'error');
+    }
+  } catch (err) {
+    btn.innerText = '🚀 Bejelentkezés';
+    btn.disabled = false;
+    showToast(`Hálózati hiba: ${err.message}`, 'error');
+  }
+}
+
+async function handleRegisterSubmit(event) {
+  event.preventDefault();
+  const company_name = document.getElementById('reg-company').value.trim();
+  const full_name = document.getElementById('reg-fullname').value.trim();
+  const email = document.getElementById('reg-email').value.trim();
+  const phone = document.getElementById('reg-phone').value.trim();
+  const password = document.getElementById('reg-password').value;
+  const confirm = document.getElementById('reg-password-confirm').value;
+  const btn = document.getElementById('btn-register-submit');
+
+  if (password !== confirm) {
+    showToast('A megadott jelszavak nem egyeznek!', 'warning');
+    return;
+  }
+
+  btn.innerText = 'Regisztráció folyamatban... ⏳';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch('/api/v1/auth/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password, full_name, company_name, phone })
+    });
+
+    const data = await res.json();
+    btn.innerText = '✨ Fiók Létrehozása & Belépés';
+    btn.disabled = false;
+
+    if (res.ok && data.status === 'success') {
+      authToken = data.token;
+      currentUser = data.user;
+      localStorage.setItem('hub_auth_token', authToken);
+      closeModal('modal-auth');
+      renderUserNavbar();
+      showToast(`Sikeres regisztráció! Üdvözlünk, ${currentUser.company_name}!`, 'success', 4000);
+      loadModules();
+      loadStats();
+      setTimeout(() => {
+        openIntegrationsModal();
+        showToast('Most kösse be vállalkozása rendszereit (Gmail, GitHub stb.)!', 'info', 5000);
+      }, 500);
+    } else {
+      showToast(data.detail || 'Hiba a regisztráció során!', 'error');
+    }
+  } catch (err) {
+    btn.innerText = '✨ Fiók Létrehozása & Belépés';
+    btn.disabled = false;
+    showToast(`Hálózati hiba: ${err.message}`, 'error');
+  }
+}
+
+async function logoutUser() {
+  try {
+    await fetch('/api/v1/auth/logout', {
+      method: 'POST',
+      headers: getAuthHeaders(false)
+    });
+  } catch (_) {}
+
+  authToken = null;
+  currentUser = null;
+  activeTenant = null;
+  localStorage.removeItem('hub_auth_token');
+
+  const banner = document.getElementById('active-tenant-banner');
+  if (banner) banner.style.display = 'none';
+
+  renderUserNavbar();
+  loadModules();
+  loadStats();
+  showToast('Sikeresen kijelentkeztél.', 'info', 2500);
+}
+
+// --- Integrations Vault Presets & Management ---
+const INTEGRATION_PRESETS = {
+  gmail: {
+    name: "Központi Google Workspace / Gmail Fiók",
+    icon: "📧",
+    desc: "Szükséges az automata bejövő email szortírozáshoz, árajánlatok és számlák közvetlen kézbesítéséhez.",
+    fields: [
+      { key: "email", label: "Email cím", type: "email", placeholder: "iroda@cegnev.hu", required: true },
+      { key: "app_password", label: "Google Alkalmazás Jelszó (App Password)", type: "password", placeholder: "16 betűs jelszó (abcd efgh ijkl mnop)", required: true },
+      { key: "imap_host", label: "IMAP Szerver", type: "text", default: "imap.gmail.com" },
+      { key: "smtp_host", label: "SMTP Szerver", type: "text", default: "smtp.gmail.com" }
+    ]
+  },
+  github: {
+    name: "Céges GitHub Fiók / Repository",
+    icon: "🐙",
+    desc: "Szükséges a CI/CD, automata kódellenőrzés és release készítés modulokhoz.",
+    fields: [
+      { key: "username", label: "GitHub Felhasználónév / Szervezet", type: "text", placeholder: "cegnev-dev", required: true },
+      { key: "token", label: "GitHub Personal Access Token (PAT)", type: "password", placeholder: "ghp_...", required: true },
+      { key: "repo", label: "Repository (pl. szervezet/repo-nev)", type: "text", placeholder: "cegnev/fo-projekt", required: true }
+    ]
+  },
+  szamlazz: {
+    name: "Számlázz.hu Agent Kapcsolat",
+    icon: "🧾",
+    desc: "Szükséges az e-számlák, díjbekérők és sztornók 100%-ban automata kiállításához.",
+    fields: [
+      { key: "agent_key", label: "Számla Agent Kulcs", type: "password", placeholder: "szamlazz_agent_...", required: true }
+    ]
+  },
+  billingo: {
+    name: "Billingo API v3 Kapcsolat",
+    icon: "💳",
+    desc: "Billingo online számlázó rendszer integrációja e-számlákhoz és tömeges díjbekérőkhöz.",
+    fields: [
+      { key: "api_key", label: "Billingo API Kulcs (v3)", type: "password", placeholder: "billingo_api_...", required: true },
+      { key: "block_id", label: "Számlatömb Azonosító (Block ID)", type: "text", placeholder: "123456" }
+    ]
+  },
+  nav: {
+    name: "NAV Online Számla Rendszer",
+    icon: "🏛️",
+    desc: "Szükséges a bejövő és kimenő számlák NAV adatszolgáltatásának ellenőrzéséhez és adategyeztetéshez.",
+    fields: [
+      { key: "tech_user", label: "Technikai Felhasználónév", type: "text", placeholder: "abcdef123456", required: true },
+      { key: "tech_password", label: "Technikai Felhasználó Jelszava", type: "password", required: true },
+      { key: "sign_key", label: "XML Aláírókulcs", type: "password", required: true },
+      { key: "exchange_key", label: "XML Cserekulcs", type: "password", required: true }
+    ]
+  },
+  meta: {
+    name: "Meta / WhatsApp Business Cloud API",
+    icon: "💬",
+    desc: "Szükséges az automata WhatsApp és Messenger értesítésekhez, ügyfélszolgálati chatbothoz.",
+    fields: [
+      { key: "api_token", label: "Meta Graph API Hozzáférési Token", type: "password", placeholder: "EAA...", required: true },
+      { key: "phone_id", label: "WhatsApp Phone Number ID", type: "text", placeholder: "10987654321", required: true },
+      { key: "waba_id", label: "WhatsApp Business Account ID", type: "text", placeholder: "1234567890" }
+    ]
+  },
+  webshop: {
+    name: "Webáruház (WooCommerce / Shopify / Unas)",
+    icon: "🛒",
+    desc: "Szükséges az elhagyott kosarak, utánvét ellenőrzések, és készlet szinkronizáció modulokhoz.",
+    fields: [
+      { key: "store_url", label: "Webáruház Webcíme (Store URL)", type: "text", placeholder: "https://www.cegemboltja.hu", required: true },
+      { key: "api_key", label: "Consumer Key / API Key", type: "password", placeholder: "ck_...", required: true },
+      { key: "api_secret", label: "Consumer Secret / API Secret", type: "password", placeholder: "cs_...", required: true }
+    ]
+  },
+  ai: {
+    name: "AI Szolgáltató (OpenAI / Claude / Gemini API)",
+    icon: "🤖",
+    desc: "Saját céges API kvóta bekötése az AI munkafolyamatokhoz.",
+    fields: [
+      { key: "api_key", label: "AI API Kulcs", type: "password", placeholder: "sk-...", required: true },
+      { key: "model", label: "Alapértelmezett Modell", type: "text", placeholder: "gpt-4o vagy claude-3-5-sonnet" }
+    ]
+  },
+  custom: {
+    name: "Egyedi Vállalati ERP / CRM / Webhook",
+    icon: "🗄️",
+    desc: "Bármilyen belső vállalatirányítási rendszer, adatbázis vagy webhook bekötése.",
+    fields: [
+      { key: "endpoint_url", label: "API / Webhook Végpont URL", type: "text", placeholder: "https://erp.ceg.hu/api", required: true },
+      { key: "auth_token", label: "Bearer Token vagy Hitelesítő Fejléc", type: "password", placeholder: "Bearer ..." }
+    ]
+  }
+};
+
+async function openIntegrationsModal() {
+  if (!currentUser) {
+    openAuthModal('login');
+    return;
+  }
+  const modal = document.getElementById('modal-integrations');
+  if (modal) modal.style.display = 'flex';
+
+  selectIntegrationPreset(selectedPresetKey || 'gmail');
+  await loadUserIntegrations();
+}
+
+async function loadUserIntegrations() {
+  const container = document.getElementById('vault-connected-list');
+  const countEl = document.getElementById('vault-connected-count');
+  if (!container) return;
+
+  container.innerHTML = `<div class="loading-state">Bekötött szolgáltatások betöltése...</div>`;
+
+  try {
+    const res = await fetch('/api/v1/integrations', {
+      headers: getAuthHeaders(false)
+    });
+    if (!res.ok) throw new Error(`HTTP hiba: ${res.status}`);
+    const data = await res.json();
+    const list = data.integrations || [];
+
+    if (countEl) countEl.innerText = list.length;
+
+    if (list.length === 0) {
+      container.innerHTML = `
+        <div style="grid-column: 1 / -1; padding: 20px; background: rgba(255,255,255,0.02); border: 1px dashed var(--border); border-radius: var(--radius-md); text-align: center; color: var(--text-muted);">
+          <p>Még nincs bekötött külső szolgáltatása. Válasszon az alábbi listából egy rendszert (pl. Google Workspace / Gmail vagy GitHub), és adja meg a hozzáférést a beállításhoz!</p>
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = list.map(item => {
+      const preset = INTEGRATION_PRESETS[item.service_type] || { icon: '⚡' };
+      const creds = item.credentials || {};
+      const credRows = Object.entries(creds).map(([k, v]) => `
+        <div class="vault-card-field">
+          <span class="vault-field-key">${escapeHtml(k)}:</span>
+          <span class="vault-field-val" title="${escapeHtml(String(v))}">${escapeHtml(String(v))}</span>
+        </div>
+      `).join('');
+
+      return `
+        <div class="vault-card">
+          <div>
+            <div class="vault-card-header">
+              <div class="vault-card-title">
+                <span>${preset.icon}</span>
+                <span>${escapeHtml(item.service_name)}</span>
+              </div>
+              <span class="badge badge-active">🟢 Bekötve</span>
+            </div>
+            <div class="vault-card-body">
+              ${credRows}
+              ${item.notes ? `<div style="margin-top: 8px; font-size: 11px; color: var(--text-subtle);">📝 ${escapeHtml(item.notes)}</div>` : ''}
+            </div>
+          </div>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 8px;">
+            <button class="btn btn-outline btn-sm text-danger" onclick="deleteIntegration(${item.id})" style="border-color: rgba(239,68,68,0.3); font-size: 11px;">
+              🗑️ Eltávolítás
+            </button>
+          </div>
+        </div>
+      `;
+    }).join('');
+  } catch (err) {
+    container.innerHTML = `<div class="text-danger" style="padding: 12px;">Hiba: ${escapeHtml(err.message)}</div>`;
+  }
+}
+
+function selectIntegrationPreset(key) {
+  selectedPresetKey = key;
+  document.querySelectorAll('.vault-preset-chips .preset-chip').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('onclick').includes(key));
+  });
+
+  const preset = INTEGRATION_PRESETS[key];
+  if (!preset) return;
+
+  const typeInput = document.getElementById('int-service-type');
+  if (typeInput) typeInput.value = key;
+
+  const nameInput = document.getElementById('int-service-name');
+  if (nameInput) nameInput.value = preset.name;
+
+  renderDynamicPresetFields(preset);
+}
+
+function renderDynamicPresetFields(preset) {
+  const container = document.getElementById('vault-dynamic-fields');
+  if (!container) return;
+
+  container.innerHTML = preset.fields.map(f => {
+    let inputHtml = '';
+    if (f.type === 'password') {
+      inputHtml = `
+        <div class="password-wrapper">
+          <input type="password" name="cred_${f.key}" class="form-control" placeholder="${f.placeholder || ''}" ${f.required ? 'required' : ''}>
+          <button type="button" class="btn-toggle-eye" onclick="togglePasswordVisibility(this)">👁️</button>
+        </div>
+      `;
+    } else {
+      inputHtml = `
+        <input type="${f.type || 'text'}" name="cred_${f.key}" class="form-control" value="${f.default || ''}" placeholder="${f.placeholder || ''}" ${f.required ? 'required' : ''}>
+      `;
+    }
+
+    return `
+      <div class="form-group" style="margin-bottom: 0;">
+        <label>${f.label} ${f.required ? '<span class="text-danger">*</span>' : ''}</label>
+        ${inputHtml}
+      </div>
+    `;
+  }).join('');
+}
+
+async function handleSaveIntegration(event) {
+  event.preventDefault();
+  const service_type = document.getElementById('int-service-type').value;
+  const service_name = document.getElementById('int-service-name').value.trim();
+  const notes = document.getElementById('int-notes').value.trim();
+  const form = document.getElementById('form-save-integration');
+  const btn = document.getElementById('btn-save-integration');
+
+  const preset = INTEGRATION_PRESETS[service_type];
+  if (!preset) return;
+
+  const credentials = {};
+  for (const f of preset.fields) {
+    const el = form.elements[`cred_${f.key}`];
+    if (el) {
+      const val = el.value.trim();
+      if (f.required && !val) {
+        showToast(`Kérjük adja meg a(z) '${f.label}' mezőt!`, 'warning');
+        el.focus();
+        return;
+      }
+      credentials[f.key] = val;
+    }
+  }
+
+  btn.innerText = 'Mentés a Vaultba... ⏳';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch('/api/v1/integrations', {
+      method: 'POST',
+      headers: getAuthHeaders(true),
+      body: JSON.stringify({
+        service_type,
+        service_name,
+        credentials,
+        notes
+      })
+    });
+
+    const data = await res.json();
+    btn.innerText = '💾 Hozzáférés Biztonságos Mentése a Vaultba';
+    btn.disabled = false;
+
+    if (res.ok && data.status === 'success') {
+      showToast(`'${service_name}' sikeresen elmentve a Vaultba!`, 'success');
+      form.reset();
+      selectIntegrationPreset(service_type);
+      await loadUserIntegrations();
+    } else {
+      showToast(data.detail || 'Hiba a mentés során!', 'error');
+    }
+  } catch (err) {
+    btn.innerText = '💾 Hozzáférés Biztonságos Mentése a Vaultba';
+    btn.disabled = false;
+    showToast(`Hálózati hiba: ${err.message}`, 'error');
+  }
+}
+
+async function deleteIntegration(id) {
+  if (!confirm("Biztosan törölni szeretné ezt a bekötött szolgáltatást a Vaultból?")) return;
+
+  try {
+    const res = await fetch(`/api/v1/integrations/${id}`, {
+      method: 'DELETE',
+      headers: getAuthHeaders(false)
+    });
+    if (res.ok) {
+      showToast('Integráció sikeresen törölve.', 'info');
+      await loadUserIntegrations();
+    } else {
+      const err = await res.json();
+      showToast(err.detail || 'Hiba a törléskor', 'error');
+    }
+  } catch (e) {
+    showToast(`Hálózati hiba: ${e.message}`, 'error');
+  }
+}
+
+// --- Super Admin Client Management Platform ---
+async function openAdminClientsModal() {
+  if (!currentUser || currentUser.role !== 'superadmin') {
+    showToast('Ehhez a művelethez Szuper Admin jogosultság szükséges!', 'error');
+    return;
+  }
+  const modal = document.getElementById('modal-admin-clients');
+  if (modal) modal.style.display = 'flex';
+  await loadAdminClients();
+}
+
+async function loadAdminClients() {
+  const tbody = document.getElementById('admin-clients-tbody');
+  if (!tbody) return;
+  tbody.innerHTML = `<tr><td colspan="6" class="text-center">Megbízók és ügyfelek lekérése...</td></tr>`;
+
+  try {
+    const res = await fetch('/api/v1/admin/clients', {
+      headers: getAuthHeaders(false)
+    });
+    if (!res.ok) throw new Error(`HTTP hiba: ${res.status}`);
+    const data = await res.json();
+    allAdminClients = data.clients || [];
+
+    const navCnt = document.getElementById('nav-client-count');
+    if (navCnt) navCnt.innerText = allAdminClients.length;
+
+    renderAdminClientsTable(allAdminClients);
+  } catch (err) {
+    tbody.innerHTML = `<tr><td colspan="6" class="text-danger text-center">Hiba: ${escapeHtml(err.message)}</td></tr>`;
+  }
+}
+
+function renderAdminClientsTable(clients) {
+  const tbody = document.getElementById('admin-clients-tbody');
+  if (!tbody) return;
+
+  if (clients.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="6" class="text-center text-muted">Még nincsenek regisztrált ügyfelek.</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = clients.map(c => {
+    const isCurrentActiveTenant = activeTenant && activeTenant.id === c.id;
+    const intCount = c.integration_count || 0;
+    const intBadgeClass = intCount > 0 ? 'badge-active' : 'badge-needs_setup';
+
+    return `
+      <tr style="${isCurrentActiveTenant ? 'background: rgba(245, 158, 11, 0.08);' : ''}">
+        <td><code>#${c.id}</code></td>
+        <td>
+          <strong>${escapeHtml(c.company_name)}</strong>
+          ${isCurrentActiveTenant ? '<span class="tenant-badge" style="margin-left: 6px;">AKTÍV MÓD</span>' : ''}
+        </td>
+        <td>${escapeHtml(c.full_name)}</td>
+        <td>
+          <div><a href="mailto:${escapeHtml(c.email)}" style="color:#93c5fd; text-decoration: none;">✉️ ${escapeHtml(c.email)}</a></div>
+          ${c.phone ? `<div style="font-size: 11.5px; color: var(--text-muted);">📞 ${escapeHtml(c.phone)}</div>` : ''}
+        </td>
+        <td>
+          <span class="badge ${intBadgeClass}">
+            ${intCount > 0 ? `🟢 ${intCount} db bekötve` : '⚪ 0 bekötve'}
+          </span>
+        </td>
+        <td>
+          <div class="client-actions-cell">
+            <button class="btn btn-warning btn-sm" onclick="enterTenantMode(${c.id})" title="Belépés az ügyfél környezetébe a modulok konfigurálásához">
+              ⚙ Munka vele
+            </button>
+            <button class="btn btn-outline btn-sm" onclick="openClientIntegrationsModal(${c.id})" title="Ügyfél bekötött API és jelszó adatainak megtekintése">
+              🔑 Hozzáférések
+            </button>
+          </div>
+        </td>
+      </tr>
+    `;
+  }).join('');
+}
+
+function filterAdminClients() {
+  const input = document.getElementById('admin-client-search');
+  const q = (input ? input.value : '').toLowerCase().trim();
+  if (!q) {
+    renderAdminClientsTable(allAdminClients);
+    return;
+  }
+  const filtered = allAdminClients.filter(c => 
+    (c.company_name && c.company_name.toLowerCase().includes(q)) ||
+    (c.full_name && c.full_name.toLowerCase().includes(q)) ||
+    (c.email && c.email.toLowerCase().includes(q))
+  );
+  renderAdminClientsTable(filtered);
+}
+
+function enterTenantMode(clientId) {
+  const client = allAdminClients.find(c => c.id === clientId);
+  if (!client) return;
+
+  activeTenant = client;
+
+  const banner = document.getElementById('active-tenant-banner');
+  const bannerName = document.getElementById('tenant-banner-client-name');
+  const bannerContact = document.getElementById('tenant-banner-contact');
+  const bannerEmail = document.getElementById('tenant-banner-email');
+  const bannerCount = document.getElementById('tenant-banner-int-count');
+
+  if (bannerName) bannerName.innerText = client.company_name;
+  if (bannerContact) bannerContact.innerText = client.full_name;
+  if (bannerEmail) bannerEmail.innerText = client.email;
+  if (bannerCount) bannerCount.innerText = client.integration_count || 0;
+
+  if (banner) banner.style.display = 'block';
+
+  closeModal('modal-admin-clients');
+  closeModal('modal-admin-client-details');
+
+  showToast(`👑 Szuper Admin mód aktív: Mostantól a(z) '${client.company_name}' ügyfél fiókját konfigurálod!`, 'warning', 4500);
+
+  loadModules();
+}
+
+function exitTenantMode() {
+  activeTenant = null;
+  const banner = document.getElementById('active-tenant-banner');
+  if (banner) banner.style.display = 'none';
+
+  showToast('Visszatértél a globális Hub nézetbe.', 'info', 2500);
+  loadModules();
+}
+
+async function openClientIntegrationsModal(clientId) {
+  if (!currentUser || currentUser.role !== 'superadmin') return;
+
+  const modal = document.getElementById('modal-admin-client-details');
+  const title = document.getElementById('client-details-title');
+  const subtitle = document.getElementById('client-details-subtitle');
+  const body = document.getElementById('client-details-body');
+  const activateBtn = document.getElementById('btn-activate-client-from-details');
+
+  if (modal) modal.style.display = 'flex';
+  if (body) body.innerHTML = `<div class="loading-state">Ügyfél hozzáféréseinek és API kulcsainak lekérése...</div>`;
+
+  try {
+    const res = await fetch(`/api/v1/admin/clients/${clientId}`, {
+      headers: getAuthHeaders(false)
+    });
+    if (!res.ok) throw new Error(`HTTP hiba: ${res.status}`);
+    const data = await res.json();
+    const client = data.client;
+    const integrations = data.integrations || [];
+
+    if (title) title.innerText = `🔑 ${client.company_name} - Bekötött Rendszerek`;
+    if (subtitle) subtitle.innerText = `${client.full_name} (${client.email}) | ${integrations.length} db bekötött szolgáltatás`;
+
+    if (activateBtn) {
+      activateBtn.onclick = () => enterTenantMode(client.id);
+    }
+
+    if (integrations.length === 0) {
+      body.innerHTML = `
+        <div style="padding: 24px; text-align: center; color: var(--text-muted);">
+          <p>Ez az ügyfél még nem adott meg hozzáférési adatokat a Vaultban.</p>
+        </div>
+      `;
+      return;
+    }
+
+    body.innerHTML = integrations.map(item => {
+      const preset = INTEGRATION_PRESETS[item.service_type] || { icon: '⚡' };
+      const creds = item.credentials || {};
+      const rows = Object.entries(creds).map(([k, v]) => `
+        <div class="cred-item">
+          <span class="cred-label">${escapeHtml(k)}:</span>
+          <div class="cred-val-wrap">
+            <span class="cred-val">${escapeHtml(String(v))}</span>
+            <button class="btn-copy-sm" onclick="copyCredValue('${escapeHtml(String(v))}', this)">Másolás</button>
+          </div>
+        </div>
+      `).join('');
+
+      return `
+        <div class="cred-box">
+          <div class="cred-box-header">
+            <div class="cred-box-title">
+              <span>${preset.icon}</span>
+              <span>${escapeHtml(item.service_name)}</span>
+            </div>
+            <span class="badge badge-active">${item.service_type.toUpperCase()}</span>
+          </div>
+          <div>
+            ${rows}
+            ${item.notes ? `<div style="margin-top: 8px; font-size: 11px; color: #cbd5e1;">📝 <em>${escapeHtml(item.notes)}</em></div>` : ''}
+          </div>
+        </div>
+      `;
+    }).join('');
+  } catch (err) {
+    if (body) body.innerHTML = `<div class="text-danger" style="padding: 16px;">Hiba: ${escapeHtml(err.message)}</div>`;
+  }
+}
+
+function copyCredValue(val, btn) {
+  navigator.clipboard.writeText(val).then(() => {
+    const orig = btn.innerText;
+    btn.innerText = '✓ Másolva';
+    setTimeout(() => { btn.innerText = orig; }, 1500);
+  });
 }

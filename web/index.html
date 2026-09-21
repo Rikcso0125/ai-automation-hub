@@ -51,6 +51,13 @@
 
     <!-- Actions -->
     <div class="nav-actions">
+      <!-- User Auth & Super Admin Controls -->
+      <div id="nav-user-area" class="nav-user-area">
+        <button class="btn btn-primary btn-sm" onclick="openAuthModal('login')">
+          <span class="icon">👤</span> <span class="action-text">Belépés / Regisztráció</span>
+        </button>
+      </div>
+
       <button class="btn btn-outline btn-sm" onclick="openLogsModal()" title="Futási napló megnyitása">
         <span class="icon">📜</span> <span class="action-text">Napló</span>
       </button>
@@ -62,6 +69,27 @@
       </div>
     </div>
   </header>
+
+  <!-- Super Admin Active Tenant Mode Alert Banner -->
+  <div id="active-tenant-banner" class="active-tenant-banner" style="display: none;">
+    <div class="tenant-banner-inner">
+      <div class="tenant-banner-left">
+        <span class="tenant-badge">👑 SZUPER ADMIN MÓD</span>
+        <span class="tenant-desc">
+          Aktív megbízó: <strong id="tenant-banner-client-name">Kovács Épületgépészet Kft.</strong> 
+          (<span id="tenant-banner-contact">Kovács János</span> - <span id="tenant-banner-email">janos.kovacs@kovacskft.hu</span>)
+        </span>
+      </div>
+      <div class="tenant-banner-right">
+        <button class="btn btn-warning btn-sm" onclick="openClientIntegrationsModal(activeTenant.id)">
+          <span class="icon">🔑</span> Bekötött Hozzáférések (<span id="tenant-banner-int-count">0</span>)
+        </button>
+        <button class="btn btn-outline btn-sm btn-exit-tenant" onclick="exitTenantMode()">
+          <span class="icon">✕</span> Vissza Globális Módba
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Main Container -->
   <main class="main-container">
@@ -294,6 +322,240 @@
       </div>
       <div class="modal-actions">
         <button type="button" class="btn btn-outline" onclick="closeModal('modal-log-detail')">Bezárás</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. Auth Modal (Login & Registration) -->
+  <div id="modal-auth" class="modal-overlay" style="display: none;" onclick="handleOverlayClick(event, 'modal-auth')">
+    <div class="modal-container modal-md">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="auth-modal-title">🔐 Ügyfél Belépés & Regisztráció</h3>
+          <p class="modal-subtitle">AI Automation Hub felhő alapú rendszer</p>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('modal-auth')">✕</button>
+      </div>
+
+      <!-- Auth Tabs -->
+      <div class="modal-tabs">
+        <button class="modal-tab-btn active" id="tab-auth-login" onclick="switchAuthTab('login')">Bejelentkezés</button>
+        <button class="modal-tab-btn" id="tab-auth-register" onclick="switchAuthTab('register')">Új Ügyfél Regisztráció</button>
+      </div>
+
+      <div class="modal-body modal-scroll">
+        <!-- Login Form -->
+        <form id="form-auth-login" onsubmit="handleLoginSubmit(event)">
+          <div class="form-group">
+            <label for="login-email">Email cím</label>
+            <input type="email" id="login-email" class="form-control" placeholder="ugyfel@ceg.hu vagy admin@automationhub.ai" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="login-password">Jelszó</label>
+            <input type="password" id="login-password" class="form-control" placeholder="Adja meg jelszavát" required autocomplete="current-password">
+          </div>
+          <div class="auth-demo-box">
+            <div class="auth-demo-title">💡 Gyors demo fiókok teszteléshez:</div>
+            <div class="auth-demo-item" onclick="fillDemoCreds('admin@automationhub.ai', 'Admin2026!Secure')">
+              👑 <strong>Szuper Admin:</strong> <code>admin@automationhub.ai</code> / <code>Admin2026!Secure</code>
+            </div>
+            <div class="auth-demo-item" onclick="fillDemoCreds('janos.kovacs@kovacskft.hu', 'TitkosJelszo2026!')">
+              🏢 <strong>Példa Ügyfél:</strong> <code>janos.kovacs@kovacskft.hu</code> / <code>TitkosJelszo2026!</code>
+            </div>
+          </div>
+          <button type="submit" id="btn-login-submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 16px;">
+            <span class="icon">🚀</span> Bejelentkezés
+          </button>
+        </form>
+
+        <!-- Register Form -->
+        <form id="form-auth-register" style="display: none;" onsubmit="handleRegisterSubmit(event)">
+          <div class="form-group">
+            <label for="reg-company">Cég / Vállalkozás neve *</label>
+            <input type="text" id="reg-company" class="form-control" placeholder="pl. Minta Generál Kft. vagy Kovács EV." required>
+          </div>
+          <div class="form-group">
+            <label for="reg-fullname">Kapcsolattartó teljes neve *</label>
+            <input type="text" id="reg-fullname" class="form-control" placeholder="pl. Nagy Péter" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group" style="flex: 1;">
+              <label for="reg-email">Hivatalos céges email cím *</label>
+              <input type="email" id="reg-email" class="form-control" placeholder="iroda@mintaceg.hu" required autocomplete="email">
+            </div>
+            <div class="form-group" style="flex: 1;">
+              <label for="reg-phone">Telefonszám</label>
+              <input type="tel" id="reg-phone" class="form-control" placeholder="+36 30 123 4567" autocomplete="tel">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group" style="flex: 1;">
+              <label for="reg-password">Jelszó (min. 6 karakter) *</label>
+              <input type="password" id="reg-password" class="form-control" placeholder="Biztonságos jelszó" required minlength="6" autocomplete="new-password">
+            </div>
+            <div class="form-group" style="flex: 1;">
+              <label for="reg-password-confirm">Jelszó újra *</label>
+              <input type="password" id="reg-password-confirm" class="form-control" placeholder="Jelszó megerősítése" required minlength="6" autocomplete="new-password">
+            </div>
+          </div>
+          <div class="auth-info-note">
+            ℹ️ A regisztrációval létrehozzuk vállalkozása dedikált fiókját. Belépés után a <strong>Hozzáféréseim & Integrációk</strong> menüben tudja bekötni külső szoftvereit (Gmail, GitHub, Számlázók stb.), melyekkel az automatizációk működni fognak.
+          </div>
+          <button type="submit" id="btn-register-submit" class="btn btn-success btn-block btn-lg" style="margin-top: 16px;">
+            <span class="icon">✨</span> Fiók Létrehozása & Belépés
+          </button>
+        </form>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn btn-outline" onclick="closeModal('modal-auth')">Bezárás</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Integrations Vault Modal (Client Permissions & Integrations) -->
+  <div id="modal-integrations" class="modal-overlay" style="display: none;" onclick="handleOverlayClick(event, 'modal-integrations')">
+    <div class="modal-container modal-lg">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3>🔗 Vállalati Hozzáférések & Integrációs Vault</h3>
+          <p class="modal-subtitle">Biztonságos kapcsolatok kezelése az automatizációs modulokhoz</p>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('modal-integrations')">✕</button>
+      </div>
+
+      <div class="modal-body modal-scroll">
+        <!-- Vault Explanation Banner -->
+        <div class="vault-hero-box">
+          <div class="vault-hero-icon">🛡️</div>
+          <div class="vault-hero-text">
+            <h4>Biztonságos Engedély- és Rendszerkapcsolati Széf</h4>
+            <p>Ahhoz, hogy az AI Hub kezelni tudja vállalkozása folyamatait (emailek automatikus kezelése, számlázás, GitHub verziókezelés, marketing posztolás, NAV szinkron), adja meg a szükséges rendszerek hozzáférését. <strong>Adatbiztonság:</strong> A hitelesítő adatokat a rendszer védett adatbázisban tárolja, az Ön felületén maszkolva jelennek meg, és a Szuper Adminisztrátor csapat kizárólag a munkafolyamatok beállítására használja azokat.</p>
+          </div>
+        </div>
+
+        <!-- Section 1: Bekötött integrációk listája -->
+        <div class="vault-section-title">
+          <span>📋 Jelenleg Bekötött Rendszereim (<span id="vault-connected-count">0</span>)</span>
+        </div>
+        <div id="vault-connected-list" class="vault-connected-grid">
+          <div class="loading-state">Bekötött szolgáltatások betöltése...</div>
+        </div>
+
+        <!-- Section 2: Új integráció bekötése form -->
+        <div class="vault-section-title" style="margin-top: 24px;">
+          <span>➕ Új Szolgáltatás vagy Rendszer Bekötése</span>
+        </div>
+        <div class="vault-add-box">
+          <div class="form-group">
+            <label>Válassza ki a bekötendő platformot:</label>
+            <div class="vault-preset-chips" id="vault-preset-chips">
+              <button type="button" class="preset-chip active" onclick="selectIntegrationPreset('gmail')">📧 Google / Gmail</button>
+              <button type="button" class="preset-chip" onclick="selectIntegrationPreset('github')">🐙 GitHub</button>
+              <button type="button" class="preset-chip" onclick="selectIntegrationPreset('szamlazz')">🧾 Számlázz.hu</button>
+              <button type="button" class="preset-chip" onclick="selectIntegrationPreset('billingo')">💳 Billingo</button>
+              <button type="button" class="preset-chip" onclick="selectIntegrationPreset('nav')">🏛️ NAV Online</button>
+              <button type="button" class="preset-chip" onclick="selectIntegrationPreset('meta')">💬 WhatsApp / Meta</button>
+              <button type="button" class="preset-chip" onclick="selectIntegrationPreset('webshop')">🛒 Webáruház</button>
+              <button type="button" class="preset-chip" onclick="selectIntegrationPreset('ai')">🤖 OpenAI / Claude / Gemini</button>
+              <button type="button" class="preset-chip" onclick="selectIntegrationPreset('custom')">🗄️ Egyedi ERP / CRM</button>
+            </div>
+          </div>
+
+          <form id="form-save-integration" onsubmit="handleSaveIntegration(event)">
+            <input type="hidden" id="int-service-type" value="gmail">
+            <div class="form-group">
+              <label for="int-service-name">Kapcsolat elnevezése *</label>
+              <input type="text" id="int-service-name" class="form-control" value="Központi Google Workspace / Gmail Fiók" required>
+            </div>
+
+            <!-- Dynamic Credentials Fields based on preset -->
+            <div id="vault-dynamic-fields" class="vault-fields-container">
+              <!-- Rendered dynamically by JS -->
+            </div>
+
+            <div class="form-group" style="margin-top: 12px;">
+              <label for="int-notes">Megjegyzés vagy instrukció (opcionális)</label>
+              <input type="text" id="int-notes" class="form-control" placeholder="pl. Erre jönnek a hivatalos árajánlatkérések, ezt kezelje a rendszer">
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; margin-top: 16px;">
+              <button type="submit" id="btn-save-integration" class="btn btn-primary">
+                <span class="icon">💾</span> Hozzáférés Biztonságos Mentése a Vaultba
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn btn-outline" onclick="closeModal('modal-integrations')">Bezárás</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Super Admin Clients Management Modal -->
+  <div id="modal-admin-clients" class="modal-overlay" style="display: none;" onclick="handleOverlayClick(event, 'modal-admin-clients')">
+    <div class="modal-container modal-lg">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3>👑 Szuper Adminisztrátori Ügyfélkezelő Központ</h3>
+          <p class="modal-subtitle">Regisztrált megbízók, bekötött integrációk és fiókkörnyezetek</p>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('modal-admin-clients')">✕</button>
+      </div>
+
+      <div class="modal-body modal-scroll">
+        <div class="admin-search-bar">
+          <input type="text" id="admin-client-search" class="form-control" placeholder="Keresés cégnév, email vagy kapcsolattartó szerint..." oninput="filterAdminClients()">
+          <button class="btn btn-outline btn-sm" onclick="loadAdminClients()">🔄 Frissítés</button>
+        </div>
+
+        <div class="table-responsive" style="margin-top: 16px;">
+          <table class="logs-table admin-clients-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Cég / Vállalkozás</th>
+                <th>Kapcsolattartó</th>
+                <th>Elérhetőség</th>
+                <th>Integrációk</th>
+                <th>Műveletek</th>
+              </tr>
+            </thead>
+            <tbody id="admin-clients-tbody">
+              <tr><td colspan="6" class="text-center">Ügyfelek betöltése...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn btn-outline" onclick="closeModal('modal-admin-clients')">Bezárás</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Super Admin Client Integrations Inspector Modal -->
+  <div id="modal-admin-client-details" class="modal-overlay" style="display: none;" onclick="handleOverlayClick(event, 'modal-admin-client-details')">
+    <div class="modal-container modal-md">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="client-details-title">🔑 Ügyfél Bekötött Rendszerei & API Adatai</h3>
+          <p class="modal-subtitle" id="client-details-subtitle">Szuper Admin konfigurációs nézet</p>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('modal-admin-client-details')">✕</button>
+      </div>
+
+      <div class="modal-body modal-scroll" id="client-details-body">
+        <div class="loading-state">Adatok betöltése...</div>
+      </div>
+
+      <div class="modal-actions" style="justify-content: space-between;">
+        <button type="button" class="btn btn-primary" id="btn-activate-client-from-details" onclick="">
+          <span class="icon">⚙</span> Munka ezzel az ügyféllel
+        </button>
+        <button type="button" class="btn btn-outline" onclick="closeModal('modal-admin-client-details')">Bezárás</button>
       </div>
     </div>
   </div>
