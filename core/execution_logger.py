@@ -6,33 +6,48 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 
-DB_PATH = Path(__file__).resolve().parent.parent / "data" / "hub_data.db"
+import os
+import shutil
+
+if os.environ.get("VERCEL"):
+    DB_PATH = Path("/tmp") / "hub_data.db"
+    orig_db = Path(__file__).resolve().parent.parent / "data" / "hub_data.db"
+    if orig_db.exists() and not DB_PATH.exists():
+        try:
+            shutil.copy2(orig_db, DB_PATH)
+        except Exception:
+            pass
+else:
+    DB_PATH = Path(__file__).resolve().parent.parent / "data" / "hub_data.db"
 
 def init_db():
-    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with sqlite3.connect(DB_PATH) as conn:
-        cursor = conn.cursor()
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS execution_logs (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                timestamp TEXT NOT NULL,
-                module_id TEXT NOT NULL,
-                status TEXT NOT NULL,
-                duration_ms INTEGER NOT NULL,
-                input_payload TEXT,
-                output_payload TEXT,
-                error_message TEXT
-            )
-        """)
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS module_configs (
-                module_id TEXT PRIMARY KEY,
-                config_json TEXT NOT NULL,
-                is_active INTEGER DEFAULT 1,
-                updated_at TEXT NOT NULL
-            )
-        """)
-        conn.commit()
+    try:
+        DB_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with sqlite3.connect(DB_PATH) as conn:
+            cursor = conn.cursor()
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS execution_logs (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    timestamp TEXT NOT NULL,
+                    module_id TEXT NOT NULL,
+                    status TEXT NOT NULL,
+                    duration_ms INTEGER NOT NULL,
+                    input_payload TEXT,
+                    output_payload TEXT,
+                    error_message TEXT
+                )
+            """)
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS module_configs (
+                    module_id TEXT PRIMARY KEY,
+                    config_json TEXT NOT NULL,
+                    is_active INTEGER DEFAULT 1,
+                    updated_at TEXT NOT NULL
+                )
+            """)
+            conn.commit()
+    except Exception as e:
+        print(f"Warning: could not init_db: {e}")
 
 init_db()
 
