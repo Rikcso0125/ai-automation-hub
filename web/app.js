@@ -28,6 +28,7 @@ function getAuthHeaders(includeJson = true) {
 async function initHub() {
   console.log("⚡ AI Automation Hub inicializálása...");
   await checkAuthStatus();
+  checkOAuthRedirectParams();
   loadStats();
   loadModules();
   setupGlobalEvents();
@@ -1200,22 +1201,53 @@ async function loadUserIntegrations() {
     container.innerHTML = list.map(item => {
       const preset = INTEGRATION_PRESETS[item.service_type] || { icon: '⚡' };
       const creds = item.credentials || {};
-      const credRows = Object.entries(creds).map(([k, v]) => `
-        <div class="vault-card-field">
-          <span class="vault-field-key">${escapeHtml(k)}:</span>
-          <span class="vault-field-val" title="${escapeHtml(String(v))}">${escapeHtml(String(v))}</span>
-        </div>
-      `).join('');
+      const isOAuth = creds.auth_type === 'oauth2';
+
+      let credRows = '';
+      if (isOAuth) {
+        credRows = `
+          <div class="vault-card-field">
+            <span class="vault-field-key">Hitelesítés:</span>
+            <span class="vault-field-val" style="color: #60a5fa; font-weight: 600;">OAuth 2.0 Protokoll</span>
+          </div>
+          <div class="vault-card-field">
+            <span class="vault-field-key">Fiók:</span>
+            <span class="vault-field-val" style="color: #fff; font-weight: 600;" title="${escapeHtml(creds.account_email || '')}">${escapeHtml(creds.account_email || creds.account_name || 'Csatlakoztatva')}</span>
+          </div>
+          ${creds.scopes ? `
+            <div class="vault-card-field">
+              <span class="vault-field-key">Hatókörök:</span>
+              <span class="vault-field-val" style="font-size: 10px;" title="${escapeHtml(creds.scopes)}">${escapeHtml(creds.scopes.slice(0, 30))}...</span>
+            </div>
+          ` : ''}
+          ${creds.is_sandbox ? `
+            <div class="vault-card-field">
+              <span class="vault-field-key">Mód:</span>
+              <span class="badge badge-needs_setup" style="font-size: 10px;">🧪 Sandbox Teszt</span>
+            </div>
+          ` : ''}
+        `;
+      } else {
+        credRows = Object.entries(creds).map(([k, v]) => `
+          <div class="vault-card-field">
+            <span class="vault-field-key">${escapeHtml(k)}:</span>
+            <span class="vault-field-val" title="${escapeHtml(String(v))}">${escapeHtml(String(v))}</span>
+          </div>
+        `).join('');
+      }
 
       return `
-        <div class="vault-card">
+        <div class="vault-card" style="${isOAuth ? 'border-color: rgba(59,130,246,0.3); background: #0c1527;' : ''}">
           <div>
             <div class="vault-card-header">
               <div class="vault-card-title">
                 <span>${preset.icon}</span>
                 <span>${escapeHtml(item.service_name)}</span>
               </div>
-              <span class="badge badge-active">🟢 Bekötve</span>
+              <div style="display: flex; gap: 6px; align-items: center;">
+                ${isOAuth ? '<span class="badge badge-oauth">🛡️ OAuth 2.0</span>' : ''}
+                <span class="badge badge-active">🟢 Aktív</span>
+              </div>
             </div>
             <div class="vault-card-body">
               ${credRows}
@@ -1566,5 +1598,218 @@ function copyCredValue(val, btn) {
     const orig = btn.innerText;
     btn.innerText = '✓ Másolva';
     setTimeout(() => { btn.innerText = orig; }, 1500);
+  });
+}
+
+// ==========================================================================
+// OAuth 2.0 Client & Admin Handlers
+// ==========================================================================
+
+function checkOAuthRedirectParams() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.has('oauth_success')) {
+    const provider = params.get('provider') || 'szolgáltató';
+    const account = params.get('account') || '';
+    const cleanUrl = window.location.origin + window.location.pathname;
+    window.history.replaceState({}, document.title, cleanUrl);
+
+    showToast(`✅ ${provider.toUpperCase()} fiók ${account ? '(' + decodeURIComponent(account) + ') ' : ''}sikeresen csatlakoztatva OAuth 2.0-val!`, 'success', 5000);
+    setTimeout(() => {
+      openIntegrationsModal();
+    }, 600);
+  } else if (params.has('oauth_error')) {
+    const err = params.get('oauth_error');
+    const provider = params.get('provider') || '';
+    const cleanUrl = window.location.origin + window.location.pathname;
+    window.history.replaceState({}, document.title, cleanUrl);
+    showToast(`❌ OAuth hiba (${provider}): ${decodeURIComponent(err)}`, 'error', 5000);
+  }
+}
+
+async function startOAuthFlow(provider) {
+  if (!currentUser) {
+    openAuthModal('login');
+    showToast("Kérjük, először jelentkezzen be az OAuth összekapcsoláshoz!", 'warning');
+    return;
+  }
+
+  showToast(`Átirányítás ${provider.toUpperCase()} OAuth 2.0 hitelesítéshez...`, 'info', 2000);
+
+  try {
+    const res = await fetch(`/api/v1/oauth/${provider}/authorize`, {
+      headers: getAuthHeaders(false)
+    });
+    const data = await res.json();
+    if (res.ok && data.auth_url) {
+      window.location.href = data.auth_url;
+    } else {
+      showToast(data.detail || 'Nem sikerült elindítani az OAuth folyamatot.', 'error');
+    }
+  } catch (err) {
+    showToast(`Hálózati hiba: ${err.message}`, 'error');
+  }
+}
+
+function switchAdminTab(tab) {
+  const tabClientsBtn = document.getElementById('tab-admin-clients');
+  const tabOAuthBtn = document.getElementById('tab-admin-oauth');
+  const viewClients = document.getElementById('admin-view-clients');
+  const viewOAuth = document.getElementById('admin-view-oauth');
+
+  if (tab === 'clients') {
+    if (tabClientsBtn) tabClientsBtn.classList.add('active');
+    if (tabOAuthBtn) tabOAuthBtn.classList.remove('active');
+    if (viewClients) viewClients.style.display = 'block';
+    if (viewOAuth) viewOAuth.style.display = 'none';
+  } else {
+    if (tabClientsBtn) tabClientsBtn.classList.remove('active');
+    if (tabOAuthBtn) tabOAuthBtn.classList.add('active');
+    if (viewClients) viewClients.style.display = 'none';
+    if (viewOAuth) viewOAuth.style.display = 'block';
+    loadAdminOAuthApps();
+  }
+}
+
+async function loadAdminOAuthApps() {
+  const container = document.getElementById('admin-oauth-apps-grid');
+  if (!container) return;
+  container.innerHTML = `<div class="loading-state">OAuth alkalmazások betöltése...</div>`;
+
+  try {
+    const res = await fetch('/api/v1/admin/oauth-apps', {
+      headers: getAuthHeaders(false)
+    });
+    if (!res.ok) throw new Error(`HTTP hiba: ${res.status}`);
+    const data = await res.json();
+    const apps = data.oauth_apps || [];
+
+    container.innerHTML = apps.map(app => {
+      return `
+        <div class="oauth-app-card" id="oauth-card-${app.provider}">
+          <div class="oauth-app-card-header">
+            <div class="oauth-app-title">
+              <span>${app.icon || '⚡'}</span>
+              <span>${escapeHtml(app.name)}</span>
+            </div>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              ${app.sandbox_mode ? '<span class="badge badge-needs_setup">🧪 Sandbox Mód</span>' : '<span class="badge badge-active">🟢 Éles Mód</span>'}
+              <span class="badge badge-${app.is_enabled ? 'active' : 'disabled'}">${app.is_enabled ? 'Bekapcsolva' : 'Kikapcsolva'}</span>
+            </div>
+          </div>
+
+          <!-- Redirect URI for Developer Console -->
+          <div class="form-group" style="margin-bottom: 8px;">
+            <label style="font-size: 11.5px;">Authorized Redirect URI (Másolja be a ${escapeHtml(app.name)} fejlesztői felületre):</label>
+            <div class="redirect-uri-box">
+              <span class="redirect-uri-text" id="red-uri-${app.provider}">${escapeHtml(app.suggested_redirect_uri)}</span>
+              <button type="button" class="btn-copy-sm" onclick="copyRedirectUri('${escapeHtml(app.suggested_redirect_uri)}', this)">Másolás</button>
+            </div>
+            ${app.production_redirect_uri !== app.suggested_redirect_uri ? `
+              <div style="font-size: 11px; color: var(--text-subtle); margin-top: -6px; margin-bottom: 10px;">
+                Éles Vercel callback: <code>${escapeHtml(app.production_redirect_uri)}</code>
+              </div>
+            ` : ''}
+          </div>
+
+          <!-- Configuration Form -->
+          <form onsubmit="saveAdminOAuthApp('${app.provider}', event)">
+            <div class="form-row">
+              <div class="form-group" style="flex: 1;">
+                <label>Client ID (Alkalmazás azonosító)</label>
+                <input type="text" name="client_id" class="form-control" value="${escapeHtml(app.client_id || '')}" placeholder="pl. 123456...apps.googleusercontent.com">
+              </div>
+              <div class="form-group" style="flex: 1;">
+                <label>Client Secret (Titkos kulcs)</label>
+                <div class="password-wrapper">
+                  <input type="password" name="client_secret" class="form-control" value="${app.has_secret ? '******' : ''}" placeholder="${app.has_secret ? 'Kulcs elmentve (írjon be újat a cseréhez)' : 'Adja meg a secretet'}">
+                  <button type="button" class="btn-toggle-eye" onclick="togglePasswordVisibility(this)">👁️</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Engedélyek (Scopes)</label>
+              <input type="text" name="scopes" class="form-control" value="${escapeHtml(app.scopes || '')}" placeholder="Szóközzel vagy vesszővel elválasztva">
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 12px; flex-wrap: wrap; gap: 10px;">
+              <div style="display: flex; align-items: center; gap: 16px;">
+                <label style="display: flex; align-items: center; gap: 8px; font-size: 12px; cursor: pointer;">
+                  <input type="checkbox" name="sandbox_mode" ${app.sandbox_mode ? 'checked' : ''}>
+                  <span>🧪 Sandbox / Teszt mód (azonnali kipróbálás felhő setup nélkül)</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 8px; font-size: 12px; cursor: pointer;">
+                  <input type="checkbox" name="is_enabled" ${app.is_enabled ? 'checked' : ''}>
+                  <span>Aktív</span>
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-sm">
+                <span class="icon">💾</span> Mentés
+              </button>
+            </div>
+          </form>
+        </div>
+      `;
+    }).join('');
+  } catch (err) {
+    container.innerHTML = `<div class="text-danger" style="padding: 16px;">Hiba: ${escapeHtml(err.message)}</div>`;
+  }
+}
+
+async function saveAdminOAuthApp(provider, event) {
+  event.preventDefault();
+  const form = event.target;
+  const client_id = form.elements['client_id'].value.trim();
+  const client_secret = form.elements['client_secret'].value.trim();
+  const scopes = form.elements['scopes'].value.trim();
+  const sandbox_mode = form.elements['sandbox_mode'].checked;
+  const is_enabled = form.elements['is_enabled'].checked;
+  const btn = form.querySelector('button[type="submit"]');
+
+  const origText = btn.innerHTML;
+  btn.innerText = 'Mentés... ⏳';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(`/api/v1/admin/oauth-apps/${provider}`, {
+      method: 'POST',
+      headers: getAuthHeaders(true),
+      body: JSON.stringify({
+        client_id,
+        client_secret,
+        scopes,
+        sandbox_mode,
+        is_enabled
+      })
+    });
+
+    const data = await res.json();
+    btn.innerHTML = origText;
+    btn.disabled = false;
+
+    if (res.ok && data.status === 'success') {
+      showToast(data.message || 'OAuth beállítások sikeresen mentve!', 'success');
+      loadAdminOAuthApps();
+    } else {
+      showToast(data.detail || 'Hiba a mentés során', 'error');
+    }
+  } catch (err) {
+    btn.innerHTML = origText;
+    btn.disabled = false;
+    showToast(`Hálózati hiba: ${err.message}`, 'error');
+  }
+}
+
+function copyRedirectUri(uri, btn) {
+  navigator.clipboard.writeText(uri).then(() => {
+    const orig = btn.innerText;
+    btn.innerText = '✓ Másolva';
+    btn.style.background = '#10b981';
+    btn.style.borderColor = '#10b981';
+    setTimeout(() => {
+      btn.innerText = orig;
+      btn.style.background = '';
+      btn.style.borderColor = '';
+    }, 1500);
   });
 }

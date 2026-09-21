@@ -8,8 +8,9 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(BASE_DIR))
 
+import urllib.parse
 from fastapi import FastAPI, Request, HTTPException
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import Dict, Any, Optional, List
@@ -20,7 +21,13 @@ from core.execution_logger import (
     create_user, authenticate_user, create_session, get_user_by_session, delete_session,
     list_all_clients, get_client_by_id,
     save_user_integration, get_user_integrations, delete_user_integration,
-    save_tenant_module_config, get_tenant_module_config
+    save_tenant_module_config, get_tenant_module_config,
+    list_all_oauth_apps_config, get_oauth_app_config, save_oauth_app_config,
+    verify_and_consume_oauth_state
+)
+from core.oauth_manager import (
+    OAUTH_PROVIDERS, get_provider_details, build_authorization_url,
+    exchange_code_for_tokens, refresh_oauth_token
 )
 from core.webhook_dispatcher import dispatch_event
 
@@ -78,6 +85,20 @@ class IntegrationSaveRequest(BaseModel):
 class ConfigUpdateRequest(BaseModel):
     config: Dict[str, Any]
     is_active: bool = True
+
+class OAuthAppConfigRequest(BaseModel):
+    client_id: str = ""
+    client_secret: Optional[str] = ""
+    scopes: Optional[str] = ""
+    sandbox_mode: bool = True
+    is_enabled: bool = True
+
+def get_base_url_from_request(request: Request) -> str:
+    host = request.headers.get("x-forwarded-host") or request.headers.get("host") or "localhost:8000"
+    proto = request.headers.get("x-forwarded-proto")
+    if not proto:
+        proto = "https" if ("vercel.app" in host or request.url.scheme == "https") else "http"
+    return f"{proto}://{host}"
 
 # --- Public & Dashboard Routes ---
 @app.get("/", response_class=HTMLResponse)
@@ -376,6 +397,123 @@ async def admin_test_client_module(client_id: int, module_id: str, request: Requ
             body = m["test_payload"]
     res = await dispatch_event(module_id, body, tenant_user_id=client_id)
     return res
+
+# --- OAuth 2.0 Client & Authorization Endpoints ---
+
+@app.get("/api/v1/oauth/providers")
+async def list_oauth_providers():
+    configs = {cfg["provider"]: cfg for cfg in list_all_oauth_apps_config()}
+    providers = []
+    for prov_key, spec in OAUTH_PROVIDERS.items():
+        cfg = configs.get(prov_key, {})
+        providers.append({
+            "provider": prov_key,
+            "name": spec["name"],
+            "icon": spec["icon"],
+            "description": spec["description"],
+            "default_scopes": spec["default_scopes"],
+            "scopes": cfg.get("scopes") or spec["default_scopes"],
+            "has_client_id": bool(cfg.get("client_id")),
+            "sandbox_mode": cfg.get("sandbox_mode", True),
+            "is_enabled": cfg.get("is_enabled", True)
+        })
+    return {"status": "success", "providers": providers}
+
+@app.get("/api/v1/oauth/{provider}/authorize")
+async def oauth_authorize(provider: str, request: Request, redirect: Optional[int] = 0):
+    user = require_auth(request)
+    base_url = get_base_url_from_request(request)
+    try:
+        data = build_authorization_url(provider, user["id"], base_url)
+        if redirect:
+            return RedirectResponse(data["auth_url"])
+        return {"status": "success", **data}
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Hiba az OAuth indításakor: {str(e)}")
+
+@app.get("/api/v1/oauth/{provider}/callback")
+async def oauth_callback(
+    provider: str,
+    request: Request,
+    code: Optional[str] = None,
+    state: Optional[str] = None,
+    error: Optional[str] = None
+):
+    if error:
+        return RedirectResponse(f"/?oauth_error={urllib.parse.quote(error)}&provider={provider}")
+
+    if not code or not state:
+        return RedirectResponse(f"/?oauth_error=missing_code_or_state&provider={provider}")
+
+    state_data = verify_and_consume_oauth_state(state)
+    if not state_data:
+        return RedirectResponse(f"/?oauth_error=invalid_or_expired_state&provider={provider}")
+
+    user_id = state_data["user_id"]
+    redirect_uri = state_data["redirect_uri"]
+
+    try:
+        result = exchange_code_for_tokens(
+            provider=provider,
+            code=code,
+            redirect_uri=redirect_uri,
+            user_id=user_id
+        )
+        account = result.get("account_email", "")
+        return RedirectResponse(
+            f"/?oauth_success=1&provider={provider}&account={urllib.parse.quote(account)}"
+        )
+    except Exception as e:
+        return RedirectResponse(
+            f"/?oauth_error={urllib.parse.quote(str(e))}&provider={provider}"
+        )
+
+# --- Super Admin OAuth Apps Management ---
+
+@app.get("/api/v1/admin/oauth-apps")
+async def admin_list_oauth_apps(request: Request):
+    require_superadmin(request)
+    base_url = get_base_url_from_request(request)
+    apps = list_all_oauth_apps_config()
+    for app_item in apps:
+        prov = app_item["provider"]
+        spec = OAUTH_PROVIDERS.get(prov, {})
+        app_item["name"] = spec.get("name", prov)
+        app_item["icon"] = spec.get("icon", "⚡")
+        app_item["description"] = spec.get("description", "")
+        app_item["suggested_redirect_uri"] = f"{base_url}/api/v1/oauth/{prov}/callback"
+        app_item["local_redirect_uri"] = f"http://localhost:8000/api/v1/oauth/{prov}/callback"
+        app_item["production_redirect_uri"] = f"https://ai-automation-hub-alpha.vercel.app/api/v1/oauth/{prov}/callback"
+    return {"status": "success", "oauth_apps": apps}
+
+@app.post("/api/v1/admin/oauth-apps/{provider}")
+async def admin_save_oauth_app(provider: str, req: OAuthAppConfigRequest, request: Request):
+    require_superadmin(request)
+    prov = provider.lower()
+    if prov not in OAUTH_PROVIDERS:
+        raise HTTPException(status_code=400, detail=f"Nem támogatott OAuth szolgáltató: '{provider}'")
+
+    current = get_oauth_app_config(prov)
+    client_secret = req.client_secret
+    if (not client_secret or client_secret == "******") and current:
+        client_secret = current.get("client_secret", "")
+
+    save_oauth_app_config(
+        provider=prov,
+        client_id=req.client_id.strip(),
+        client_secret=client_secret.strip() if client_secret else "",
+        scopes=req.scopes.strip() if req.scopes else OAUTH_PROVIDERS[prov]["default_scopes"],
+        sandbox_mode=req.sandbox_mode,
+        is_enabled=req.is_enabled
+    )
+
+    return {
+        "status": "success",
+        "provider": prov,
+        "message": f"'{OAUTH_PROVIDERS[prov]['name']}' OAuth alkalmazás beállításai sikeresen elmentve!"
+    }
 
 if __name__ == "__main__":
     import uvicorn

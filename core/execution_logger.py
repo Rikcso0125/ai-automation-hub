@@ -93,6 +93,44 @@ def init_db():
                     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
                 )
             """)
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS oauth_apps_config (
+                    provider TEXT PRIMARY KEY,
+                    client_id TEXT NOT NULL DEFAULT '',
+                    client_secret TEXT NOT NULL DEFAULT '',
+                    scopes TEXT NOT NULL DEFAULT '',
+                    sandbox_mode INTEGER DEFAULT 1,
+                    is_enabled INTEGER DEFAULT 1,
+                    updated_at TEXT NOT NULL
+                )
+            """)
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS oauth_states (
+                    state TEXT PRIMARY KEY,
+                    user_id INTEGER NOT NULL,
+                    provider TEXT NOT NULL,
+                    redirect_uri TEXT NOT NULL,
+                    created_at TEXT NOT NULL,
+                    expires_at TEXT NOT NULL
+                )
+            """)
+
+            # Seed default OAuth apps if empty
+            cursor.execute("SELECT COUNT(*) FROM oauth_apps_config")
+            if cursor.fetchone()[0] == 0:
+                now_str = datetime.now().isoformat()
+                default_apps = [
+                    ("google", "", "", "https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/drive.file email profile", 1, 1, now_str),
+                    ("github", "", "", "repo,workflow,read:user,user:email", 1, 1, now_str),
+                    ("microsoft", "", "", "offline_access Mail.ReadWrite Calendars.ReadWrite User.Read", 1, 1, now_str),
+                    ("meta", "", "", "whatsapp_business_messaging,whatsapp_business_management,pages_manage_posts", 1, 1, now_str),
+                    ("slack", "", "", "channels:read,chat:write,commands,incoming-webhook", 1, 1, now_str),
+                ]
+                cursor.executemany("""
+                    INSERT INTO oauth_apps_config (provider, client_id, client_secret, scopes, sandbox_mode, is_enabled, updated_at)
+                    VALUES (?, ?, ?, ?, ?, ?, ?)
+                """, default_apps)
+
             conn.commit()
     except Exception as e:
         print(f"Warning: could not init_db: {e}")
@@ -301,11 +339,16 @@ def get_user_integrations(user_id: int, hide_secrets: bool = False) -> List[Dict
             creds = json.loads(r["credentials_json"]) if r["credentials_json"] else {}
             if hide_secrets:
                 masked_creds = {}
+                secret_keywords = {"token", "secret", "password", "key"}
                 for k, v in creds.items():
-                    if isinstance(v, str) and len(v) > 6:
-                        masked_creds[k] = v[:3] + "..." + v[-3:]
+                    is_secret = any(sk in k.lower() for sk in secret_keywords)
+                    if is_secret:
+                        if isinstance(v, str) and len(v) > 6:
+                            masked_creds[k] = v[:3] + "..." + v[-3:]
+                        else:
+                            masked_creds[k] = "******"
                     else:
-                        masked_creds[k] = "******"
+                        masked_creds[k] = v
                 creds = masked_creds
             result.append({
                 "id": r["id"],
@@ -456,3 +499,108 @@ def get_stats() -> Dict[str, Any]:
             "runs_today": runs_today,
             "success_rate": success_rate
         }
+
+# --- OAuth 2.0 System Database Helpers ---
+def save_oauth_app_config(provider: str, client_id: str, client_secret: str, scopes: str = "", sandbox_mode: bool = True, is_enabled: bool = True) -> None:
+    now = datetime.now().isoformat()
+    with sqlite3.connect(DB_PATH) as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT INTO oauth_apps_config (provider, client_id, client_secret, scopes, sandbox_mode, is_enabled, updated_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(provider) DO UPDATE SET
+                client_id = excluded.client_id,
+                client_secret = excluded.client_secret,
+                scopes = excluded.scopes,
+                sandbox_mode = excluded.sandbox_mode,
+                is_enabled = excluded.is_enabled,
+                updated_at = excluded.updated_at
+        """, (provider, client_id, client_secret, scopes, 1 if sandbox_mode else 0, 1 if is_enabled else 0, now))
+        conn.commit()
+
+def get_oauth_app_config(provider: str) -> Optional[Dict[str, Any]]:
+    with sqlite3.connect(DB_PATH) as conn:
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM oauth_apps_config WHERE provider = ?", (provider,))
+        row = cursor.fetchone()
+        if not row:
+            return None
+        return {
+            "provider": row["provider"],
+            "client_id": row["client_id"],
+            "client_secret": row["client_secret"],
+            "scopes": row["scopes"],
+            "sandbox_mode": bool(row["sandbox_mode"]),
+            "is_enabled": bool(row["is_enabled"]),
+            "updated_at": row["updated_at"]
+        }
+
+def list_all_oauth_apps_config() -> List[Dict[str, Any]]:
+    with sqlite3.connect(DB_PATH) as conn:
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM oauth_apps_config ORDER BY provider")
+        rows = cursor.fetchall()
+        result = []
+        for r in rows:
+            sec = r["client_secret"]
+            masked_sec = (sec[:4] + "..." + sec[-3:]) if len(sec) > 7 else ("******" if sec else "")
+            result.append({
+                "provider": r["provider"],
+                "client_id": r["client_id"],
+                "client_secret_masked": masked_sec,
+                "has_secret": bool(sec),
+                "scopes": r["scopes"],
+                "sandbox_mode": bool(r["sandbox_mode"]),
+                "is_enabled": bool(r["is_enabled"]),
+                "updated_at": r["updated_at"]
+            })
+        return result
+
+def create_oauth_state(user_id: int, provider: str, redirect_uri: str) -> str:
+    state = secrets.token_urlsafe(32)
+    now = datetime.now()
+    expires = now + timedelta(minutes=15)
+    with sqlite3.connect(DB_PATH) as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT INTO oauth_states (state, user_id, provider, redirect_uri, created_at, expires_at)
+            VALUES (?, ?, ?, ?, ?, ?)
+        """, (state, user_id, provider, redirect_uri, now.isoformat(), expires.isoformat()))
+        conn.commit()
+    return state
+
+def verify_and_consume_oauth_state(state: str) -> Optional[Dict[str, Any]]:
+    with sqlite3.connect(DB_PATH) as conn:
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM oauth_states WHERE state = ?", (state,))
+        row = cursor.fetchone()
+        if not row:
+            return None
+        cursor.execute("DELETE FROM oauth_states WHERE state = ?", (state,))
+        conn.commit()
+
+        # Check expiry
+        now_str = datetime.now().isoformat()
+        if row["expires_at"] < now_str:
+            return None
+
+        return {
+            "state": row["state"],
+            "user_id": row["user_id"],
+            "provider": row["provider"],
+            "redirect_uri": row["redirect_uri"]
+        }
+
+def update_vault_credentials(integration_id: int, new_credentials: Dict[str, Any]) -> None:
+    now = datetime.now().isoformat()
+    with sqlite3.connect(DB_PATH) as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            UPDATE integrations_vault 
+            SET credentials_json = ?, updated_at = ?
+            WHERE id = ?
+        """, (json.dumps(new_credentials, ensure_ascii=False), now, integration_id))
+        conn.commit()

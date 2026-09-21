@@ -434,17 +434,72 @@
           </div>
         </div>
 
-        <!-- Section 1: Bekötött integrációk listája -->
+        <!-- Section 0: 1-Kattintásos OAuth 2.0 Csatlakoztatás -->
         <div class="vault-section-title">
+          <span>⚡ 1-Kattintásos OAuth 2.0 Fiók Csatlakoztatás</span>
+          <span class="badge badge-active" style="font-size: 10px;">Azonnali Hitelesítés</span>
+        </div>
+        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+          Csatlakoztassa hivatalos fiókját jelszavak és API kulcsok manuális másolgatása nélkül! Biztonságos, 1-kattintásos OAuth 2.0 jóváhagyás.
+        </p>
+        <div class="oauth-buttons-grid">
+          <button type="button" class="btn-oauth btn-oauth-google" onclick="startOAuthFlow('google')">
+            <span class="oauth-btn-icon">🔴</span>
+            <div class="oauth-btn-text">
+              <strong>Google Workspace / Gmail</strong>
+              <span>Email, Naptár, Drive & Címtár</span>
+            </div>
+            <span class="oauth-connect-tag">Csatlakozás →</span>
+          </button>
+
+          <button type="button" class="btn-oauth btn-oauth-github" onclick="startOAuthFlow('github')">
+            <span class="oauth-btn-icon">🐙</span>
+            <div class="oauth-btn-text">
+              <strong>GitHub</strong>
+              <span>Repository-k, CI/CD, Workflows</span>
+            </div>
+            <span class="oauth-connect-tag">Csatlakozás →</span>
+          </button>
+
+          <button type="button" class="btn-oauth btn-oauth-microsoft" onclick="startOAuthFlow('microsoft')">
+            <span class="oauth-btn-icon">🔵</span>
+            <div class="oauth-btn-text">
+              <strong>Microsoft 365 / Azure AD</strong>
+              <span>Outlook, Teams & Naptár</span>
+            </div>
+            <span class="oauth-connect-tag">Csatlakozás →</span>
+          </button>
+
+          <button type="button" class="btn-oauth btn-oauth-meta" onclick="startOAuthFlow('meta')">
+            <span class="oauth-btn-icon">🟢</span>
+            <div class="oauth-btn-text">
+              <strong>Meta & WhatsApp Cloud</strong>
+              <span>WhatsApp Business & Facebook Pages</span>
+            </div>
+            <span class="oauth-connect-tag">Csatlakozás →</span>
+          </button>
+
+          <button type="button" class="btn-oauth btn-oauth-slack" onclick="startOAuthFlow('slack')">
+            <span class="oauth-btn-icon">🟣</span>
+            <div class="oauth-btn-text">
+              <strong>Slack Munkaterület</strong>
+              <span>Csatornák, botok & jóváhagyások</span>
+            </div>
+            <span class="oauth-connect-tag">Csatlakozás →</span>
+          </button>
+        </div>
+
+        <!-- Section 1: Bekötött integrációk listája -->
+        <div class="vault-section-title" style="margin-top: 24px;">
           <span>📋 Jelenleg Bekötött Rendszereim (<span id="vault-connected-count">0</span>)</span>
         </div>
         <div id="vault-connected-list" class="vault-connected-grid">
           <div class="loading-state">Bekötött szolgáltatások betöltése...</div>
         </div>
 
-        <!-- Section 2: Új integráció bekötése form -->
+        <!-- Section 2: Új integráció bekötése form (Manuális kulcsok) -->
         <div class="vault-section-title" style="margin-top: 24px;">
-          <span>➕ Új Szolgáltatás vagy Rendszer Bekötése</span>
+          <span>➕ Egyéb Rendszer Bekötése Manuális API Kulccsal</span>
         </div>
         <div class="vault-add-box">
           <div class="form-group">
@@ -500,33 +555,58 @@
       <div class="modal-header">
         <div class="modal-title-group">
           <h3>👑 Szuper Adminisztrátori Ügyfélkezelő Központ</h3>
-          <p class="modal-subtitle">Regisztrált megbízók, bekötött integrációk és fiókkörnyezetek</p>
+          <p class="modal-subtitle">Regisztrált megbízók, bekötött integrációk és OAuth alkalmazás beállítások</p>
         </div>
         <button class="modal-close-btn" onclick="closeModal('modal-admin-clients')">✕</button>
       </div>
 
+      <!-- Admin Tabs -->
+      <div class="modal-tabs">
+        <button class="modal-tab-btn active" id="tab-admin-clients" onclick="switchAdminTab('clients')">
+          👥 Regisztrált Ügyfelek (<span id="admin-tab-clients-count">0</span>)
+        </button>
+        <button class="modal-tab-btn" id="tab-admin-oauth" onclick="switchAdminTab('oauth')">
+          ⚙️ OAuth Szolgáltatók Beállítása (Client ID & Callback URL-ek)
+        </button>
+      </div>
+
       <div class="modal-body modal-scroll">
-        <div class="admin-search-bar">
-          <input type="text" id="admin-client-search" class="form-control" placeholder="Keresés cégnév, email vagy kapcsolattartó szerint..." oninput="filterAdminClients()">
-          <button class="btn btn-outline btn-sm" onclick="loadAdminClients()">🔄 Frissítés</button>
+        <!-- View 1: Regisztrált ügyfelek táblázata -->
+        <div id="admin-view-clients">
+          <div class="admin-search-bar">
+            <input type="text" id="admin-client-search" class="form-control" placeholder="Keresés cégnév, email vagy kapcsolattartó szerint..." oninput="filterAdminClients()">
+            <button class="btn btn-outline btn-sm" onclick="loadAdminClients()">🔄 Frissítés</button>
+          </div>
+
+          <div class="table-responsive" style="margin-top: 16px;">
+            <table class="logs-table admin-clients-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Cég / Vállalkozás</th>
+                  <th>Kapcsolattartó</th>
+                  <th>Elérhetőség</th>
+                  <th>Integrációk</th>
+                  <th>Műveletek</th>
+                </tr>
+              </thead>
+              <tbody id="admin-clients-tbody">
+                <tr><td colspan="6" class="text-center">Ügyfelek betöltése...</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
-        <div class="table-responsive" style="margin-top: 16px;">
-          <table class="logs-table admin-clients-table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Cég / Vállalkozás</th>
-                <th>Kapcsolattartó</th>
-                <th>Elérhetőség</th>
-                <th>Integrációk</th>
-                <th>Műveletek</th>
-              </tr>
-            </thead>
-            <tbody id="admin-clients-tbody">
-              <tr><td colspan="6" class="text-center">Ügyfelek betöltése...</td></tr>
-            </tbody>
-          </table>
+        <!-- View 2: OAuth Szolgáltatók Beállítása (Client ID & Secret) -->
+        <div id="admin-view-oauth" style="display: none;">
+          <div class="oauth-admin-intro">
+            <h4>⚙️ OAuth 2.0 Szolgáltatók & Visszahívási Címek (Redirect URIs)</h4>
+            <p>Itt konfigurálhatja a Google Cloud Console-ban, GitHub Developer Appsban és a többi platformon regisztrált OAuth alkalmazásait. A szolgáltatóknál adja meg az alább látható <strong>Authorized Redirect URI</strong> címeket!</p>
+          </div>
+
+          <div id="admin-oauth-apps-grid" class="oauth-apps-grid">
+            <div class="loading-state">OAuth alkalmazások betöltése...</div>
+          </div>
         </div>
       </div>
 
