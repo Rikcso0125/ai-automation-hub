@@ -85,9 +85,9 @@ def build_authorization_url(provider: str, user_id: int, base_url: str) -> Dict[
     sandbox_mode = config.get("sandbox_mode", True) if config else True
     scopes = (config.get("scopes") or spec["default_scopes"]) if config else spec["default_scopes"]
 
-    # Ha a szuper admin még nem konfigurált éles Client ID-t vagy sandbox mód van érvényben,
-    # akkor azonnali tesztelhető sandbox callback URL-t adunk vissza!
-    if sandbox_mode or not client_id:
+    # Ha a szuper admin még nem konfigurált éles Client ID-t, vagy sandbox mód van bekapcsolva,
+    # vagy mock / teszt azonosító szerepel, akkor azonnali működőképes sandbox módot biztosítunk!
+    if sandbox_mode or not client_id or "testapps" in client_id.lower() or "mock" in client_id.lower() or client_id.startswith("123456789"):
         sandbox_code = f"mock_code_{prov}_{secrets.token_hex(8)}"
         auth_url = f"{redirect_uri}?code={sandbox_code}&state={state}&sandbox=1"
         return {
