@@ -13,6 +13,10 @@ let currentActiveModule = null;
 // Multi-tenant Auth & Tenant State
 let authToken = localStorage.getItem('hub_auth_token') || null;
 let currentUser = null;
+try {
+  const _cached = localStorage.getItem('hub_auth_user');
+  if (_cached) currentUser = JSON.parse(_cached);
+} catch (_) {}
 let activeTenant = null; // Set when Super Admin enters a client's environment
 let selectedPresetKey = 'gmail';
 
@@ -830,9 +834,16 @@ function escapeHtml(str) {
 async function checkAuthStatus() {
   if (!authToken) {
     currentUser = null;
+    localStorage.removeItem('hub_auth_user');
     renderUserNavbar();
     return;
   }
+
+  // Ha van eltárolt felhasználó, azonnal megjelenítjük (nincs villogás vagy kiléptetés érzet)
+  if (currentUser) {
+    renderUserNavbar();
+  }
+
   try {
     const res = await fetch('/api/v1/auth/me', {
       headers: getAuthHeaders(false)
@@ -841,19 +852,26 @@ async function checkAuthStatus() {
       const data = await res.json();
       if (data.authenticated && data.user) {
         currentUser = data.user;
+        localStorage.setItem('hub_auth_user', JSON.stringify(currentUser));
       } else {
         currentUser = null;
         authToken = null;
         localStorage.removeItem('hub_auth_token');
+        localStorage.removeItem('hub_auth_user');
       }
-    } else {
+    } else if (res.status === 401) {
+      // Csak kifejezett 401 jogosultsági hibánál töröljük a munkamenetet
       currentUser = null;
       authToken = null;
       localStorage.removeItem('hub_auth_token');
+      localStorage.removeItem('hub_auth_user');
+    } else {
+      // 500 vagy egyéb átmeneti szerverhiba esetén megtartjuk a belépést
+      console.warn("Auth check átmeneti szerver státusz:", res.status);
     }
   } catch (e) {
-    console.warn("Auth check failed:", e);
-    currentUser = null;
+    // Átmeneti hálózati késleltetésnél nem léptetjük ki
+    console.warn("Auth check hálózati figyelmeztetés:", e);
   }
   renderUserNavbar();
 }
@@ -980,6 +998,7 @@ async function handleLoginSubmit(event) {
       authToken = data.token;
       currentUser = data.user;
       localStorage.setItem('hub_auth_token', authToken);
+      localStorage.setItem('hub_auth_user', JSON.stringify(currentUser));
       closeModal('modal-auth');
       renderUserNavbar();
       showToast(data.message || 'Sikeres bejelentkezés!', 'success', 3500);
@@ -1028,6 +1047,7 @@ async function handleRegisterSubmit(event) {
       authToken = data.token;
       currentUser = data.user;
       localStorage.setItem('hub_auth_token', authToken);
+      localStorage.setItem('hub_auth_user', JSON.stringify(currentUser));
       closeModal('modal-auth');
       renderUserNavbar();
       showToast(`Sikeres regisztráció! Üdvözlünk, ${currentUser.company_name}!`, 'success', 4000);
@@ -1059,6 +1079,7 @@ async function logoutUser() {
   currentUser = null;
   activeTenant = null;
   localStorage.removeItem('hub_auth_token');
+  localStorage.removeItem('hub_auth_user');
 
   const banner = document.getElementById('active-tenant-banner');
   if (banner) banner.style.display = 'none';

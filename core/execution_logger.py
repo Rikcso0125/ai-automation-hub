@@ -140,7 +140,14 @@ init_db()
 # --- Password & Security Helpers ---
 import hashlib
 import secrets
+import hmac
+import base64
 from datetime import timedelta
+
+SESSION_SECRET_KEY = os.environ.get(
+    "HUB_SESSION_SECRET",
+    "ai-automation-hub-2026-production-hmac-sha256-secret-secure-key"
+).encode("utf-8")
 
 def hash_password(password: str, salt: Optional[str] = None) -> tuple:
     if not salt:
@@ -213,34 +220,112 @@ def authenticate_user(email: str, password: str) -> Optional[Dict[str, Any]]:
         return None
 
 def create_session(user_id: int, duration_days: int = 30) -> str:
-    token = secrets.token_urlsafe(32)
+    user = get_client_by_id(user_id) or {}
     now = datetime.now()
+    exp_ts = int((now + timedelta(days=duration_days)).timestamp())
     expires_at = (now + timedelta(days=duration_days)).isoformat()
-    with sqlite3.connect(DB_PATH) as conn:
-        cursor = conn.cursor()
-        cursor.execute("""
-            INSERT INTO user_sessions (token, user_id, created_at, expires_at)
-            VALUES (?, ?, ?, ?)
-        """, (token, user_id, now.isoformat(), expires_at))
-        conn.commit()
-    return token
+
+    # 1. Stateless HMAC-SHA256 Token generálás (Vercel Serverless független)
+    payload = {
+        "uid": user_id,
+        "email": user.get("email", ""),
+        "role": user.get("role", "client"),
+        "name": user.get("full_name", ""),
+        "company": user.get("company_name", ""),
+        "exp": exp_ts,
+        "rnd": secrets.token_hex(6)
+    }
+    p_bytes = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    p_b64 = base64.urlsafe_b64encode(p_bytes).decode("utf-8").rstrip("=")
+    sig = hmac.new(SESSION_SECRET_KEY, p_b64.encode("utf-8"), hashlib.sha256).hexdigest()
+    signed_token = f"{p_b64}.{sig}"
+
+    # 2. Helyi adatbázisba mentés (audit és munkamenet követés)
+    try:
+        with sqlite3.connect(DB_PATH) as conn:
+            cursor = conn.cursor()
+            cursor.execute("""
+                INSERT INTO user_sessions (token, user_id, created_at, expires_at)
+                VALUES (?, ?, ?, ?)
+            """, (signed_token, user_id, now.isoformat(), expires_at))
+            conn.commit()
+    except Exception as e:
+        print(f"create_session DB note: {e}")
+
+    return signed_token
 
 def get_user_by_session(token: str) -> Optional[Dict[str, Any]]:
     if not token:
         return None
-    with sqlite3.connect(DB_PATH) as conn:
-        conn.row_factory = sqlite3.Row
-        cursor = conn.cursor()
-        cursor.execute("""
-            SELECT u.id, u.email, u.full_name, u.company_name, u.phone, u.role, u.created_at, u.last_login
-            FROM user_sessions s
-            JOIN users u ON s.user_id = u.id
-            WHERE s.token = ? AND s.expires_at > ?
-        """, (token, datetime.now().isoformat()))
-        row = cursor.fetchone()
-        if row:
-            return dict(row)
-        return None
+
+    # 1. Stateless HMAC-SHA256 Token Érvényesítés
+    if "." in token:
+        try:
+            parts = token.split(".", 1)
+            if len(parts) == 2:
+                p_b64, sig = parts
+                expected_sig = hmac.new(SESSION_SECRET_KEY, p_b64.encode("utf-8"), hashlib.sha256).hexdigest()
+                if secrets.compare_digest(sig, expected_sig):
+                    padded_b64 = p_b64 + "=" * ((4 - len(p_b64) % 4) % 4)
+                    payload = json.loads(base64.urlsafe_b64decode(padded_b64.encode("utf-8")).decode("utf-8"))
+                    now_ts = datetime.now().timestamp()
+                    if payload.get("exp", 0) > now_ts:
+                        uid = payload["uid"]
+                        user = get_client_by_id(uid)
+                        if user:
+                            return user
+
+                        # Ha a serverless lambda új konténer és a DB még üres,
+                        # automatikusan helyreállítjuk a felhasználót az SQLite-ban:
+                        email = payload.get("email", "").lower().strip()
+                        if email:
+                            with sqlite3.connect(DB_PATH) as conn:
+                                conn.row_factory = sqlite3.Row
+                                cursor = conn.cursor()
+                                cursor.execute("SELECT id, email, full_name, company_name, phone, role, created_at, last_login FROM users WHERE email = ?", (email,))
+                                row = cursor.fetchone()
+                                if row:
+                                    return dict(row)
+
+                                dummy_pwd, dummy_salt = hash_password(secrets.token_hex(16))
+                                now_iso = datetime.now().isoformat()
+                                cursor.execute("""
+                                    INSERT OR IGNORE INTO users (id, email, password_hash, salt, full_name, company_name, phone, role, created_at, last_login)
+                                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                                """, (uid, email, dummy_pwd, dummy_salt, payload.get("name", "Felhasználó"), payload.get("company", "Vállalkozás"), "", payload.get("role", "client"), now_iso, now_iso))
+                                conn.commit()
+
+                        return {
+                            "id": uid,
+                            "email": payload.get("email", ""),
+                            "full_name": payload.get("name", "Felhasználó"),
+                            "company_name": payload.get("company", "Vállalkozás"),
+                            "phone": "",
+                            "role": payload.get("role", "client"),
+                            "created_at": datetime.now().isoformat(),
+                            "last_login": datetime.now().isoformat()
+                        }
+        except Exception as ex:
+            print(f"Stateless session decode note: {ex}")
+
+    # 2. Hagyományos / Visszafelé kompatibilis SQLite session keresés
+    try:
+        with sqlite3.connect(DB_PATH) as conn:
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+            cursor.execute("""
+                SELECT u.id, u.email, u.full_name, u.company_name, u.phone, u.role, u.created_at, u.last_login
+                FROM user_sessions s
+                JOIN users u ON s.user_id = u.id
+                WHERE s.token = ? AND s.expires_at > ?
+            """, (token, datetime.now().isoformat()))
+            row = cursor.fetchone()
+            if row:
+                return dict(row)
+    except Exception as e:
+        print(f"DB session lookup note: {e}")
+
+    return None
 
 def delete_session(token: str):
     if not token:
@@ -274,27 +359,6 @@ def get_client_by_id(user_id: int) -> Optional[Dict[str, Any]]:
         """, (user_id,))
         row = cursor.fetchone()
         return dict(row) if row else None
-
-# Seed default super admin
-def seed_super_admin():
-    try:
-        with sqlite3.connect(DB_PATH) as conn:
-            cursor = conn.cursor()
-            cursor.execute("SELECT id FROM users WHERE role = 'superadmin'")
-            if not cursor.fetchone():
-                create_user(
-                    email="admin@automationhub.ai",
-                    password="Admin2026!Secure",
-                    full_name="Központi Rendszergazda",
-                    company_name="AI Automation Hub HQ",
-                    phone="+36301234567",
-                    role="superadmin"
-                )
-                print(">>> Default Super Admin created: admin@automationhub.ai (Password: Admin2026!Secure)")
-    except Exception as e:
-        print(f"seed_super_admin notice: {e}")
-
-seed_super_admin()
 
 # --- Integrations Vault (Client Third-party Credentials) ---
 def save_user_integration(user_id: int, service_type: str, service_name: str,
@@ -366,6 +430,72 @@ def delete_user_integration(user_id: int, integration_id: int):
         cursor = conn.cursor()
         cursor.execute("DELETE FROM integrations_vault WHERE id = ? AND user_id = ?", (integration_id, user_id))
         conn.commit()
+
+# --- Seed Default Users & Demo Integrations (Szuper Admin + Teszt Ügyfél) ---
+def seed_default_users():
+    try:
+        with sqlite3.connect(DB_PATH) as conn:
+            cursor = conn.cursor()
+            # 1. Szuper Admin fiók ellenőrzése / létrehozása
+            cursor.execute("SELECT id FROM users WHERE email = 'admin@automationhub.ai'")
+            if not cursor.fetchone():
+                create_user(
+                    email="admin@automationhub.ai",
+                    password="Admin2026!Secure",
+                    full_name="Központi Rendszergazda",
+                    company_name="AI Automation Hub HQ",
+                    phone="+36301234567",
+                    role="superadmin"
+                )
+                print(">>> Default Super Admin created: admin@automationhub.ai (Password: Admin2026!Secure)")
+
+            # 2. Példa Ügyfél (János Kovács) fiók ellenőrzése / létrehozása
+            cursor.execute("SELECT id FROM users WHERE email = 'janos.kovacs@kovacskft.hu'")
+            row_client = cursor.fetchone()
+            if not row_client:
+                client = create_user(
+                    email="janos.kovacs@kovacskft.hu",
+                    password="TitkosJelszo2026!",
+                    full_name="Kovács János",
+                    company_name="Kovács Épületgépészet Kft.",
+                    phone="+36309876543",
+                    role="client"
+                )
+                client_id = client["id"]
+                print(">>> Default Demo Client created: janos.kovacs@kovacskft.hu (Password: TitkosJelszo2026!)")
+
+                # Minta integrációk rögzítése a teszt ügyfélhez
+                save_user_integration(
+                    user_id=client_id,
+                    service_type="google",
+                    service_name="Google Workspace / Gmail (Kovács Kft.)",
+                    credentials={
+                        "auth_type": "oauth2",
+                        "provider": "google",
+                        "account_email": "janos.kovacs@kovacskft.hu",
+                        "account_name": "Kovács János",
+                        "is_sandbox": True,
+                        "scopes": "https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/calendar",
+                        "access_token": "sandbox_token_google_demo123",
+                        "refresh_token": "1//sandbox_refresh_google_demo123"
+                    },
+                    status="connected",
+                    notes="Hivatalos Gmail és Google Naptár OAuth 2.0 kapcsolat"
+                )
+                save_user_integration(
+                    user_id=client_id,
+                    service_type="szamlazz",
+                    service_name="Számlázz.hu Agent Kapcsolat",
+                    credentials={
+                        "agent_key": "szamlazz_agent_kovacs_kft_demo_key_2026"
+                    },
+                    status="connected",
+                    notes="Elektronikus számla és díjbekérő automatikus kiállítás"
+                )
+    except Exception as e:
+        print(f"seed_default_users notice: {e}")
+
+seed_default_users()
 
 # --- Tenant Module Configurations ---
 def save_tenant_module_config(user_id: int, module_id: str, config: Dict[str, Any], is_active: bool = True):
