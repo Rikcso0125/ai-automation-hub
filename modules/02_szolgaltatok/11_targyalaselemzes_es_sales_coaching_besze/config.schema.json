@@ -1,0 +1,52 @@
+{
+  "title": "Tárgyaláselemzés és Sales Coaching Konfiguráció",
+  "type": "object",
+  "properties": {
+    "target_talk_ratio_max": {
+      "type": "number",
+      "title": "Értékesítő Maximális Ajánlott Beszédaránya (%)",
+      "default": 45.0,
+      "description": "45% felett a rendszer jelzi a túlzott monologizálást."
+    },
+    "manager_alert_threshold_score": {
+      "type": "integer",
+      "title": "Vezetői Riasztási Küszöbérték (Sales Score)",
+      "default": 60,
+      "description": "E pontszám alatt automatikus azonnali riasztást kap a sales vezető."
+    },
+    "high_value_deal_threshold_huf": {
+      "type": "integer",
+      "title": "Kiemelt Értékű Ügylet Határ (Ft)",
+      "default": 1000000,
+      "description": "Ezen érték feletti ügyleteknél az elemzés azonnal felkerül a vezetői kiemelt listára."
+    },
+    "output_formats": {
+      "type": "array",
+      "title": "Engedélyezett Kimeneti Formátumok",
+      "items": {
+        "type": "string",
+        "enum": [
+          "pdf_coaching_report",
+          "mobile_quick_summary",
+          "dashboard_live_view"
+        ]
+      },
+      "default": [
+        "pdf_coaching_report",
+        "mobile_quick_summary",
+        "dashboard_live_view"
+      ]
+    },
+    "manager_notification_channel": {
+      "type": "string",
+      "title": "Vezetői Értesítési Csatorna",
+      "enum": [
+        "telegram",
+        "whatsapp",
+        "email",
+        "dashboard"
+      ],
+      "default": "telegram"
+    }
+  }
+}

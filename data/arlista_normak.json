@@ -1,0 +1,104 @@
+{
+  "company_info": {
+    "name": "ProfiKlíma & Épületgépészeti Megoldások Kft.",
+    "tax_number": "14285724-2-41",
+    "reg_number": "01-09-887766",
+    "address": "1117 Budapest, Budafoki út 60.",
+    "email": "ajanlat@profiklima-auto.hu",
+    "phone": "+36 30 555 7788",
+    "bank_account": "11705008-20451299-00000000 (OTP Bank)"
+  },
+  "default_settings": {
+    "vat_percent": 27,
+    "waste_and_safety_margin_percent": 10,
+    "quote_validity_days": 15,
+    "currency": "HUF"
+  },
+  "labor_rates": {
+    "ac_standard_install": {
+      "name": "Oldalfali Klíma Alapszerelés (3 méterig rézcsövezéssel, faláttöréssel és beüzemeléssel)",
+      "unit_price_net": 65000,
+      "unit": "szett"
+    },
+    "ac_extra_pipe_labor": {
+      "name": "Klíma Plusz Nyomvonal Kiépítés és Csövezés Munkadíj",
+      "unit_price_net": 8000,
+      "unit": "méter"
+    },
+    "old_unit_dismantle": {
+      "name": "Régi Berendezés Szakszerű Leszerelése és Környezetbarát Elszállítása",
+      "unit_price_net": 22000,
+      "unit": "darab"
+    },
+    "wall_core_drilling": {
+      "name": "Vasbeton Fal Átfúrás Speciális Gyémántkoronával",
+      "unit_price_net": 18000,
+      "unit": "furat"
+    },
+    "electrical_hookup": {
+      "name": "Elektromos Betáplálás Kiépítés Kismegszakítóval Kötődoboztól",
+      "unit_price_net": 25000,
+      "unit": "kiállás"
+    },
+    "general_master_hourly": {
+      "name": "Szakipari Mester Rezsióradíj",
+      "unit_price_net": 14000,
+      "unit": "óra"
+    },
+    "general_assistant_hourly": {
+      "name": "Segédmunkás Rezsióradíj",
+      "unit_price_net": 7000,
+      "unit": "óra"
+    }
+  },
+  "materials": {
+    "ac_inverter_35kw": {
+      "sku": "AC-INV-35-GREE",
+      "name": "Gree Comfort X 3.5 kW Inverteres Split Klíma (A++/A+)",
+      "unit_price_net": 245000,
+      "unit": "szett"
+    },
+    "ac_inverter_50kw": {
+      "sku": "AC-INV-50-DAIKIN",
+      "name": "Daikin Sensira 5.0 kW Inverteres Split Klíma (A++/A+)",
+      "unit_price_net": 385000,
+      "unit": "szett"
+    },
+    "wall_bracket_heavy": {
+      "sku": "BRK-SS-450",
+      "name": "Rozsdamentes Rezgéscsillapított Fali Kültéri Konzol (450 mm)",
+      "unit_price_net": 12500,
+      "unit": "pár"
+    },
+    "copper_pipe_pair": {
+      "sku": "PIPE-CU-1438",
+      "name": "Szigetelt Vegyéstisztított Rézcső Pár (1/4 - 3/8) + Kommunikációs Kábel",
+      "unit_price_net": 7800,
+      "unit": "méter"
+    },
+    "condensate_gravity_pipe": {
+      "sku": "COND-PIPE-20",
+      "name": "Merevfalú Kondenzvíz Elvezető Cső Idomokkal (D20)",
+      "unit_price_net": 1800,
+      "unit": "méter"
+    },
+    "condensate_drain_pump": {
+      "sku": "PUMP-ASP-MINI",
+      "name": "Sauermann / Aspen Mini Cseppvíz Szivattyú",
+      "unit_price_net": 28000,
+      "unit": "darab"
+    },
+    "circuit_breaker_b16": {
+      "sku": "EL-B16-SCH",
+      "name": "Schneider B16A Kismegszakító és Zárt Kiselosztó Doboz",
+      "unit_price_net": 6500,
+      "unit": "szett"
+    },
+    "trunking_duct": {
+      "sku": "DUCT-6040",
+      "name": "Műanyag Klímatechnikai Kábelcsatorna Fedéllel (60x40 mm)",
+      "unit_price_net": 3200,
+      "unit": "méter"
+    }
+  }
+}

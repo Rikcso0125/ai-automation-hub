@@ -1,0 +1,69 @@
+{
+  "module_id": "07_b2b_kintlevoseg_kezeles_40_eur_koltsegat",
+  "action": "PROCESS_OVERDUE_INVOICES",
+  "invoices": [
+    {
+      "invoice_number": "SZAMLA-2026-0891",
+      "partner_code": "PARTNER-101",
+      "partner_name": "KlímaMaster Szerelő Kft.",
+      "tax_id": "23456789-2-41",
+      "contact_email": "beszerzes@klimamaster.hu",
+      "contact_phone": "+36 30 555 1234",
+      "contact_person": "Nagy Zoltán Építésvezető",
+      "issue_date": "2026-08-10",
+      "due_date": "2026-08-25",
+      "reference_date": "2026-09-20",
+      "currency": "HUF",
+      "original_amount": 2850000,
+      "paid_amount": 0,
+      "pending_orders": [
+        {
+          "order_id": "ORD-2026-9921",
+          "order_amount_huf": 1450000,
+          "status": "WAITING_FOR_DISPATCH"
+        }
+      ],
+      "notes": "Kiemelt Gold partner, 26 napos késedelem"
+    },
+    {
+      "invoice_number": "SZAMLA-2026-0945",
+      "partner_code": "PARTNER-102",
+      "partner_name": "TermoGépész Kivitelező Bt.",
+      "tax_id": "19876543-1-13",
+      "contact_email": "horvath@termogepesz.hu",
+      "contact_phone": "+36 20 444 7890",
+      "contact_person": "Horváth Béla Ügyvezető",
+      "issue_date": "2026-09-02",
+      "due_date": "2026-09-10",
+      "reference_date": "2026-09-20",
+      "currency": "HUF",
+      "original_amount": 920000,
+      "paid_amount": 0,
+      "pending_orders": [
+        {
+          "order_id": "ORD-2026-9934",
+          "order_amount_huf": 350000,
+          "status": "READY_IN_WAREHOUSE"
+        }
+      ],
+      "notes": "Silver partner, 10 napos késedelem"
+    },
+    {
+      "invoice_number": "SZAMLA-2026-0712",
+      "partner_code": "PARTNER-103",
+      "partner_name": "Hűtés-Fűtés Kisker Kft.",
+      "tax_id": "28765432-2-02",
+      "contact_email": "rendeles@hutesfuteskisker.hu",
+      "contact_phone": "+36 70 123 9876",
+      "contact_person": "Kiss Tamás Boltvezető",
+      "issue_date": "2026-07-20",
+      "due_date": "2026-08-10",
+      "reference_date": "2026-09-20",
+      "currency": "HUF",
+      "original_amount": 1640000,
+      "paid_amount": 0,
+      "pending_orders": [],
+      "notes": "Bronze partner, 41 napos súlyos késedelem"
+    }
+  ]
+}

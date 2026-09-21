@@ -1,0 +1,8 @@
+{
+  "id": "foldrajzi_utvonal_optimalizalt_idopontfo",
+  "title": "Földrajzi Útvonal-optimalizált Időpontfoglalás (Route-Smart)",
+  "category": "szolgaltatok",
+  "icon": "🗺️",
+  "version": "1.0.0",
+  "description": "Kiszálló szakemberek naptárának földrajzi csoportosítása zónák (Buda/Pest/Agglomeráció) és dinamikus útvonaltervezés alapján. Okos időpont-felajánlás, beállítható sürgősségi felár eltérő zóna esetén, és előre beállított napokkal tervezett optimalizált Waze/Google Maps napi menetrend export."
+}

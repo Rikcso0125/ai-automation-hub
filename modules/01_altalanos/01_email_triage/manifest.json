@@ -1,0 +1,8 @@
+{
+  "id": "email_triage",
+  "title": "Intelligens Email Triage & Piszkozatíró",
+  "category": "altalanos",
+  "icon": "✉️",
+  "version": "1.0.0",
+  "description": "Automatikusan kategorizálja a beérkező emaileket, kiszűri a spameket, és a céges tudásbázis alapján azonnal előkészíti a 90%-ban kész válaszpiszkozatot."
+}

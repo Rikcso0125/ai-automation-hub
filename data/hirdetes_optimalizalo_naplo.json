@@ -1,0 +1,176 @@
+[
+  {
+    "timestamp": "2026-09-20T03:46:55.362279",
+    "campaign_id": "CAMP-META-2026-BOSCH",
+    "ad_id": "AD-4418290-DRILL",
+    "fatigue_eval": {
+      "status": "CRITICAL_AD_FATIGUE",
+      "fatigue_score": 100,
+      "urgency": "HIGH_INTERVENTION_NEEDED",
+      "is_freq_fatigued": true,
+      "is_ctr_collapsed": true,
+      "is_roas_underperforming": true,
+      "is_cpa_too_high": true,
+      "detected_anomalies": [
+        "Kritikusan magas frekvencia (2.84 >= 2.80): a célközönség már túltelítődött.",
+        "Drasztikus CTR zuhanás (-50.3% >= -25%): a kreatív vizuálisan kifáradt.",
+        "Nem megfelelő ROAS megtérülés (2.1x < 3.0x cél).",
+        "Vásárlási költség (CPA) elszállás (10,142 Ft > 7,500 Ft limit)."
+      ]
+    },
+    "intervention": {
+      "action_taken": "CIRCUIT_BREAKER_EMERGENCY_PAUSE",
+      "requires_human_approval": true,
+      "meta_graph_api_command": "POST /v19.0/AD-4418290-DRILL {'status': 'PAUSED'}",
+      "new_adset_command": "DRAFT_SAVED_WAITING_1CLICK_LAUNCH",
+      "approval_dashboard_url": "https://admin.webshop.hu/ads_manager/fatigue/CAMP-META-2026-BOSCH/review?ad_id=AD-4418290-DRILL",
+      "action_summary": "Kritikus költségvesztés miatt a hirdetés (AD-4418290-DRILL) azonnal LEÁLLÍTVA (Circuit Breaker). Az új friss kreatívok 1 kattintással aktiválhatók a jóváhagyási felületről."
+    },
+    "angles_count": 4,
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T03:46:55.364271",
+    "campaign_id": "CAMP-002",
+    "ad_id": "AD-OLD-99",
+    "fatigue_eval": {
+      "status": "CRITICAL_AD_FATIGUE",
+      "fatigue_score": 90,
+      "urgency": "HIGH_INTERVENTION_NEEDED",
+      "is_freq_fatigued": true,
+      "is_ctr_collapsed": true,
+      "is_roas_underperforming": true,
+      "is_cpa_too_high": false,
+      "detected_anomalies": [
+        "Kritikusan magas frekvencia (3.10 >= 2.80): a célközönség már túltelítődött.",
+        "Drasztikus CTR zuhanás (-35.0% >= -25%): a kreatív vizuálisan kifáradt.",
+        "Nem megfelelő ROAS megtérülés (2.2x < 3.0x cél)."
+      ]
+    },
+    "intervention": {
+      "action_taken": "AUTO_PAUSED_AND_REPLACED",
+      "requires_human_approval": false,
+      "meta_graph_api_command": "POST /v19.0/AD-OLD-99 {'status': 'PAUSED'}",
+      "new_adset_command": "POST /v19.0/CAMP-002/adsets {'name': 'AI-Refreshed-Adset-Angles-1-2', 'daily_budget': 15000}",
+      "approval_dashboard_url": "https://admin.webshop.hu/ads_manager/fatigue/CAMP-002/review?ad_id=AD-OLD-99",
+      "action_summary": "A kifáradt hirdetés (Ismeretlen hirdetés) automatikusan LEÁLLÍTVA. Új adset csatasorba állítva az 1. és 2. szövegezési szöggel."
+    },
+    "angles_count": 4,
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T03:46:55.365702",
+    "campaign_id": "CAMP-003",
+    "ad_id": "AD-FRESH-12",
+    "fatigue_eval": {
+      "status": "HEALTHY_PERFORMANCE",
+      "fatigue_score": 0,
+      "urgency": "NO_ACTION_REQUIRED",
+      "is_freq_fatigued": false,
+      "is_ctr_collapsed": false,
+      "is_roas_underperforming": false,
+      "is_cpa_too_high": false,
+      "detected_anomalies": []
+    },
+    "intervention": {
+      "action_taken": "STAGED_FOR_HUMAN_APPROVAL",
+      "requires_human_approval": true,
+      "meta_graph_api_command": null,
+      "new_adset_command": null,
+      "approval_dashboard_url": "https://admin.webshop.hu/ads_manager/fatigue/CAMP-003/review?ad_id=AD-FRESH-12",
+      "action_summary": "Mérsékelt Ad Fatigue detektálva. Új kreatívvariációk előkészítve a kampánymenedzsernek."
+    },
+    "angles_count": 4,
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T03:47:07.581684",
+    "campaign_id": "CAMP-LIVE-META-001",
+    "ad_id": "AD-LIVE-901",
+    "fatigue_eval": {
+      "status": "CRITICAL_AD_FATIGUE",
+      "fatigue_score": 100,
+      "urgency": "HIGH_INTERVENTION_NEEDED",
+      "is_freq_fatigued": true,
+      "is_ctr_collapsed": true,
+      "is_roas_underperforming": true,
+      "is_cpa_too_high": true,
+      "detected_anomalies": [
+        "Kritikusan magas frekvencia (2.84 >= 2.80): a célközönség már túltelítődött.",
+        "Drasztikus CTR zuhanás (-50.3% >= -25%): a kreatív vizuálisan kifáradt.",
+        "Nem megfelelő ROAS megtérülés (2.1x < 3.0x cél).",
+        "Vásárlási költség (CPA) elszállás (10,142 Ft > 7,500 Ft limit)."
+      ]
+    },
+    "intervention": {
+      "action_taken": "CIRCUIT_BREAKER_EMERGENCY_PAUSE",
+      "requires_human_approval": true,
+      "meta_graph_api_command": "POST /v19.0/AD-LIVE-901 {'status': 'PAUSED'}",
+      "new_adset_command": "DRAFT_SAVED_WAITING_1CLICK_LAUNCH",
+      "approval_dashboard_url": "https://admin.webshop.hu/ads_manager/fatigue/CAMP-LIVE-META-001/review?ad_id=AD-LIVE-901",
+      "action_summary": "Kritikus költségvesztés miatt a hirdetés (AD-LIVE-901) azonnal LEÁLLÍTVA (Circuit Breaker). Az új friss kreatívok 1 kattintással aktiválhatók a jóváhagyási felületről."
+    },
+    "angles_count": 4,
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:08.287928",
+    "campaign_id": "CAMP-META-2026-BOSCH",
+    "ad_id": "AD-4418290-DRILL",
+    "fatigue_eval": {
+      "status": "CRITICAL_AD_FATIGUE",
+      "fatigue_score": 100,
+      "urgency": "HIGH_INTERVENTION_NEEDED",
+      "is_freq_fatigued": true,
+      "is_ctr_collapsed": true,
+      "is_roas_underperforming": true,
+      "is_cpa_too_high": true,
+      "detected_anomalies": [
+        "Kritikusan magas frekvencia (2.84 >= 2.80): a célközönség már túltelítődött.",
+        "Drasztikus CTR zuhanás (-50.3% >= -25%): a kreatív vizuálisan kifáradt.",
+        "Nem megfelelő ROAS megtérülés (2.1x < 3.0x cél).",
+        "Vásárlási költség (CPA) elszállás (10,142 Ft > 7,500 Ft limit)."
+      ]
+    },
+    "intervention": {
+      "action_taken": "CIRCUIT_BREAKER_EMERGENCY_PAUSE",
+      "requires_human_approval": true,
+      "meta_graph_api_command": "POST /v19.0/AD-4418290-DRILL {'status': 'PAUSED'}",
+      "new_adset_command": "DRAFT_SAVED_WAITING_1CLICK_LAUNCH",
+      "approval_dashboard_url": "https://admin.webshop.hu/ads_manager/fatigue/CAMP-META-2026-BOSCH/review?ad_id=AD-4418290-DRILL",
+      "action_summary": "Kritikus költségvesztés miatt a hirdetés (AD-4418290-DRILL) azonnal LEÁLLÍTVA (Circuit Breaker). Az új friss kreatívok 1 kattintással aktiválhatók a jóváhagyási felületről."
+    },
+    "angles_count": 4,
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:57.170688",
+    "campaign_id": "CAMP-META-2026-BOSCH",
+    "ad_id": "AD-4418290-DRILL",
+    "fatigue_eval": {
+      "status": "CRITICAL_AD_FATIGUE",
+      "fatigue_score": 100,
+      "urgency": "HIGH_INTERVENTION_NEEDED",
+      "is_freq_fatigued": true,
+      "is_ctr_collapsed": true,
+      "is_roas_underperforming": true,
+      "is_cpa_too_high": true,
+      "detected_anomalies": [
+        "Kritikusan magas frekvencia (2.84 >= 2.80): a célközönség már túltelítődött.",
+        "Drasztikus CTR zuhanás (-50.3% >= -25%): a kreatív vizuálisan kifáradt.",
+        "Nem megfelelő ROAS megtérülés (2.1x < 3.0x cél).",
+        "Vásárlási költség (CPA) elszállás (10,142 Ft > 7,500 Ft limit)."
+      ]
+    },
+    "intervention": {
+      "action_taken": "CIRCUIT_BREAKER_EMERGENCY_PAUSE",
+      "requires_human_approval": true,
+      "meta_graph_api_command": "POST /v19.0/AD-4418290-DRILL {'status': 'PAUSED'}",
+      "new_adset_command": "DRAFT_SAVED_WAITING_1CLICK_LAUNCH",
+      "approval_dashboard_url": "https://admin.webshop.hu/ads_manager/fatigue/CAMP-META-2026-BOSCH/review?ad_id=AD-4418290-DRILL",
+      "action_summary": "Kritikus költségvesztés miatt a hirdetés (AD-4418290-DRILL) azonnal LEÁLLÍTVA (Circuit Breaker). Az új friss kreatívok 1 kattintással aktiválhatók a jóváhagyási felületről."
+    },
+    "angles_count": 4,
+    "status": "COMPLETED"
+  }
+]

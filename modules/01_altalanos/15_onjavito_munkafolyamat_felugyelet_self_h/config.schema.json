@@ -1,0 +1,48 @@
+{
+  "title": "Önjavító Munkafolyamat-Felügyelet Konfiguráció",
+  "type": "object",
+  "required": [
+    "enabled_self_healing_strategies",
+    "alert_channels",
+    "admin_alert_email"
+  ],
+  "properties": {
+    "enabled_self_healing_strategies": {
+      "type": "string",
+      "title": "Aktív Önjavító Stratégiák",
+      "enum": [
+        "Mindhárom stratégia aktív (Retry 3x, Failover Fallback, Dead-Letter Queue)",
+        "Csak Újrapróbálkozás (Retry 3x)",
+        "Újrapróbálkozás és Tartalék Útvonal (Failover)"
+      ],
+      "default": "Mindhárom stratégia aktív (Retry 3x, Failover Fallback, Dead-Letter Queue)",
+      "description": "Válassza ki a rendszer által automatikusan alkalmazott hibaelhárítási stratégiákat."
+    },
+    "alert_channels": {
+      "type": "string",
+      "title": "Riasztási Csatornák Kiválasztása",
+      "enum": [
+        "Mindkét csatorna (Telegram Bot & Admin Email)",
+        "Csak Telegram Sürgősségi Csatorna",
+        "Csak Admin Email Értesítés"
+      ],
+      "default": "Mindkét csatorna (Telegram Bot & Admin Email)"
+    },
+    "admin_alert_email": {
+      "type": "string",
+      "title": "Rendszergazda / Ügyvezető Riasztási Email",
+      "default": "admin@profitech.hu"
+    },
+    "telegram_alert_chat_id": {
+      "type": "string",
+      "title": "Telegram Sürgősségi Csoport / Chat ID",
+      "default": "@profitech_hub_alerts"
+    },
+    "auto_resolve_on_heal": {
+      "type": "boolean",
+      "title": "Automatikus Lezárás Sikeres Önjavításkor",
+      "default": true,
+      "description": "Ha az önjavítás sikeres, a riasztási jegy automatikusan MEGOLDVA státuszba kerül."
+    }
+  }
+}

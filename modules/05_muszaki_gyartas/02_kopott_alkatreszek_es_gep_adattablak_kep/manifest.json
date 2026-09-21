@@ -1,0 +1,8 @@
+{
+  "id": "02_kopott_alkatreszek_es_gep_adattablak_kep",
+  "title": "Kopott Alkatrészek és Gép-Adattáblák Képazonosítása (Vision Part ID)",
+  "category": "muszaki",
+  "icon": "🔧",
+  "version": "1.0.0",
+  "description": "Koszos, olajos, lekopott ipari gépalkatrészek és fém adattáblák mobilfotójának Vision AI rekonstrukciója, robbantott ábra (exploded view) pozícionálás, OEM vs. utángyártott kompatibilitási mátrix és beszerzési jóváhagyási autopilot."
+}

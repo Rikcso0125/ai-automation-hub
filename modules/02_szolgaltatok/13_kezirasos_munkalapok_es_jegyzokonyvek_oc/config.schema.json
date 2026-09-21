@@ -1,0 +1,50 @@
+{
+  "title": "Kézírásos Munkalap OCR Konfiguráció",
+  "type": "object",
+  "properties": {
+    "allowed_input_channels": {
+      "type": "array",
+      "title": "Engedélyezett Beküldési Csatornák",
+      "items": {
+        "type": "string",
+        "enum": [
+          "whatsapp",
+          "telegram",
+          "dashboard_upload",
+          "api_webhook"
+        ]
+      },
+      "default": [
+        "whatsapp",
+        "telegram",
+        "dashboard_upload",
+        "api_webhook"
+      ]
+    },
+    "auto_generate_invoice_draft": {
+      "type": "boolean",
+      "title": "Automatikus Számlatervezet Készítése (Billingo / Számlázz.hu / ERP)",
+      "default": true
+    },
+    "auto_send_customer_copy": {
+      "type": "boolean",
+      "title": "Digitális Másolat Automatikus Kiküldése az Ügyfélnek (WhatsApp / Email)",
+      "default": true
+    },
+    "signature_verification_required": {
+      "type": "boolean",
+      "title": "Kézi Aláírás Kötelező Meglétének Ellenőrzése",
+      "default": true
+    },
+    "min_confidence_human_review_threshold": {
+      "type": "number",
+      "title": "Kézi Ellenőrzési Küszöbérték (% alatti bizonyosság)",
+      "default": 80.0
+    },
+    "hourly_labor_rate_huf": {
+      "type": "integer",
+      "title": "Munkadíj Óradíj (Ft/óra)",
+      "default": 14000
+    }
+  }
+}

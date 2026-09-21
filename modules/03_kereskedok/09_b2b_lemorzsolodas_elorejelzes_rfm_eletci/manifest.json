@@ -1,0 +1,8 @@
+{
+  "id": "09_b2b_lemorzsolodas_elorejelzes_rfm_eletci",
+  "title": "B2B Lemorzsolódás Előrejelzés & RFM Életciklus Érték (LTV)",
+  "category": "kereskedok",
+  "icon": "📈",
+  "version": "1.0.0",
+  "description": "Prediktív B2B lemorzsolódás-megelőző és RFM életciklus elemző motor. Észleli a rendelési gyakoriság vagy kosárérték hirtelen visszaesését és a konkurenciához való átpártolást (kategória-kiesés). Testreszabható VIP visszatartó ajánlatokat generál és automatikus KAM riasztást indít 48 órás reakcióidővel."
+}

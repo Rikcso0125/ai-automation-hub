@@ -1,0 +1,88 @@
+{
+  "module_id": "10_kereskedelmi_anomalia_detektalas_arreszu",
+  "action": "AUDIT_TRANSACTIONS",
+  "orders": [
+    {
+      "order_id": "ORD-ANOMALY-01",
+      "customer_name": "KlímaTech Generál Kft.",
+      "customer_tier": "GOLD",
+      "order_date": "2026-09-20",
+      "items": [
+        {
+          "sku": "DAIKIN-SENSIRA-35",
+          "product_name": "Daikin Sensira 3.5 kW Klíma Szett",
+          "quantity": 5,
+          "unit_cost_huf": 245000,
+          "offered_price_huf": 185000,
+          "list_price_huf": 329000,
+          "applied_discounts": [
+            "Egyedi értékesítői akció -43.7%"
+          ],
+          "notes": "Elgépelt ár az árajánlatban (285e helyett 185e)!"
+        }
+      ]
+    },
+    {
+      "order_id": "ORD-ANOMALY-02",
+      "customer_name": "TermoGépész Kivitelező Bt.",
+      "customer_tier": "SILVER",
+      "order_date": "2026-09-20",
+      "items": [
+        {
+          "sku": "VALVE-BRASS-12",
+          "product_name": "1/2 colos Golyóscsap BB Karos",
+          "quantity": 100,
+          "unit_cost_huf": 1720,
+          "offered_price_huf": 1421,
+          "list_price_huf": 2450,
+          "applied_discounts": [
+            "Partner Silver -15%",
+            "Szezonális kupon -15%",
+            "Volumen -12%"
+          ],
+          "notes": "Halmozott kedvezmények (-42%) ráfizetést okoznak!"
+        }
+      ]
+    },
+    {
+      "order_id": "ORD-ANOMALY-03",
+      "customer_name": "Kisker Szerelvénybolt Bt.",
+      "customer_tier": "BRONZE",
+      "order_date": "2026-09-20",
+      "items": [
+        {
+          "sku": "FITTING-ELBOW-90",
+          "product_name": "Forrasztható Réz Könyök 90 fok",
+          "quantity": 300,
+          "unit_cost_huf": 280,
+          "offered_price_huf": 295,
+          "list_price_huf": 450,
+          "applied_discounts": [
+            "Nyári kiárusítás -34.4%"
+          ],
+          "notes": "Alacsony árrés (5.1%), de a teljes veszteség csak 4,500 Ft (50k limit alatt)"
+        }
+      ]
+    },
+    {
+      "order_id": "ORD-ANOMALY-04",
+      "customer_name": "Nagyberuházó Projekt Zrt.",
+      "customer_tier": "PLATINUM",
+      "order_date": "2026-09-20",
+      "items": [
+        {
+          "sku": "PUMP-GRUNDFOS-25",
+          "product_name": "Grundfos Alpha 25-60 Keringető Szivattyú",
+          "quantity": 3,
+          "unit_cost_huf": 72188,
+          "offered_price_huf": 91500,
+          "list_price_huf": 95360,
+          "applied_discounts": [
+            "Platinum partner -4%"
+          ],
+          "notes": "Teljesen szabályos, egészséges 21.1% haszonkulcs"
+        }
+      ]
+    }
+  ]
+}

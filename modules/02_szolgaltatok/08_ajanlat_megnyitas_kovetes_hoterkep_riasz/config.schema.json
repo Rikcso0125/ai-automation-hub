@@ -1,0 +1,69 @@
+{
+  "title": "Ajánlat Megnyitás-Követés Konfiguráció",
+  "type": "object",
+  "properties": {
+    "alert_channels": {
+      "type": "array",
+      "title": "Értesítési Csatornák az Értékesítőnek",
+      "items": {
+        "type": "string",
+        "enum": [
+          "whatsapp",
+          "telegram",
+          "sms",
+          "dashboard_push"
+        ]
+      },
+      "default": [
+        "whatsapp",
+        "telegram",
+        "sms",
+        "dashboard_push"
+      ],
+      "description": "Mely csatornákon riassza a rendszer az értékesítőt."
+    },
+    "alert_timing_mode": {
+      "type": "string",
+      "title": "Riasztási Időzítés",
+      "enum": [
+        "instant",
+        "smart_delay_45s"
+      ],
+      "default": "instant",
+      "description": "instant (azonnal megnyitáskor) vagy smart_delay_45s (45 mp olvasási idő után hőtérképpel)."
+    },
+    "reopen_alert_enabled": {
+      "type": "boolean",
+      "title": "Újramegnyitási Sürgősségi Riasztás Engedélyezése",
+      "default": true,
+      "description": "Ha az ügyfél 2. vagy többedik alkalommal nyitja meg az ajánlatot, kiemelt prioritású értesítést küld."
+    },
+    "tracking_metrics": {
+      "type": "object",
+      "title": "Mért Viselkedési Mutatók",
+      "properties": {
+        "track_dwell_time": {
+          "type": "boolean",
+          "default": true
+        },
+        "track_sections": {
+          "type": "boolean",
+          "default": true
+        },
+        "track_scroll_depth": {
+          "type": "boolean",
+          "default": true
+        },
+        "calculate_heat_score": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "sales_rep_phone": {
+      "type": "string",
+      "title": "Értékesítő Alapértelmezett Telefonszáma",
+      "default": "+36 30 111 2233"
+    }
+  }
+}

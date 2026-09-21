@@ -1,0 +1,20 @@
+{
+  "module_id": "zero_touch_munkatars_es_ugyfel_onboardin",
+  "onboarding_type": "employee",
+  "details": {
+    "full_name": "Nagy Zoltan",
+    "position": "Senior Automatizalasi Mernok",
+    "department": "Muszaki es Fejlesztesi Osztaly",
+    "start_date": "2026-10-01",
+    "gross_salary_huf": 1200000,
+    "mentor_name": "Kovacs Anna",
+    "mentor_email": "anna@profitech.hu",
+    "personal_email": "zoltan.nagy.magan@gmail.com",
+    "personal_phone": "+36 30 123 4567",
+    "hardware_needed": [
+      "Dell Precision 32GB RAM Laptop",
+      "2x 27 colos 4K Monitor",
+      "Ceges okostelefon SIM kartyaval"
+    ]
+  }
+}

@@ -1,0 +1,740 @@
+[
+  {
+    "timestamp": "2026-09-20T03:51:39.437355",
+    "report_id": "REP-VOICE-2026-0920-01",
+    "project_code": "PRJ-2026-CORVIN-03",
+    "recorded_by": "Kovács István (Felelős Villanyszerelő Művezető)",
+    "entities": {
+      "workers": [
+        "Kovács István (Vezető Művezető)",
+        "József (Szakmunkás)",
+        "Péter (Szakmunkás)"
+      ],
+      "workers_count": 3,
+      "total_man_hours": 24,
+      "labor_cost_huf": 228000,
+      "materials": [
+        {
+          "item_name": "MTK 3x1.5 rézkábel (fehér, flexibilis)",
+          "quantity": 180,
+          "unit": "méter",
+          "unit_price_huf": 380,
+          "total_price_huf": 68400,
+          "standard_norm": "MSZ HD 60364",
+          "dop_ce_certificate": "DOP-2026-CBL-941"
+        },
+        {
+          "item_name": "Perforált fém kábelcsatorna 60x40 mm",
+          "quantity": 45,
+          "unit": "méter",
+          "unit_price_huf": 1450,
+          "total_price_huf": 65250,
+          "standard_norm": "MSZ EN 50085",
+          "dop_ce_certificate": "DOP-2026-TRK-220"
+        },
+        {
+          "item_name": "Schneider Asfora kettős süllyesztett dugalj (fehér)",
+          "quantity": 12,
+          "unit": "darab",
+          "unit_price_huf": 2900,
+          "total_price_huf": 34800,
+          "standard_norm": "MSZ 9871",
+          "dop_ce_certificate": "DOP-2026-SCH-018"
+        }
+      ],
+      "total_materials_huf": 168450,
+      "total_gross_expense_huf": 396450,
+      "weather": {
+        "temperature_celsius": 22,
+        "condition": "Száraz, napos, enyhe légmozgás",
+        "work_impediment": false
+      },
+      "obstacles_recorded": [
+        "A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem készült el, emiatt a kábelátvezetés ideiglenesen szünetel. A műszaki ellenőr és a generálkivitelező írásban értesítve."
+      ],
+      "next_day_plan": "Főelosztó szekrény bekötése és áramköri műszeres ellenőrzése a B szárnyban."
+    },
+    "e_naplo": {
+      "e_naplo_entry_id": "ENAPLO-PRJ-2026-CORVIN-03-20260920",
+      "legal_reference": "191/2009. (IX. 15.) Korm. rendelet az építőipari kivitelezési tevékenységről",
+      "project_name": "Corvin Sétány Irodaház Belső Villamossági Kivitelezés",
+      "project_code": "PRJ-2026-CORVIN-03",
+      "location": "Budapest VIII., Corvin köz 4. 3. emelet B szárny",
+      "entry_date": "2026-09-20",
+      "recorded_by": "Kovács István (Felelős Villanyszerelő Művezető)",
+      "weather_section": "Hőmérséklet: 22 °C, Körülmény: Száraz, napos, enyhe légmozgás (Kültéri munkát nem akadályozott).",
+      "daily_headcount_section": "3 fő villanyszerelő szakmunkás (24 munkaóra)",
+      "work_execution_section": "3. emelet B szárny villamos alapszerelés és nyomvonal-kiépítés: 180 m MTK 3x1.5 kábel behúzása perforált tálcán, 45 m fém kábelcsatorna rögzítése és szintezése mennyezeten, 12 db kettős dugalj beépítése a tárgyaló helyiségben. A kötéseket Wagókkal láttuk el, a dobozokat feliratoztuk.",
+      "built_in_materials_section": [
+        "MTK 3x1.5 rézkábel (fehér, flexibilis) - 180 méter (Szabvány: MSZ HD 60364, DoP: DOP-2026-CBL-941)",
+        "Perforált fém kábelcsatorna 60x40 mm - 45 méter (Szabvány: MSZ EN 50085, DoP: DOP-2026-TRK-220)",
+        "Schneider Asfora kettős süllyesztett dugalj (fehér) - 12 darab (Szabvány: MSZ 9871, DoP: DOP-2026-SCH-018)"
+      ],
+      "obstacles_and_remarks": "A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem készült el, emiatt a kábelátvezetés ideiglenesen szünetel. A műszaki ellenőr és a generálkivitelező írásban értesítve.",
+      "occupational_safety_declaration": "Munkavédelmi és tűzvédelmi oktatás érvényes, egyéni védőeszközök (sisak, munkavédelmi cipő) használata szabályos volt.",
+      "technical_supervisor_clause": "A beépített termékek teljesítménynyilatkozattal (DoP) rendelkeznek, a kivitelezés megfelel a tervdokumentációnak."
+    },
+    "worksheet": {
+      "worksheet_number": "ML-PRJ-2026-CORVIN-03-20260920",
+      "project_code": "PRJ-2026-CORVIN-03",
+      "client_name": "Future Real Estate Kft.",
+      "location": "Budapest VIII., Corvin köz 4. 3. emelet B szárny",
+      "date": "2026-09-20",
+      "labor_breakdown": {
+        "workers_count": 3,
+        "total_hours": 24,
+        "hourly_rate_huf": 9500,
+        "labor_total_huf": 228000
+      },
+      "materials_breakdown": [
+        {
+          "name": "MTK 3x1.5 rézkábel (fehér, flexibilis)",
+          "qty": 180,
+          "unit": "méter",
+          "unit_price": 380,
+          "total": 68400
+        },
+        {
+          "name": "Perforált fém kábelcsatorna 60x40 mm",
+          "qty": 45,
+          "unit": "méter",
+          "unit_price": 1450,
+          "total": 65250
+        },
+        {
+          "name": "Schneider Asfora kettős süllyesztett dugalj (fehér)",
+          "qty": 12,
+          "unit": "darab",
+          "unit_price": 2900,
+          "total": 34800
+        }
+      ],
+      "materials_total_huf": 168450,
+      "grand_total_huf": 396450,
+      "digital_signature_status": "PENDING_CLIENT_SIGNATURE",
+      "digital_signature_url": "https://app.kivitelezo.hu/worksheet/ML-PRJ-2026-CORVIN-03-20260920/sign"
+    },
+    "approval": {
+      "workflow_status": "ESCALATED_CHIEF_ENGINEER_OBSTACLE_FOUND",
+      "requires_chief_engineer_approval": true,
+      "approval_dashboard_url": "https://admin.kivitelezo.hu/enaplo/PRJ-2026-CORVIN-03/review?entry_id=ENAPLO-PRJ-2026-CORVIN-03-20260920",
+      "summary": "Akadályoztatás rögzítve (A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem...). A főmérnöki felülvizsgálat kötelező a kötbérvédelem és a határidő-hosszabbítási igény miatt!"
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T03:51:52.094274",
+    "report_id": "REP-VOICE-2026-0920-01",
+    "project_code": "PRJ-2026-CORVIN-03",
+    "recorded_by": "Kovács István (Felelős Villanyszerelő Művezető)",
+    "entities": {
+      "workers": [
+        "Kovács István (Vezető Művezető)",
+        "József (Szakmunkás)",
+        "Péter (Szakmunkás)"
+      ],
+      "workers_count": 3,
+      "total_man_hours": 24,
+      "labor_cost_huf": 228000,
+      "materials": [
+        {
+          "item_name": "MTK 3x1.5 rézkábel (fehér, flexibilis)",
+          "quantity": 180,
+          "unit": "méter",
+          "unit_price_huf": 380,
+          "total_price_huf": 68400,
+          "standard_norm": "MSZ HD 60364",
+          "dop_ce_certificate": "DOP-2026-CBL-941"
+        },
+        {
+          "item_name": "Perforált fém kábelcsatorna 60x40 mm",
+          "quantity": 45,
+          "unit": "méter",
+          "unit_price_huf": 1450,
+          "total_price_huf": 65250,
+          "standard_norm": "MSZ EN 50085",
+          "dop_ce_certificate": "DOP-2026-TRK-220"
+        },
+        {
+          "item_name": "Schneider Asfora kettős süllyesztett dugalj (fehér)",
+          "quantity": 12,
+          "unit": "darab",
+          "unit_price_huf": 2900,
+          "total_price_huf": 34800,
+          "standard_norm": "MSZ 9871",
+          "dop_ce_certificate": "DOP-2026-SCH-018"
+        }
+      ],
+      "total_materials_huf": 168450,
+      "total_gross_expense_huf": 396450,
+      "weather": {
+        "temperature_celsius": 22,
+        "condition": "Száraz, napos, enyhe légmozgás",
+        "work_impediment": false
+      },
+      "obstacles_recorded": [
+        "A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem készült el, emiatt a kábelátvezetés ideiglenesen szünetel. A műszaki ellenőr és a generálkivitelező írásban értesítve."
+      ],
+      "next_day_plan": "Főelosztó szekrény bekötése és áramköri műszeres ellenőrzése a B szárnyban."
+    },
+    "e_naplo": {
+      "e_naplo_entry_id": "ENAPLO-PRJ-2026-CORVIN-03-20260920",
+      "legal_reference": "191/2009. (IX. 15.) Korm. rendelet az építőipari kivitelezési tevékenységről",
+      "project_name": "Corvin Sétány Irodaház Belső Villamossági Kivitelezés",
+      "project_code": "PRJ-2026-CORVIN-03",
+      "location": "Budapest VIII., Corvin köz 4. 3. emelet B szárny",
+      "entry_date": "2026-09-20",
+      "recorded_by": "Kovács István (Felelős Villanyszerelő Művezető)",
+      "weather_section": "Hőmérséklet: 22 °C, Körülmény: Száraz, napos, enyhe légmozgás (Kültéri munkát nem akadályozott).",
+      "daily_headcount_section": "3 fő villanyszerelő szakmunkás (24 munkaóra)",
+      "work_execution_section": "3. emelet B szárny villamos alapszerelés és nyomvonal-kiépítés: 180 m MTK 3x1.5 kábel behúzása perforált tálcán, 45 m fém kábelcsatorna rögzítése és szintezése mennyezeten, 12 db kettős dugalj beépítése a tárgyaló helyiségben. A kötéseket Wagókkal láttuk el, a dobozokat feliratoztuk.",
+      "built_in_materials_section": [
+        "MTK 3x1.5 rézkábel (fehér, flexibilis) - 180 méter (Szabvány: MSZ HD 60364, DoP: DOP-2026-CBL-941)",
+        "Perforált fém kábelcsatorna 60x40 mm - 45 méter (Szabvány: MSZ EN 50085, DoP: DOP-2026-TRK-220)",
+        "Schneider Asfora kettős süllyesztett dugalj (fehér) - 12 darab (Szabvány: MSZ 9871, DoP: DOP-2026-SCH-018)"
+      ],
+      "obstacles_and_remarks": "A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem készült el, emiatt a kábelátvezetés ideiglenesen szünetel. A műszaki ellenőr és a generálkivitelező írásban értesítve.",
+      "occupational_safety_declaration": "Munkavédelmi és tűzvédelmi oktatás érvényes, egyéni védőeszközök (sisak, munkavédelmi cipő) használata szabályos volt.",
+      "technical_supervisor_clause": "A beépített termékek teljesítménynyilatkozattal (DoP) rendelkeznek, a kivitelezés megfelel a tervdokumentációnak."
+    },
+    "worksheet": {
+      "worksheet_number": "ML-PRJ-2026-CORVIN-03-20260920",
+      "project_code": "PRJ-2026-CORVIN-03",
+      "client_name": "Future Real Estate Kft.",
+      "location": "Budapest VIII., Corvin köz 4. 3. emelet B szárny",
+      "date": "2026-09-20",
+      "labor_breakdown": {
+        "workers_count": 3,
+        "total_hours": 24,
+        "hourly_rate_huf": 9500,
+        "labor_total_huf": 228000
+      },
+      "materials_breakdown": [
+        {
+          "name": "MTK 3x1.5 rézkábel (fehér, flexibilis)",
+          "qty": 180,
+          "unit": "méter",
+          "unit_price": 380,
+          "total": 68400
+        },
+        {
+          "name": "Perforált fém kábelcsatorna 60x40 mm",
+          "qty": 45,
+          "unit": "méter",
+          "unit_price": 1450,
+          "total": 65250
+        },
+        {
+          "name": "Schneider Asfora kettős süllyesztett dugalj (fehér)",
+          "qty": 12,
+          "unit": "darab",
+          "unit_price": 2900,
+          "total": 34800
+        }
+      ],
+      "materials_total_huf": 168450,
+      "grand_total_huf": 396450,
+      "digital_signature_status": "PENDING_CLIENT_SIGNATURE",
+      "digital_signature_url": "https://app.kivitelezo.hu/worksheet/ML-PRJ-2026-CORVIN-03-20260920/sign"
+    },
+    "approval": {
+      "workflow_status": "ESCALATED_CHIEF_ENGINEER_OBSTACLE_FOUND",
+      "requires_chief_engineer_approval": true,
+      "approval_dashboard_url": "https://admin.kivitelezo.hu/enaplo/PRJ-2026-CORVIN-03/review?entry_id=ENAPLO-PRJ-2026-CORVIN-03-20260920",
+      "summary": "Akadályoztatás rögzítve (A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem...). A főmérnöki felülvizsgálat kötelező a kötbérvédelem és a határidő-hosszabbítási igény miatt!"
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T03:51:57.288222",
+    "report_id": "REP-VOICE-2026-0920-01",
+    "project_code": "PRJ-2026-CORVIN-03",
+    "recorded_by": "Kovács István (Felelős Villanyszerelő Művezető)",
+    "entities": {
+      "workers": [
+        "Kovács István (Vezető Művezető)",
+        "József (Szakmunkás)",
+        "Péter (Szakmunkás)"
+      ],
+      "workers_count": 3,
+      "total_man_hours": 24,
+      "labor_cost_huf": 228000,
+      "materials": [
+        {
+          "item_name": "MTK 3x1.5 rézkábel (fehér, flexibilis)",
+          "quantity": 180,
+          "unit": "méter",
+          "unit_price_huf": 380,
+          "total_price_huf": 68400,
+          "standard_norm": "MSZ HD 60364",
+          "dop_ce_certificate": "DOP-2026-CBL-941"
+        },
+        {
+          "item_name": "Perforált fém kábelcsatorna 60x40 mm",
+          "quantity": 45,
+          "unit": "méter",
+          "unit_price_huf": 1450,
+          "total_price_huf": 65250,
+          "standard_norm": "MSZ EN 50085",
+          "dop_ce_certificate": "DOP-2026-TRK-220"
+        },
+        {
+          "item_name": "Schneider Asfora kettős süllyesztett dugalj (fehér)",
+          "quantity": 12,
+          "unit": "darab",
+          "unit_price_huf": 2900,
+          "total_price_huf": 34800,
+          "standard_norm": "MSZ 9871",
+          "dop_ce_certificate": "DOP-2026-SCH-018"
+        }
+      ],
+      "total_materials_huf": 168450,
+      "total_gross_expense_huf": 396450,
+      "weather": {
+        "temperature_celsius": 22,
+        "condition": "Száraz, napos, enyhe légmozgás",
+        "work_impediment": false
+      },
+      "obstacles_recorded": [
+        "A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem készült el, emiatt a kábelátvezetés ideiglenesen szünetel. A műszaki ellenőr és a generálkivitelező írásban értesítve."
+      ],
+      "next_day_plan": "Főelosztó szekrény bekötése és áramköri műszeres ellenőrzése a B szárnyban."
+    },
+    "e_naplo": {
+      "e_naplo_entry_id": "ENAPLO-PRJ-2026-CORVIN-03-20260920",
+      "legal_reference": "191/2009. (IX. 15.) Korm. rendelet az építőipari kivitelezési tevékenységről",
+      "project_name": "Corvin Sétány Irodaház Belső Villamossági Kivitelezés",
+      "project_code": "PRJ-2026-CORVIN-03",
+      "location": "Budapest VIII., Corvin köz 4. 3. emelet B szárny",
+      "entry_date": "2026-09-20",
+      "recorded_by": "Kovács István (Felelős Villanyszerelő Művezető)",
+      "weather_section": "Hőmérséklet: 22 °C, Körülmény: Száraz, napos, enyhe légmozgás (Kültéri munkát nem akadályozott).",
+      "daily_headcount_section": "3 fő villanyszerelő szakmunkás (24 munkaóra)",
+      "work_execution_section": "3. emelet B szárny villamos alapszerelés és nyomvonal-kiépítés: 180 m MTK 3x1.5 kábel behúzása perforált tálcán, 45 m fém kábelcsatorna rögzítése és szintezése mennyezeten, 12 db kettős dugalj beépítése a tárgyaló helyiségben. A kötéseket Wagókkal láttuk el, a dobozokat feliratoztuk.",
+      "built_in_materials_section": [
+        "MTK 3x1.5 rézkábel (fehér, flexibilis) - 180 méter (Szabvány: MSZ HD 60364, DoP: DOP-2026-CBL-941)",
+        "Perforált fém kábelcsatorna 60x40 mm - 45 méter (Szabvány: MSZ EN 50085, DoP: DOP-2026-TRK-220)",
+        "Schneider Asfora kettős süllyesztett dugalj (fehér) - 12 darab (Szabvány: MSZ 9871, DoP: DOP-2026-SCH-018)"
+      ],
+      "obstacles_and_remarks": "A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem készült el, emiatt a kábelátvezetés ideiglenesen szünetel. A műszaki ellenőr és a generálkivitelező írásban értesítve.",
+      "occupational_safety_declaration": "Munkavédelmi és tűzvédelmi oktatás érvényes, egyéni védőeszközök (sisak, munkavédelmi cipő) használata szabályos volt.",
+      "technical_supervisor_clause": "A beépített termékek teljesítménynyilatkozattal (DoP) rendelkeznek, a kivitelezés megfelel a tervdokumentációnak."
+    },
+    "worksheet": {
+      "worksheet_number": "ML-PRJ-2026-CORVIN-03-20260920",
+      "project_code": "PRJ-2026-CORVIN-03",
+      "client_name": "Future Real Estate Kft.",
+      "location": "Budapest VIII., Corvin köz 4. 3. emelet B szárny",
+      "date": "2026-09-20",
+      "labor_breakdown": {
+        "workers_count": 3,
+        "total_hours": 24,
+        "hourly_rate_huf": 9500,
+        "labor_total_huf": 228000
+      },
+      "materials_breakdown": [
+        {
+          "name": "MTK 3x1.5 rézkábel (fehér, flexibilis)",
+          "qty": 180,
+          "unit": "méter",
+          "unit_price": 380,
+          "total": 68400
+        },
+        {
+          "name": "Perforált fém kábelcsatorna 60x40 mm",
+          "qty": 45,
+          "unit": "méter",
+          "unit_price": 1450,
+          "total": 65250
+        },
+        {
+          "name": "Schneider Asfora kettős süllyesztett dugalj (fehér)",
+          "qty": 12,
+          "unit": "darab",
+          "unit_price": 2900,
+          "total": 34800
+        }
+      ],
+      "materials_total_huf": 168450,
+      "grand_total_huf": 396450,
+      "digital_signature_status": "PENDING_CLIENT_SIGNATURE",
+      "digital_signature_url": "https://app.kivitelezo.hu/worksheet/ML-PRJ-2026-CORVIN-03-20260920/sign"
+    },
+    "approval": {
+      "workflow_status": "ESCALATED_CHIEF_ENGINEER_OBSTACLE_FOUND",
+      "requires_chief_engineer_approval": true,
+      "approval_dashboard_url": "https://admin.kivitelezo.hu/enaplo/PRJ-2026-CORVIN-03/review?entry_id=ENAPLO-PRJ-2026-CORVIN-03-20260920",
+      "summary": "Akadályoztatás rögzítve (A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem...). A főmérnöki felülvizsgálat kötelező a kötbérvédelem és a határidő-hosszabbítási igény miatt!"
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T03:52:00.621274",
+    "report_id": "REP-VOICE-2026-0920-01",
+    "project_code": "PRJ-2026-CORVIN-03",
+    "recorded_by": "Kovács István (Felelős Villanyszerelő Művezető)",
+    "entities": {
+      "workers": [
+        "Kovács István (Vezető Művezető)",
+        "József (Szakmunkás)",
+        "Péter (Szakmunkás)"
+      ],
+      "workers_count": 3,
+      "total_man_hours": 24,
+      "labor_cost_huf": 228000,
+      "materials": [
+        {
+          "item_name": "MTK 3x1.5 rézkábel (fehér, flexibilis)",
+          "quantity": 180,
+          "unit": "méter",
+          "unit_price_huf": 380,
+          "total_price_huf": 68400,
+          "standard_norm": "MSZ HD 60364",
+          "dop_ce_certificate": "DOP-2026-CBL-941"
+        },
+        {
+          "item_name": "Perforált fém kábelcsatorna 60x40 mm",
+          "quantity": 45,
+          "unit": "méter",
+          "unit_price_huf": 1450,
+          "total_price_huf": 65250,
+          "standard_norm": "MSZ EN 50085",
+          "dop_ce_certificate": "DOP-2026-TRK-220"
+        },
+        {
+          "item_name": "Schneider Asfora kettős süllyesztett dugalj (fehér)",
+          "quantity": 12,
+          "unit": "darab",
+          "unit_price_huf": 2900,
+          "total_price_huf": 34800,
+          "standard_norm": "MSZ 9871",
+          "dop_ce_certificate": "DOP-2026-SCH-018"
+        }
+      ],
+      "total_materials_huf": 168450,
+      "total_gross_expense_huf": 396450,
+      "weather": {
+        "temperature_celsius": 22,
+        "condition": "Száraz, napos, enyhe légmozgás",
+        "work_impediment": false
+      },
+      "obstacles_recorded": [
+        "A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem készült el, emiatt a kábelátvezetés ideiglenesen szünetel. A műszaki ellenőr és a generálkivitelező írásban értesítve."
+      ],
+      "next_day_plan": "Főelosztó szekrény bekötése és áramköri műszeres ellenőrzése a B szárnyban."
+    },
+    "e_naplo": {
+      "e_naplo_entry_id": "ENAPLO-PRJ-2026-CORVIN-03-20260920",
+      "legal_reference": "191/2009. (IX. 15.) Korm. rendelet az építőipari kivitelezési tevékenységről",
+      "project_name": "Corvin Sétány Irodaház Belső Villamossági Kivitelezés",
+      "project_code": "PRJ-2026-CORVIN-03",
+      "location": "Budapest VIII., Corvin köz 4. 3. emelet B szárny",
+      "entry_date": "2026-09-20",
+      "recorded_by": "Kovács István (Felelős Villanyszerelő Művezető)",
+      "weather_section": "Hőmérséklet: 22 °C, Körülmény: Száraz, napos, enyhe légmozgás (Kültéri munkát nem akadályozott).",
+      "daily_headcount_section": "3 fő villanyszerelő szakmunkás (24 munkaóra)",
+      "work_execution_section": "3. emelet B szárny villamos alapszerelés és nyomvonal-kiépítés: 180 m MTK 3x1.5 kábel behúzása perforált tálcán, 45 m fém kábelcsatorna rögzítése és szintezése mennyezeten, 12 db kettős dugalj beépítése a tárgyaló helyiségben. A kötéseket Wagókkal láttuk el, a dobozokat feliratoztuk.",
+      "built_in_materials_section": [
+        "MTK 3x1.5 rézkábel (fehér, flexibilis) - 180 méter (Szabvány: MSZ HD 60364, DoP: DOP-2026-CBL-941)",
+        "Perforált fém kábelcsatorna 60x40 mm - 45 méter (Szabvány: MSZ EN 50085, DoP: DOP-2026-TRK-220)",
+        "Schneider Asfora kettős süllyesztett dugalj (fehér) - 12 darab (Szabvány: MSZ 9871, DoP: DOP-2026-SCH-018)"
+      ],
+      "obstacles_and_remarks": "A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem készült el, emiatt a kábelátvezetés ideiglenesen szünetel. A műszaki ellenőr és a generálkivitelező írásban értesítve.",
+      "occupational_safety_declaration": "Munkavédelmi és tűzvédelmi oktatás érvényes, egyéni védőeszközök (sisak, munkavédelmi cipő) használata szabályos volt.",
+      "technical_supervisor_clause": "A beépített termékek teljesítménynyilatkozattal (DoP) rendelkeznek, a kivitelezés megfelel a tervdokumentációnak."
+    },
+    "worksheet": {
+      "worksheet_number": "ML-PRJ-2026-CORVIN-03-20260920",
+      "project_code": "PRJ-2026-CORVIN-03",
+      "client_name": "Future Real Estate Kft.",
+      "location": "Budapest VIII., Corvin köz 4. 3. emelet B szárny",
+      "date": "2026-09-20",
+      "labor_breakdown": {
+        "workers_count": 3,
+        "total_hours": 24,
+        "hourly_rate_huf": 9500,
+        "labor_total_huf": 228000
+      },
+      "materials_breakdown": [
+        {
+          "name": "MTK 3x1.5 rézkábel (fehér, flexibilis)",
+          "qty": 180,
+          "unit": "méter",
+          "unit_price": 380,
+          "total": 68400
+        },
+        {
+          "name": "Perforált fém kábelcsatorna 60x40 mm",
+          "qty": 45,
+          "unit": "méter",
+          "unit_price": 1450,
+          "total": 65250
+        },
+        {
+          "name": "Schneider Asfora kettős süllyesztett dugalj (fehér)",
+          "qty": 12,
+          "unit": "darab",
+          "unit_price": 2900,
+          "total": 34800
+        }
+      ],
+      "materials_total_huf": 168450,
+      "grand_total_huf": 396450,
+      "digital_signature_status": "PENDING_CLIENT_SIGNATURE",
+      "digital_signature_url": "https://app.kivitelezo.hu/worksheet/ML-PRJ-2026-CORVIN-03-20260920/sign"
+    },
+    "approval": {
+      "workflow_status": "ESCALATED_CHIEF_ENGINEER_OBSTACLE_FOUND",
+      "requires_chief_engineer_approval": true,
+      "approval_dashboard_url": "https://admin.kivitelezo.hu/enaplo/PRJ-2026-CORVIN-03/review?entry_id=ENAPLO-PRJ-2026-CORVIN-03-20260920",
+      "summary": "Akadályoztatás rögzítve (A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem...). A főmérnöki felülvizsgálat kötelező a kötbérvédelem és a határidő-hosszabbítási igény miatt!"
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:05.948564",
+    "report_id": "REP-VOICE-2026-0920-01",
+    "project_code": "PRJ-2026-CORVIN-03",
+    "recorded_by": "Kovács István (Felelős Villanyszerelő Művezető)",
+    "entities": {
+      "workers": [
+        "Kovács István (Vezető Művezető)",
+        "József (Szakmunkás)",
+        "Péter (Szakmunkás)"
+      ],
+      "workers_count": 3,
+      "total_man_hours": 24,
+      "labor_cost_huf": 228000,
+      "materials": [
+        {
+          "item_name": "MTK 3x1.5 rézkábel (fehér, flexibilis)",
+          "quantity": 180,
+          "unit": "méter",
+          "unit_price_huf": 380,
+          "total_price_huf": 68400,
+          "standard_norm": "MSZ HD 60364",
+          "dop_ce_certificate": "DOP-2026-CBL-941"
+        },
+        {
+          "item_name": "Perforált fém kábelcsatorna 60x40 mm",
+          "quantity": 45,
+          "unit": "méter",
+          "unit_price_huf": 1450,
+          "total_price_huf": 65250,
+          "standard_norm": "MSZ EN 50085",
+          "dop_ce_certificate": "DOP-2026-TRK-220"
+        },
+        {
+          "item_name": "Schneider Asfora kettős süllyesztett dugalj (fehér)",
+          "quantity": 12,
+          "unit": "darab",
+          "unit_price_huf": 2900,
+          "total_price_huf": 34800,
+          "standard_norm": "MSZ 9871",
+          "dop_ce_certificate": "DOP-2026-SCH-018"
+        }
+      ],
+      "total_materials_huf": 168450,
+      "total_gross_expense_huf": 396450,
+      "weather": {
+        "temperature_celsius": 22,
+        "condition": "Száraz, napos, enyhe légmozgás",
+        "work_impediment": false
+      },
+      "obstacles_recorded": [
+        "A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem készült el, emiatt a kábelátvezetés ideiglenesen szünetel. A műszaki ellenőr és a generálkivitelező írásban értesítve."
+      ],
+      "next_day_plan": "Főelosztó szekrény bekötése és áramköri műszeres ellenőrzése a B szárnyban."
+    },
+    "e_naplo": {
+      "e_naplo_entry_id": "ENAPLO-PRJ-2026-CORVIN-03-20260920",
+      "legal_reference": "191/2009. (IX. 15.) Korm. rendelet az építőipari kivitelezési tevékenységről",
+      "project_name": "Corvin Sétány Irodaház Belső Villamossági Kivitelezés",
+      "project_code": "PRJ-2026-CORVIN-03",
+      "location": "Budapest VIII., Corvin köz 4. 3. emelet B szárny",
+      "entry_date": "2026-09-20",
+      "recorded_by": "Kovács István (Felelős Villanyszerelő Művezető)",
+      "weather_section": "Hőmérséklet: 22 °C, Körülmény: Száraz, napos, enyhe légmozgás (Kültéri munkát nem akadályozott).",
+      "daily_headcount_section": "3 fő villanyszerelő szakmunkás (24 munkaóra)",
+      "work_execution_section": "3. emelet B szárny villamos alapszerelés és nyomvonal-kiépítés: 180 m MTK 3x1.5 kábel behúzása perforált tálcán, 45 m fém kábelcsatorna rögzítése és szintezése mennyezeten, 12 db kettős dugalj beépítése a tárgyaló helyiségben. A kötéseket Wagókkal láttuk el, a dobozokat feliratoztuk.",
+      "built_in_materials_section": [
+        "MTK 3x1.5 rézkábel (fehér, flexibilis) - 180 méter (Szabvány: MSZ HD 60364, DoP: DOP-2026-CBL-941)",
+        "Perforált fém kábelcsatorna 60x40 mm - 45 méter (Szabvány: MSZ EN 50085, DoP: DOP-2026-TRK-220)",
+        "Schneider Asfora kettős süllyesztett dugalj (fehér) - 12 darab (Szabvány: MSZ 9871, DoP: DOP-2026-SCH-018)"
+      ],
+      "obstacles_and_remarks": "A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem készült el, emiatt a kábelátvezetés ideiglenesen szünetel. A műszaki ellenőr és a generálkivitelező írásban értesítve.",
+      "occupational_safety_declaration": "Munkavédelmi és tűzvédelmi oktatás érvényes, egyéni védőeszközök (sisak, munkavédelmi cipő) használata szabályos volt.",
+      "technical_supervisor_clause": "A beépített termékek teljesítménynyilatkozattal (DoP) rendelkeznek, a kivitelezés megfelel a tervdokumentációnak."
+    },
+    "worksheet": {
+      "worksheet_number": "ML-PRJ-2026-CORVIN-03-20260920",
+      "project_code": "PRJ-2026-CORVIN-03",
+      "client_name": "Future Real Estate Kft.",
+      "location": "Budapest VIII., Corvin köz 4. 3. emelet B szárny",
+      "date": "2026-09-20",
+      "labor_breakdown": {
+        "workers_count": 3,
+        "total_hours": 24,
+        "hourly_rate_huf": 9500,
+        "labor_total_huf": 228000
+      },
+      "materials_breakdown": [
+        {
+          "name": "MTK 3x1.5 rézkábel (fehér, flexibilis)",
+          "qty": 180,
+          "unit": "méter",
+          "unit_price": 380,
+          "total": 68400
+        },
+        {
+          "name": "Perforált fém kábelcsatorna 60x40 mm",
+          "qty": 45,
+          "unit": "méter",
+          "unit_price": 1450,
+          "total": 65250
+        },
+        {
+          "name": "Schneider Asfora kettős süllyesztett dugalj (fehér)",
+          "qty": 12,
+          "unit": "darab",
+          "unit_price": 2900,
+          "total": 34800
+        }
+      ],
+      "materials_total_huf": 168450,
+      "grand_total_huf": 396450,
+      "digital_signature_status": "PENDING_CLIENT_SIGNATURE",
+      "digital_signature_url": "https://app.kivitelezo.hu/worksheet/ML-PRJ-2026-CORVIN-03-20260920/sign"
+    },
+    "approval": {
+      "workflow_status": "ESCALATED_CHIEF_ENGINEER_OBSTACLE_FOUND",
+      "requires_chief_engineer_approval": true,
+      "approval_dashboard_url": "https://admin.kivitelezo.hu/enaplo/PRJ-2026-CORVIN-03/review?entry_id=ENAPLO-PRJ-2026-CORVIN-03-20260920",
+      "summary": "Akadályoztatás rögzítve (A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem...). A főmérnöki felülvizsgálat kötelező a kötbérvédelem és a határidő-hosszabbítási igény miatt!"
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:54.767429",
+    "report_id": "REP-VOICE-2026-0920-01",
+    "project_code": "PRJ-2026-CORVIN-03",
+    "recorded_by": "Kovács István (Felelős Villanyszerelő Művezető)",
+    "entities": {
+      "workers": [
+        "Kovács István (Vezető Művezető)",
+        "József (Szakmunkás)",
+        "Péter (Szakmunkás)"
+      ],
+      "workers_count": 3,
+      "total_man_hours": 24,
+      "labor_cost_huf": 228000,
+      "materials": [
+        {
+          "item_name": "MTK 3x1.5 rézkábel (fehér, flexibilis)",
+          "quantity": 180,
+          "unit": "méter",
+          "unit_price_huf": 380,
+          "total_price_huf": 68400,
+          "standard_norm": "MSZ HD 60364",
+          "dop_ce_certificate": "DOP-2026-CBL-941"
+        },
+        {
+          "item_name": "Perforált fém kábelcsatorna 60x40 mm",
+          "quantity": 45,
+          "unit": "méter",
+          "unit_price_huf": 1450,
+          "total_price_huf": 65250,
+          "standard_norm": "MSZ EN 50085",
+          "dop_ce_certificate": "DOP-2026-TRK-220"
+        },
+        {
+          "item_name": "Schneider Asfora kettős süllyesztett dugalj (fehér)",
+          "quantity": 12,
+          "unit": "darab",
+          "unit_price_huf": 2900,
+          "total_price_huf": 34800,
+          "standard_norm": "MSZ 9871",
+          "dop_ce_certificate": "DOP-2026-SCH-018"
+        }
+      ],
+      "total_materials_huf": 168450,
+      "total_gross_expense_huf": 396450,
+      "weather": {
+        "temperature_celsius": 22,
+        "condition": "Száraz, napos, enyhe légmozgás",
+        "work_impediment": false
+      },
+      "obstacles_recorded": [
+        "A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem készült el, emiatt a kábelátvezetés ideiglenesen szünetel. A műszaki ellenőr és a generálkivitelező írásban értesítve."
+      ],
+      "next_day_plan": "Főelosztó szekrény bekötése és áramköri műszeres ellenőrzése a B szárnyban."
+    },
+    "e_naplo": {
+      "e_naplo_entry_id": "ENAPLO-PRJ-2026-CORVIN-03-20260920",
+      "legal_reference": "191/2009. (IX. 15.) Korm. rendelet az építőipari kivitelezési tevékenységről",
+      "project_name": "Corvin Sétány Irodaház Belső Villamossági Kivitelezés",
+      "project_code": "PRJ-2026-CORVIN-03",
+      "location": "Budapest VIII., Corvin köz 4. 3. emelet B szárny",
+      "entry_date": "2026-09-20",
+      "recorded_by": "Kovács István (Felelős Villanyszerelő Művezető)",
+      "weather_section": "Hőmérséklet: 22 °C, Körülmény: Száraz, napos, enyhe légmozgás (Kültéri munkát nem akadályozott).",
+      "daily_headcount_section": "3 fő villanyszerelő szakmunkás (24 munkaóra)",
+      "work_execution_section": "3. emelet B szárny villamos alapszerelés és nyomvonal-kiépítés: 180 m MTK 3x1.5 kábel behúzása perforált tálcán, 45 m fém kábelcsatorna rögzítése és szintezése mennyezeten, 12 db kettős dugalj beépítése a tárgyaló helyiségben. A kötéseket Wagókkal láttuk el, a dobozokat feliratoztuk.",
+      "built_in_materials_section": [
+        "MTK 3x1.5 rézkábel (fehér, flexibilis) - 180 méter (Szabvány: MSZ HD 60364, DoP: DOP-2026-CBL-941)",
+        "Perforált fém kábelcsatorna 60x40 mm - 45 méter (Szabvány: MSZ EN 50085, DoP: DOP-2026-TRK-220)",
+        "Schneider Asfora kettős süllyesztett dugalj (fehér) - 12 darab (Szabvány: MSZ 9871, DoP: DOP-2026-SCH-018)"
+      ],
+      "obstacles_and_remarks": "A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem készült el, emiatt a kábelátvezetés ideiglenesen szünetel. A műszaki ellenőr és a generálkivitelező írásban értesítve.",
+      "occupational_safety_declaration": "Munkavédelmi és tűzvédelmi oktatás érvényes, egyéni védőeszközök (sisak, munkavédelmi cipő) használata szabályos volt.",
+      "technical_supervisor_clause": "A beépített termékek teljesítménynyilatkozattal (DoP) rendelkeznek, a kivitelezés megfelel a tervdokumentációnak."
+    },
+    "worksheet": {
+      "worksheet_number": "ML-PRJ-2026-CORVIN-03-20260920",
+      "project_code": "PRJ-2026-CORVIN-03",
+      "client_name": "Future Real Estate Kft.",
+      "location": "Budapest VIII., Corvin köz 4. 3. emelet B szárny",
+      "date": "2026-09-20",
+      "labor_breakdown": {
+        "workers_count": 3,
+        "total_hours": 24,
+        "hourly_rate_huf": 9500,
+        "labor_total_huf": 228000
+      },
+      "materials_breakdown": [
+        {
+          "name": "MTK 3x1.5 rézkábel (fehér, flexibilis)",
+          "qty": 180,
+          "unit": "méter",
+          "unit_price": 380,
+          "total": 68400
+        },
+        {
+          "name": "Perforált fém kábelcsatorna 60x40 mm",
+          "qty": 45,
+          "unit": "méter",
+          "unit_price": 1450,
+          "total": 65250
+        },
+        {
+          "name": "Schneider Asfora kettős süllyesztett dugalj (fehér)",
+          "qty": 12,
+          "unit": "darab",
+          "unit_price": 2900,
+          "total": 34800
+        }
+      ],
+      "materials_total_huf": 168450,
+      "grand_total_huf": 396450,
+      "digital_signature_status": "PENDING_CLIENT_SIGNATURE",
+      "digital_signature_url": "https://app.kivitelezo.hu/worksheet/ML-PRJ-2026-CORVIN-03-20260920/sign"
+    },
+    "approval": {
+      "workflow_status": "ESCALATED_CHIEF_ENGINEER_OBSTACLE_FOUND",
+      "requires_chief_engineer_approval": true,
+      "approval_dashboard_url": "https://admin.kivitelezo.hu/enaplo/PRJ-2026-CORVIN-03/review?entry_id=ENAPLO-PRJ-2026-CORVIN-03-20260920",
+      "summary": "Akadályoztatás rögzítve (A 3. emelet C szárnyban a gipszkarton válaszfalak zárása nem...). A főmérnöki felülvizsgálat kötelező a kötbérvédelem és a határidő-hosszabbítási igény miatt!"
+    },
+    "status": "COMPLETED"
+  }
+]

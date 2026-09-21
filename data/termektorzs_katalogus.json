@@ -1,0 +1,73 @@
+[
+  {
+    "sku": "CU-PIPE-15",
+    "ean": "5991234567890",
+    "name": "15x1 mm Rézcső szálban (félkemény)",
+    "category": "Csövek és Idomok",
+    "current_cost_huf": 2750,
+    "current_price_huf": 3850.0,
+    "target_margin_percent": 28.5,
+    "primary_supplier": "EuroGépész Nagyker Kft.",
+    "last_price_update": "2026-09-20T02:43:34.019329",
+    "stock_qty": 450,
+    "unit": "fm",
+    "alternative_sku": null
+  },
+  {
+    "sku": "DAIKIN-SENSIRA-35",
+    "ean": "4548848881234",
+    "name": "Daikin Sensira 3.5 kW Inverteres Klíma Szett",
+    "category": "Klímaberendezések",
+    "current_cost_huf": 245000,
+    "current_price_huf": 329000,
+    "target_margin_percent": 25.5,
+    "primary_supplier": "InstallPartner Zrt.",
+    "stock_qty": 8,
+    "unit": "szett",
+    "alternative_sku": null
+  },
+  {
+    "sku": "VALVE-BRASS-12",
+    "ean": "5999876543210",
+    "name": "1/2 colos Golyóscsap BB Karos (Olasz réz)",
+    "category": "Szerelvények",
+    "current_cost_huf": 1720,
+    "current_price_huf": 2450.0,
+    "target_margin_percent": 29.8,
+    "primary_supplier": "EuroGépész Nagyker Kft.",
+    "last_price_update": "2026-09-20T02:43:34.019329",
+    "stock_qty": 1200,
+    "unit": "db",
+    "alternative_sku": null
+  },
+  {
+    "sku": "PUMP-GRUNDFOS-25",
+    "ean": "5700391234567",
+    "name": "Grundfos Alpha 25-60 180 Fűtési Keringető Szivattyú",
+    "category": "Szivattyúk",
+    "current_cost_huf": 72188,
+    "current_price_huf": 95360.0,
+    "target_margin_percent": 24.3,
+    "primary_supplier": "AustroVent GmbH",
+    "last_price_update": "2026-09-20T02:43:34.019329",
+    "stock_qty": 3,
+    "unit": "db",
+    "alternative_sku": "PUMP-WILO-YONOS-25",
+    "alternative_name": "Wilo Yonos PICO 25/1-6 Fűtési Keringető Szivattyú",
+    "alternative_price_huf": 88500,
+    "alternative_stock_qty": 45
+  },
+  {
+    "sku": "FITTING-ELBOW-90",
+    "ean": "5991122334455",
+    "name": "Forrasztható Réz Könyök 90 fok 15 mm",
+    "category": "Csövek és Idomok",
+    "current_cost_huf": 280,
+    "current_price_huf": 450,
+    "target_margin_percent": 37.7,
+    "primary_supplier": "EuroGépész Nagyker Kft.",
+    "stock_qty": 3500,
+    "unit": "db",
+    "alternative_sku": null
+  }
+]

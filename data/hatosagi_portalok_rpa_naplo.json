@@ -1,0 +1,430 @@
+[
+  {
+    "timestamp": "2026-09-20T03:58:35.306747",
+    "job_id": "RPA-ETDR-2026-0920-05",
+    "project_code": "PRJ-2026-BUDAPART-07",
+    "portal": "ÉTDR - Építésügyi Hatósági Rendszer",
+    "case_number": "BP-11/EPIT/202609-04812-3",
+    "auth_data": {
+      "auth_vault_mode": "zero_trust_vault_push_avdh",
+      "session_id": "GOV-SESS-8ABED5DA5119",
+      "target_portal": "ÉTDR - Építésügyi Hatósági Rendszer",
+      "portal_url": "https://etdr.e-epites.hu/etdr-portal",
+      "two_factor_auth": {
+        "method": "TOTP_HARDWARE_VAULT",
+        "status": "AUTHENTICATED_SUCCESS",
+        "push_notification_approved": true
+      },
+      "avdh_signing": {
+        "enabled": true,
+        "signed_files_count": 3,
+        "signed_files": [
+          {
+            "doc_id": "DOC-ARCH-01",
+            "filename": "epiteszeti_muszaki_leiras_v4_vegleges.pdf",
+            "doc_type": "Architectural_Specification",
+            "size_mb": 4.2,
+            "avdh_status": "AVDH_DIGITALLY_SIGNED_QUALIFIED_TIMESTAMP",
+            "timestamp": "2026.09.20 03:58:35",
+            "signature_hash": "SHA256-2CCE57EDB3EC4FA2"
+          },
+          {
+            "doc_id": "DOC-STAT-02",
+            "filename": "statikai_kiviteli_tervek_femzar.pdf",
+            "doc_type": "Structural_Calculation_Drawings",
+            "size_mb": 18.5,
+            "avdh_status": "AVDH_DIGITALLY_SIGNED_QUALIFIED_TIMESTAMP",
+            "timestamp": "2026.09.20 03:58:35",
+            "signature_hash": "SHA256-D4DEDA7A260044A2"
+          },
+          {
+            "doc_id": "DOC-FIRE-03",
+            "filename": "tuzvedelmi_koncepcio_otsz_ei90.pdf",
+            "doc_type": "Fire_Safety_Report",
+            "size_mb": 6.8,
+            "avdh_status": "AVDH_DIGITALLY_SIGNED_QUALIFIED_TIMESTAMP",
+            "timestamp": "2026.09.20 03:58:35",
+            "signature_hash": "SHA256-54A9F7B703344FDA"
+          }
+        ]
+      }
+    },
+    "rpa_execution": {
+      "resilience_mode_applied": "self_healing_dom_video_dms_sync",
+      "portal_execution_status": "SUBMISSION_ACCEPTED_OFFICIAL",
+      "form_fields_populated": {
+        "cadastral_parcel": "Budapest XI. kerület, 4122/15 hrsz.",
+        "building_purpose": "120 lakásos társasház mélygarázzsal és kereskedelmi passzázzsal",
+        "lead_architect_chamber": "É-1 01-4492",
+        "fee_paid_huf": 45000,
+        "fee_payment_method": "EFER_ELECTRONIC_TRANSFER"
+      },
+      "dom_self_healing": {
+        "anomalies_detected": 1,
+        "anomalies_healed": 1,
+        "self_healing_events": [
+          {
+            "step_name": "Plan_Documents_Upload_Section",
+            "expected_selector": "#btn-upload-dnd",
+            "actual_dom_state": "SELECTOR_NOT_FOUND_CHANGED_BY_GOV_UPDATE",
+            "ai_visual_recovery": {
+              "vision_action": "Detektálva: 'div.dropzone-v2' (Vizuális tervfeltöltő zóna azonosítva)",
+              "confidence": 0.985,
+              "recovery_time_ms": 320,
+              "status": "HEALED_DOM_SELECTOR"
+            }
+          }
+        ]
+      },
+      "official_receipt": {
+        "official_case_number": "BP-11/EPIT/202609-04812-3",
+        "filing_timestamp": "2026-09-20T03:58:35.306747",
+        "acknowledgement_id": "TERT-6053A4B206",
+        "resolution_pdf_filename": "ETDR_befogado_hatarozat_BP-11-EPIT-202609-04812-3.pdf",
+        "download_url": "https://etdr.e-epites.hu/download/resolutions/TERT-6053A4B206.pdf"
+      }
+    },
+    "sync_results": {
+      "legacy_erp_sync": {
+        "system_type": "AS400_IBM_CLI",
+        "target_table": "LIBPRJ/PRJFILE",
+        "record_id": "PRJ2026-BUDAPART-07",
+        "updated_fields": {
+          "HATUGYSZAM": "BP-11/EPIT/202609-04812-3",
+          "STATUSZ": "HATOSAG_ALATT",
+          "UTOLSO_MOD": "20260920"
+        },
+        "terminal_screen_command": "UPDPCL CASE('BP-11/EPIT/202609-04812-3') REC('PRJ2026-BUDAPART-07')",
+        "sync_status": "SUCCESS_RECORD_UPDATED"
+      },
+      "cloud_dms_sync": {
+        "cloud_folder": "/Projektek/PRJ-2026-BUDAPART-07/Hatósági_Engedélyek/",
+        "archived_resolution_pdf": "ETDR_befogado_hatarozat_BP-11-EPIT-202609-04812-3.pdf",
+        "dms_status": "UPLOADED_AND_INDEXED"
+      },
+      "overall_sync_status": "COMPLETED_END_TO_END"
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T03:58:44.997522",
+    "job_id": "RPA-ETDR-2026-0920-05",
+    "project_code": "PRJ-2026-BUDAPART-07",
+    "portal": "ÉTDR - Építésügyi Hatósági Rendszer",
+    "case_number": "BP-11/EPIT/202609-04812-3",
+    "auth_data": {
+      "auth_vault_mode": "zero_trust_vault_push_avdh",
+      "session_id": "GOV-SESS-5236794F425B",
+      "target_portal": "ÉTDR - Építésügyi Hatósági Rendszer",
+      "portal_url": "https://etdr.e-epites.hu/etdr-portal",
+      "two_factor_auth": {
+        "method": "TOTP_HARDWARE_VAULT",
+        "status": "AUTHENTICATED_SUCCESS",
+        "push_notification_approved": true
+      },
+      "avdh_signing": {
+        "enabled": true,
+        "signed_files_count": 3,
+        "signed_files": [
+          {
+            "doc_id": "DOC-ARCH-01",
+            "filename": "epiteszeti_muszaki_leiras_v4_vegleges.pdf",
+            "doc_type": "Architectural_Specification",
+            "size_mb": 4.2,
+            "avdh_status": "AVDH_DIGITALLY_SIGNED_QUALIFIED_TIMESTAMP",
+            "timestamp": "2026.09.20 03:58:44",
+            "signature_hash": "SHA256-967B7520B83D45BE"
+          },
+          {
+            "doc_id": "DOC-STAT-02",
+            "filename": "statikai_kiviteli_tervek_femzar.pdf",
+            "doc_type": "Structural_Calculation_Drawings",
+            "size_mb": 18.5,
+            "avdh_status": "AVDH_DIGITALLY_SIGNED_QUALIFIED_TIMESTAMP",
+            "timestamp": "2026.09.20 03:58:44",
+            "signature_hash": "SHA256-40B8FFD8D84E474F"
+          },
+          {
+            "doc_id": "DOC-FIRE-03",
+            "filename": "tuzvedelmi_koncepcio_otsz_ei90.pdf",
+            "doc_type": "Fire_Safety_Report",
+            "size_mb": 6.8,
+            "avdh_status": "AVDH_DIGITALLY_SIGNED_QUALIFIED_TIMESTAMP",
+            "timestamp": "2026.09.20 03:58:44",
+            "signature_hash": "SHA256-D2DEDB1754B84541"
+          }
+        ]
+      }
+    },
+    "rpa_execution": {
+      "resilience_mode_applied": "self_healing_dom_video_dms_sync",
+      "portal_execution_status": "SUBMISSION_ACCEPTED_OFFICIAL",
+      "form_fields_populated": {
+        "cadastral_parcel": "Budapest XI. kerület, 4122/15 hrsz.",
+        "building_purpose": "120 lakásos társasház mélygarázzsal és kereskedelmi passzázzsal",
+        "lead_architect_chamber": "É-1 01-4492",
+        "fee_paid_huf": 45000,
+        "fee_payment_method": "EFER_ELECTRONIC_TRANSFER"
+      },
+      "dom_self_healing": {
+        "anomalies_detected": 1,
+        "anomalies_healed": 1,
+        "self_healing_events": [
+          {
+            "step_name": "Plan_Documents_Upload_Section",
+            "expected_selector": "#btn-upload-dnd",
+            "actual_dom_state": "SELECTOR_NOT_FOUND_CHANGED_BY_GOV_UPDATE",
+            "ai_visual_recovery": {
+              "vision_action": "Detektálva: 'div.dropzone-v2' (Vizuális tervfeltöltő zóna azonosítva)",
+              "confidence": 0.985,
+              "recovery_time_ms": 320,
+              "status": "HEALED_DOM_SELECTOR"
+            }
+          }
+        ]
+      },
+      "official_receipt": {
+        "official_case_number": "BP-11/EPIT/202609-04812-3",
+        "filing_timestamp": "2026-09-20T03:58:44.997522",
+        "acknowledgement_id": "TERT-FC60227D9B",
+        "resolution_pdf_filename": "ETDR_befogado_hatarozat_BP-11-EPIT-202609-04812-3.pdf",
+        "download_url": "https://etdr.e-epites.hu/download/resolutions/TERT-FC60227D9B.pdf"
+      }
+    },
+    "sync_results": {
+      "legacy_erp_sync": {
+        "system_type": "AS400_IBM_CLI",
+        "target_table": "LIBPRJ/PRJFILE",
+        "record_id": "PRJ2026-BUDAPART-07",
+        "updated_fields": {
+          "HATUGYSZAM": "BP-11/EPIT/202609-04812-3",
+          "STATUSZ": "HATOSAG_ALATT",
+          "UTOLSO_MOD": "20260920"
+        },
+        "terminal_screen_command": "UPDPCL CASE('BP-11/EPIT/202609-04812-3') REC('PRJ2026-BUDAPART-07')",
+        "sync_status": "SUCCESS_RECORD_UPDATED"
+      },
+      "cloud_dms_sync": {
+        "cloud_folder": "/Projektek/PRJ-2026-BUDAPART-07/Hatósági_Engedélyek/",
+        "archived_resolution_pdf": "ETDR_befogado_hatarozat_BP-11-EPIT-202609-04812-3.pdf",
+        "dms_status": "UPLOADED_AND_INDEXED"
+      },
+      "overall_sync_status": "COMPLETED_END_TO_END"
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:06.070081",
+    "job_id": "RPA-ETDR-2026-0920-05",
+    "project_code": "PRJ-2026-BUDAPART-07",
+    "portal": "ÉTDR - Építésügyi Hatósági Rendszer",
+    "case_number": "BP-11/EPIT/202609-04812-3",
+    "auth_data": {
+      "auth_vault_mode": "zero_trust_vault_push_avdh",
+      "session_id": "GOV-SESS-7E3C8472E5D8",
+      "target_portal": "ÉTDR - Építésügyi Hatósági Rendszer",
+      "portal_url": "https://etdr.e-epites.hu/etdr-portal",
+      "two_factor_auth": {
+        "method": "TOTP_HARDWARE_VAULT",
+        "status": "AUTHENTICATED_SUCCESS",
+        "push_notification_approved": true
+      },
+      "avdh_signing": {
+        "enabled": true,
+        "signed_files_count": 3,
+        "signed_files": [
+          {
+            "doc_id": "DOC-ARCH-01",
+            "filename": "epiteszeti_muszaki_leiras_v4_vegleges.pdf",
+            "doc_type": "Architectural_Specification",
+            "size_mb": 4.2,
+            "avdh_status": "AVDH_DIGITALLY_SIGNED_QUALIFIED_TIMESTAMP",
+            "timestamp": "2026.09.20 04:07:06",
+            "signature_hash": "SHA256-159405602EBA4CEF"
+          },
+          {
+            "doc_id": "DOC-STAT-02",
+            "filename": "statikai_kiviteli_tervek_femzar.pdf",
+            "doc_type": "Structural_Calculation_Drawings",
+            "size_mb": 18.5,
+            "avdh_status": "AVDH_DIGITALLY_SIGNED_QUALIFIED_TIMESTAMP",
+            "timestamp": "2026.09.20 04:07:06",
+            "signature_hash": "SHA256-E51E0194124544AA"
+          },
+          {
+            "doc_id": "DOC-FIRE-03",
+            "filename": "tuzvedelmi_koncepcio_otsz_ei90.pdf",
+            "doc_type": "Fire_Safety_Report",
+            "size_mb": 6.8,
+            "avdh_status": "AVDH_DIGITALLY_SIGNED_QUALIFIED_TIMESTAMP",
+            "timestamp": "2026.09.20 04:07:06",
+            "signature_hash": "SHA256-0230A4767E23453F"
+          }
+        ]
+      }
+    },
+    "rpa_execution": {
+      "resilience_mode_applied": "self_healing_dom_video_dms_sync",
+      "portal_execution_status": "SUBMISSION_ACCEPTED_OFFICIAL",
+      "form_fields_populated": {
+        "cadastral_parcel": "Budapest XI. kerület, 4122/15 hrsz.",
+        "building_purpose": "120 lakásos társasház mélygarázzsal és kereskedelmi passzázzsal",
+        "lead_architect_chamber": "É-1 01-4492",
+        "fee_paid_huf": 45000,
+        "fee_payment_method": "EFER_ELECTRONIC_TRANSFER"
+      },
+      "dom_self_healing": {
+        "anomalies_detected": 1,
+        "anomalies_healed": 1,
+        "self_healing_events": [
+          {
+            "step_name": "Plan_Documents_Upload_Section",
+            "expected_selector": "#btn-upload-dnd",
+            "actual_dom_state": "SELECTOR_NOT_FOUND_CHANGED_BY_GOV_UPDATE",
+            "ai_visual_recovery": {
+              "vision_action": "Detektálva: 'div.dropzone-v2' (Vizuális tervfeltöltő zóna azonosítva)",
+              "confidence": 0.985,
+              "recovery_time_ms": 320,
+              "status": "HEALED_DOM_SELECTOR"
+            }
+          }
+        ]
+      },
+      "official_receipt": {
+        "official_case_number": "BP-11/EPIT/202609-04812-3",
+        "filing_timestamp": "2026-09-20T04:07:06.070081",
+        "acknowledgement_id": "TERT-0D980D5A38",
+        "resolution_pdf_filename": "ETDR_befogado_hatarozat_BP-11-EPIT-202609-04812-3.pdf",
+        "download_url": "https://etdr.e-epites.hu/download/resolutions/TERT-0D980D5A38.pdf"
+      }
+    },
+    "sync_results": {
+      "legacy_erp_sync": {
+        "system_type": "AS400_IBM_CLI",
+        "target_table": "LIBPRJ/PRJFILE",
+        "record_id": "PRJ2026-BUDAPART-07",
+        "updated_fields": {
+          "HATUGYSZAM": "BP-11/EPIT/202609-04812-3",
+          "STATUSZ": "HATOSAG_ALATT",
+          "UTOLSO_MOD": "20260920"
+        },
+        "terminal_screen_command": "UPDPCL CASE('BP-11/EPIT/202609-04812-3') REC('PRJ2026-BUDAPART-07')",
+        "sync_status": "SUCCESS_RECORD_UPDATED"
+      },
+      "cloud_dms_sync": {
+        "cloud_folder": "/Projektek/PRJ-2026-BUDAPART-07/Hatósági_Engedélyek/",
+        "archived_resolution_pdf": "ETDR_befogado_hatarozat_BP-11-EPIT-202609-04812-3.pdf",
+        "dms_status": "UPLOADED_AND_INDEXED"
+      },
+      "overall_sync_status": "COMPLETED_END_TO_END"
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:54.856680",
+    "job_id": "RPA-ETDR-2026-0920-05",
+    "project_code": "PRJ-2026-BUDAPART-07",
+    "portal": "ÉTDR - Építésügyi Hatósági Rendszer",
+    "case_number": "BP-11/EPIT/202609-04812-3",
+    "auth_data": {
+      "auth_vault_mode": "zero_trust_vault_push_avdh",
+      "session_id": "GOV-SESS-150E1C6D55CC",
+      "target_portal": "ÉTDR - Építésügyi Hatósági Rendszer",
+      "portal_url": "https://etdr.e-epites.hu/etdr-portal",
+      "two_factor_auth": {
+        "method": "TOTP_HARDWARE_VAULT",
+        "status": "AUTHENTICATED_SUCCESS",
+        "push_notification_approved": true
+      },
+      "avdh_signing": {
+        "enabled": true,
+        "signed_files_count": 3,
+        "signed_files": [
+          {
+            "doc_id": "DOC-ARCH-01",
+            "filename": "epiteszeti_muszaki_leiras_v4_vegleges.pdf",
+            "doc_type": "Architectural_Specification",
+            "size_mb": 4.2,
+            "avdh_status": "AVDH_DIGITALLY_SIGNED_QUALIFIED_TIMESTAMP",
+            "timestamp": "2026.09.20 04:07:54",
+            "signature_hash": "SHA256-EF19942042424C18"
+          },
+          {
+            "doc_id": "DOC-STAT-02",
+            "filename": "statikai_kiviteli_tervek_femzar.pdf",
+            "doc_type": "Structural_Calculation_Drawings",
+            "size_mb": 18.5,
+            "avdh_status": "AVDH_DIGITALLY_SIGNED_QUALIFIED_TIMESTAMP",
+            "timestamp": "2026.09.20 04:07:54",
+            "signature_hash": "SHA256-D54BCD47A8C34EFB"
+          },
+          {
+            "doc_id": "DOC-FIRE-03",
+            "filename": "tuzvedelmi_koncepcio_otsz_ei90.pdf",
+            "doc_type": "Fire_Safety_Report",
+            "size_mb": 6.8,
+            "avdh_status": "AVDH_DIGITALLY_SIGNED_QUALIFIED_TIMESTAMP",
+            "timestamp": "2026.09.20 04:07:54",
+            "signature_hash": "SHA256-0D2D1241AA404785"
+          }
+        ]
+      }
+    },
+    "rpa_execution": {
+      "resilience_mode_applied": "self_healing_dom_video_dms_sync",
+      "portal_execution_status": "SUBMISSION_ACCEPTED_OFFICIAL",
+      "form_fields_populated": {
+        "cadastral_parcel": "Budapest XI. kerület, 4122/15 hrsz.",
+        "building_purpose": "120 lakásos társasház mélygarázzsal és kereskedelmi passzázzsal",
+        "lead_architect_chamber": "É-1 01-4492",
+        "fee_paid_huf": 45000,
+        "fee_payment_method": "EFER_ELECTRONIC_TRANSFER"
+      },
+      "dom_self_healing": {
+        "anomalies_detected": 1,
+        "anomalies_healed": 1,
+        "self_healing_events": [
+          {
+            "step_name": "Plan_Documents_Upload_Section",
+            "expected_selector": "#btn-upload-dnd",
+            "actual_dom_state": "SELECTOR_NOT_FOUND_CHANGED_BY_GOV_UPDATE",
+            "ai_visual_recovery": {
+              "vision_action": "Detektálva: 'div.dropzone-v2' (Vizuális tervfeltöltő zóna azonosítva)",
+              "confidence": 0.985,
+              "recovery_time_ms": 320,
+              "status": "HEALED_DOM_SELECTOR"
+            }
+          }
+        ]
+      },
+      "official_receipt": {
+        "official_case_number": "BP-11/EPIT/202609-04812-3",
+        "filing_timestamp": "2026-09-20T04:07:54.856680",
+        "acknowledgement_id": "TERT-303F5C591B",
+        "resolution_pdf_filename": "ETDR_befogado_hatarozat_BP-11-EPIT-202609-04812-3.pdf",
+        "download_url": "https://etdr.e-epites.hu/download/resolutions/TERT-303F5C591B.pdf"
+      }
+    },
+    "sync_results": {
+      "legacy_erp_sync": {
+        "system_type": "AS400_IBM_CLI",
+        "target_table": "LIBPRJ/PRJFILE",
+        "record_id": "PRJ2026-BUDAPART-07",
+        "updated_fields": {
+          "HATUGYSZAM": "BP-11/EPIT/202609-04812-3",
+          "STATUSZ": "HATOSAG_ALATT",
+          "UTOLSO_MOD": "20260920"
+        },
+        "terminal_screen_command": "UPDPCL CASE('BP-11/EPIT/202609-04812-3') REC('PRJ2026-BUDAPART-07')",
+        "sync_status": "SUCCESS_RECORD_UPDATED"
+      },
+      "cloud_dms_sync": {
+        "cloud_folder": "/Projektek/PRJ-2026-BUDAPART-07/Hatósági_Engedélyek/",
+        "archived_resolution_pdf": "ETDR_befogado_hatarozat_BP-11-EPIT-202609-04812-3.pdf",
+        "dms_status": "UPLOADED_AND_INDEXED"
+      },
+      "overall_sync_status": "COMPLETED_END_TO_END"
+    },
+    "status": "COMPLETED"
+  }
+]

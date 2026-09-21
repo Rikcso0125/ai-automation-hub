@@ -1,0 +1,8 @@
+{
+  "id": "03_minosegbiztositasi_munkavedelmi_ellenorz",
+  "title": "Minőségbiztosítási & Munkavédelmi Ellenőrző Robot (Checklist Audit)",
+  "category": "muszaki",
+  "icon": "✅",
+  "version": "1.0.0",
+  "description": "Műszaki tervek és kivitelezési helyszínek fotóinak Vision AI ellenőrzése a munkavédelmi (Mvt.) és műszaki szabványok (OTSZ, MSZ) szerint, azonnali Stop-Work riasztással, bírságkockázat-becsléssel és fotós javítási kapuval."
+}

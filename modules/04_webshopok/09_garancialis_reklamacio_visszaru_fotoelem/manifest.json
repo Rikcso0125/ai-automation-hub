@@ -1,0 +1,8 @@
+{
+  "id": "09_garancialis_reklamacio_visszaru_fotoelem",
+  "title": "Garanciális Reklamáció & Visszáru Fotóelemzés Automata Címkével",
+  "category": "webshopok",
+  "icon": "📸",
+  "version": "1.0.0",
+  "description": "A vevő által feltöltött fotó alapján megvizsgálja a sérülést és a jótállási időt, majd automatikusan kiállítja az ingyenes visszaküldési futárcímkét és a jóváíró számlát választható ellenőrzési, logisztikai és rendezési móddal."
+}

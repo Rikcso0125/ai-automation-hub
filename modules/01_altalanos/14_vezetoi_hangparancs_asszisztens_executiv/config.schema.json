@@ -1,0 +1,74 @@
+{
+  "title": "Vezetői Hangparancs-Asszisztens Konfiguráció",
+  "type": "object",
+  "required": [
+    "executive_name",
+    "input_channels",
+    "enable_voice_feedback_tts"
+  ],
+  "properties": {
+    "executive_name": {
+      "type": "string",
+      "title": "Cégvezető / Döntéshozó Neve",
+      "default": "Dr. Kovács Béla"
+    },
+    "input_channels": {
+      "type": "string",
+      "title": "Engedélyezett Hangbeviteli Csatornák",
+      "enum": [
+        "Minden csatorna aktív (Webes Mikrofon, Telegram, WhatsApp, Siri)",
+        "Csak Webes Mikrofon Rögzítő Felület",
+        "Csak Mobilos Chat (Telegram / WhatsApp Hangüzenet)",
+        "Csak Apple Siri / Shortcuts"
+      ],
+      "default": "Minden csatorna aktív (Webes Mikrofon, Telegram, WhatsApp, Siri)",
+      "description": "A vezető a weboldal beépített mikrofonján, chaten vagy Siri gyorsparanccsal is diktálhat."
+    },
+    "stt_engine": {
+      "type": "string",
+      "title": "Beszédfelismerő Motor (STT)",
+      "enum": [
+        "Helyi Faster-Whisper (Privát, ingyenes, gépen fut)",
+        "OpenAI Whisper API (Felhős, nagy pontosság)"
+      ],
+      "default": "Helyi Faster-Whisper (Privát, ingyenes, gépen fut)"
+    },
+    "enable_voice_feedback_tts": {
+      "type": "string",
+      "title": "Hangos Visszaolvasás (Text-to-Speech az autóban)",
+      "enum": [
+        "Igen (Hangos felolvasás / TTS válasz az autó hangszóróira)",
+        "Nem (Csak szöveges chat összefoglaló)"
+      ],
+      "default": "Igen (Hangos felolvasás / TTS válasz az autó hangszóróira)",
+      "description": "Vezetés közben felolvassa a visszaigazolást, hogy ne kelljen a kijelzőre nézni."
+    },
+    "calendar_integration": {
+      "type": "string",
+      "title": "Naptár Rendszer",
+      "enum": [
+        "Google Calendar API",
+        "Microsoft Outlook 365 Calendar",
+        "Belső CalDAV Naptár"
+      ],
+      "default": "Google Calendar API"
+    },
+    "task_management_tool": {
+      "type": "string",
+      "title": "Feladatdelegálási Rendszer",
+      "enum": [
+        "ClickUp API",
+        "Asana API",
+        "Jira Cloud",
+        "Trello"
+      ],
+      "default": "ClickUp API"
+    },
+    "custom_webhook_action_url": {
+      "type": "string",
+      "title": "Egyedi Parancs Webhook URL (Bővíthetőség)",
+      "default": "http://localhost:8000/api/v1/webhook/custom_executive_action",
+      "description": "Bármilyen egyedi belső rendszerhez vagy IoT eszközhöz beköthető végpont."
+    }
+  }
+}

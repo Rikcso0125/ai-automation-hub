@@ -1,0 +1,18 @@
+{
+  "module_id": "14_google_terkep_velemenygyujto_sms_ai_vala",
+  "action": "SEND_REVIEW_REQUEST",
+  "completed_job": {
+    "job_id": "JOB-20260920-112",
+    "service_name": "Gree Comfort X klíma alapszerelés",
+    "site_district": "2. kerület (Buda)",
+    "completion_time": "2026-09-20T13:30:00"
+  },
+  "customer": {
+    "name": "Németh Krisztina",
+    "phone": "+36 30 555 9988",
+    "email": "krisztina.nemeth@example.hu"
+  },
+  "technician": {
+    "name": "Kovács László"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "06_ai_lead_scoring_a_forro_viszontelado_jel",
+  "title": "AI Lead Scoring – A Forró Viszonteladó-Jelöltek Kiszűrése",
+  "category": "kereskedok",
+  "icon": "🎯",
+  "version": "1.0.0",
+  "description": "Multi-faktoros B2B AI lead scoring rendszer. Értékeli a pénzügyi stabilitást (árbevétel, létszám, NAV státusz), az iparági illeszkedést (HVAC, gépészet, kivitelezés) és a beszerzési volument. Testreszabható egyedi szabályokkal Tier A (Kiemelt KAM), Tier B (Digitális B2B) és Tier C (Lakossági elirányítás) szintekre kategorizál."
+}

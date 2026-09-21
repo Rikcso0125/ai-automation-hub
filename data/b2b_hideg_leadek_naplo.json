@@ -1,0 +1,310 @@
+[
+  {
+    "campaign_id": "CAMP-B2B-20260920-1448",
+    "created_at": "2026-09-20T04:07:53.202908",
+    "status": "PENDING_SALES_MANAGER_APPROVAL",
+    "search_criteria": {
+      "industries": [
+        "Épületgépészet",
+        "Klímaszerelés",
+        "Generálkivitelezés"
+      ],
+      "min_revenue_m_huf": 350,
+      "region": "Budapest és Pest megye"
+    },
+    "total_prospects": 2,
+    "sending_mode": "manual_approval_only",
+    "daily_drip_limit": 25,
+    "prospects": [
+      {
+        "prospect_id": "P-39140",
+        "company_name": "Pannónia Épületgépész Kft.",
+        "tax_id": "18923456-2-42",
+        "decision_maker_name": "Kerekes András",
+        "decision_maker_title": "Ügyvezető & Főmérnök",
+        "email": "a.kerekes@pannoniagepesz.hu",
+        "sequence": [
+          {
+            "step_number": 1,
+            "delay_days": 0,
+            "subject": "Nagykereskedelmi partnerség & raktári árrés - Pannónia Épületgépész Kft.",
+            "body": "Kedves Kerekes!\n\nLáttuk a(z) Pannónia Épületgépész Kft. legutóbbi szakmai munkáit, különösen a Corvin sétány új irodaépületének komplett VRV hűtés-fűtése - ezúton is gratulálunk a precíz mérnöki megvalósításhoz!\n\nA ProfiGépész Nagykereskedelem közvetlen importőrként pontosan olyan specialistákat lát el, mint Önök (Ipari és irodaházi VRF rendszerek, Daikin és hőszivattyús kivitelezés). Tudjuk, hogy a feszes határidők és a növekvő alapanyagárak mellett a megbízható szállítás és a tiszta árrés a legfontosabb.\n\nSzeretnénk felajánlani a(z) Pannónia Épületgépész Kft. részére kiemelt Arany partneri keretszerződésünket (-22% azonnali árréskedvezmény Daikin, Grundfos, Wilo és rézszerelvényekre), 15 000 m2-es központi raktárunkból 24 órás garantált helyszíni kiszállítással.\n\nNyitott lenne egy kötetlen, 10 perces telefonos egyeztetésre a jövő heti anyagszükségleteik kapcsán?\nKözvetlen naptáram itt érhető el: https://profigepesz.hu/talalkozo-egyeztetes\n\nÜdvözlettel:\nKovács László | B2B Értékesítési Igazgató\nProfiGépész Nagykereskedelmi Kft. | laszlo.kovacs@profigepesz.hu",
+            "status": "QUEUED"
+          },
+          {
+            "step_number": 2,
+            "delay_days": 4,
+            "subject": "Re: Nagykereskedelmi partnerség & raktári árrés - Pannónia Épületgépész Kft.",
+            "body": "Kedves Kerekes!\n\nEgy rövid gondolat az előző megkeresésemhez kapcsolódóan:\nA múlt hónapban egy hasonló méretű budapesti gépész kivitelező partnerünk azért igazolt át hozzánk, mert a korábbi beszállítójuknál heteket csúsztak az idomok és szelepek, ami kötbérveszélyt okozott.\n\nNálunk 99,4%-os készletpontossággal működik a raktári kiszolgálás, így a szerelőbrigádoknak egyetlen órát sem kell feleslegesen a telephelyen várakozniuk.\n\nSzívesen elküldjük a legfrissebb 2026-os nagykereskedelmi katalógusunkat és egy díjmentes prémium mintacsomagot!\nMegfelelő lenne egy gyors hívás ezen a héten? -> https://profigepesz.hu/talalkozo-egyeztetes\n\nBaráti üdvözlettel:\nKovács László",
+            "status": "SCHEDULED"
+          },
+          {
+            "step_number": 3,
+            "delay_days": 8,
+            "subject": "Utolsó kérdés a gépészeti kapacitásról (Pannónia Épületgépész Kft.)",
+            "body": "Kedves Kerekes!\n\nGondolom most a folyamatban lévő kivitelezési projektek kötik le minden figyelmét, így nem szeretném feleslegesen rabolni az idejét.\n\nAmennyiben a jövőben mégis szükségük lenne azonnali, megbízható nagykereskedelmi raktárkészletre vagy sürgős anyagpótlásra kiemelt kedvezménnyel, közvetlenül elér a mobilomon is: +36 30 123 4567.\n\nSikeres évzárást és jó egészséget kívánok a(z) Pannónia Épületgépész Kft. teljes csapatának!\n\nÜdvözlettel:\nKovács László | ProfiGépész Nagykereskedelmi Kft.",
+            "status": "SCHEDULED"
+          }
+        ],
+        "status": "READY_FOR_DISPATCH",
+        "replied": false
+      },
+      {
+        "prospect_id": "P-76482",
+        "company_name": "BudaVent Légtechnika Zrt.",
+        "tax_id": "24567890-2-13",
+        "decision_maker_name": "Váradi Márk",
+        "decision_maker_title": "Beszerzési Igazgató",
+        "email": "beszerzes@budavent.hu",
+        "sequence": [
+          {
+            "step_number": 1,
+            "delay_days": 0,
+            "subject": "Nagykereskedelmi partnerség & raktári árrés - BudaVent Légtechnika Zrt.",
+            "body": "Kedves Váradi!\n\nLáttuk a(z) BudaVent Légtechnika Zrt. legutóbbi szakmai munkáit, különösen a Budaörsi logisztikai park 12 000 m2-es raktárcsarnokának szellőzése - ezúton is gratulálunk a precíz mérnöki megvalósításhoz!\n\nA ProfiGépész Nagykereskedelem közvetlen importőrként pontosan olyan specialistákat lát el, mint Önök (Ipari csőhálózatok, hűtési rendszerek és légtechnika). Tudjuk, hogy a feszes határidők és a növekvő alapanyagárak mellett a megbízható szállítás és a tiszta árrés a legfontosabb.\n\nSzeretnénk felajánlani a(z) BudaVent Légtechnika Zrt. részére kiemelt Arany partneri keretszerződésünket (-22% azonnali árréskedvezmény Daikin, Grundfos, Wilo és rézszerelvényekre), 15 000 m2-es központi raktárunkból 24 órás garantált helyszíni kiszállítással.\n\nNyitott lenne egy kötetlen, 10 perces telefonos egyeztetésre a jövő heti anyagszükségleteik kapcsán?\nKözvetlen naptáram itt érhető el: https://profigepesz.hu/talalkozo-egyeztetes\n\nÜdvözlettel:\nKovács László | B2B Értékesítési Igazgató\nProfiGépész Nagykereskedelmi Kft. | laszlo.kovacs@profigepesz.hu",
+            "status": "QUEUED"
+          },
+          {
+            "step_number": 2,
+            "delay_days": 4,
+            "subject": "Re: Nagykereskedelmi partnerség & raktári árrés - BudaVent Légtechnika Zrt.",
+            "body": "Kedves Váradi!\n\nEgy rövid gondolat az előző megkeresésemhez kapcsolódóan:\nA múlt hónapban egy hasonló méretű budapesti gépész kivitelező partnerünk azért igazolt át hozzánk, mert a korábbi beszállítójuknál heteket csúsztak az idomok és szelepek, ami kötbérveszélyt okozott.\n\nNálunk 99,4%-os készletpontossággal működik a raktári kiszolgálás, így a szerelőbrigádoknak egyetlen órát sem kell feleslegesen a telephelyen várakozniuk.\n\nSzívesen elküldjük a legfrissebb 2026-os nagykereskedelmi katalógusunkat és egy díjmentes prémium mintacsomagot!\nMegfelelő lenne egy gyors hívás ezen a héten? -> https://profigepesz.hu/talalkozo-egyeztetes\n\nBaráti üdvözlettel:\nKovács László",
+            "status": "SCHEDULED"
+          },
+          {
+            "step_number": 3,
+            "delay_days": 8,
+            "subject": "Utolsó kérdés a gépészeti kapacitásról (BudaVent Légtechnika Zrt.)",
+            "body": "Kedves Váradi!\n\nGondolom most a folyamatban lévő kivitelezési projektek kötik le minden figyelmét, így nem szeretném feleslegesen rabolni az idejét.\n\nAmennyiben a jövőben mégis szükségük lenne azonnali, megbízható nagykereskedelmi raktárkészletre vagy sürgős anyagpótlásra kiemelt kedvezménnyel, közvetlenül elér a mobilomon is: +36 30 123 4567.\n\nSikeres évzárást és jó egészséget kívánok a(z) BudaVent Légtechnika Zrt. teljes csapatának!\n\nÜdvözlettel:\nKovács László | ProfiGépész Nagykereskedelmi Kft.",
+            "status": "SCHEDULED"
+          }
+        ],
+        "status": "READY_FOR_DISPATCH",
+        "replied": false
+      }
+    ],
+    "approval_url": "http://localhost:8000/api/v1/modules/05_b2b_hideg_lead_kutatas_hiper_perszonaliz/approve_campaign?campaign_id=CAMP-B2B-20260920-1448"
+  },
+  {
+    "campaign_id": "CAMP-B2B-20260920-1448",
+    "created_at": "2026-09-20T04:07:04.541316",
+    "status": "PENDING_SALES_MANAGER_APPROVAL",
+    "search_criteria": {
+      "industries": [
+        "Épületgépészet",
+        "Klímaszerelés",
+        "Generálkivitelezés"
+      ],
+      "min_revenue_m_huf": 350,
+      "region": "Budapest és Pest megye"
+    },
+    "total_prospects": 2,
+    "sending_mode": "manual_approval_only",
+    "daily_drip_limit": 25,
+    "prospects": [
+      {
+        "prospect_id": "P-39140",
+        "company_name": "Pannónia Épületgépész Kft.",
+        "tax_id": "18923456-2-42",
+        "decision_maker_name": "Kerekes András",
+        "decision_maker_title": "Ügyvezető & Főmérnök",
+        "email": "a.kerekes@pannoniagepesz.hu",
+        "sequence": [
+          {
+            "step_number": 1,
+            "delay_days": 0,
+            "subject": "Nagykereskedelmi partnerség & raktári árrés - Pannónia Épületgépész Kft.",
+            "body": "Kedves Kerekes!\n\nLáttuk a(z) Pannónia Épületgépész Kft. legutóbbi szakmai munkáit, különösen a Corvin sétány új irodaépületének komplett VRV hűtés-fűtése - ezúton is gratulálunk a precíz mérnöki megvalósításhoz!\n\nA ProfiGépész Nagykereskedelem közvetlen importőrként pontosan olyan specialistákat lát el, mint Önök (Ipari és irodaházi VRF rendszerek, Daikin és hőszivattyús kivitelezés). Tudjuk, hogy a feszes határidők és a növekvő alapanyagárak mellett a megbízható szállítás és a tiszta árrés a legfontosabb.\n\nSzeretnénk felajánlani a(z) Pannónia Épületgépész Kft. részére kiemelt Arany partneri keretszerződésünket (-22% azonnali árréskedvezmény Daikin, Grundfos, Wilo és rézszerelvényekre), 15 000 m2-es központi raktárunkból 24 órás garantált helyszíni kiszállítással.\n\nNyitott lenne egy kötetlen, 10 perces telefonos egyeztetésre a jövő heti anyagszükségleteik kapcsán?\nKözvetlen naptáram itt érhető el: https://profigepesz.hu/talalkozo-egyeztetes\n\nÜdvözlettel:\nKovács László | B2B Értékesítési Igazgató\nProfiGépész Nagykereskedelmi Kft. | laszlo.kovacs@profigepesz.hu",
+            "status": "QUEUED"
+          },
+          {
+            "step_number": 2,
+            "delay_days": 4,
+            "subject": "Re: Nagykereskedelmi partnerség & raktári árrés - Pannónia Épületgépész Kft.",
+            "body": "Kedves Kerekes!\n\nEgy rövid gondolat az előző megkeresésemhez kapcsolódóan:\nA múlt hónapban egy hasonló méretű budapesti gépész kivitelező partnerünk azért igazolt át hozzánk, mert a korábbi beszállítójuknál heteket csúsztak az idomok és szelepek, ami kötbérveszélyt okozott.\n\nNálunk 99,4%-os készletpontossággal működik a raktári kiszolgálás, így a szerelőbrigádoknak egyetlen órát sem kell feleslegesen a telephelyen várakozniuk.\n\nSzívesen elküldjük a legfrissebb 2026-os nagykereskedelmi katalógusunkat és egy díjmentes prémium mintacsomagot!\nMegfelelő lenne egy gyors hívás ezen a héten? -> https://profigepesz.hu/talalkozo-egyeztetes\n\nBaráti üdvözlettel:\nKovács László",
+            "status": "SCHEDULED"
+          },
+          {
+            "step_number": 3,
+            "delay_days": 8,
+            "subject": "Utolsó kérdés a gépészeti kapacitásról (Pannónia Épületgépész Kft.)",
+            "body": "Kedves Kerekes!\n\nGondolom most a folyamatban lévő kivitelezési projektek kötik le minden figyelmét, így nem szeretném feleslegesen rabolni az idejét.\n\nAmennyiben a jövőben mégis szükségük lenne azonnali, megbízható nagykereskedelmi raktárkészletre vagy sürgős anyagpótlásra kiemelt kedvezménnyel, közvetlenül elér a mobilomon is: +36 30 123 4567.\n\nSikeres évzárást és jó egészséget kívánok a(z) Pannónia Épületgépész Kft. teljes csapatának!\n\nÜdvözlettel:\nKovács László | ProfiGépész Nagykereskedelmi Kft.",
+            "status": "SCHEDULED"
+          }
+        ],
+        "status": "READY_FOR_DISPATCH",
+        "replied": false
+      },
+      {
+        "prospect_id": "P-76482",
+        "company_name": "BudaVent Légtechnika Zrt.",
+        "tax_id": "24567890-2-13",
+        "decision_maker_name": "Váradi Márk",
+        "decision_maker_title": "Beszerzési Igazgató",
+        "email": "beszerzes@budavent.hu",
+        "sequence": [
+          {
+            "step_number": 1,
+            "delay_days": 0,
+            "subject": "Nagykereskedelmi partnerség & raktári árrés - BudaVent Légtechnika Zrt.",
+            "body": "Kedves Váradi!\n\nLáttuk a(z) BudaVent Légtechnika Zrt. legutóbbi szakmai munkáit, különösen a Budaörsi logisztikai park 12 000 m2-es raktárcsarnokának szellőzése - ezúton is gratulálunk a precíz mérnöki megvalósításhoz!\n\nA ProfiGépész Nagykereskedelem közvetlen importőrként pontosan olyan specialistákat lát el, mint Önök (Ipari csőhálózatok, hűtési rendszerek és légtechnika). Tudjuk, hogy a feszes határidők és a növekvő alapanyagárak mellett a megbízható szállítás és a tiszta árrés a legfontosabb.\n\nSzeretnénk felajánlani a(z) BudaVent Légtechnika Zrt. részére kiemelt Arany partneri keretszerződésünket (-22% azonnali árréskedvezmény Daikin, Grundfos, Wilo és rézszerelvényekre), 15 000 m2-es központi raktárunkból 24 órás garantált helyszíni kiszállítással.\n\nNyitott lenne egy kötetlen, 10 perces telefonos egyeztetésre a jövő heti anyagszükségleteik kapcsán?\nKözvetlen naptáram itt érhető el: https://profigepesz.hu/talalkozo-egyeztetes\n\nÜdvözlettel:\nKovács László | B2B Értékesítési Igazgató\nProfiGépész Nagykereskedelmi Kft. | laszlo.kovacs@profigepesz.hu",
+            "status": "QUEUED"
+          },
+          {
+            "step_number": 2,
+            "delay_days": 4,
+            "subject": "Re: Nagykereskedelmi partnerség & raktári árrés - BudaVent Légtechnika Zrt.",
+            "body": "Kedves Váradi!\n\nEgy rövid gondolat az előző megkeresésemhez kapcsolódóan:\nA múlt hónapban egy hasonló méretű budapesti gépész kivitelező partnerünk azért igazolt át hozzánk, mert a korábbi beszállítójuknál heteket csúsztak az idomok és szelepek, ami kötbérveszélyt okozott.\n\nNálunk 99,4%-os készletpontossággal működik a raktári kiszolgálás, így a szerelőbrigádoknak egyetlen órát sem kell feleslegesen a telephelyen várakozniuk.\n\nSzívesen elküldjük a legfrissebb 2026-os nagykereskedelmi katalógusunkat és egy díjmentes prémium mintacsomagot!\nMegfelelő lenne egy gyors hívás ezen a héten? -> https://profigepesz.hu/talalkozo-egyeztetes\n\nBaráti üdvözlettel:\nKovács László",
+            "status": "SCHEDULED"
+          },
+          {
+            "step_number": 3,
+            "delay_days": 8,
+            "subject": "Utolsó kérdés a gépészeti kapacitásról (BudaVent Légtechnika Zrt.)",
+            "body": "Kedves Váradi!\n\nGondolom most a folyamatban lévő kivitelezési projektek kötik le minden figyelmét, így nem szeretném feleslegesen rabolni az idejét.\n\nAmennyiben a jövőben mégis szükségük lenne azonnali, megbízható nagykereskedelmi raktárkészletre vagy sürgős anyagpótlásra kiemelt kedvezménnyel, közvetlenül elér a mobilomon is: +36 30 123 4567.\n\nSikeres évzárást és jó egészséget kívánok a(z) BudaVent Légtechnika Zrt. teljes csapatának!\n\nÜdvözlettel:\nKovács László | ProfiGépész Nagykereskedelmi Kft.",
+            "status": "SCHEDULED"
+          }
+        ],
+        "status": "READY_FOR_DISPATCH",
+        "replied": false
+      }
+    ],
+    "approval_url": "http://localhost:8000/api/v1/modules/05_b2b_hideg_lead_kutatas_hiper_perszonaliz/approve_campaign?campaign_id=CAMP-B2B-20260920-1448"
+  },
+  {
+    "campaign_id": "CAMP-B2B-20260920-8219",
+    "created_at": "2026-09-20T02:55:18.791655",
+    "status": "PENDING_SALES_MANAGER_APPROVAL",
+    "search_criteria": {
+      "industries": [
+        "Klímaszerelés",
+        "Épületgépészet"
+      ],
+      "region": "Debrecen és Kelet-Magyarország"
+    },
+    "total_prospects": 1,
+    "sending_mode": "manual_approval_only",
+    "daily_drip_limit": 25,
+    "prospects": [
+      {
+        "prospect_id": "P-43564",
+        "company_name": "Cívis Klímatechnika Kft.",
+        "tax_id": "N/A",
+        "decision_maker_name": "Szilágyi Gábor",
+        "decision_maker_title": "Ügyvezető",
+        "email": "gabor.szilagyi@civisklima.hu",
+        "sequence": [
+          {
+            "step_number": 1,
+            "delay_days": 0,
+            "subject": "Nagykereskedelmi partnerség & raktári árrés - Cívis Klímatechnika Kft.",
+            "body": "Kedves Szilágyi!\n\nLáttuk a(z) Cívis Klímatechnika Kft. legutóbbi szakmai munkáit, különösen a Debreceni Déli Ipari Park gyárcsarnokának VRV hűtése - ezúton is gratulálunk a precíz mérnöki megvalósításhoz!\n\nA ProfiGépész Nagykereskedelem közvetlen importőrként pontosan olyan specialistákat lát el, mint Önök (Ipari klímatechnika és hőszivattyús fűtés). Tudjuk, hogy a feszes határidők és a növekvő alapanyagárak mellett a megbízható szállítás és a tiszta árrés a legfontosabb.\n\nSzeretnénk felajánlani a(z) Cívis Klímatechnika Kft. részére kiemelt Arany partneri keretszerződésünket (-22% azonnali árréskedvezmény Daikin, Grundfos, Wilo és rézszerelvényekre), 15 000 m2-es központi raktárunkból 24 órás garantált helyszíni kiszállítással.\n\nNyitott lenne egy kötetlen, 10 perces telefonos egyeztetésre a jövő heti anyagszükségleteik kapcsán?\nKözvetlen naptáram itt érhető el: https://profigepesz.hu/talalkozo-egyeztetes\n\nÜdvözlettel:\nKovács László | B2B Értékesítési Igazgató\nProfiGépész Nagykereskedelmi Kft. | laszlo.kovacs@profigepesz.hu",
+            "status": "QUEUED"
+          },
+          {
+            "step_number": 2,
+            "delay_days": 4,
+            "subject": "Re: Nagykereskedelmi partnerség & raktári árrés - Cívis Klímatechnika Kft.",
+            "body": "Kedves Szilágyi!\n\nEgy rövid gondolat az előző megkeresésemhez kapcsolódóan:\nA múlt hónapban egy hasonló méretű budapesti gépész kivitelező partnerünk azért igazolt át hozzánk, mert a korábbi beszállítójuknál heteket csúsztak az idomok és szelepek, ami kötbérveszélyt okozott.\n\nNálunk 99,4%-os készletpontossággal működik a raktári kiszolgálás, így a szerelőbrigádoknak egyetlen órát sem kell feleslegesen a telephelyen várakozniuk.\n\nSzívesen elküldjük a legfrissebb 2026-os nagykereskedelmi katalógusunkat és egy díjmentes prémium mintacsomagot!\nMegfelelő lenne egy gyors hívás ezen a héten? -> https://profigepesz.hu/talalkozo-egyeztetes\n\nBaráti üdvözlettel:\nKovács László",
+            "status": "SCHEDULED"
+          },
+          {
+            "step_number": 3,
+            "delay_days": 8,
+            "subject": "Utolsó kérdés a gépészeti kapacitásról (Cívis Klímatechnika Kft.)",
+            "body": "Kedves Szilágyi!\n\nGondolom most a folyamatban lévő kivitelezési projektek kötik le minden figyelmét, így nem szeretném feleslegesen rabolni az idejét.\n\nAmennyiben a jövőben mégis szükségük lenne azonnali, megbízható nagykereskedelmi raktárkészletre vagy sürgős anyagpótlásra kiemelt kedvezménnyel, közvetlenül elér a mobilomon is: +36 30 123 4567.\n\nSikeres évzárást és jó egészséget kívánok a(z) Cívis Klímatechnika Kft. teljes csapatának!\n\nÜdvözlettel:\nKovács László | ProfiGépész Nagykereskedelmi Kft.",
+            "status": "SCHEDULED"
+          }
+        ],
+        "status": "READY_FOR_DISPATCH",
+        "replied": false
+      }
+    ],
+    "approval_url": "http://localhost:8000/api/v1/modules/05_b2b_hideg_lead_kutatas_hiper_perszonaliz/approve_campaign?campaign_id=CAMP-B2B-20260920-8219"
+  },
+  {
+    "campaign_id": "CAMP-B2B-20260920-5696",
+    "created_at": "2026-09-20T02:55:08.409252",
+    "status": "APPROVED_AND_RUNNING",
+    "search_criteria": {
+      "industries": [
+        "Épületgépészet",
+        "Klímaszerelés"
+      ],
+      "region": "Budapest és Pest megye"
+    },
+    "total_prospects": 2,
+    "sending_mode": "manual_approval_only",
+    "daily_drip_limit": 25,
+    "prospects": [
+      {
+        "prospect_id": "P-13828",
+        "company_name": "Pannónia Épületgépész Kft.",
+        "tax_id": "N/A",
+        "decision_maker_name": "Kerekes András",
+        "decision_maker_title": "Ügyvezető",
+        "email": "a.kerekes@pannoniagepesz.hu",
+        "sequence": [
+          {
+            "step_number": 1,
+            "delay_days": 0,
+            "subject": "Nagykereskedelmi partnerség & raktári árrés - Pannónia Épületgépész Kft.",
+            "body": "Kedves Kerekes!\n\nLáttuk a(z) Pannónia Épületgépész Kft. legutóbbi szakmai munkáit, különösen a Corvin sétány új irodaépületének komplett hűtése - ezúton is gratulálunk a precíz mérnöki megvalósításhoz!\n\nA ProfiGépész Nagykereskedelem közvetlen importőrként pontosan olyan specialistákat lát el, mint Önök (Ipari VRF rendszerek). Tudjuk, hogy a feszes határidők és a növekvő alapanyagárak mellett a megbízható szállítás és a tiszta árrés a legfontosabb.\n\nSzeretnénk felajánlani a(z) Pannónia Épületgépész Kft. részére kiemelt Arany partneri keretszerződésünket (-22% azonnali árréskedvezmény Daikin, Grundfos, Wilo és rézszerelvényekre), 15 000 m2-es központi raktárunkból 24 órás garantált helyszíni kiszállítással.\n\nNyitott lenne egy kötetlen, 10 perces telefonos egyeztetésre a jövő heti anyagszükségleteik kapcsán?\nKözvetlen naptáram itt érhető el: https://profigepesz.hu/talalkozo-egyeztetes\n\nÜdvözlettel:\nKovács László | B2B Értékesítési Igazgató\nProfiGépész Nagykereskedelmi Kft. | laszlo.kovacs@profigepesz.hu",
+            "status": "QUEUED"
+          },
+          {
+            "step_number": 2,
+            "delay_days": 4,
+            "subject": "Re: Nagykereskedelmi partnerség & raktári árrés - Pannónia Épületgépész Kft.",
+            "body": "Kedves Kerekes!\n\nEgy rövid gondolat az előző megkeresésemhez kapcsolódóan:\nA múlt hónapban egy hasonló méretű budapesti gépész kivitelező partnerünk azért igazolt át hozzánk, mert a korábbi beszállítójuknál heteket csúsztak az idomok és szelepek, ami kötbérveszélyt okozott.\n\nNálunk 99,4%-os készletpontossággal működik a raktári kiszolgálás, így a szerelőbrigádoknak egyetlen órát sem kell feleslegesen a telephelyen várakozniuk.\n\nSzívesen elküldjük a legfrissebb 2026-os nagykereskedelmi katalógusunkat és egy díjmentes prémium mintacsomagot!\nMegfelelő lenne egy gyors hívás ezen a héten? -> https://profigepesz.hu/talalkozo-egyeztetes\n\nBaráti üdvözlettel:\nKovács László",
+            "status": "CANCELLED_DUE_TO_REPLY"
+          },
+          {
+            "step_number": 3,
+            "delay_days": 8,
+            "subject": "Utolsó kérdés a gépészeti kapacitásról (Pannónia Épületgépész Kft.)",
+            "body": "Kedves Kerekes!\n\nGondolom most a folyamatban lévő kivitelezési projektek kötik le minden figyelmét, így nem szeretném feleslegesen rabolni az idejét.\n\nAmennyiben a jövőben mégis szükségük lenne azonnali, megbízható nagykereskedelmi raktárkészletre vagy sürgős anyagpótlásra kiemelt kedvezménnyel, közvetlenül elér a mobilomon is: +36 30 123 4567.\n\nSikeres évzárást és jó egészséget kívánok a(z) Pannónia Épületgépész Kft. teljes csapatának!\n\nÜdvözlettel:\nKovács László | ProfiGépész Nagykereskedelmi Kft.",
+            "status": "CANCELLED_DUE_TO_REPLY"
+          }
+        ],
+        "status": "REPLY_RECEIVED_SEQUENCE_STOPPED",
+        "replied": true
+      },
+      {
+        "prospect_id": "P-98449",
+        "company_name": "BudaVent Légtechnika Zrt.",
+        "tax_id": "N/A",
+        "decision_maker_name": "Váradi Márk",
+        "decision_maker_title": "Beszerzési Igazgató",
+        "email": "beszerzes@budavent.hu",
+        "sequence": [
+          {
+            "step_number": 1,
+            "delay_days": 0,
+            "subject": "Nagykereskedelmi partnerség & raktári árrés - BudaVent Légtechnika Zrt.",
+            "body": "Kedves Váradi!\n\nLáttuk a(z) BudaVent Légtechnika Zrt. legutóbbi szakmai munkáit, különösen a Budaörsi logisztikai park 12 000 m2-es raktárcsarnoka - ezúton is gratulálunk a precíz mérnöki megvalósításhoz!\n\nA ProfiGépész Nagykereskedelem közvetlen importőrként pontosan olyan specialistákat lát el, mint Önök (Ipari légtechnika és csőhálózatok). Tudjuk, hogy a feszes határidők és a növekvő alapanyagárak mellett a megbízható szállítás és a tiszta árrés a legfontosabb.\n\nSzeretnénk felajánlani a(z) BudaVent Légtechnika Zrt. részére kiemelt Arany partneri keretszerződésünket (-22% azonnali árréskedvezmény Daikin, Grundfos, Wilo és rézszerelvényekre), 15 000 m2-es központi raktárunkból 24 órás garantált helyszíni kiszállítással.\n\nNyitott lenne egy kötetlen, 10 perces telefonos egyeztetésre a jövő heti anyagszükségleteik kapcsán?\nKözvetlen naptáram itt érhető el: https://profigepesz.hu/talalkozo-egyeztetes\n\nÜdvözlettel:\nKovács László | B2B Értékesítési Igazgató\nProfiGépész Nagykereskedelmi Kft. | laszlo.kovacs@profigepesz.hu",
+            "status": "QUEUED"
+          },
+          {
+            "step_number": 2,
+            "delay_days": 4,
+            "subject": "Re: Nagykereskedelmi partnerség & raktári árrés - BudaVent Légtechnika Zrt.",
+            "body": "Kedves Váradi!\n\nEgy rövid gondolat az előző megkeresésemhez kapcsolódóan:\nA múlt hónapban egy hasonló méretű budapesti gépész kivitelező partnerünk azért igazolt át hozzánk, mert a korábbi beszállítójuknál heteket csúsztak az idomok és szelepek, ami kötbérveszélyt okozott.\n\nNálunk 99,4%-os készletpontossággal működik a raktári kiszolgálás, így a szerelőbrigádoknak egyetlen órát sem kell feleslegesen a telephelyen várakozniuk.\n\nSzívesen elküldjük a legfrissebb 2026-os nagykereskedelmi katalógusunkat és egy díjmentes prémium mintacsomagot!\nMegfelelő lenne egy gyors hívás ezen a héten? -> https://profigepesz.hu/talalkozo-egyeztetes\n\nBaráti üdvözlettel:\nKovács László",
+            "status": "SCHEDULED"
+          },
+          {
+            "step_number": 3,
+            "delay_days": 8,
+            "subject": "Utolsó kérdés a gépészeti kapacitásról (BudaVent Légtechnika Zrt.)",
+            "body": "Kedves Váradi!\n\nGondolom most a folyamatban lévő kivitelezési projektek kötik le minden figyelmét, így nem szeretném feleslegesen rabolni az idejét.\n\nAmennyiben a jövőben mégis szükségük lenne azonnali, megbízható nagykereskedelmi raktárkészletre vagy sürgős anyagpótlásra kiemelt kedvezménnyel, közvetlenül elér a mobilomon is: +36 30 123 4567.\n\nSikeres évzárást és jó egészséget kívánok a(z) BudaVent Légtechnika Zrt. teljes csapatának!\n\nÜdvözlettel:\nKovács László | ProfiGépész Nagykereskedelmi Kft.",
+            "status": "SCHEDULED"
+          }
+        ],
+        "status": "READY_FOR_DISPATCH",
+        "replied": false
+      }
+    ],
+    "approval_url": "http://localhost:8000/api/v1/modules/05_b2b_hideg_lead_kutatas_hiper_perszonaliz/approve_campaign?campaign_id=CAMP-B2B-20260920-5696",
+    "approved_at": "2026-09-20T02:55:08.411235"
+  }
+]

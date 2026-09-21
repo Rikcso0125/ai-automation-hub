@@ -1,0 +1,49 @@
+{
+  "module_id": "15_alvo_ugyfelbazis_ujraaktivalo_sprint_sms",
+  "action": "PREPARE_REACTIVATION_CAMPAIGN",
+  "campaign_name": "Őszi Fűtésfelkészítő és Klímatisztítási Sprint 2026",
+  "target_service": "Éves Garanciamegőrző Karbantartás",
+  "custom_inactivity_days": 180,
+  "sample_dormant_clients": [
+    {
+      "id": "CL-101",
+      "name": "Kovács Béla",
+      "phone": "+36301234567",
+      "email": "bela.kovacs@alfabau.hu",
+      "last_service_date": "2025-10-15",
+      "equipment": "Daikin 3.5 kW"
+    },
+    {
+      "id": "CL-102",
+      "name": "Tóth Gábor",
+      "phone": "+36709876543",
+      "email": "gabor.toth@deltageneral.hu",
+      "last_service_date": "2025-11-20",
+      "equipment": "Gree Comfort X"
+    },
+    {
+      "id": "CL-103",
+      "name": "Molnár Zsuzsanna",
+      "phone": "+36204567890",
+      "email": "zsuzsa.molnar@prolog.hu",
+      "last_service_date": "2025-08-10",
+      "equipment": "2 db Mitsubishi Split"
+    },
+    {
+      "id": "CL-104",
+      "name": "Varga Péter",
+      "phone": "+36305556677",
+      "email": "varga.peter@net.hu",
+      "last_service_date": "2026-01-10",
+      "equipment": "Gree Pulse"
+    },
+    {
+      "id": "CL-105",
+      "name": "Farkas Andrea",
+      "phone": "+36208889911",
+      "email": "farkas.a@design.hu",
+      "last_service_date": "2025-09-05",
+      "equipment": "Daikin Sensira"
+    }
+  ]
+}

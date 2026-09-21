@@ -1,0 +1,11 @@
+{
+  "module_id": "conversational_naptarkezeles_idopontfogl",
+  "channel": "website_widget",
+  "user_message": "Szia! Jövő kedd délután vagy szerda délelőtt szeretnék bejönni egy személyes konzultációra a budapesti irodába.",
+  "user_profile": {
+    "name": "Balogh Dániel",
+    "email": "daniel.balogh@ceg.hu",
+    "phone": "+36304445566"
+  },
+  "existing_booking_id": null
+}

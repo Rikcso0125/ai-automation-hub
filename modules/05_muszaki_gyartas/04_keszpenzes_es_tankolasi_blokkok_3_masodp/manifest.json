@@ -1,0 +1,8 @@
+{
+  "id": "04_keszpenzes_es_tankolasi_blokkok_3_masodp",
+  "title": "Készpénzes és Tankolási Blokkok 3 Másodperces Fotós Elszámolása",
+  "category": "muszaki",
+  "icon": "🎫",
+  "version": "1.0.0",
+  "description": "Terepi szerelők barkácsáruházi és tankolási blokkfotóinak 3 másodperces Vision AI elszámolása, tételes ÁFA-bontással, menetlevél és rendszám-egyeztetéssel, GPS-alapú automatikus projektszámra terheléssel és ERP céges kártya párosítással."
+}

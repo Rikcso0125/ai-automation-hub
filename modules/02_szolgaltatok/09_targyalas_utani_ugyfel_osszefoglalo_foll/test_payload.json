@@ -1,0 +1,26 @@
+{
+  "module_id": "09_targyalas_utani_ugyfel_osszefoglalo_foll",
+  "meeting_metadata": {
+    "date": "2026-09-20",
+    "time": "14:00 - 14:45",
+    "location": "Ügyfél irodája (1134 Budapest, Váci út 45.)",
+    "subject": "Irodaház szerverterem és irodai hűtés-fűtés korszerűsítés felmérése"
+  },
+  "participants": {
+    "sales_rep": {
+      "name": "Kovács László",
+      "company": "ProfiKlíma Kft.",
+      "phone": "+36 30 111 2233",
+      "email": "kovacs.laszlo@profiklima.hu"
+    },
+    "client": {
+      "name": "Varga Mihály",
+      "company": "Varga Tech Kft.",
+      "phone": "+36 30 777 8899",
+      "email": "varga.mihaly@vargatech.hu"
+    }
+  },
+  "input_source": "whatsapp_voice",
+  "input_content": "Szia! Most jöttem ki a Varga Tech Kft-től, Varga Mihállyal tárgyaltunk. Nagyon pozitív megbeszélés volt. A lényeg: a szerverterembe egy redundáns 5 kW-os Daikin hűtést szeretnének 0-24 órás üzemmel, a nyitott irodaterületre pedig két darab 3.5 kW-os mennyezeti kazettás klímát. Megbeszéltük, hogy az épület főelosztóját a hétvégén kell bekötni, hogy ne zavarja a munkaidőt. Teendők: Varga úr hétfő délig átküldi az épület alaprajzát és a jelenlegi villamos hálózat terhelési naplóját. Én cserébe szerda 17:00-ig elkészítem a tételes gépészeti tervet és a Good-Better-Best árajánlatot. A kivitelezés céldátuma október 15. Készíts egy profi emlékeztető levelet a megbeszéltekről a 24 órás megerősítési záradékkal!",
+  "approval_mode": "review_required"
+}

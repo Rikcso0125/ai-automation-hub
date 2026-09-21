@@ -1,0 +1,8 @@
+{
+  "id": "szamla_ocr_nav",
+  "title": "Beszállítói Számla Vision OCR & NAV Ellenőrzés",
+  "category": "altalanos",
+  "icon": "🧾",
+  "version": "1.0.0",
+  "description": "Bármilyen formátumban (PDF, mobilfotó, szkenner) érkező számlát másodpercek alatt beolvas tételszinten, ellenőrzi a számla matematikáját és a NAV adószám érvényességét, majd előkészíti a könyvelési/számlázási szinkront."
+}

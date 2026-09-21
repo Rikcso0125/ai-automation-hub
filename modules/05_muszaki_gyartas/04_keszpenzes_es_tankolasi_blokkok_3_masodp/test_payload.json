@@ -1,0 +1,61 @@
+{
+  "module_id": "04_keszpenzes_es_tankolasi_blokkok_3_masodp",
+  "source": "field_worker_telegram_bot",
+  "expense_claim_id": "EXP-2026-0920-04",
+  "employee": {
+    "name": "Varga Dániel",
+    "role": "Építésvezető-helyettes / Szerviztechnikus",
+    "phone": "+36301234567",
+    "assigned_vehicle": {
+      "license_plate": "ABC-890",
+      "vehicle_model": "Ford Transit Custom (2.0 TDCi)",
+      "fuel_card_number": "9811-****-****-4421"
+    }
+  },
+  "receipt_submission": {
+    "photo_url": "https://storage.factoryhub.hu/expenses/2026/09/mol_bauhaus_receipt_combined.jpg",
+    "timestamp": "2026-09-20T08:45:00+02:00",
+    "geo_location": {
+      "latitude": 47.6875,
+      "longitude": 17.6504,
+      "address_hint": "Győr, Külső Veszprémi út (Bauhaus & MOL töltőállomás körzet)"
+    },
+    "payment_method": "corporate_card",
+    "bank_transaction_id": "TRX-KH-2026-98110920",
+    "raw_ocr_text": "BAUHAUS Szakáruház Győr\\nAdószám: 12345678-2-08\\n1. FISCHER DUOPOWER 8x65 (50db) - 5 490 Ft (ÁFA 27%)\\n2. M10 MENETES SZÁR 1M HORGANYZOTT (10db x 1290) - 12 900 Ft (ÁFA 27%)\\n3. WÜRTH FÉMRAGASZTÓ ÉS TÖMÍTŐ (2db x 4800) - 9 600 Ft (ÁFA 27%)\\nÖSSZESEN BARKÁCS: 27 990 Ft\\n---\\nMOL TÖLTŐÁLLOMÁS GYŐR M1\\nAdószám: 10625790-2-44\\nMOL EVO DIESEL (52.4 L x 620.2 Ft/L) - 32 500 Ft (ÁFA 27%)\\nRendszám: ABC-890  Km-óra: 142 850 km\\nVÉGÖSSZEG: 60 490 Ft",
+    "worker_voice_note": "A győri Audi G3 csarnokban a légtechnikai függesztők pótlásához vettem menetes szárat és tiplit a Bauhausban, plusz teletankoltam a Transitot a MOL kúton a délutáni kiszálláshoz."
+  },
+  "active_work_orders": [
+    {
+      "project_code": "PRJ-2026-AUDI-G3",
+      "project_name": "Audi Hungaria G3 Csarnok Gépészeti Karbantartás",
+      "site_address": "Győr, Kardán u. 1.",
+      "geo_coordinates": {
+        "latitude": 47.695,
+        "longitude": 17.665
+      },
+      "allocated_budget_huf": 1500000,
+      "used_budget_huf": 1315000,
+      "remaining_budget_huf": 185000,
+      "is_employee_checked_in": true
+    },
+    {
+      "project_code": "PRJ-2026-SZOBI-DEP",
+      "project_name": "Szobi Raktár Gépészet",
+      "site_address": "Szob, Rév u. 4.",
+      "geo_coordinates": {
+        "latitude": 47.818,
+        "longitude": 18.868
+      },
+      "remaining_budget_huf": 600000,
+      "is_employee_checked_in": false
+    }
+  ],
+  "config": {
+    "receipt_recognition_mode": "vision_hardware_mileage_sync",
+    "project_allocation_mode": "hybrid_geo_work_order_budget",
+    "accounting_workflow": "realtime_erp_card_match_gate",
+    "manager_approval_threshold_huf": 30000,
+    "notification_channel": "telegram"
+  }
+}

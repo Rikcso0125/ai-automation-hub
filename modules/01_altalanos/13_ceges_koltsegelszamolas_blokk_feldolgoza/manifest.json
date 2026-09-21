@@ -1,0 +1,8 @@
+{
+  "id": "ceges_koltsegelszamolas_blokk_feldolgoza",
+  "title": "Céges Költségelszámolás & Blokk-Feldolgozás 3 Másodperc Alatt",
+  "category": "altalanos",
+  "icon": "🎫",
+  "version": "1.0.0",
+  "description": "Fényképezett tankolási, éttermi és anyagbeszerzési blokkok 3 másodperces OCR feldolgozása. Automatikus számviteli besorolás indoklással, bankkártya tranzakció párosítás, egyedileg megadható vezetői jóváhagyási értékhatár, és könyvelésre kész CSV/Excel export."
+}

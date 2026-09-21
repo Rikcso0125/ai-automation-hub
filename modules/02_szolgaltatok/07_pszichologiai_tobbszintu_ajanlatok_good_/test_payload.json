@@ -1,0 +1,19 @@
+{
+  "module_id": "07_pszichologiai_tobbszintu_ajanlatok_good_",
+  "customer": {
+    "name": "Varga Mihály",
+    "company": "Varga Tech Kft.",
+    "phone": "+36 30 777 8899",
+    "email": "varga.mihaly@vargatech.hu",
+    "site_address": "1134 Budapest, Váci út 45."
+  },
+  "project_scope": {
+    "category": "Klíma és Hűtés-Fűtés Kialakítás",
+    "room_area_m2": 35,
+    "base_requirement": "Nappali hűtése és átmeneti fűtése, 3.5 kW-os teljesítményigény",
+    "base_material_net": 210000,
+    "base_labor_net": 75000
+  },
+  "action": "GENERATE_TIERED_OFFER",
+  "selected_package": null
+}

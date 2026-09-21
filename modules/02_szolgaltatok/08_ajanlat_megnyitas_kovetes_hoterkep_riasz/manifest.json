@@ -1,0 +1,8 @@
+{
+  "id": "08_ajanlat_megnyitas_kovetes_hoterkep_riasz",
+  "title": "Ajánlat Megnyitás-Követés & Hőtérkép Riasztás",
+  "category": "szolgaltatok",
+  "icon": "🔥",
+  "version": "1.0.0",
+  "description": "Valós idejű telemetria és olvasási hőtérkép: azonnal értesíti az értékesítőt WhatsAppon, Telegramon vagy SMS-ben a megnyitáskor, elemzi az eltöltött másodperceket és szekciókat, valamint 1-kattintásos hívásindító linket ad a legforróbb pillanatban."
+}

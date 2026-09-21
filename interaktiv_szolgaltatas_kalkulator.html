@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Automatizációs Megoldás Konfigurátor | Válassza ki, amire szüksége van!</title>
+<style>
+  :root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #e2e8f0;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 24px;
+    line-height: 1.5;
+  }
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  h1 {
+    font-size: 26pt;
+    color: #0f172a;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-size: 13pt;
+    color: var(--muted);
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+  }
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .tab-btn {
+    padding: 10px 18px;
+    border-radius: 9999px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    font-size: 10pt;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .tab-btn.active, .tab-btn:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+  }
+  .category-title {
+    font-size: 16pt;
+    color: #1e3a8a;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 8px;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+    gap: 14px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+  }
+  .card.selected {
+    border-color: var(--primary);
+    background: #eff6ff;
+  }
+  .card input[type="checkbox"] {
+    margin-top: 4px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--primary);
+  }
+  .card-content h3 {
+    margin: 0 0 6px 0;
+    font-size: 11pt;
+    color: #0f172a;
+  }
+  .card-content p {
+    margin: 0;
+    font-size: 9.5pt;
+    color: #475569;
+    line-height: 1.45;
+  }
+  .sticky-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0f172a;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+  .btn-submit {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-submit:hover {
+    background: var(--primary-dark);
+  }
+  @media (max-width: 600px) {
+    .grid { grid-template-columns: 1fr; }
+    .sticky-bar { width: 90%; justify-content: space-between; font-size: 9pt; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>AI Automatizáció Konfigurátor</h1>
+    <p class="subtitle">Pipálja be azokat a területeket, ahol a legtöbb ideje úszik el, és kalkulálja ki saját, személyre szabott automatizációs rendszerét!</p>
+    
+    <div class="tabs">
+      <button class="tab-btn active" onclick="filterCat('all')">Összes Megoldás</button>
+      <button class="tab-btn" onclick="filterCat('general')">🏢 Általános Iroda & Pénzügy</button>
+      <button class="tab-btn" onclick="filterCat('service')">🛠️ Szolgáltató Cégek</button>
+      <button class="tab-btn" onclick="filterCat('trade')">📦 B2B Kereskedelem</button>
+      <button class="tab-btn" onclick="filterCat('ecom')">🛒 Webshopok</button>
+      <button class="tab-btn" onclick="filterCat('mfg')">🏗️ Műszaki & Terepi</button>
+    </div>
+  </header>
+
+  <!-- 1. Általános -->
+  <div class="category-block" data-category="general">
+    <div class="category-title">🏢 1. Általános Céges & Pénzügyi Automatizációk (Minden Vállalkozásnak)</div>
+    <div class="grid">
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Intelligens Email Triage & Piszkozatíró</h3><p>Automatikusan kategorizálja a beérkező emaileket, kiszűri a spameket, és a céges tudásbázis alapján azonnal előkészíti a 90%-ban kész válaszpiszkozatot jóváhagyásra.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>VIP Ügyfélkezelés & Email Eszkaláció</h3><p>Azonnal észleli a kiemelt kulcsfontosságú ügyfeleket és a sürgős kéréseket, és Telegram / SMS riasztást küld a kijelölt vezetőnek.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Beszállítói Számla Vision OCR & NAV Ellenőrzés</h3><p>Bármilyen formátumú számlát másodpercek alatt beolvas tételszinten, ellenőrzi a NAV Online Számlában, és könyvelésre kész állapotban feltölti a számlázóba.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Automatikus Kintlévőség-kezelés & 40 EUR Behajtási Lánc</h3><p>Fáradhatatlanul követi a lejáró és lejárt számlákat SMS/email lánccal. 15 napos csúszás után érvényesíti a törvényi 40 eurós behajtási díjat és késedelmi kamatot.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Banki Kivonat & Fuzzy Jóváírás-Párosítás</h3><p>Élő banki kapcsolattal azonosítja az utalásokat még elírt közlemény esetén is, átállítja a számlát „Fizetve”-re, és azonnal leállítja a sürgető robotot.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Prediktív Cash-Flow & Likviditási Vészjelző</h3><p>A múltbeli fizetési fegyelem és a fix költségek (áfa, bér) alapján 2-3 héttel korábban riaszt, ha likviditási hullámvölgy várható.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Szerződéskockázat és Red-Flag Audit</h3><p>60 másodperc alatt átvilágítja a szerződéseket, kiszűri a rejtett kötbéreket és automatikus hosszabbodásokat, és azonnali jogi módosítási javaslatot ír.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Kétnyelvű Hasábos Szerződésfordítás (Side-by-Side)</h3><p>Párhuzamos, két hasábos (magyar-angol, magyar-német) szerződéseket generál hivatalos nemzetközi terminológiával és 100%-ban megegyező bekezdésszámozással.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Autonóm Értekezlet Jegyzetelés (Meeting Ops)</h3><p>Bekapcsolódik a Meet/Zoom/Teams hívásokba, pontos magyar leiratot készít, és a megbeszélt teendőket azonnal rögzíti a feladatkezelőben (ClickUp/Asana).</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Természetes Nyelvű Adatbázis Kereső (Text-to-SQL)</h3><p>Lehetővé teszi, hogy hétköznapi magyar kérdésekkel kérdezzen a cég adatairól és táblázatairól, az AI pedig másodpercek alatt diagramokkal válaszol.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Heti és Havi Autonóm Vezetői Riportgenerálás</h3><p>Minden hétfő reggel 7:00-kor átfésüli a pénzügyi, értékesítési és CRM adatokat, és készre formázott vezetői PDF gyorsjelentést készít a döntéshozóknak.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Zero-Touch Munkatárs és Ügyfél Onboarding</h3><p>Egyetlen űrlapkitöltésből szerződést generál, létrehozza a céges fiókokat (Google/Microsoft, Slack, CRM) és ütemezetten kiküldi a betanulási anyagokat.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Céges Blokk-Feldolgozás 3 Másodperc Alatt</h3><p>A munkatársak mobilon fotózzák a tankolási és barkácsáruházi blokkokat; az AI kinyeri az összeget, áfát, tételt, és egyezteti a bankkártya költésekkel.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Vezetői Hangparancs-Asszisztens (Executive Jarvis)</h3><p>Vezetés közben élőszóban diktálhat feladatokat, naptáreseményeket vagy küldhet emlékeztetőket a telefon érintése nélkül.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Önjavító Munkafolyamat-Felügyelet (Self-Healing)</h3><p>Folyamatosan őrködik az automatizmusok felett; leállás esetén kísérletet tesz az önjavításra, vagy azonnali részletes riasztást küld a hiba javítógombjával.</p></div></div>
+    </div>
+  </div>
+
+  <!-- 2. Szolgáltatók -->
+  <div class="category-block" data-category="service">
+    <div class="category-title">🛠️ 2. Szolgáltató Cégeknek (B2B és B2C Szolgáltató Ipar)</div>
+    <div class="grid">
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Missed Call Text-Back (Azonnali SMS 5 mp alatt)</h3><p>Ha nem tudja felvenni a telefont munka közben, a rendszer azonnal személyre szabott SMS-t küld időpontfoglaló linkkel, megmentve a leadet a konkurenciától.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>0-24 Virtuális AI Telefonos Recepciós (Voice AI)</h3><p>Emberi hangon fogadja a hívásokat éjjel-nappal magyar nyelven is, megválaszolja az árakat és kérdéseket, és közvetlenül rögzíti az időpontot a naptárban.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Conversational Időpontfoglaló Chatbot</h3><p>A weboldalon vagy közösségi médián kötetlen csevegés formájában egyeztet időpontot az érdeklődőkkel hideg linkek erőltetése nélkül.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>„No-Show Killer” Dinamikus Várólista Újratöltéssel</h3><p>Interaktív SMS megerősítést kér 24 órával előtte; lemondás esetén azonnal értesíti a várólistásokat, és 10 percen belül betölti az üres idősávot.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Földrajzi Útvonal-optimalizált Időpontfoglalás</h3><p>Kiszállásos szakembereknek a budai és pesti címeket külön napokra csoportosítja a Google Maps alapján, megszüntetve a felesleges dugóban ücsörgést.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Helyszíni Felmérésből Árajánlat (Voice-to-Quote 3 perc)</h3><p>A szakember a felmérés után az autóban felmond egy 1 perces hangüzenetet; az AI kinyeri az anyagokat, és 3 perc alatt kész PDF ajánlatot küld a mobiljára.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Good-Better-Best Többszintű Ajánlatok</h3><p>Egyetlen ár helyett 3 csomagot készít (Alap, Prémium, VIP), ami 20–30%-kal növeli az átlagos megrendelési értéket.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Ajánlat Megnyitás-Követés & Hőtérkép Riasztás</h3><p>Azonnal riasztja az értékesítőt, amint a vevő megnyitotta az ajánlatot, így pontosan a legforróbb döntési pillanatban tudja felhívni.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Tárgyalás Utáni Ügyfél Összefoglaló (Follow-Up Copilot)</h3><p>A megbeszélés után 5 percen belül professzionális emlékeztető levelet küld a megbeszéltekről és a határidőkről, elkerülve a későbbi vitákat.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Kifogáskezelő és Tárgyalási AI Copilot</h3><p>Amikor a vevő az áron akadékoskodik, az AI kidolgozza az értékesítőnek a legütősebb diplomatikus érveket a megtérülésre és rejtett költségekre fókuszálva.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Tárgyaláselemzés és Sales Coaching</h3><p>Elemzi a hívásokat: jelzi, ha az értékesítő nem hagyta szóhoz jutni a vevőt, és kimutatja a leggyakoribb vásárlói kifogások hőtérképét.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Elvesztett Ajánlatok Elemzése & Visszanyerése</h3><p>Elutasítás után automatikusan kideríti a döntés valódi okait, és ár-érzékeny vevőknek karcsúsított alternatív ellenajánlatot dolgoz ki.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Kézírásos Munkalapok OCR Digitalizálása</h3><p>A helyszínen kézzel kitöltött és aláírt papír munkalap fotóját az AI azonnal digitális, nyomtatható PDF jegyzőkönyvvé alakítja és menti a rendszerbe.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Google Térkép Véleménygyűjtő SMS & AI Válaszíró</h3><p>Munka után automatikus SMS-ben kér értékelést közvetlen linkkel; a beérkező véleményekre SEO-erősítő személyre szabott választ ír.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Alvó Ügyfélbázis Újraaktiváló Sprint</h3><p>A hónapok óta inaktív ügyfeleket intelligens üzenetekkel szólítja meg szezonális indokkal, új bevételt generálva a meglévő adatbázisból.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>B2B Thought Leadership & LinkedIn Szakértői Gépezet</h3><p>Iparági hírek alapján rendszeresen publikálásra kész szakmai cikkeket és bejegyzéseket fogalmaz meg a vezető stílusában a hírnév erősítésére.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Facebook Csoportok Social Listening</h3><p>Figyeli a szakmai csoportokban megjelenő ajánláskéréseket (pl. *„Tudtok jó szakembert?”*), és azonnal riasztja a csapatot kész válaszjavaslattal.</p></div></div>
+    </div>
+  </div>
+
+  <!-- 3. Kereskedők -->
+  <div class="category-block" data-category="trade">
+    <div class="category-title">📦 3. Kereskedő Cégeknek (B2B Nagykereskedelem, Importőrök, Disztribútorok)</div>
+    <div class="grid">
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Beszállítói Árlisták Összefésülése (Feed Harmonizer)</h3><p>Automatikusan összehangolja a különböző beszállítók eltérő árlistáit, védi az elvárt árrést és azonnal újrakalkulálja a partnerárakat.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>3-Utas Egyeztetés (Számla vs PO vs Szállítólevél)</h3><p>Összeveti a számlát a jóváhagyott megrendeléssel és a raktári bevételezéssel, kiszűrve a túlszámlázásokat és a számlacsalásokat.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Tömeges B2B Árajánlatadás Partner-Kedvezményekkel</h3><p>Ömlesztett tétellistákból másodpercek alatt készít hivatalos ajánlatot a vevő egyedi szerződéses árai és a valós raktárkészlet alapján.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>B2B Weboldal Látogatók Leleplezése (De-Anonymization)</h3><p>Azonosítja, mely cégek jártak a B2B weboldalon űrlapkitöltés nélkül, és felkutatja a beszerzési vezetők elérhetőségeit a sales csapatnak.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>B2B Hideg Lead-Kutatás & Hiper-perszonalizált Megkeresés</h3><p>Autonóm módon felkutatja az új viszonteladókat a nemzetközi adatbázisokból, és személyre szabott bemutatkozó emaileket küld nekik.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>AI Lead Scoring (Forró Vevők Kiszűrése)</h3><p>Pontozza az érdeklődőket a cégméret, forgalom és igény sürgőssége alapján, így az értékesítők csak a legnagyobb profitot hozó vevőkre fókuszálnak.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>B2B Kintlévőség-kezelés 40 EUR Költségátalánnyal</h3><p>Szigorú B2B felszólító lánc, amely 15 napos csúszás után érvényesíti a jogszabályi késedelmi kamatot és a 40 eurós behajtási díjat.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Raktári Kétkezes Hangvezérlés (Voice Picking)</h3><p>A raktáros vezeték nélküli fülhallgatón át kapja a szedési utasításokat és hanggal igazol vissza, ami 30%-kal gyorsítja a komissiózást.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>B2B Lemorzsolódás Előrejelzés (Churn Prevention)</h3><p>Riasztja az értékesítőt, ha egy rendszeresen vásárló viszonteladó rendelési gyakorisága lecsökken, megelőzve az ügyfél elvesztését.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Kereskedelmi Anomália Detektálás (Árrészuhanás Figyelő)</h3><p>Folyamatosan pásztázza a tranzakciókat, és azonnal riaszt, ha egy elgépelt ár miatt veszteséges eladások történnének.</p></div></div>
+    </div>
+  </div>
+
+  <!-- 4. Webshopok -->
+  <div class="category-block" data-category="ecom">
+    <div class="category-title">🛒 4. Webshopoknak & E-commerce Cégeknek (Online Kereskedelem & Piacterek)</div>
+    <div class="grid">
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>„Hol a csomagom?” (WISMO) 0-24 Futár API Autopilot</h3><p>Összekapcsolódik a futárcégekkel (GLS/DPD/Foxpost/Packeta), és emberi segítség nélkül megválaszolja a vevőknek a csomagok pontos érkezését.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Többcsatornás Készlet- és Árszinkron (eMAG/Alza)</h3><p>Bármelyik csatornán történik eladás, 3 másodpercen belül levonja a készletet az összes felületen, kizárva a készlethiányos bírságokat.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Dinamikus Kosárelhagyás Visszahódítás (SMS/Email)</h3><p>A kosárban hagyott konkrét termék előnyeit és a garanciákat kiemelő személyre szabott üzeneteket generál a vásárlás befejezéséhez.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Utánvét-Megerősítő és Csomagpont Átvételi SMS</h3><p>Utánvétnél előzetes megerősítést kér, csomagpontos rendeléseknél pedig sürgető SMS-t küld az átvételi határidőről, minimalizálva a visszahulló csomagokat.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Hivatalos WhatsApp Business API Vevőszolgálat</h3><p>Automatikus rendelésigazolások, futárkövetési értesítők és 0-24 ügyfélszolgálati chat a vásárlók legkedveltebb üzenetküldő appjában.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Tömeges Termékleírás és SEO Optimalizáló Motor</h3><p>Beszállítói adatokból percek alatt készít vevőcsalogató, keresőoptimalizált termékleírásokat és meta tag-eket több ezer termékre egyszerre.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>AI Termékfotó Stúdió & Életmódképek (FLUX / Midjourney)</h3><p>Az unalmas fehér hátterű termékfotókat magazin minőségű életmód reklámképekké alakítja át fotózás és stúdióbérlés nélkül.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Szemantikus Kereső & Webes Virtuális Eladó Bot</h3><p>Megérti a vásárlók kötetlen problémáit (pl. *„Kerti partihoz keresek esőálló világítást”*), és azonnal kosárba tehető releváns ajánlatokat ad.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Garanciális Reklamáció & Visszáru Fotóelemzés</h3><p>A feltöltött fotó alapján megvizsgálja a sérülést és garanciát, majd automatikusan kiállítja az ingyenes visszaküldési futárcímkét.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Social Selling (Kommentből Messenger Vásárlás)</h3><p>A közösségi posztok alá érkező kommentekre azonnal reagál, és privát üzenetet nyit a megvásárolni kívánt termék közvetlen linkjével és kuponjával.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Automata Rövidvideó Vágás & Feliratozás (Opus Clip)</h3><p>Hosszú videókból kivágja a legizgalmasabb pillanatokat, feliratozza és készre vágja a TikTok és Instagram Reels videókat.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Hirdetéskreatív Copilot & Ad Fatigue Figyelő</h3><p>Több szögből teszteli a reklámszövegeket, és a kifáradó hirdetések helyére azonnal friss kreatívokat állít a kattintási költségek csökkentésére.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Webáruházi Anomália Detektálás (Fizetés & Kuponok)</h3><p>Azonnal riaszt, ha elromlik a bankkártyás fizetés, vagy egy elgépelt kuponkód miatt veszteséges vásárlások történnének a webáruházban.</p></div></div>
+    </div>
+  </div>
+
+  <!-- 5. Műszaki & Gyártók -->
+  <div class="category-block" data-category="mfg">
+    <div class="category-title">🏗️ 5. Gyártó, Kivitelező és Műszaki / Terepi Cégeknek (Field & Production Ops)</div>
+    <div class="grid">
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Voice-to-Action Napi Építési Napló Hangjegyzetből</h3><p>A szakember a helyszínen felmond egy 30 másodperces hangüzenetet az elvégzett munkáról; az AI este készre formázott napi jelentést és munkalapot generál.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Kopott Alkatrészek és Adattáblák Képazonosítása</h3><p>Egy koszos, lekopott gépalkatrész mobilfotója alapján beazonosítja a gyári cikkszámot, a robbantott ábrát és a kompatibilis cserealkatrészeket.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Minőségbiztosítási & Munkavédelmi Audit Robot</h3><p>Műszaki tervek és átadási jegyzőkönyvek fotóit ellenőrzi a kötelező szabványok szerint, azonnal figyelmeztetve az esetleges hiányosságokra.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Fotós Blokk-Elszámolás Barkácsáruházból és Benzinkútról</h3><p>A terepen dolgozók a pénztárnál azonnal fotózzák a blokkot; az AI kinyeri az adatokat és ráterheli a megfelelő projektszámra a rendszerben.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Zárt Portálok és Régi ERP-k AI-RPA Robotjai</h3><p>Emberi beavatkozás nélkül lép be a zárt állami portálokra (pl. e-napló) vagy API nélküli régi szoftverekbe, feltölti a terveket és kezeli az űrlapokat.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Telefonos Frusztráció-Detektálás Hívásokban</h3><p>Érzékeli az ügyfél feszültségét és hangulatát hibabejelentések során, és sürgős esetben azonnal a műszaki vezetőhöz irányítja a hívást.</p></div></div>
+      <div class="card" onclick="toggleCard(this)"><input type="checkbox"><div class="card-content"><h3>Helyszíni Felmérésből Anyagszükséglet-Számítás</h3><p>A mért méretekből automatikusan kiszámítja a szükséges anyagmennyiséget, a vágási hulladékot (+10%) és a becsült munkaórákat.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sticky-bar">
+  <div>Kiválasztott funkciók: <strong id="selected-count" style="color: #60a5fa;">0 db</strong></div>
+  <button class="btn-submit" onclick="submitSelection()">Kiválasztott Csomag Másolása</button>
+</div>
+
+<script>
+  function toggleCard(card) {
+    const cb = card.querySelector('input[type="checkbox"]');
+    cb.checked = !cb.checked;
+    card.classList.toggle('selected', cb.checked);
+    updateCount();
+  }
+
+  // Megakadályozzuk a duplakattintást közvetlenül a checkboxra kattintva
+  document.querySelectorAll('.card input[type="checkbox"]').forEach(cb => {
+    cb.addEventListener('click', (e) => {
+      e.stopPropagation();
+      cb.closest('.card').classList.toggle('selected', cb.checked);
+      updateCount();
+    });
+  });
+
+  function updateCount() {
+    const checked = document.querySelectorAll('.card input[type="checkbox"]:checked').length;
+    document.getElementById('selected-count').innerText = checked + ' db';
+  }
+
+  function filterCat(cat) {
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    document.querySelectorAll('.category-block').forEach(block => {
+      if (cat === 'all' || block.getAttribute('data-category') === cat) {
+        block.style.display = 'block';
+      } else {
+        block.style.display = 'none';
+      }
+    });
+  }
+
+  function submitSelection() {
+    const selected = [];
+    document.querySelectorAll('.card input[type="checkbox"]:checked').forEach(cb => {
+      const title = cb.closest('.card').querySelector('h3').innerText;
+      selected.push('• ' + title);
+    });
+
+    if (selected.length === 0) {
+      alert('Kérjük, jelöljön be legalább egy automatizációs modult!');
+      return;
+    }
+
+    const summary = "Kiválasztott AI Automatizációk (" + selected.length + " db):\n\n" + selected.join('\n');
+    navigator.clipboard.writeText(summary).then(() => {
+      alert("Sikeresen vágólapra másolva!\n\n" + summary);
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+[
+  {
+    "worksheet_number": "ML-2026-0920-41",
+    "created_at": "2026-09-20T02:28:02.924797",
+    "customer_name": "Takács Béla",
+    "technician_name": "Horváth László",
+    "gross_total": 61849,
+    "confidence_score": 94.0,
+    "signatures_valid": true,
+    "pdf_path": "output\\munkalapok\\munkalap_ML-2026-0920-41.pdf"
+  },
+  {
+    "worksheet_number": "ML-2026-0920-41",
+    "created_at": "2026-09-20T02:28:02.935959",
+    "customer_name": "Takács Béla",
+    "technician_name": "Horváth László",
+    "gross_total": 61849,
+    "confidence_score": 75.0,
+    "signatures_valid": false,
+    "pdf_path": "output\\munkalapok\\munkalap_ML-2026-0920-41.pdf"
+  },
+  {
+    "worksheet_number": "ML-2026-0920-41",
+    "created_at": "2026-09-20T02:28:11.217787",
+    "customer_name": "Takács Béla",
+    "technician_name": "Horváth László",
+    "gross_total": 61849,
+    "confidence_score": 93.5,
+    "signatures_valid": true,
+    "pdf_path": "output\\munkalapok\\munkalap_ML-2026-0920-41.pdf"
+  },
+  {
+    "worksheet_number": "ML-2026-0920-41",
+    "created_at": "2026-09-20T04:07:07.233629",
+    "customer_name": "Takács Béla",
+    "technician_name": "Horváth László",
+    "gross_total": 61849,
+    "confidence_score": 93.5,
+    "signatures_valid": true,
+    "pdf_path": "output\\munkalapok\\munkalap_ML-2026-0920-41.pdf"
+  },
+  {
+    "worksheet_number": "ML-2026-0920-41",
+    "created_at": "2026-09-20T04:07:56.089617",
+    "customer_name": "Takács Béla",
+    "technician_name": "Horváth László",
+    "gross_total": 61849,
+    "confidence_score": 93.5,
+    "signatures_valid": true,
+    "pdf_path": "output\\munkalapok\\munkalap_ML-2026-0920-41.pdf"
+  }
+]

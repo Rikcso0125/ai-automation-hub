@@ -1,0 +1,55 @@
+{
+  "title": "Hivatalos WhatsApp Business API Tranzakciós Vevőszolgálat Konfiguráció",
+  "type": "object",
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock szimuláció próbaadatokkal vagy éles Meta Cloud API kapcsolat."
+    },
+    "template_delivery_mode": {
+      "type": "string",
+      "title": "1. Kérdés: Tranzakciós Sablon és Kézbesítési Mód",
+      "enum": [
+        "hsm_utility",
+        "interactive_buttons",
+        "hybrid_sms_fallback"
+      ],
+      "default": "hybrid_sms_fallback",
+      "description": "A: Hivatalos Meta HSM Utility sablonok, B: Dinamikus interaktív menügombok, C: Hibrid kézbesítés Telnyx SMS tartalékkal."
+    },
+    "ai_support_mode": {
+      "type": "string",
+      "title": "2. Kérdés: 0-24 Inbound AI Ügyfélszolgálati Hatáskör",
+      "enum": [
+        "autonomous_full",
+        "human_handoff_rules",
+        "hitl_approval_gate"
+      ],
+      "default": "hitl_approval_gate",
+      "description": "A: Teljes önálló ügyintézés, B: Emberi kézbeadás (<80% vagy panasz esetén), C: Jóváhagyási kapu érzékeny módosításoknál."
+    },
+    "enable_add_to_order": {
+      "type": "boolean",
+      "title": "3. Kérdés (C): Feladás Előtti Add-to-Order Csomagbővítés Engedélyezése",
+      "default": true,
+      "description": "Bekapcsolja a rendelés utáni azonnali kiegészítő-felajánlást ingyenes szállítással."
+    },
+    "add_to_order_window_minutes": {
+      "type": "integer",
+      "title": "Add-to-Order Időablak (perc)",
+      "default": 15,
+      "description": "Ennyi percig van lehetősége a vevőnek 1 kattintással hozzáadni a kiegészítőt a csomaghoz a raktári dobozolás előtt."
+    },
+    "storage_path": {
+      "type": "string",
+      "title": "Napló Fájl",
+      "default": "data/whatsapp_vevoszolgalat_naplo.json"
+    }
+  }
+}

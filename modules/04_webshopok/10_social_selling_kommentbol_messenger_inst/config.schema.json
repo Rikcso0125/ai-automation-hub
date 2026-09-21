@@ -1,0 +1,88 @@
+{
+  "title": "Social Selling: Kommentből Messenger / Instagram Vásárlási Tölcsér Konfiguráció",
+  "type": "object",
+  "required": [
+    "api_key"
+  ],
+  "properties": {
+    "api_key": {
+      "type": "string",
+      "title": "Meta Graph API / ManyChat Access Token",
+      "format": "password",
+      "default": "mock_meta_graph_token_2026",
+      "description": "Instagram Messaging API vagy ManyChat Webhook hozzáférési token."
+    },
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (szimulált Meta webhook és üzenetküldés) vagy Production (élő Meta Graph API hívások)."
+    },
+    "trigger_mode": {
+      "type": "string",
+      "title": "1. Kérdés: Komment-trigger és Szándékfelismerés",
+      "enum": [
+        "keyword_only",
+        "ai_semantic_nlp",
+        "hybrid_smart_matching"
+      ],
+      "default": "hybrid_smart_matching",
+      "description": "Szigorú kulcsszavak (LINK, ÁR, KUPON), természetes nyelvű AI szándékfelismerés, vagy hibrid prioritásos szűrés."
+    },
+    "public_reply_strategy": {
+      "type": "string",
+      "title": "2. Kérdés: Nyilvános Komment Reakció & Algoritmus Boost",
+      "enum": [
+        "dynamic_rotation",
+        "algorithm_boost_engagement",
+        "hybrid_safe_boost"
+      ],
+      "default": "hybrid_safe_boost",
+      "description": "10+ rotált spamelkerülő sablon, kommentlájkolás + aktivitásnövelő kérdés, vagy hibrid algoritmus-pörgető stratégia."
+    },
+    "dm_funnel_type": {
+      "type": "string",
+      "title": "3. Kérdés: Privát Üzenet Tölcsér & Vásárlási Konverzió",
+      "enum": [
+        "instant_link_flash_coupon",
+        "interactive_manychat_flow",
+        "hybrid_omnichannel_funnel"
+      ],
+      "default": "hybrid_omnichannel_funnel",
+      "description": "1-kattintásos direkt link + sürgető villámkupon, többgombos ManyChat interaktív konfigurátor, vagy hibrid kártyás tölcsér."
+    },
+    "flash_coupon_percent": {
+      "type": "integer",
+      "title": "Privát Villámkupon Kedvezmény (%)",
+      "default": 10,
+      "description": "A privát DM-ben küldött sürgető hűségkupon értéke (pl. 10%)."
+    },
+    "flash_coupon_validity_hours": {
+      "type": "integer",
+      "title": "Villámkupon Érvényességi Idő (óra)",
+      "default": 2,
+      "description": "A sürgető vásárlási ösztönző lejárati ideje órában kifejezve (pl. 2 óra)."
+    },
+    "auto_like_comment": {
+      "type": "boolean",
+      "title": "Komment Automatikus Kedvelése (Lájk)",
+      "default": true,
+      "description": "A beérkező komment automatikus megkedvelése a vevői elégedettség és algoritmus jelzés céljából."
+    },
+    "platform_channel": {
+      "type": "string",
+      "title": "Közösségi Csatorna",
+      "enum": [
+        "auto_detect",
+        "instagram_dm",
+        "facebook_messenger"
+      ],
+      "default": "auto_detect",
+      "description": "Célzott platform vagy automatikus webhook forrás-felismerés."
+    }
+  }
+}

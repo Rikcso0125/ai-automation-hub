@@ -1,0 +1,26 @@
+{
+  "module_id": "11_automata_rovidvideo_vagas_feliratozas_op",
+  "video_id": "VID-2026-BOSCH-TEST",
+  "video_title": "Bosch Professional GBH 2-28 Fúrókalapács Teljes Unboxing és Betonfúrás Teszt",
+  "source_video_url": "https://storage.webshop.hu/raw_videos/bosch_gbh228_test_1080p.mp4",
+  "duration_seconds": 960,
+  "product": {
+    "sku": "BOSCH-GBH-2-28",
+    "name": "Bosch Professional GBH 2-28 Fúrókalapács L-BOXX",
+    "price_huf": 68900,
+    "product_url": "https://webshop.hu/termekek/bosch-gbh-2-28"
+  },
+  "target_platforms": [
+    "tiktok",
+    "instagram_reels",
+    "youtube_shorts"
+  ],
+  "config": {
+    "clipping_strategy": "hybrid_smart_clips",
+    "caption_style": "selectable_dual_style",
+    "publishing_pipeline": "hybrid_publish_or_review",
+    "target_aspect_ratio": "9:16_vertical",
+    "add_closing_cta_card": true,
+    "flash_coupon_code": "REELS10"
+  }
+}

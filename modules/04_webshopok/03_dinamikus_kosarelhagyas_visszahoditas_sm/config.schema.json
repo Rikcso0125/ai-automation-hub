@@ -1,0 +1,87 @@
+{
+  "title": "Dinamikus Kosárelhagyás Visszahódítás Konfiguráció",
+  "type": "object",
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock tesztelés vagy éles SMS/Email küldés."
+    },
+    "sms_delay_minutes": {
+      "type": "integer",
+      "title": "1. Lépés: SMS Kiküldési Késleltetés (perc)",
+      "default": 30,
+      "description": "Szerkeszthető: Ennyi perccel a kosárelhagyás után menjen ki az első SMS (pl. 15-60 perc)."
+    },
+    "email_delay_hours": {
+      "type": "integer",
+      "title": "2. Lépés: Részletes Email Késleltetés (óra)",
+      "default": 24,
+      "description": "Szerkeszthető: Ennyi órával a kosárelhagyás után menjen ki a részletes meggyőző email."
+    },
+    "sms_template": {
+      "type": "string",
+      "title": "Szerkeszthető SMS Sablon",
+      "format": "textarea",
+      "default": "Szia {customer_first_name}! A kosaradban felejtett {product_name} megvar! Kattints es fejezd be a rendelest 1 kattintassal: {restore_url}",
+      "description": "Használható változók: {customer_first_name}, {product_name}, {cart_total}, {restore_url}, {coupon_code}"
+    },
+    "incentive_mode": {
+      "type": "string",
+      "title": "2. Kérdés: Saját Szerkesztésű Ösztönző Stratégia",
+      "enum": [
+        "no_coupon_value_only",
+        "free_shipping",
+        "tiered_discount",
+        "custom_rules"
+      ],
+      "default": "tiered_discount",
+      "description": "Saját szerkesztés: tiszta értékajánlat kupon nélkül, ingyenes szállítás, lépcsős értékhatáros kupon, vagy egyedi szabályrendszer."
+    },
+    "custom_rules": {
+      "type": "array",
+      "title": "Egyedi Szerkeszthető Értékszabályok és Kuponok",
+      "items": {
+        "type": "object",
+        "properties": {
+          "min_cart_value": {
+            "type": "number"
+          },
+          "coupon_code": {
+            "type": "string"
+          },
+          "discount_label": {
+            "type": "string"
+          },
+          "highlight_benefit": {
+            "type": "string"
+          }
+        }
+      },
+      "default": [
+        {
+          "min_cart_value": 0,
+          "coupon_code": "INGYENSZALLITAS",
+          "discount_label": "Ingyenes házhozszállítás",
+          "highlight_benefit": "Díjmentes csere és 30 napos pénzvisszafizetési garancia"
+        },
+        {
+          "min_cart_value": 50000,
+          "coupon_code": "VIP5PERCENT",
+          "discount_label": "5% Extra Kosárengedmény",
+          "highlight_benefit": "Kiemelt VIP szervizgarancia és másnapi expressz feladás"
+        }
+      ]
+    },
+    "storage_path": {
+      "type": "string",
+      "title": "Napló Fájl Útvonala",
+      "default": "data/kosarelhagyas_naplo.json"
+    }
+  }
+}

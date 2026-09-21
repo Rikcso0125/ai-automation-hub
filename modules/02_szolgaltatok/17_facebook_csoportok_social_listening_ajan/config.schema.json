@@ -1,0 +1,179 @@
+{
+  "title": "Facebook Csoportok Social Listening Konfiguráció",
+  "type": "object",
+  "required": [
+    "company_name",
+    "company_specialty"
+  ],
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (tesztelés próbaadatokkal) vagy Production (éles Facebook Graph / Webhook integráció)."
+    },
+    "company_name": {
+      "type": "string",
+      "title": "Vállalkozás Neve",
+      "default": "ProfiKlíma & Épületgépészet Kft.",
+      "description": "A vállalkozás neve, amely megjelenik a szakértői kommentekben és ajánlásokban."
+    },
+    "company_specialty": {
+      "type": "string",
+      "title": "Szakterület & Szolgáltatások",
+      "default": "Lakossági és ipari klíma, hőszivattyú telepítés, karbantartás, F-Gáz minősítés és gyors hibaelhárítás",
+      "description": "A cég főbb profilja, amit az AI kiemel az ajánláskérő válaszban."
+    },
+    "company_phone": {
+      "type": "string",
+      "title": "Központi Telefonszám",
+      "default": "+36 30 123 4567"
+    },
+    "booking_url": {
+      "type": "string",
+      "title": "Időpontfoglaló / Kapcsolat Link",
+      "default": "https://profiklima.hu/idopontfoglalas",
+      "description": "Közvetlen link, amit az érdeklődő megkaphat a válaszban vagy privát üzenetben."
+    },
+    "monitored_groups": {
+      "type": "array",
+      "title": "Megfigyelt Facebook Csoportok",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "Újbuda - XI. kerületiek csoportja",
+        "Budaörsiek közössége",
+        "Klíma és Hőszivattyú Tapasztalatok",
+        "Lakásfelújítás és Építkezés Szakemberek"
+      ],
+      "description": "A rendszer által monitorozott Facebook csoportok listája."
+    },
+    "target_locations": {
+      "type": "array",
+      "title": "Célterületek / Kiszállási Zónák",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "Budapest",
+        "XI. kerület",
+        "Budaörs",
+        "Törökbálint",
+        "Érd",
+        "Pest megye"
+      ],
+      "description": "Helyszínek, amelyek előfordulása esetén növeli az AI a relevancia pontszámot."
+    },
+    "trigger_keywords": {
+      "type": "array",
+      "title": "Riasztási Kulcsszavak & Kifejezések",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "klímás",
+        "klímaszerelő",
+        "hőszivattyú",
+        "tudtok jó",
+        "ajánljatok",
+        "szakembert keresek",
+        "szerelés",
+        "tisztítás",
+        "karbantartás",
+        "nem hűt",
+        "szerelő"
+      ],
+      "description": "Kifejezések, amelyek felbukkanásakor a poszt ajánláskérésnek minősül."
+    },
+    "negative_exclusion_keywords": {
+      "type": "array",
+      "title": "Negatív Kizáró Kulcsszavak (Spamszűrő)",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "állás",
+        "felvétel",
+        "munkaajánlat",
+        "eladó használt",
+        "ingyen elvihető",
+        "panasz a cégről",
+        "csaló",
+        "nem fizetett"
+      ],
+      "description": "Ha ezek bármelyike szerepel a posztban, a rendszer figyelmen kívül hagyja (nincs fals riasztás)."
+    },
+    "min_relevance_score": {
+      "type": "integer",
+      "title": "Minimális Relevancia Küszöb (0-100 pont)",
+      "default": 70,
+      "description": "Csak ennél magasabb pontszámú bejegyzések esetén indul el az értékesítői riasztás."
+    },
+    "response_tone": {
+      "type": "string",
+      "title": "Válasz Hangneme",
+      "enum": [
+        "tegezo_baratsagos",
+        "magazo_hivatalos"
+      ],
+      "default": "tegezo_baratsagos",
+      "description": "Tegező, közvetlen és segítőkész lakossági, vagy magázó hivatalos B2B stílus."
+    },
+    "include_dm_draft": {
+      "type": "boolean",
+      "title": "Privát Messenger Üzenet Vázlat Készítése",
+      "default": true,
+      "description": "Készítsen-e külön közvetlen privát üzenetvázlatot is a posztíró megkeresésére."
+    },
+    "approval_mode": {
+      "type": "string",
+      "title": "Jóváhagyási Mód",
+      "enum": [
+        "manual_approval_only",
+        "auto_post_high_confidence",
+        "hybrid_approval"
+      ],
+      "default": "manual_approval_only",
+      "description": "manual_approval_only: Mindig emberi jóváhagyás szükséges (ajánlott). auto_post_high_confidence: 95% feletti pontosságnál automatikus beküldés."
+    },
+    "auto_post_min_score": {
+      "type": "integer",
+      "title": "Automatikus Posztolási Küszöb (0-100)",
+      "default": 95,
+      "description": "Csak auto_post módban érvényes, ha a relevancia meghaladja ezt a pontszámot."
+    },
+    "alert_channels": {
+      "type": "array",
+      "title": "Értesítési Csatornák",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "telegram",
+        "whatsapp",
+        "dashboard"
+      ],
+      "description": "Csatornák az értékesítői csapat azonnali riasztásához (5 percen belüli reakcióidő cél)."
+    },
+    "telegram_chat_id": {
+      "type": "string",
+      "title": "Telegram Értesítési Chat ID",
+      "default": "sales_lead_alerts_group"
+    },
+    "whatsapp_recipient": {
+      "type": "string",
+      "title": "WhatsApp Értesítési Telefonszám",
+      "default": "+36 30 987 6543"
+    },
+    "leads_db_path": {
+      "type": "string",
+      "title": "Perzisztens Lead Adatbázis Útvonal",
+      "default": "data/facebook_leads_naplo.json"
+    }
+  }
+}

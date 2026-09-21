@@ -1,0 +1,82 @@
+{
+  "title": "Prediktív Cash-Flow Beállítások",
+  "type": "object",
+  "required": [
+    "safety_buffer_huf",
+    "executive_email"
+  ],
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "Cég Neve",
+      "default": "ProfiTech Kft."
+    },
+    "safety_buffer_huf": {
+      "type": "string",
+      "title": "Biztonsági Tartalék Limit (Ft)",
+      "default": "1000000",
+      "description": "Ha a várható egyenleg ezen összeg alá esne, a rendszer azonnali vészjelzést küld a vezetőnek."
+    },
+    "default_late_payment_adjustment_days": {
+      "type": "string",
+      "title": "Alapértelmezett Vevői Fizetési Csúszás (Nap)",
+      "default": "6",
+      "description": "Ennyi nappal tolja ki automatikusan a befolyás várható napját a számla lejáratához képest."
+    },
+    "fixed_monthly_salaries_huf": {
+      "type": "string",
+      "title": "Havi Bérköltség Keret (Ft)",
+      "default": "2800000",
+      "description": "A munkatársak havi nettó bérkiadása."
+    },
+    "salary_due_day": {
+      "type": "string",
+      "title": "Bérfizetés Napja (Hónap napja)",
+      "default": "10"
+    },
+    "fixed_monthly_taxes_huf": {
+      "type": "string",
+      "title": "Havi Bérjárulékok (Ft)",
+      "default": "1200000",
+      "description": "SZOCHO, TB járulékok a NAV felé."
+    },
+    "tax_due_day": {
+      "type": "string",
+      "title": "Járulékfizetés Napja (Hónap napja)",
+      "default": "12"
+    },
+    "estimated_vat_huf": {
+      "type": "string",
+      "title": "Becsült Havi ÁFA Befizetés (Ft)",
+      "default": "950000",
+      "description": "A 20-án esedékes fizetendő ÁFA összege."
+    },
+    "vat_due_day": {
+      "type": "string",
+      "title": "ÁFA Befizetés Napja (Hónap napja)",
+      "default": "20"
+    },
+    "forecast_days": {
+      "type": "string",
+      "title": "Előrejelzési Időtáv (Nap)",
+      "default": "21",
+      "description": "Hány napos előretekintést végezzen a szimuláció (pl. 21 nap = 3 hét)."
+    },
+    "executive_email": {
+      "type": "string",
+      "title": "Vezetői Értesítési Email",
+      "default": "vezeto@cegem.hu",
+      "description": "Ide érkezik a heti hétfői cash-flow jelentés és az azonnali vészjelzés."
+    },
+    "alert_channels": {
+      "type": "string",
+      "title": "Riasztási Mód",
+      "enum": [
+        "Email és Telegram Értesítő",
+        "Csak Email",
+        "Email és Telnyx SMS"
+      ],
+      "default": "Email és Telegram Értesítő"
+    }
+  }
+}

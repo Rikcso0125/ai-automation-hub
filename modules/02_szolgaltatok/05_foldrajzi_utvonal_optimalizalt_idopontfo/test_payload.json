@@ -1,0 +1,7 @@
+{
+  "module_id": "foldrajzi_utvonal_optimalizalt_idopontfo",
+  "action": "CUSTOMER_SLOT_INQUIRY",
+  "customer_address": "1024 Budapest, Margit körút 44. (2. kerület, Buda)",
+  "service_needed": "Gázkazán éves karbantartás",
+  "urgency": "NORMAL"
+}

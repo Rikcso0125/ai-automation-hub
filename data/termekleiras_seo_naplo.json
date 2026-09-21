@@ -1,0 +1,478 @@
+[
+  {
+    "sku": "BOSCH-GSR-18V-55",
+    "brand": "Bosch Professional",
+    "title": "Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó",
+    "html_description": "<h3>Dolgozz úgy, mint a profik a Bosch Professional csúcsmodelljével!</h3>\n<p>Unod már, hogy a géped lefullad a legkeményebb feladatoknál? A(z) <strong>BOSCH GSR 18V-55 AKKUS FUROCSAVAROZO SOLO 06019H5202</strong> nem ismer kompromisszumot: lenyűgöző forgatónyomatékával és pillekönnyű kezelhetőségével a legnehezebb feladatok is gyerekjátéknak tűnnek!</p>\n<h4>Miért fogod imádni minden egyes nap?</h4>\n<ul>\n<li><strong>Brutális Erő:</strong> Akár a legkeményebb fába vagy acélba is könnyedén behatol.</li>\n<li><strong>Hosszú Élettartam:</strong> A szénkefementes motornak köszönhetően nem melegszik és nem kopik.</li>\n<li><strong>Ergonomikus Kényelem:</strong> Csúszásbiztos markolat a fáradságmentes egész napos munkához.</li>\n<li><strong>Gyors Szerszámcsere:</strong> Egyetlen mozdulattal cserélhető bitfejek a fém tokmánynak hála.</li>\n</ul>\n<div style=\"background:#e3f2fd;padding:12px;border-left:4px solid #1976d2;margin:15px 0;\">\n<p style=\"margin:0;\"><strong>Hivatalos Garancia:</strong> Erre a modellre kiterjesztett gyártói jótállást és országos szervizhálózatot biztosítunk!</p>\n</div>\n<hr style=\"border:0;border-top:1px solid #eee;margin:25px 0;\">\n<h3>Bosch Professional Ipari és Szakipari Műszaki Megoldások</h3>\n<p>A <strong>BOSCH GSR 18V-55 AKKUS FUROCSAVAROZO SOLO 06019H5202</strong> kifejezetten a folyamatos, intenzív szakipari munkavégzésre tervezett modell. A robusztus felépítés, a korszerű szénkefementes hajtás és a precíziós tokmányrendszer garantálja a maximális hatékonyságot és a minimális karbantartási igényt.</p>\n<h4>Főbb Műszaki Paraméterek és Szabványok:</h4>\n<table style=\"width:100%;border-collapse:collapse;margin:15px 0;\"><tbody><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Feszültség</td><td style=\"padding:8px;border:1px solid #ddd;\">18 V</td></tr><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Nyomaték</td><td style=\"padding:8px;border:1px solid #ddd;\">55 Nm</td></tr><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Tokmány</td><td style=\"padding:8px;border:1px solid #ddd;\">13 mm fém</td></tr></tbody></table>\n<p><em>Megfelel a vonatkozó EN/ISO ipari biztonsági szabványoknak. CE minősített termék.</em></p>",
+    "seo": {
+      "meta_title": "Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó | Pr",
+      "meta_description": "Rendeld meg a(z) Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó modellt hivatalos garanciával, raktárról másnapi szállítással a ProfiGépésztől! Ki",
+      "url_slug": "bosch-professional-bosch-gsr-18v-55",
+      "h1": "Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó",
+      "h2_headings": [
+        "Miért válaszd a(z) Bosch Professional BOSCH-GSR-18V-55 készüléket?",
+        "Részletes Műszaki Paraméterek",
+        "Gyakran Ismételt Kérdések és Garancia"
+      ],
+      "lsi_keywords": [
+        "akkus furo",
+        "szénkefementes furocsavarozo",
+        "profi szerszam",
+        "18v akku"
+      ],
+      "schema_product_jsonld": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó",
+        "image": [
+          "https://profigepesz.hu/images/bosch-professional-bosch-gsr-18v-55.jpg"
+        ],
+        "description": "Rendeld meg a(z) Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó modellt hivatalos garanciával, raktárról másnapi szállítással a ProfiGépésztől! Ki",
+        "sku": "BOSCH-GSR-18V-55",
+        "brand": {
+          "@type": "Brand",
+          "name": "Bosch Professional"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://profigepesz.hu/termek/bosch-professional-bosch-gsr-18v-55",
+          "priceCurrency": "HUF",
+          "price": 49990,
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition"
+        }
+      },
+      "schema_faq_jsonld": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Mennyi garancia jár a termékre?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A termékre 3 év hivatalos magyarországi gyártói garancia vonatkozik online regisztrációval."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mikorra várható a szállítás?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Raktáron lévő termék esetén a 14:00-ig leadott rendeléseket már a következő munkanapon kiszállítjuk."
+            }
+          }
+        ]
+      }
+    },
+    "sync_result": {
+      "mode": "diff_review_gate",
+      "status": "PENDING_DIFF_APPROVAL",
+      "diff_summary": {
+        "original_raw_length": 59,
+        "generated_html_length": 2299,
+        "expansion_factor": 39.0
+      },
+      "approval_action_url": "https://admin.profigepesz.hu/seo/approve?sku=BOSCH-GSR-18V-55&token=675480a666",
+      "message": "Egymás melletti diff előnézet elkészült, 1-kattintásos vezetői publikálásra kész."
+    },
+    "generated_at": "2026-09-20T03:34:10.420687"
+  },
+  {
+    "sku": "MAKITA-DHP-484",
+    "brand": "Makita",
+    "title": "Makita - MAKITA-DHP-484 Műszaki Adatlap",
+    "html_description": "<h3>Makita Ipari és Szakipari Műszaki Megoldások</h3>\n<p>A <strong>MAKITA DHP484Z AKKUS UTVEFURO 18V SOLO</strong> kifejezetten a folyamatos, intenzív szakipari munkavégzésre tervezett modell. A robusztus felépítés, a korszerű szénkefementes hajtás és a precíziós tokmányrendszer garantálja a maximális hatékonyságot és a minimális karbantartási igényt.</p>\n<h4>Főbb Műszaki Paraméterek és Szabványok:</h4>\n<table style=\"width:100%;border-collapse:collapse;margin:15px 0;\"><tbody><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Ütvefúrás</td><td style=\"padding:8px;border:1px solid #ddd;\">Igen</td></tr><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Motor</td><td style=\"padding:8px;border:1px solid #ddd;\">BL Brushless</td></tr></tbody></table>\n<p><em>Megfelel a vonatkozó EN/ISO ipari biztonsági szabványoknak. CE minősített termék.</em></p>",
+    "seo": {
+      "meta_title": "Makita - MAKITA-DHP-484 Műszaki Adatlap | ProfiGépész",
+      "meta_description": "Rendeld meg a(z) Makita - MAKITA-DHP-484 Műszaki Adatlap modellt hivatalos garanciával, raktárról másnapi szállítással a ProfiGépésztől! Kiváló ár, azonnal",
+      "url_slug": "makita-makita-dhp-484",
+      "h1": "Makita - MAKITA-DHP-484 Műszaki Adatlap",
+      "h2_headings": [
+        "Miért válaszd a(z) Makita MAKITA-DHP-484 készüléket?",
+        "Részletes Műszaki Paraméterek",
+        "Gyakran Ismételt Kérdések és Garancia"
+      ],
+      "lsi_keywords": [
+        "akkus furo",
+        "szénkefementes furocsavarozo",
+        "profi szerszam",
+        "18v akku"
+      ],
+      "schema_product_jsonld": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Makita - MAKITA-DHP-484 Műszaki Adatlap",
+        "image": [
+          "https://profigepesz.hu/images/makita-makita-dhp-484.jpg"
+        ],
+        "description": "Rendeld meg a(z) Makita - MAKITA-DHP-484 Műszaki Adatlap modellt hivatalos garanciával, raktárról másnapi szállítással a ProfiGépésztől! Kiváló ár, azonnal",
+        "sku": "MAKITA-DHP-484",
+        "brand": {
+          "@type": "Brand",
+          "name": "Makita"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://profigepesz.hu/termek/makita-makita-dhp-484",
+          "priceCurrency": "HUF",
+          "price": 64990,
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition"
+        }
+      },
+      "schema_faq_jsonld": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Mennyi garancia jár a termékre?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A termékre 3 év hivatalos magyarországi gyártói garancia vonatkozik online regisztrációval."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mikorra várható a szállítás?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Raktáron lévő termék esetén a 14:00-ig leadott rendeléseket már a következő munkanapon kiszállítjuk."
+            }
+          }
+        ]
+      }
+    },
+    "sync_result": {
+      "mode": "csv_excel_export",
+      "status": "EXPORT_READY",
+      "export_filename": "export_products_20260920.csv",
+      "sample_row": {
+        "Handle": "makita-makita-dhp-484",
+        "Title": "Makita - MAKITA-DHP-484 Műszaki Adatlap",
+        "Body (HTML)": "<h3>Makita Ipari és Szakipari Műszaki Megoldások</h3>\n<p>A <strong>MAKITA DHP484Z AKKUS UTVEFURO 18V...",
+        "Vendor": "Makita",
+        "Variant SKU": "MAKITA-DHP-484",
+        "Variant Price": 64990,
+        "SEO Title": "Makita - MAKITA-DHP-484 Műszaki Adatlap | ProfiGépész",
+        "SEO Description": "Rendeld meg a(z) Makita - MAKITA-DHP-484 Műszaki Adatlap modellt hivatalos garanciával, raktárról másnapi szállítással a ProfiGépésztől! Kiváló ár, azonnal"
+      },
+      "message": "Készre formázott importfájl letölthető az admin menedzser számára."
+    },
+    "generated_at": "2026-09-20T03:34:10.422660"
+  },
+  {
+    "sku": "DEWALT-DCD-796",
+    "brand": "DeWalt",
+    "title": "DeWalt DEWALT-DCD-796 Akkus Fúrócsavarozó",
+    "html_description": "<h3>Dolgozz úgy, mint a profik a DeWalt csúcsmodelljével!</h3>\n<p>Unod már, hogy a géped lefullad a legkeményebb feladatoknál? A(z) <strong>DEWALT DCD796P2 AKKUS UTVEFURO-CSAVAROZO</strong> nem ismer kompromisszumot: lenyűgöző forgatónyomatékával és pillekönnyű kezelhetőségével a legnehezebb feladatok is gyerekjátéknak tűnnek!</p>\n<h4>Miért fogod imádni minden egyes nap?</h4>\n<ul>\n<li><strong>Brutális Erő:</strong> Akár a legkeményebb fába vagy acélba is könnyedén behatol.</li>\n<li><strong>Hosszú Élettartam:</strong> A szénkefementes motornak köszönhetően nem melegszik és nem kopik.</li>\n<li><strong>Ergonomikus Kényelem:</strong> Csúszásbiztos markolat a fáradságmentes egész napos munkához.</li>\n<li><strong>Gyors Szerszámcsere:</strong> Egyetlen mozdulattal cserélhető bitfejek a fém tokmánynak hála.</li>\n</ul>\n<div style=\"background:#e3f2fd;padding:12px;border-left:4px solid #1976d2;margin:15px 0;\">\n<p style=\"margin:0;\"><strong>Hivatalos Garancia:</strong> Erre a modellre kiterjesztett gyártói jótállást és országos szervizhálózatot biztosítunk!</p>\n</div>\n<hr style=\"border:0;border-top:1px solid #eee;margin:25px 0;\">\n<h3>DeWalt Ipari és Szakipari Műszaki Megoldások</h3>\n<p>A <strong>DEWALT DCD796P2 AKKUS UTVEFURO-CSAVAROZO</strong> kifejezetten a folyamatos, intenzív szakipari munkavégzésre tervezett modell. A robusztus felépítés, a korszerű szénkefementes hajtás és a precíziós tokmányrendszer garantálja a maximális hatékonyságot és a minimális karbantartási igényt.</p>\n<h4>Főbb Műszaki Paraméterek és Szabványok:</h4>\n<table style=\"width:100%;border-collapse:collapse;margin:15px 0;\"><tbody></tbody></table>\n<p><em>Megfelel a vonatkozó EN/ISO ipari biztonsági szabványoknak. CE minősített termék.</em></p>",
+    "seo": {
+      "meta_title": "DeWalt DEWALT-DCD-796 Akkus Fúrócsavarozó | ProfiGépész",
+      "meta_description": "Rendeld meg a(z) DeWalt DEWALT-DCD-796 Akkus Fúrócsavarozó modellt hivatalos garanciával, raktárról másnapi szállítással a ProfiGépésztől! Kiváló ár, azonn",
+      "url_slug": "dewalt-dewalt-dcd-796",
+      "h1": "DeWalt DEWALT-DCD-796 Akkus Fúrócsavarozó",
+      "h2_headings": [
+        "Miért válaszd a(z) DeWalt DEWALT-DCD-796 készüléket?",
+        "Részletes Műszaki Paraméterek",
+        "Gyakran Ismételt Kérdések és Garancia"
+      ],
+      "lsi_keywords": [
+        "akkus furo",
+        "szénkefementes furocsavarozo",
+        "profi szerszam",
+        "18v akku"
+      ],
+      "schema_product_jsonld": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "DeWalt DEWALT-DCD-796 Akkus Fúrócsavarozó",
+        "image": [
+          "https://profigepesz.hu/images/dewalt-dewalt-dcd-796.jpg"
+        ],
+        "description": "Rendeld meg a(z) DeWalt DEWALT-DCD-796 Akkus Fúrócsavarozó modellt hivatalos garanciával, raktárról másnapi szállítással a ProfiGépésztől! Kiváló ár, azonn",
+        "sku": "DEWALT-DCD-796",
+        "brand": {
+          "@type": "Brand",
+          "name": "DeWalt"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://profigepesz.hu/termek/dewalt-dewalt-dcd-796",
+          "priceCurrency": "HUF",
+          "price": 89990,
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition"
+        }
+      },
+      "schema_faq_jsonld": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Mennyi garancia jár a termékre?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A termékre 3 év hivatalos magyarországi gyártói garancia vonatkozik online regisztrációval."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mikorra várható a szállítás?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Raktáron lévő termék esetén a 14:00-ig leadott rendeléseket már a következő munkanapon kiszállítjuk."
+            }
+          }
+        ]
+      }
+    },
+    "sync_result": {
+      "mode": "direct_api_bulk_sync",
+      "status": "PUBLISHED_VIA_API",
+      "target_platform": "shopify",
+      "api_endpoint": "https://api.shopify.com/v1/products/DEWALT-DCD-796",
+      "response_code": 200,
+      "message": "Termékleírás és SEO meta adatok közvetlenül közzétéve a webáruházban."
+    },
+    "generated_at": "2026-09-20T03:34:10.423662"
+  },
+  {
+    "sku": "BOSCH-LIVE-001",
+    "brand": "Bosch Professional",
+    "title": "Bosch Professional BOSCH-LIVE-001 Akkus Fúrócsavarozó",
+    "html_description": "<h3>Dolgozz úgy, mint a profik a Bosch Professional csúcsmodelljével!</h3>\n<p>Unod már, hogy a géped lefullad a legkeményebb feladatoknál? A(z) <strong>BOSCH GSR 18V-55 AKKUS FUROCSAVAROZO SOLO</strong> nem ismer kompromisszumot: lenyűgöző forgatónyomatékával és pillekönnyű kezelhetőségével a legnehezebb feladatok is gyerekjátéknak tűnnek!</p>\n<h4>Miért fogod imádni minden egyes nap?</h4>\n<ul>\n<li><strong>Brutális Erő:</strong> Akár a legkeményebb fába vagy acélba is könnyedén behatol.</li>\n<li><strong>Hosszú Élettartam:</strong> A szénkefementes motornak köszönhetően nem melegszik és nem kopik.</li>\n<li><strong>Ergonomikus Kényelem:</strong> Csúszásbiztos markolat a fáradságmentes egész napos munkához.</li>\n<li><strong>Gyors Szerszámcsere:</strong> Egyetlen mozdulattal cserélhető bitfejek a fém tokmánynak hála.</li>\n</ul>\n<div style=\"background:#e3f2fd;padding:12px;border-left:4px solid #1976d2;margin:15px 0;\">\n<p style=\"margin:0;\"><strong>Hivatalos Garancia:</strong> Erre a modellre kiterjesztett gyártói jótállást és országos szervizhálózatot biztosítunk!</p>\n</div>\n<hr style=\"border:0;border-top:1px solid #eee;margin:25px 0;\">\n<h3>Bosch Professional Ipari és Szakipari Műszaki Megoldások</h3>\n<p>A <strong>BOSCH GSR 18V-55 AKKUS FUROCSAVAROZO SOLO</strong> kifejezetten a folyamatos, intenzív szakipari munkavégzésre tervezett modell. A robusztus felépítés, a korszerű szénkefementes hajtás és a precíziós tokmányrendszer garantálja a maximális hatékonyságot és a minimális karbantartási igényt.</p>\n<h4>Főbb Műszaki Paraméterek és Szabványok:</h4>\n<table style=\"width:100%;border-collapse:collapse;margin:15px 0;\"><tbody><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Feszültség</td><td style=\"padding:8px;border:1px solid #ddd;\">18V</td></tr><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Nyomaték</td><td style=\"padding:8px;border:1px solid #ddd;\">55 Nm</td></tr></tbody></table>\n<p><em>Megfelel a vonatkozó EN/ISO ipari biztonsági szabványoknak. CE minősített termék.</em></p>",
+    "seo": {
+      "meta_title": "Bosch Professional BOSCH-LIVE-001 Akkus Fúrócsavarozó | Prof",
+      "meta_description": "Rendeld meg a(z) Bosch Professional BOSCH-LIVE-001 Akkus Fúrócsavarozó modellt hivatalos garanciával, raktárról másnapi szállítással a ProfiGépésztől! Kivá",
+      "url_slug": "bosch-professional-bosch-live-001",
+      "h1": "Bosch Professional BOSCH-LIVE-001 Akkus Fúrócsavarozó",
+      "h2_headings": [
+        "Miért válaszd a(z) Bosch Professional BOSCH-LIVE-001 készüléket?",
+        "Részletes Műszaki Paraméterek",
+        "Gyakran Ismételt Kérdések és Garancia"
+      ],
+      "lsi_keywords": [
+        "akkus furo",
+        "szénkefementes furocsavarozo",
+        "profi szerszam",
+        "18v akku"
+      ],
+      "schema_product_jsonld": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Bosch Professional BOSCH-LIVE-001 Akkus Fúrócsavarozó",
+        "image": [
+          "https://profigepesz.hu/images/bosch-professional-bosch-live-001.jpg"
+        ],
+        "description": "Rendeld meg a(z) Bosch Professional BOSCH-LIVE-001 Akkus Fúrócsavarozó modellt hivatalos garanciával, raktárról másnapi szállítással a ProfiGépésztől! Kivá",
+        "sku": "BOSCH-LIVE-001",
+        "brand": {
+          "@type": "Brand",
+          "name": "Bosch Professional"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://profigepesz.hu/termek/bosch-professional-bosch-live-001",
+          "priceCurrency": "HUF",
+          "price": 49990,
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition"
+        }
+      },
+      "schema_faq_jsonld": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Mennyi garancia jár a termékre?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A termékre 3 év hivatalos magyarországi gyártói garancia vonatkozik online regisztrációval."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mikorra várható a szállítás?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Raktáron lévő termék esetén a 14:00-ig leadott rendeléseket már a következő munkanapon kiszállítjuk."
+            }
+          }
+        ]
+      }
+    },
+    "sync_result": {
+      "mode": "diff_review_gate",
+      "status": "PENDING_DIFF_APPROVAL",
+      "diff_summary": {
+        "original_raw_length": 59,
+        "generated_html_length": 2101,
+        "expansion_factor": 35.6
+      },
+      "approval_action_url": "https://admin.profigepesz.hu/seo/approve?sku=BOSCH-LIVE-001&token=6f480889dc",
+      "message": "Egymás melletti diff előnézet elkészült, 1-kattintásos vezetői publikálásra kész."
+    },
+    "generated_at": "2026-09-20T03:34:18.274583"
+  },
+  {
+    "sku": "BOSCH-GSR-18V-55",
+    "brand": "Bosch Professional",
+    "title": "Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó",
+    "html_description": "<h3>Dolgozz úgy, mint a profik a Bosch Professional csúcsmodelljével!</h3>\n<p>Unod már, hogy a géped lefullad a legkeményebb feladatoknál? A(z) <strong>BOSCH GSR 18V-55 AKKUS FUROCSAVAROZO SOLO 06019H5202</strong> nem ismer kompromisszumot: lenyűgöző forgatónyomatékával és pillekönnyű kezelhetőségével a legnehezebb feladatok is gyerekjátéknak tűnnek!</p>\n<h4>Miért fogod imádni minden egyes nap?</h4>\n<ul>\n<li><strong>Brutális Erő:</strong> Akár a legkeményebb fába vagy acélba is könnyedén behatol.</li>\n<li><strong>Hosszú Élettartam:</strong> A szénkefementes motornak köszönhetően nem melegszik és nem kopik.</li>\n<li><strong>Ergonomikus Kényelem:</strong> Csúszásbiztos markolat a fáradságmentes egész napos munkához.</li>\n<li><strong>Gyors Szerszámcsere:</strong> Egyetlen mozdulattal cserélhető bitfejek a fém tokmánynak hála.</li>\n</ul>\n<div style=\"background:#e3f2fd;padding:12px;border-left:4px solid #1976d2;margin:15px 0;\">\n<p style=\"margin:0;\"><strong>Hivatalos Garancia:</strong> Erre a modellre kiterjesztett gyártói jótállást és országos szervizhálózatot biztosítunk!</p>\n</div>\n<hr style=\"border:0;border-top:1px solid #eee;margin:25px 0;\">\n<h3>Bosch Professional Ipari és Szakipari Műszaki Megoldások</h3>\n<p>A <strong>BOSCH GSR 18V-55 AKKUS FUROCSAVAROZO SOLO 06019H5202</strong> kifejezetten a folyamatos, intenzív szakipari munkavégzésre tervezett modell. A robusztus felépítés, a korszerű szénkefementes hajtás és a precíziós tokmányrendszer garantálja a maximális hatékonyságot és a minimális karbantartási igényt.</p>\n<h4>Főbb Műszaki Paraméterek és Szabványok:</h4>\n<table style=\"width:100%;border-collapse:collapse;margin:15px 0;\"><tbody><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Feszültség</td><td style=\"padding:8px;border:1px solid #ddd;\">18 V</td></tr><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Nyomaték (kemény)</td><td style=\"padding:8px;border:1px solid #ddd;\">55 Nm</td></tr><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Motor</td><td style=\"padding:8px;border:1px solid #ddd;\">Szénkefementes (Brushless EC)</td></tr><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Tokmány</td><td style=\"padding:8px;border:1px solid #ddd;\">13 mm fém gyorstokmány</td></tr><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Cikkszám</td><td style=\"padding:8px;border:1px solid #ddd;\">06019H5202</td></tr></tbody></table>\n<p><em>Megfelel a vonatkozó EN/ISO ipari biztonsági szabványoknak. CE minősített termék.</em></p>",
+    "seo": {
+      "meta_title": "Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó | Pr",
+      "meta_description": "Rendeld meg a(z) Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó modellt hivatalos garanciával, raktárról másnapi szállítással a ProfiGépésztől! Ki",
+      "url_slug": "bosch-professional-bosch-gsr-18v-55",
+      "h1": "Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó",
+      "h2_headings": [
+        "Miért válaszd a(z) Bosch Professional BOSCH-GSR-18V-55 készüléket?",
+        "Részletes Műszaki Paraméterek",
+        "Gyakran Ismételt Kérdések és Garancia"
+      ],
+      "lsi_keywords": [
+        "akkus furo",
+        "szénkefementes furocsavarozo",
+        "profi szerszam",
+        "18v akku"
+      ],
+      "schema_product_jsonld": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó",
+        "image": [
+          "https://profigepesz.hu/images/bosch-professional-bosch-gsr-18v-55.jpg"
+        ],
+        "description": "Rendeld meg a(z) Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó modellt hivatalos garanciával, raktárról másnapi szállítással a ProfiGépésztől! Ki",
+        "sku": "BOSCH-GSR-18V-55",
+        "brand": {
+          "@type": "Brand",
+          "name": "Bosch Professional"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://profigepesz.hu/termek/bosch-professional-bosch-gsr-18v-55",
+          "priceCurrency": "HUF",
+          "price": 49990,
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition"
+        }
+      },
+      "schema_faq_jsonld": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Mennyi garancia jár a termékre?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A termékre 3 év hivatalos magyarországi gyártói garancia vonatkozik online regisztrációval."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mikorra várható a szállítás?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Raktáron lévő termék esetén a 14:00-ig leadott rendeléseket már a következő munkanapon kiszállítjuk."
+            }
+          }
+        ]
+      }
+    },
+    "sync_result": {
+      "mode": "diff_review_gate",
+      "status": "PENDING_DIFF_APPROVAL",
+      "diff_summary": {
+        "original_raw_length": 107,
+        "generated_html_length": 2691,
+        "expansion_factor": 25.1
+      },
+      "approval_action_url": "https://admin.profigepesz.hu/seo/approve?sku=BOSCH-GSR-18V-55&token=675480a666",
+      "message": "Egymás melletti diff előnézet elkészült, 1-kattintásos vezetői publikálásra kész."
+    },
+    "generated_at": "2026-09-20T04:07:08.818905"
+  },
+  {
+    "sku": "BOSCH-GSR-18V-55",
+    "brand": "Bosch Professional",
+    "title": "Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó",
+    "html_description": "<h3>Dolgozz úgy, mint a profik a Bosch Professional csúcsmodelljével!</h3>\n<p>Unod már, hogy a géped lefullad a legkeményebb feladatoknál? A(z) <strong>BOSCH GSR 18V-55 AKKUS FUROCSAVAROZO SOLO 06019H5202</strong> nem ismer kompromisszumot: lenyűgöző forgatónyomatékával és pillekönnyű kezelhetőségével a legnehezebb feladatok is gyerekjátéknak tűnnek!</p>\n<h4>Miért fogod imádni minden egyes nap?</h4>\n<ul>\n<li><strong>Brutális Erő:</strong> Akár a legkeményebb fába vagy acélba is könnyedén behatol.</li>\n<li><strong>Hosszú Élettartam:</strong> A szénkefementes motornak köszönhetően nem melegszik és nem kopik.</li>\n<li><strong>Ergonomikus Kényelem:</strong> Csúszásbiztos markolat a fáradságmentes egész napos munkához.</li>\n<li><strong>Gyors Szerszámcsere:</strong> Egyetlen mozdulattal cserélhető bitfejek a fém tokmánynak hála.</li>\n</ul>\n<div style=\"background:#e3f2fd;padding:12px;border-left:4px solid #1976d2;margin:15px 0;\">\n<p style=\"margin:0;\"><strong>Hivatalos Garancia:</strong> Erre a modellre kiterjesztett gyártói jótállást és országos szervizhálózatot biztosítunk!</p>\n</div>\n<hr style=\"border:0;border-top:1px solid #eee;margin:25px 0;\">\n<h3>Bosch Professional Ipari és Szakipari Műszaki Megoldások</h3>\n<p>A <strong>BOSCH GSR 18V-55 AKKUS FUROCSAVAROZO SOLO 06019H5202</strong> kifejezetten a folyamatos, intenzív szakipari munkavégzésre tervezett modell. A robusztus felépítés, a korszerű szénkefementes hajtás és a precíziós tokmányrendszer garantálja a maximális hatékonyságot és a minimális karbantartási igényt.</p>\n<h4>Főbb Műszaki Paraméterek és Szabványok:</h4>\n<table style=\"width:100%;border-collapse:collapse;margin:15px 0;\"><tbody><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Feszültség</td><td style=\"padding:8px;border:1px solid #ddd;\">18 V</td></tr><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Nyomaték (kemény)</td><td style=\"padding:8px;border:1px solid #ddd;\">55 Nm</td></tr><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Motor</td><td style=\"padding:8px;border:1px solid #ddd;\">Szénkefementes (Brushless EC)</td></tr><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Tokmány</td><td style=\"padding:8px;border:1px solid #ddd;\">13 mm fém gyorstokmány</td></tr><tr><td style=\"padding:8px;background:#f9f9f9;font-weight:bold;width:40%;border:1px solid #ddd;\">Cikkszám</td><td style=\"padding:8px;border:1px solid #ddd;\">06019H5202</td></tr></tbody></table>\n<p><em>Megfelel a vonatkozó EN/ISO ipari biztonsági szabványoknak. CE minősített termék.</em></p>",
+    "seo": {
+      "meta_title": "Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó | Pr",
+      "meta_description": "Rendeld meg a(z) Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó modellt hivatalos garanciával, raktárról másnapi szállítással a ProfiGépésztől! Ki",
+      "url_slug": "bosch-professional-bosch-gsr-18v-55",
+      "h1": "Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó",
+      "h2_headings": [
+        "Miért válaszd a(z) Bosch Professional BOSCH-GSR-18V-55 készüléket?",
+        "Részletes Műszaki Paraméterek",
+        "Gyakran Ismételt Kérdések és Garancia"
+      ],
+      "lsi_keywords": [
+        "akkus furo",
+        "szénkefementes furocsavarozo",
+        "profi szerszam",
+        "18v akku"
+      ],
+      "schema_product_jsonld": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó",
+        "image": [
+          "https://profigepesz.hu/images/bosch-professional-bosch-gsr-18v-55.jpg"
+        ],
+        "description": "Rendeld meg a(z) Bosch Professional BOSCH-GSR-18V-55 Akkus Fúrócsavarozó modellt hivatalos garanciával, raktárról másnapi szállítással a ProfiGépésztől! Ki",
+        "sku": "BOSCH-GSR-18V-55",
+        "brand": {
+          "@type": "Brand",
+          "name": "Bosch Professional"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://profigepesz.hu/termek/bosch-professional-bosch-gsr-18v-55",
+          "priceCurrency": "HUF",
+          "price": 49990,
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition"
+        }
+      },
+      "schema_faq_jsonld": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Mennyi garancia jár a termékre?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A termékre 3 év hivatalos magyarországi gyártói garancia vonatkozik online regisztrációval."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mikorra várható a szállítás?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Raktáron lévő termék esetén a 14:00-ig leadott rendeléseket már a következő munkanapon kiszállítjuk."
+            }
+          }
+        ]
+      }
+    },
+    "sync_result": {
+      "mode": "diff_review_gate",
+      "status": "PENDING_DIFF_APPROVAL",
+      "diff_summary": {
+        "original_raw_length": 107,
+        "generated_html_length": 2691,
+        "expansion_factor": 25.1
+      },
+      "approval_action_url": "https://admin.profigepesz.hu/seo/approve?sku=BOSCH-GSR-18V-55&token=675480a666",
+      "message": "Egymás melletti diff előnézet elkészült, 1-kattintásos vezetői publikálásra kész."
+    },
+    "generated_at": "2026-09-20T04:07:57.630042"
+  }
+]

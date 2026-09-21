@@ -1,0 +1,8 @@
+{
+  "id": "17_facebook_csoportok_social_listening_ajan",
+  "title": "Facebook Csoportok Social Listening (Ajánláskérések Figyelése)",
+  "category": "szolgaltatok",
+  "icon": "📢",
+  "version": "1.0.0",
+  "description": "Folyamatosan pásztázza a tematikus és helyi lakossági Facebook csoportokat a releváns ajánláskérésekre (pl. 'Tudtok jó szakembert a környéken?'), kiszűri a spameket és negatív kifejezéseket, majd azonnal riasztja a csapatot segítőkész szakértői kommenttel, Messenger DM vázlattal és 1-kattintásos jóváhagyással."
+}

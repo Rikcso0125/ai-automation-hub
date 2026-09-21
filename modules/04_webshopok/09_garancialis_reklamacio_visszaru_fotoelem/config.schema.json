@@ -1,0 +1,107 @@
+{
+  "title": "Garanciális Reklamáció & Visszáru Fotóelemzés Konfiguráció",
+  "type": "object",
+  "required": [
+    "api_key"
+  ],
+  "properties": {
+    "api_key": {
+      "type": "string",
+      "title": "Fő API Kulcs vagy Integrációs Token",
+      "format": "password",
+      "default": "mock_warranty_key_prod_2026",
+      "description": "Vision AI (OpenAI / Claude / Gemini) vagy futár integrációs kulcs."
+    },
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (szimulált Vision AI és futárcímke tesztadatok) vagy Production (éles API hívások)."
+    },
+    "verification_mode": {
+      "type": "string",
+      "title": "1. Kérdés: Garancia & Hibaelemzés Módszer",
+      "enum": [
+        "strict_warranty_check",
+        "low_value_instant_keep",
+        "hybrid_smart_rule"
+      ],
+      "default": "hybrid_smart_rule",
+      "description": "Szigorú kettős ellenőrzés (Vision AI hiba + jogi jótállás), alacsony értékű Keep-the-item, vagy intelligens hibrid szabályrendszer."
+    },
+    "keep_the_item_threshold_huf": {
+      "type": "integer",
+      "title": "Keep-the-Item Értékhatár (Ft)",
+      "default": 15000,
+      "description": "Ezen bruttó termékár alatt fotó alapján visszaküldés nélkül jóváhagyjuk a cserét/jóváírást a retúr logisztikai költség megtakarítására."
+    },
+    "return_logistics_channel": {
+      "type": "string",
+      "title": "2. Kérdés: Visszáru Futár & Címke Csatorna",
+      "enum": [
+        "customer_choice",
+        "foxpost_box",
+        "gls_return_label",
+        "gls_pick_and_return"
+      ],
+      "default": "customer_choice",
+      "description": "Visszáru szállítási mód: Vevői választás, Foxpost 8 jegyű automata feladókód, letölthető GLS PDF címke, vagy háztól-házig Pick & Return futár."
+    },
+    "resolution_mode": {
+      "type": "string",
+      "title": "3. Kérdés: Pénzügyi Rendezés & Csereügymenet",
+      "enum": [
+        "customer_preference",
+        "store_credit_bonus",
+        "credit_note_refund",
+        "instant_replacement_order"
+      ],
+      "default": "customer_preference",
+      "description": "Kártalanítási mód: Vevő választása, +10% bónusz webshop kupon, számla jóváírás (Billingo/Számlázz.hu) + bankkártyás refund, vagy azonnali raktári cserecsomag."
+    },
+    "approval_gate": {
+      "type": "string",
+      "title": "Jóváhagyási Kapu (Human-in-the-Loop vs. Autonóm)",
+      "enum": [
+        "autonomous",
+        "human_in_the_loop",
+        "hybrid_confidence_threshold"
+      ],
+      "default": "hybrid_confidence_threshold",
+      "description": "Teljesen autonóm döntéshozatal, kötelező referensi felülvizsgálat, vagy hibrid (85% AI bizonyosság és 50 000 Ft alatt autonóm)."
+    },
+    "store_credit_bonus_percent": {
+      "type": "integer",
+      "title": "Levásárolható Kupon Bónusz (%)",
+      "default": 10,
+      "description": "A vevőnek felajánlott extra bónusz százalék levásárolható kupon választása esetén (pl. 10%)."
+    },
+    "invoicing_provider": {
+      "type": "string",
+      "title": "Számlázó Rendszer Integráció",
+      "enum": [
+        "billingo",
+        "szamlazzhu",
+        "auto_mock"
+      ],
+      "default": "auto_mock",
+      "description": "Jóváíró számla (sztornó) és kifizetési bizonylat automatikus kiállítása."
+    },
+    "notification_channel": {
+      "type": "string",
+      "title": "Értesítési Csatorna",
+      "enum": [
+        "omnichannel_sms_email",
+        "email_only",
+        "sms_only",
+        "webhook"
+      ],
+      "default": "omnichannel_sms_email",
+      "description": "Jegyzőkönyv és retúr címke/kód kézbesítési csatornája."
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "prediktiv_cash_flow_2_3_hetes_likviditas",
+  "title": "Prediktív Cash-Flow & 2-3 Hetes Likviditási Vészjelző",
+  "category": "altalanos",
+  "icon": "📊",
+  "version": "1.0.0",
+  "description": "A partnerek múltbeli fizetési késései és a fix kötelezettségek (áfa, bérek, beszállítók) alapján előrejelzi a 21 napos pénzügyi egyenleget. Testreszabható biztonsági tartalék limit, heti vezetői előrejelzés és azonnali hullámvölgy-riasztás akciótervvel."
+}

@@ -1,0 +1,49 @@
+{
+  "module_id": "06_telefonos_hang_biometria_es_frusztracio_",
+  "source": "pbx_voip_telephony_stream",
+  "call_id": "CALL-2026-0920-06",
+  "telephony_metadata": {
+    "caller_phone_number": "+3612345678",
+    "call_timestamp": "2026-09-20T09:15:22+02:00",
+    "duration_seconds": 45,
+    "voiceprint_hash": "VP-VEC-99281-HU"
+  },
+  "acoustic_analysis": {
+    "average_volume_db": 78.4,
+    "peak_volume_db": 89.2,
+    "speech_rate_wpm": 215,
+    "pitch_fundamental_hz": 245.0,
+    "pitch_elevation_hz": 65.0,
+    "interruptive_overlaps_count": 4,
+    "voice_tremor_jitter_pct": 3.8
+  },
+  "audio_transcript": "Azonnal kapcsolja a műszaki igazgatót vagy a Kovács urat! A kettes prés főszivattyúja fél órája leállt, a teljes műszak áll, a kemencék kihűlnek! Óránként négymillió forint a veszteségünk, és ha két órán belül nem ér ide a szervizkocsi, a kötbért és a kártérítési pert közvetlenül a nyakatokba varrom! Nem érdekel az automata menü, embert akarok!",
+  "customer_database_profiles": [
+    {
+      "voiceprint_id": "VP-VEC-99281-HU",
+      "contact_name": "Kerekes András",
+      "company_name": "Váci Kerámiagyár Zrt.",
+      "title": "Üzemvezető Igazgató",
+      "vip_tier": "Tier_1_Gold_VIP",
+      "annual_contract_value_huf": 24500000,
+      "installed_machines": [
+        {
+          "machine_model": "Sacmi PH 6500 Hidraulikus Kerámia Sajtológép",
+          "serial_number": "SCM-2021-9941",
+          "criticality": "PRODUCTION_CRITICAL_LINE2",
+          "last_service_date": "2026-07-15"
+        }
+      ],
+      "contractual_sla_hours": 2,
+      "assigned_account_engineer": "Kovács István (Műszaki Igazgató, +36309998877)"
+    }
+  ],
+  "config": {
+    "frustration_detection_mode": "hybrid_psychoacoustic_semantic",
+    "caller_identification_mode": "biometric_voiceprint_vip_sla",
+    "escalation_workflow": "warm_transfer_whisper_coach_push",
+    "frustration_threshold_pct": 75,
+    "sla_critical_response_hours": 2,
+    "notification_channel": "telegram"
+  }
+}

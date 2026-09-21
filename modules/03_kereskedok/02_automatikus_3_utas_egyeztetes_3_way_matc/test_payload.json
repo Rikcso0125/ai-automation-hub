@@ -1,0 +1,74 @@
+{
+  "action": "RECONCILE_3WAY",
+  "invoice": {
+    "invoice_number": "SZAMLA-2026-0891",
+    "supplier_name": "EuroGépész Nagyker Kft.",
+    "supplier_tax_id": "12345678-2-41",
+    "supplier_iban": "HU42 1170 5008 2011 2233 4455 6677",
+    "invoice_date": "2026-09-18",
+    "payment_due_date": "2026-10-18",
+    "currency": "HUF",
+    "items": [
+      {
+        "sku": "CU-PIPE-15",
+        "name": "15x1 mm Rézcső szálban",
+        "quantity": 100,
+        "unit_price": 2750,
+        "line_net": 275000
+      },
+      {
+        "sku": "VALVE-BRASS-12",
+        "name": "1/2 colos olasz réz golyóscsap",
+        "quantity": 50,
+        "unit_price": 1850,
+        "line_net": 92500
+      }
+    ],
+    "total_net": 367500,
+    "total_vat": 99225,
+    "total_gross": 466725
+  },
+  "purchase_order": {
+    "po_number": "PO-2026-0412",
+    "approved_by": "Kovács László Beszerzési Vezető",
+    "supplier_tax_id": "12345678-2-41",
+    "registered_iban": "HU42 1170 5008 2011 2233 4455 6677",
+    "items": [
+      {
+        "sku": "CU-PIPE-15",
+        "name": "15x1 mm Rézcső szálban",
+        "quantity": 100,
+        "approved_unit_price": 2750,
+        "line_net": 275000
+      },
+      {
+        "sku": "VALVE-BRASS-12",
+        "name": "1/2 colos olasz réz golyóscsap",
+        "quantity": 50,
+        "approved_unit_price": 1650,
+        "line_net": 82500
+      }
+    ],
+    "total_net": 357500
+  },
+  "goods_receipt": {
+    "receipt_number": "BEVET-2026-1102",
+    "delivery_note_number": "SZALL-99881",
+    "warehouse_person": "Nagy Zoltán Raktárvezető",
+    "received_date": "2026-09-17",
+    "items": [
+      {
+        "sku": "CU-PIPE-15",
+        "received_qty": 85,
+        "damaged_qty": 0,
+        "accepted_qty": 85
+      },
+      {
+        "sku": "VALVE-BRASS-12",
+        "received_qty": 50,
+        "damaged_qty": 0,
+        "accepted_qty": 50
+      }
+    ]
+  }
+}

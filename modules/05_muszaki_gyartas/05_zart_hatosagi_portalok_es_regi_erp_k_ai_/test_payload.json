@@ -1,0 +1,62 @@
+{
+  "module_id": "05_zart_hatosagi_portalok_es_regi_erp_k_ai_",
+  "source": "automated_cad_pipeline",
+  "rpa_job_id": "RPA-ETDR-2026-0920-05",
+  "submission_context": {
+    "target_portal": "ETDR_EPITESUGY",
+    "portal_name": "ÉTDR - Építésügyi Hatósági Rendszer",
+    "target_url": "https://etdr.e-epites.hu/etdr-portal",
+    "legacy_erp_sync": {
+      "system_type": "AS400_IBM_CLI",
+      "project_table": "LIBPRJ/PRJFILE",
+      "record_id": "PRJ2026-BUDAPART-07"
+    }
+  },
+  "project_details": {
+    "project_code": "PRJ-2026-BUDAPART-07",
+    "project_name": "BudaPart Lakópark VII. ütem – Építési engedélyezési eljárás",
+    "cadastral_parcel_number": "Budapest XI. kerület, 4122/15 hrsz.",
+    "building_type": "120 lakásos társasház mélygarázzsal és kereskedelmi passzázzsal",
+    "lead_architect": {
+      "name": "Dr. Szabó Péter",
+      "chamber_id": "É-1 01-4492",
+      "email": "szabo.peter@budapart-design.hu",
+      "phone": "+36307654321"
+    }
+  },
+  "documents_to_submit": [
+    {
+      "doc_id": "DOC-ARCH-01",
+      "filename": "epiteszeti_muszaki_leiras_v4_vegleges.pdf",
+      "doc_type": "Architectural_Specification",
+      "size_mb": 4.2,
+      "requires_avdh_stamp": true
+    },
+    {
+      "doc_id": "DOC-STAT-02",
+      "filename": "statikai_kiviteli_tervek_femzar.pdf",
+      "doc_type": "Structural_Calculation_Drawings",
+      "size_mb": 18.5,
+      "requires_avdh_stamp": true
+    },
+    {
+      "doc_id": "DOC-FIRE-03",
+      "filename": "tuzvedelmi_koncepcio_otsz_ei90.pdf",
+      "doc_type": "Fire_Safety_Report",
+      "size_mb": 6.8,
+      "requires_avdh_stamp": true
+    }
+  ],
+  "fee_payment": {
+    "method": "EFER_ELECTRONIC_TRANSFER",
+    "amount_huf": 45000,
+    "fee_type": "Építésügyi eljárási illeték és szakhatósági díj"
+  },
+  "config": {
+    "target_platform_mode": "hybrid_universal_ai_browser_rpa",
+    "security_auth_vault_mode": "zero_trust_vault_push_avdh",
+    "resilience_and_audit_mode": "self_healing_dom_video_dms_sync",
+    "auto_avdh_signing_enabled": true,
+    "notification_channel": "telegram"
+  }
+}

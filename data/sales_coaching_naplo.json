@@ -1,0 +1,47 @@
+[
+  {
+    "call_id": "CALL-20260920-8812",
+    "timestamp": "2026-09-20T02:19:12.823808",
+    "rep_name": "Németh Tamás (Junior Értékesítő)",
+    "customer_name": "Farkas Balázs",
+    "sales_score": 19,
+    "rep_ratio": 81.6,
+    "manager_alert_triggered": true
+  },
+  {
+    "call_id": "CALL-20260920-9901",
+    "timestamp": "2026-09-20T02:19:12.835857",
+    "rep_name": "Kovács László (Senior Értékesítő)",
+    "customer_name": "Kiss Péter",
+    "sales_score": 100,
+    "rep_ratio": 34.6,
+    "manager_alert_triggered": false
+  },
+  {
+    "call_id": "CALL-20260920-8812",
+    "timestamp": "2026-09-20T02:19:19.768086",
+    "rep_name": "Németh Tamás (Junior Értékesítő)",
+    "customer_name": "Farkas Balázs",
+    "sales_score": 19,
+    "rep_ratio": 81.6,
+    "manager_alert_triggered": true
+  },
+  {
+    "call_id": "CALL-20260920-8812",
+    "timestamp": "2026-09-20T04:07:07.656178",
+    "rep_name": "Németh Tamás (Junior Értékesítő)",
+    "customer_name": "Farkas Balázs",
+    "sales_score": 19,
+    "rep_ratio": 81.6,
+    "manager_alert_triggered": true
+  },
+  {
+    "call_id": "CALL-20260920-8812",
+    "timestamp": "2026-09-20T04:07:56.525725",
+    "rep_name": "Németh Tamás (Junior Értékesítő)",
+    "customer_name": "Farkas Balázs",
+    "sales_score": 19,
+    "rep_ratio": 81.6,
+    "manager_alert_triggered": true
+  }
+]

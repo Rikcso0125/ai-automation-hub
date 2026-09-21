@@ -1,0 +1,96 @@
+{
+  "title": "Voice-to-Quote 3 Perc Alatt Konfiguráció",
+  "type": "object",
+  "properties": {
+    "input_channels": {
+      "type": "array",
+      "title": "Engedélyezett Bemeneti Csatornák",
+      "items": {
+        "type": "string",
+        "enum": [
+          "whatsapp",
+          "telegram",
+          "sms",
+          "dashboard_mic",
+          "webhook_api"
+        ]
+      },
+      "default": [
+        "whatsapp",
+        "telegram",
+        "sms",
+        "dashboard_mic",
+        "webhook_api"
+      ],
+      "description": "A szakemberek által használható felmérési beküldési csatornák."
+    },
+    "dispatch_mode": {
+      "type": "string",
+      "title": "Jóváhagyási és Kiküldési Folyamat",
+      "enum": [
+        "review_required",
+        "auto_dispatch"
+      ],
+      "default": "review_required",
+      "description": "review_required (A opció: Szakember/Vezető mobiljára küldi jóváhagyásra) vagy auto_dispatch (B opció: Közvetlenül az ügyfélnek megy ki online elfogadó linkkel)."
+    },
+    "catalog_source": {
+      "type": "string",
+      "title": "Árlista és Normák Fájl Útvonala",
+      "default": "data/arlista_normak.json",
+      "description": "A céges cikkszámokat, anyagárakat és rezsióradíjakat tartalmazó JSON adatbázis."
+    },
+    "waste_margin_percent": {
+      "type": "number",
+      "title": "Anyagveszteségi és Biztonsági Ráhagyás (%)",
+      "default": 10.0,
+      "description": "Váratlan szerelési költségek és vágási hulladék automatikus ráhagyása."
+    },
+    "quote_validity_days": {
+      "type": "integer",
+      "title": "Ajánlati Kötöttség Ideje (Nap)",
+      "default": 15,
+      "description": "Hány napig érvényes a kiállított árajánlat."
+    },
+    "pdf_branding": {
+      "type": "object",
+      "title": "PDF Arculat és Fejléc",
+      "properties": {
+        "company_name": {
+          "type": "string",
+          "default": "ProfiKlíma & Épületgépészeti Kft."
+        },
+        "primary_color": {
+          "type": "string",
+          "default": "#1e3a8a"
+        },
+        "accent_color": {
+          "type": "string",
+          "default": "#0284c7"
+        }
+      }
+    },
+    "client_notification_channel": {
+      "type": "string",
+      "title": "Ügyfél Értesítési Mód",
+      "enum": [
+        "whatsapp_first_with_sms_fallback",
+        "email_only",
+        "whatsapp_only",
+        "sms_only"
+      ],
+      "default": "whatsapp_first_with_sms_fallback"
+    },
+    "technician_notification_channel": {
+      "type": "string",
+      "title": "Szakember Jóváhagyási Értesítési Mód",
+      "enum": [
+        "whatsapp",
+        "telegram",
+        "sms",
+        "dashboard"
+      ],
+      "default": "whatsapp"
+    }
+  }
+}

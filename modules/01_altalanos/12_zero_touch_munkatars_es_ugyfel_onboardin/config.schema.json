@@ -1,0 +1,75 @@
+{
+  "title": "Zero-Touch Onboarding Autopilot Konfiguráció",
+  "type": "object",
+  "required": [
+    "company_name",
+    "company_email_domain",
+    "default_workspace_system",
+    "communication_tool"
+  ],
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "Vállalkozás Hivatalos Neve",
+      "default": "ProfiTech Ipari & Kereskedelmi Kft."
+    },
+    "company_email_domain": {
+      "type": "string",
+      "title": "Céges Email Domain (pl. cege.hu)",
+      "default": "profitech.hu"
+    },
+    "default_workspace_system": {
+      "type": "string",
+      "title": "Irodai Rendszer (Email & Fiókok)",
+      "enum": [
+        "Google Workspace (Gmail, Drive, Meet)",
+        "Microsoft 365 (Outlook, OneDrive, Teams)",
+        "Belső Helyi Szerver / LDAP"
+      ],
+      "default": "Google Workspace (Gmail, Drive, Meet)"
+    },
+    "communication_tool": {
+      "type": "string",
+      "title": "Belső Kommunikációs Csatorna",
+      "enum": [
+        "Slack Workspace",
+        "Microsoft Teams",
+        "Discord",
+        "Email Csoportok"
+      ],
+      "default": "Slack Workspace"
+    },
+    "pm_system": {
+      "type": "string",
+      "title": "Feladat- és Projektkezelő Rendszer",
+      "enum": [
+        "ClickUp",
+        "Asana",
+        "Jira Cloud",
+        "Trello",
+        "Egyedi Webhook"
+      ],
+      "default": "ClickUp"
+    },
+    "cloud_storage": {
+      "type": "string",
+      "title": "Megosztott Céges Tárhely Mappa",
+      "enum": [
+        "Google Drive Shared Drive",
+        "Microsoft OneDrive / SharePoint",
+        "Saját Nextcloud / NAS Szerver"
+      ],
+      "default": "Google Drive Shared Drive"
+    },
+    "hr_manager_email": {
+      "type": "string",
+      "title": "HR Vezető Email Címe",
+      "default": "hr@profitech.hu"
+    },
+    "it_support_email": {
+      "type": "string",
+      "title": "IT Rendszergazda Email Címe",
+      "default": "it@profitech.hu"
+    }
+  }
+}

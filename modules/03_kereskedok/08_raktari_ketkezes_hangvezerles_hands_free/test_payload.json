@@ -1,0 +1,67 @@
+{
+  "module_id": "08_raktari_ketkezes_hangvezerles_hands_free",
+  "action": "START_OR_PROCESS_TOUR",
+  "operator_id": "OP-14",
+  "operator_name": "Tóth Gábor (Raktáros)",
+  "picking_mode": "single_order",
+  "verification_method": "check_digit",
+  "shortage_strategy": "smart_adaptive",
+  "order": {
+    "order_id": "ORD-2026-8841",
+    "customer_name": "KlímaMaster Szerelő Kft.",
+    "delivery_address": "1141 Budapest, Mogyoródi út 88.",
+    "priority": "HIGH",
+    "items": [
+      {
+        "sku": "PUMP-GRUNDFOS-25",
+        "name": "Grundfos Alpha 25-60 180 Fűtési Keringető Szivattyú",
+        "quantity_ordered": 2,
+        "shelf_location": "B-04-12",
+        "check_digit": "42",
+        "backup_shelf": "D-02-05"
+      },
+      {
+        "sku": "VALVE-BRASS-12",
+        "name": "1/2 colos Golyóscsap BB Karos (Olasz réz)",
+        "quantity_ordered": 10,
+        "shelf_location": "A-01-08",
+        "check_digit": "73",
+        "backup_shelf": null
+      },
+      {
+        "sku": "CU-PIPE-15",
+        "name": "15x1 mm Rézcső szálban (félkemény)",
+        "quantity_ordered": 20,
+        "shelf_location": "C-03-02",
+        "check_digit": "19",
+        "backup_shelf": "C-03-05"
+      }
+    ]
+  },
+  "simulated_voice_dialogue": [
+    {
+      "operator_speech": "42",
+      "expected_step": "CONFIRM_LOCATION"
+    },
+    {
+      "operator_speech": "Kettő kész",
+      "expected_step": "CONFIRM_QUANTITY"
+    },
+    {
+      "operator_speech": "73",
+      "expected_step": "CONFIRM_LOCATION"
+    },
+    {
+      "operator_speech": "Tíz kész",
+      "expected_step": "CONFIRM_QUANTITY"
+    },
+    {
+      "operator_speech": "19",
+      "expected_step": "CONFIRM_LOCATION"
+    },
+    {
+      "operator_speech": "Húsz kész",
+      "expected_step": "CONFIRM_QUANTITY"
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+[
+  {
+    "timestamp": "2026-09-20T04:00:13.785827",
+    "call_id": "CALL-2026-0920-06",
+    "caller_phone": "+3612345678",
+    "customer_company": "Váci Kerámiagyár Zrt.",
+    "frustration_index_pct": 99.0,
+    "is_escalated": true,
+    "stress_analysis": {
+      "detection_mode_applied": "hybrid_psychoacoustic_semantic",
+      "acoustic_metrics": {
+        "peak_volume_db": 89.2,
+        "speech_rate_wpm": 215,
+        "pitch_elevation_hz": 65.0,
+        "interruptions": 4,
+        "acoustic_stress_score_pct": 97.8
+      },
+      "semantic_threat_metrics": {
+        "threat_triggers_detected": [
+          "Üzemi termelésleállás és gépi hibabejelentés",
+          "Súlyos anyagi kár és percenkénti termeléskiesés hivatkozás",
+          "Jogi és kötbérfenyegetés közvetlen felelősségre vonással",
+          "Automata menü elutasítása, azonnali emberi beavatkozás követelése"
+        ],
+        "semantic_threat_score_pct": 100.0
+      },
+      "combined_frustration_index_pct": 99.0,
+      "is_critical_frustration": true
+    },
+    "customer_profile": {
+      "identification_mode_applied": "biometric_voiceprint_vip_sla",
+      "voiceprint_matched": true,
+      "match_confidence_score": 0.991,
+      "identified_customer": {
+        "name": "Kerekes András",
+        "company": "Váci Kerámiagyár Zrt.",
+        "title": "Üzemvezető Igazgató",
+        "vip_tier": "Tier_1_Gold_VIP",
+        "annual_contract_value_huf": 24500000,
+        "installed_machines": [
+          {
+            "machine_model": "Sacmi PH 6500 Hidraulikus Kerámia Sajtológép",
+            "serial_number": "SCM-2021-9941",
+            "criticality": "PRODUCTION_CRITICAL_LINE2",
+            "last_service_date": "2026-07-15"
+          }
+        ],
+        "contractual_sla_hours": 2,
+        "assigned_account_engineer": "Kovács István (Műszaki Igazgató, +36309998877)"
+      }
+    },
+    "escalation": {
+      "escalation_mode_applied": "warm_transfer_whisper_coach_push",
+      "is_escalated_to_chief_engineer": true,
+      "transfer_id": "TRF-D7A94D12",
+      "target_engineer": "Kovács István (Műszaki Igazgató, +36309998877)",
+      "call_routing_action": "LIVE_SIP_WARM_TRANSFER_WITH_WHISPER",
+      "whisper_coach_audio_text": "Figyelem! Kerekes András hív a Váci Kerámiagyár Zrt. cégtől! A 2-es prés szivattyúja leállt. Frusztrációs index: 99.0%, kártérítéssel és kötbérrel fenyeget. Szerződéses SLA: 2 órán belüli kiszállás!",
+      "screen_pop_assistance": {
+        "suggested_opening_script": "Kedves András úr! Kovács István vagyok. Már hallom is a prés leállásának sürgősségét, azonnal intézkedtem! Varga Dániel vezető szerviztechnikusunk új szivattyúval a szomszédos gödi helyszínről már úton van, 40 percen belül ott van a váci gyárkapunál! Biztosítom, hogy a 2 órás SLA határidőn belül elhárítjuk a hibát!",
+        "machine_context": {
+          "machine_model": "Sacmi PH 6500 Hidraulikus Kerámia Sajtológép",
+          "serial_number": "SCM-2021-9941",
+          "criticality": "PRODUCTION_CRITICAL_LINE2",
+          "last_service_date": "2026-07-15"
+        },
+        "sla_urgency_level": "CRITICAL_SLA_BREACH_RISK",
+        "nearest_available_technician": "Varga Dániel (40 perc távolságra, szivattyú alkatrésszel készleten)"
+      }
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:00:23.321210",
+    "call_id": "CALL-2026-0920-06",
+    "caller_phone": "+3612345678",
+    "customer_company": "Váci Kerámiagyár Zrt.",
+    "frustration_index_pct": 99.0,
+    "is_escalated": true,
+    "stress_analysis": {
+      "detection_mode_applied": "hybrid_psychoacoustic_semantic",
+      "acoustic_metrics": {
+        "peak_volume_db": 89.2,
+        "speech_rate_wpm": 215,
+        "pitch_elevation_hz": 65.0,
+        "interruptions": 4,
+        "acoustic_stress_score_pct": 97.8
+      },
+      "semantic_threat_metrics": {
+        "threat_triggers_detected": [
+          "Üzemi termelésleállás és gépi hibabejelentés",
+          "Súlyos anyagi kár és percenkénti termeléskiesés hivatkozás",
+          "Jogi és kötbérfenyegetés közvetlen felelősségre vonással",
+          "Automata menü elutasítása, azonnali emberi beavatkozás követelése"
+        ],
+        "semantic_threat_score_pct": 100.0
+      },
+      "combined_frustration_index_pct": 99.0,
+      "is_critical_frustration": true
+    },
+    "customer_profile": {
+      "identification_mode_applied": "biometric_voiceprint_vip_sla",
+      "voiceprint_matched": true,
+      "match_confidence_score": 0.991,
+      "identified_customer": {
+        "name": "Kerekes András",
+        "company": "Váci Kerámiagyár Zrt.",
+        "title": "Üzemvezető Igazgató",
+        "vip_tier": "Tier_1_Gold_VIP",
+        "annual_contract_value_huf": 24500000,
+        "installed_machines": [
+          {
+            "machine_model": "Sacmi PH 6500 Hidraulikus Kerámia Sajtológép",
+            "serial_number": "SCM-2021-9941",
+            "criticality": "PRODUCTION_CRITICAL_LINE2",
+            "last_service_date": "2026-07-15"
+          }
+        ],
+        "contractual_sla_hours": 2,
+        "assigned_account_engineer": "Kovács István (Műszaki Igazgató, +36309998877)"
+      }
+    },
+    "escalation": {
+      "escalation_mode_applied": "warm_transfer_whisper_coach_push",
+      "is_escalated_to_chief_engineer": true,
+      "transfer_id": "TRF-33264103",
+      "target_engineer": "Kovács István (Műszaki Igazgató, +36309998877)",
+      "call_routing_action": "LIVE_SIP_WARM_TRANSFER_WITH_WHISPER",
+      "whisper_coach_audio_text": "Figyelem! Kerekes András hív a Váci Kerámiagyár Zrt. cégtől! A 2-es prés szivattyúja leállt. Frusztrációs index: 99.0%, kártérítéssel és kötbérrel fenyeget. Szerződéses SLA: 2 órán belüli kiszállás!",
+      "screen_pop_assistance": {
+        "suggested_opening_script": "Kedves András úr! Kovács István vagyok. Már hallom is a prés leállásának sürgősségét, azonnal intézkedtem! Varga Dániel vezető szerviztechnikusunk új szivattyúval a szomszédos gödi helyszínről már úton van, 40 percen belül ott van a váci gyárkapunál! Biztosítom, hogy a 2 órás SLA határidőn belül elhárítjuk a hibát!",
+        "machine_context": {
+          "machine_model": "Sacmi PH 6500 Hidraulikus Kerámia Sajtológép",
+          "serial_number": "SCM-2021-9941",
+          "criticality": "PRODUCTION_CRITICAL_LINE2",
+          "last_service_date": "2026-07-15"
+        },
+        "sla_urgency_level": "CRITICAL_SLA_BREACH_RISK",
+        "nearest_available_technician": "Varga Dániel (40 perc távolságra, szivattyú alkatrésszel készleten)"
+      }
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:05.841046",
+    "call_id": "CALL-2026-0920-06",
+    "caller_phone": "+3612345678",
+    "customer_company": "Váci Kerámiagyár Zrt.",
+    "frustration_index_pct": 99.0,
+    "is_escalated": true,
+    "stress_analysis": {
+      "detection_mode_applied": "hybrid_psychoacoustic_semantic",
+      "acoustic_metrics": {
+        "peak_volume_db": 89.2,
+        "speech_rate_wpm": 215,
+        "pitch_elevation_hz": 65.0,
+        "interruptions": 4,
+        "acoustic_stress_score_pct": 97.8
+      },
+      "semantic_threat_metrics": {
+        "threat_triggers_detected": [
+          "Üzemi termelésleállás és gépi hibabejelentés",
+          "Súlyos anyagi kár és percenkénti termeléskiesés hivatkozás",
+          "Jogi és kötbérfenyegetés közvetlen felelősségre vonással",
+          "Automata menü elutasítása, azonnali emberi beavatkozás követelése"
+        ],
+        "semantic_threat_score_pct": 100.0
+      },
+      "combined_frustration_index_pct": 99.0,
+      "is_critical_frustration": true
+    },
+    "customer_profile": {
+      "identification_mode_applied": "biometric_voiceprint_vip_sla",
+      "voiceprint_matched": true,
+      "match_confidence_score": 0.991,
+      "identified_customer": {
+        "name": "Kerekes András",
+        "company": "Váci Kerámiagyár Zrt.",
+        "title": "Üzemvezető Igazgató",
+        "vip_tier": "Tier_1_Gold_VIP",
+        "annual_contract_value_huf": 24500000,
+        "installed_machines": [
+          {
+            "machine_model": "Sacmi PH 6500 Hidraulikus Kerámia Sajtológép",
+            "serial_number": "SCM-2021-9941",
+            "criticality": "PRODUCTION_CRITICAL_LINE2",
+            "last_service_date": "2026-07-15"
+          }
+        ],
+        "contractual_sla_hours": 2,
+        "assigned_account_engineer": "Kovács István (Műszaki Igazgató, +36309998877)"
+      }
+    },
+    "escalation": {
+      "escalation_mode_applied": "warm_transfer_whisper_coach_push",
+      "is_escalated_to_chief_engineer": true,
+      "transfer_id": "TRF-50EF7686",
+      "target_engineer": "Kovács István (Műszaki Igazgató, +36309998877)",
+      "call_routing_action": "LIVE_SIP_WARM_TRANSFER_WITH_WHISPER",
+      "whisper_coach_audio_text": "Figyelem! Kerekes András hív a Váci Kerámiagyár Zrt. cégtől! A 2-es prés szivattyúja leállt. Frusztrációs index: 99.0%, kártérítéssel és kötbérrel fenyeget. Szerződéses SLA: 2 órán belüli kiszállás!",
+      "screen_pop_assistance": {
+        "suggested_opening_script": "Kedves András úr! Kovács István vagyok. Már hallom is a prés leállásának sürgősségét, azonnal intézkedtem! Varga Dániel vezető szerviztechnikusunk új szivattyúval a szomszédos gödi helyszínről már úton van, 40 percen belül ott van a váci gyárkapunál! Biztosítom, hogy a 2 órás SLA határidőn belül elhárítjuk a hibát!",
+        "machine_context": {
+          "machine_model": "Sacmi PH 6500 Hidraulikus Kerámia Sajtológép",
+          "serial_number": "SCM-2021-9941",
+          "criticality": "PRODUCTION_CRITICAL_LINE2",
+          "last_service_date": "2026-07-15"
+        },
+        "sla_urgency_level": "CRITICAL_SLA_BREACH_RISK",
+        "nearest_available_technician": "Varga Dániel (40 perc távolságra, szivattyú alkatrésszel készleten)"
+      }
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:54.683400",
+    "call_id": "CALL-2026-0920-06",
+    "caller_phone": "+3612345678",
+    "customer_company": "Váci Kerámiagyár Zrt.",
+    "frustration_index_pct": 99.0,
+    "is_escalated": true,
+    "stress_analysis": {
+      "detection_mode_applied": "hybrid_psychoacoustic_semantic",
+      "acoustic_metrics": {
+        "peak_volume_db": 89.2,
+        "speech_rate_wpm": 215,
+        "pitch_elevation_hz": 65.0,
+        "interruptions": 4,
+        "acoustic_stress_score_pct": 97.8
+      },
+      "semantic_threat_metrics": {
+        "threat_triggers_detected": [
+          "Üzemi termelésleállás és gépi hibabejelentés",
+          "Súlyos anyagi kár és percenkénti termeléskiesés hivatkozás",
+          "Jogi és kötbérfenyegetés közvetlen felelősségre vonással",
+          "Automata menü elutasítása, azonnali emberi beavatkozás követelése"
+        ],
+        "semantic_threat_score_pct": 100.0
+      },
+      "combined_frustration_index_pct": 99.0,
+      "is_critical_frustration": true
+    },
+    "customer_profile": {
+      "identification_mode_applied": "biometric_voiceprint_vip_sla",
+      "voiceprint_matched": true,
+      "match_confidence_score": 0.991,
+      "identified_customer": {
+        "name": "Kerekes András",
+        "company": "Váci Kerámiagyár Zrt.",
+        "title": "Üzemvezető Igazgató",
+        "vip_tier": "Tier_1_Gold_VIP",
+        "annual_contract_value_huf": 24500000,
+        "installed_machines": [
+          {
+            "machine_model": "Sacmi PH 6500 Hidraulikus Kerámia Sajtológép",
+            "serial_number": "SCM-2021-9941",
+            "criticality": "PRODUCTION_CRITICAL_LINE2",
+            "last_service_date": "2026-07-15"
+          }
+        ],
+        "contractual_sla_hours": 2,
+        "assigned_account_engineer": "Kovács István (Műszaki Igazgató, +36309998877)"
+      }
+    },
+    "escalation": {
+      "escalation_mode_applied": "warm_transfer_whisper_coach_push",
+      "is_escalated_to_chief_engineer": true,
+      "transfer_id": "TRF-964FC701",
+      "target_engineer": "Kovács István (Műszaki Igazgató, +36309998877)",
+      "call_routing_action": "LIVE_SIP_WARM_TRANSFER_WITH_WHISPER",
+      "whisper_coach_audio_text": "Figyelem! Kerekes András hív a Váci Kerámiagyár Zrt. cégtől! A 2-es prés szivattyúja leállt. Frusztrációs index: 99.0%, kártérítéssel és kötbérrel fenyeget. Szerződéses SLA: 2 órán belüli kiszállás!",
+      "screen_pop_assistance": {
+        "suggested_opening_script": "Kedves András úr! Kovács István vagyok. Már hallom is a prés leállásának sürgősségét, azonnal intézkedtem! Varga Dániel vezető szerviztechnikusunk új szivattyúval a szomszédos gödi helyszínről már úton van, 40 percen belül ott van a váci gyárkapunál! Biztosítom, hogy a 2 órás SLA határidőn belül elhárítjuk a hibát!",
+        "machine_context": {
+          "machine_model": "Sacmi PH 6500 Hidraulikus Kerámia Sajtológép",
+          "serial_number": "SCM-2021-9941",
+          "criticality": "PRODUCTION_CRITICAL_LINE2",
+          "last_service_date": "2026-07-15"
+        },
+        "sla_urgency_level": "CRITICAL_SLA_BREACH_RISK",
+        "nearest_available_technician": "Varga Dániel (40 perc távolságra, szivattyú alkatrésszel készleten)"
+      }
+    },
+    "status": "COMPLETED"
+  }
+]

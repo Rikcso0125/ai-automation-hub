@@ -1,0 +1,89 @@
+{
+  "title": "Hirdetéskreatív- és Szövegoptimalizáló AI Konfiguráció",
+  "type": "object",
+  "required": [
+    "api_key"
+  ],
+  "properties": {
+    "api_key": {
+      "type": "string",
+      "title": "Meta Ads / Google Ads API Token",
+      "format": "password",
+      "default": "mock_ads_manager_token_2026",
+      "description": "Meta Marketing API vagy Google Ads REST API hozzáférési token."
+    },
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (szimulált hirdetés-metrikák és szöveggenerálás) vagy Production (élő Ads Manager hívások)."
+    },
+    "fatigue_detection_mode": {
+      "type": "string",
+      "title": "1. Kérdés: Ad Fatigue Érzékelési Küszöbök",
+      "enum": [
+        "kpi_frequency_ctr_drop",
+        "roas_cpa_profit_threshold",
+        "hybrid_comprehensive_rules"
+      ],
+      "default": "hybrid_comprehensive_rules",
+      "description": "Frekvencia/CTR esés figyelés, ROAS/CPA profitküszöb védelem, vagy hibrid átfogó anomália-szűrő."
+    },
+    "frequency_fatigue_threshold": {
+      "type": "number",
+      "title": "Kritikus Frekvencia Küszöb",
+      "default": 2.8,
+      "description": "Ezen megjelenési gyakoriság felett a közönség már túl sokszor látta a hirdetést."
+    },
+    "ctr_drop_percent_threshold": {
+      "type": "integer",
+      "title": "Kritikus CTR Zuhanás (%)",
+      "default": 25,
+      "description": "Ha a 7 napos átlaghoz képest ennyivel vagy többel esik a CTR, az Ad Fatigue-ot jelez."
+    },
+    "target_minimum_roas": {
+      "type": "number",
+      "title": "Minimális Elvárt Megtérülés (ROAS)",
+      "default": 3.0,
+      "description": "Ezalatt a hirdetés gazdaságtalanul égeti a költségkeretet."
+    },
+    "copywriting_generation_mode": {
+      "type": "string",
+      "title": "2. Kérdés: AI Szövegíró és Pszichológiai Szögek",
+      "enum": [
+        "four_psychological_angles",
+        "dynamic_hook_matrix",
+        "selectable_all_formats"
+      ],
+      "default": "selectable_all_formats",
+      "description": "4 komplett pszichológiai szövegverzió (Fájdalompont, Státusz, Megtakarítás, Bizonyíték), dinamikus hook-mátrix, vagy mindkettő."
+    },
+    "intervention_mode": {
+      "type": "string",
+      "title": "3. Kérdés: Beavatkozási Hatáskör & Fiókvezérlés",
+      "enum": [
+        "fully_autonomous_kill_and_scale",
+        "hitl_marketer_approval",
+        "hybrid_smart_guard"
+      ],
+      "default": "hybrid_smart_guard",
+      "description": "Kifáradt reklám automatikus leállítása és új indítása, 1-kattintásos jóváhagyási kapu (HITL), vagy hibrid intelligens védelmi szint."
+    },
+    "notification_channel": {
+      "type": "string",
+      "title": "Értesítési Csatorna",
+      "enum": [
+        "telegram",
+        "email",
+        "slack",
+        "webhook"
+      ],
+      "default": "telegram",
+      "description": "Riasztás és jóváhagyási link kézbesítése a médiatervezőnek/ügynökségnek."
+    }
+  }
+}

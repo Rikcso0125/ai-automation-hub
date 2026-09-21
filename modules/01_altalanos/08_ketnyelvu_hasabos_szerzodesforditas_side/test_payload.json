@@ -1,0 +1,27 @@
+{
+  "contract_title": "Nemzetközi Ipari Automatizálási és Karbantartási Szerződés",
+  "source_language": "Magyar",
+  "target_language": "Angol",
+  "paragraphs": [
+    {
+      "clause_no": "1.1",
+      "title": "A Szerződés Tárgya",
+      "text": "A Vállalkozó kötelezettséget vállal a Megrendelő győri telephelyén működő gyártósorok automatizált vezérlőszoftverének korszerűsítésére és a kapcsolódó hardveres elemek szállítására a műszaki leírás szerint."
+    },
+    {
+      "clause_no": "2.1",
+      "title": "Vállalkozási Díj és Fizetési Feltételek",
+      "text": "A felek megállapodnak, hogy a munkadíj összege 45.000 EUR + ÁFA, amely a sikeres átadás-átvételi jegyzőkönyv aláírását követően, 15 napos fizetési határidővel, banki átutalással fizetendő."
+    },
+    {
+      "clause_no": "3.1",
+      "title": "Titoktartási Kötelezettség",
+      "text": "A felek kötelesek a jelen szerződés teljesítése során tudomásukra jutott minden üzleti, műszaki és pénzügyi információt szigorúan bizalmasan kezelni, és azt harmadik fél részére nem adhatják át."
+    },
+    {
+      "clause_no": "4.1",
+      "title": "Vis Maior",
+      "text": "Egyik fél sem tehető felelőssé olyan kötelezettségszegésért, amelyet az ellenőrzési körén kívül eső elháríthatatlan külső körülmény (vis maior), például háború, sztrájk vagy természeti csapás okozott."
+    }
+  ]
+}

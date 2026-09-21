@@ -1,0 +1,8 @@
+{
+  "id": "banki_kivonat_valos_ideju_fuzzy_jovairas",
+  "title": "Banki Kivonat & Valós Idejű Fuzzy Jóváírás-Párosítás",
+  "category": "altalanos",
+  "icon": "🏦",
+  "version": "1.0.0",
+  "description": "Automatikus banki utalás-párosítás minden magyar és nemzetközi bankhoz (OTP, Erste, Wise, Revolut, Billingo, Számlázz.hu, CSV). Fuzzy algoritmus elírt közleményekhez, részfizetés-kezelés és azonnali behajtó-robot leállítás."
+}

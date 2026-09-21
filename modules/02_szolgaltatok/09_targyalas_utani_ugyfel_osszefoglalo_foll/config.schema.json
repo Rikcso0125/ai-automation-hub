@@ -1,0 +1,69 @@
+{
+  "title": "Follow-Up Copilot Konfiguráció",
+  "type": "object",
+  "properties": {
+    "allowed_input_sources": {
+      "type": "array",
+      "title": "Engedélyezett Bemeneti Források",
+      "items": {
+        "type": "string",
+        "enum": [
+          "whatsapp_voice",
+          "telegram_voice",
+          "meeting_transcript",
+          "dashboard_text"
+        ]
+      },
+      "default": [
+        "whatsapp_voice",
+        "telegram_voice",
+        "meeting_transcript",
+        "dashboard_text"
+      ]
+    },
+    "dispatch_mode": {
+      "type": "string",
+      "title": "Jóváhagyási Mód",
+      "enum": [
+        "review_required",
+        "auto_send"
+      ],
+      "default": "review_required",
+      "description": "review_required (A opció: Értékesítő ellenőrzi és jóváhagyja kiküldés előtt) vagy auto_send (közvetlen kiküldés)."
+    },
+    "include_dispute_clause": {
+      "type": "boolean",
+      "title": "Diplomatikus Vita-megelőző Záradék Csatolása",
+      "default": true,
+      "description": "Jelzi az ügyfélnek, hogy 24 órán belül jelezze, ha bármit másképp értelmezett."
+    },
+    "dispute_notice_hours": {
+      "type": "integer",
+      "title": "Jelzési Határidő (Óra)",
+      "default": 24
+    },
+    "generate_pdf_memo": {
+      "type": "boolean",
+      "title": "Márkázott PDF Jegyzőkönyv Csatolmány Generálása",
+      "default": true
+    },
+    "company_info": {
+      "type": "object",
+      "title": "Céges Adatok és Aláírás",
+      "properties": {
+        "company_name": {
+          "type": "string",
+          "default": "ProfiKlíma & Szakipari Megoldások Kft."
+        },
+        "representative_name": {
+          "type": "string",
+          "default": "Kovács László"
+        },
+        "representative_title": {
+          "type": "string",
+          "default": "Vezető Épületgépész Szakértő"
+        }
+      }
+    }
+  }
+}

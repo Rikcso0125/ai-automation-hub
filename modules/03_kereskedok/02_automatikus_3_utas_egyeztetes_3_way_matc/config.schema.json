@@ -1,0 +1,71 @@
+{
+  "title": "Automatikus 3-Utas Egyeztetés & Csalásszűrés Konfiguráció",
+  "type": "object",
+  "required": [
+    "iban_fraud_guard_mode"
+  ],
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (tesztadatokkal) vagy Production (éles ERP / NAV API / raktári integráció)."
+    },
+    "iban_fraud_guard_mode": {
+      "type": "string",
+      "title": "IBAN Számlacsalás Védelmi Mód",
+      "enum": [
+        "STRICT_FREEZE",
+        "WARNING_ONLY"
+      ],
+      "default": "STRICT_FREEZE",
+      "description": "STRICT_FREEZE: Ha a számlán lévő IBAN nem egyezik a partner törzsadatával, a kifizetés azonnal zárolásra kerül és vészjelzés indul."
+    },
+    "price_tolerance_percent": {
+      "type": "number",
+      "title": "Áreltérés Tűréshatár (%)",
+      "default": 0.0,
+      "description": "Maximális megengedett egységár eltérés a PO-hoz képest (0.0% = szigorú szerződéses árkötöttség)."
+    },
+    "rounding_tolerance_huf": {
+      "type": "number",
+      "title": "Kerekítési Tűréshatár (Ft)",
+      "default": 5.0,
+      "description": "Matematikai kerekítésből adódó megengedett végösszeg-differencia."
+    },
+    "auto_approve_perfect_match": {
+      "type": "boolean",
+      "title": "100%-os Egyezés Automatikus Jóváhagyása",
+      "default": true,
+      "description": "Ha a számla, a PO és a raktári átvétel tételei és árai tökéletesen egyeznek, automatikusan fizetésre engedi a számlát."
+    },
+    "generate_dispute_letter": {
+      "type": "boolean",
+      "title": "Kifogásolási Levél & Jóváíró Számla Igény Automatikus Generálása",
+      "default": true,
+      "description": "Hiány vagy túlszámlázás esetén azonnal előkészíti a hivatalos reklamációs jegyzőkönyvet a beszállítónak."
+    },
+    "alert_channels": {
+      "type": "array",
+      "title": "Értesítési Csatornák",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "telegram",
+        "email",
+        "dashboard"
+      ],
+      "description": "Pénzügyi vezető és beszerzés riasztása eltérés vagy csalási kísérlet esetén."
+    },
+    "audit_db_path": {
+      "type": "string",
+      "title": "Perzisztens 3-Way Matching Napló Útvonal",
+      "default": "data/3way_matching_naplo.json"
+    }
+  }
+}

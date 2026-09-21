@@ -1,0 +1,63 @@
+{
+  "title": "Kereskedelmi Anomália Detektálás Konfiguráció",
+  "type": "object",
+  "required": [
+    "service_mode"
+  ],
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (teszt tranzakciók) vagy Production (élő ERP/Webshop/Számlázó szinkron)."
+    },
+    "minimum_margin_percent": {
+      "type": "number",
+      "title": "Minimális Elvárt Haszonkulcs (%)",
+      "default": 8.0,
+      "description": "Ez alatti árrés esetén a rendszer anomália figyelmeztetést ad ki."
+    },
+    "max_cumulative_discount_percent": {
+      "type": "number",
+      "title": "Maximális Halmozott Kedvezmény (%)",
+      "default": 35.0,
+      "description": "Partneri kedvezmény + kupon + akciók együttes felső korlátja."
+    },
+    "circuit_breaker_policy": {
+      "type": "string",
+      "title": "Zárolási és Beavatkozási Szabályzat",
+      "enum": [
+        "always_hard_block",
+        "warning_only",
+        "loss_threshold_adaptive"
+      ],
+      "default": "loss_threshold_adaptive",
+      "description": "loss_threshold_adaptive: megadott forint veszteséghatár felett kemény zárolás, alatta audit figyelmeztetés."
+    },
+    "hard_block_loss_threshold_huf": {
+      "type": "number",
+      "title": "Kemény Zárolási Veszteség Küszöb (Ft)",
+      "default": 50000.0,
+      "description": "Ennél nagyobb számított árrésveszteség esetén a rendelés azonnal leáll."
+    },
+    "fat_finger_quantity_multiplier": {
+      "type": "number",
+      "title": "Elgépelt Mennyiség Detektálás (Átlagos mennyiség szorzója)",
+      "default": 10.0
+    },
+    "catalog_db_path": {
+      "type": "string",
+      "title": "Központi Terméktörzs Elérési Útja",
+      "default": "data/termektorzs_katalogus.json"
+    },
+    "anomaly_log_path": {
+      "type": "string",
+      "title": "Kereskedelmi Anomália Napló Fájl",
+      "default": "data/arresvedelem_naplo.json"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "vip_ugyfelkezeles_automatikus_email_eszk",
+  "title": "VIP Ügyfélkezelés & Automatikus Email Eszkaláció",
+  "category": "altalanos",
+  "icon": "👑",
+  "version": "1.0.0",
+  "description": "Felismeri a kiemelt kulcsfontosságú ügyfeleket és a sürgős panaszokat. Azonnali Telegram, Telnyx SMS és Email riasztást küld a cégvezetőnek, és opcionálisan megnyugtató választ küld a feladónak."
+}

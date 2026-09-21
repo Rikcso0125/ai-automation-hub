@@ -1,0 +1,8 @@
+{
+  "id": "vezetoi_hangparancs_asszisztens_executiv",
+  "title": "Vezetői Hangparancs-Asszisztens (Executive Jarvis az autóban)",
+  "category": "altalanos",
+  "icon": "🎙️",
+  "version": "1.0.0",
+  "description": "Hands-free autonóm vezetői titkár autóban vagy mobilon. Beépített webes mikrofon felület, Telegram/WhatsApp hangüzenet és Siri/Shortcuts csatlakozás. Intelligens naptárkezelés ütközésvizsgálattal, feladatdelegálás, adatlekérdezések és egyedi webhook parancsok, opcionális hangos (TTS) visszajelzéssel."
+}

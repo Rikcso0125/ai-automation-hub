@@ -1,0 +1,97 @@
+{
+  "title": "Good-Better-Best Többszintű Ajánlat Konfiguráció",
+  "type": "object",
+  "properties": {
+    "packages_customization": {
+      "type": "object",
+      "title": "Csomagok Tartalma és Felárazása",
+      "properties": {
+        "good_label": {
+          "type": "string",
+          "default": "Alap (Racionális Választás)"
+        },
+        "better_label": {
+          "type": "string",
+          "default": "Ajánlott Prémium (Legnépszerűbb)"
+        },
+        "best_label": {
+          "type": "string",
+          "default": "VIP All-Inclusive (Csúcsminőség)"
+        },
+        "highlighted_package": {
+          "type": "string",
+          "default": "better",
+          "enum": [
+            "good",
+            "better",
+            "best"
+          ]
+        },
+        "better_markup_percent": {
+          "type": "number",
+          "default": 25.0,
+          "title": "Prémium csomag felára az Alaphoz képest (%)"
+        },
+        "best_markup_percent": {
+          "type": "number",
+          "default": 65.0,
+          "title": "VIP csomag felára az Alaphoz képest (%)"
+        }
+      }
+    },
+    "output_channels": {
+      "type": "array",
+      "title": "Engedélyezett Megjelenítési Módok",
+      "items": {
+        "type": "string",
+        "enum": [
+          "interactive_web_portal",
+          "comparative_pdf_table",
+          "whatsapp_summary",
+          "email_dispatch"
+        ]
+      },
+      "default": [
+        "interactive_web_portal",
+        "comparative_pdf_table",
+        "whatsapp_summary",
+        "email_dispatch"
+      ]
+    },
+    "follow_up_automation": {
+      "type": "object",
+      "title": "Utókövetés és Döntéstámogatás",
+      "properties": {
+        "enable_48h_reminder": {
+          "type": "boolean",
+          "default": true,
+          "title": "48 órás diplomatikus döntéstámogató emlékeztető küldése (A opció)"
+        },
+        "enable_downsell_upsell": {
+          "type": "boolean",
+          "default": true,
+          "title": "Alap csomagra adott azonnali kedvezményes upsell felugró (B opció)"
+        },
+        "upsell_addon_price_huf": {
+          "type": "number",
+          "default": 15000,
+          "title": "Alap csomag mellé kínált garancia/karbantartás felár (Ft)"
+        }
+      }
+    },
+    "brand_styling": {
+      "type": "object",
+      "title": "Arculati Színek",
+      "properties": {
+        "accent_color": {
+          "type": "string",
+          "default": "#0284c7"
+        },
+        "highlight_card_color": {
+          "type": "string",
+          "default": "#1e3a8a"
+        }
+      }
+    }
+  }
+}

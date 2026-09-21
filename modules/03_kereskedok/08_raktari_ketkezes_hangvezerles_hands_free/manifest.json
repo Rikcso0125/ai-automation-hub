@@ -1,0 +1,8 @@
+{
+  "id": "08_raktari_ketkezes_hangvezerles_hands_free",
+  "title": "Raktári Kétkezes Hangvezérlés (Hands-Free Voice Picking)",
+  "category": "kereskedok",
+  "icon": "📦",
+  "version": "1.0.0",
+  "description": "Autonóm kétkezes raktári hangvezérlés Bluetooth fülhallgatókhoz. Magyar nyelvű beszédutasítások (polc navigáció, ellenőrző kód, darabszám nyugtázás), választható ellenőrzési módok (Check Digit / Cikkszám), intelligens hiánykezelés (tartalék polc átirányítás vagy beszerzési hiánylista), valamint Single-Order és Multi-Order Batch szedési üzemmód automatikus szállítólevél és dobozcímke készítéssel."
+}

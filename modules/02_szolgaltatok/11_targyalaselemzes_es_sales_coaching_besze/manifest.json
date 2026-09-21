@@ -1,0 +1,8 @@
+{
+  "id": "11_targyalaselemzes_es_sales_coaching_besze",
+  "title": "Tárgyaláselemzés és Sales Coaching (Beszéd/Hallgatás Arány)",
+  "category": "szolgaltatok",
+  "icon": "🎧",
+  "version": "1.0.0",
+  "description": "AI-alapú híváselemzés: méri a beszéd/hallgatás arányt (Talk-to-Listen), az ügyfél félbeszakításokat, a kérdezéstechnikát és a hangulatot. 0-100-as Sales Score, márkázott PDF Coaching Lap, mobilos és Dashboard visszajelzés, beállítható vezetői riasztási küszöbbel."
+}

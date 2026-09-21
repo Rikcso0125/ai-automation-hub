@@ -1,0 +1,8 @@
+{
+  "id": "zero_touch_munkatars_es_ugyfel_onboardin",
+  "title": "Zero-Touch Munkatárs és Ügyfél Onboarding Autopilot",
+  "category": "altalanos",
+  "icon": "🏢",
+  "version": "1.0.0",
+  "description": "Egyetlen adatlap alapján automatikusan lebonyolítja az Új Munkatárs (HR, szerződés, IT fiókok, mentor) vagy Új Ügyfél (ÁSZF, CRM, dedikált mappa) teljes bevezetését. Márkázott PDF és Word szerződésgenerálás, IT fiókbeállítások, valamint 1., 3. és 7. napi ütemezett betanulási és visszajelző email lépések."
+}

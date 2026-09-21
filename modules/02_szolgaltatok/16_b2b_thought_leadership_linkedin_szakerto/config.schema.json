@@ -1,0 +1,89 @@
+{
+  "title": "B2B Thought Leadership & LinkedIn Szakértői Gépezet Konfiguráció",
+  "type": "object",
+  "properties": {
+    "allowed_content_types": {
+      "type": "array",
+      "title": "Engedélyezett Tartalomtípusok",
+      "items": {
+        "type": "string",
+        "enum": [
+          "case_study_story",
+          "myth_busting",
+          "executive_trends",
+          "voice_dictation"
+        ]
+      },
+      "default": [
+        "case_study_story",
+        "myth_busting",
+        "executive_trends",
+        "voice_dictation"
+      ]
+    },
+    "output_variants": {
+      "type": "array",
+      "title": "Generált Változatok",
+      "items": {
+        "type": "string",
+        "enum": [
+          "linkedin_post",
+          "image_prompt",
+          "newsletter_article"
+        ]
+      },
+      "default": [
+        "linkedin_post",
+        "image_prompt",
+        "newsletter_article"
+      ]
+    },
+    "publishing_mode": {
+      "type": "string",
+      "title": "Publikálási Folyamat",
+      "enum": [
+        "review_before_publish",
+        "scheduled_calendar_auto"
+      ],
+      "default": "review_before_publish",
+      "description": "review_before_publish (vezető 1-kattintással jóváhagyja mobilon) vagy scheduled_calendar_auto (időzített automatikus közzététel)."
+    },
+    "schedule_slots": {
+      "type": "array",
+      "title": "Időzített Publikálási Idősávok",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "Kedd 08:30",
+        "Csütörtök 08:30"
+      ]
+    },
+    "executive_persona": {
+      "type": "object",
+      "title": "Vezetői Profil és Hangvétel",
+      "properties": {
+        "name": {
+          "type": "string",
+          "default": "Kovács László"
+        },
+        "title": {
+          "type": "string",
+          "default": "Ügyvezető & Vezető Épületgépész Szakértő"
+        },
+        "company": {
+          "type": "string",
+          "default": "ProfiKlíma Kft."
+        },
+        "tone_of_voice": {
+          "type": "string",
+          "default": "Szakmai, közvetlen, gyakorlatias, bullshit-mentes"
+        },
+        "target_audience": {
+          "type": "string",
+          "default": "Kkv cégvezetők, irodaház üzemeltetők, létesítménygazdálkodók"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "03_dinamikus_kosarelhagyas_visszahoditas_sm",
+  "title": "Dinamikus Kosárelhagyás Visszahódítás (SMS és Email)",
+  "category": "webshopok",
+  "icon": "🛒",
+  "version": "1.0.0",
+  "description": "Nem sablon kuponokat küld, hanem a kosárban hagyott konkrét termék előnyeit és a leggyakoribb vásárlói aggályokat kezelő, személyre szabott üzeneteket generál szerkeszthető 2-lépcsős szekvenciával."
+}

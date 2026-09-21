@@ -1,0 +1,8 @@
+{
+  "id": "02_automatikus_3_utas_egyeztetes_3_way_matc",
+  "title": "Automatikus 3-Utas Egyeztetés (3-Way Matching: Számla vs PO vs Szállítólevél)",
+  "category": "kereskedok",
+  "icon": "🛡️",
+  "version": "1.0.0",
+  "description": "Összeveti a beérkező beszállítói számlát a jóváhagyott megrendeléssel (PO) és a raktári bevételezéssel (Szállítólevél). Kiszűri a túlszámlázást, a hiányos szállításokat, IBAN számlacsalás-védelmet biztosít és automatikusan jóváírószámla-igényt generál."
+}

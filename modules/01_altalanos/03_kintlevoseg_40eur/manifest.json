@@ -1,0 +1,8 @@
+{
+  "id": "kintlevoseg_40eur",
+  "title": "Automatikus Kintlévőség-kezelés & 40 EUR Behajtási Lánc",
+  "category": "altalanos",
+  "icon": "⚖️",
+  "version": "1.0.0",
+  "description": "Lépcsőzetes Resend/SMTP email és Telnyx SMS felszólító láncolat lejáró és lejárt számlákra, azonnali Stripe/Billingo/Számlázz.hu fizetési linkkel, és 15 nap késés után a törvényi 40 EUR behajtási költségátalánnyal."
+}

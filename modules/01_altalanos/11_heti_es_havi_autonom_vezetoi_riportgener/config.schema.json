@@ -1,0 +1,90 @@
+{
+  "title": "Heti és Havi Autonóm Vezetői Riportgenerálás Konfiguráció",
+  "type": "object",
+  "required": [
+    "company_name",
+    "report_period",
+    "executive_email_recipients"
+  ],
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "Vállalkozás Neve",
+      "default": "ProfiTech Ipari & Kereskedelmi Kft."
+    },
+    "report_period": {
+      "type": "string",
+      "title": "Riport Gyakorisága & Időzítés",
+      "enum": [
+        "Heti Vezetői Riport (Minden hétfő 07:00)",
+        "Havi Vezetői Riport (Minden hónap 1-jén 08:00)",
+        "Negyedéves Stratégiai Zárás"
+      ],
+      "default": "Heti Vezetői Riport (Minden hétfő 07:00)"
+    },
+    "included_pillars": {
+      "type": "string",
+      "title": "Bevont KPI Területek",
+      "enum": [
+        "Mind a 4 pillér (Pénzügy, Bank/Cash-Flow, CRM/Sales, Operáció)",
+        "Csak Pénzügy és Banki Cash-Flow",
+        "Pénzügy és Értékesítés/CRM"
+      ],
+      "default": "Mind a 4 pillér (Pénzügy, Bank/Cash-Flow, CRM/Sales, Operáció)"
+    },
+    "billing_system": {
+      "type": "string",
+      "title": "Számlázási & Pénzügyi Rendszer",
+      "enum": [
+        "Billingo API",
+        "Számlázz.hu API",
+        "SAP / Navision ERP",
+        "Szimulált / Belső Mintaadatok"
+      ],
+      "default": "Billingo API"
+    },
+    "crm_system": {
+      "type": "string",
+      "title": "CRM & Értékesítési Rendszer",
+      "enum": [
+        "MiniCRM API",
+        "HubSpot API",
+        "Pipedrive API",
+        "Salesforce",
+        "Szimulált / Belső Mintaadatok"
+      ],
+      "default": "MiniCRM API"
+    },
+    "project_system": {
+      "type": "string",
+      "title": "Projektmenedzsment & Operáció",
+      "enum": [
+        "ClickUp API",
+        "Asana API",
+        "Jira Cloud",
+        "Trello",
+        "Szimulált / Belső Mintaadatok"
+      ],
+      "default": "ClickUp API"
+    },
+    "executive_email_recipients": {
+      "type": "string",
+      "title": "Vezetői Címzettek (Emailek vesszővel elválasztva)",
+      "default": "ugyvezetes@profitech.hu, penzugy@profitech.hu"
+    },
+    "telegram_bot_token": {
+      "type": "string",
+      "title": "Telegram Bot Token (Opcionális Push Értesítés)",
+      "format": "password",
+      "description": "Vezetői Telegram értesítéshez."
+    },
+    "telegram_chat_id": {
+      "type": "string",
+      "title": "Telegram Chat ID"
+    },
+    "slack_webhook_url": {
+      "type": "string",
+      "title": "Slack Vezetői Webhook URL (Opcionális)"
+    }
+  }
+}

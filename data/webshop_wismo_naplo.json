@@ -1,0 +1,244 @@
+{
+  "last_updated": "2026-09-20T04:07:57.957059",
+  "total_wismo_inquiries": 7,
+  "kpis": {
+    "automated_resolution_rate_percent": 98.5,
+    "total_proactive_exception_alerts": 2,
+    "average_response_time_seconds": 1.2
+  },
+  "inquiries": [
+    {
+      "inquiry_id": "WISMO-20260920031835",
+      "channel": "sms",
+      "customer_query": "Nem jött meg a futár tegnap.",
+      "search_key_used": "DPD-HU-DELAY-8812",
+      "package_found": {
+        "tracking_number": "GLS-HU-10293847",
+        "order_id": "ORD-WEB-2026-9912",
+        "carrier": "GLS",
+        "status": "OUT_FOR_DELIVERY",
+        "status_label": "Kiszállítás alatt a futárnál",
+        "estimated_delivery_window": "Ma 11:30 - 13:30 között",
+        "courier_info": "Kiss László (+36 70 888 1234)",
+        "locker_location": null,
+        "pickup_code": null,
+        "live_tracking_url": "https://gls-group.com/track/GLS-HU-10293847"
+      },
+      "primary_reply": "Szia Kovács! A ORD-WEB-2026-9912 csomagod MA erkezik (Ma 11:30 - 13:30 között). Futar: Kiss László (+36 70 888 1234). Terkep: https://gls-group.com/track/GLS-HU-10293847",
+      "omnichannel_payloads": {
+        "webchat_message": "Kedves Kovács! Jó hírem van: a(z) ORD-WEB-2026-9912 számú rendelésed már a futárnál van és MA érkezik! Várható kézbesítés: Ma 11:30 - 13:30 között. Futár elérhetősége: Kiss László (+36 70 888 1234). Élő térképes követés: https://gls-group.com/track/GLS-HU-10293847",
+        "email_subject": "Csomaginformáció: ORD-WEB-2026-9912 (Kiszállítás alatt a futárnál)",
+        "email_body": "Tisztelt Kovács Péter!\n\nTájékoztatjuk, hogy a(z) ORD-WEB-2026-9912 azonosítójú rendelése a mai napon kézbesítésre kerül!\nFutárszolgálat: GLS (Csomagszám: GLS-HU-10293847)\nVárható érkezési idősáv: Ma 11:30 - 13:30 között\nKézbesítő futár: Kiss László (+36 70 888 1234)\n\nÉlő nyomkövetés: https://gls-group.com/track/GLS-HU-10293847\n\nKöszönjük a megrendelést!\nÜdvözlettel: ProfiGépész Webáruház Ügyfélszolgálat",
+        "whatsapp_message": "Kedves Kovács! Jó hírem van: a(z) ORD-WEB-2026-9912 számú rendelésed már a futárnál van és MA érkezik! Várható kézbesítés: Ma 11:30 - 13:30 között. Futár elérhetősége: Kiss László (+36 70 888 1234). Élő térképes követés: https://gls-group.com/track/GLS-HU-10293847",
+        "sms_text": "Szia Kovács! A ORD-WEB-2026-9912 csomagod MA erkezik (Ma 11:30 - 13:30 között). Futar: Kiss László (+36 70 888 1234). Terkep: https://gls-group.com/track/GLS-HU-10293847"
+      },
+      "exception_handling": null,
+      "handled_at": "2026-09-20T03:18:35.831963",
+      "automated_zero_touch": true
+    },
+    {
+      "inquiry_id": "WISMO-20260920032005",
+      "channel": "sms",
+      "customer_query": "Nem jött meg a futár tegnap.",
+      "search_key_used": "DPD-HU-DELAY-8812",
+      "package_found": {
+        "tracking_number": "GLS-HU-10293847",
+        "order_id": "ORD-WEB-2026-9912",
+        "carrier": "GLS",
+        "status": "OUT_FOR_DELIVERY",
+        "status_label": "Kiszállítás alatt a futárnál",
+        "estimated_delivery_window": "Ma 11:30 - 13:30 között",
+        "courier_info": "Kiss László (+36 70 888 1234)",
+        "locker_location": null,
+        "pickup_code": null,
+        "live_tracking_url": "https://gls-group.com/track/GLS-HU-10293847"
+      },
+      "primary_reply": "Szia Kovács! A ORD-WEB-2026-9912 csomagod MA erkezik (Ma 11:30 - 13:30 között). Futar: Kiss László (+36 70 888 1234). Terkep: https://gls-group.com/track/GLS-HU-10293847",
+      "omnichannel_payloads": {
+        "webchat_message": "Kedves Kovács! Jó hírem van: a(z) ORD-WEB-2026-9912 számú rendelésed már a futárnál van és MA érkezik! Várható kézbesítés: Ma 11:30 - 13:30 között. Futár elérhetősége: Kiss László (+36 70 888 1234). Élő térképes követés: https://gls-group.com/track/GLS-HU-10293847",
+        "email_subject": "Csomaginformáció: ORD-WEB-2026-9912 (Kiszállítás alatt a futárnál)",
+        "email_body": "Tisztelt Kovács Péter!\n\nTájékoztatjuk, hogy a(z) ORD-WEB-2026-9912 azonosítójú rendelése a mai napon kézbesítésre kerül!\nFutárszolgálat: GLS (Csomagszám: GLS-HU-10293847)\nVárható érkezési idősáv: Ma 11:30 - 13:30 között\nKézbesítő futár: Kiss László (+36 70 888 1234)\n\nÉlő nyomkövetés: https://gls-group.com/track/GLS-HU-10293847\n\nKöszönjük a megrendelést!\nÜdvözlettel: ProfiGépész Webáruház Ügyfélszolgálat",
+        "whatsapp_message": "Kedves Kovács! Jó hírem van: a(z) ORD-WEB-2026-9912 számú rendelésed már a futárnál van és MA érkezik! Várható kézbesítés: Ma 11:30 - 13:30 között. Futár elérhetősége: Kiss László (+36 70 888 1234). Élő térképes követés: https://gls-group.com/track/GLS-HU-10293847",
+        "sms_text": "Szia Kovács! A ORD-WEB-2026-9912 csomagod MA erkezik (Ma 11:30 - 13:30 között). Futar: Kiss László (+36 70 888 1234). Terkep: https://gls-group.com/track/GLS-HU-10293847"
+      },
+      "exception_handling": null,
+      "handled_at": "2026-09-20T03:20:05.288451",
+      "automated_zero_touch": true
+    },
+    {
+      "inquiry_id": "WISMO-20260920032015",
+      "channel": "sms",
+      "customer_query": "Nem jött meg a futár tegnap.",
+      "search_key_used": "DPD-HU-987654321",
+      "package_found": {
+        "tracking_number": "DPD-HU-987654321",
+        "order_id": "ORD-WEB-2026-9920",
+        "carrier": "DPD",
+        "status": "DELIVERY_FAILED",
+        "status_label": "Sikertelen kézbesítési kísérlet",
+        "estimated_delivery_window": null,
+        "courier_info": null,
+        "locker_location": null,
+        "pickup_code": null,
+        "live_tracking_url": "https://dpd.hu/trace/DPD-HU-987654321"
+      },
+      "primary_reply": "Sikertelen kezbesites (DPD - ORD-WEB-2026-9920). Kerj uj idopontot 1 kattintassal itt: https://futar.profigepesz.hu/redelivery?tracking=DPD-HU-987654321&token=RESCHED-9920",
+      "omnichannel_payloads": {
+        "webchat_message": "Kedves Horváth! A DPD futár ma megkísérelte a kézbesítést a(z) ORD-WEB-2026-9920 csomagodra, de sajnos nem járt sikerrel (A futár nem tudott bejutni a lépcsőházba / címzett nem volt elérhető.). Semmi gond! Egyetlen kattintással kérhetsz újrakézbesítést vagy módosíthatod a címet itt: https://futar.profigepesz.hu/redelivery?tracking=DPD-HU-987654321&token=RESCHED-9920",
+        "email_subject": "Csomaginformáció: ORD-WEB-2026-9920 (Sikertelen kézbesítési kísérlet)",
+        "email_body": "Tisztelt Horváth Ferenc!\n\nÉrtesítjük, hogy a(z) ORD-WEB-2026-9920 számú csomag (DPD – DPD-HU-987654321) mai kézbesítése sikertelen volt.\nFutár visszajelzése: A futár nem tudott bejutni a lépcsőházba / címzett nem volt elérhető.\n\nKérjük, kattintson az alábbi linkre az ingyenes újrakézbesítés kéréséhez vagy a cím pontosításához:\nÚjrakézbesítés kérése: https://futar.profigepesz.hu/redelivery?tracking=DPD-HU-987654321&token=RESCHED-9920\n\nÜdvözlettel: ProfiGépész Kézbesítés-menedzsment",
+        "whatsapp_message": "Kedves Horváth! A DPD futár ma megkísérelte a kézbesítést a(z) ORD-WEB-2026-9920 csomagodra, de sajnos nem járt sikerrel (A futár nem tudott bejutni a lépcsőházba / címzett nem volt elérhető.). Semmi gond! Egyetlen kattintással kérhetsz újrakézbesítést vagy módosíthatod a címet itt: https://futar.profigepesz.hu/redelivery?tracking=DPD-HU-987654321&token=RESCHED-9920",
+        "sms_text": "Sikertelen kezbesites (DPD - ORD-WEB-2026-9920). Kerj uj idopontot 1 kattintassal itt: https://futar.profigepesz.hu/redelivery?tracking=DPD-HU-987654321&token=RESCHED-9920"
+      },
+      "exception_handling": {
+        "has_exception": true,
+        "proactive_action_triggered": true,
+        "exception_type": "DELIVERY_ATTEMPT_FAILED",
+        "reason": "A futár nem tudott bejutni a lépcsőházba / címzett nem volt elérhető.",
+        "alert_sent_to_customer": true,
+        "redelivery_link": "https://futar.profigepesz.hu/redelivery?tracking=DPD-HU-987654321&token=RESCHED-9920",
+        "escalation_ticket_id": "TICKET-WISMO-ORD-WEB-2026-9920",
+        "dashboard_ticket": {
+          "ticket_id": "TICKET-WISMO-ORD-WEB-2026-9920",
+          "urgency": "HIGH",
+          "assigned_team": "Webshop Ügyfélszolgálat",
+          "auto_escalate_deadline": "2026-09-21T03:20:15.058733",
+          "action_description": "24 órán belül fel kell hívni a vevőt, ha nem kattint az újrakézbesítési linkre."
+        }
+      },
+      "handled_at": "2026-09-20T03:20:15.058733",
+      "automated_zero_touch": true
+    },
+    {
+      "inquiry_id": "WISMO-20260920032037",
+      "channel": "webchat",
+      "customer_query": "Szia, merre tart a rendelésem?",
+      "search_key_used": "GLS-HU-10293847",
+      "package_found": {
+        "tracking_number": "GLS-HU-10293847",
+        "order_id": "ORD-WEB-2026-9912",
+        "carrier": "GLS",
+        "status": "OUT_FOR_DELIVERY",
+        "status_label": "Kiszállítás alatt a futárnál",
+        "estimated_delivery_window": "Ma 11:30 - 13:30 között",
+        "courier_info": "Kiss László (+36 70 888 1234)",
+        "locker_location": null,
+        "pickup_code": null,
+        "live_tracking_url": "https://gls-group.com/track/GLS-HU-10293847"
+      },
+      "primary_reply": "Kedves Kovács! Jó hírem van: a(z) ORD-WEB-2026-9912 számú rendelésed már a futárnál van és MA érkezik! Várható kézbesítés: Ma 11:30 - 13:30 között. Futár elérhetősége: Kiss László (+36 70 888 1234). Élő térképes követés: https://gls-group.com/track/GLS-HU-10293847",
+      "omnichannel_payloads": {
+        "webchat_message": "Kedves Kovács! Jó hírem van: a(z) ORD-WEB-2026-9912 számú rendelésed már a futárnál van és MA érkezik! Várható kézbesítés: Ma 11:30 - 13:30 között. Futár elérhetősége: Kiss László (+36 70 888 1234). Élő térképes követés: https://gls-group.com/track/GLS-HU-10293847",
+        "email_subject": "Csomaginformáció: ORD-WEB-2026-9912 (Kiszállítás alatt a futárnál)",
+        "email_body": "Tisztelt Kovács Péter!\n\nTájékoztatjuk, hogy a(z) ORD-WEB-2026-9912 azonosítójú rendelése a mai napon kézbesítésre kerül!\nFutárszolgálat: GLS (Csomagszám: GLS-HU-10293847)\nVárható érkezési idősáv: Ma 11:30 - 13:30 között\nKézbesítő futár: Kiss László (+36 70 888 1234)\n\nÉlő nyomkövetés: https://gls-group.com/track/GLS-HU-10293847\n\nKöszönjük a megrendelést!\nÜdvözlettel: ProfiGépész Webáruház Ügyfélszolgálat",
+        "whatsapp_message": "Kedves Kovács! Jó hírem van: a(z) ORD-WEB-2026-9912 számú rendelésed már a futárnál van és MA érkezik! Várható kézbesítés: Ma 11:30 - 13:30 között. Futár elérhetősége: Kiss László (+36 70 888 1234). Élő térképes követés: https://gls-group.com/track/GLS-HU-10293847",
+        "sms_text": "Szia Kovács! A ORD-WEB-2026-9912 csomagod MA erkezik (Ma 11:30 - 13:30 között). Futar: Kiss László (+36 70 888 1234). Terkep: https://gls-group.com/track/GLS-HU-10293847"
+      },
+      "exception_handling": null,
+      "handled_at": "2026-09-20T03:20:37.799791",
+      "automated_zero_touch": true
+    },
+    {
+      "inquiry_id": "WISMO-INQ-001",
+      "channel": "webchat",
+      "customer_query": "Szia, szeretném megtudni, hogy hol jár a tegnap rendelt csomagom? Rendelésszámom: ORD-WEB-2026-9912",
+      "search_key_used": "ORD-WEB-2026-9912",
+      "package_found": {
+        "tracking_number": "GLS-HU-10293847",
+        "order_id": "ORD-WEB-2026-9912",
+        "carrier": "GLS",
+        "status": "OUT_FOR_DELIVERY",
+        "status_label": "Kiszállítás alatt a futárnál",
+        "estimated_delivery_window": "Ma 11:30 - 13:30 között",
+        "courier_info": "Kiss László (+36 70 888 1234)",
+        "locker_location": null,
+        "pickup_code": null,
+        "live_tracking_url": "https://gls-group.com/track/GLS-HU-10293847"
+      },
+      "primary_reply": "Kedves Kovács! Jó hírem van: a(z) ORD-WEB-2026-9912 számú rendelésed már a futárnál van és MA érkezik! Várható kézbesítés: Ma 11:30 - 13:30 között. Futár elérhetősége: Kiss László (+36 70 888 1234). Élő térképes követés: https://gls-group.com/track/GLS-HU-10293847",
+      "omnichannel_payloads": {
+        "webchat_message": "Kedves Kovács! Jó hírem van: a(z) ORD-WEB-2026-9912 számú rendelésed már a futárnál van és MA érkezik! Várható kézbesítés: Ma 11:30 - 13:30 között. Futár elérhetősége: Kiss László (+36 70 888 1234). Élő térképes követés: https://gls-group.com/track/GLS-HU-10293847",
+        "email_subject": "Csomaginformáció: ORD-WEB-2026-9912 (Kiszállítás alatt a futárnál)",
+        "email_body": "Tisztelt Kovács Péter!\n\nTájékoztatjuk, hogy a(z) ORD-WEB-2026-9912 azonosítójú rendelése a mai napon kézbesítésre kerül!\nFutárszolgálat: GLS (Csomagszám: GLS-HU-10293847)\nVárható érkezési idősáv: Ma 11:30 - 13:30 között\nKézbesítő futár: Kiss László (+36 70 888 1234)\n\nÉlő nyomkövetés: https://gls-group.com/track/GLS-HU-10293847\n\nKöszönjük a megrendelést!\nÜdvözlettel: ProfiGépész Webáruház Ügyfélszolgálat",
+        "whatsapp_message": "Kedves Kovács! Jó hírem van: a(z) ORD-WEB-2026-9912 számú rendelésed már a futárnál van és MA érkezik! Várható kézbesítés: Ma 11:30 - 13:30 között. Futár elérhetősége: Kiss László (+36 70 888 1234). Élő térképes követés: https://gls-group.com/track/GLS-HU-10293847",
+        "sms_text": "Szia Kovács! A ORD-WEB-2026-9912 csomagod MA erkezik (Ma 11:30 - 13:30 között). Futar: Kiss László (+36 70 888 1234). Terkep: https://gls-group.com/track/GLS-HU-10293847"
+      },
+      "exception_handling": null,
+      "handled_at": "2026-09-20T04:07:57.956061",
+      "automated_zero_touch": true
+    },
+    {
+      "inquiry_id": "WISMO-INQ-002",
+      "channel": "email",
+      "customer_query": "Tisztelt Ügyfélszolgálat! A varga.zoltan@klimatech-general.hu email címemre leadott rendelésem csomagautomatás átvételéről érdeklődnék.",
+      "search_key_used": "varga.zoltan@klimatech-general.hu",
+      "package_found": {
+        "tracking_number": "FOX-HU-55443322",
+        "order_id": "ORD-WEB-2026-9915",
+        "carrier": "Foxpost",
+        "status": "READY_FOR_PICKUP",
+        "status_label": "Átvehető a csomagautomatában",
+        "estimated_delivery_window": null,
+        "courier_info": null,
+        "locker_location": "Budapest II. kerület, Mammut I. Bevásárlóközpont (földszint)",
+        "pickup_code": "492011",
+        "live_tracking_url": "https://foxpost.hu/csomagkovetes?code=FOX-HU-55443322"
+      },
+      "primary_reply": "Tisztelt Varga Zoltán!\n\nÖrömmel értesítjük, hogy a(z) ORD-WEB-2026-9915 számú rendelése megérkezett a kiválasztott csomagautomatába!\nAutomata helye: Budapest II. kerület, Mammut I. Bevásárlóközpont (földszint)\nÁtvételi nyitókód: 492011\nÁtvételi határidő: 2026-09-23 22:00 (még 3 napig)\n\nNyomkövetés: https://foxpost.hu/csomagkovetes?code=FOX-HU-55443322\n\nÜdvözlettel: ProfiGépész Webáruház Automata Értesítő",
+      "omnichannel_payloads": {
+        "webchat_message": "Kedves Varga! Csomagod megérkezett a csomagautomatába és ÁTVEHETŐ! Helyszín: Budapest II. kerület, Mammut I. Bevásárlóközpont (földszint). Nyitókód: 492011. Átvételi határidő: 2026-09-23 22:00 (még 3 napig). Követési link: https://foxpost.hu/csomagkovetes?code=FOX-HU-55443322",
+        "email_subject": "Csomaginformáció: ORD-WEB-2026-9915 (Átvehető a csomagautomatában)",
+        "email_body": "Tisztelt Varga Zoltán!\n\nÖrömmel értesítjük, hogy a(z) ORD-WEB-2026-9915 számú rendelése megérkezett a kiválasztott csomagautomatába!\nAutomata helye: Budapest II. kerület, Mammut I. Bevásárlóközpont (földszint)\nÁtvételi nyitókód: 492011\nÁtvételi határidő: 2026-09-23 22:00 (még 3 napig)\n\nNyomkövetés: https://foxpost.hu/csomagkovetes?code=FOX-HU-55443322\n\nÜdvözlettel: ProfiGépész Webáruház Automata Értesítő",
+        "whatsapp_message": "Kedves Varga! Csomagod megérkezett a csomagautomatába és ÁTVEHETŐ! Helyszín: Budapest II. kerület, Mammut I. Bevásárlóközpont (földszint). Nyitókód: 492011. Átvételi határidő: 2026-09-23 22:00 (még 3 napig). Követési link: https://foxpost.hu/csomagkovetes?code=FOX-HU-55443322",
+        "sms_text": "Szia Varga! Csomagod megjott az automataba (Budapest II. kerület, Mammut I. Bevásárlóközpont (földszint))! Nyitokod: 492011. Hatarido: 2026-09-23 22:00 (még 3 napig)"
+      },
+      "exception_handling": null,
+      "handled_at": "2026-09-20T04:07:57.956061",
+      "automated_zero_touch": true
+    },
+    {
+      "inquiry_id": "WISMO-INQ-003",
+      "channel": "whatsapp",
+      "customer_query": "A DPD-HU-987654321 csomagomról jött valami üzenet, mi történt vele?",
+      "search_key_used": "DPD-HU-987654321",
+      "package_found": {
+        "tracking_number": "DPD-HU-987654321",
+        "order_id": "ORD-WEB-2026-9920",
+        "carrier": "DPD",
+        "status": "DELIVERY_FAILED",
+        "status_label": "Sikertelen kézbesítési kísérlet",
+        "estimated_delivery_window": null,
+        "courier_info": null,
+        "locker_location": null,
+        "pickup_code": null,
+        "live_tracking_url": "https://dpd.hu/trace/DPD-HU-987654321"
+      },
+      "primary_reply": "Sikertelen kezbesites (DPD - ORD-WEB-2026-9920). Kerj uj idopontot 1 kattintassal itt: https://futar.profigepesz.hu/redelivery?tracking=DPD-HU-987654321&token=RESCHED-9920",
+      "omnichannel_payloads": {
+        "webchat_message": "Kedves Horváth! A DPD futár ma megkísérelte a kézbesítést a(z) ORD-WEB-2026-9920 csomagodra, de sajnos nem járt sikerrel (A futár nem tudott bejutni a lépcsőházba / címzett nem volt elérhető.). Semmi gond! Egyetlen kattintással kérhetsz újrakézbesítést vagy módosíthatod a címet itt: https://futar.profigepesz.hu/redelivery?tracking=DPD-HU-987654321&token=RESCHED-9920",
+        "email_subject": "Csomaginformáció: ORD-WEB-2026-9920 (Sikertelen kézbesítési kísérlet)",
+        "email_body": "Tisztelt Horváth Ferenc!\n\nÉrtesítjük, hogy a(z) ORD-WEB-2026-9920 számú csomag (DPD – DPD-HU-987654321) mai kézbesítése sikertelen volt.\nFutár visszajelzése: A futár nem tudott bejutni a lépcsőházba / címzett nem volt elérhető.\n\nKérjük, kattintson az alábbi linkre az ingyenes újrakézbesítés kéréséhez vagy a cím pontosításához:\nÚjrakézbesítés kérése: https://futar.profigepesz.hu/redelivery?tracking=DPD-HU-987654321&token=RESCHED-9920\n\nÜdvözlettel: ProfiGépész Kézbesítés-menedzsment",
+        "whatsapp_message": "Kedves Horváth! A DPD futár ma megkísérelte a kézbesítést a(z) ORD-WEB-2026-9920 csomagodra, de sajnos nem járt sikerrel (A futár nem tudott bejutni a lépcsőházba / címzett nem volt elérhető.). Semmi gond! Egyetlen kattintással kérhetsz újrakézbesítést vagy módosíthatod a címet itt: https://futar.profigepesz.hu/redelivery?tracking=DPD-HU-987654321&token=RESCHED-9920",
+        "sms_text": "Sikertelen kezbesites (DPD - ORD-WEB-2026-9920). Kerj uj idopontot 1 kattintassal itt: https://futar.profigepesz.hu/redelivery?tracking=DPD-HU-987654321&token=RESCHED-9920"
+      },
+      "exception_handling": {
+        "has_exception": true,
+        "proactive_action_triggered": true,
+        "exception_type": "DELIVERY_ATTEMPT_FAILED",
+        "reason": "A futár nem tudott bejutni a lépcsőházba / címzett nem volt elérhető.",
+        "alert_sent_to_customer": true,
+        "redelivery_link": "https://futar.profigepesz.hu/redelivery?tracking=DPD-HU-987654321&token=RESCHED-9920",
+        "escalation_ticket_id": "TICKET-WISMO-ORD-WEB-2026-9920",
+        "dashboard_ticket": {
+          "ticket_id": "TICKET-WISMO-ORD-WEB-2026-9920",
+          "urgency": "HIGH",
+          "assigned_team": "Webshop Ügyfélszolgálat",
+          "auto_escalate_deadline": "2026-09-21T04:07:57.956061",
+          "action_description": "24 órán belül fel kell hívni a vevőt, ha nem kattint az újrakézbesítési linkre."
+        }
+      },
+      "handled_at": "2026-09-20T04:07:57.956061",
+      "automated_zero_touch": true
+    }
+  ]
+}

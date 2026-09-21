@@ -1,0 +1,50 @@
+{
+  "title": "Alvó Ügyfélbázis Újraaktiváló Sprint Konfiguráció",
+  "type": "object",
+  "properties": {
+    "inactivity_threshold_days": {
+      "type": "integer",
+      "title": "Inaktivitási Küszöb (Nap)",
+      "default": 180,
+      "description": "Hány napja nem látott ügyfeleket szólítson meg a rendszer (pl. 180 nap = 6 hónap, 365 nap = 1 év)."
+    },
+    "channels_priority": {
+      "type": "array",
+      "title": "Csatorna Prioritás",
+      "items": {
+        "type": "string",
+        "enum": [
+          "whatsapp",
+          "sms",
+          "email"
+        ]
+      },
+      "default": [
+        "whatsapp",
+        "sms",
+        "email"
+      ]
+    },
+    "drip_batch_size_per_day": {
+      "type": "integer",
+      "title": "Napi Maximális Kiküldési Adag (Drip Sending)",
+      "default": 25,
+      "description": "Megelőzi a telefonok és a szervizkapacitás túlterhelődését."
+    },
+    "require_manager_approval": {
+      "type": "boolean",
+      "title": "Vezetői Előzetes Jóváhagyás Kötelező",
+      "default": true
+    },
+    "estimated_revenue_per_customer_huf": {
+      "type": "integer",
+      "title": "Átlagos Becsült Karbantartási Bevétel Ügyfelenként (Ft)",
+      "default": 24000
+    },
+    "offer_text": {
+      "type": "string",
+      "title": "Ajánlat Szövegezése",
+      "default": "Szezon előtti jótállásmegőrző prémium klímatisztítás 15% előfoglalási kedvezménnyel."
+    }
+  }
+}

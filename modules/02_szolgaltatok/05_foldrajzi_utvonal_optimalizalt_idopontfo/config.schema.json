@@ -1,0 +1,64 @@
+{
+  "title": "Földrajzi Útvonal-optimalizált Időpontfoglalás Konfiguráció",
+  "type": "object",
+  "required": [
+    "company_name",
+    "zoning_strategy",
+    "planning_horizon_days"
+  ],
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "Vállalkozás Neve",
+      "default": "ProfiTech Klíma & Gázkészülék Szerviz"
+    },
+    "zoning_strategy": {
+      "type": "string",
+      "title": "Zónázási & Csoportosítási Stratégia",
+      "enum": [
+        "Kombinált (Irányítószám / Kerület fix napok ÉS Dinamikus Google Maps távolság)",
+        "Fix Kerület / Zóna napok (Buda: Kedd/Csütörtök, Pest: Hétfő/Szerda/Péntek)",
+        "Tisztán Dinamikus Távolság- és Menetidő Optimalizálás"
+      ],
+      "default": "Kombinált (Irányítószám / Kerület fix napok ÉS Dinamikus Google Maps távolság)",
+      "description": "Meghatározza, hogyan csoportosítja a kiszállási címeket a rendszer."
+    },
+    "planning_horizon_days": {
+      "type": "integer",
+      "title": "Tervezési Időablak (Hány nappal előtte zárja le a menetrendet)",
+      "default": 1,
+      "description": "Pl. 1 = előző délután véglegesíti a másnapi Waze útvonaltervet."
+    },
+    "emergency_out_of_zone_surcharge_huf": {
+      "type": "integer",
+      "title": "Sürgősségi Kiszállási Felár (Ft)",
+      "default": 15000,
+      "description": "Felár, amennyiben az ügyfél nem a saját zónanapján kér azonnali kiszállást."
+    },
+    "allow_emergency_booking": {
+      "type": "boolean",
+      "title": "Sürgősségi Kiszállás Engedélyezése Felárral",
+      "default": true
+    },
+    "max_daily_stops": {
+      "type": "integer",
+      "title": "Maximális Napi Kiszállások Száma Szerelőnként",
+      "default": 5
+    },
+    "technician_name": {
+      "type": "string",
+      "title": "Kiszálló Szakember Neve",
+      "default": "Varga Tamás (Vezető Szerviztechnikus)"
+    },
+    "technician_phone": {
+      "type": "string",
+      "title": "Szakember Telefonszáma",
+      "default": "+36308889900"
+    },
+    "base_depot_address": {
+      "type": "string",
+      "title": "Indulási Telephely Címe",
+      "default": "1117 Budapest, Budafoki út 60."
+    }
+  }
+}

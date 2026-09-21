@@ -1,0 +1,64 @@
+{
+  "title": "Tömeges Termékleírás és SEO Optimalizáló Konfiguráció",
+  "type": "object",
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock"
+    },
+    "style_tone_mode": {
+      "type": "string",
+      "title": "1. Kérdés (C): Szövegstílus és Célközönség",
+      "enum": [
+        "b2b_technical",
+        "b2c_emotional",
+        "hybrid_dual"
+      ],
+      "default": "hybrid_dual",
+      "description": "B2B műszaki, B2C előnyfókuszú, vagy Kettős (felül laikus előnyök, alul mérnöki adatlap)."
+    },
+    "seo_package_mode": {
+      "type": "string",
+      "title": "2. Kérdés: Keresőoptimalizálás és Strukturált Adatok Mód",
+      "enum": [
+        "serp_meta_only",
+        "schema_faq",
+        "full_seo_suite"
+      ],
+      "default": "full_seo_suite",
+      "description": "SERP cím és leírás, Schema.org FAQ JSON-LD, vagy Teljes kombinált SEO csomag."
+    },
+    "sync_approval_mode": {
+      "type": "string",
+      "title": "3. Kérdés: Webshop Szinkronizáció és Jóváhagyási Mód",
+      "enum": [
+        "direct_api_bulk_sync",
+        "csv_excel_export",
+        "diff_review_gate"
+      ],
+      "default": "diff_review_gate",
+      "description": "Közvetlen API szinkron, CSV/Excel export, vagy Interaktív Webes Diff jóváhagyási kapu."
+    },
+    "target_ecommerce_platform": {
+      "type": "string",
+      "title": "Cél Webáruház Platform",
+      "enum": [
+        "shopify",
+        "woocommerce",
+        "unas",
+        "shoprenter"
+      ],
+      "default": "shopify"
+    },
+    "storage_path": {
+      "type": "string",
+      "title": "Mentési Útvonal",
+      "default": "data/termekleiras_seo_naplo.json"
+    }
+  }
+}

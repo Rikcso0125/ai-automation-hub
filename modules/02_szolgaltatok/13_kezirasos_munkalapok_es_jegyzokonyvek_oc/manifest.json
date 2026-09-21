@@ -1,0 +1,8 @@
+{
+  "id": "13_kezirasos_munkalapok_es_jegyzokonyvek_oc",
+  "title": "Kézírásos Munkalapok és Jegyzőkönyvek OCR Digitalizálása",
+  "category": "szolgaltatok",
+  "icon": "📋",
+  "version": "1.0.0",
+  "description": "Kézzel kitöltött és tollal aláírt papír munkalapok azonnali Vision OCR felismerése: kinyeri a munkalapszámot, ügyféladatokat, tételeket, órákat és anyagokat. Érzékeli a kézi aláírás meglétét, hivatalos digitális A4 PDF munkalapot generál, és választhatóan számlatervezetet készít vagy kiküldi az ügyfélnek."
+}

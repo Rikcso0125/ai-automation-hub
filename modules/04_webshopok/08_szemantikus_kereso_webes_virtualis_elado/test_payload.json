@@ -1,0 +1,10 @@
+{
+  "module_id": "08_szemantikus_kereso_webes_virtualis_elado",
+  "user_query": "olyan akkus gépet keresek, amivel panel betonfalba tudok polcot felfúrni, és legyen hozzá fúrószár is",
+  "session_id": "SESS-CHAT-9921",
+  "config": {
+    "search_mode": "hybrid_full_semantic",
+    "ui_dialogue_mode": "comparative_decision_matrix",
+    "cross_sell_mode": "combined_inventory_and_bundle"
+  }
+}

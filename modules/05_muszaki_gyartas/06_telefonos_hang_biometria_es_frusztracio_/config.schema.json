@@ -1,0 +1,67 @@
+{
+  "title": "Telefonos Hang-Biometria és Frusztráció-Detektálás Konfiguráció",
+  "type": "object",
+  "required": [
+    "frustration_detection_mode",
+    "caller_identification_mode",
+    "escalation_workflow"
+  ],
+  "properties": {
+    "frustration_detection_mode": {
+      "type": "string",
+      "title": "Hang-Biometria és Feszültség-Detektálás",
+      "enum": [
+        "keyword_sentiment_only",
+        "acoustic_pitch_volume",
+        "hybrid_psychoacoustic_semantic"
+      ],
+      "default": "hybrid_psychoacoustic_semantic",
+      "description": "Kulcsszó elemzés, Akusztikai hangelemzés vagy Hibrid pszichoakusztikai és szemantikai motor."
+    },
+    "caller_identification_mode": {
+      "type": "string",
+      "title": "Ügyfél-Azonosítás és Hang-Biometrikus Profil",
+      "enum": [
+        "caller_id_lookup",
+        "voiceprint_biometrics",
+        "biometric_voiceprint_vip_sla"
+      ],
+      "default": "biometric_voiceprint_vip_sla",
+      "description": "Telefonszám keresés, Hang-ujjlenyomat vagy Biometrikus profil VIP SLA és géppark kontextussal."
+    },
+    "escalation_workflow": {
+      "type": "string",
+      "title": "Híváskezelés és Eszkalációs Mentőöv",
+      "enum": [
+        "post_call_summary",
+        "live_transfer_agent",
+        "warm_transfer_whisper_coach_push"
+      ],
+      "default": "warm_transfer_whisper_coach_push",
+      "description": "Hívás utáni összefoglaló, Élő átkapcsolás vagy Valós idejű Warm Transfer Whisper Coach súgással és Push riasztással."
+    },
+    "frustration_threshold_pct": {
+      "type": "integer",
+      "title": "Kritikus Frusztrációs Küszöb (%)",
+      "default": 75,
+      "description": "Ezen stressz-index felett a hívás automatikusan vészhelyzeti átkapcsolásra kerül a műszaki vezetőhöz."
+    },
+    "sla_critical_response_hours": {
+      "type": "integer",
+      "title": "Kritikus VIP Hibaelhárítási SLA (óra)",
+      "default": 2
+    },
+    "notification_channel": {
+      "type": "string",
+      "title": "Riasztási Értesítési Csatorna",
+      "default": "telegram",
+      "enum": [
+        "telegram",
+        "sms",
+        "email",
+        "slack",
+        "webhook"
+      ]
+    }
+  }
+}

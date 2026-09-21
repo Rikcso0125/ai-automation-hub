@@ -1,0 +1,206 @@
+[
+  {
+    "event_type": "VERIFY_COD_ORDER",
+    "timestamp": "2026-09-20T03:28:50.682628",
+    "result": {
+      "order_id": "ORD-COD-2026-8812",
+      "risk_score": 95,
+      "risk_threshold": 45,
+      "requires_confirmation": true,
+      "risk_factors": [
+        "Uj vasarlo (nincs rendelesi eloelet)",
+        "Nagy erteku utanvet (78 900 Ft >= 40 000 Ft)",
+        "Hianyos szallitasi cim (hianyzik a hazszam vagy tul rovid utcanev)",
+        "Gyanus / eldobhato email cim"
+      ],
+      "fulfillment_status": "PENDING_CUSTOMER_CONFIRMATION",
+      "confirmation_link": "https://profigepesz.hu/cod/confirm?order=ORD-COD-2026-8812&token=d4d8b64539",
+      "sms_dispatch": {
+        "recipient": "+36307778899",
+        "message": "Szia Kovács! Koszonjuk a ProfiGepesz megrendelesed (ORD-COD-2026-8812  78 900 Ft)! Mivel nagy erteku utanvetes csomagrol van szo  kerjuk  erositsd meg 1 kattintassal a feladast: https://profigepesz.hu/cod/confirm?order=ORD-COD-2026-8812&token=d4d8b64539"
+      }
+    }
+  },
+  {
+    "event_type": "CHECK_UNCONFIRMED_ORDERS",
+    "timestamp": "2026-09-20T03:28:50.684630",
+    "result": {
+      "order_id": "ORD-COD-2026-8812",
+      "shipping_hold_active": true,
+      "label_printing_allowed": false,
+      "escalation_ticket": {
+        "ticket_id": "TICKET-COD-HOLD-ORD-COD-2026-8812",
+        "action": "SHIPPING_HOLD",
+        "severity": "HIGH",
+        "assigned_to": "Vevőszolgálat - Utánvét Ellenőrzés",
+        "customer_name": "Kovács Dániel",
+        "customer_phone": "+36307778899",
+        "order_value_huf": 78900,
+        "hold_reason": "A vevő 24 órán belül nem kattintott az utánvét megerősítésre.",
+        "required_action": "Közvetlen telefonos egyeztetés szükséges a futárcímke kinyomtatása előtt!",
+        "erp_status": "LOCKED_SHIPPING_HOLD"
+      }
+    }
+  },
+  {
+    "event_type": "LOCKER_DEADLINE_ALERT",
+    "timestamp": "2026-09-20T03:28:50.685625",
+    "result": {
+      "parcel_id": "FOX-HU-882211",
+      "carrier": "Foxpost",
+      "deadline": "2026-09-21 20:00 (még 18 óra van hátra)",
+      "alert_triggered": true,
+      "proxy_pickup_url": "https://profigepesz.hu/locker/proxy?parcel=FOX-HU-882211&token=af8908f5b2",
+      "notifications_dispatched": {
+        "sms": {
+          "recipient": "+36301239876",
+          "content": "FIGYELEM Tóth! A Foxpost csomagod (FOX-HU-882211) atveteli ideje LEJAR: 2026-09-21 20:00 (még 18 óra van hátra)! Nyitokod: 482910. Helyszin: Budapest Mammut I. Bevásárlóközpont. Nem tudsz elmenni? Kuldd el a linket csaladtagodnak az atvetelhez: https://profigepesz.hu/locker/proxy?parcel=FOX-HU-882211&token=af8908f5b2"
+        },
+        "whatsapp": {
+          "recipient": "+36301239876",
+          "content": "FIGYELEM Tóth! A Foxpost csomagod (FOX-HU-882211) atveteli ideje LEJAR: 2026-09-21 20:00 (még 18 óra van hátra)! Nyitokod: 482910. Helyszin: Budapest Mammut I. Bevásárlóközpont. Nem tudsz elmenni? Kuldd el a linket csaladtagodnak az atvetelhez: https://profigepesz.hu/locker/proxy?parcel=FOX-HU-882211&token=af8908f5b2"
+        },
+        "email": {
+          "recipient": "toth.gabor@example.hu",
+          "subject": "⚠️ SÜRGŐS: Csomagod átvételi ideje ma lejár (Foxpost - Budapest Mammut I. Bevásárlóközpont)",
+          "body": "Kedves Tóth!\n\nÉrtesítünk, hogy a(z) Foxpost csomagautomatában lévő csomagod átvételi határideje hamarosan lejár (2026-09-21 20:00 (még 18 óra van hátra)).\nÁtvételi helyszín: Budapest Mammut I. Bevásárlóközpont\nNyitókód: 482910\n\nAmennyiben nem tudsz érte menni, továbbítsd az alábbi 1-kattintásos meghatalmazást egy családtagodnak:\nMeghatalmazott átvételi kártya: https://profigepesz.hu/locker/proxy?parcel=FOX-HU-882211&token=af8908f5b2\n\nÜdvözlettel: ProfiGépész Kézbesítés-menedzsment"
+        }
+      }
+    }
+  },
+  {
+    "event_type": "VERIFY_COD_ORDER",
+    "timestamp": "2026-09-20T03:29:01.421410",
+    "result": {
+      "order_id": "ORD-COD-2026-8812",
+      "risk_score": 95,
+      "risk_threshold": 45,
+      "requires_confirmation": true,
+      "risk_factors": [
+        "Uj vasarlo (nincs rendelesi eloelet)",
+        "Nagy erteku utanvet (78 900 Ft >= 40 000 Ft)",
+        "Hianyos szallitasi cim (hianyzik a hazszam vagy tul rovid utcanev)",
+        "Gyanus / eldobhato email cim"
+      ],
+      "fulfillment_status": "PENDING_CUSTOMER_CONFIRMATION",
+      "confirmation_link": "https://profigepesz.hu/cod/confirm?order=ORD-COD-2026-8812&token=d4d8b64539",
+      "sms_dispatch": {
+        "recipient": "+36307778899",
+        "message": "Szia Kovács! Koszonjuk a ProfiGepesz megrendelesed (ORD-COD-2026-8812  78 900 Ft)! Mivel nagy erteku utanvetes csomagrol van szo  kerjuk  erositsd meg 1 kattintassal a feladast: https://profigepesz.hu/cod/confirm?order=ORD-COD-2026-8812&token=d4d8b64539"
+      }
+    }
+  },
+  {
+    "event_type": "CHECK_UNCONFIRMED_ORDERS",
+    "timestamp": "2026-09-20T03:29:01.423420",
+    "result": {
+      "order_id": "ORD-COD-2026-8812",
+      "shipping_hold_active": true,
+      "label_printing_allowed": false,
+      "escalation_ticket": {
+        "ticket_id": "TICKET-COD-HOLD-ORD-COD-2026-8812",
+        "action": "SHIPPING_HOLD",
+        "severity": "HIGH",
+        "assigned_to": "Vevőszolgálat - Utánvét Ellenőrzés",
+        "customer_name": "Kovács Dániel",
+        "customer_phone": "+36307778899",
+        "order_value_huf": 78900,
+        "hold_reason": "A vevő 24 órán belül nem kattintott az utánvét megerősítésre.",
+        "required_action": "Közvetlen telefonos egyeztetés szükséges a futárcímke kinyomtatása előtt!",
+        "erp_status": "LOCKED_SHIPPING_HOLD"
+      }
+    }
+  },
+  {
+    "event_type": "LOCKER_DEADLINE_ALERT",
+    "timestamp": "2026-09-20T03:29:01.425430",
+    "result": {
+      "parcel_id": "FOX-HU-882211",
+      "carrier": "Foxpost",
+      "deadline": "2026-09-21 20:00 (még 18 óra van hátra)",
+      "alert_triggered": true,
+      "proxy_pickup_url": "https://profigepesz.hu/locker/proxy?parcel=FOX-HU-882211&token=af8908f5b2",
+      "notifications_dispatched": {
+        "sms": {
+          "recipient": "+36301239876",
+          "content": "FIGYELEM Tóth! A Foxpost csomagod (FOX-HU-882211) atveteli ideje LEJAR: 2026-09-21 20:00 (még 18 óra van hátra)! Nyitokod: 482910. Helyszin: Budapest Mammut I. Bevásárlóközpont. Nem tudsz elmenni? Kuldd el a linket csaladtagodnak az atvetelhez: https://profigepesz.hu/locker/proxy?parcel=FOX-HU-882211&token=af8908f5b2"
+        },
+        "whatsapp": {
+          "recipient": "+36301239876",
+          "content": "FIGYELEM Tóth! A Foxpost csomagod (FOX-HU-882211) atveteli ideje LEJAR: 2026-09-21 20:00 (még 18 óra van hátra)! Nyitokod: 482910. Helyszin: Budapest Mammut I. Bevásárlóközpont. Nem tudsz elmenni? Kuldd el a linket csaladtagodnak az atvetelhez: https://profigepesz.hu/locker/proxy?parcel=FOX-HU-882211&token=af8908f5b2"
+        },
+        "email": {
+          "recipient": "toth.gabor@example.hu",
+          "subject": "[SURGOS] Csomagod atveteli ideje ma lejar (Foxpost - Budapest Mammut I. Bevásárlóközpont)",
+          "body": "Kedves Tóth!\n\nÉrtesítünk, hogy a(z) Foxpost csomagautomatában lévő csomagod átvételi határideje hamarosan lejár (2026-09-21 20:00 (még 18 óra van hátra)).\nÁtvételi helyszín: Budapest Mammut I. Bevásárlóközpont\nNyitókód: 482910\n\nAmennyiben nem tudsz érte menni, továbbítsd az alábbi 1-kattintásos meghatalmazást egy családtagodnak:\nMeghatalmazott átvételi kártya: https://profigepesz.hu/locker/proxy?parcel=FOX-HU-882211&token=af8908f5b2\n\nÜdvözlettel: ProfiGépész Kézbesítés-menedzsment"
+        }
+      }
+    }
+  },
+  {
+    "event_type": "VERIFY_COD_ORDER",
+    "timestamp": "2026-09-20T03:29:09.227674",
+    "result": {
+      "order_id": "ORD-LIVE-TEST-004",
+      "risk_score": 95,
+      "risk_threshold": 45,
+      "requires_confirmation": true,
+      "risk_factors": [
+        "Uj vasarlo (nincs rendelesi eloelet)",
+        "Nagy erteku utanvet (85 000 Ft >= 40 000 Ft)",
+        "Hianyos szallitasi cim (hianyzik a hazszam vagy tul rovid utcanev)",
+        "Gyanus / eldobhato email cim"
+      ],
+      "fulfillment_status": "PENDING_CUSTOMER_CONFIRMATION",
+      "confirmation_link": "https://profigepesz.hu/cod/confirm?order=ORD-LIVE-TEST-004&token=9deee467cc",
+      "sms_dispatch": {
+        "recipient": "+36307778899",
+        "message": "Szia Kovács! Koszonjuk a ProfiGepesz megrendelesed (ORD-LIVE-TEST-004  85 000 Ft)! Mivel nagy erteku utanvetes csomagrol van szo  kerjuk  erositsd meg 1 kattintassal a feladast: https://profigepesz.hu/cod/confirm?order=ORD-LIVE-TEST-004&token=9deee467cc"
+      }
+    }
+  },
+  {
+    "event_type": "VERIFY_COD_ORDER",
+    "timestamp": "2026-09-20T04:07:08.908408",
+    "result": {
+      "order_id": "ORD-COD-2026-8812",
+      "risk_score": 95,
+      "risk_threshold": 45,
+      "requires_confirmation": true,
+      "risk_factors": [
+        "Uj vasarlo (nincs rendelesi eloelet)",
+        "Nagy erteku utanvet (78 900 Ft >= 40 000 Ft)",
+        "Hianyos szallitasi cim (hianyzik a hazszam vagy tul rovid utcanev)",
+        "Gyanus / eldobhato email cim"
+      ],
+      "fulfillment_status": "PENDING_CUSTOMER_CONFIRMATION",
+      "confirmation_link": "https://profigepesz.hu/cod/confirm?order=ORD-COD-2026-8812&token=d4d8b64539",
+      "sms_dispatch": {
+        "recipient": "+36307778899",
+        "message": "Szia Kovács! Koszonjuk a ProfiGepesz megrendelesed (ORD-COD-2026-8812  78 900 Ft)! Mivel nagy erteku utanvetes csomagrol van szo  kerjuk  erositsd meg 1 kattintassal a feladast: https://profigepesz.hu/cod/confirm?order=ORD-COD-2026-8812&token=d4d8b64539"
+      }
+    }
+  },
+  {
+    "event_type": "VERIFY_COD_ORDER",
+    "timestamp": "2026-09-20T04:07:57.736487",
+    "result": {
+      "order_id": "ORD-COD-2026-8812",
+      "risk_score": 95,
+      "risk_threshold": 45,
+      "requires_confirmation": true,
+      "risk_factors": [
+        "Uj vasarlo (nincs rendelesi eloelet)",
+        "Nagy erteku utanvet (78 900 Ft >= 40 000 Ft)",
+        "Hianyos szallitasi cim (hianyzik a hazszam vagy tul rovid utcanev)",
+        "Gyanus / eldobhato email cim"
+      ],
+      "fulfillment_status": "PENDING_CUSTOMER_CONFIRMATION",
+      "confirmation_link": "https://profigepesz.hu/cod/confirm?order=ORD-COD-2026-8812&token=d4d8b64539",
+      "sms_dispatch": {
+        "recipient": "+36307778899",
+        "message": "Szia Kovács! Koszonjuk a ProfiGepesz megrendelesed (ORD-COD-2026-8812  78 900 Ft)! Mivel nagy erteku utanvetes csomagrol van szo  kerjuk  erositsd meg 1 kattintassal a feladast: https://profigepesz.hu/cod/confirm?order=ORD-COD-2026-8812&token=d4d8b64539"
+      }
+    }
+  }
+]

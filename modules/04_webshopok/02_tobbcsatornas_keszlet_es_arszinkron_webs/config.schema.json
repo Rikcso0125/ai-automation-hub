@@ -1,0 +1,78 @@
+{
+  "title": "Többcsatornás Készlet- és Árszinkron Konfiguráció",
+  "type": "object",
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock szimuláció teszteléshez vagy éles csatorna API hívások."
+    },
+    "buffer_stock_mode": {
+      "type": "string",
+      "title": "1. Kérdés: Készletpuffer és Túladás-Védelem Stratégia",
+      "enum": [
+        "fixed_buffer",
+        "dynamic_quota",
+        "realtime_lock"
+      ],
+      "default": "fixed_buffer",
+      "description": "A: Fix puffer (pl. <=2 db esetén 0 a piactereken), B: Dinamikus kvóta-elosztás (60% webshop, 20% eMAG, 20% Alza), C: Valós idejű zárolás (15 perces foglalás)."
+    },
+    "buffer_threshold": {
+      "type": "integer",
+      "title": "Fix Készletpuffer Küszöbérték (db)",
+      "default": 2,
+      "description": "Ennél kisebb vagy egyenlő készletnél a piactereken 0-ra áll a készlet (fixed_buffer módban)."
+    },
+    "reservation_ttl_minutes": {
+      "type": "integer",
+      "title": "Kosár-foglalás Érvényességi Idő (perc)",
+      "default": 15,
+      "description": "Időtartam, amíg a folyamatban lévő vásárlás idejére zárolva van a darabszám (realtime_lock módban)."
+    },
+    "pricing_mode": {
+      "type": "string",
+      "title": "2. Kérdés: Csatornánkénti Árképzés és Jutalékkezelés",
+      "enum": [
+        "uniform",
+        "margin_protected",
+        "channel_rules"
+      ],
+      "default": "margin_protected",
+      "description": "A: Egységes ár mindenhol, B: Jutalékkal növelt árrésvédett ár (eMAG +16%, Alza +14%), C: Egyedi csatorna szabályzat minimális árréskorláttal."
+    },
+    "min_floor_margin_pct": {
+      "type": "number",
+      "title": "Minimális Árrés Plafon (%)",
+      "default": 12.0,
+      "description": "Minimális haszonkulcs, ami alá egyetlen piactéri akció vagy jutalék sem szoríthatja az árat."
+    },
+    "pos_sync_mode": {
+      "type": "string",
+      "title": "3. Kérdés: Fizikai Üzlet (POS Pénztárgép) Szinkron Mód",
+      "enum": [
+        "realtime_push",
+        "batch_periodic",
+        "hybrid"
+      ],
+      "default": "hybrid",
+      "description": "A: Valós idejű webhook push (<3 mp), B: Időszakos kötegelt szinkron (5 perc), C: Hibrid (azonnali push alacsony készletnél + háttér szinkron & leltárriasztás)."
+    },
+    "low_stock_threshold": {
+      "type": "integer",
+      "title": "Alacsony Készlet Határérték (db)",
+      "default": 5,
+      "description": "Hibrid módban ennél kisebb készletnél azonnali push levonást hajt végre."
+    },
+    "storage_path": {
+      "type": "string",
+      "title": "Audit és Szinkron Napló Fájl",
+      "default": "data/tobbcsatornas_szinkron_naplo.json"
+    }
+  }
+}

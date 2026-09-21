@@ -1,0 +1,8 @@
+{
+  "id": "06_helyszini_felmeresbol_arajanlat_hangfelv",
+  "title": "Helyszíni Felmérésből Árajánlat Hangfelvétel Alapján (Voice-to-Quote 3 Perc Alatt)",
+  "category": "szolgaltatok",
+  "icon": "🎙️",
+  "version": "1.0.0",
+  "description": "A terepről távozó szakember mobilos hangfeljegyzést és fotókat küld az elvégzendő munkáról; az AI automatikusan cikkszámokra, anyagszükségletre és munkadíjra bontja, majd 3 percen belül elküldésre kész, márkázott PDF ajánlatot állít elő mobil jóváhagyással vagy közvetlen kiküldéssel."
+}

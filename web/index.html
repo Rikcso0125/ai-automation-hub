@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="theme-color" content="#0b0f19">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>AI Automation Hub | Vállalati Automatizációs Motor & Admin</title>
+  <link rel="stylesheet" href="/static/styles.css?v=2.1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Markdown parser library -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-brand">
+      <div class="brand-logo">⚡</div>
+      <div class="brand-text">
+        <span class="brand-title">AI Automation Hub</span>
+        <span class="brand-subtitle">Vállalati Munkafolyamat Motor</span>
+      </div>
+    </div>
+
+    <!-- Live Quick Stats (Responsive horizontal strip) -->
+    <div class="nav-stats">
+      <div class="stat-pill" title="Összes regisztrált AI modul">
+        <span class="stat-label">Összes:</span>
+        <strong id="stat-total-modules">62</strong>
+      </div>
+      <div class="stat-pill" title="Aktív és működőképes modulok">
+        <span class="stat-label">Aktív:</span>
+        <strong id="stat-active-modules" class="text-success">61</strong>
+      </div>
+      <div class="stat-pill" title="Mai sikeres tranzakciók száma">
+        <span class="stat-label">Mai Futások:</span>
+        <strong id="stat-runs-today">0</strong>
+      </div>
+      <div class="stat-pill" title="Végrehajtások sikerességi aránya">
+        <span class="stat-label">Sikeresség:</span>
+        <strong id="stat-success-rate" class="text-primary">100%</strong>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <button class="btn btn-outline btn-sm" onclick="openLogsModal()" title="Futási napló megnyitása">
+        <span class="icon">📜</span> <span class="action-text">Napló</span>
+      </button>
+      <button class="btn btn-outline btn-sm" onclick="loadModules()" title="Lista frissítése">
+        <span class="icon">🔄</span> <span class="action-text">Frissítés</span>
+      </button>
+      <div class="server-status" title="Hub szerver állapota">
+        <span class="status-dot online"></span> <span class="status-text">Online</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-container">
+    
+    <!-- Hero / Action Banner -->
+    <section class="hero-banner">
+      <div class="hero-text">
+        <h1>Vállalati AI Automatizációs Központ</h1>
+        <p>Kezelje, konfigurálja és kösse be vállalkozása mind a 62 intelligens munkafolyamatát egyetlen helyről. Beépített Make.com, n8n, Zapier webhook végpontok, valós idejű tesztelési lehetőség és 100% mobilbarát felület.</p>
+      </div>
+
+      <!-- Controls: Search & Status Filter -->
+      <div class="hero-controls">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" placeholder="Keresés modul neve vagy kulcsszó szerint..." oninput="filterModules()">
+          <button id="search-clear-btn" class="search-clear" onclick="clearSearch()" style="display: none;">✕</button>
+        </div>
+
+        <div class="filter-pill-group">
+          <button class="filter-chip active" data-status="all" onclick="setStatusFilter('all')">Mind</button>
+          <button class="filter-chip" data-status="active" onclick="setStatusFilter('active')">🟢 Aktívak</button>
+          <button class="filter-chip" data-status="needs_setup" onclick="setStatusFilter('needs_setup')">🟡 Beállításra várók</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Filter Tabs -->
+    <nav class="category-tabs" aria-label="Modul kategóriák">
+      <button class="tab-btn active" data-category="all" onclick="setCategory('all')">
+        <span class="tab-icon">🌐</span> Összes Modul (<span id="count-all">0</span>)
+      </button>
+      <button class="tab-btn" data-category="altalanos" onclick="setCategory('altalanos')">
+        <span class="tab-icon">🏢</span> 1. Általános & Pénzügy (<span id="count-altalanos">0</span>)
+      </button>
+      <button class="tab-btn" data-category="szolgaltatok" onclick="setCategory('szolgaltatok')">
+        <span class="tab-icon">🛠️</span> 2. Szolgáltatók (<span id="count-szolgaltatok">0</span>)
+      </button>
+      <button class="tab-btn" data-category="kereskedok" onclick="setCategory('kereskedok')">
+        <span class="tab-icon">📦</span> 3. Kereskedők (<span id="count-kereskedok">0</span>)
+      </button>
+      <button class="tab-btn" data-category="webshopok" onclick="setCategory('webshopok')">
+        <span class="tab-icon">🛒</span> 4. Webshop & E-com (<span id="count-webshopok">0</span>)
+      </button>
+      <button class="tab-btn" data-category="muszaki" onclick="setCategory('muszaki')">
+        <span class="tab-icon">🏗️</span> 5. Gyártás & Műszaki (<span id="count-muszaki">0</span>)
+      </button>
+    </nav>
+
+    <!-- Modules Grid -->
+    <section id="modules-grid" class="modules-grid">
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <p>Modulok és konfigurációk betöltése folyamatban...</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Setup Wizard Modal -->
+  <div id="modal-wizard" class="modal-overlay" style="display: none;" onclick="handleOverlayClick(event, 'modal-wizard')">
+    <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-module-title">
+      
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span id="modal-module-icon" class="modal-module-icon">⚡</span>
+          <div class="modal-title-text">
+            <h2 id="modal-module-title">Modul Neve</h2>
+            <div class="modal-meta-badges">
+              <span id="modal-module-id-badge" class="badge badge-id">id</span>
+              <span id="modal-module-status" class="badge">Állapot</span>
+            </div>
+          </div>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('modal-wizard')" aria-label="Bezárás">✕</button>
+      </div>
+
+      <!-- Modal Tabs -->
+      <div class="modal-tabs">
+        <button id="mtab-guide" class="modal-tab-btn active" onclick="switchModalTab('tab-guide')">📖 Bekötési Útmutató</button>
+        <button id="mtab-config" class="modal-tab-btn" onclick="switchModalTab('tab-config')">⚙️ Konfiguráció & Mezők</button>
+        <button id="mtab-test" class="modal-tab-btn" onclick="switchModalTab('tab-test')">🧪 Élő Tesztelő</button>
+      </div>
+
+      <!-- Tab 1: Integration Guide -->
+      <div id="tab-guide" class="modal-tab-content active">
+        <div class="webhook-callout">
+          <div class="callout-header">
+            <strong>🔗 Modul Dedikált Webhook URL (Beérkező adatok fogadásához):</strong>
+            <button class="btn-copy-sm" onclick="copyCurrentWebhook(this)">Másolás 📋</button>
+          </div>
+          <code id="modal-webhook-url">http://localhost:8000/api/v1/webhook/...</code>
+          <p class="callout-hint">
+            Irányítsa erre a címre a Make.com, n8n, Zapier vagy saját CRM / ERP rendszere webhook hívásait (POST kérés, JSON tartalom).
+          </p>
+        </div>
+
+        <div class="quick-integrations-bar">
+          <span class="qi-label">Támogatott integrációk:</span>
+          <span class="qi-tag">Make.com</span>
+          <span class="qi-tag">n8n</span>
+          <span class="qi-tag">Zapier</span>
+          <span class="qi-tag">cURL / Python</span>
+          <span class="qi-tag">REST API</span>
+        </div>
+
+        <div id="modal-readme-content" class="markdown-body">
+          <!-- Rendered README.md -->
+        </div>
+      </div>
+
+      <!-- Tab 2: Config & Keys -->
+      <div id="tab-config" class="modal-tab-content">
+        <form id="module-config-form" onsubmit="saveCurrentConfig(event)">
+          <div class="toggle-card">
+            <div class="toggle-card-info">
+              <strong>Modul Működési Állapota</strong>
+              <p>Ha aktív, a bejövő webhook hívások azonnal lefutnak. Kikapcsolt állapotban skipped választ ad és kíméli a szervert.</p>
+            </div>
+            <label class="switch" title="Modul ki/bekapcsolása">
+              <input type="checkbox" id="config-is-active" checked>
+              <span class="slider round"></span>
+            </label>
+          </div>
+
+          <div class="config-section-title">
+            <span>⚙️ Modul Paraméterek és Beállítások</span>
+            <span id="config-field-count" class="badge-count">0 mező</span>
+          </div>
+
+          <div id="dynamic-config-fields" class="form-fields-container">
+            <!-- Dynamically generated from config.schema.json -->
+          </div>
+
+          <div class="modal-actions sticky-actions">
+            <button type="button" class="btn btn-outline" onclick="closeModal('modal-wizard')">Mégse</button>
+            <button type="submit" class="btn btn-primary" id="btn-save-config">
+              💾 Beállítások Mentése
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Tab 3: Live Test Runner -->
+      <div id="tab-test" class="modal-tab-content">
+        <div class="test-layout">
+          <!-- Test Input -->
+          <div class="test-input-col">
+            <div class="col-header">
+              <label><strong>Bemeneti JSON Payload:</strong></label>
+              <button class="btn-link" onclick="resetDefaultPayload()">Minta visszaállítása</button>
+            </div>
+            <textarea id="test-payload-input" class="code-textarea" rows="12" spellcheck="false" placeholder="{}"></textarea>
+            <button class="btn btn-success btn-block btn-lg" onclick="runLiveTest()" id="btn-run-test">
+              ⚡ Teszt Futtatása Most
+            </button>
+          </div>
+
+          <!-- Test Output -->
+          <div class="test-output-col">
+            <div class="col-header">
+              <label><strong>Modul Válasza & Eredmény:</strong></label>
+              <div class="output-header-actions">
+                <span id="test-duration-badge" class="badge-duration">-</span>
+                <button class="btn-copy-sm" onclick="copyTestOutput(this)">Másolás 📋</button>
+              </div>
+            </div>
+            <pre id="test-output-viewer" class="code-viewer">Kattintson a "Teszt Futtatása Most" gombra a modul meghívásához...</pre>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Logs Modal -->
+  <div id="modal-logs" class="modal-overlay" style="display: none;" onclick="handleOverlayClick(event, 'modal-logs')">
+    <div class="modal-container modal-lg" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-module-icon">📜</span>
+          <div>
+            <h2>Rendszerszintű Futási Napló (Live Logs)</h2>
+            <p class="modal-subtitle">Valós idejű végrehajtási adatok, válaszidők és részletes kimenetek</p>
+          </div>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('modal-logs')" aria-label="Bezárás">✕</button>
+      </div>
+
+      <div class="modal-body modal-scroll">
+        <div class="logs-filter-bar">
+          <input type="text" id="logs-search-input" class="form-control" placeholder="Keresés modul név vagy állapot szerint..." oninput="filterLogsTable()">
+          <button class="btn btn-outline btn-sm" onclick="openLogsModal()">🔄 Frissítés</button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="logs-table">
+            <thead>
+              <tr>
+                <th>Időpont</th>
+                <th>Modul</th>
+                <th>Állapot</th>
+                <th>Futási Idő</th>
+                <th>Részletek</th>
+              </tr>
+            </thead>
+            <tbody id="logs-table-body">
+              <tr><td colspan="5" class="text-center">Naplózott események betöltése...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn btn-outline" onclick="closeModal('modal-logs')">Bezárás</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Log Detail Modal -->
+  <div id="modal-log-detail" class="modal-overlay" style="display: none;" onclick="handleOverlayClick(event, 'modal-log-detail')">
+    <div class="modal-container modal-md">
+      <div class="modal-header">
+        <h3>🔍 Naplóbejegyzés Részletei</h3>
+        <button class="modal-close-btn" onclick="closeModal('modal-log-detail')">✕</button>
+      </div>
+      <div class="modal-tab-content active modal-scroll">
+        <pre id="log-detail-viewer" class="code-viewer" style="height: 380px;"></pre>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-outline" onclick="closeModal('modal-log-detail')">Bezárás</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js?v=2.1.0"></script>
+</body>
+</html>

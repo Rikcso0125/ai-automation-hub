@@ -1,0 +1,26 @@
+{
+  "module_id": "03_dinamikus_kosarelhagyas_visszahoditas_sm",
+  "cart_session_id": "CART-SESS-982314",
+  "customer": {
+    "name": "Nagy Zoltán",
+    "email": "nagy.zoltan@example.hu",
+    "phone": "+36309876543"
+  },
+  "cart_items": [
+    {
+      "sku": "MAKITA-DHP-484",
+      "name": "Makita DHP484Z Akkus Ütvefúró-csavarbehajtó",
+      "category": "szerszamgep",
+      "quantity": 1,
+      "unit_price_gross": 64990,
+      "image_url": "https://profigepesz.hu/images/makita-dhp484.jpg",
+      "stock_remaining": 2
+    }
+  ],
+  "abandoned_at": "2026-09-20T02:45:00",
+  "config": {
+    "sms_delay_minutes": 30,
+    "email_delay_hours": 24,
+    "incentive_mode": "tiered_discount"
+  }
+}

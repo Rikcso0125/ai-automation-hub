@@ -1,0 +1,8 @@
+{
+  "id": "05_zart_hatosagi_portalok_es_regi_erp_k_ai_",
+  "title": "Zárt Hatósági Portálok és Régi ERP-k AI-RPA Böngésző Robotjai",
+  "category": "muszaki",
+  "icon": "🤖",
+  "version": "1.0.0",
+  "description": "Zárt állami portálok (ÉTDR, e-Közmű, Ügyfélkapu+, DÁP) és API nélküli régi belső ERP rendszerek önálló AI-RPA böngésző robotja, TOTP/AVDH hitelesítéssel, önjavító vizuális DOM-navigációval és hatósági tértivevény-szinkronnal."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "termeszetes_nyelvu_adatbazis_kereso_text",
+  "title": "Természetes Nyelvű Adatbázis Kereső (Text-to-SQL & Chat-with-Data)",
+  "category": "altalanos",
+  "icon": "🔎",
+  "version": "1.0.0",
+  "description": "Természetes magyar nyelvű kérdések automatikus SQL/adatbázis lekérdezéssé alakítása. Univerzális adatforrás támogatás (PostgreSQL, MySQL, SQLite, MSSQL, Excel, Google Sheets, Egyedi DB), konfigurálható Read-Only sandbox és PII maszkolás, strukturált táblázat és interaktív grafikon-javaslat."
+}

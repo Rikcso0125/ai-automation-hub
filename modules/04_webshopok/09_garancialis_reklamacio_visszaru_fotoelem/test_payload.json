@@ -1,0 +1,38 @@
+{
+  "module_id": "09_garancialis_reklamacio_visszaru_fotoelem",
+  "claim_id": "CLM-2026-8941",
+  "customer": {
+    "name": "Kovács Péter",
+    "email": "kovacs.peter@pelda.hu",
+    "phone": "+36301234567",
+    "city": "Budapest",
+    "address": "Váci út 142. 3/12.",
+    "zip": "1138"
+  },
+  "order": {
+    "order_number": "ORD-2025-11048",
+    "invoice_number": "SZAMLA-2025-0842",
+    "purchase_date": "2025-10-15",
+    "item_sku": "BOSCH-GSR-18V-50",
+    "item_name": "Bosch Professional GSR 18V-50 Akkus Fúró-Csavarozó",
+    "item_price_gross_huf": 48900,
+    "serial_number": "SN-8849201948"
+  },
+  "complaint": {
+    "issue_description": "Bekapcsoláskor szikrázik a motor és füstöl a szellőzőnyílás, a tokmány megszorult normál fúrás közben.",
+    "photo_urls": [
+      "https://storage.webshop.hu/claims/CLM-2026-8941/motor_eges.jpg",
+      "https://storage.webshop.hu/claims/CLM-2026-8941/adattabla_sn.jpg"
+    ],
+    "preferred_return_channel": "foxpost_box",
+    "preferred_resolution": "store_credit_bonus"
+  },
+  "config": {
+    "verification_mode": "hybrid_smart_rule",
+    "keep_the_item_threshold_huf": 15000,
+    "return_logistics_channel": "customer_choice",
+    "resolution_mode": "customer_preference",
+    "approval_gate": "hybrid_confidence_threshold",
+    "store_credit_bonus_percent": 10
+  }
+}

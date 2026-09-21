@@ -1,0 +1,77 @@
+{
+  "title": "Banki Jóváírás-Párosítás Beállítások",
+  "type": "object",
+  "required": [
+    "bank_source_type",
+    "confidence_threshold_percent"
+  ],
+  "properties": {
+    "bank_source_type": {
+      "type": "string",
+      "title": "Banki Kapcsolat / Adatforrás Típusa",
+      "enum": [
+        "Billingo Bankszinkron API",
+        "Számlázz.hu Autokassza API",
+        "Wise Business API",
+        "Revolut Business API",
+        "Magyar Banki API (OTP / Erste / CIB / K&H / MBH)",
+        "Banki CSV / CAMT.053 Fájl Import"
+      ],
+      "default": "Billingo Bankszinkron API",
+      "description": "Válaszd ki, honnan érkeznek a bejövő utalási tranzakciók."
+    },
+    "bank_name": {
+      "type": "string",
+      "title": "Számlavezető Bank Neve",
+      "enum": [
+        "OTP Bank",
+        "Erste Bank",
+        "K&H Bank",
+        "MBH Bank",
+        "CIB Bank",
+        "UniCredit Bank",
+        "Wise Business",
+        "Revolut Business",
+        "Egyéb Bank / Univerzális CSV"
+      ],
+      "default": "OTP Bank"
+    },
+    "bank_api_token": {
+      "type": "string",
+      "title": "Banki API Token / Számlázó Kulcs",
+      "format": "password",
+      "description": "A kiválasztott bank vagy számlázó API hozzáférési kulcsa."
+    },
+    "confidence_threshold_percent": {
+      "type": "string",
+      "title": "Fuzzy Párosítási Biztonsági Határ (%)",
+      "default": "85",
+      "description": "Ennél magasabb egyezési pontszám esetén könyveli le automatikusan a számlát. Ez alatt kézi jóváhagyásra teszi."
+    },
+    "partial_payment_handling": {
+      "type": "string",
+      "title": "Részfizetés Kezelése",
+      "enum": [
+        "Részfizetés rögzítése + Köszönőlevél a fennmaradó összeggel",
+        "Kézi jóváhagyásra küldés",
+        "Csak teljes összegű számlazárás engedélyezése"
+      ],
+      "default": "Részfizetés rögzítése + Köszönőlevél a fennmaradó összeggel"
+    },
+    "stop_dunning_on_match": {
+      "type": "string",
+      "title": "Kintlévőség-kezelő Robot Azonnali Leállítása",
+      "enum": [
+        "Igen (Azonnal leállítja a felszólításokat)",
+        "Nem"
+      ],
+      "default": "Igen (Azonnal leállítja a felszólításokat)",
+      "description": "Sikeres párosításkor automatikusan törli a kintlévőség-kezelő modulból a felszólítási időzítést."
+    },
+    "alert_email": {
+      "type": "string",
+      "title": "Pénzügyi Riasztási Email (Kétes tranzakciókhoz)",
+      "default": "penzugy@cegem.hu"
+    }
+  }
+}

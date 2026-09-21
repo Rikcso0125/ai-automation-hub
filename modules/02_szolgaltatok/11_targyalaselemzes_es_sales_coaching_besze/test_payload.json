@@ -1,0 +1,58 @@
+{
+  "module_id": "11_targyalaselemzes_es_sales_coaching_besze",
+  "call_metadata": {
+    "call_id": "CALL-20260920-8812",
+    "timestamp": "2026-09-20T14:15:00",
+    "duration_seconds": 420,
+    "deal_value_huf": 1450000
+  },
+  "sales_rep": {
+    "id": "REP-003",
+    "name": "Németh Tamás (Junior Értékesítő)",
+    "phone": "+36 30 222 4455",
+    "email": "nemeth.tamas@profiklima.hu"
+  },
+  "customer": {
+    "name": "Farkas Balázs",
+    "company": "Farkas Autószerviz Kft.",
+    "phone": "+36 30 888 9900"
+  },
+  "transcript_turns": [
+    {
+      "speaker": "SALES_REP",
+      "text": "Jó napot kívánok Farkas úr, Németh Tamás vagyok a ProfiKlíma Kft-től. A tegnapi ajánlatunkkal kapcsolatban keresem.",
+      "duration_sec": 12
+    },
+    {
+      "speaker": "CUSTOMER",
+      "text": "Igen, néztem, de őszintén szólva eléggé sokallom a másfél milliós összeget a műhely fűtésére...",
+      "duration_sec": 8
+    },
+    {
+      "speaker": "SALES_REP",
+      "text": "De nézze, a Daikin gép a legmodernebb japán kompresszorral van szerelve, A+++ energiaosztály, 5 év garanciával, és a szerelésnél mi rozsdamentes acél konzolt használunk meg vegyéstisztított rézcsövet, ráadásul az első évben a karbantartás is teljesen díjmentes, szóval abszolút megéri az árát!",
+      "duration_sec": 45
+    },
+    {
+      "speaker": "CUSTOMER",
+      "text": "Értem én, de nekem most nem biztos hogy kell a...",
+      "duration_sec": 5
+    },
+    {
+      "speaker": "SALES_REP",
+      "text": "És még nem is mondtam, hogy a hétvégi beüzemelést is ingyen vállaljuk, és 48 órán belül kiszállunk ha bármi gond van, ezt egyetlen más klímás sem adja meg önnek a környéken!",
+      "duration_sec": 28,
+      "interrupted_customer": true
+    },
+    {
+      "speaker": "CUSTOMER",
+      "text": "Jó, hát... át kell még ezt gondolnom a könyvelővel, majd jövő héten beszéljünk.",
+      "duration_sec": 8
+    },
+    {
+      "speaker": "SALES_REP",
+      "text": "Rendben van Farkas úr, akkor keresem hétfőn délelőtt. Viszonthallásra!",
+      "duration_sec": 8
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "title": "Voice-to-Action Napi Munkalapok és Építési Napló Konfiguráció",
+  "type": "object",
+  "required": [
+    "api_key"
+  ],
+  "properties": {
+    "api_key": {
+      "type": "string",
+      "title": "Whisper AI / Speech-to-Text Token",
+      "format": "password",
+      "default": "mock_whisper_voice_token_2026",
+      "description": "OpenAI Whisper vagy privát STT motor hozzáférési kulcs."
+    },
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (szimulált beszédfeldolgozás és naplógenerálás) vagy Production (élő Whisper API és e-napló bekötés)."
+    },
+    "voice_input_mode": {
+      "type": "string",
+      "title": "1. Kérdés: Hangbemenet és Beszédfeldolgozás",
+      "enum": [
+        "unstructured_whisper_memo",
+        "interactive_qa_bot",
+        "hybrid_smart_voice"
+      ],
+      "default": "hybrid_smart_voice",
+      "description": "Egyben elmondott kötetlen hangjegyzet Whisper AI-val, interaktív kérdés-válasz bot, vagy hibrid felület."
+    },
+    "document_output_format": {
+      "type": "string",
+      "title": "2. Kérdés: e-Építési Napló & Munkalap Formátum",
+      "enum": [
+        "official_e_naplo_xml_pdf",
+        "internal_service_worksheet",
+        "dual_sync_both"
+      ],
+      "default": "dual_sync_both",
+      "description": "Hivatalos 191/2009 Korm. rend. szerinti e-Építési Napló, belső kivitelezői rezsióradíjas munkalap, vagy kettős párhuzamos generálás."
+    },
+    "workflow_approval_mode": {
+      "type": "string",
+      "title": "3. Kérdés: Jóváhagyási Kapu & ERP Szinkron",
+      "enum": [
+        "direct_autonomous_sync",
+        "hitl_chief_engineer_review",
+        "hybrid_engineer_threshold"
+      ],
+      "default": "hybrid_engineer_threshold",
+      "description": "Azonnali autonóm ERP könyvelés, kötelező főmérnöki jóváhagyás (HITL), vagy intelligens hibaküszöbös ellenőrzés."
+    },
+    "hourly_labor_rate_huf": {
+      "type": "integer",
+      "title": "Kivitelezői Rezsióradíj (Ft/óra)",
+      "default": 9500,
+      "description": "A munkaórák automatikus elszámolásához használt alapértelmezett óradíj."
+    },
+    "default_project_code": {
+      "type": "string",
+      "title": "Alapértelmezett Projektkód",
+      "default": "PRJ-2026-CORVIN-03",
+      "description": "Ha a hanganyagban nem hangzik el projektszám, erre a projektre könyvel a rendszer."
+    },
+    "notification_channel": {
+      "type": "string",
+      "title": "Értesítési Csatorna",
+      "enum": [
+        "telegram",
+        "email",
+        "sms",
+        "webhook"
+      ],
+      "default": "telegram",
+      "description": "Napi összefoglaló és jóváhagyási link kézbesítési csatornája a főmérnöknek."
+    }
+  }
+}

@@ -1,0 +1,326 @@
+[
+  {
+    "event_type": "ORDER_CONFIRMATION_OUTBOUND",
+    "timestamp": "2026-09-20T03:31:18.693048",
+    "data": {
+      "order_id": "ORD-WEB-2026-7711",
+      "delivery_mode_used": "interactive_buttons",
+      "delivery_report": {
+        "channel": "WHATSAPP_CLOUD_API",
+        "recipient": "+36304445566",
+        "meta_wamid": "wamid.HBgL1789867878693",
+        "status": "DELIVERED_TO_WHATSAPP"
+      },
+      "whatsapp_payload": {
+        "type": "interactive",
+        "interactive": {
+          "type": "button",
+          "body": {
+            "text": "Szia Balogh! Örömmel értesítünk  hogy a(z) ORD-WEB-2026-7711 számú rendelésedet rögzítettük! Összeg: 49 990 Ft. Futár: GLS."
+          },
+          "action": {
+            "buttons": [
+              {
+                "type": "reply",
+                "reply": {
+                  "id": "BTN_TRACK",
+                  "title": "Csomagkövetés"
+                }
+              },
+              {
+                "type": "reply",
+                "reply": {
+                  "id": "BTN_INVOICE",
+                  "title": "Számla letöltés"
+                }
+              },
+              {
+                "type": "reply",
+                "reply": {
+                  "id": "BTN_HELP",
+                  "title": "Kérdésem van"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "add_to_order_offer": {
+        "active": true,
+        "time_window_minutes": 15,
+        "recommended_sku": "BOSCH-BIT-SET-32",
+        "recommended_name": "Bosch Professional 32-részes Csavarozó Bitkészlet",
+        "special_price_huf": 4990,
+        "original_price_huf": 6990,
+        "shipping_cost_huf": 0,
+        "message": "Még van 15 perced! Tedd a csomagodba a prémium 32-részes Bosch bitkészletet 6 990 Ft helyett csak 4 990 Ft-ért, és a meglévő rendeléseddel együtt DÍJMENTESEN szállítjuk!",
+        "action_button": "HOZZÁADOM (+4 990 Ft)"
+      },
+      "sent_at": "2026-09-20T03:31:18.693048"
+    }
+  },
+  {
+    "event_type": "ORDER_CONFIRMATION_OUTBOUND",
+    "timestamp": "2026-09-20T03:31:18.694047",
+    "data": {
+      "order_id": "ORD-WEB-2026-7712",
+      "delivery_mode_used": "hybrid_sms_fallback",
+      "delivery_report": {
+        "channel": "SMS_FALLBACK_TELNYX",
+        "reason": "NO_WHATSAPP_ACCOUNT_ON_PHONE",
+        "recipient": "+36208889900",
+        "sms_content": "Szia Kiss! A ORD-WEB-2026-7712 rendelesed rogzitettuk (32 000 Ft). Futar: Foxpost. Nyomkovetes: https://gls-group.com/track/ORD-WEB-2026-7712",
+        "status": "DELIVERED_VIA_SMS"
+      },
+      "whatsapp_payload": {
+        "type": "interactive",
+        "interactive": {
+          "type": "button",
+          "body": {
+            "text": "Szia Kiss! Örömmel értesítünk  hogy a(z) ORD-WEB-2026-7712 számú rendelésedet rögzítettük! Összeg: 32 000 Ft. Futár: Foxpost."
+          },
+          "action": {
+            "buttons": [
+              {
+                "type": "reply",
+                "reply": {
+                  "id": "BTN_TRACK",
+                  "title": "Csomagkövetés"
+                }
+              },
+              {
+                "type": "reply",
+                "reply": {
+                  "id": "BTN_INVOICE",
+                  "title": "Számla letöltés"
+                }
+              },
+              {
+                "type": "reply",
+                "reply": {
+                  "id": "BTN_HELP",
+                  "title": "Kérdésem van"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "add_to_order_offer": {
+        "active": true,
+        "time_window_minutes": 15,
+        "recommended_sku": "BOSCH-BIT-SET-32",
+        "recommended_name": "Bosch Professional 32-részes Csavarozó Bitkészlet",
+        "special_price_huf": 4990,
+        "original_price_huf": 6990,
+        "shipping_cost_huf": 0,
+        "message": "Még van 15 perced! Tedd a csomagodba a prémium 32-részes Bosch bitkészletet 6 990 Ft helyett csak 4 990 Ft-ért, és a meglévő rendeléseddel együtt DÍJMENTESEN szállítjuk!",
+        "action_button": "HOZZÁADOM (+4 990 Ft)"
+      },
+      "sent_at": "2026-09-20T03:31:18.694047"
+    }
+  },
+  {
+    "event_type": "CUSTOMER_MESSAGE_INBOUND",
+    "timestamp": "2026-09-20T03:31:18.695068",
+    "data": {
+      "inbound_message": "Szeretném módosítani a szállítási címet a Rétköz utca 14-re!",
+      "sender_phone": "+36304445566",
+      "intent_detected": "SENSITIVE_ORDER_MODIFICATION",
+      "ai_support_mode": "hitl_approval_gate",
+      "resolution": {
+        "mode": "hitl_approval_gate",
+        "status": "APPROVAL_CARD_CREATED",
+        "ai_draft_response": "Kérésedet rögzítettük és átadtuk az ügyfélszolgálatnak, amint a kollégánk 1 kattintással jóváhagyja, módosítjuk a címet.",
+        "human_approval_card": {
+          "order_id": "ORD-WEB-2026-7711",
+          "customer_phone": "+36304445566",
+          "requested_action": "Szeretném módosítani a szállítási címet a Rétköz utca 14-re!",
+          "risk_level": "MEDIUM",
+          "approve_button_url": "https://admin.profigepesz.hu/approve?order=ORD-WEB-2026-7711&action=address_change"
+        }
+      },
+      "handled_at": "2026-09-20T03:31:18.695068"
+    }
+  },
+  {
+    "event_type": "ORDER_CONFIRMATION_OUTBOUND",
+    "timestamp": "2026-09-20T03:31:29.046971",
+    "data": {
+      "order_id": "ORD-LIVE-TEST-005",
+      "delivery_mode_used": "hybrid_sms_fallback",
+      "delivery_report": {
+        "channel": "WHATSAPP_CLOUD_API",
+        "recipient": "+36304445566",
+        "meta_wamid": "wamid.HBgL1789867889046",
+        "status": "DELIVERED_TO_WHATSAPP"
+      },
+      "whatsapp_payload": {
+        "type": "interactive",
+        "interactive": {
+          "type": "button",
+          "body": {
+            "text": "Szia Balogh! Örömmel értesítünk  hogy a(z) ORD-LIVE-TEST-005 számú rendelésedet rögzítettük! Összeg: 49 990 Ft. Futár: GLS."
+          },
+          "action": {
+            "buttons": [
+              {
+                "type": "reply",
+                "reply": {
+                  "id": "BTN_TRACK",
+                  "title": "Csomagkövetés"
+                }
+              },
+              {
+                "type": "reply",
+                "reply": {
+                  "id": "BTN_INVOICE",
+                  "title": "Számla letöltés"
+                }
+              },
+              {
+                "type": "reply",
+                "reply": {
+                  "id": "BTN_HELP",
+                  "title": "Kérdésem van"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "add_to_order_offer": {
+        "active": true,
+        "time_window_minutes": 15,
+        "recommended_sku": "BOSCH-BIT-SET-32",
+        "recommended_name": "Bosch Professional 32-részes Csavarozó Bitkészlet",
+        "special_price_huf": 4990,
+        "original_price_huf": 6990,
+        "shipping_cost_huf": 0,
+        "message": "Még van 15 perced! Tedd a csomagodba a prémium 32-részes Bosch bitkészletet 6 990 Ft helyett csak 4 990 Ft-ért, és a meglévő rendeléseddel együtt DÍJMENTESEN szállítjuk!",
+        "action_button": "HOZZÁADOM (+4 990 Ft)"
+      },
+      "sent_at": "2026-09-20T03:31:29.046971"
+    }
+  },
+  {
+    "event_type": "ORDER_CONFIRMATION_OUTBOUND",
+    "timestamp": "2026-09-20T04:07:08.391534",
+    "data": {
+      "order_id": "ORD-WEB-2026-7711",
+      "delivery_mode_used": "hybrid_sms_fallback",
+      "delivery_report": {
+        "channel": "WHATSAPP_CLOUD_API",
+        "recipient": "+36304445566",
+        "meta_wamid": "wamid.HBgL1789870028391",
+        "status": "DELIVERED_TO_WHATSAPP"
+      },
+      "whatsapp_payload": {
+        "type": "interactive",
+        "interactive": {
+          "type": "button",
+          "body": {
+            "text": "Szia Balogh! Örömmel értesítünk  hogy a(z) ORD-WEB-2026-7711 számú rendelésedet rögzítettük! Összeg: 49 990 Ft. Futár: GLS."
+          },
+          "action": {
+            "buttons": [
+              {
+                "type": "reply",
+                "reply": {
+                  "id": "BTN_TRACK",
+                  "title": "Csomagkövetés"
+                }
+              },
+              {
+                "type": "reply",
+                "reply": {
+                  "id": "BTN_INVOICE",
+                  "title": "Számla letöltés"
+                }
+              },
+              {
+                "type": "reply",
+                "reply": {
+                  "id": "BTN_HELP",
+                  "title": "Kérdésem van"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "add_to_order_offer": {
+        "active": true,
+        "time_window_minutes": 15,
+        "recommended_sku": "BOSCH-BIT-SET-32",
+        "recommended_name": "Bosch Professional 32-részes Csavarozó Bitkészlet",
+        "special_price_huf": 4990,
+        "original_price_huf": 6990,
+        "shipping_cost_huf": 0,
+        "message": "Még van 15 perced! Tedd a csomagodba a prémium 32-részes Bosch bitkészletet 6 990 Ft helyett csak 4 990 Ft-ért, és a meglévő rendeléseddel együtt DÍJMENTESEN szállítjuk!",
+        "action_button": "HOZZÁADOM (+4 990 Ft)"
+      },
+      "sent_at": "2026-09-20T04:07:08.391534"
+    }
+  },
+  {
+    "event_type": "ORDER_CONFIRMATION_OUTBOUND",
+    "timestamp": "2026-09-20T04:07:57.272184",
+    "data": {
+      "order_id": "ORD-WEB-2026-7711",
+      "delivery_mode_used": "hybrid_sms_fallback",
+      "delivery_report": {
+        "channel": "WHATSAPP_CLOUD_API",
+        "recipient": "+36304445566",
+        "meta_wamid": "wamid.HBgL1789870077272",
+        "status": "DELIVERED_TO_WHATSAPP"
+      },
+      "whatsapp_payload": {
+        "type": "interactive",
+        "interactive": {
+          "type": "button",
+          "body": {
+            "text": "Szia Balogh! Örömmel értesítünk  hogy a(z) ORD-WEB-2026-7711 számú rendelésedet rögzítettük! Összeg: 49 990 Ft. Futár: GLS."
+          },
+          "action": {
+            "buttons": [
+              {
+                "type": "reply",
+                "reply": {
+                  "id": "BTN_TRACK",
+                  "title": "Csomagkövetés"
+                }
+              },
+              {
+                "type": "reply",
+                "reply": {
+                  "id": "BTN_INVOICE",
+                  "title": "Számla letöltés"
+                }
+              },
+              {
+                "type": "reply",
+                "reply": {
+                  "id": "BTN_HELP",
+                  "title": "Kérdésem van"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "add_to_order_offer": {
+        "active": true,
+        "time_window_minutes": 15,
+        "recommended_sku": "BOSCH-BIT-SET-32",
+        "recommended_name": "Bosch Professional 32-részes Csavarozó Bitkészlet",
+        "special_price_huf": 4990,
+        "original_price_huf": 6990,
+        "shipping_cost_huf": 0,
+        "message": "Még van 15 perced! Tedd a csomagodba a prémium 32-részes Bosch bitkészletet 6 990 Ft helyett csak 4 990 Ft-ért, és a meglévő rendeléseddel együtt DÍJMENTESEN szállítjuk!",
+        "action_button": "HOZZÁADOM (+4 990 Ft)"
+      },
+      "sent_at": "2026-09-20T04:07:57.272184"
+    }
+  }
+]

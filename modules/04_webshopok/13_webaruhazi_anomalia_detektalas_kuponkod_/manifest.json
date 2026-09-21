@@ -1,0 +1,8 @@
+{
+  "id": "13_webaruhazi_anomalia_detektalas_kuponkod_",
+  "title": "Webáruházi Anomália Detektálás (Kuponkód & Fizetési Kapu Figyelő)",
+  "category": "webshopok",
+  "icon": "🛡️",
+  "version": "1.0.0",
+  "description": "Azonnal riaszt és beavatkozik, ha elromlik az online bankkártyás fizetés, vagy egy elgépelt kuponkód miatt veszteséges vásárlások történnének a webshopban választható hibaszűréssel, árrésvédelemmel és vészhelyzeti failoverrel."
+}

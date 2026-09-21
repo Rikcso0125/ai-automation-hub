@@ -1,0 +1,16 @@
+{
+  "module_id": "07_ai_termekfoto_studio_eletmodkepek_genera",
+  "product": {
+    "sku": "BOSCH-GSR-18V-55",
+    "name": "Bosch Professional GSR 18V-55 Akkus Fúrócsavarozó",
+    "category": "szerszamgep",
+    "raw_image_url": "https://cdn.profigepesz.hu/raw/bosch_gsr_18v55_white_bg.jpg",
+    "custom_staging_instructions": "Helyezd egy rusztikus tölgyfa munkapadra, háttérben elmosódott profi asztalosműhely szerszámfalával, lágy meleg délutáni fénnyel és finom faforgácsokkal a gép mellett."
+  },
+  "config": {
+    "staging_mode": "custom_prompt_hybrid",
+    "preset_scene": "workshop_woodworking",
+    "aspect_ratio_mode": "multi_marketing_pack",
+    "branding_sync_mode": "trust_badge_overlay"
+  }
+}

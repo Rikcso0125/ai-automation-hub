@@ -1,0 +1,22 @@
+{
+  "meeting_title": "Heti Stratégiai és Operatív Vezetői Értekezlet",
+  "date": "2026-09-20",
+  "participants": [
+    {
+      "name": "Kiss Péter",
+      "email": "peter@profitech.hu",
+      "role": "Ügyvezető"
+    },
+    {
+      "name": "Kovács Anna",
+      "email": "anna@profitech.hu",
+      "role": "Marketing Vezető"
+    },
+    {
+      "name": "Tóth Gábor",
+      "email": "gabor@profitech.hu",
+      "role": "Műszaki Vezető"
+    }
+  ],
+  "meeting_transcript": "Kiss Péter: Jó reggelt mindenkinek! Kezdjük a mai heti egyeztetést. Anna, mi a helyzet a Q4 marketing kampánnyal?\nKovács Anna: A hirdetési kreatívok készen vannak, de el kell döntenünk a költségvetést. Javaslom, hogy emeljük meg a havi büdzsét 800.000 Ft-ra a Google és LinkedIn hirdetésekre.\nKiss Péter: Rendben, elfogadom a 800.000 Ft-os keretet, de csütörtökig kérlek állítsd össze a pontos hirdetési tervet és az elvárt lead számokat.\nKovács Anna: Értettem, csütörtök délután 16:00-ig elkészítem és átküldöm mindenkinek a táblázatot.\nKiss Péter: Gábor, a kivitelezési csapat hogy áll a 13. kerületi projekttel?\nTóth Gábor: A kábelezés 80%-ban kész, de a beszállító 15%-os áremelést jelentett be a szerelvényekre pénteken. Ezt muszáj kezelnünk, különben bukjuk a marginünket.\nKiss Péter: Nem fogadjuk el egyből az áremelést. Gábor, kérj be még ma három alternatív nagykereskedői árajánlatot, és szerda 12:00-ig egyeztess velük. Ha kell, kössünk negyedéves keretszerződést a fix árakért.\nTóth Gábor: Vettem, ma délután elküldöm az ajánlatkéréseket, és szerda délig leteszem az összehasonlító táblázatot az asztalodra.\nKiss Péter: Szuper. Én pedig holnap délelőtt átbeszélem a könyvelővel a havi cash-flow tervezetet. Zárjuk a megbeszélést!"
+}

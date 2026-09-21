@@ -1,0 +1,514 @@
+[
+  {
+    "timestamp": "2026-09-20T03:40:01.527715",
+    "claim_id": "CLM-2026-8941",
+    "customer": {
+      "name": "Kovacs Peter",
+      "email": "kovacs.peter@pelda.hu",
+      "phone": "+36301234567"
+    },
+    "order": {
+      "order_number": "ORD-2025-11048",
+      "invoice_number": "SZAMLA-2025-0842",
+      "purchase_date": "2025-10-15",
+      "item_sku": "BOSCH-GSR-18V-50",
+      "item_name": "Bosch Professional GSR 18V-50 Akkus Furo-Csavarozon",
+      "item_price_gross_huf": 48900,
+      "serial_number": "SN-8849201948"
+    },
+    "warranty_info": {
+      "purchase_date": "2025-10-15",
+      "expiry_date": "2026-10-15",
+      "warranty_period_years": 1,
+      "category_label": "10 000 - 100 000 Ft közötti tartós fogyasztási cikk (1 év kötelező jótállás)",
+      "days_elapsed": 340,
+      "remaining_days": 25,
+      "is_valid": true,
+      "status": "VALID"
+    },
+    "vision_analysis": {
+      "classification": "MANUFACTURING_DEFECT",
+      "hungarian_title": "Gyári rejtett hiba / Motor- és elektronikai meghibásodás",
+      "is_warranty_covered": true,
+      "confidence_score": 0.94,
+      "photo_count": 1,
+      "ai_findings": [
+        "A fotóelemzés megerősíti a belső motor/elektronika túlmelegedési vagy gyári összeszerelési hibáját.",
+        "Külső burkolati sérülés, törés vagy beázás nyoma nem látható.",
+        "A termék szériaszáma a fényképen leolvasható, egyezik a számla tételével.",
+        "A reklamáció teljes körűen jogos garanciális igénynek minősül."
+      ]
+    },
+    "keep_the_item": false,
+    "return_logistics": {
+      "channel": "foxpost_box",
+      "channel_title": "Foxpost Csomagautomata (Digitális Feladókód)",
+      "return_code": "FXP-268941",
+      "instructions": "Menjen el bármelyik Foxpost csomagautomatához, válassza a 'Csomagvisszaküldés' menüt, és írja be ezt a kódot: FXP-268941. Nincs szükség címkenyomtatásra! A fiók automatikusan kinyílik.",
+      "label_url": null,
+      "valid_until_days": 7,
+      "courier_cost_covered_by": "WEBSHOP_FREE_RETURN"
+    },
+    "resolution_result": {
+      "resolution_type": "store_credit_bonus",
+      "title": "+10% Bónusz Levásárolható Webshop Kupon",
+      "original_value_huf": 48900,
+      "bonus_amount_huf": 4890,
+      "total_credit_value_huf": 53790,
+      "coupon_code": "BONUS-10-268941",
+      "validity_days": 365,
+      "payout_status": "VOUCHER_ISSUED",
+      "details": "Levásárolható kuponkód kiállítva 53,790 Ft értékben (tartalmazza a 10% extra hűségbónuszt)."
+    },
+    "final_approval_status": "APPROVED_AUTO_HIGH_CONFIDENCE",
+    "human_review_required": false
+  },
+  {
+    "timestamp": "2026-09-20T03:40:01.528699",
+    "claim_id": "CLM-2026-8942",
+    "customer": {
+      "name": "Nagy Eva",
+      "email": "nagy.eva@pelda.hu",
+      "phone": "+36209876543"
+    },
+    "order": {
+      "order_number": "ORD-2026-0312",
+      "invoice_number": "SZAMLA-2026-0184",
+      "purchase_date": "2026-01-20",
+      "item_sku": "PHILIPS-HUE-BULB",
+      "item_name": "Philips Hue White E27 Okos Izzon",
+      "item_price_gross_huf": 9800,
+      "serial_number": "SN-PH-19482"
+    },
+    "warranty_info": {
+      "purchase_date": "2026-01-20",
+      "expiry_date": "2028-01-20",
+      "warranty_period_years": 2,
+      "category_label": "10 000 Ft alatti tétel (2 év Ptk. kellékszavatosság)",
+      "days_elapsed": 243,
+      "remaining_days": 487,
+      "is_valid": true,
+      "status": "VALID"
+    },
+    "vision_analysis": {
+      "classification": "COSMETIC_OR_UNCERTAIN",
+      "hungarian_title": "Tisztázatlan működési hiba / Részletes bevizsgálást igényel",
+      "is_warranty_covered": true,
+      "confidence_score": 0.78,
+      "photo_count": 1,
+      "ai_findings": [
+        "A rendelkezésre álló fotók alapján a hiba jellege nem egyértelműen beazonosítható.",
+        "Fizikai bevizsgálás szükséges a szervizközpontban a garancia végleges eldöntéséhez."
+      ]
+    },
+    "keep_the_item": true,
+    "return_logistics": {
+      "channel": "no_return_needed",
+      "channel_title": "Nem szükséges visszaküldeni (Keep-the-Item érvényesítve)",
+      "instructions": "A hibás terméket megtarthatja vagy leadhatja elektronikai hulladékgyűjtőben.",
+      "courier_cost_saved_huf": 2200
+    },
+    "resolution_result": {
+      "resolution_type": "instant_replacement_order",
+      "title": "Azonnali Raktári Cserecsomag Expediálás",
+      "replacement_order_id": "ORD-CSERE-68942",
+      "replacement_sku": "PHILIPS-HUE-BULB",
+      "replacement_item_name": "Philips Hue White E27 Okos Izzon",
+      "invoice_total_huf": 0,
+      "warehouse_status": "PICKING_QUEUED_PRIORITY",
+      "details": "Új 0 Ft-os garanciális csere rendelés (ORD-CSERE-68942) rögzítve, a raktár kiemelt prioritással dobozolja."
+    },
+    "final_approval_status": "APPROVED_AUTONOMOUS",
+    "human_review_required": false
+  },
+  {
+    "timestamp": "2026-09-20T03:40:01.529700",
+    "claim_id": "CLM-2026-8943",
+    "customer": {
+      "name": "Toth Bela",
+      "email": "toth.bela@pelda.hu",
+      "phone": "+36703334444"
+    },
+    "order": {
+      "order_number": "ORD-2025-4491",
+      "invoice_number": "SZAMLA-2025-3310",
+      "purchase_date": "2025-06-10",
+      "item_sku": "MAKITA-DGA-504",
+      "item_name": "Makita Akkus Sarokcsiszolon",
+      "item_price_gross_huf": 62900,
+      "serial_number": "SN-MK-5591"
+    },
+    "warranty_info": {
+      "purchase_date": "2025-06-10",
+      "expiry_date": "2026-06-10",
+      "warranty_period_years": 1,
+      "category_label": "10 000 - 100 000 Ft közötti tartós fogyasztási cikk (1 év kötelező jótállás)",
+      "days_elapsed": 467,
+      "remaining_days": 0,
+      "is_valid": false,
+      "status": "EXPIRED"
+    },
+    "vision_analysis": {
+      "classification": "USER_MISHANDLING",
+      "hungarian_title": "Rendeltetésellenes használat / Mechanikai behatás",
+      "is_warranty_covered": false,
+      "confidence_score": 0.91,
+      "photo_count": 1,
+      "ai_findings": [
+        "A fotókon és a leírásban külső mechanikai behatás vagy folyadékbeázás nyomai láthatók.",
+        "A hiba oka nem minősül gyári eredetű anyag- vagy összeszerelési hibának.",
+        "Ajánlás: Garanciális kártalanítás elutasítása, de felajánlható kedvezményes fizetős márkaszervizes javítás."
+      ]
+    },
+    "keep_the_item": false,
+    "return_logistics": {
+      "channel": "no_return_needed",
+      "channel_title": "Nem szükséges visszaküldeni (Keep-the-Item érvényesítve)",
+      "instructions": "A hibás terméket megtarthatja vagy leadhatja elektronikai hulladékgyűjtőben.",
+      "courier_cost_saved_huf": 2200
+    },
+    "resolution_result": {
+      "resolution_type": "claim_rejected",
+      "title": "Garanciális Igény Elutasítva / Fizetős Szerviz Ajánlat",
+      "original_value_huf": 62900,
+      "payout_status": "REJECTED_USER_FAULT",
+      "details": "A hiba nem gyári eredetű, jótállás keretében nem orvosolható. Szervizpartneri javítási árajánlat kiküldve."
+    },
+    "final_approval_status": "PENDING_HUMAN_REVIEW",
+    "human_review_required": true
+  },
+  {
+    "timestamp": "2026-09-20T03:40:01.530727",
+    "claim_id": "CLM-2026-8944",
+    "customer": {
+      "name": "Kiss Andrea",
+      "email": "kiss.andrea@pelda.hu",
+      "phone": "+36309998877",
+      "zip": "6720",
+      "city": "Szeged",
+      "address": "Tisza Lajos krt. 33."
+    },
+    "order": {
+      "order_number": "ORD-2026-0518",
+      "invoice_number": "SZAMLA-2026-0412",
+      "purchase_date": "2026-02-15",
+      "item_sku": "DEWALT-DCD-796",
+      "item_name": "DeWalt DCD796P2 Akkus Ufuro",
+      "item_price_gross_huf": 89900,
+      "serial_number": "SN-DW-88910"
+    },
+    "warranty_info": {
+      "purchase_date": "2026-02-15",
+      "expiry_date": "2027-02-15",
+      "warranty_period_years": 1,
+      "category_label": "10 000 - 100 000 Ft közötti tartós fogyasztási cikk (1 év kötelező jótállás)",
+      "days_elapsed": 217,
+      "remaining_days": 148,
+      "is_valid": true,
+      "status": "VALID"
+    },
+    "vision_analysis": {
+      "classification": "COSMETIC_OR_UNCERTAIN",
+      "hungarian_title": "Tisztázatlan működési hiba / Részletes bevizsgálást igényel",
+      "is_warranty_covered": true,
+      "confidence_score": 0.78,
+      "photo_count": 1,
+      "ai_findings": [
+        "A rendelkezésre álló fotók alapján a hiba jellege nem egyértelműen beazonosítható.",
+        "Fizikai bevizsgálás szükséges a szervizközpontban a garancia végleges eldöntéséhez."
+      ]
+    },
+    "keep_the_item": false,
+    "return_logistics": {
+      "channel": "gls_pick_and_return",
+      "channel_title": "GLS Pick & Return (Háztól-házig Futár Felvétel)",
+      "booking_reference": "GLS-PR-20268944",
+      "pickup_address": "6720 Szeged, Tisza Lajos krt. 33.",
+      "scheduled_date": "2026-09-22",
+      "time_window": "08:00 - 17:00 (3 órás SMS előrejelzéssel)",
+      "instructions": "A GLS futár 2026-09-22-n a megadott címen felveszi a becsomagolt terméket. A futár hozza a kinyomtatott címkét, Önnek csak át kell adnia a csomagot.",
+      "courier_cost_covered_by": "WEBSHOP_FREE_RETURN"
+    },
+    "resolution_result": {
+      "resolution_type": "credit_note_refund",
+      "title": "Jóváíró Számla & Online Pénzvisszafizetés",
+      "original_value_huf": 89900,
+      "credit_note_number": "ST-2026-68944",
+      "invoicing_system": "Billingo / Számlázz.hu API",
+      "refund_gateway": "Barion / SimplePay Direct Refund",
+      "refund_amount_huf": 89900,
+      "payout_status": "REFUND_INITIATED",
+      "details": "A(z) ST-2026-68944 számú jóváíró számla legenerálva. A(z) 89,900 Ft visszatérítés 1-3 munkanapon belül megérkezik a vevő számlájára."
+    },
+    "final_approval_status": "APPROVED_AUTONOMOUS",
+    "human_review_required": false
+  },
+  {
+    "timestamp": "2026-09-20T03:40:38.441658",
+    "claim_id": "CLM-2026-LIVE-901",
+    "customer": {
+      "name": "Horvath Akos",
+      "email": "horvath.akos@pelda.hu",
+      "phone": "+36205556677",
+      "city": "Debrecen",
+      "address": "Piac utca 12.",
+      "zip": "4025"
+    },
+    "order": {
+      "order_number": "ORD-2025-8819",
+      "invoice_number": "SZ-2025-1194",
+      "purchase_date": "2025-11-20",
+      "item_sku": "BOSCH-GSR-18V-50",
+      "item_name": "Bosch GSR 18V-50 Akkus Csavarbehajto",
+      "item_price_gross_huf": 46900,
+      "serial_number": "SN-BOSCH-994102"
+    },
+    "warranty_info": {
+      "purchase_date": "2025-11-20",
+      "expiry_date": "2026-11-20",
+      "warranty_period_years": 1,
+      "category_label": "10 000 - 100 000 Ft közötti tartós fogyasztási cikk (1 év kötelező jótállás)",
+      "days_elapsed": 304,
+      "remaining_days": 61,
+      "is_valid": true,
+      "status": "VALID"
+    },
+    "vision_analysis": {
+      "classification": "MANUFACTURING_DEFECT",
+      "hungarian_title": "Gyári rejtett hiba / Motor- és elektronikai meghibásodás",
+      "is_warranty_covered": true,
+      "confidence_score": 0.94,
+      "photo_count": 2,
+      "ai_findings": [
+        "A fotóelemzés megerősíti a belső motor/elektronika túlmelegedési vagy gyári összeszerelési hibáját.",
+        "Külső burkolati sérülés, törés vagy beázás nyoma nem látható.",
+        "A termék szériaszáma a fényképen leolvasható, egyezik a számla tételével.",
+        "A reklamáció teljes körűen jogos garanciális igénynek minősül."
+      ]
+    },
+    "keep_the_item": false,
+    "return_logistics": {
+      "channel": "foxpost_box",
+      "channel_title": "Foxpost Csomagautomata (Digitális Feladókód)",
+      "return_code": "FXP-IVE901",
+      "instructions": "Menjen el bármelyik Foxpost csomagautomatához, válassza a 'Csomagvisszaküldés' menüt, és írja be ezt a kódot: FXP-IVE901. Nincs szükség címkenyomtatásra! A fiók automatikusan kinyílik.",
+      "label_url": null,
+      "valid_until_days": 7,
+      "courier_cost_covered_by": "WEBSHOP_FREE_RETURN"
+    },
+    "resolution_result": {
+      "resolution_type": "store_credit_bonus",
+      "title": "+10% Bónusz Levásárolható Webshop Kupon",
+      "original_value_huf": 46900,
+      "bonus_amount_huf": 4690,
+      "total_credit_value_huf": 51590,
+      "coupon_code": "BONUS-10-IVE901",
+      "validity_days": 365,
+      "payout_status": "VOUCHER_ISSUED",
+      "details": "Levásárolható kuponkód kiállítva 51,590 Ft értékben (tartalmazza a 10% extra hűségbónuszt)."
+    },
+    "final_approval_status": "APPROVED_AUTO_HIGH_CONFIDENCE",
+    "human_review_required": false
+  },
+  {
+    "timestamp": "2026-09-20T03:40:45.242050",
+    "claim_id": "CLM-2026-LIVE-901",
+    "customer": {
+      "name": "Horvath Akos",
+      "email": "horvath.akos@pelda.hu",
+      "phone": "+36205556677",
+      "city": "Debrecen",
+      "address": "Piac utca 12.",
+      "zip": "4025"
+    },
+    "order": {
+      "order_number": "ORD-2025-8819",
+      "invoice_number": "SZ-2025-1194",
+      "purchase_date": "2025-11-20",
+      "item_sku": "BOSCH-GSR-18V-50",
+      "item_name": "Bosch GSR 18V-50 Akkus Csavarbehajto",
+      "item_price_gross_huf": 46900,
+      "serial_number": "SN-BOSCH-994102"
+    },
+    "warranty_info": {
+      "purchase_date": "2025-11-20",
+      "expiry_date": "2026-11-20",
+      "warranty_period_years": 1,
+      "category_label": "10 000 - 100 000 Ft közötti tartós fogyasztási cikk (1 év kötelező jótállás)",
+      "days_elapsed": 304,
+      "remaining_days": 61,
+      "is_valid": true,
+      "status": "VALID"
+    },
+    "vision_analysis": {
+      "classification": "MANUFACTURING_DEFECT",
+      "hungarian_title": "Gyári rejtett hiba / Motor- és elektronikai meghibásodás",
+      "is_warranty_covered": true,
+      "confidence_score": 0.94,
+      "photo_count": 2,
+      "ai_findings": [
+        "A fotóelemzés megerősíti a belső motor/elektronika túlmelegedési vagy gyári összeszerelési hibáját.",
+        "Külső burkolati sérülés, törés vagy beázás nyoma nem látható.",
+        "A termék szériaszáma a fényképen leolvasható, egyezik a számla tételével.",
+        "A reklamáció teljes körűen jogos garanciális igénynek minősül."
+      ]
+    },
+    "keep_the_item": false,
+    "return_logistics": {
+      "channel": "foxpost_box",
+      "channel_title": "Foxpost Csomagautomata (Digitális Feladókód)",
+      "return_code": "FXP-IVE901",
+      "instructions": "Menjen el bármelyik Foxpost csomagautomatához, válassza a 'Csomagvisszaküldés' menüt, és írja be ezt a kódot: FXP-IVE901. Nincs szükség címkenyomtatásra! A fiók automatikusan kinyílik.",
+      "label_url": null,
+      "valid_until_days": 7,
+      "courier_cost_covered_by": "WEBSHOP_FREE_RETURN"
+    },
+    "resolution_result": {
+      "resolution_type": "store_credit_bonus",
+      "title": "+10% Bónusz Levásárolható Webshop Kupon",
+      "original_value_huf": 46900,
+      "bonus_amount_huf": 4690,
+      "total_credit_value_huf": 51590,
+      "coupon_code": "BONUS-10-IVE901",
+      "validity_days": 365,
+      "payout_status": "VOUCHER_ISSUED",
+      "details": "Levásárolható kuponkód kiállítva 51,590 Ft értékben (tartalmazza a 10% extra hűségbónuszt)."
+    },
+    "final_approval_status": "APPROVED_AUTO_HIGH_CONFIDENCE",
+    "human_review_required": false
+  },
+  {
+    "timestamp": "2026-09-20T04:07:08.180920",
+    "claim_id": "CLM-2026-8941",
+    "customer": {
+      "name": "Kovács Péter",
+      "email": "kovacs.peter@pelda.hu",
+      "phone": "+36301234567",
+      "city": "Budapest",
+      "address": "Váci út 142. 3/12.",
+      "zip": "1138"
+    },
+    "order": {
+      "order_number": "ORD-2025-11048",
+      "invoice_number": "SZAMLA-2025-0842",
+      "purchase_date": "2025-10-15",
+      "item_sku": "BOSCH-GSR-18V-50",
+      "item_name": "Bosch Professional GSR 18V-50 Akkus Fúró-Csavarozó",
+      "item_price_gross_huf": 48900,
+      "serial_number": "SN-8849201948"
+    },
+    "warranty_info": {
+      "purchase_date": "2025-10-15",
+      "expiry_date": "2026-10-15",
+      "warranty_period_years": 1,
+      "category_label": "10 000 - 100 000 Ft közötti tartós fogyasztási cikk (1 év kötelező jótállás)",
+      "days_elapsed": 340,
+      "remaining_days": 25,
+      "is_valid": true,
+      "status": "VALID"
+    },
+    "vision_analysis": {
+      "classification": "MANUFACTURING_DEFECT",
+      "hungarian_title": "Gyári rejtett hiba / Motor- és elektronikai meghibásodás",
+      "is_warranty_covered": true,
+      "confidence_score": 0.94,
+      "photo_count": 2,
+      "ai_findings": [
+        "A fotóelemzés megerősíti a belső motor/elektronika túlmelegedési vagy gyári összeszerelési hibáját.",
+        "Külső burkolati sérülés, törés vagy beázás nyoma nem látható.",
+        "A termék szériaszáma a fényképen leolvasható, egyezik a számla tételével.",
+        "A reklamáció teljes körűen jogos garanciális igénynek minősül."
+      ]
+    },
+    "keep_the_item": false,
+    "return_logistics": {
+      "channel": "foxpost_box",
+      "channel_title": "Foxpost Csomagautomata (Digitális Feladókód)",
+      "return_code": "FXP-268941",
+      "instructions": "Menjen el bármelyik Foxpost csomagautomatához, válassza a 'Csomagvisszaküldés' menüt, és írja be ezt a kódot: FXP-268941. Nincs szükség címkenyomtatásra! A fiók automatikusan kinyílik.",
+      "label_url": null,
+      "valid_until_days": 7,
+      "courier_cost_covered_by": "WEBSHOP_FREE_RETURN"
+    },
+    "resolution_result": {
+      "resolution_type": "store_credit_bonus",
+      "title": "+10% Bónusz Levásárolható Webshop Kupon",
+      "original_value_huf": 48900,
+      "bonus_amount_huf": 4890,
+      "total_credit_value_huf": 53790,
+      "coupon_code": "BONUS-10-268941",
+      "validity_days": 365,
+      "payout_status": "VOUCHER_ISSUED",
+      "details": "Levásárolható kuponkód kiállítva 53,790 Ft értékben (tartalmazza a 10% extra hűségbónuszt)."
+    },
+    "final_approval_status": "APPROVED_AUTO_HIGH_CONFIDENCE",
+    "human_review_required": false
+  },
+  {
+    "timestamp": "2026-09-20T04:07:57.048006",
+    "claim_id": "CLM-2026-8941",
+    "customer": {
+      "name": "Kovács Péter",
+      "email": "kovacs.peter@pelda.hu",
+      "phone": "+36301234567",
+      "city": "Budapest",
+      "address": "Váci út 142. 3/12.",
+      "zip": "1138"
+    },
+    "order": {
+      "order_number": "ORD-2025-11048",
+      "invoice_number": "SZAMLA-2025-0842",
+      "purchase_date": "2025-10-15",
+      "item_sku": "BOSCH-GSR-18V-50",
+      "item_name": "Bosch Professional GSR 18V-50 Akkus Fúró-Csavarozó",
+      "item_price_gross_huf": 48900,
+      "serial_number": "SN-8849201948"
+    },
+    "warranty_info": {
+      "purchase_date": "2025-10-15",
+      "expiry_date": "2026-10-15",
+      "warranty_period_years": 1,
+      "category_label": "10 000 - 100 000 Ft közötti tartós fogyasztási cikk (1 év kötelező jótállás)",
+      "days_elapsed": 340,
+      "remaining_days": 25,
+      "is_valid": true,
+      "status": "VALID"
+    },
+    "vision_analysis": {
+      "classification": "MANUFACTURING_DEFECT",
+      "hungarian_title": "Gyári rejtett hiba / Motor- és elektronikai meghibásodás",
+      "is_warranty_covered": true,
+      "confidence_score": 0.94,
+      "photo_count": 2,
+      "ai_findings": [
+        "A fotóelemzés megerősíti a belső motor/elektronika túlmelegedési vagy gyári összeszerelési hibáját.",
+        "Külső burkolati sérülés, törés vagy beázás nyoma nem látható.",
+        "A termék szériaszáma a fényképen leolvasható, egyezik a számla tételével.",
+        "A reklamáció teljes körűen jogos garanciális igénynek minősül."
+      ]
+    },
+    "keep_the_item": false,
+    "return_logistics": {
+      "channel": "foxpost_box",
+      "channel_title": "Foxpost Csomagautomata (Digitális Feladókód)",
+      "return_code": "FXP-268941",
+      "instructions": "Menjen el bármelyik Foxpost csomagautomatához, válassza a 'Csomagvisszaküldés' menüt, és írja be ezt a kódot: FXP-268941. Nincs szükség címkenyomtatásra! A fiók automatikusan kinyílik.",
+      "label_url": null,
+      "valid_until_days": 7,
+      "courier_cost_covered_by": "WEBSHOP_FREE_RETURN"
+    },
+    "resolution_result": {
+      "resolution_type": "store_credit_bonus",
+      "title": "+10% Bónusz Levásárolható Webshop Kupon",
+      "original_value_huf": 48900,
+      "bonus_amount_huf": 4890,
+      "total_credit_value_huf": 53790,
+      "coupon_code": "BONUS-10-268941",
+      "validity_days": 365,
+      "payout_status": "VOUCHER_ISSUED",
+      "details": "Levásárolható kuponkód kiállítva 53,790 Ft értékben (tartalmazza a 10% extra hűségbónuszt)."
+    },
+    "final_approval_status": "APPROVED_AUTO_HIGH_CONFIDENCE",
+    "human_review_required": false
+  }
+]

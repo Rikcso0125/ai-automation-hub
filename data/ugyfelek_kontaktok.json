@@ -1,0 +1,17 @@
+{
+  "+36301234567": {
+    "nev": "Kovács Béla",
+    "ceg": "Alfa Bau Kft.",
+    "statusz": "VIP Ügyfél"
+  },
+  "+36709876543": {
+    "nev": "Tóth Gábor",
+    "ceg": "Delta Generál Zrt.",
+    "statusz": "Középvállalat"
+  },
+  "+36204567890": {
+    "nev": "Molnár Zsuzsanna",
+    "ceg": "ProLog Kft.",
+    "statusz": "Kiemelt Partner"
+  }
+}

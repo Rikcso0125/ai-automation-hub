@@ -1,0 +1,62 @@
+{
+  "title": "„No-Show Killer” Konfiguráció",
+  "type": "object",
+  "required": [
+    "company_name",
+    "reminder_timing_hours",
+    "waitlist_blast_size"
+  ],
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "Vállalkozás Neve",
+      "default": "DentArt Prémium Fogászat & Implantológia"
+    },
+    "reminder_timing_hours": {
+      "type": "integer",
+      "title": "Első Emlékeztető Időzítése (Órával a találkozó előtt)",
+      "default": 24,
+      "description": "Hány órával a találkozó előtt küldje ki az interaktív megerősítő üzenetet."
+    },
+    "urgent_reminder_hours": {
+      "type": "integer",
+      "title": "Második Sürgősségi Emlékeztető (Óra)",
+      "default": 2
+    },
+    "reminder_message_template": {
+      "type": "string",
+      "title": "Emlékeztető és Megerősítő Üzenet Szövege",
+      "format": "textarea",
+      "default": "Kedves {nev}! Emlékeztetünk a {ceg} időpontodra: {idopont} ({szolgaltatas}). Kérjük, erősítsd meg: válaszolj 1 - OTT LESZEK vagy 2 - LEMONDOM"
+    },
+    "waitlist_blast_size": {
+      "type": "integer",
+      "title": "Várólista Értesítési Keret (Fő)",
+      "default": 3,
+      "description": "Lemondáskor hány várólistás érdeklődő kapjon azonnali értesítést."
+    },
+    "waitlist_message_template": {
+      "type": "string",
+      "title": "Várólista Értesítő Üzenet Szövege",
+      "format": "textarea",
+      "default": "Kedves {nev}! Felszabadult egy azonnali prémium időpont {idopont} ({szolgaltatas})! Ha szeretné lefoglalni, kattintson az azonnali elfogadáshoz: {claim_link}"
+    },
+    "require_deposit_on_repeat_noshow": {
+      "type": "boolean",
+      "title": "Kötelező Előleg Visszaeső No-Show Esetén",
+      "default": true,
+      "description": "Ha valaki nem jelenik meg, a következő foglaláshoz bankkártyás előleget kér a rendszer."
+    },
+    "deposit_amount_huf": {
+      "type": "integer",
+      "title": "Előleg / Foglalási Díj Összege (Ft)",
+      "default": 10000
+    },
+    "admin_dashboard_alert_enabled": {
+      "type": "boolean",
+      "title": "Admin Vezérlőpult Riasztás Megjelenítése",
+      "default": true,
+      "description": "No-Show eseménykor felugró jelzés az Adminisztrációs Központban."
+    }
+  }
+}

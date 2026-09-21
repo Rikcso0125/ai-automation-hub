@@ -1,0 +1,36 @@
+{
+  "module_id": "01_hol_a_csomagom_wismo_0_24_futar_api_auto",
+  "action": "TRACK_PACKAGE_OR_INQUIRE",
+  "inquiries": [
+    {
+      "inquiry_id": "WISMO-INQ-001",
+      "channel": "webchat",
+      "customer_query": "Szia, szeretném megtudni, hogy hol jár a tegnap rendelt csomagom? Rendelésszámom: ORD-WEB-2026-9912",
+      "query_type": "ORDER_ID",
+      "search_key": "ORD-WEB-2026-9912",
+      "customer_name": "Kovács Péter",
+      "customer_email": "kovacs.peter@gmail.com",
+      "customer_phone": "+36 30 123 4567"
+    },
+    {
+      "inquiry_id": "WISMO-INQ-002",
+      "channel": "email",
+      "customer_query": "Tisztelt Ügyfélszolgálat! A varga.zoltan@klimatech-general.hu email címemre leadott rendelésem csomagautomatás átvételéről érdeklődnék.",
+      "query_type": "CUSTOMER_EMAIL",
+      "search_key": "varga.zoltan@klimatech-general.hu",
+      "customer_name": "Varga Zoltán",
+      "customer_email": "varga.zoltan@klimatech-general.hu",
+      "customer_phone": "+36 30 555 1234"
+    },
+    {
+      "inquiry_id": "WISMO-INQ-003",
+      "channel": "whatsapp",
+      "customer_query": "A DPD-HU-987654321 csomagomról jött valami üzenet, mi történt vele?",
+      "query_type": "TRACKING_NUMBER",
+      "search_key": "DPD-HU-987654321",
+      "customer_name": "Horváth Ferenc",
+      "customer_email": "horvath.f@gmail.com",
+      "customer_phone": "+36 20 444 7890"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "title": "Természetes Nyelvű Adatbázis Kereső Konfiguráció",
+  "type": "object",
+  "required": [
+    "data_source_type",
+    "security_mode"
+  ],
+  "properties": {
+    "data_source_type": {
+      "type": "string",
+      "title": "Adatbázis / Adatforrás Típusa",
+      "enum": [
+        "Beépített SQLite / Céges Minta Adatbázis",
+        "PostgreSQL Adatbázis",
+        "MySQL / MariaDB Adatbázis",
+        "Microsoft SQL Server (MSSQL)",
+        "Excel (.xlsx) / CSV Adattáblák",
+        "Google Sheets / Airtable API",
+        "Egyedi Kapcsolati Sztring (Bármilyen külső adatbázis/driver)"
+      ],
+      "default": "Beépített SQLite / Céges Minta Adatbázis",
+      "description": "Válassza ki a lekérdezni kívánt adatforrást vagy adjon meg egyedi kapcsolati sztringet."
+    },
+    "connection_string": {
+      "type": "string",
+      "title": "Adatbázis Kapcsolati Sztring / Host / Fájlelérési út",
+      "default": "sqlite:///:memory:",
+      "description": "Pl. postgresql://user:password@localhost:5432/ceg_erp vagy /adatok/ertekesites.xlsx"
+    },
+    "custom_source_name": {
+      "type": "string",
+      "title": "Egyedi Adatforrás Megnevezése (Opcionális)",
+      "default": "Belső Vállalati ERP & CRM Rendszer",
+      "description": "Ha egyedi rendszert köt be, itt adhatja meg a belső hivatkozási nevet."
+    },
+    "security_mode": {
+      "type": "string",
+      "title": "Biztonsági Szint (Sandbox Védelem)",
+      "enum": [
+        "Szigorú Csak Olvasás (Strict Read-Only, Adatmódosítás tiltása)",
+        "Írási és Módosítási jog engedélyezése (Vezetői jóváhagyással)"
+      ],
+      "default": "Szigorú Csak Olvasás (Strict Read-Only, Adatmódosítás tiltása)",
+      "description": "Szigorú módban minden DROP, DELETE, UPDATE, INSERT, ALTER utasítás azonnal tiltásra kerül."
+    },
+    "mask_sensitive_pii": {
+      "type": "string",
+      "title": "Érzékeny Adatok Maszkolása (PII Masking)",
+      "enum": [
+        "Igen (Jelszavak, banki adatok és személyes adatok maszkolása)",
+        "Nem (Nyers rekordok megjelenítése a vezetőségnek)"
+      ],
+      "default": "Igen (Jelszavak, banki adatok és személyes adatok maszkolása)",
+      "description": "Automatikus csillagozás (****) az érzékeny mezőkön."
+    },
+    "ai_engine": {
+      "type": "string",
+      "title": "AI Kérdés-Feldolgozó Motor",
+      "enum": [
+        "Beépített Szabály- és Mintaillesztő (Ingyenes, helyi)",
+        "OpenAI GPT-4o-mini (Gyors, pontos)",
+        "Google Gemini 1.5 Flash"
+      ],
+      "default": "Beépített Szabály- és Mintaillesztő (Ingyenes, helyi)"
+    },
+    "api_key": {
+      "type": "string",
+      "title": "OpenAI / Gemini API Kulcs (Opcionális)",
+      "format": "password",
+      "description": "Ha felhős LLM-et választ az SQL lekérdezések még finomabb megértéséhez."
+    }
+  }
+}

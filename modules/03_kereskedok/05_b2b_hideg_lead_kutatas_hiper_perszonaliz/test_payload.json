@@ -1,0 +1,34 @@
+{
+  "action": "PROSPECT_AND_GENERATE_CAMPAIGN",
+  "search_criteria": {
+    "industries": [
+      "Épületgépészet",
+      "Klímaszerelés",
+      "Generálkivitelezés"
+    ],
+    "min_revenue_m_huf": 350,
+    "region": "Budapest és Pest megye"
+  },
+  "prospects": [
+    {
+      "company_name": "Pannónia Épületgépész Kft.",
+      "tax_id": "18923456-2-42",
+      "decision_maker_name": "Kerekes András",
+      "decision_maker_title": "Ügyvezető & Főmérnök",
+      "email": "a.kerekes@pannoniagepesz.hu",
+      "recent_project_reference": "a Corvin sétány új irodaépületének komplett VRV hűtés-fűtése",
+      "specialty": "Ipari és irodaházi VRF rendszerek, Daikin és hőszivattyús kivitelezés",
+      "headcount": "28 fő"
+    },
+    {
+      "company_name": "BudaVent Légtechnika Zrt.",
+      "tax_id": "24567890-2-13",
+      "decision_maker_name": "Váradi Márk",
+      "decision_maker_title": "Beszerzési Igazgató",
+      "email": "beszerzes@budavent.hu",
+      "recent_project_reference": "a Budaörsi logisztikai park 12 000 m2-es raktárcsarnokának szellőzése",
+      "specialty": "Ipari csőhálózatok, hűtési rendszerek és légtechnika",
+      "headcount": "45 fő"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "title": "Helyszíni Felmérésből Automatikus Anyagszükséglet- és Normaidő-Számítás Konfiguráció",
+  "type": "object",
+  "required": [
+    "survey_calculation_mode",
+    "labor_norm_engine",
+    "quotation_output_mode"
+  ],
+  "properties": {
+    "survey_calculation_mode": {
+      "type": "string",
+      "title": "Felmérési Bemenet és Hulladék-Optimalizálás",
+      "enum": [
+        "manual_dimension_calc",
+        "laser_cad_import",
+        "hybrid_multi_input_scrap_optimization"
+      ],
+      "default": "hybrid_multi_input_scrap_optimization",
+      "description": "Kézi méretszorzás, Lézeres távmérő/CAD import vagy Hibrid multi-input technológiai vágási hulladék-optimalizálással."
+    },
+    "labor_norm_engine": {
+      "type": "string",
+      "title": "Műszaki Normaidő-Adatbázis",
+      "enum": [
+        "fixed_hourly_estimate",
+        "official_en_norm_standards",
+        "en_norms_dynamic_site_multipliers"
+      ],
+      "default": "en_norms_dynamic_site_multipliers",
+      "description": "Fix órabecslés, Hivatalos ÉN normák vagy ÉN normarendszer dinamikus helyszíni nehezítő szorzókkal."
+    },
+    "quotation_output_mode": {
+      "type": "string",
+      "title": "Költségvetési Kiírás és Értékesítési Mód",
+      "enum": [
+        "simple_materials_text",
+        "itemized_csv_calc",
+        "full_terc_budget_quote_procurement"
+      ],
+      "default": "full_terc_budget_quote_procurement",
+      "description": "Egyszerű anyaglista, CSV táblázat vagy Teljes TERC-kompatibilis költségvetés beszállítói kosárral és márkázott PDF ajánlattal."
+    },
+    "default_scrap_waste_pct": {
+      "type": "number",
+      "title": "Alapértelmezett Technológiai Hulladék Ráthagyás (%)",
+      "default": 10.0
+    },
+    "target_profit_margin_pct": {
+      "type": "number",
+      "title": "Célzott Haszonkulcs (Margin %)",
+      "default": 22.0
+    },
+    "master_hourly_labor_rate_huf": {
+      "type": "integer",
+      "title": "Alap Szakipari Rezsióradíj (Ft/óra)",
+      "default": 8500
+    },
+    "notification_channel": {
+      "type": "string",
+      "title": "Riasztási Értesítési Csatorna",
+      "default": "telegram",
+      "enum": [
+        "telegram",
+        "sms",
+        "email",
+        "slack",
+        "webhook"
+      ]
+    }
+  }
+}

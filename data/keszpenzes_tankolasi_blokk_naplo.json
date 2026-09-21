@@ -1,0 +1,474 @@
+[
+  {
+    "timestamp": "2026-09-20T03:56:51.313983",
+    "expense_claim_id": "EXP-2026-0920-04",
+    "employee": "Varga Dániel",
+    "project_code": "PRJ-2026-AUDI-G3",
+    "grand_total_huf": 60490,
+    "extracted_data": {
+      "recognition_mode_applied": "vision_hardware_mileage_sync",
+      "processing_time_seconds": 2.8,
+      "receipt_merchants": [
+        "BAUHAUS Szakáruház Győr",
+        "MOL Töltőállomás Győr M1"
+      ],
+      "materials_breakdown": {
+        "items": [
+          {
+            "item_name": "Fischer DuoPower 8x65 univerzális tipli (50 db/doboz)",
+            "quantity": 1,
+            "unit": "doboz",
+            "net_unit_price_huf": 4323,
+            "vat_rate_pct": 27.0,
+            "vat_amount_huf": 1167,
+            "gross_total_huf": 5490,
+            "accounting_category": "511_Közvetlen_Szerelési_Segédanyag"
+          },
+          {
+            "item_name": "M10 Horganyzott menetes szár 1m (4.8 acél)",
+            "quantity": 10,
+            "unit": "darab",
+            "net_unit_price_huf": 1016,
+            "vat_rate_pct": 27.0,
+            "vat_amount_huf": 2740,
+            "gross_total_huf": 12900,
+            "accounting_category": "511_Közvetlen_Szerelési_Segédanyag"
+          },
+          {
+            "item_name": "Würth Fémragasztó és Tömítő paszta (310 ml)",
+            "quantity": 2,
+            "unit": "tubus",
+            "net_unit_price_huf": 3780,
+            "vat_rate_pct": 27.0,
+            "vat_amount_huf": 2040,
+            "gross_total_huf": 9600,
+            "accounting_category": "511_Közvetlen_Szerelési_Segédanyag"
+          }
+        ],
+        "net_huf": 22043,
+        "vat_huf": 5947,
+        "gross_huf": 27990
+      },
+      "fuel_breakdown": {
+        "station_brand": "MOL Töltőállomás Győr M1",
+        "station_tax_number": "10625790-2-44",
+        "fuel_type": "MOL EVO Diesel",
+        "quantity_liters": 52.4,
+        "price_per_liter_gross_huf": 620.2,
+        "fuel_net_huf": 25591,
+        "fuel_vat_huf": 6909,
+        "fuel_gross_huf": 32500,
+        "recognized_license_plate": "ABC-890",
+        "vehicle_matched": true,
+        "odometer_km": 142850,
+        "digital_mileage_log_entry": {
+          "vehicle_plate": "ABC-890",
+          "driver_name": "Varga Dániel",
+          "refuel_liters": 52.4,
+          "odometer_reading_km": 142850,
+          "fuel_efficiency_km_per_liter": 13.8,
+          "status": "LOGGED_TO_FLEET_SYSTEM"
+        }
+      },
+      "financial_summary": {
+        "grand_total_net_huf": 47634,
+        "grand_total_vat_huf": 12856,
+        "grand_total_gross_huf": 60490,
+        "vat_distribution": {
+          "27_percent_base_huf": 47634,
+          "27_percent_vat_huf": 12856
+        }
+      }
+    },
+    "project_allocation": {
+      "allocation_mode_applied": "hybrid_geo_work_order_budget",
+      "matched_project_code": "PRJ-2026-AUDI-G3",
+      "matched_project_name": "Audi Hungaria G3 Csarnok Gépészeti Karbantartás",
+      "site_address": "Győr, Kardán u. 1.",
+      "geo_match_distance_km": 1.6,
+      "budget_impact": {
+        "allocated_budget_huf": 1500000,
+        "previous_remaining_budget_huf": 185000,
+        "expense_charged_huf": 60490,
+        "new_remaining_budget_huf": 124510,
+        "budget_status": "BUDGET_SAFE",
+        "remaining_budget_pct": 8.3
+      }
+    },
+    "accounting": {
+      "accounting_workflow_mode": "realtime_erp_card_match_gate",
+      "voucher_number": "EXP-VOUCHER-20260920-A34E3A",
+      "card_reconciliation": {
+        "payment_method": "corporate_card",
+        "bank_transaction_id": "TRX-KH-2026-98110920",
+        "reconciliation_status": "MATCHED_100_PCT",
+        "matched_amount_huf": 60490,
+        "employee_reimbursement_needed": false,
+        "accounting_entry": "T: 511/512 (Költséghely) - K: 384 (Elszámolási számla / Céges kártya)"
+      },
+      "approval_gate": {
+        "status": "PENDING_PROJECT_DIRECTOR_APPROVAL",
+        "requires_director_approval": true,
+        "threshold_limit_huf": 30000,
+        "approval_dashboard_url": "http://localhost:8000/api/v1/expense/approve?claim_id=EXP-F16CFFE4",
+        "status_note": "A kiadás összege (60,490 Ft) meghaladja az automatikus 30,000 Ft küszöböt. Vezetői jóváhagyásra továbbítva."
+      },
+      "worker_mobile_confirmation": "✅ Szia Varga Dániel! A 60,490 Ft-os vásárlásod (Bauhaus + MOL Diesel) 3 mp alatt feldolgozva és ráterhelve a PRJ-2026-AUDI-G3 projektre. Céges kártyáddal automatikusan párosítva. Jóváhagyási státusz: PENDING_PROJECT_DIRECTOR_APPROVAL."
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T03:56:58.328742",
+    "expense_claim_id": "EXP-2026-0920-04",
+    "employee": "Varga Dániel",
+    "project_code": "PRJ-2026-AUDI-G3",
+    "grand_total_huf": 60490,
+    "extracted_data": {
+      "recognition_mode_applied": "vision_hardware_mileage_sync",
+      "processing_time_seconds": 2.8,
+      "receipt_merchants": [
+        "BAUHAUS Szakáruház Győr",
+        "MOL Töltőállomás Győr M1"
+      ],
+      "materials_breakdown": {
+        "items": [
+          {
+            "item_name": "Fischer DuoPower 8x65 univerzális tipli (50 db/doboz)",
+            "quantity": 1,
+            "unit": "doboz",
+            "net_unit_price_huf": 4323,
+            "vat_rate_pct": 27.0,
+            "vat_amount_huf": 1167,
+            "gross_total_huf": 5490,
+            "accounting_category": "511_Közvetlen_Szerelési_Segédanyag"
+          },
+          {
+            "item_name": "M10 Horganyzott menetes szár 1m (4.8 acél)",
+            "quantity": 10,
+            "unit": "darab",
+            "net_unit_price_huf": 1016,
+            "vat_rate_pct": 27.0,
+            "vat_amount_huf": 2740,
+            "gross_total_huf": 12900,
+            "accounting_category": "511_Közvetlen_Szerelési_Segédanyag"
+          },
+          {
+            "item_name": "Würth Fémragasztó és Tömítő paszta (310 ml)",
+            "quantity": 2,
+            "unit": "tubus",
+            "net_unit_price_huf": 3780,
+            "vat_rate_pct": 27.0,
+            "vat_amount_huf": 2040,
+            "gross_total_huf": 9600,
+            "accounting_category": "511_Közvetlen_Szerelési_Segédanyag"
+          }
+        ],
+        "net_huf": 22043,
+        "vat_huf": 5947,
+        "gross_huf": 27990
+      },
+      "fuel_breakdown": {
+        "station_brand": "MOL Töltőállomás Győr M1",
+        "station_tax_number": "10625790-2-44",
+        "fuel_type": "MOL EVO Diesel",
+        "quantity_liters": 52.4,
+        "price_per_liter_gross_huf": 620.2,
+        "fuel_net_huf": 25591,
+        "fuel_vat_huf": 6909,
+        "fuel_gross_huf": 32500,
+        "recognized_license_plate": "ABC-890",
+        "vehicle_matched": true,
+        "odometer_km": 142850,
+        "digital_mileage_log_entry": {
+          "vehicle_plate": "ABC-890",
+          "driver_name": "Varga Dániel",
+          "refuel_liters": 52.4,
+          "odometer_reading_km": 142850,
+          "fuel_efficiency_km_per_liter": 13.8,
+          "status": "LOGGED_TO_FLEET_SYSTEM"
+        }
+      },
+      "financial_summary": {
+        "grand_total_net_huf": 47634,
+        "grand_total_vat_huf": 12856,
+        "grand_total_gross_huf": 60490,
+        "vat_distribution": {
+          "27_percent_base_huf": 47634,
+          "27_percent_vat_huf": 12856
+        }
+      }
+    },
+    "project_allocation": {
+      "allocation_mode_applied": "hybrid_geo_work_order_budget",
+      "matched_project_code": "PRJ-2026-AUDI-G3",
+      "matched_project_name": "Audi Hungaria G3 Csarnok Gépészeti Karbantartás",
+      "site_address": "Győr, Kardán u. 1.",
+      "geo_match_distance_km": 1.6,
+      "budget_impact": {
+        "allocated_budget_huf": 1500000,
+        "previous_remaining_budget_huf": 185000,
+        "expense_charged_huf": 60490,
+        "new_remaining_budget_huf": 124510,
+        "budget_status": "BUDGET_SAFE",
+        "remaining_budget_pct": 8.3
+      }
+    },
+    "accounting": {
+      "accounting_workflow_mode": "realtime_erp_card_match_gate",
+      "voucher_number": "EXP-VOUCHER-20260920-F800B9",
+      "card_reconciliation": {
+        "payment_method": "corporate_card",
+        "bank_transaction_id": "TRX-KH-2026-98110920",
+        "reconciliation_status": "MATCHED_100_PCT",
+        "matched_amount_huf": 60490,
+        "employee_reimbursement_needed": false,
+        "accounting_entry": "T: 511/512 (Költséghely) - K: 384 (Elszámolási számla / Céges kártya)"
+      },
+      "approval_gate": {
+        "status": "PENDING_PROJECT_DIRECTOR_APPROVAL",
+        "requires_director_approval": true,
+        "threshold_limit_huf": 30000,
+        "approval_dashboard_url": "http://localhost:8000/api/v1/expense/approve?claim_id=EXP-008A0A4F",
+        "status_note": "A kiadás összege (60,490 Ft) meghaladja az automatikus 30,000 Ft küszöböt. Vezetői jóváhagyásra továbbítva."
+      },
+      "worker_mobile_confirmation": "✅ Szia Varga Dániel! A 60,490 Ft-os vásárlásod (Bauhaus + MOL Diesel) 3 mp alatt feldolgozva és ráterhelve a PRJ-2026-AUDI-G3 projektre. Céges kártyáddal automatikusan párosítva. Jóváhagyási státusz: PENDING_PROJECT_DIRECTOR_APPROVAL."
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:05.641883",
+    "expense_claim_id": "EXP-2026-0920-04",
+    "employee": "Varga Dániel",
+    "project_code": "PRJ-2026-AUDI-G3",
+    "grand_total_huf": 60490,
+    "extracted_data": {
+      "recognition_mode_applied": "vision_hardware_mileage_sync",
+      "processing_time_seconds": 2.8,
+      "receipt_merchants": [
+        "BAUHAUS Szakáruház Győr",
+        "MOL Töltőállomás Győr M1"
+      ],
+      "materials_breakdown": {
+        "items": [
+          {
+            "item_name": "Fischer DuoPower 8x65 univerzális tipli (50 db/doboz)",
+            "quantity": 1,
+            "unit": "doboz",
+            "net_unit_price_huf": 4323,
+            "vat_rate_pct": 27.0,
+            "vat_amount_huf": 1167,
+            "gross_total_huf": 5490,
+            "accounting_category": "511_Közvetlen_Szerelési_Segédanyag"
+          },
+          {
+            "item_name": "M10 Horganyzott menetes szár 1m (4.8 acél)",
+            "quantity": 10,
+            "unit": "darab",
+            "net_unit_price_huf": 1016,
+            "vat_rate_pct": 27.0,
+            "vat_amount_huf": 2740,
+            "gross_total_huf": 12900,
+            "accounting_category": "511_Közvetlen_Szerelési_Segédanyag"
+          },
+          {
+            "item_name": "Würth Fémragasztó és Tömítő paszta (310 ml)",
+            "quantity": 2,
+            "unit": "tubus",
+            "net_unit_price_huf": 3780,
+            "vat_rate_pct": 27.0,
+            "vat_amount_huf": 2040,
+            "gross_total_huf": 9600,
+            "accounting_category": "511_Közvetlen_Szerelési_Segédanyag"
+          }
+        ],
+        "net_huf": 22043,
+        "vat_huf": 5947,
+        "gross_huf": 27990
+      },
+      "fuel_breakdown": {
+        "station_brand": "MOL Töltőállomás Győr M1",
+        "station_tax_number": "10625790-2-44",
+        "fuel_type": "MOL EVO Diesel",
+        "quantity_liters": 52.4,
+        "price_per_liter_gross_huf": 620.2,
+        "fuel_net_huf": 25591,
+        "fuel_vat_huf": 6909,
+        "fuel_gross_huf": 32500,
+        "recognized_license_plate": "ABC-890",
+        "vehicle_matched": true,
+        "odometer_km": 142850,
+        "digital_mileage_log_entry": {
+          "vehicle_plate": "ABC-890",
+          "driver_name": "Varga Dániel",
+          "refuel_liters": 52.4,
+          "odometer_reading_km": 142850,
+          "fuel_efficiency_km_per_liter": 13.8,
+          "status": "LOGGED_TO_FLEET_SYSTEM"
+        }
+      },
+      "financial_summary": {
+        "grand_total_net_huf": 47634,
+        "grand_total_vat_huf": 12856,
+        "grand_total_gross_huf": 60490,
+        "vat_distribution": {
+          "27_percent_base_huf": 47634,
+          "27_percent_vat_huf": 12856
+        }
+      }
+    },
+    "project_allocation": {
+      "allocation_mode_applied": "hybrid_geo_work_order_budget",
+      "matched_project_code": "PRJ-2026-AUDI-G3",
+      "matched_project_name": "Audi Hungaria G3 Csarnok Gépészeti Karbantartás",
+      "site_address": "Győr, Kardán u. 1.",
+      "geo_match_distance_km": 1.6,
+      "budget_impact": {
+        "allocated_budget_huf": 1500000,
+        "previous_remaining_budget_huf": 185000,
+        "expense_charged_huf": 60490,
+        "new_remaining_budget_huf": 124510,
+        "budget_status": "BUDGET_SAFE",
+        "remaining_budget_pct": 8.3
+      }
+    },
+    "accounting": {
+      "accounting_workflow_mode": "realtime_erp_card_match_gate",
+      "voucher_number": "EXP-VOUCHER-20260920-EC50B5",
+      "card_reconciliation": {
+        "payment_method": "corporate_card",
+        "bank_transaction_id": "TRX-KH-2026-98110920",
+        "reconciliation_status": "MATCHED_100_PCT",
+        "matched_amount_huf": 60490,
+        "employee_reimbursement_needed": false,
+        "accounting_entry": "T: 511/512 (Költséghely) - K: 384 (Elszámolási számla / Céges kártya)"
+      },
+      "approval_gate": {
+        "status": "PENDING_PROJECT_DIRECTOR_APPROVAL",
+        "requires_director_approval": true,
+        "threshold_limit_huf": 30000,
+        "approval_dashboard_url": "http://localhost:8000/api/v1/expense/approve?claim_id=EXP-72BCDD28",
+        "status_note": "A kiadás összege (60,490 Ft) meghaladja az automatikus 30,000 Ft küszöböt. Vezetői jóváhagyásra továbbítva."
+      },
+      "worker_mobile_confirmation": "✅ Szia Varga Dániel! A 60,490 Ft-os vásárlásod (Bauhaus + MOL Diesel) 3 mp alatt feldolgozva és ráterhelve a PRJ-2026-AUDI-G3 projektre. Céges kártyáddal automatikusan párosítva. Jóváhagyási státusz: PENDING_PROJECT_DIRECTOR_APPROVAL."
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:54.388079",
+    "expense_claim_id": "EXP-2026-0920-04",
+    "employee": "Varga Dániel",
+    "project_code": "PRJ-2026-AUDI-G3",
+    "grand_total_huf": 60490,
+    "extracted_data": {
+      "recognition_mode_applied": "vision_hardware_mileage_sync",
+      "processing_time_seconds": 2.8,
+      "receipt_merchants": [
+        "BAUHAUS Szakáruház Győr",
+        "MOL Töltőállomás Győr M1"
+      ],
+      "materials_breakdown": {
+        "items": [
+          {
+            "item_name": "Fischer DuoPower 8x65 univerzális tipli (50 db/doboz)",
+            "quantity": 1,
+            "unit": "doboz",
+            "net_unit_price_huf": 4323,
+            "vat_rate_pct": 27.0,
+            "vat_amount_huf": 1167,
+            "gross_total_huf": 5490,
+            "accounting_category": "511_Közvetlen_Szerelési_Segédanyag"
+          },
+          {
+            "item_name": "M10 Horganyzott menetes szár 1m (4.8 acél)",
+            "quantity": 10,
+            "unit": "darab",
+            "net_unit_price_huf": 1016,
+            "vat_rate_pct": 27.0,
+            "vat_amount_huf": 2740,
+            "gross_total_huf": 12900,
+            "accounting_category": "511_Közvetlen_Szerelési_Segédanyag"
+          },
+          {
+            "item_name": "Würth Fémragasztó és Tömítő paszta (310 ml)",
+            "quantity": 2,
+            "unit": "tubus",
+            "net_unit_price_huf": 3780,
+            "vat_rate_pct": 27.0,
+            "vat_amount_huf": 2040,
+            "gross_total_huf": 9600,
+            "accounting_category": "511_Közvetlen_Szerelési_Segédanyag"
+          }
+        ],
+        "net_huf": 22043,
+        "vat_huf": 5947,
+        "gross_huf": 27990
+      },
+      "fuel_breakdown": {
+        "station_brand": "MOL Töltőállomás Győr M1",
+        "station_tax_number": "10625790-2-44",
+        "fuel_type": "MOL EVO Diesel",
+        "quantity_liters": 52.4,
+        "price_per_liter_gross_huf": 620.2,
+        "fuel_net_huf": 25591,
+        "fuel_vat_huf": 6909,
+        "fuel_gross_huf": 32500,
+        "recognized_license_plate": "ABC-890",
+        "vehicle_matched": true,
+        "odometer_km": 142850,
+        "digital_mileage_log_entry": {
+          "vehicle_plate": "ABC-890",
+          "driver_name": "Varga Dániel",
+          "refuel_liters": 52.4,
+          "odometer_reading_km": 142850,
+          "fuel_efficiency_km_per_liter": 13.8,
+          "status": "LOGGED_TO_FLEET_SYSTEM"
+        }
+      },
+      "financial_summary": {
+        "grand_total_net_huf": 47634,
+        "grand_total_vat_huf": 12856,
+        "grand_total_gross_huf": 60490,
+        "vat_distribution": {
+          "27_percent_base_huf": 47634,
+          "27_percent_vat_huf": 12856
+        }
+      }
+    },
+    "project_allocation": {
+      "allocation_mode_applied": "hybrid_geo_work_order_budget",
+      "matched_project_code": "PRJ-2026-AUDI-G3",
+      "matched_project_name": "Audi Hungaria G3 Csarnok Gépészeti Karbantartás",
+      "site_address": "Győr, Kardán u. 1.",
+      "geo_match_distance_km": 1.6,
+      "budget_impact": {
+        "allocated_budget_huf": 1500000,
+        "previous_remaining_budget_huf": 185000,
+        "expense_charged_huf": 60490,
+        "new_remaining_budget_huf": 124510,
+        "budget_status": "BUDGET_SAFE",
+        "remaining_budget_pct": 8.3
+      }
+    },
+    "accounting": {
+      "accounting_workflow_mode": "realtime_erp_card_match_gate",
+      "voucher_number": "EXP-VOUCHER-20260920-2D686A",
+      "card_reconciliation": {
+        "payment_method": "corporate_card",
+        "bank_transaction_id": "TRX-KH-2026-98110920",
+        "reconciliation_status": "MATCHED_100_PCT",
+        "matched_amount_huf": 60490,
+        "employee_reimbursement_needed": false,
+        "accounting_entry": "T: 511/512 (Költséghely) - K: 384 (Elszámolási számla / Céges kártya)"
+      },
+      "approval_gate": {
+        "status": "PENDING_PROJECT_DIRECTOR_APPROVAL",
+        "requires_director_approval": true,
+        "threshold_limit_huf": 30000,
+        "approval_dashboard_url": "http://localhost:8000/api/v1/expense/approve?claim_id=EXP-8C6E7174",
+        "status_note": "A kiadás összege (60,490 Ft) meghaladja az automatikus 30,000 Ft küszöböt. Vezetői jóváhagyásra továbbítva."
+      },
+      "worker_mobile_confirmation": "✅ Szia Varga Dániel! A 60,490 Ft-os vásárlásod (Bauhaus + MOL Diesel) 3 mp alatt feldolgozva és ráterhelve a PRJ-2026-AUDI-G3 projektre. Céges kártyáddal automatikusan párosítva. Jóváhagyási státusz: PENDING_PROJECT_DIRECTOR_APPROVAL."
+    },
+    "status": "COMPLETED"
+  }
+]

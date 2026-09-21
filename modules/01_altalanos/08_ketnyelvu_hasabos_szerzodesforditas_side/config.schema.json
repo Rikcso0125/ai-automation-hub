@@ -1,0 +1,82 @@
+{
+  "title": "Kétnyelvű Szerződésfordító Beállítások",
+  "type": "object",
+  "required": [
+    "default_source_lang",
+    "default_target_lang"
+  ],
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "Céged Neve",
+      "default": "ProfiTech Kft."
+    },
+    "default_source_lang": {
+      "type": "string",
+      "title": "Alapértelmezett Forrásnyelv",
+      "enum": [
+        "Magyar",
+        "Angol",
+        "Német",
+        "Román",
+        "Olasz",
+        "Francia",
+        "Spanyol",
+        "Egyéb"
+      ],
+      "default": "Magyar"
+    },
+    "default_target_lang": {
+      "type": "string",
+      "title": "Alapértelmezett Célnyelv (Fordítás)",
+      "enum": [
+        "Angol",
+        "Német",
+        "Magyar",
+        "Román",
+        "Olasz",
+        "Francia",
+        "Spanyol",
+        "Egyéb"
+      ],
+      "default": "Angol"
+    },
+    "governing_language_rule": {
+      "type": "string",
+      "title": "Irányadó Nyelv Eltérés Esetén (Joghatósági Záradék)",
+      "enum": [
+        "A forrásnyelv (Magyar) az irányadó vita esetén",
+        "A célnyelv (Angol/Német) az irányadó",
+        "Mindkét nyelv egyenrangú"
+      ],
+      "default": "A forrásnyelv (Magyar) az irányadó vita esetén",
+      "description": "Automatikusan beilleszti a nemzetközi standard vitarendezési záradékot mindkét nyelven."
+    },
+    "export_formats": {
+      "type": "string",
+      "title": "Kimeneti Fájlformátumok",
+      "enum": [
+        "Word (.docx) és PDF mindkettő",
+        "Csak Word (.docx)",
+        "Csak PDF"
+      ],
+      "default": "Word (.docx) és PDF mindkettő"
+    },
+    "ai_provider": {
+      "type": "string",
+      "title": "Jogi Fordító AI Motor",
+      "enum": [
+        "openai",
+        "gemini",
+        "mock"
+      ],
+      "default": "mock",
+      "description": "OpenAI GPT-4o, Google Gemini 1.5 Pro, vagy Mock szimuláció."
+    },
+    "ai_api_key": {
+      "type": "string",
+      "title": "AI API Kulcs",
+      "format": "password"
+    }
+  }
+}

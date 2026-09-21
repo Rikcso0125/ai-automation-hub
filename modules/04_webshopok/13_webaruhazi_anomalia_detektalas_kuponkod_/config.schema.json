@@ -1,0 +1,89 @@
+{
+  "title": "Webáruházi Anomália Detektálás Konfiguráció",
+  "type": "object",
+  "required": [
+    "api_key"
+  ],
+  "properties": {
+    "api_key": {
+      "type": "string",
+      "title": "Webshop API / Fizetési Kapu Monitoring Token",
+      "format": "password",
+      "default": "mock_anomaly_detector_key_2026",
+      "description": "Shopify, WooCommerce, Unas vagy Barion/SimplePay webhook token."
+    },
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (szimulált kapuhiba és elgépelt kupon) vagy Production (élő webshop webhook és vészleállítás)."
+    },
+    "gateway_monitoring_mode": {
+      "type": "string",
+      "title": "1. Kérdés: Fizetési Kapu Hibaérzékelés & Failover",
+      "enum": [
+        "consecutive_failures",
+        "hourly_success_rate_drop",
+        "hybrid_gateway_guard"
+      ],
+      "default": "hybrid_gateway_guard",
+      "description": "Egymást követő fizetési kudarcok (Failover utánvétre), órás sikerességi arány figyelés, vagy hibrid felügyelet."
+    },
+    "consecutive_payment_failures_threshold": {
+      "type": "integer",
+      "title": "Kritikus Egymást Követő Fizetési Hibák",
+      "default": 3,
+      "description": "Ennyi sikertelen fizetés után azonnal aktiválja a tartalék fizetési módot."
+    },
+    "coupon_guard_mode": {
+      "type": "string",
+      "title": "2. Kérdés: Kuponkód & Árrésvédelmi Circuit Breaker",
+      "enum": [
+        "margin_deficit_breaker",
+        "high_frequency_abuse_detection",
+        "hybrid_coupon_protection"
+      ],
+      "default": "hybrid_coupon_protection",
+      "description": "Negatív árrés / önköltség alatti eladás stop, kuponoldalas tömeges visszaélés szűrés, vagy hibrid védelem."
+    },
+    "max_allowed_discount_percent": {
+      "type": "integer",
+      "title": "Maximálisan Engedélyezett Kupon Kedvezmény (%)",
+      "default": 40,
+      "description": "E felett a rendszer automatikusan elgépelést / adminhibát feltételez és zárolja a kupont."
+    },
+    "loss_threshold_huf_for_auto_pause": {
+      "type": "integer",
+      "title": "Azonnali Vészleállítási Veszteségküszöb (Ft)",
+      "default": 20000,
+      "description": "Ezen várható ráfizetés felett azonnali kemény zárlat lép életbe, alatta operátori felülvizsgálat."
+    },
+    "intervention_level": {
+      "type": "string",
+      "title": "3. Kérdés: Beavatkozási Hatáskör & Vészleállítás",
+      "enum": [
+        "fully_autonomous_lockdown",
+        "hitl_operator_review",
+        "hybrid_loss_threshold_action"
+      ],
+      "default": "hybrid_loss_threshold_action",
+      "description": "Teljesen autonóm zárolás és SMS vészhívás, operátori jóváhagyási kapu (HITL), vagy veszteségmérték-alapú intelligens szint."
+    },
+    "notification_channel": {
+      "type": "string",
+      "title": "Értesítési Csatorna",
+      "enum": [
+        "telegram_sms",
+        "telegram_only",
+        "sms_only",
+        "webhook"
+      ],
+      "default": "telegram_sms",
+      "description": "Azonnali vészriasztás kézbesítési csatornája a webshop üzemeltetőjének."
+    }
+  }
+}

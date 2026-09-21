@@ -1,0 +1,340 @@
+[
+  {
+    "quote_id": "B2B-AJ-20260920-9543",
+    "created_at": "2026-09-20T04:07:54.031779",
+    "valid_until": "2026-10-05",
+    "partner_code": "PARTNER-101",
+    "company_name": "KlímaMaster Szerelő Kft.",
+    "tax_id": "23456789-2-41",
+    "tier": "GOLD",
+    "tier_discount_pct": 22.0,
+    "volume_bonus_pct": 2.0,
+    "final_net_huf": 880334,
+    "vat_amount_huf": 237690,
+    "gross_total_huf": 1118024,
+    "total_partner_savings_huf": 271966.0,
+    "status": "PENDING_SALES_REP_APPROVAL",
+    "items": [
+      {
+        "sku": "CU-PIPE-15",
+        "name": "15x1 mm Rézcső szálban (félkemény)",
+        "unit": "fm",
+        "quantity": 150.0,
+        "list_unit_price": 3850.0,
+        "partner_discount_pct": 22.0,
+        "discounted_unit_price": 3000.0,
+        "line_net": 450000.0,
+        "stock_status": "IN_STOCK",
+        "stock_note": "Raktáron (450 fm azonnal szállítható)",
+        "alternative_recommendation": null
+      },
+      {
+        "sku": "VALVE-BRASS-12",
+        "name": "1/2 colos Golyóscsap BB Karos (Olasz réz)",
+        "unit": "db",
+        "quantity": 40.0,
+        "list_unit_price": 2450.0,
+        "partner_discount_pct": 22.0,
+        "discounted_unit_price": 1910.0,
+        "line_net": 76400.0,
+        "stock_status": "IN_STOCK",
+        "stock_note": "Raktáron (1200 db azonnal szállítható)",
+        "alternative_recommendation": null
+      },
+      {
+        "sku": "PUMP-GRUNDFOS-25",
+        "name": "Grundfos Alpha 25-60 180 Fűtési Keringető Szivattyú",
+        "unit": "db",
+        "quantity": 5.0,
+        "list_unit_price": 95360.0,
+        "partner_discount_pct": 22.0,
+        "discounted_unit_price": 74380.0,
+        "line_net": 371900.0,
+        "stock_status": "SHORTAGE",
+        "stock_note": "Részben készleten (3 db azonnal, hiány: 2 db). Alternatíva raktárról elérhető!",
+        "alternative_recommendation": {
+          "alternative_sku": "PUMP-WILO-YONOS-25",
+          "alternative_name": "Wilo Yonos PICO 25/1-6 Fűtési Keringető Szivattyú",
+          "alternative_list_price": 88500,
+          "alternative_discounted_price": 69030.0,
+          "alternative_stock_qty": 45
+        }
+      }
+    ],
+    "shortage_alerts": [
+      {
+        "sku": "PUMP-GRUNDFOS-25",
+        "name": "Grundfos Alpha 25-60 180 Fűtési Keringető Szivattyú",
+        "requested_qty": 5.0,
+        "available_qty": 3.0,
+        "shortage_qty": 2.0,
+        "alternative": {
+          "alternative_sku": "PUMP-WILO-YONOS-25",
+          "alternative_name": "Wilo Yonos PICO 25/1-6 Fűtési Keringető Szivattyú",
+          "alternative_list_price": 88500,
+          "alternative_discounted_price": 69030.0,
+          "alternative_stock_qty": 45
+        }
+      }
+    ],
+    "approval_url": "http://localhost:8000/api/v1/modules/03_tomeges_b2b_arajanlatadas_partner_kedvez/approve_quote?quote_id=B2B-AJ-20260920-9543",
+    "email_draft": "Tárgy: Hivatalos B2B Árajánlat #B2B-AJ-20260920-9543 - KlímaMaster Szerelő Kft.\nCímzett: beszerzes@klimamaster.hu\n\nTisztelt Nagy Zoltán Építésvezető!\n\nKöszönjük megkeresését! Az alábbiakban küldjük a(z) B2B-AJ-20260920-9543 számú hivatalos árajánlatunkat a(z) 'GOLD' szerződéses partneri kedvezményszint (-22.0%) figyelembevételével:\n\nTÉTELEK ÉS KÉSZLETI ELÉRHETŐSÉG:\n• CU-PIPE-15 | 15x1 mm Rézcső szálban (félkemény): 150.0 fm x 3,000.0 Ft = 450,000.0 Ft nettó\n  -> Készlet: Raktáron (450 fm azonnal szállítható)\n• VALVE-BRASS-12 | 1/2 colos Golyóscsap BB Karos (Olasz réz): 40.0 db x 1,910.0 Ft = 76,400.0 Ft nettó\n  -> Készlet: Raktáron (1200 db azonnal szállítható)\n• PUMP-GRUNDFOS-25 | Grundfos Alpha 25-60 180 Fűtési Keringető Szivattyú: 5.0 db x 74,380.0 Ft = 371,900.0 Ft nettó\n  -> Készlet: Részben készleten (3 db azonnal, hiány: 2 db). Alternatíva raktárról elérhető!\n  -> ALTERNATÍVA: Wilo Yonos PICO 25/1-6 Fűtési Keringető Szivattyú (69,030.0 Ft nettó, 45 db készleten!)\n\nNAGYTÉTELES BÓNUSZ KEDVEZMÉNY: -2.0% jóváírva a végösszegből!\n\nNETTÓ VÉGÖSSZEG: 880,334 Ft\nÁFA (27%): 237,690 Ft\nBRUTTÓ FIZETENDŐ: 1,118,024 Ft\nMegtakarítás a listaárakhoz képest: 271,966.0 Ft\n\nFizetési feltételek: 15 napos átutalás\nAjánlati kötöttség: 2026.10.05. (15 napig érvényes)\nSzállítás: Azonnal raktárról (1 munkanap)\n\nÜdvözlettel:\nProfiGépész Nagykereskedelmi Kft. - B2B Értékesítési Csapat"
+  },
+  {
+    "quote_id": "B2B-AJ-20260920-9543",
+    "created_at": "2026-09-20T04:07:05.362134",
+    "valid_until": "2026-10-05",
+    "partner_code": "PARTNER-101",
+    "company_name": "KlímaMaster Szerelő Kft.",
+    "tax_id": "23456789-2-41",
+    "tier": "GOLD",
+    "tier_discount_pct": 22.0,
+    "volume_bonus_pct": 2.0,
+    "final_net_huf": 880334,
+    "vat_amount_huf": 237690,
+    "gross_total_huf": 1118024,
+    "total_partner_savings_huf": 271966.0,
+    "status": "PENDING_SALES_REP_APPROVAL",
+    "items": [
+      {
+        "sku": "CU-PIPE-15",
+        "name": "15x1 mm Rézcső szálban (félkemény)",
+        "unit": "fm",
+        "quantity": 150.0,
+        "list_unit_price": 3850.0,
+        "partner_discount_pct": 22.0,
+        "discounted_unit_price": 3000.0,
+        "line_net": 450000.0,
+        "stock_status": "IN_STOCK",
+        "stock_note": "Raktáron (450 fm azonnal szállítható)",
+        "alternative_recommendation": null
+      },
+      {
+        "sku": "VALVE-BRASS-12",
+        "name": "1/2 colos Golyóscsap BB Karos (Olasz réz)",
+        "unit": "db",
+        "quantity": 40.0,
+        "list_unit_price": 2450.0,
+        "partner_discount_pct": 22.0,
+        "discounted_unit_price": 1910.0,
+        "line_net": 76400.0,
+        "stock_status": "IN_STOCK",
+        "stock_note": "Raktáron (1200 db azonnal szállítható)",
+        "alternative_recommendation": null
+      },
+      {
+        "sku": "PUMP-GRUNDFOS-25",
+        "name": "Grundfos Alpha 25-60 180 Fűtési Keringető Szivattyú",
+        "unit": "db",
+        "quantity": 5.0,
+        "list_unit_price": 95360.0,
+        "partner_discount_pct": 22.0,
+        "discounted_unit_price": 74380.0,
+        "line_net": 371900.0,
+        "stock_status": "SHORTAGE",
+        "stock_note": "Részben készleten (3 db azonnal, hiány: 2 db). Alternatíva raktárról elérhető!",
+        "alternative_recommendation": {
+          "alternative_sku": "PUMP-WILO-YONOS-25",
+          "alternative_name": "Wilo Yonos PICO 25/1-6 Fűtési Keringető Szivattyú",
+          "alternative_list_price": 88500,
+          "alternative_discounted_price": 69030.0,
+          "alternative_stock_qty": 45
+        }
+      }
+    ],
+    "shortage_alerts": [
+      {
+        "sku": "PUMP-GRUNDFOS-25",
+        "name": "Grundfos Alpha 25-60 180 Fűtési Keringető Szivattyú",
+        "requested_qty": 5.0,
+        "available_qty": 3.0,
+        "shortage_qty": 2.0,
+        "alternative": {
+          "alternative_sku": "PUMP-WILO-YONOS-25",
+          "alternative_name": "Wilo Yonos PICO 25/1-6 Fűtési Keringető Szivattyú",
+          "alternative_list_price": 88500,
+          "alternative_discounted_price": 69030.0,
+          "alternative_stock_qty": 45
+        }
+      }
+    ],
+    "approval_url": "http://localhost:8000/api/v1/modules/03_tomeges_b2b_arajanlatadas_partner_kedvez/approve_quote?quote_id=B2B-AJ-20260920-9543",
+    "email_draft": "Tárgy: Hivatalos B2B Árajánlat #B2B-AJ-20260920-9543 - KlímaMaster Szerelő Kft.\nCímzett: beszerzes@klimamaster.hu\n\nTisztelt Nagy Zoltán Építésvezető!\n\nKöszönjük megkeresését! Az alábbiakban küldjük a(z) B2B-AJ-20260920-9543 számú hivatalos árajánlatunkat a(z) 'GOLD' szerződéses partneri kedvezményszint (-22.0%) figyelembevételével:\n\nTÉTELEK ÉS KÉSZLETI ELÉRHETŐSÉG:\n• CU-PIPE-15 | 15x1 mm Rézcső szálban (félkemény): 150.0 fm x 3,000.0 Ft = 450,000.0 Ft nettó\n  -> Készlet: Raktáron (450 fm azonnal szállítható)\n• VALVE-BRASS-12 | 1/2 colos Golyóscsap BB Karos (Olasz réz): 40.0 db x 1,910.0 Ft = 76,400.0 Ft nettó\n  -> Készlet: Raktáron (1200 db azonnal szállítható)\n• PUMP-GRUNDFOS-25 | Grundfos Alpha 25-60 180 Fűtési Keringető Szivattyú: 5.0 db x 74,380.0 Ft = 371,900.0 Ft nettó\n  -> Készlet: Részben készleten (3 db azonnal, hiány: 2 db). Alternatíva raktárról elérhető!\n  -> ALTERNATÍVA: Wilo Yonos PICO 25/1-6 Fűtési Keringető Szivattyú (69,030.0 Ft nettó, 45 db készleten!)\n\nNAGYTÉTELES BÓNUSZ KEDVEZMÉNY: -2.0% jóváírva a végösszegből!\n\nNETTÓ VÉGÖSSZEG: 880,334 Ft\nÁFA (27%): 237,690 Ft\nBRUTTÓ FIZETENDŐ: 1,118,024 Ft\nMegtakarítás a listaárakhoz képest: 271,966.0 Ft\n\nFizetési feltételek: 15 napos átutalás\nAjánlati kötöttség: 2026.10.05. (15 napig érvényes)\nSzállítás: Azonnal raktárról (1 munkanap)\n\nÜdvözlettel:\nProfiGépész Nagykereskedelmi Kft. - B2B Értékesítési Csapat"
+  },
+  {
+    "quote_id": "B2B-AJ-20260920-8660",
+    "created_at": "2026-09-20T02:49:45.915881",
+    "valid_until": "2026-10-05",
+    "partner_code": "PARTNER-102",
+    "company_name": "TermoGépész Kivitelező Bt.",
+    "tax_id": "19876543-1-13",
+    "tier": "SILVER",
+    "tier_discount_pct": 15.0,
+    "volume_bonus_pct": 0.0,
+    "final_net_huf": 292800,
+    "vat_amount_huf": 79056,
+    "gross_total_huf": 371856,
+    "total_partner_savings_huf": 51950.0,
+    "status": "PENDING_SALES_REP_APPROVAL",
+    "items": [
+      {
+        "sku": "CU-PIPE-15",
+        "name": "15x1 mm Rézcső szálban (félkemény)",
+        "unit": "fm",
+        "quantity": 80.0,
+        "list_unit_price": 3850.0,
+        "partner_discount_pct": 15.0,
+        "discounted_unit_price": 3270.0,
+        "line_net": 261600.0,
+        "stock_status": "IN_STOCK",
+        "stock_note": "Raktáron (450 fm azonnal szállítható)",
+        "alternative_recommendation": null
+      },
+      {
+        "sku": "VALVE-BRASS-12",
+        "name": "1/2 colos Golyóscsap BB Karos (Olasz réz)",
+        "unit": "db",
+        "quantity": 15.0,
+        "list_unit_price": 2450.0,
+        "partner_discount_pct": 15.0,
+        "discounted_unit_price": 2080.0,
+        "line_net": 31200.0,
+        "stock_status": "IN_STOCK",
+        "stock_note": "Raktáron (1200 db azonnal szállítható)",
+        "alternative_recommendation": null
+      }
+    ],
+    "shortage_alerts": [],
+    "approval_url": "http://localhost:8000/api/v1/modules/03_tomeges_b2b_arajanlatadas_partner_kedvez/approve_quote?quote_id=B2B-AJ-20260920-8660",
+    "email_draft": "Tárgy: Hivatalos B2B Árajánlat #B2B-AJ-20260920-8660 - TermoGépész Kivitelező Bt.\nCímzett: horvath@termogepesz.hu\n\nTisztelt Horváth Béla Ügyvezető!\n\nKöszönjük megkeresését! Az alábbiakban küldjük a(z) B2B-AJ-20260920-8660 számú hivatalos árajánlatunkat a(z) 'SILVER' szerződéses partneri kedvezményszint (-15.0%) figyelembevételével:\n\nTÉTELEK ÉS KÉSZLETI ELÉRHETŐSÉG:\n• CU-PIPE-15 | 15x1 mm Rézcső szálban (félkemény): 80.0 fm x 3,270.0 Ft = 261,600.0 Ft nettó\n  -> Készlet: Raktáron (450 fm azonnal szállítható)\n• VALVE-BRASS-12 | 1/2 colos Golyóscsap BB Karos (Olasz réz): 15.0 db x 2,080.0 Ft = 31,200.0 Ft nettó\n  -> Készlet: Raktáron (1200 db azonnal szállítható)\n\nNETTÓ VÉGÖSSZEG: 292,800 Ft\nÁFA (27%): 79,056 Ft\nBRUTTÓ FIZETENDŐ: 371,856 Ft\nMegtakarítás a listaárakhoz képest: 51,950.0 Ft\n\nFizetési feltételek: 8 napos átutalás\nAjánlati kötöttség: 2026.10.05. (15 napig érvényes)\nSzállítás: Azonnal raktárról (1 munkanap)\n\nÜdvözlettel:\nProfiGépész Nagykereskedelmi Kft. - B2B Értékesítési Csapat"
+  },
+  {
+    "quote_id": "B2B-AJ-20260920-1429",
+    "created_at": "2026-09-20T02:49:38.062055",
+    "valid_until": "2026-10-05",
+    "partner_code": "PARTNER-104",
+    "company_name": "Industrial Facility Services Zrt.",
+    "tax_id": "11223344-2-44",
+    "tier": "PLATINUM",
+    "tier_discount_pct": 28.0,
+    "volume_bonus_pct": 4.0,
+    "final_net_huf": 971059,
+    "vat_amount_huf": 262186,
+    "gross_total_huf": 1233245,
+    "total_partner_savings_huf": 434941.0,
+    "status": "PENDING_SALES_REP_APPROVAL",
+    "items": [
+      {
+        "sku": "DAIKIN-SENSIRA-35",
+        "name": "Daikin Sensira 3.5 kW Inverteres Klíma Szett",
+        "unit": "szett",
+        "quantity": 4.0,
+        "list_unit_price": 329000.0,
+        "partner_discount_pct": 28.0,
+        "discounted_unit_price": 236880.0,
+        "line_net": 947520.0,
+        "stock_status": "IN_STOCK",
+        "stock_note": "Raktáron (8 szett azonnal szállítható)",
+        "alternative_recommendation": null
+      },
+      {
+        "sku": "FITTING-ELBOW-90",
+        "name": "Forrasztható Réz Könyök 90 fok 15 mm",
+        "unit": "db",
+        "quantity": 200.0,
+        "list_unit_price": 450.0,
+        "partner_discount_pct": 28.0,
+        "discounted_unit_price": 320.0,
+        "line_net": 64000.0,
+        "stock_status": "IN_STOCK",
+        "stock_note": "Raktáron (3500 db azonnal szállítható)",
+        "alternative_recommendation": null
+      }
+    ],
+    "shortage_alerts": [],
+    "approval_url": "http://localhost:8000/api/v1/modules/03_tomeges_b2b_arajanlatadas_partner_kedvez/approve_quote?quote_id=B2B-AJ-20260920-1429",
+    "email_draft": "Tárgy: Hivatalos B2B Árajánlat #B2B-AJ-20260920-1429 - Industrial Facility Services Zrt.\nCímzett: erika.molnar@ifs-hungary.hu\n\nTisztelt Molnár Erika Beszerzési Igazgató!\n\nKöszönjük megkeresését! Az alábbiakban küldjük a(z) B2B-AJ-20260920-1429 számú hivatalos árajánlatunkat a(z) 'PLATINUM' szerződéses partneri kedvezményszint (-28.0%) figyelembevételével:\n\nTÉTELEK ÉS KÉSZLETI ELÉRHETŐSÉG:\n• DAIKIN-SENSIRA-35 | Daikin Sensira 3.5 kW Inverteres Klíma Szett: 4.0 szett x 236,880.0 Ft = 947,520.0 Ft nettó\n  -> Készlet: Raktáron (8 szett azonnal szállítható)\n• FITTING-ELBOW-90 | Forrasztható Réz Könyök 90 fok 15 mm: 200.0 db x 320.0 Ft = 64,000.0 Ft nettó\n  -> Készlet: Raktáron (3500 db azonnal szállítható)\n\nNAGYTÉTELES BÓNUSZ KEDVEZMÉNY: -4.0% jóváírva a végösszegből!\n\nNETTÓ VÉGÖSSZEG: 971,059 Ft\nÁFA (27%): 262,186 Ft\nBRUTTÓ FIZETENDŐ: 1,233,245 Ft\nMegtakarítás a listaárakhoz képest: 434,941.0 Ft\n\nFizetési feltételek: 30 napos átutalás\nAjánlati kötöttség: 2026.10.05. (15 napig érvényes)\nSzállítás: Azonnal raktárról (1 munkanap)\n\nÜdvözlettel:\nProfiGépész Nagykereskedelmi Kft. - B2B Értékesítési Csapat"
+  },
+  {
+    "quote_id": "B2B-AJ-20260920-3734",
+    "created_at": "2026-09-20T02:49:38.060056",
+    "valid_until": "2026-10-05",
+    "partner_code": "PARTNER-101",
+    "company_name": "KlímaMaster Szerelő Kft.",
+    "tax_id": "23456789-2-41",
+    "tier": "GOLD",
+    "tier_discount_pct": 22.0,
+    "volume_bonus_pct": 2.0,
+    "final_net_huf": 880334,
+    "vat_amount_huf": 237690,
+    "gross_total_huf": 1118024,
+    "total_partner_savings_huf": 271966.0,
+    "status": "APPROVED_AND_SENT_TO_PARTNER",
+    "items": [
+      {
+        "sku": "CU-PIPE-15",
+        "name": "15x1 mm Rézcső szálban (félkemény)",
+        "unit": "fm",
+        "quantity": 150.0,
+        "list_unit_price": 3850.0,
+        "partner_discount_pct": 22.0,
+        "discounted_unit_price": 3000.0,
+        "line_net": 450000.0,
+        "stock_status": "IN_STOCK",
+        "stock_note": "Raktáron (450 fm azonnal szállítható)",
+        "alternative_recommendation": null
+      },
+      {
+        "sku": "VALVE-BRASS-12",
+        "name": "1/2 colos Golyóscsap BB Karos (Olasz réz)",
+        "unit": "db",
+        "quantity": 40.0,
+        "list_unit_price": 2450.0,
+        "partner_discount_pct": 22.0,
+        "discounted_unit_price": 1910.0,
+        "line_net": 76400.0,
+        "stock_status": "IN_STOCK",
+        "stock_note": "Raktáron (1200 db azonnal szállítható)",
+        "alternative_recommendation": null
+      },
+      {
+        "sku": "PUMP-GRUNDFOS-25",
+        "name": "Grundfos Alpha 25-60 180 Fűtési Keringető Szivattyú",
+        "unit": "db",
+        "quantity": 5.0,
+        "list_unit_price": 95360.0,
+        "partner_discount_pct": 22.0,
+        "discounted_unit_price": 74380.0,
+        "line_net": 371900.0,
+        "stock_status": "SHORTAGE",
+        "stock_note": "Részben készleten (3 db azonnal, hiány: 2 db). Alternatíva raktárról elérhető!",
+        "alternative_recommendation": {
+          "alternative_sku": "PUMP-WILO-YONOS-25",
+          "alternative_name": "Wilo Yonos PICO 25/1-6 Fűtési Keringető Szivattyú",
+          "alternative_list_price": 88500,
+          "alternative_discounted_price": 69030.0,
+          "alternative_stock_qty": 45
+        }
+      }
+    ],
+    "shortage_alerts": [
+      {
+        "sku": "PUMP-GRUNDFOS-25",
+        "name": "Grundfos Alpha 25-60 180 Fűtési Keringető Szivattyú",
+        "requested_qty": 5.0,
+        "available_qty": 3.0,
+        "shortage_qty": 2.0,
+        "alternative": {
+          "alternative_sku": "PUMP-WILO-YONOS-25",
+          "alternative_name": "Wilo Yonos PICO 25/1-6 Fűtési Keringető Szivattyú",
+          "alternative_list_price": 88500,
+          "alternative_discounted_price": 69030.0,
+          "alternative_stock_qty": 45
+        }
+      }
+    ],
+    "approval_url": "http://localhost:8000/api/v1/modules/03_tomeges_b2b_arajanlatadas_partner_kedvez/approve_quote?quote_id=B2B-AJ-20260920-3734",
+    "email_draft": "Tárgy: Hivatalos B2B Árajánlat #B2B-AJ-20260920-3734 - KlímaMaster Szerelő Kft.\nCímzett: beszerzes@klimamaster.hu\n\nTisztelt Nagy Zoltán Építésvezető!\n\nKöszönjük megkeresését! Az alábbiakban küldjük a(z) B2B-AJ-20260920-3734 számú hivatalos árajánlatunkat a(z) 'GOLD' szerződéses partneri kedvezményszint (-22.0%) figyelembevételével:\n\nTÉTELEK ÉS KÉSZLETI ELÉRHETŐSÉG:\n• CU-PIPE-15 | 15x1 mm Rézcső szálban (félkemény): 150.0 fm x 3,000.0 Ft = 450,000.0 Ft nettó\n  -> Készlet: Raktáron (450 fm azonnal szállítható)\n• VALVE-BRASS-12 | 1/2 colos Golyóscsap BB Karos (Olasz réz): 40.0 db x 1,910.0 Ft = 76,400.0 Ft nettó\n  -> Készlet: Raktáron (1200 db azonnal szállítható)\n• PUMP-GRUNDFOS-25 | Grundfos Alpha 25-60 180 Fűtési Keringető Szivattyú: 5.0 db x 74,380.0 Ft = 371,900.0 Ft nettó\n  -> Készlet: Részben készleten (3 db azonnal, hiány: 2 db). Alternatíva raktárról elérhető!\n  -> ALTERNATÍVA: Wilo Yonos PICO 25/1-6 Fűtési Keringető Szivattyú (69,030.0 Ft nettó, 45 db készleten!)\n\nNAGYTÉTELES BÓNUSZ KEDVEZMÉNY: -2.0% jóváírva a végösszegből!\n\nNETTÓ VÉGÖSSZEG: 880,334 Ft\nÁFA (27%): 237,690 Ft\nBRUTTÓ FIZETENDŐ: 1,118,024 Ft\nMegtakarítás a listaárakhoz képest: 271,966.0 Ft\n\nFizetési feltételek: 15 napos átutalás\nAjánlati kötöttség: 2026.10.05. (15 napig érvényes)\nSzállítás: Azonnal raktárról (1 munkanap)\n\nÜdvözlettel:\nProfiGépész Nagykereskedelmi Kft. - B2B Értékesítési Csapat",
+    "approved_at": "2026-09-20T02:49:38.063054"
+  }
+]

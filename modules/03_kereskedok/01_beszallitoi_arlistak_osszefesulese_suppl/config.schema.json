@@ -1,0 +1,86 @@
+{
+  "title": "Beszállítói Árlisták Összefésülése & Árrésvédelem Konfiguráció",
+  "type": "object",
+  "required": [
+    "default_target_margin_percent"
+  ],
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (tesztelés próbaadatokkal) vagy Production (éles ERP / beszállítói API kapcsolat)."
+    },
+    "default_target_margin_percent": {
+      "type": "number",
+      "title": "Alapértelmezett Elvárt Haszonkulcs / Árrés (%)",
+      "default": 25.0,
+      "description": "A minimális elvárt haszonkulcs az új eladási árak kalkulációjához."
+    },
+    "critical_margin_threshold_percent": {
+      "type": "number",
+      "title": "Kritikus Árrésszint Küszöb (%)",
+      "default": 10.0,
+      "description": "Ha a jelenlegi árrés ez alá esik egy beszállítói áremelés miatt, piros vészjelzés indul."
+    },
+    "currency_exchange_rates": {
+      "type": "object",
+      "title": "Deviza Árfolyamok (HUF)",
+      "default": {
+        "EUR": 412.5,
+        "USD": 382.0,
+        "HUF": 1.0
+      },
+      "description": "Napi MNB vagy egyedi vállalati biztonsági deviza középárfolyamok az átszámításhoz."
+    },
+    "approval_mode": {
+      "type": "string",
+      "title": "Jóváhagyási Mód",
+      "enum": [
+        "manual_approval_only",
+        "auto_sync_small_changes",
+        "strict_margin_guard"
+      ],
+      "default": "manual_approval_only",
+      "description": "manual_approval_only: Minden árváltozás beszerzői jóváhagyást igényel. auto_sync_small_changes: Kisebb (<5%) drágulásnál automatikus frissítés."
+    },
+    "auto_sync_max_increase_percent": {
+      "type": "number",
+      "title": "Automatikus Frissítés Max Áremelés (%)",
+      "default": 5.0,
+      "description": "Csak auto_sync módban: ennél kisebb emelésnél automatikusan élesíti az árakat."
+    },
+    "enable_best_buy_comparison": {
+      "type": "boolean",
+      "title": "Legolcsóbb Beszállító Kereső (Best Buy)",
+      "default": true,
+      "description": "Több beszállító esetén automatikusan a legkedvezőbb beszerzési forrást választja ki."
+    },
+    "alert_channels": {
+      "type": "array",
+      "title": "Vezetői Riasztási Csatornák",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "telegram",
+        "email",
+        "dashboard"
+      ]
+    },
+    "master_catalog_path": {
+      "type": "string",
+      "title": "Belső Terméktörzs Elérési Út",
+      "default": "data/termektorzs_katalogus.json"
+    },
+    "audit_log_path": {
+      "type": "string",
+      "title": "Árrésvédelmi Napló Útvonal",
+      "default": "data/arresvedelem_naplo.json"
+    }
+  }
+}

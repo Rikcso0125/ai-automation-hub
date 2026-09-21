@@ -1,0 +1,8 @@
+{
+  "id": "12_elvesztett_ajanlatok_elemzese_visszanyer",
+  "title": "Elvesztett Ajánlatok Elemzése & Visszanyerése (Win/Loss)",
+  "category": "szolgaltatok",
+  "icon": "🔄",
+  "version": "1.0.0",
+  "description": "Az elutasított vagy lecsengett ajánlatok valódi okainak felderítése (Ár, Időzítés, Konkurencia, Műszaki ok), karcsúsított visszanyerő ellenajánlat (Win-Back) összeállítása 1-kattintásos vezetői jóváhagyással (A opció), és központi Win/Loss veszteségi ok-hőtérkép a Dashboardra."
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Szerződéskockázat Elemző Beállítások",
+  "type": "object",
+  "required": [
+    "company_name",
+    "max_penalty_cap_percent"
+  ],
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "Céged Neve",
+      "default": "ProfiTech Kft."
+    },
+    "company_role": {
+      "type": "string",
+      "title": "Céged Tipikus Szerződéses Szerepe",
+      "enum": [
+        "Vállalkozó / Szállító / Szolgáltató (Megbízott)",
+        "Megrendelő / Vevő (Megbízó)"
+      ],
+      "default": "Vállalkozó / Szállító / Szolgáltató (Megbízott)",
+      "description": "Az AI ennek szemszögéből vizsgálja az aránytalan hátrányokat és kötelezettségeket."
+    },
+    "max_penalty_cap_percent": {
+      "type": "string",
+      "title": "Elfogadható Maximális Kötbér Plafon (%)",
+      "default": "10",
+      "description": "A szerződéses érték max hány százalékában maximalizálható a kötbér (10% a piaci standard)."
+    },
+    "jurisdiction_preference": {
+      "type": "string",
+      "title": "Előnyben Részesített Bírósági Illetékesség",
+      "default": "Magyarország, alperes/felperes székhelye szerinti rendes bíróság",
+      "description": "Kizárja a drága külföldi vagy nemzetközi választottbírósági kikötéseket."
+    },
+    "ai_provider": {
+      "type": "string",
+      "title": "AI Jogi Elemző Motor",
+      "enum": [
+        "openai",
+        "gemini",
+        "mock"
+      ],
+      "default": "mock",
+      "description": "OpenAI GPT-4o (legmélyebb jogi szövegértés), Google Gemini 1.5 Pro, vagy Mock próba."
+    },
+    "ai_api_key": {
+      "type": "string",
+      "title": "AI API Kulcs",
+      "format": "password"
+    },
+    "notification_email": {
+      "type": "string",
+      "title": "Jogi Értesítési Email Cím",
+      "default": "jogi@cegem.hu"
+    }
+  }
+}

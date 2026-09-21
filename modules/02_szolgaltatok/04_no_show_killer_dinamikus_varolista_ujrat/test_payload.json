@@ -1,0 +1,29 @@
+{
+  "module_id": "no_show_killer_dinamikus_varolista_ujrat",
+  "event_type": "APPOINTMENT_CANCELLATION",
+  "canceled_slot": {
+    "booking_id": "BOOK-2026-8812",
+    "client_name": "Kiss Péter",
+    "phone": "+36301112233",
+    "datetime": "2026-09-22 14:00 - 15:00",
+    "service": "Esztétikai fogkőeltávolítás & konzultáció",
+    "doctor": "Dr. Varga Csaba"
+  },
+  "waitlist": [
+    {
+      "name": "Szabó Beatrix",
+      "phone": "+36309991122",
+      "pref": "délután"
+    },
+    {
+      "name": "Horváth Tamás",
+      "phone": "+36703334455",
+      "pref": "bármikor"
+    },
+    {
+      "name": "Németh Judit",
+      "phone": "+36207778899",
+      "pref": "szeptember"
+    }
+  ]
+}

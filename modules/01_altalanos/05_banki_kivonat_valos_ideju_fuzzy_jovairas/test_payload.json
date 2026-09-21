@@ -1,0 +1,29 @@
+{
+  "incoming_transaction": {
+    "transaction_id": "TRX-2026-0920-8419",
+    "booking_date": "2026-09-20",
+    "amount_huf": 354000,
+    "currency": "HUF",
+    "sender_name": "Nagy Bela EV",
+    "sender_account": "11705008-20495812-00000000",
+    "remittance_info": "szla 2026 0842 koszonjuk szepen a munkat"
+  },
+  "open_invoices_in_system": [
+    {
+      "invoice_number": "SZAMLA-2026-0842",
+      "customer_name": "Nagy Béla Egyéni Vállalkozó",
+      "gross_amount": 354000,
+      "currency": "HUF",
+      "due_date": "2026-09-25",
+      "status": "unpaid"
+    },
+    {
+      "invoice_number": "SZAMLA-2026-0810",
+      "customer_name": "Kovács és Társa Kft.",
+      "gross_amount": 120000,
+      "currency": "HUF",
+      "due_date": "2026-09-15",
+      "status": "unpaid"
+    }
+  ]
+}

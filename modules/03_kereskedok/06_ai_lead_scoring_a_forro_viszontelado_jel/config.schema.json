@@ -1,0 +1,195 @@
+{
+  "title": "AI Lead Scoring – Konfiguráció",
+  "type": "object",
+  "required": [
+    "service_mode"
+  ],
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (szimulált céginformáció és scoring) vagy Production (élő NAV/Opten/CRM integráció)."
+    },
+    "routing_mode": {
+      "type": "string",
+      "title": "Lead Értékesítői Továbbítási Mód",
+      "enum": [
+        "specialized_sales_routing",
+        "central_crm_pool"
+      ],
+      "default": "specialized_sales_routing",
+      "description": "Mód A: Területi/szakterületi Key Account Managerhez rendelés azonnali riasztással. Mód B: Központi CRM pool pontszám szerint rendezve."
+    },
+    "tier_thresholds": {
+      "type": "object",
+      "title": "Tier Pontszám Határértékek",
+      "properties": {
+        "tier_a_min_score": {
+          "type": "integer",
+          "title": "Tier A (Kiemelt Hot Lead) Minimum Pont",
+          "default": 80
+        },
+        "tier_b_min_score": {
+          "type": "integer",
+          "title": "Tier B (Normál B2B Partner) Minimum Pont",
+          "default": 50
+        }
+      },
+      "default": {
+        "tier_a_min_score": 80,
+        "tier_b_min_score": 50
+      }
+    },
+    "tier_actions_config": {
+      "type": "object",
+      "title": "Testreszabható Tier Kezelési Stratégiák",
+      "properties": {
+        "tier_a": {
+          "type": "object",
+          "properties": {
+            "sla_minutes": {
+              "type": "integer",
+              "default": 15
+            },
+            "discount_tier_offered": {
+              "type": "string",
+              "default": "Gold (-22%) / Platinum (-28%)"
+            },
+            "require_personal_meeting": {
+              "type": "boolean",
+              "default": true
+            },
+            "action_title": {
+              "type": "string",
+              "default": "Azonnali Senior KAM telefonos hívás és egyedi keretszerződés ajánlat"
+            }
+          }
+        },
+        "tier_b": {
+          "type": "object",
+          "properties": {
+            "sla_minutes": {
+              "type": "integer",
+              "default": 1440
+            },
+            "discount_tier_offered": {
+              "type": "string",
+              "default": "Bronze (-10%) / Silver (-15%)"
+            },
+            "send_self_registration_link": {
+              "type": "boolean",
+              "default": true
+            },
+            "action_title": {
+              "type": "string",
+              "default": "Digitális B2B partner regisztráció és nagyker árlista küldése"
+            }
+          }
+        },
+        "tier_c": {
+          "type": "object",
+          "properties": {
+            "sla_minutes": {
+              "type": "integer",
+              "default": 0
+            },
+            "redirect_to_retail": {
+              "type": "boolean",
+              "default": true
+            },
+            "action_title": {
+              "type": "string",
+              "default": "Udvarias automatikus elirányítás lakossági webshophoz vagy viszonteladói partnerboltokhoz"
+            }
+          }
+        }
+      }
+    },
+    "custom_rules": {
+      "type": "array",
+      "title": "Egyedi Pontozási Szabályok (Bonus/Malus)",
+      "description": "Felhasználó által konfigurálható egyedi feltételek és pontkorrekciók.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string",
+            "enum": [
+              "contains",
+              "equals",
+              "greater_than",
+              "is_true"
+            ]
+          },
+          "value": {
+            "type": "string"
+          },
+          "points": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "default": [
+        {
+          "field": "has_iso_cert",
+          "operator": "is_true",
+          "value": "true",
+          "points": 5,
+          "description": "ISO 9001 / 14001 minősítés bónusz"
+        },
+        {
+          "field": "has_negative_credit_event",
+          "operator": "is_true",
+          "value": "true",
+          "points": -25,
+          "description": "Végrehajtás vagy adószám-felfüggesztési kockázat kizárása"
+        },
+        {
+          "field": "is_returning_customer",
+          "operator": "is_true",
+          "value": "true",
+          "points": 10,
+          "description": "Korábbi pozitív vásárlási előzmény bónusz"
+        }
+      ]
+    },
+    "kam_assignments": {
+      "type": "object",
+      "title": "KAM Területi Felelősök Beállítása",
+      "properties": {
+        "Közép-Magyarország": {
+          "type": "string",
+          "default": "Kovács László (B2B Értékesítési Igazgató)"
+        },
+        "Nyugat-Magyarország": {
+          "type": "string",
+          "default": "Nagy Péter (Senior KAM Nyugat)"
+        },
+        "Kelet-Magyarország": {
+          "type": "string",
+          "default": "Szabó Gábor (Senior KAM Kelet)"
+        },
+        "default": {
+          "type": "string",
+          "default": "Központi B2B KAM Csapat"
+        }
+      }
+    },
+    "storage_path": {
+      "type": "string",
+      "title": "Lead Scoring Napló Fájl",
+      "default": "data/b2b_lead_scoring_naplo.json"
+    }
+  }
+}

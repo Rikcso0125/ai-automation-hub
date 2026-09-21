@@ -1,0 +1,82 @@
+{
+  "title": "Automata Rövidvideó Vágás & Feliratozás Konfiguráció",
+  "type": "object",
+  "required": [
+    "api_key"
+  ],
+  "properties": {
+    "api_key": {
+      "type": "string",
+      "title": "Opus Clip / Whisper / Cloud Video Render Token",
+      "format": "password",
+      "default": "mock_opus_clip_api_token_2026",
+      "description": "API token a videóvágó és átirat-generáló felhőmotorhoz."
+    },
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (szimulált vágási és virality elemzés) vagy Production (éles felhő renderelés)."
+    },
+    "clipping_strategy": {
+      "type": "string",
+      "title": "1. Kérdés: AI Viralitási Pontozás & Vágási Stratégia",
+      "enum": [
+        "virality_score_auto",
+        "thematic_product_focus",
+        "hybrid_smart_clips"
+      ],
+      "default": "hybrid_smart_clips",
+      "description": "Whisper leirat alapú virality pontozás (hook-kiemeléssel), 3-lépcsős tematikus termékteszt fókusz, vagy hibrid intelligens klipválasztás."
+    },
+    "caption_style": {
+      "type": "string",
+      "title": "2. Kérdés: Dinamikus Feliratozás & Képi Stílus",
+      "enum": [
+        "hormozi_mrbeast_viral",
+        "minimal_premium_clean",
+        "selectable_dual_style"
+      ],
+      "default": "selectable_dual_style",
+      "description": "Hormozi/MrBeast sárga-zöld szóról-szóra animált kiemelés emojikkal, minimalista fehér-fekete prémium sávos, vagy választható kettős stílus."
+    },
+    "publishing_pipeline": {
+      "type": "string",
+      "title": "3. Kérdés: Záró Call-to-Action & Közzétételi Ügymenet",
+      "enum": [
+        "direct_auto_publish",
+        "zip_export_hitl_review",
+        "hybrid_publish_or_review"
+      ],
+      "default": "hybrid_publish_or_review",
+      "description": "Közvetlen automatikus közzététel (TikTok/Reels/Shorts API), ZIP letöltés előnézeti jóváhagyási kapuval (HITL), vagy hibrid 1-kattintásos publikáció."
+    },
+    "target_aspect_ratio": {
+      "type": "string",
+      "title": "Képarány és Vertikális Vágás",
+      "enum": [
+        "9:16_vertical",
+        "1:1_square",
+        "16:9_horizontal"
+      ],
+      "default": "9:16_vertical",
+      "description": "TikTok, Instagram Reels és YouTube Shorts 9:16 formátum arc- és termékkövetéssel."
+    },
+    "add_closing_cta_card": {
+      "type": "boolean",
+      "title": "Záró Kártya Hozzáadása (CTA Banner)",
+      "default": true,
+      "description": "3 másodperces animált zárókártya a videó végére termékképpel, kuponkóddal és webshop linkkel."
+    },
+    "flash_coupon_code": {
+      "type": "string",
+      "title": "Klip Záró Kuponkód",
+      "default": "REELS10",
+      "description": "A videó feliratán és zárókártyáján megjelenő akciós kuponkód."
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Email Triage Konfiguráció",
+  "type": "object",
+  "required": [
+    "company_name",
+    "api_key"
+  ],
+  "properties": {
+    "ai_provider": {
+      "type": "string",
+      "title": "AI Szolgáltató",
+      "enum": [
+        "openai",
+        "gemini",
+        "mock"
+      ],
+      "default": "openai",
+      "description": "Válassz AI motort. A 'mock' mód kulcs nélkül is szimulálja a működést."
+    },
+    "api_key": {
+      "type": "string",
+      "title": "AI API Kulcs (OpenAI / Gemini)",
+      "format": "password",
+      "description": "OpenAI (sk-...) vagy Google Gemini API kulcs a válaszok generálásához."
+    },
+    "ai_model": {
+      "type": "string",
+      "title": "AI Modell Verzió",
+      "default": "gpt-4o-mini",
+      "description": "Pl. gpt-4o-mini, gpt-4o, gemini-1.5-flash"
+    },
+    "company_name": {
+      "type": "string",
+      "title": "Vállalkozás Neve",
+      "default": "Példa Kft.",
+      "description": "A cég vagy szolgáltató hivatalos neve a válasz aláírásához."
+    },
+    "company_knowledge_base": {
+      "type": "string",
+      "title": "Céges Tudásbázis & Árak / Szolgáltatások",
+      "format": "textarea",
+      "default": "Szolgáltatásaink: Lakossági és ipari villanyszerelés, klímatelepítés, okosotthon rendszerek. Árak: Kiszállási díj Budapesten 15.000 Ft, óradíj 12.000 Ft/óra. Garancia: Minden beépített alkatrészre 2 év garanciát adunk. Munkaidő: H-P 8:00 - 17:00.",
+      "description": "Ide másold be a céged alapvető adatait, amiből az AI válaszolhat."
+    },
+    "reply_tone": {
+      "type": "string",
+      "title": "Válasz Stílusa",
+      "enum": [
+        "Professzionális és udvarias (Magázó)",
+        "Közvetlen és segítőkész (Tegező)",
+        "Hivatalos és tömör"
+      ],
+      "default": "Professzionális és udvarias (Magázó)"
+    },
+    "escalation_email": {
+      "type": "string",
+      "title": "Eszkalációs Értesítési Email",
+      "default": "vezeto@pelda.hu",
+      "description": "Sürgős panasz vagy VIP érdeklődő esetén ide küld azonnali riasztást."
+    }
+  }
+}

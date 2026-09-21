@@ -1,0 +1,33 @@
+{
+  "module_id": "02_kopott_alkatreszek_es_gep_adattablak_kep",
+  "source": "mobile_app_field_camera",
+  "request_id": "REQ-PARTID-2026-0920-01",
+  "field_technician": {
+    "name": "Takács Zoltán",
+    "title": "Vezető Ipari Karbantartó Mérnök",
+    "phone": "+36309876543",
+    "work_order_id": "WO-2026-LINE3-089"
+  },
+  "machine_context": {
+    "facility_name": "Győri Élelmiszeripari Palackozó Üzem",
+    "production_line": "3. sz. Nagysebességű PET Töltősor",
+    "machine_model": "Krones Canmatic 720 Címkéző Gép",
+    "serial_number": "KRN-2018-HU-9921",
+    "subsystem": "Pneumatikus vákuumvezérlő és címkeadagoló szelepsziget"
+  },
+  "image_inspection": {
+    "photo_url": "https://storage.factoryhub.hu/inspections/2026/09/worn_valve_plate_line3.jpg",
+    "photo_condition": "worn_metal_plate_oily_surface",
+    "raw_ocr_detected": "FES?O   CPE14-M1HA-5J?-1/8   MN: 1969??   p: 2.5-8 bar",
+    "visual_part_type": "5/2-way monostable directional solenoid valve",
+    "technician_notes": "A pneumatikus szelep belső tömítése elöregedett, a tekercs melegszik és nyomásingadozást okoz a címkézőfejnél. A leállási veszteség 350.000 Ft/óra, azonnali csere vagy kompatibilis alternatíva szükséges!"
+  },
+  "config": {
+    "ocr_reconstruction_mode": "hybrid_fuzzy_catalog_candidate",
+    "catalog_matching_depth": "full_cross_reference_aftermarket",
+    "field_workflow_mode": "end_to_end_procurement_autopilot",
+    "min_confidence_threshold": 0.85,
+    "require_chief_approval_over_huf": 40000,
+    "notification_channel": "telegram"
+  }
+}

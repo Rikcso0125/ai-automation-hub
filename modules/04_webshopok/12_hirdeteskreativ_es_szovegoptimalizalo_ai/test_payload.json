@@ -1,0 +1,41 @@
+{
+  "module_id": "12_hirdeteskreativ_es_szovegoptimalizalo_ai",
+  "campaign": {
+    "campaign_id": "CAMP-META-2026-BOSCH",
+    "campaign_name": "Tavaszi Építkezés & Barkács - Konverziós Kampány",
+    "adset_id": "ADSET-881920",
+    "adset_name": "Hideg Közönség - Építőipari és Barkács Érdeklődők (25-55)",
+    "ad_id": "AD-4418290-DRILL",
+    "ad_name": "Bosch GBH 2-28 Fúrókalapács - Régi Fókusz 1",
+    "platform": "meta_ads"
+  },
+  "product": {
+    "sku": "BOSCH-GBH-2-28",
+    "name": "Bosch Professional GBH 2-28 Fúrókalapács L-BOXX",
+    "price_huf": 68900,
+    "landing_page_url": "https://webshop.hu/termekek/bosch-gbh-2-28"
+  },
+  "metrics_last_7_days": {
+    "impressions": 84500,
+    "reach": 29800,
+    "frequency": 2.84,
+    "current_ctr_pct": 0.82,
+    "baseline_ctr_pct": 1.65,
+    "ctr_drop_pct": 50.3,
+    "spend_huf": 142000,
+    "purchases_count": 14,
+    "current_cpa_huf": 10142,
+    "max_target_cpa_huf": 7500,
+    "revenue_huf": 298200,
+    "current_roas": 2.1,
+    "target_min_roas": 3.0
+  },
+  "config": {
+    "fatigue_detection_mode": "hybrid_comprehensive_rules",
+    "frequency_fatigue_threshold": 2.8,
+    "ctr_drop_percent_threshold": 25,
+    "target_minimum_roas": 3.0,
+    "copywriting_generation_mode": "selectable_all_formats",
+    "intervention_mode": "hybrid_smart_guard"
+  }
+}

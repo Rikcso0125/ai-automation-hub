@@ -1,0 +1,474 @@
+[
+  {
+    "timestamp": "2026-09-20T03:55:16.701651",
+    "audit_id": "AUDIT-2026-LOG-0920-03",
+    "project_code": "PRJ-2026-LOG-DUNAPLAZA-B",
+    "compliance_pct": 33.3,
+    "stop_work_issued": true,
+    "findings": {
+      "audit_scope_mode": "hybrid_safety_and_technical_audit",
+      "total_items_inspected": 3,
+      "compliant_count": 1,
+      "non_compliant_count": 2,
+      "compliance_score_pct": 33.3,
+      "findings": [
+        {
+          "finding_id": "NCR-IMG_01_ROOF_STEEL",
+          "photo_id": "IMG_01_ROOF_STEEL",
+          "area": "6.5 méter magas tető acélszerkezet szerelési pont",
+          "type": "SAFETY_NON_CONFORMANCE",
+          "category_title": "Munkavédelem & Leesés Elleni Védelem",
+          "observation": "A szerelő nem rögzítette a biztonsági heveder karabinerét a kifeszített életvonalhoz, és a védősisakja nincs becsatolva.",
+          "status": "FAILED_CRITICAL",
+          "detected_violations": [
+            "Egyéni leesés elleni biztosítás hiánya 6.5 m munkamagasságban",
+            "Védősisak kötelező rögzítő állszíjának hiánya / nyitott állapot"
+          ],
+          "standard_reference": "1993. évi XCIII. Mvt. 42. § & 10/2016. NGM rendelet (Munkaeszközök és magasban végzett munka)"
+        },
+        {
+          "finding_id": "NCR-IMG_02_FIRE_SEAL",
+          "photo_id": "IMG_02_FIRE_SEAL",
+          "area": "2. sz. tűzszakasz-határ kábeltálca átvezetés",
+          "type": "TECHNICAL_NON_CONFORMANCE",
+          "category_title": "Tűzvédelmi Szakipari Minőség (OTSZ)",
+          "observation": "A tűzgátló habkitöltés hiányos a tálca alján, a kábelszigetelés közvetlenül érintkezik az acéllemezzel (EI 90 követelmény nem teljesül).",
+          "status": "FAILED_MAJOR",
+          "detected_violations": [
+            "Tűzgátló lezárás (EI 90) hézagos kivitelezése a tálca alsó síkján",
+            "Kábelköpeny közvetlen érintkezése hűtőbordázatlan fémszerkezettel"
+          ],
+          "standard_reference": "54/2014. (XII. 5.) BM rendelet (OTSZ) 14. Fejezet: Tűzgátló átvezetések és lezárások"
+        },
+        {
+          "finding_id": "PASS-IMG_03_EQUIPOTENTIAL_BONDING",
+          "photo_id": "IMG_03_EQUIPOTENTIAL_BONDING",
+          "area": "Kábeltálca összekötő pont és EPH földelés",
+          "type": "QUALITY_COMPLIANCE",
+          "category_title": "Villamos Érintésvédelem & EPH",
+          "observation": "Megfelelő réz átkötővezeték, szakszerű fogazott alátétes csavarozás, zöld-sárga jelölés hiánytalan.",
+          "status": "PASSED_COMPLIANT",
+          "detected_violations": [],
+          "standard_reference": "MSZ HD 60364-5-54 Villamos berendezések létesítése - Földelőberendezések és védővezetők"
+        }
+      ]
+    },
+    "risk_evaluation": {
+      "severity_engine_applied": "regulatory_legal_penalty_engine",
+      "stop_work_order": {
+        "issued": true,
+        "order_code": "SWO-20260920-01",
+        "reason": "Közvetlen magasból zuhanás veszélye! A tetőszerkezeti szerelés a leesés elleni védelem beakasztásáig azonnal felfüggesztve.",
+        "enforcement": "IMMEDIATE_SITE_SHUTDOWN_PHASE_ROOF"
+      },
+      "potential_regulatory_penalties": [
+        {
+          "authority": "Fővárosi / Megyei Kormányhivatal Munkavédelmi Hatósága",
+          "legal_basis": "1993. évi XCIII. Mvt. 82. § (Súlyos, közvetlen életveszély elhárításának elmulasztása)",
+          "min_penalty_huf": 500000,
+          "max_penalty_huf": 3000000,
+          "estimated_penalty_huf": 1500000,
+          "liability": "Egyetemleges: Fővállalkozó + Alvállalkozó Művezetője"
+        },
+        {
+          "authority": "Országos Katasztrófavédelmi Főigazgatóság (Tűzmegelőzési Hatóság)",
+          "legal_basis": "259/2011. (XII. 7.) Korm. rendelet 1. melléklet (Tűzgátló lezárás hibás kivitelezése)",
+          "min_penalty_huf": 200000,
+          "max_penalty_huf": 1000000,
+          "estimated_penalty_huf": 400000,
+          "liability": "Kivitelező szakcég és műszaki ellenőr"
+        }
+      ],
+      "total_penalty_exposure_huf": {
+        "min_huf": 700000,
+        "max_huf": 4000000,
+        "average_expected_huf": 2350000
+      },
+      "overall_risk_level": "CRITICAL_RED"
+    },
+    "remediation": {
+      "remediation_mode": "realtime_push_photo_gate",
+      "ncr_id": "NCR-C1B7BFF1",
+      "action_tickets": [
+        {
+          "ticket_id": "TKT-IMG_01_ROOF_STEEL",
+          "severity": "CRITICAL_IMMEDIATE",
+          "description": "A szerelő nem rögzítette a biztonsági heveder karabinerét a kifeszített életvonalhoz, és a védősisakja nincs becsatolva.",
+          "assigned_contractor": "Profi-Acél Szerkezetépítő és Bádogos Kft.",
+          "responsible_manager": "Horváth Balázs (Felelős Műszaki Vezető)",
+          "deadline_utc": "2026-09-20T05:55:16.701651",
+          "deadline_human": "2 ÓRÁN BELÜL (Azonnali)",
+          "verification_method": "Kötelező geolokációs Utána-Fotó (After-Photo) feltöltés az igazoló kapun."
+        },
+        {
+          "ticket_id": "TKT-IMG_02_FIRE_SEAL",
+          "severity": "MAJOR_24H",
+          "description": "A tűzgátló habkitöltés hiányos a tálca alján, a kábelszigetelés közvetlenül érintkezik az acéllemezzel (EI 90 követelmény nem teljesül).",
+          "assigned_contractor": "Profi-Acél Szerkezetépítő és Bádogos Kft.",
+          "responsible_manager": "Horváth Balázs (Felelős Műszaki Vezető)",
+          "deadline_utc": "2026-09-21T03:55:16.701651",
+          "deadline_human": "24 ÓRÁN BELÜL",
+          "verification_method": "Kötelező geolokációs Utána-Fotó (After-Photo) feltöltés az igazoló kapun."
+        }
+      ],
+      "photo_verification_gate_url": "http://localhost:8000/api/v1/quality/remediation-verify?ncr_id=NCR-C1B7BFF1",
+      "e_naplo_official_entry": "MUNKAVÉDELMI ÉS MINŐSÉGI ELLENŐRZÉSI BEJEGYZÉS (2026.09.20):\nProjekt: Duna Pláza Logisztikai Központ B-Csarnok Tetőszerkezet és Gépészet (PRJ-2026-LOG-DUNAPLAZA-B)\nHelyszíni szemle eredménye: 33.3% megfelelőség.\nKritikus munkavédelmi észrevétel: 6.5 m magasságban leesés elleni rögzítés hiánya detektálva. Munkabeszüntetési rendelkezés (SWO-20260920-01) kiadva a heveder rögzítéséig.\nTűzvédelmi észrevétel: Kábeltálca tűzgátló lezárása (OTSZ) 24 órás határidővel javítandó.\nAlvállalkozó értesítve, fotós javítási igazolás csatolása kötelező.",
+      "status": "REMEDIATION_REQUIRED_GATE_LOCKED"
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T03:55:26.614403",
+    "audit_id": "AUDIT-2026-LOG-0920-03",
+    "project_code": "PRJ-2026-LOG-DUNAPLAZA-B",
+    "compliance_pct": 33.3,
+    "stop_work_issued": true,
+    "findings": {
+      "audit_scope_mode": "hybrid_safety_and_technical_audit",
+      "total_items_inspected": 3,
+      "compliant_count": 1,
+      "non_compliant_count": 2,
+      "compliance_score_pct": 33.3,
+      "findings": [
+        {
+          "finding_id": "NCR-IMG_01_ROOF_STEEL",
+          "photo_id": "IMG_01_ROOF_STEEL",
+          "area": "6.5 méter magas tető acélszerkezet szerelési pont",
+          "type": "SAFETY_NON_CONFORMANCE",
+          "category_title": "Munkavédelem & Leesés Elleni Védelem",
+          "observation": "A szerelő nem rögzítette a biztonsági heveder karabinerét a kifeszített életvonalhoz, és a védősisakja nincs becsatolva.",
+          "status": "FAILED_CRITICAL",
+          "detected_violations": [
+            "Egyéni leesés elleni biztosítás hiánya 6.5 m munkamagasságban",
+            "Védősisak kötelező rögzítő állszíjának hiánya / nyitott állapot"
+          ],
+          "standard_reference": "1993. évi XCIII. Mvt. 42. § & 10/2016. NGM rendelet (Munkaeszközök és magasban végzett munka)"
+        },
+        {
+          "finding_id": "NCR-IMG_02_FIRE_SEAL",
+          "photo_id": "IMG_02_FIRE_SEAL",
+          "area": "2. sz. tűzszakasz-határ kábeltálca átvezetés",
+          "type": "TECHNICAL_NON_CONFORMANCE",
+          "category_title": "Tűzvédelmi Szakipari Minőség (OTSZ)",
+          "observation": "A tűzgátló habkitöltés hiányos a tálca alján, a kábelszigetelés közvetlenül érintkezik az acéllemezzel (EI 90 követelmény nem teljesül).",
+          "status": "FAILED_MAJOR",
+          "detected_violations": [
+            "Tűzgátló lezárás (EI 90) hézagos kivitelezése a tálca alsó síkján",
+            "Kábelköpeny közvetlen érintkezése hűtőbordázatlan fémszerkezettel"
+          ],
+          "standard_reference": "54/2014. (XII. 5.) BM rendelet (OTSZ) 14. Fejezet: Tűzgátló átvezetések és lezárások"
+        },
+        {
+          "finding_id": "PASS-IMG_03_EQUIPOTENTIAL_BONDING",
+          "photo_id": "IMG_03_EQUIPOTENTIAL_BONDING",
+          "area": "Kábeltálca összekötő pont és EPH földelés",
+          "type": "QUALITY_COMPLIANCE",
+          "category_title": "Villamos Érintésvédelem & EPH",
+          "observation": "Megfelelő réz átkötővezeték, szakszerű fogazott alátétes csavarozás, zöld-sárga jelölés hiánytalan.",
+          "status": "PASSED_COMPLIANT",
+          "detected_violations": [],
+          "standard_reference": "MSZ HD 60364-5-54 Villamos berendezések létesítése - Földelőberendezések és védővezetők"
+        }
+      ]
+    },
+    "risk_evaluation": {
+      "severity_engine_applied": "regulatory_legal_penalty_engine",
+      "stop_work_order": {
+        "issued": true,
+        "order_code": "SWO-20260920-01",
+        "reason": "Közvetlen magasból zuhanás veszélye! A tetőszerkezeti szerelés a leesés elleni védelem beakasztásáig azonnal felfüggesztve.",
+        "enforcement": "IMMEDIATE_SITE_SHUTDOWN_PHASE_ROOF"
+      },
+      "potential_regulatory_penalties": [
+        {
+          "authority": "Fővárosi / Megyei Kormányhivatal Munkavédelmi Hatósága",
+          "legal_basis": "1993. évi XCIII. Mvt. 82. § (Súlyos, közvetlen életveszély elhárításának elmulasztása)",
+          "min_penalty_huf": 500000,
+          "max_penalty_huf": 3000000,
+          "estimated_penalty_huf": 1500000,
+          "liability": "Egyetemleges: Fővállalkozó + Alvállalkozó Művezetője"
+        },
+        {
+          "authority": "Országos Katasztrófavédelmi Főigazgatóság (Tűzmegelőzési Hatóság)",
+          "legal_basis": "259/2011. (XII. 7.) Korm. rendelet 1. melléklet (Tűzgátló lezárás hibás kivitelezése)",
+          "min_penalty_huf": 200000,
+          "max_penalty_huf": 1000000,
+          "estimated_penalty_huf": 400000,
+          "liability": "Kivitelező szakcég és műszaki ellenőr"
+        }
+      ],
+      "total_penalty_exposure_huf": {
+        "min_huf": 700000,
+        "max_huf": 4000000,
+        "average_expected_huf": 2350000
+      },
+      "overall_risk_level": "CRITICAL_RED"
+    },
+    "remediation": {
+      "remediation_mode": "realtime_push_photo_gate",
+      "ncr_id": "NCR-3C066429",
+      "action_tickets": [
+        {
+          "ticket_id": "TKT-IMG_01_ROOF_STEEL",
+          "severity": "CRITICAL_IMMEDIATE",
+          "description": "A szerelő nem rögzítette a biztonsági heveder karabinerét a kifeszített életvonalhoz, és a védősisakja nincs becsatolva.",
+          "assigned_contractor": "Profi-Acél Szerkezetépítő és Bádogos Kft.",
+          "responsible_manager": "Horváth Balázs (Felelős Műszaki Vezető)",
+          "deadline_utc": "2026-09-20T05:55:26.614403",
+          "deadline_human": "2 ÓRÁN BELÜL (Azonnali)",
+          "verification_method": "Kötelező geolokációs Utána-Fotó (After-Photo) feltöltés az igazoló kapun."
+        },
+        {
+          "ticket_id": "TKT-IMG_02_FIRE_SEAL",
+          "severity": "MAJOR_24H",
+          "description": "A tűzgátló habkitöltés hiányos a tálca alján, a kábelszigetelés közvetlenül érintkezik az acéllemezzel (EI 90 követelmény nem teljesül).",
+          "assigned_contractor": "Profi-Acél Szerkezetépítő és Bádogos Kft.",
+          "responsible_manager": "Horváth Balázs (Felelős Műszaki Vezető)",
+          "deadline_utc": "2026-09-21T03:55:26.614403",
+          "deadline_human": "24 ÓRÁN BELÜL",
+          "verification_method": "Kötelező geolokációs Utána-Fotó (After-Photo) feltöltés az igazoló kapun."
+        }
+      ],
+      "photo_verification_gate_url": "http://localhost:8000/api/v1/quality/remediation-verify?ncr_id=NCR-3C066429",
+      "e_naplo_official_entry": "MUNKAVÉDELMI ÉS MINŐSÉGI ELLENŐRZÉSI BEJEGYZÉS (2026.09.20):\nProjekt: Duna Pláza Logisztikai Központ B-Csarnok Tetőszerkezet és Gépészet (PRJ-2026-LOG-DUNAPLAZA-B)\nHelyszíni szemle eredménye: 33.3% megfelelőség.\nKritikus munkavédelmi észrevétel: 6.5 m magasságban leesés elleni rögzítés hiánya detektálva. Munkabeszüntetési rendelkezés (SWO-20260920-01) kiadva a heveder rögzítéséig.\nTűzvédelmi észrevétel: Kábeltálca tűzgátló lezárása (OTSZ) 24 órás határidővel javítandó.\nAlvállalkozó értesítve, fotós javítási igazolás csatolása kötelező.",
+      "status": "REMEDIATION_REQUIRED_GATE_LOCKED"
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:05.736363",
+    "audit_id": "AUDIT-2026-LOG-0920-03",
+    "project_code": "PRJ-2026-LOG-DUNAPLAZA-B",
+    "compliance_pct": 33.3,
+    "stop_work_issued": true,
+    "findings": {
+      "audit_scope_mode": "hybrid_safety_and_technical_audit",
+      "total_items_inspected": 3,
+      "compliant_count": 1,
+      "non_compliant_count": 2,
+      "compliance_score_pct": 33.3,
+      "findings": [
+        {
+          "finding_id": "NCR-IMG_01_ROOF_STEEL",
+          "photo_id": "IMG_01_ROOF_STEEL",
+          "area": "6.5 méter magas tető acélszerkezet szerelési pont",
+          "type": "SAFETY_NON_CONFORMANCE",
+          "category_title": "Munkavédelem & Leesés Elleni Védelem",
+          "observation": "A szerelő nem rögzítette a biztonsági heveder karabinerét a kifeszített életvonalhoz, és a védősisakja nincs becsatolva.",
+          "status": "FAILED_CRITICAL",
+          "detected_violations": [
+            "Egyéni leesés elleni biztosítás hiánya 6.5 m munkamagasságban",
+            "Védősisak kötelező rögzítő állszíjának hiánya / nyitott állapot"
+          ],
+          "standard_reference": "1993. évi XCIII. Mvt. 42. § & 10/2016. NGM rendelet (Munkaeszközök és magasban végzett munka)"
+        },
+        {
+          "finding_id": "NCR-IMG_02_FIRE_SEAL",
+          "photo_id": "IMG_02_FIRE_SEAL",
+          "area": "2. sz. tűzszakasz-határ kábeltálca átvezetés",
+          "type": "TECHNICAL_NON_CONFORMANCE",
+          "category_title": "Tűzvédelmi Szakipari Minőség (OTSZ)",
+          "observation": "A tűzgátló habkitöltés hiányos a tálca alján, a kábelszigetelés közvetlenül érintkezik az acéllemezzel (EI 90 követelmény nem teljesül).",
+          "status": "FAILED_MAJOR",
+          "detected_violations": [
+            "Tűzgátló lezárás (EI 90) hézagos kivitelezése a tálca alsó síkján",
+            "Kábelköpeny közvetlen érintkezése hűtőbordázatlan fémszerkezettel"
+          ],
+          "standard_reference": "54/2014. (XII. 5.) BM rendelet (OTSZ) 14. Fejezet: Tűzgátló átvezetések és lezárások"
+        },
+        {
+          "finding_id": "PASS-IMG_03_EQUIPOTENTIAL_BONDING",
+          "photo_id": "IMG_03_EQUIPOTENTIAL_BONDING",
+          "area": "Kábeltálca összekötő pont és EPH földelés",
+          "type": "QUALITY_COMPLIANCE",
+          "category_title": "Villamos Érintésvédelem & EPH",
+          "observation": "Megfelelő réz átkötővezeték, szakszerű fogazott alátétes csavarozás, zöld-sárga jelölés hiánytalan.",
+          "status": "PASSED_COMPLIANT",
+          "detected_violations": [],
+          "standard_reference": "MSZ HD 60364-5-54 Villamos berendezések létesítése - Földelőberendezések és védővezetők"
+        }
+      ]
+    },
+    "risk_evaluation": {
+      "severity_engine_applied": "regulatory_legal_penalty_engine",
+      "stop_work_order": {
+        "issued": true,
+        "order_code": "SWO-20260920-01",
+        "reason": "Közvetlen magasból zuhanás veszélye! A tetőszerkezeti szerelés a leesés elleni védelem beakasztásáig azonnal felfüggesztve.",
+        "enforcement": "IMMEDIATE_SITE_SHUTDOWN_PHASE_ROOF"
+      },
+      "potential_regulatory_penalties": [
+        {
+          "authority": "Fővárosi / Megyei Kormányhivatal Munkavédelmi Hatósága",
+          "legal_basis": "1993. évi XCIII. Mvt. 82. § (Súlyos, közvetlen életveszély elhárításának elmulasztása)",
+          "min_penalty_huf": 500000,
+          "max_penalty_huf": 3000000,
+          "estimated_penalty_huf": 1500000,
+          "liability": "Egyetemleges: Fővállalkozó + Alvállalkozó Művezetője"
+        },
+        {
+          "authority": "Országos Katasztrófavédelmi Főigazgatóság (Tűzmegelőzési Hatóság)",
+          "legal_basis": "259/2011. (XII. 7.) Korm. rendelet 1. melléklet (Tűzgátló lezárás hibás kivitelezése)",
+          "min_penalty_huf": 200000,
+          "max_penalty_huf": 1000000,
+          "estimated_penalty_huf": 400000,
+          "liability": "Kivitelező szakcég és műszaki ellenőr"
+        }
+      ],
+      "total_penalty_exposure_huf": {
+        "min_huf": 700000,
+        "max_huf": 4000000,
+        "average_expected_huf": 2350000
+      },
+      "overall_risk_level": "CRITICAL_RED"
+    },
+    "remediation": {
+      "remediation_mode": "realtime_push_photo_gate",
+      "ncr_id": "NCR-81A59688",
+      "action_tickets": [
+        {
+          "ticket_id": "TKT-IMG_01_ROOF_STEEL",
+          "severity": "CRITICAL_IMMEDIATE",
+          "description": "A szerelő nem rögzítette a biztonsági heveder karabinerét a kifeszített életvonalhoz, és a védősisakja nincs becsatolva.",
+          "assigned_contractor": "Profi-Acél Szerkezetépítő és Bádogos Kft.",
+          "responsible_manager": "Horváth Balázs (Felelős Műszaki Vezető)",
+          "deadline_utc": "2026-09-20T06:07:05.736363",
+          "deadline_human": "2 ÓRÁN BELÜL (Azonnali)",
+          "verification_method": "Kötelező geolokációs Utána-Fotó (After-Photo) feltöltés az igazoló kapun."
+        },
+        {
+          "ticket_id": "TKT-IMG_02_FIRE_SEAL",
+          "severity": "MAJOR_24H",
+          "description": "A tűzgátló habkitöltés hiányos a tálca alján, a kábelszigetelés közvetlenül érintkezik az acéllemezzel (EI 90 követelmény nem teljesül).",
+          "assigned_contractor": "Profi-Acél Szerkezetépítő és Bádogos Kft.",
+          "responsible_manager": "Horváth Balázs (Felelős Műszaki Vezető)",
+          "deadline_utc": "2026-09-21T04:07:05.736363",
+          "deadline_human": "24 ÓRÁN BELÜL",
+          "verification_method": "Kötelező geolokációs Utána-Fotó (After-Photo) feltöltés az igazoló kapun."
+        }
+      ],
+      "photo_verification_gate_url": "http://localhost:8000/api/v1/quality/remediation-verify?ncr_id=NCR-81A59688",
+      "e_naplo_official_entry": "MUNKAVÉDELMI ÉS MINŐSÉGI ELLENŐRZÉSI BEJEGYZÉS (2026.09.20):\nProjekt: Duna Pláza Logisztikai Központ B-Csarnok Tetőszerkezet és Gépészet (PRJ-2026-LOG-DUNAPLAZA-B)\nHelyszíni szemle eredménye: 33.3% megfelelőség.\nKritikus munkavédelmi észrevétel: 6.5 m magasságban leesés elleni rögzítés hiánya detektálva. Munkabeszüntetési rendelkezés (SWO-20260920-01) kiadva a heveder rögzítéséig.\nTűzvédelmi észrevétel: Kábeltálca tűzgátló lezárása (OTSZ) 24 órás határidővel javítandó.\nAlvállalkozó értesítve, fotós javítási igazolás csatolása kötelező.",
+      "status": "REMEDIATION_REQUIRED_GATE_LOCKED"
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:54.555797",
+    "audit_id": "AUDIT-2026-LOG-0920-03",
+    "project_code": "PRJ-2026-LOG-DUNAPLAZA-B",
+    "compliance_pct": 33.3,
+    "stop_work_issued": true,
+    "findings": {
+      "audit_scope_mode": "hybrid_safety_and_technical_audit",
+      "total_items_inspected": 3,
+      "compliant_count": 1,
+      "non_compliant_count": 2,
+      "compliance_score_pct": 33.3,
+      "findings": [
+        {
+          "finding_id": "NCR-IMG_01_ROOF_STEEL",
+          "photo_id": "IMG_01_ROOF_STEEL",
+          "area": "6.5 méter magas tető acélszerkezet szerelési pont",
+          "type": "SAFETY_NON_CONFORMANCE",
+          "category_title": "Munkavédelem & Leesés Elleni Védelem",
+          "observation": "A szerelő nem rögzítette a biztonsági heveder karabinerét a kifeszített életvonalhoz, és a védősisakja nincs becsatolva.",
+          "status": "FAILED_CRITICAL",
+          "detected_violations": [
+            "Egyéni leesés elleni biztosítás hiánya 6.5 m munkamagasságban",
+            "Védősisak kötelező rögzítő állszíjának hiánya / nyitott állapot"
+          ],
+          "standard_reference": "1993. évi XCIII. Mvt. 42. § & 10/2016. NGM rendelet (Munkaeszközök és magasban végzett munka)"
+        },
+        {
+          "finding_id": "NCR-IMG_02_FIRE_SEAL",
+          "photo_id": "IMG_02_FIRE_SEAL",
+          "area": "2. sz. tűzszakasz-határ kábeltálca átvezetés",
+          "type": "TECHNICAL_NON_CONFORMANCE",
+          "category_title": "Tűzvédelmi Szakipari Minőség (OTSZ)",
+          "observation": "A tűzgátló habkitöltés hiányos a tálca alján, a kábelszigetelés közvetlenül érintkezik az acéllemezzel (EI 90 követelmény nem teljesül).",
+          "status": "FAILED_MAJOR",
+          "detected_violations": [
+            "Tűzgátló lezárás (EI 90) hézagos kivitelezése a tálca alsó síkján",
+            "Kábelköpeny közvetlen érintkezése hűtőbordázatlan fémszerkezettel"
+          ],
+          "standard_reference": "54/2014. (XII. 5.) BM rendelet (OTSZ) 14. Fejezet: Tűzgátló átvezetések és lezárások"
+        },
+        {
+          "finding_id": "PASS-IMG_03_EQUIPOTENTIAL_BONDING",
+          "photo_id": "IMG_03_EQUIPOTENTIAL_BONDING",
+          "area": "Kábeltálca összekötő pont és EPH földelés",
+          "type": "QUALITY_COMPLIANCE",
+          "category_title": "Villamos Érintésvédelem & EPH",
+          "observation": "Megfelelő réz átkötővezeték, szakszerű fogazott alátétes csavarozás, zöld-sárga jelölés hiánytalan.",
+          "status": "PASSED_COMPLIANT",
+          "detected_violations": [],
+          "standard_reference": "MSZ HD 60364-5-54 Villamos berendezések létesítése - Földelőberendezések és védővezetők"
+        }
+      ]
+    },
+    "risk_evaluation": {
+      "severity_engine_applied": "regulatory_legal_penalty_engine",
+      "stop_work_order": {
+        "issued": true,
+        "order_code": "SWO-20260920-01",
+        "reason": "Közvetlen magasból zuhanás veszélye! A tetőszerkezeti szerelés a leesés elleni védelem beakasztásáig azonnal felfüggesztve.",
+        "enforcement": "IMMEDIATE_SITE_SHUTDOWN_PHASE_ROOF"
+      },
+      "potential_regulatory_penalties": [
+        {
+          "authority": "Fővárosi / Megyei Kormányhivatal Munkavédelmi Hatósága",
+          "legal_basis": "1993. évi XCIII. Mvt. 82. § (Súlyos, közvetlen életveszély elhárításának elmulasztása)",
+          "min_penalty_huf": 500000,
+          "max_penalty_huf": 3000000,
+          "estimated_penalty_huf": 1500000,
+          "liability": "Egyetemleges: Fővállalkozó + Alvállalkozó Művezetője"
+        },
+        {
+          "authority": "Országos Katasztrófavédelmi Főigazgatóság (Tűzmegelőzési Hatóság)",
+          "legal_basis": "259/2011. (XII. 7.) Korm. rendelet 1. melléklet (Tűzgátló lezárás hibás kivitelezése)",
+          "min_penalty_huf": 200000,
+          "max_penalty_huf": 1000000,
+          "estimated_penalty_huf": 400000,
+          "liability": "Kivitelező szakcég és műszaki ellenőr"
+        }
+      ],
+      "total_penalty_exposure_huf": {
+        "min_huf": 700000,
+        "max_huf": 4000000,
+        "average_expected_huf": 2350000
+      },
+      "overall_risk_level": "CRITICAL_RED"
+    },
+    "remediation": {
+      "remediation_mode": "realtime_push_photo_gate",
+      "ncr_id": "NCR-03421F59",
+      "action_tickets": [
+        {
+          "ticket_id": "TKT-IMG_01_ROOF_STEEL",
+          "severity": "CRITICAL_IMMEDIATE",
+          "description": "A szerelő nem rögzítette a biztonsági heveder karabinerét a kifeszített életvonalhoz, és a védősisakja nincs becsatolva.",
+          "assigned_contractor": "Profi-Acél Szerkezetépítő és Bádogos Kft.",
+          "responsible_manager": "Horváth Balázs (Felelős Műszaki Vezető)",
+          "deadline_utc": "2026-09-20T06:07:54.555797",
+          "deadline_human": "2 ÓRÁN BELÜL (Azonnali)",
+          "verification_method": "Kötelező geolokációs Utána-Fotó (After-Photo) feltöltés az igazoló kapun."
+        },
+        {
+          "ticket_id": "TKT-IMG_02_FIRE_SEAL",
+          "severity": "MAJOR_24H",
+          "description": "A tűzgátló habkitöltés hiányos a tálca alján, a kábelszigetelés közvetlenül érintkezik az acéllemezzel (EI 90 követelmény nem teljesül).",
+          "assigned_contractor": "Profi-Acél Szerkezetépítő és Bádogos Kft.",
+          "responsible_manager": "Horváth Balázs (Felelős Műszaki Vezető)",
+          "deadline_utc": "2026-09-21T04:07:54.555797",
+          "deadline_human": "24 ÓRÁN BELÜL",
+          "verification_method": "Kötelező geolokációs Utána-Fotó (After-Photo) feltöltés az igazoló kapun."
+        }
+      ],
+      "photo_verification_gate_url": "http://localhost:8000/api/v1/quality/remediation-verify?ncr_id=NCR-03421F59",
+      "e_naplo_official_entry": "MUNKAVÉDELMI ÉS MINŐSÉGI ELLENŐRZÉSI BEJEGYZÉS (2026.09.20):\nProjekt: Duna Pláza Logisztikai Központ B-Csarnok Tetőszerkezet és Gépészet (PRJ-2026-LOG-DUNAPLAZA-B)\nHelyszíni szemle eredménye: 33.3% megfelelőség.\nKritikus munkavédelmi észrevétel: 6.5 m magasságban leesés elleni rögzítés hiánya detektálva. Munkabeszüntetési rendelkezés (SWO-20260920-01) kiadva a heveder rögzítéséig.\nTűzvédelmi észrevétel: Kábeltálca tűzgátló lezárása (OTSZ) 24 órás határidővel javítandó.\nAlvállalkozó értesítve, fotós javítási igazolás csatolása kötelező.",
+      "status": "REMEDIATION_REQUIRED_GATE_LOCKED"
+    },
+    "status": "COMPLETED"
+  }
+]

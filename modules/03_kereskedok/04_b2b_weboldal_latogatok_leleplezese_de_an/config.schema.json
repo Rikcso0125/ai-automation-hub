@@ -1,0 +1,77 @@
+{
+  "title": "B2B Weboldal Látogatók Leleplezése Konfiguráció",
+  "type": "object",
+  "required": [
+    "min_hot_intent_score"
+  ],
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (tesztadatokkal) vagy Production (éles tracking pixel / Clearbit / Snitcher API)."
+    },
+    "min_hot_intent_score": {
+      "type": "integer",
+      "title": "Forró Lead Küszöb (0-100 pont)",
+      "default": 70,
+      "description": "Ennél magasabb pontszám esetén azonnali sürgősségi riasztást kap az értékesítés."
+    },
+    "excluded_isps": {
+      "type": "array",
+      "title": "Kizárt Lakossági Szolgáltatók (Spamszűrő)",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "Magyar Telekom",
+        "Telekom",
+        "Vodafone",
+        "One Hungary",
+        "Digi",
+        "Yettel",
+        "Invitel",
+        "T-Home",
+        "UPC"
+      ],
+      "description": "A magánszemélyek és lakossági előfizetők kiszűrése (0 fals riasztás)."
+    },
+    "target_industries": {
+      "type": "array",
+      "title": "Kiemelt Céliparágak",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "Épületgépészet",
+        "Klímaszerelés",
+        "Építőipar",
+        "Kivitelezés",
+        "Létesítményüzemeltetés",
+        "Villanyszerelés"
+      ]
+    },
+    "alert_channels": {
+      "type": "array",
+      "title": "Értékesítői Riasztási Csatornák",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "telegram",
+        "whatsapp",
+        "dashboard"
+      ],
+      "description": "Azonnali forró lead értesítések csatornái."
+    },
+    "visitors_db_path": {
+      "type": "string",
+      "title": "Leleplezett Látogatók Adatbázis Útvonala",
+      "default": "data/b2b_weboldal_latogatok.json"
+    }
+  }
+}

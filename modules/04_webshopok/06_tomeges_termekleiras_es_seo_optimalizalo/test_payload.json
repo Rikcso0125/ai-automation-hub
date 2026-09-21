@@ -1,0 +1,23 @@
+{
+  "module_id": "06_tomeges_termekleiras_es_seo_optimalizalo",
+  "raw_product": {
+    "sku": "BOSCH-GSR-18V-55",
+    "supplier_title": "BOSCH GSR 18V-55 AKKUS FUROCSAVAROZO SOLO 06019H5202",
+    "supplier_raw_text": "Szenkefementes EC motor. 55 Nm nyomatek. 0-460 / 0-1800 ford/perc. 13 mm fem tokmany. Akku es tolto nelkul.",
+    "category": "Akkus fúró-csavarozók",
+    "brand": "Bosch Professional",
+    "price_gross_huf": 49990,
+    "key_specs": {
+      "Feszültség": "18 V",
+      "Nyomaték (kemény)": "55 Nm",
+      "Motor": "Szénkefementes (Brushless EC)",
+      "Tokmány": "13 mm fém gyorstokmány",
+      "Cikkszám": "06019H5202"
+    }
+  },
+  "config": {
+    "style_tone_mode": "hybrid_dual",
+    "seo_package_mode": "full_seo_suite",
+    "sync_approval_mode": "diff_review_gate"
+  }
+}

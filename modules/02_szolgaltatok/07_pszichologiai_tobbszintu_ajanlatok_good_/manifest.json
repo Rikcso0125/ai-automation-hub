@@ -1,0 +1,8 @@
+{
+  "id": "07_pszichologiai_tobbszintu_ajanlatok_good_",
+  "title": "Pszichológiai Többszintű Ajánlatok (Good-Better-Best Csomagok)",
+  "category": "szolgaltatok",
+  "icon": "💎",
+  "version": "1.0.0",
+  "description": "Egyetlen ár helyett automatikusan 3 szintű ajánlati csomagot készít (Alap, Kiemelt Prémium, VIP All-Inclusive), növelve a kosárértéket 20-30%-kal. Interaktív webes választóoldal, 3-hasábos összehasonlító PDF és intelligens upsell/utókövetés."
+}

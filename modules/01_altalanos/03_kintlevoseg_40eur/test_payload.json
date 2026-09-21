@@ -1,0 +1,14 @@
+{
+  "invoice_number": "SZAMLA-2026-0319",
+  "customer_name": "Késlekedő Partner Kft.",
+  "customer_tax_number": "18492041-2-42",
+  "customer_email": "penzugy@keslekede-partner.hu",
+  "customer_phone": "+36309876543",
+  "issue_date": "2026-08-15",
+  "due_date": "2026-08-30",
+  "days_overdue": 16,
+  "original_amount_huf": 420000,
+  "currency": "HUF",
+  "paid_status": "unpaid",
+  "items_summary": "Informatikai rendszerüzemeltetés és hardver szállítás"
+}

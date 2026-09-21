@@ -1,0 +1,90 @@
+{
+  "title": "VIP Ügyfélkezelés és Eszkaláció Beállítások",
+  "type": "object",
+  "required": [
+    "company_name",
+    "executive_phone"
+  ],
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "Cég Neve",
+      "default": "ProfiTech Kft.",
+      "description": "A vállalkozás hivatalos megnevezése."
+    },
+    "vip_detection_mode": {
+      "type": "string",
+      "title": "Felismerési Logika",
+      "enum": [
+        "Mindkettő (VIP Partner Lista + AI Hangulatelemzés)",
+        "Csak VIP Partner Lista alapján",
+        "Csak AI Hangulat és Kulcsszavak alapján"
+      ],
+      "default": "Mindkettő (VIP Partner Lista + AI Hangulatelemzés)"
+    },
+    "vip_domains_and_emails": {
+      "type": "string",
+      "title": "VIP Partnerek Domainjei és Email Címei",
+      "format": "textarea",
+      "default": "mol.hu, otp.hu, audi.hu, bosch.com, vezérigazgató@kiemelt-partner.hu",
+      "description": "Vesszővel elválasztva azon domainek vagy konkrét címek, amelyek leveleit mindig a legmagasabb prioritással kell kezelni."
+    },
+    "urgent_keywords": {
+      "type": "string",
+      "title": "Sürgősségi Kulcsszavak",
+      "format": "textarea",
+      "default": "azonnal, sürgős, leállás, felmondás, elállás, kár, per, ügyvéd, panasz, vezérigazgató, hiba",
+      "description": "Ezek megléte esetén az AI azonnali eszkalációt indít."
+    },
+    "alert_channels": {
+      "type": "string",
+      "title": "Vezetői Riasztási Csatorna",
+      "enum": [
+        "Mindhárom (Telegram + Telnyx SMS + Email)",
+        "Telegram Bot és Telnyx SMS",
+        "Csak Telegram Bot",
+        "Csak Telnyx SMS",
+        "Csak Email"
+      ],
+      "default": "Mindhárom (Telegram + Telnyx SMS + Email)"
+    },
+    "telegram_bot_token": {
+      "type": "string",
+      "title": "Telegram Bot Token",
+      "format": "password",
+      "description": "A @BotFather által adott token (pl. 123456789:ABCdef...)"
+    },
+    "telegram_chat_id": {
+      "type": "string",
+      "title": "Vezető Telegram Chat ID",
+      "default": "123456789",
+      "description": "A vezető Telegram azonosítója (a @userinfobot megmutatja)."
+    },
+    "executive_phone": {
+      "type": "string",
+      "title": "Vezető Mobilszáma (Telnyx SMS)",
+      "default": "+36301234567",
+      "description": "Erre a számra érkezik az azonnali sürgősségi SMS."
+    },
+    "executive_email": {
+      "type": "string",
+      "title": "Vezető Email Címe",
+      "default": "ugyvezeto@cegem.hu"
+    },
+    "auto_reply_to_vip": {
+      "type": "string",
+      "title": "Azonnali Megnyugtató Válasz a Feladónak",
+      "enum": [
+        "Igen (Bekapcsolva)",
+        "Nem (Csak belső riasztás)"
+      ],
+      "default": "Igen (Bekapcsolva)"
+    },
+    "auto_reply_message": {
+      "type": "string",
+      "title": "Megnyugtató Válaszlevél Szövege",
+      "format": "textarea",
+      "default": "Tisztelt Partnerünk!\n\nKiemelt partnerként megkeresését közvetlenül a cégvezetéshez továbbítottuk. Kollégánk 15 percen belül felveszi Önnel a kapcsolatot a megadott elérhetőségeken a helyzet haladéktalan rendezése érdekében.\n\nÜdvözlettel,\nCégvezetés"
+    }
+  }
+}

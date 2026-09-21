@@ -1,0 +1,55 @@
+{
+  "title": "Céges Költségelszámolás & Blokk-Feldolgozás Konfiguráció",
+  "type": "object",
+  "required": [
+    "company_name",
+    "approval_threshold_huf",
+    "manager_approval_email"
+  ],
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "Vállalkozás Neve",
+      "default": "ProfiTech Ipari & Kereskedelmi Kft."
+    },
+    "default_intake_channel": {
+      "type": "string",
+      "title": "Engedélyezett Beküldési Csatornák",
+      "enum": [
+        "Minden csatorna engedélyezve (Telegram Bot, Slack, Email, Webes Űrlap)",
+        "Csak Mobilos Chat (Telegram / Slack)",
+        "Csak Dedikált Email (koltseg@ceg.hu)",
+        "Csak Webes Feltöltés a Hubon"
+      ],
+      "default": "Minden csatorna engedélyezve (Telegram Bot, Slack, Email, Webes Űrlap)",
+      "description": "Válassza ki, mely csatornákon küldhetnek be a munkatársak blokkokat."
+    },
+    "expense_email_address": {
+      "type": "string",
+      "title": "Dedikált Bejövő Költség Email",
+      "default": "koltseg@profitech.hu"
+    },
+    "approval_threshold_huf": {
+      "type": "integer",
+      "title": "Személyre Szabott Jóváhagyási Értékhatár (Ft)",
+      "default": 25000,
+      "description": "Adja meg azt az összeget Ft-ban, ami felett kötelező a vezetői jóváhagyás."
+    },
+    "manager_approval_email": {
+      "type": "string",
+      "title": "Jóváhagyó Vezető Email Címe",
+      "default": "ugyvezetes@profitech.hu"
+    },
+    "accounting_system_export": {
+      "type": "string",
+      "title": "Könyvelői Rendszer & Export Formátum",
+      "enum": [
+        "Könyvelői CSV / Excel Összesítő",
+        "Billingo Kiadás Szinkron",
+        "Számlázz.hu Kiadás Szinkron",
+        "Kulcs-Soft / SAP Belső Export"
+      ],
+      "default": "Könyvelői CSV / Excel Összesítő"
+    }
+  }
+}

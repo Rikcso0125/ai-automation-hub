@@ -1,0 +1,166 @@
+{
+  "last_updated": "2026-09-20T04:07:53.435753",
+  "total_monitored_partners": 3,
+  "summary_kpis": {
+    "high_risk_churn_count": 1,
+    "watchlist_drifting_count": 1,
+    "healthy_active_count": 1,
+    "monthly_revenue_at_risk_huf": 2800000
+  },
+  "partners": [
+    {
+      "partner_code": "PARTNER-101",
+      "company_name": "KlímaMaster Szerelő Kft.",
+      "tier": "GOLD",
+      "contact_person": "Nagy Zoltán Építésvezető",
+      "contact_phone": "+36 30 555 1234",
+      "contact_email": "beszerzes@klimamaster.hu",
+      "analyzed_at": "2026-09-20T04:07:53.435753",
+      "metrics": {
+        "avg_cycle_days": 12,
+        "days_since_last_order": 34,
+        "cycle_delay_ratio": 2.83,
+        "monthly_avg_spend_huf": 2800000.0,
+        "spend_last_30_days_huf": 0.0,
+        "revenue_drop_percent": 100.0,
+        "total_orders_last_12m": 24,
+        "lifetime_spend_huf": 32500000
+      },
+      "churn_assessment": {
+        "churn_risk_score": 100,
+        "risk_level": "HIGH_RISK_CHURN",
+        "risk_label": "Magas Kockázat – Lemorzsolódás Szélén",
+        "rfm_segment": "At-Risk VIPs",
+        "action_urgency": "IMMEDIATE_48H_ACTION"
+      },
+      "competitor_switch_analysis": {
+        "suspected": true,
+        "missing_categories": [
+          "Csövek és Idomok"
+        ],
+        "message": "Konkurencia veszély: A partner korábban rendszeresen vásárolta a(z) ['Csövek és Idomok'] kategóriákat, de az elmúlt időszakban nem rendelt belőlük. Valószínűleg konkurens beszállító lépett be!"
+      },
+      "retention_strategy": {
+        "strategy_type": "VIP_BONUS_RETENTION",
+        "title": "Exkluzív VIP Reaktivációs Ajánlat (+5% Extra Bónusz Kedvezmény)",
+        "offer_details": "Ajánljunk fel a(z) KlímaMaster Szerelő Kft. részére egy 14 napig érvényes extra +5% visszatérő kedvezményt a leggyakrabban rendelt cikkszámaikra (['PUMP-GRUNDFOS-25', 'CU-PIPE-15']), valamint díjmentes expressz helyszíni kiszállítást a következő megrendelésükre!",
+        "sales_pitch": "Tisztelt Nagy Zoltán Építésvezető! Észrevettük, hogy az elmúlt hetekben lelassult a közös munka, és szeretnénk biztosítani, hogy a kiemelt GOLD partneri státuszuk előnyeit a jövőben is maximálisan kihasználhassák. Egyeztessünk egy 10 perces telefonos auditot: felajánlunk egy egyedi +5% projekt-bónuszt a kedvenc termékeikre!",
+        "action_steps": [
+          "1. KAM telefonos visszahívás indítása 48 órán belül.",
+          "2. Speciális +5% kedvezménykupon aktiválása az ERP-ben 14 napra.",
+          "3. Személyes igényfelmérés: van-e új kivitelezési projekt vagy konkurens árajánlat."
+        ]
+      },
+      "escalation": {
+        "instant_alert_triggered": true,
+        "channels": [
+          "TELEGRAM_BOT",
+          "DASHBOARD_BANNER",
+          "SALES_EMAIL"
+        ],
+        "assigned_to": "Területi Key Account Manager",
+        "sla_deadline_hours": 48,
+        "one_click_dial": "tel:+36305551234",
+        "alert_message": "LEMORZSOLÓDÁSI VÉSZJELZÉS: KlímaMaster Szerelő Kft. (GOLD) kockázati pontszám: 100/100! 48 órán belüli visszahívás szükséges!"
+      }
+    },
+    {
+      "partner_code": "PARTNER-102",
+      "company_name": "TermoGépész Kivitelező Bt.",
+      "tier": "SILVER",
+      "contact_person": "Horváth Béla Ügyvezető",
+      "contact_phone": "+36 20 444 7890",
+      "contact_email": "horvath@termogepesz.hu",
+      "analyzed_at": "2026-09-20T04:07:53.435753",
+      "metrics": {
+        "avg_cycle_days": 18,
+        "days_since_last_order": 22,
+        "cycle_delay_ratio": 1.22,
+        "monthly_avg_spend_huf": 1100000.0,
+        "spend_last_30_days_huf": 680000.0,
+        "revenue_drop_percent": 38.2,
+        "total_orders_last_12m": 16,
+        "lifetime_spend_huf": 12800000
+      },
+      "churn_assessment": {
+        "churn_risk_score": 39,
+        "risk_level": "WATCHLIST_DRIFTING",
+        "risk_label": "Figyelmeztető – Lassuló Rendelési Ütem",
+        "rfm_segment": "Drifting Customers",
+        "action_urgency": "MONITOR_WEEKLY"
+      },
+      "competitor_switch_analysis": {
+        "suspected": true,
+        "missing_categories": [
+          "Csövek és Idomok"
+        ],
+        "message": "Konkurencia veszély: A partner korábban rendszeresen vásárolta a(z) ['Csövek és Idomok'] kategóriákat, de az elmúlt időszakban nem rendelt belőlük. Valószínűleg konkurens beszállító lépett be!"
+      },
+      "retention_strategy": {
+        "strategy_type": "DIAGNOSTIC_CHECK_IN",
+        "title": "Diagnosztikai Elégedettségi Feltárás (Kedvezmény nélkül)",
+        "offer_details": [
+          "Részletes kérdéssor a rendelési elmaradás okának tisztázására (projektcsúszás vs konkurencia)."
+        ],
+        "sales_pitch": "Kedves Horváth Béla Ügyvezető! Látjuk, hogy mostanában nem érkezett megrendelés a(z) TermoGépész Kivitelező Bt.-től. Szeretnénk megkérdezni: van-e olyan folyamatban lévő munkájuk, amiben segíteni tudunk, vagy tapasztaltak-e bármilyen minőségi/ár problémát a legutóbbi szállításainknál?",
+        "action_steps": [
+          "1. Baráti érdeklődő hívás az értékesítő által.",
+          "2. Konkurencia árszint felmérése, ha átpártolás gyanúja merül fel."
+        ]
+      },
+      "escalation": {
+        "instant_alert_triggered": false,
+        "channels": [
+          "WEEKLY_SALES_DIGEST"
+        ],
+        "assigned_to": "Területi Key Account Manager",
+        "sla_deadline_hours": 168,
+        "one_click_dial": "tel:+36204447890",
+        "alert_message": null
+      }
+    },
+    {
+      "partner_code": "PARTNER-104",
+      "company_name": "Industrial Facility Services Zrt.",
+      "tier": "PLATINUM",
+      "contact_person": "Molnár Erika Beszerzési Igazgató",
+      "contact_phone": "+36 30 999 8877",
+      "contact_email": "erika.molnar@ifs-hungary.hu",
+      "analyzed_at": "2026-09-20T04:07:53.435753",
+      "metrics": {
+        "avg_cycle_days": 7,
+        "days_since_last_order": 5,
+        "cycle_delay_ratio": 0.71,
+        "monthly_avg_spend_huf": 6500000.0,
+        "spend_last_30_days_huf": 6900000.0,
+        "revenue_drop_percent": 0.0,
+        "total_orders_last_12m": 48,
+        "lifetime_spend_huf": 78000000
+      },
+      "churn_assessment": {
+        "churn_risk_score": 0,
+        "risk_level": "HEALTHY_ACTIVE",
+        "risk_label": "Egészséges – Rendszeresen Vásárló",
+        "rfm_segment": "Champions",
+        "action_urgency": "NO_ACTION_REQUIRED"
+      },
+      "competitor_switch_analysis": null,
+      "retention_strategy": {
+        "strategy_type": "LOYALTY_MAINTENANCE",
+        "title": "Ügyfél elégedettség fenntartása",
+        "offer_details": "Normál partneri kapcsolattartás, nincs szükség beavatkozásra.",
+        "sales_script": null
+      },
+      "escalation": {
+        "instant_alert_triggered": false,
+        "channels": [
+          "WEEKLY_SALES_DIGEST"
+        ],
+        "assigned_to": "Kovács László (B2B Értékesítési Igazgató)",
+        "sla_deadline_hours": 168,
+        "one_click_dial": "tel:+36309998877",
+        "alert_message": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "module_id": "vezetoi_hangparancs_asszisztens_executiv",
+  "voice_input_type": "web_audio_or_transcript",
+  "spoken_transcript": "Jarvis, tegyél be egy találkozót Molnár Gáborral holnapután délután 3-ra az irodába a költségvetésről, és szólj Annának ClickUpban, hogy szerda 12-ig küldje át a prezentációt!",
+  "executive_location": "Autóban (Vezetés közben)",
+  "audio_duration_sec": 6.8
+}

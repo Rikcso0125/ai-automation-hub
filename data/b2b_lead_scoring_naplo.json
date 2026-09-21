@@ -1,0 +1,494 @@
+{
+  "last_updated": "2026-09-20T04:07:52.985846",
+  "total_scored_leads": 4,
+  "summary_metrics": {
+    "tier_a_hot_leads": 2,
+    "tier_b_mid_market": 1,
+    "tier_c_filtered_out": 1,
+    "average_lead_score": 74.5
+  },
+  "records": [
+    {
+      "lead_id": "LEAD-2026-001",
+      "company_name": "KlímaTech Generál Kivitelező Kft.",
+      "tax_number": "14892341-2-41",
+      "contact_person": "Varga Zoltán",
+      "contact_email": "varga.zoltan@klimatech-general.hu",
+      "contact_phone": "+36 30 555 1234",
+      "evaluated_at": "2026-09-20T04:07:52.985846",
+      "final_lead_score": 100,
+      "tier": "TIER_A",
+      "tier_label": "Tier A (Hot Key Account / Kiemelt Forró Jelölt)",
+      "priority": "URGENT_HIGH",
+      "dimension_scores": {
+        "financial_and_scale": {
+          "score": 35,
+          "max_possible": 35,
+          "breakdown": {
+            "headcount_points": {
+              "value": 38,
+              "points": 10,
+              "max": 10
+            },
+            "revenue_points": {
+              "value": 850000000.0,
+              "points": 12,
+              "max": 12
+            },
+            "equity_points": {
+              "positive_equity": true,
+              "points": 6,
+              "max": 6
+            },
+            "compliance_points": {
+              "nav_free": true,
+              "negative_credit": false,
+              "points": 7,
+              "max": 7
+            }
+          }
+        },
+        "industry_and_icp": {
+          "score": 35,
+          "max_possible": 35,
+          "breakdown": {
+            "industry_match": {
+              "industry": "HVAC és Épületgépészeti generálkivitelezés",
+              "classification": "Elsődleges B2B Célcsoport (Gépész / Kivitelező)",
+              "points": 20,
+              "max": 20
+            },
+            "experience_points": {
+              "years_in_business": 8,
+              "points": 8,
+              "max": 8
+            },
+            "digital_presence": {
+              "has_active_website": true,
+              "points": 7,
+              "max": 7
+            }
+          }
+        },
+        "volume_and_urgency": {
+          "score": 30,
+          "max_possible": 30,
+          "breakdown": {
+            "volume_points": {
+              "monthly_volume_huf": 4500000.0,
+              "points": 15,
+              "max": 15
+            },
+            "urgency_points": {
+              "urgency": "azonnali_1_het",
+              "classification": "Azonnali / 1 héten belüli megrendelés",
+              "points": 10,
+              "max": 10
+            },
+            "quote_readiness": {
+              "details": "40 db Daikin és Wilo ipari keringtető szivattyú és rézcső idomok új irodaház projekthez",
+              "classification": "Részletes, konkrét terméklista megadva",
+              "points": 5,
+              "max": 5
+            }
+          }
+        },
+        "custom_rules_adjustment": {
+          "total_adjustment": 5,
+          "triggered_rules": [
+            {
+              "rule": "ISO minősítés bónusz",
+              "field": "has_iso_cert",
+              "points": 5
+            }
+          ]
+        }
+      },
+      "sales_strategy": {
+        "sla_minutes": 15,
+        "sla_deadline": "2026-09-20 04:22:52",
+        "discount_package": "Arany (-22%) / Platina (-28%) keretszerződés, 30 napos átutalási hitelkeret elbírálás",
+        "action_title": "Azonnali Senior KAM telefonos megkeresés és VIP tárgyalási meghívó",
+        "sales_pitch": "Tisztelt Varga Zoltán! Észrevettük a(z) KlímaTech Generál Kivitelező Kft. kiemelt nagyságrendű igényét (4,500,000 Ft/hó potenciál). Cégünk mint közvetlen vezérképviselet személyre szabott Arany partneri kondíciókat (-22% azonnali árrés) és garantált 24 órás projekt-kiszállítást biztosít az Önök számára. Kérem, egyeztessünk egy 10 perces telefonos auditot!",
+        "action_steps": [
+          "1. Visszahívás indítása 15 percen belül (2026-09-20 04:22:52-ig) a(z) +36 30 555 1234 telefonszámon.",
+          "2. Arany keretszerződés tervezet összeállítása a terméktörzsből.",
+          "3. Személyes raktárlátogatási időpont felajánlása."
+        ]
+      },
+      "routing": {
+        "routing_mode": "specialized_sales_routing (Mód A)",
+        "assigned_to": "Kovács László (B2B Értékesítési Igazgató)",
+        "region": "Közép-Magyarország",
+        "notification_dispatched": true,
+        "notification_channel": "Instant Senior KAM Alert (Telegram & Dashboard)",
+        "one_click_dial": "tel:+36305551234",
+        "one_click_whatsapp": "https://wa.me/36305551234",
+        "routing_status": "ASSIGNED_TO_REGIONAL_KAM"
+      },
+      "audit_trail": {
+        "scored_by": "06_ai_lead_scoring_a_forro_viszontelado_jel",
+        "service_mode": "mock",
+        "status": "PROCESSED"
+      }
+    },
+    {
+      "lead_id": "LEAD-2026-002",
+      "company_name": "Dunántúli Csőszerelő Bt.",
+      "tax_number": "22459012-1-08",
+      "contact_person": "Horváth Ferenc",
+      "contact_email": "info@dunantulicsoszerelo.hu",
+      "contact_phone": "+36 20 444 7890",
+      "evaluated_at": "2026-09-20T04:07:52.985846",
+      "final_lead_score": 71,
+      "tier": "TIER_B",
+      "tier_label": "Tier B (Normál B2B Partner / Mid-Market)",
+      "priority": "NORMAL_B2B",
+      "dimension_scores": {
+        "financial_and_scale": {
+          "score": 23,
+          "max_possible": 35,
+          "breakdown": {
+            "headcount_points": {
+              "value": 6,
+              "points": 5,
+              "max": 10
+            },
+            "revenue_points": {
+              "value": 115000000.0,
+              "points": 5,
+              "max": 12
+            },
+            "equity_points": {
+              "positive_equity": true,
+              "points": 6,
+              "max": 6
+            },
+            "compliance_points": {
+              "nav_free": true,
+              "negative_credit": false,
+              "points": 7,
+              "max": 7
+            }
+          }
+        },
+        "industry_and_icp": {
+          "score": 32,
+          "max_possible": 35,
+          "breakdown": {
+            "industry_match": {
+              "industry": "Víz-gáz-fűtésszerelés és karbantartás",
+              "classification": "Elsődleges B2B Célcsoport (Gépész / Kivitelező)",
+              "points": 20,
+              "max": 20
+            },
+            "experience_points": {
+              "years_in_business": 4,
+              "points": 5,
+              "max": 8
+            },
+            "digital_presence": {
+              "has_active_website": true,
+              "points": 7,
+              "max": 7
+            }
+          }
+        },
+        "volume_and_urgency": {
+          "score": 16,
+          "max_possible": 30,
+          "breakdown": {
+            "volume_points": {
+              "monthly_volume_huf": 850000.0,
+              "points": 5,
+              "max": 15
+            },
+            "urgency_points": {
+              "urgency": "1_honapon_belul",
+              "classification": "1 hónapon belüli projektigény",
+              "points": 6,
+              "max": 10
+            },
+            "quote_readiness": {
+              "details": "Standard fűtési csatlakozók és szelepek folyamatos havi utántöltésre",
+              "classification": "Részletes, konkrét terméklista megadva",
+              "points": 5,
+              "max": 5
+            }
+          }
+        },
+        "custom_rules_adjustment": {
+          "total_adjustment": 0,
+          "triggered_rules": []
+        }
+      },
+      "sales_strategy": {
+        "sla_minutes": 1440,
+        "sla_deadline": "2026-09-21 04:07:52",
+        "discount_package": "Bronz (-10%) / Ezüst (-15%) standard nagykereskedelmi partnercsomag",
+        "action_title": "Digitális B2B önkiszolgáló onboarding és nagyker árlista küldése",
+        "sales_pitch": "Kedves Horváth Ferenc! Köszönjük a(z) Dunántúli Csőszerelő Bt. megkeresését. Elkészítettük a B2B partnerfiókját, ahol azonnal elérheti a szakipari viszonteladói árakat és leadhatja próbarendelését online webshopunkban.",
+        "action_steps": [
+          "1. Automatikus regisztrációs link és katalógus kiküldése az emailre (info@dunantulicsoszerelo.hu).",
+          "2. 48 órán belüli utánkövetés, ha nem aktiválja a partnerfiókot."
+        ]
+      },
+      "routing": {
+        "routing_mode": "specialized_sales_routing (Mód A)",
+        "assigned_to": "Nagy Péter (Senior KAM Nyugat)",
+        "region": "Nyugat-Magyarország",
+        "notification_dispatched": true,
+        "notification_channel": "Instant Senior KAM Alert (Telegram & Dashboard)",
+        "one_click_dial": "tel:+36204447890",
+        "one_click_whatsapp": "https://wa.me/36204447890",
+        "routing_status": "ASSIGNED_TO_REGIONAL_KAM"
+      },
+      "audit_trail": {
+        "scored_by": "06_ai_lead_scoring_a_forro_viszontelado_jel",
+        "service_mode": "mock",
+        "status": "PROCESSED"
+      }
+    },
+    {
+      "lead_id": "LEAD-2026-003",
+      "company_name": "Kovács Béla Egyéni Vállalkozó / Lakossági",
+      "tax_number": "68123456-1-13",
+      "contact_person": "Kovács Béla",
+      "contact_email": "bela.kovacs@freemail.hu",
+      "contact_phone": "+36 70 123 9876",
+      "evaluated_at": "2026-09-20T04:07:52.985846",
+      "final_lead_score": 27,
+      "tier": "TIER_C",
+      "tier_label": "Tier C (Retail / Kis Volumenű Lakossági Érdeklődő)",
+      "priority": "LOW_AUTOMATED_FILTER",
+      "dimension_scores": {
+        "financial_and_scale": {
+          "score": 14,
+          "max_possible": 35,
+          "breakdown": {
+            "headcount_points": {
+              "value": 1,
+              "points": 1,
+              "max": 10
+            },
+            "revenue_points": {
+              "value": 12000000.0,
+              "points": 0,
+              "max": 12
+            },
+            "equity_points": {
+              "positive_equity": true,
+              "points": 6,
+              "max": 6
+            },
+            "compliance_points": {
+              "nav_free": true,
+              "negative_credit": false,
+              "points": 7,
+              "max": 7
+            }
+          }
+        },
+        "industry_and_icp": {
+          "score": 4,
+          "max_possible": 35,
+          "breakdown": {
+            "industry_match": {
+              "industry": "Lakossági magánszemély / barkács",
+              "classification": "Retail / Lakossági kizárás",
+              "points": 0,
+              "max": 20
+            },
+            "experience_points": {
+              "years_in_business": 1,
+              "points": 2,
+              "max": 8
+            },
+            "digital_presence": {
+              "has_active_website": false,
+              "points": 2,
+              "max": 7
+            }
+          }
+        },
+        "volume_and_urgency": {
+          "score": 9,
+          "max_possible": 30,
+          "breakdown": {
+            "volume_points": {
+              "monthly_volume_huf": 180000.0,
+              "points": 2,
+              "max": 15
+            },
+            "urgency_points": {
+              "urgency": "tajekozodas",
+              "classification": "Általános tájékozódás / jövőbeli terv",
+              "points": 2,
+              "max": 10
+            },
+            "quote_readiness": {
+              "details": "1 db családi házas kerti szivattyú és 2 db golyóscsap érdeklődés",
+              "classification": "Részletes, konkrét terméklista megadva",
+              "points": 5,
+              "max": 5
+            }
+          }
+        },
+        "custom_rules_adjustment": {
+          "total_adjustment": 0,
+          "triggered_rules": []
+        }
+      },
+      "sales_strategy": {
+        "sla_minutes": 0,
+        "sla_deadline": "Azonnali automatizált válasz",
+        "discount_package": "0% (Listaár / Lakossági kiskereskedelem)",
+        "action_title": "Udvarias automatikus elirányítás lakossági webáruházhoz vagy partnerboltokhoz",
+        "sales_pitch": "Tisztelt Kovács Béla! Köszönjük érdeklődését! Cégünk nagykereskedelmi központként működik, azonban kis tételes igényét készséggel kiszolgálják hivatalos lakossági viszonteladó partnereink és webáruházunk: https://bolt.profigepesz.hu",
+        "action_steps": [
+          "1. Értékesítői beavatkozás nem szükséges (0 perc sales time).",
+          "2. Automatikus lakossági terelő email elküldve partnerbolt-keresővel."
+        ]
+      },
+      "routing": {
+        "routing_mode": "specialized_sales_routing (Mód A)",
+        "assigned_to": "Szabó Gábor (Senior KAM Kelet)",
+        "region": "Kelet-Magyarország",
+        "notification_dispatched": true,
+        "notification_channel": "Instant Senior KAM Alert (Telegram & Dashboard)",
+        "one_click_dial": "tel:+36701239876",
+        "one_click_whatsapp": "https://wa.me/36701239876",
+        "routing_status": "ASSIGNED_TO_REGIONAL_KAM"
+      },
+      "audit_trail": {
+        "scored_by": "06_ai_lead_scoring_a_forro_viszontelado_jel",
+        "service_mode": "mock",
+        "status": "PROCESSED"
+      }
+    },
+    {
+      "lead_id": "LEAD-LIVE-001",
+      "company_name": "Profi Épületgépész Kft.",
+      "tax_number": "N/A",
+      "contact_person": "Kiss András",
+      "contact_email": "kiss.andras@profigepesz-kft.hu",
+      "contact_phone": "+36 20 111 2233",
+      "evaluated_at": "2026-09-20T03:03:41.932013",
+      "final_lead_score": 100,
+      "tier": "TIER_A",
+      "tier_label": "Tier A (Hot Key Account / Kiemelt Forró Jelölt)",
+      "priority": "URGENT_HIGH",
+      "dimension_scores": {
+        "financial_and_scale": {
+          "score": 35,
+          "max_possible": 35,
+          "breakdown": {
+            "headcount_points": {
+              "value": 28,
+              "points": 10,
+              "max": 10
+            },
+            "revenue_points": {
+              "value": 720000000.0,
+              "points": 12,
+              "max": 12
+            },
+            "equity_points": {
+              "positive_equity": true,
+              "points": 6,
+              "max": 6
+            },
+            "compliance_points": {
+              "nav_free": true,
+              "negative_credit": false,
+              "points": 7,
+              "max": 7
+            }
+          }
+        },
+        "industry_and_icp": {
+          "score": 35,
+          "max_possible": 35,
+          "breakdown": {
+            "industry_match": {
+              "industry": "HVAC épületgépészet és hűtés",
+              "classification": "Elsődleges B2B Célcsoport (Gépész / Kivitelező)",
+              "points": 20,
+              "max": 20
+            },
+            "experience_points": {
+              "years_in_business": 7,
+              "points": 8,
+              "max": 8
+            },
+            "digital_presence": {
+              "has_active_website": true,
+              "points": 7,
+              "max": 7
+            }
+          }
+        },
+        "volume_and_urgency": {
+          "score": 30,
+          "max_possible": 30,
+          "breakdown": {
+            "volume_points": {
+              "monthly_volume_huf": 5200000.0,
+              "points": 15,
+              "max": 15
+            },
+            "urgency_points": {
+              "urgency": "azonnali_1_het",
+              "classification": "Azonnali / 1 héten belüli megrendelés",
+              "points": 10,
+              "max": 10
+            },
+            "quote_readiness": {
+              "details": "50 db Wilo keringtető szivattyú és rézcsövek",
+              "classification": "Részletes, konkrét terméklista megadva",
+              "points": 5,
+              "max": 5
+            }
+          }
+        },
+        "custom_rules_adjustment": {
+          "total_adjustment": 5,
+          "triggered_rules": [
+            {
+              "rule": "ISO minősítés bónusz",
+              "field": "has_iso_cert",
+              "points": 5
+            }
+          ]
+        }
+      },
+      "sales_strategy": {
+        "sla_minutes": 15,
+        "sla_deadline": "2026-09-20 03:18:41",
+        "discount_package": "Arany (-22%) / Platina (-28%) keretszerződés, 30 napos átutalási hitelkeret elbírálás",
+        "action_title": "Azonnali Senior KAM telefonos megkeresés és VIP tárgyalási meghívó",
+        "sales_pitch": "Tisztelt Kiss András! Észrevettük a(z) Profi Épületgépész Kft. kiemelt nagyságrendű igényét (5,200,000 Ft/hó potenciál). Cégünk mint közvetlen vezérképviselet személyre szabott Arany partneri kondíciókat (-22% azonnali árrés) és garantált 24 órás projekt-kiszállítást biztosít az Önök számára. Kérem, egyeztessünk egy 10 perces telefonos auditot!",
+        "action_steps": [
+          "1. Visszahívás indítása 15 percen belül (2026-09-20 03:18:41-ig) a(z) +36 20 111 2233 telefonszámon.",
+          "2. Arany keretszerződés tervezet összeállítása a terméktörzsből.",
+          "3. Személyes raktárlátogatási időpont felajánlása."
+        ]
+      },
+      "routing": {
+        "routing_mode": "specialized_sales_routing (Mód A)",
+        "assigned_to": "Kovács László (B2B Értékesítési Igazgató)",
+        "region": "Közép-Magyarország",
+        "notification_dispatched": true,
+        "notification_channel": "Instant Senior KAM Alert (Telegram & Dashboard)",
+        "one_click_dial": "tel:+36201112233",
+        "one_click_whatsapp": "https://wa.me/36201112233",
+        "routing_status": "ASSIGNED_TO_REGIONAL_KAM"
+      },
+      "audit_trail": {
+        "scored_by": "06_ai_lead_scoring_a_forro_viszontelado_jel",
+        "service_mode": "mock",
+        "status": "PROCESSED"
+      }
+    }
+  ]
+}

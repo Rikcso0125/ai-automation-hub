@@ -1,0 +1,66 @@
+{
+  "title": "AI Termékfotó Stúdió és Életmódkép Konfiguráció",
+  "type": "object",
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock"
+    },
+    "staging_mode": {
+      "type": "string",
+      "title": "1. Kérdés: Képfeldolgozás és Háttér Motor",
+      "enum": [
+        "flux_studio_auto",
+        "category_presets",
+        "custom_prompt_hybrid"
+      ],
+      "default": "category_presets",
+      "description": "FLUX automatikus háttércsere, Kategória díszlet presetek (műhely, építkezés, nappali, kert), vagy Hibrid egyedi prompt-finomhangolás."
+    },
+    "preset_scene": {
+      "type": "string",
+      "title": "Választott Stúdió Díszlet (Presets)",
+      "enum": [
+        "workshop_woodworking",
+        "modern_construction_site",
+        "scandinavian_living_room",
+        "outdoor_garden_terrace",
+        "luxury_marble_countertop"
+      ],
+      "default": "workshop_woodworking",
+      "description": "Asztalosműhely, modern építkezés, skandináv nappali, kerti terasz vagy prémium márványpult."
+    },
+    "aspect_ratio_mode": {
+      "type": "string",
+      "title": "2. Kérdés: Képarányok és Marketing Formátumok",
+      "enum": [
+        "square_webshop_only",
+        "multi_marketing_pack",
+        "custom_selectable"
+      ],
+      "default": "multi_marketing_pack",
+      "description": "1:1 webshop galéria, Teljes multi-pack (1:1 webshop, 4:5 Insta, 9:16 Reels/TikTok, 16:9 Banner), vagy Egyedileg választott."
+    },
+    "branding_sync_mode": {
+      "type": "string",
+      "title": "3. Kérdés: Márkajelzés és Webshop Szinkron",
+      "enum": [
+        "direct_gallery_sync",
+        "trust_badge_overlay",
+        "interactive_preview_gallery"
+      ],
+      "default": "trust_badge_overlay",
+      "description": "Közvetlen webshop galéria feltöltés, Trust badge (3 év garancia pecsét) és vízjel, vagy Interaktív előnézeti és letöltési galéria."
+    },
+    "storage_path": {
+      "type": "string",
+      "title": "Mentési Útvonal",
+      "default": "data/ai_termekfoto_studio_naplo.json"
+    }
+  }
+}

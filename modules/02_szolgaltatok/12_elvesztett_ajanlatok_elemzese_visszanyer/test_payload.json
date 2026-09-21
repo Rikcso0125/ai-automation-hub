@@ -1,0 +1,26 @@
+{
+  "module_id": "12_elvesztett_ajanlatok_elemzese_visszanyer",
+  "action": "ANALYZE_AND_CREATE_WINBACK",
+  "deal": {
+    "quote_id": "AJ-20260920-7741",
+    "service_name": "Irodai multi-split klímarendszer kiépítése",
+    "original_gross_huf": 890000,
+    "quoted_date": "2026-09-10"
+  },
+  "customer": {
+    "name": "Bartha Gábor",
+    "company": "Bartha Logisztika Kft.",
+    "phone": "+36 30 666 5544",
+    "email": "bartha.gabor@barthalog.hu"
+  },
+  "loss_feedback": {
+    "source": "whatsapp_sms_poll",
+    "primary_reason": "price_budget",
+    "customer_comment": "Köszönjük az ajánlatot, de jelenleg szűkös a negyedéves büdzsénk, max 750 ezer forintot tudnánk rászánni számlásan.",
+    "competitor_mentioned": null
+  },
+  "sales_rep": {
+    "name": "Kovács László",
+    "phone": "+36 30 111 2233"
+  }
+}

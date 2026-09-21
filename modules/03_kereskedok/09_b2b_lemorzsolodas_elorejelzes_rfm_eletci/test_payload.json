@@ -1,0 +1,95 @@
+{
+  "module_id": "09_b2b_lemorzsolodas_elorejelzes_rfm_eletci",
+  "action": "ANALYZE_CHURN_AND_RFM",
+  "reference_date": "2026-09-20",
+  "partners": [
+    {
+      "partner_code": "PARTNER-101",
+      "company_name": "KlímaMaster Szerelő Kft.",
+      "tier": "GOLD",
+      "contact_person": "Nagy Zoltán Építésvezető",
+      "contact_email": "beszerzes@klimamaster.hu",
+      "contact_phone": "+36 30 555 1234",
+      "region": "Közép-Magyarország",
+      "historical_metrics": {
+        "avg_order_interval_days": 12,
+        "monthly_avg_spend_huf": 2800000,
+        "total_orders_last_12m": 24,
+        "lifetime_spend_huf": 32500000,
+        "frequent_categories": [
+          "Szivattyúk",
+          "Csövek és Idomok"
+        ],
+        "top_skus": [
+          "PUMP-GRUNDFOS-25",
+          "CU-PIPE-15"
+        ]
+      },
+      "recent_activity": {
+        "last_order_date": "2026-08-17",
+        "orders_last_30_days": 0,
+        "spend_last_30_days_huf": 0,
+        "last_ordered_category": "Szivattyúk"
+      }
+    },
+    {
+      "partner_code": "PARTNER-102",
+      "company_name": "TermoGépész Kivitelező Bt.",
+      "tier": "SILVER",
+      "contact_person": "Horváth Béla Ügyvezető",
+      "contact_email": "horvath@termogepesz.hu",
+      "contact_phone": "+36 20 444 7890",
+      "region": "Nyugat-Magyarország",
+      "historical_metrics": {
+        "avg_order_interval_days": 18,
+        "monthly_avg_spend_huf": 1100000,
+        "total_orders_last_12m": 16,
+        "lifetime_spend_huf": 12800000,
+        "frequent_categories": [
+          "Szerelvények",
+          "Csövek és Idomok"
+        ],
+        "top_skus": [
+          "VALVE-BRASS-12",
+          "CU-PIPE-15"
+        ]
+      },
+      "recent_activity": {
+        "last_order_date": "2026-08-29",
+        "orders_last_30_days": 1,
+        "spend_last_30_days_huf": 680000,
+        "last_ordered_category": "Szerelvények"
+      }
+    },
+    {
+      "partner_code": "PARTNER-104",
+      "company_name": "Industrial Facility Services Zrt.",
+      "tier": "PLATINUM",
+      "contact_person": "Molnár Erika Beszerzési Igazgató",
+      "contact_email": "erika.molnar@ifs-hungary.hu",
+      "contact_phone": "+36 30 999 8877",
+      "region": "Közép-Magyarország",
+      "historical_metrics": {
+        "avg_order_interval_days": 7,
+        "monthly_avg_spend_huf": 6500000,
+        "total_orders_last_12m": 48,
+        "lifetime_spend_huf": 78000000,
+        "frequent_categories": [
+          "Klímaberendezések",
+          "Szivattyúk",
+          "Szerelvények"
+        ],
+        "top_skus": [
+          "DAIKIN-SENSIRA-35",
+          "PUMP-GRUNDFOS-25"
+        ]
+      },
+      "recent_activity": {
+        "last_order_date": "2026-09-15",
+        "orders_last_30_days": 4,
+        "spend_last_30_days_huf": 6900000,
+        "last_ordered_category": "Klímaberendezések"
+      }
+    }
+  ]
+}

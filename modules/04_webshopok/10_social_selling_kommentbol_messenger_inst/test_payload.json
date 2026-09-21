@@ -1,0 +1,29 @@
+{
+  "module_id": "10_social_selling_kommentbol_messenger_inst",
+  "event_id": "EVT-META-2026-9810",
+  "platform": "instagram",
+  "post": {
+    "post_id": "POST-IG-884210",
+    "post_title": "Új Bosch Pro Fúrókalapács Akció - limitált tavaszi szett!",
+    "post_url": "https://www.instagram.com/p/C39_example/",
+    "featured_product_sku": "BOSCH-GBH-2-28",
+    "featured_product_name": "Bosch Professional GBH 2-28 Fúrókalapács L-BOXX",
+    "regular_price_huf": 68900
+  },
+  "comment": {
+    "comment_id": "CMT-9921482",
+    "user_id": "IG-USER-441829",
+    "username": "kovacs_bence_diy",
+    "user_full_name": "Kovács Bence",
+    "comment_text": "Mennyibe kerül szállítással együtt, és van még raktáron kupon hozzá? Kérem a linket!",
+    "created_time": "2026-09-20T10:14:02Z"
+  },
+  "config": {
+    "trigger_mode": "hybrid_smart_matching",
+    "public_reply_strategy": "hybrid_safe_boost",
+    "dm_funnel_type": "hybrid_omnichannel_funnel",
+    "flash_coupon_percent": 10,
+    "flash_coupon_validity_hours": 2,
+    "auto_like_comment": true
+  }
+}

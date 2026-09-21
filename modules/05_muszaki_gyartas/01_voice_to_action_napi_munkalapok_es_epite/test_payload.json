@@ -1,0 +1,23 @@
+{
+  "module_id": "01_voice_to_action_napi_munkalapok_es_epite",
+  "report_id": "REP-VOICE-2026-0920-01",
+  "project": {
+    "project_code": "PRJ-2026-CORVIN-03",
+    "project_name": "Corvin Sétány Irodaház Belső Villamossági Kivitelezés",
+    "client_name": "Future Real Estate Kft.",
+    "location": "Budapest VIII., Corvin köz 4. 3. emelet B szárny"
+  },
+  "voice_memo": {
+    "audio_url": "https://storage.kivitelezo.hu/audio/20260920_corvin_field_memo.ogg",
+    "duration_seconds": 48,
+    "recorded_by": "Kovács István (Felelős Villanyszerelő Művezető)",
+    "recording_timestamp": "2026-09-20T16:30:00Z",
+    "raw_transcript": "Sziasztok, ma a Corvin Sétány 3. emelet B szárnyban dolgoztunk. Három fővel voltunk reggel nyolctól délután négyig Józsival és Petivel, tehát 24 munkaóra. Behúztunk 180 méter MTK 3x1.5-ös rézkábelt, felraktunk 45 méter perforált kábelcsatornát, és bekötöttünk 12 darab Schneider kettős dugaljat a tárgyalóban. Az időjárás száraz, meleg volt, 22 fok. Sajnos a C szárnyban a gipszkartonosok még nem fejezték be a falakat, így ott nem tudtunk átfúrni, ezt jeleztem a generálkivitelezőnek. Holnap folytatjuk a főelosztó bekötésével."
+  },
+  "config": {
+    "voice_input_mode": "hybrid_smart_voice",
+    "document_output_format": "dual_sync_both",
+    "workflow_approval_mode": "hybrid_engineer_threshold",
+    "hourly_labor_rate_huf": 9500
+  }
+}

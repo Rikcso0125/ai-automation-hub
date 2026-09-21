@@ -1,0 +1,8 @@
+{
+  "id": "heti_es_havi_autonom_vezetoi_riportgener",
+  "title": "Heti és Havi Autonóm Vezetői Riportgenerálás",
+  "category": "altalanos",
+  "icon": "📈",
+  "version": "1.0.0",
+  "description": "Minden hétfő reggel vagy hónapfordulón automatikusan összesíti a Pénzügyi (Billingo/Számlázz.hu), Banki (Cash-flow), CRM (MiniCRM/HubSpot) és Operációs (ClickUp/Jira) adatokat. Márkázott vezetői PDF és Word gyorsjelentést generál, 30 másodperces mobilbarát email összefoglalót és 3 azonnali AI akciótervet készít."
+}

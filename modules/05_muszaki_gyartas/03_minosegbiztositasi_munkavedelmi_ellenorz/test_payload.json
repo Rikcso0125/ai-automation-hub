@@ -1,0 +1,47 @@
+{
+  "module_id": "03_minosegbiztositasi_munkavedelmi_ellenorz",
+  "source": "field_inspection_tablet",
+  "audit_id": "AUDIT-2026-LOG-0920-03",
+  "project": {
+    "project_code": "PRJ-2026-LOG-DUNAPLAZA-B",
+    "project_name": "Duna Pláza Logisztikai Központ B-Csarnok Tetőszerkezet és Gépészet",
+    "location": "Budapest XIII., Váci út 178.",
+    "site_manager": "Horváth Balázs (Felelős Műszaki Vezető)",
+    "subcontractor": "Profi-Acél Szerkezetépítő és Bádogos Kft."
+  },
+  "inspection_data": {
+    "inspection_type": "Kivitelezési és Munkavédelmi Részátadás Előtti Helyszíni Bejárás",
+    "weather": "Száraz, napos, 21 °C, enyhe szél",
+    "photos_submitted": [
+      {
+        "photo_id": "IMG_01_ROOF_STEEL",
+        "photo_url": "https://storage.factoryhub.hu/audits/2026/09/steel_roof_worker.jpg",
+        "area_description": "6.5 méter magas tető acélszerkezet szerelési pont",
+        "visual_observation": "A szerelő nem rögzítette a biztonsági heveder karabinerét a kifeszített életvonalhoz, és a védősisakja nincs becsatolva.",
+        "category": "safety_fall_protection"
+      },
+      {
+        "photo_id": "IMG_02_FIRE_SEAL",
+        "photo_url": "https://storage.factoryhub.hu/audits/2026/09/fire_barrier_cable_tray.jpg",
+        "area_description": "2. sz. tűzszakasz-határ kábeltálca átvezetés",
+        "visual_observation": "A tűzgátló habkitöltés hiányos a tálca alján, a kábelszigetelés közvetlenül érintkezik az acéllemezzel (EI 90 követelmény nem teljesül).",
+        "category": "technical_fire_compliance"
+      },
+      {
+        "photo_id": "IMG_03_EQUIPOTENTIAL_BONDING",
+        "photo_url": "https://storage.factoryhub.hu/audits/2026/09/grounding_tray_junction.jpg",
+        "area_description": "Kábeltálca összekötő pont és EPH földelés",
+        "visual_observation": "Megfelelő réz átkötővezeték, szakszerű fogazott alátétes csavarozás, zöld-sárga jelölés hiánytalan.",
+        "category": "technical_electrical_quality"
+      }
+    ],
+    "notes": "A tetőfedési fázis befejezése előtt sürgős munkavédelmi és tűzvédelmi felülvizsgálat szükséges."
+  },
+  "config": {
+    "audit_scope": "hybrid_safety_and_technical_audit",
+    "severity_rule_engine": "regulatory_legal_penalty_engine",
+    "remediation_workflow": "realtime_push_photo_gate",
+    "stop_work_on_critical_danger": true,
+    "notification_channel": "telegram"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "module_id": "onjavito_munkafolyamat_felugyelet_self_h",
+  "check_type": "simulate_incident_and_health_check",
+  "incident_simulation": {
+    "source_module": "02_szamla_ocr_nav",
+    "operation": "NAV_ONLINE_SZAMLA_SYNC",
+    "error_code": "NAV_TIMEOUT_504",
+    "error_message": "A NAV Online Szamla szerver nem valaszolt 30 masodpercen belul (HTTP 504 Gateway Timeout).",
+    "affected_invoice_id": "SZAMLA-2026-0891",
+    "gross_amount_huf": 1485000
+  }
+}

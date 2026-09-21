@@ -1,0 +1,8 @@
+{
+  "id": "missed_call_text_back_azonnali_erdeklodo",
+  "title": "Missed Call Text-Back (Azonnali Érdeklődő-Mentés 5 Másodpercen Belül)",
+  "category": "szolgaltatok",
+  "icon": "📱",
+  "version": "1.0.0",
+  "description": "Nem fogadott hívás esetén 5 másodpercen belül intelligens választ küld: elsődlegesen WhatsApp Business üzenetben, ha nem érhető el, automatikusan Telnyx SMS-ben. Külső fájlból (JSON/CSV) név szerint beazonosítja az ügyfelet, beállítható időpontfoglalót és igényfelmérőt küld, új érdeklődő esetén pedig azonnal CRM leadet hoz létre."
+}

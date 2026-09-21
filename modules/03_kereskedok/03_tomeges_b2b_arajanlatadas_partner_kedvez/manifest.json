@@ -1,0 +1,8 @@
+{
+  "id": "03_tomeges_b2b_arajanlatadas_partner_kedvez",
+  "title": "Tömeges B2B Árajánlatadás Partner Kedvezményszintekkel",
+  "category": "kereskedok",
+  "icon": "📑",
+  "version": "1.0.0",
+  "description": "Ömlesztett viszonteladói emailekből és tétellistákból 60 másodperc alatt készít hivatalos B2B ajánlatot a vevő szerződéses kedvezményei (Bronz/Ezüst/Arany/Platina) és a raktárkészlet alapján, automatikus készlethiány- és alternatíva-kezeléssel."
+}

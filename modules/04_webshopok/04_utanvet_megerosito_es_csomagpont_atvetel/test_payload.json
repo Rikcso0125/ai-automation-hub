@@ -1,0 +1,29 @@
+{
+  "module_id": "04_utanvet_megerosito_es_csomagpont_atvetel",
+  "event_type": "VERIFY_COD_ORDER",
+  "order": {
+    "order_id": "ORD-COD-2026-8812",
+    "payment_method": "cod",
+    "total_gross_huf": 78900,
+    "is_first_purchase": true,
+    "customer": {
+      "name": "Kovács Dániel",
+      "phone": "+36307778899",
+      "email": "dani_test99@tempmail.com",
+      "shipping_address": {
+        "zip": "1118",
+        "city": "Budapest",
+        "street": "Rétköz utca",
+        "house_number": ""
+      }
+    },
+    "items": [
+      {
+        "sku": "BOSCH-GSR-18V-55",
+        "name": "Bosch GSR 18V-55 Akkus Fúrócsavarozó",
+        "quantity": 1,
+        "price": 78900
+      }
+    ]
+  }
+}

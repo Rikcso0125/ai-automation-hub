@@ -1,0 +1,53 @@
+{
+  "title": "Szemantikus Kereső és Virtuális Eladó Konfiguráció",
+  "type": "object",
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock"
+    },
+    "search_mode": {
+      "type": "string",
+      "title": "1. Kérdés: Keresési és NLP Motor",
+      "enum": [
+        "intent_entity_extraction",
+        "vector_hybrid_search",
+        "hybrid_full_semantic"
+      ],
+      "default": "hybrid_full_semantic",
+      "description": "Szándék- és paraméterkivonatolás, Vektoros hibrid egyezés, vagy Teljes hibrid szemantikus motor szinonimahálóval."
+    },
+    "ui_dialogue_mode": {
+      "type": "string",
+      "title": "2. Kérdés: Tanácsadói Dialógus és UI Megjelenés",
+      "enum": [
+        "direct_cards_add_to_cart",
+        "guided_selling_wizard",
+        "comparative_decision_matrix"
+      ],
+      "default": "comparative_decision_matrix",
+      "description": "Közvetlen termékkártyák, Irányított pontosító kérdéssor, vagy Összehasonlító döntéstámogató mátrix (Belépő vs Bestseller vs Prémium)."
+    },
+    "cross_sell_mode": {
+      "type": "string",
+      "title": "3. Kérdés: Készlethiány és Kiegészítő Ajánlás",
+      "enum": [
+        "in_stock_alternative_only",
+        "smart_bundle_accessories",
+        "combined_inventory_and_bundle"
+      ],
+      "default": "combined_inventory_and_bundle",
+      "description": "Készlethiánynál raktári alternatíva, Kompatibilis tartozékcsomag (smart bundle), vagy Kombinált mindkét funkció."
+    },
+    "storage_path": {
+      "type": "string",
+      "title": "Mentési Útvonal",
+      "default": "data/szemantikus_kereso_naplo.json"
+    }
+  }
+}

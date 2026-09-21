@@ -1,0 +1,8 @@
+{
+  "id": "04_utanvet_megerosito_es_csomagpont_atvetel",
+  "title": "Utánvét-Megerősítő és Csomagpont Átvételi SMS Értesítő",
+  "category": "webshopok",
+  "icon": "📦",
+  "version": "1.0.0",
+  "description": "Kockázatalapú utánvét (COD) előszűrés és csomagfeladási zárlat, valamint többcsatornás csomagautomata lejárati riasztás családtagoknak továbbítható átvételi meghatalmazással."
+}

@@ -1,0 +1,7 @@
+{
+  "module_id": "termeszetes_nyelvu_adatbazis_kereso_text",
+  "question": "Melyik 3 termékünk termelte a legnagyobb árbevételt, és melyik vevő vásárolta a legtöbbet?",
+  "requested_by": "Dr. Kovács Béla (Ügyvezető Igazgató)",
+  "data_source_override": "",
+  "max_results": 5
+}

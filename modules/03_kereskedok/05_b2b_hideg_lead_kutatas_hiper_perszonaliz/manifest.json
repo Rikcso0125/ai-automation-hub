@@ -1,0 +1,8 @@
+{
+  "id": "05_b2b_hideg_lead_kutatas_hiper_perszonaliz",
+  "title": "B2B Hideg Lead-Kutatás & Hiper-perszonalizált Megkeresés",
+  "category": "kereskedok",
+  "icon": "🎯",
+  "version": "1.0.0",
+  "description": "Autonóm módon felkutatja az új viszonteladókat és szakipari kivitelezőket (Apollo/Clay/Cégadatbázis). Elemzi a projekteket és szerkeszthető, hiper-perszonalizált 3-lépcsős B2B megkereső levélsorozatot generál, automatikus válaszfigyeléssel és választható jóváhagyási vagy Drip küldési móddal."
+}

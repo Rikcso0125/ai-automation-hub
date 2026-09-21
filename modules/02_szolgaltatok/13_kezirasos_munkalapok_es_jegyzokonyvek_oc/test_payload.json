@@ -1,0 +1,21 @@
+{
+  "module_id": "13_kezirasos_munkalapok_es_jegyzokonyvek_oc",
+  "source_channel": "whatsapp",
+  "technician": {
+    "id": "TECH-002",
+    "name": "Horváth László",
+    "phone": "+36 30 333 4455"
+  },
+  "image_metadata": {
+    "filename": "munkalap_foto_20260920.jpg",
+    "image_url": "https://storage.example.hu/munkalapok/ml_20260920_41.jpg",
+    "resolution": "4032x3024",
+    "lighting_quality": "good_with_minor_shadows"
+  },
+  "simulate_ocr_input": {
+    "raw_handwriting_text": "Munkalapszám: ML-2026-0920-41. Dátum: 2026.09.20. Megrendelő: Takács Béla, 1037 Budapest, Bécsi út 120. Tel: +36 30 555 1234. Elvégzett munka: Fali kombi gázkazán éves karbantartása, égőtér és hőcserélő vegyszeres tisztítása, tágulási tartály előnyomás beállítás 1.2 barra, szén-monoxid és füstgáz mérés jóváhagyva. Felhasznált anyag: 1 db tágulási szelep (6500 Ft), 1 flakon tisztító koncentrátum (4800 Ft), 2 db tömítés (1200 Ft). Munkaidő: 2.5 óra. Ügyfél aláírás: rendben, átvéve.",
+    "has_technician_signature": true,
+    "has_customer_signature": true,
+    "confidence_score": 93.5
+  }
+}

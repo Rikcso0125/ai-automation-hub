@@ -1,0 +1,230 @@
+[
+  {
+    "cart_session_id": "CART-SESS-982314",
+    "customer": {
+      "name": "Nagy Zoltán",
+      "phone": "+36309876543",
+      "email": "nagy.zoltan@example.hu"
+    },
+    "cart_total_gross_huf": 64990,
+    "hero_product": "Makita DHP484Z Akkus Ütvefúró",
+    "restore_cart_url": "https://profigepesz.hu/cart/restore?session=CART-SESS-982314&token=43e2af67aa2b&coupon=VIP5PERCENT",
+    "incentive_applied": {
+      "coupon_code": "VIP5PERCENT",
+      "discount_label": "5% Extra Kedvezmény",
+      "benefit": "3 év kiterjesztett garancia és VIP elsőbbségi szerviz",
+      "sms_coupon_text": "ajandek kuponnal (VIP5PERCENT)"
+    },
+    "sequence_steps": [
+      {
+        "step": 1,
+        "channel": "SMS",
+        "scheduled_at": "2026-09-20T03:46:04.012749",
+        "delay_minutes": 20,
+        "recipient": "+36309876543",
+        "content": "Szia Nagy! A kosaradban levo Makita DHP484Z Akkus Ütvefúró megvar. Fejezd be a rendelest 1 kattintassal ajandek kuponnal (VIP5PERCENT): https://profigepesz.hu/cart/restore?session=CART-SESS-982314&token=43e2af67aa2b&coupon=VIP5PERCENT (Mar csak 2 db raktaron!)"
+      },
+      {
+        "step": 2,
+        "channel": "EMAIL",
+        "scheduled_at": "2026-09-20T15:26:04.012749",
+        "delay_hours": 12,
+        "recipient": "nagy.zoltan@example.hu",
+        "subject": "Kedves Nagy, a kosaradban maradt Makita DHP484Z Akkus Ütvefúró még megvár!",
+        "plain_text": "Kedves Nagy!\n\nA kosaradban maradt tételeket (Makita DHP484Z Akkus Ütvefúró) elmentettük a részedre.\nKosárérték: 64 990 Ft\nKuponkedvezmény: 5% Extra Kedvezmény (VIP5PERCENT)\n\nRendelés befejezése 1 kattintással: https://profigepesz.hu/cart/restore?session=CART-SESS-982314&token=43e2af67aa2b&coupon=VIP5PERCENT\n\nGarancia: 3 Év Hivatalos Magyar Gyári Garancia\nÜdvözlettel: ProfiGépész Webáruház",
+        "html_body": "<div style=\"font-family:Arial,sans-serif;max-width:600px;margin:0 auto;color:#333;line-height:1.6;\">\n<h2 style=\"color:#1a237e;\">Kedves Nagy!</h2>\n<p>Észrevettük, hogy a megkezdett megrendelésed befejezése félbeszakadt. Semmi gond, a kosarad tartalmát és az árakat félretettük a részedre!</p>\n<div style=\"background:#e8f5e9;border:1px dashed #2e7d32;padding:12px;border-radius:6px;margin:15px 0;\"><strong>Ajándék kuponkód:</strong> <span style=\"color:#2e7d32;font-size:16px;font-weight:bold;\">VIP5PERCENT</span> (5% Extra Kedvezmény)</div>\n<table style=\"width:100%;border-collapse:collapse;margin:15px 0;background:#fafafa;border-radius:6px;overflow:hidden;\">\n<tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Makita DHP484Z Akkus Ütvefúró (1 db)</td><td style=\"padding:8px;border-bottom:1px solid #eee;text-align:right;\"><strong>64 990 Ft</strong></td></tr>\n<tr><td style=\"padding:10px;font-size:16px;\"><strong>Összesen:</strong></td><td style=\"padding:10px;text-align:right;font-size:16px;color:#d32f2f;\"><strong>64 990 Ft</strong></td></tr>\n</table>\n<div style=\"background:#f5f5f5;padding:12px;border-radius:6px;margin:15px 0;font-size:13px;\">\n<p style=\"margin:4px 0;\">🛡️ <strong>Biztonság:</strong> 3 Év Hivatalos Magyar Gyári Garancia</p>\n<p style=\"margin:4px 0;\">⭐ <strong>Vásárlói visszajelzés:</strong> Több mint 4 200 elégedett hazai szakember választása.</p>\n<p style=\"margin:4px 0;\">⚡ <strong>Raktárkészlet:</strong> A beszállítói áremelkedés előtt még a jelenlegi áron garantáljuk a készletet.</p>\n</div>\n<div style=\"text-align:center;margin:25px 0;\"><a href=\"https://profigepesz.hu/cart/restore?session=CART-SESS-982314&token=43e2af67aa2b&coupon=VIP5PERCENT\" style=\"background:#ff6f00;color:#fff;padding:14px 28px;text-decoration:none;font-size:16px;font-weight:bold;border-radius:6px;display:inline-block;\">KOSÁR BETÖLTÉSE ÉS RENDELÉS BEFEJEZÉSE &raquo;</a></div>\n<p style=\"font-size:12px;color:#777;text-align:center;\">Ha kérdésed merült fel, válaszolj erre az emailre vagy hívd ügyfélszolgálatunkat.</p>\n</div>"
+      }
+    ],
+    "handled_at": "2026-09-20T03:26:04.012749"
+  },
+  {
+    "cart_session_id": "CART-VIP-7788",
+    "customer": {
+      "name": "Kovács Péter",
+      "phone": "+36201234567",
+      "email": "kovacs.p@example.hu"
+    },
+    "cart_total_gross_huf": 54990,
+    "hero_product": "Bosch Professional GSR 18V-55 Fúrócsavarozó",
+    "restore_cart_url": "https://profigepesz.hu/cart/restore?session=CART-VIP-7788&token=bf780e41373d&coupon=SAJATVIP10",
+    "incentive_applied": {
+      "coupon_code": "SAJATVIP10",
+      "discount_label": "10% Extra Kupon",
+      "benefit": "3 év garancia és azonnali prémium futár",
+      "sms_coupon_text": "ajandek kuponnal (SAJATVIP10)"
+    },
+    "sequence_steps": [
+      {
+        "step": 1,
+        "channel": "SMS",
+        "scheduled_at": "2026-09-20T03:56:04.013745",
+        "delay_minutes": 30,
+        "recipient": "+36201234567",
+        "content": "Szia Kovács! A kosaradban levo Bosch Professional GSR 18V-55 Fúrócsavarozó megvar. Fejezd be a rendelest 1 kattintassal ajandek kuponnal (SAJATVIP10): https://profigepesz.hu/cart/restore?session=CART-VIP-7788&token=bf780e41373d&coupon=SAJATVIP10"
+      },
+      {
+        "step": 2,
+        "channel": "EMAIL",
+        "scheduled_at": "2026-09-21T03:26:04.013745",
+        "delay_hours": 24,
+        "recipient": "kovacs.p@example.hu",
+        "subject": "Kedves Kovács, a kosaradban maradt Bosch Professional GSR 18V-55 Fúrócsavarozó még megvár!",
+        "plain_text": "Kedves Kovács!\n\nA kosaradban maradt tételeket (Bosch Professional GSR 18V-55 Fúrócsavarozó) elmentettük a részedre.\nKosárérték: 54 990 Ft\nKuponkedvezmény: 10% Extra Kupon (SAJATVIP10)\n\nRendelés befejezése 1 kattintással: https://profigepesz.hu/cart/restore?session=CART-VIP-7788&token=bf780e41373d&coupon=SAJATVIP10\n\nGarancia: 3 Év Hivatalos Magyar Gyári Garancia\nÜdvözlettel: ProfiGépész Webáruház",
+        "html_body": "<div style=\"font-family:Arial,sans-serif;max-width:600px;margin:0 auto;color:#333;line-height:1.6;\">\n<h2 style=\"color:#1a237e;\">Kedves Kovács!</h2>\n<p>Észrevettük, hogy a megkezdett megrendelésed befejezése félbeszakadt. Semmi gond, a kosarad tartalmát és az árakat félretettük a részedre!</p>\n<div style=\"background:#e8f5e9;border:1px dashed #2e7d32;padding:12px;border-radius:6px;margin:15px 0;\"><strong>Ajándék kuponkód:</strong> <span style=\"color:#2e7d32;font-size:16px;font-weight:bold;\">SAJATVIP10</span> (10% Extra Kupon)</div>\n<table style=\"width:100%;border-collapse:collapse;margin:15px 0;background:#fafafa;border-radius:6px;overflow:hidden;\">\n<tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Bosch Professional GSR 18V-55 Fúrócsavarozó (1 db)</td><td style=\"padding:8px;border-bottom:1px solid #eee;text-align:right;\"><strong>54 990 Ft</strong></td></tr>\n<tr><td style=\"padding:10px;font-size:16px;\"><strong>Összesen:</strong></td><td style=\"padding:10px;text-align:right;font-size:16px;color:#d32f2f;\"><strong>54 990 Ft</strong></td></tr>\n</table>\n<div style=\"background:#f5f5f5;padding:12px;border-radius:6px;margin:15px 0;font-size:13px;\">\n<p style=\"margin:4px 0;\">🛡️ <strong>Biztonság:</strong> 3 Év Hivatalos Magyar Gyári Garancia</p>\n<p style=\"margin:4px 0;\">⭐ <strong>Vásárlói visszajelzés:</strong> Több mint 4 200 elégedett hazai szakember választása.</p>\n<p style=\"margin:4px 0;\">⚡ <strong>Raktárkészlet:</strong> A beszállítói áremelkedés előtt még a jelenlegi áron garantáljuk a készletet.</p>\n</div>\n<div style=\"text-align:center;margin:25px 0;\"><a href=\"https://profigepesz.hu/cart/restore?session=CART-VIP-7788&token=bf780e41373d&coupon=SAJATVIP10\" style=\"background:#ff6f00;color:#fff;padding:14px 28px;text-decoration:none;font-size:16px;font-weight:bold;border-radius:6px;display:inline-block;\">KOSÁR BETÖLTÉSE ÉS RENDELÉS BEFEJEZÉSE &raquo;</a></div>\n<p style=\"font-size:12px;color:#777;text-align:center;\">Ha kérdésed merült fel, válaszolj erre az emailre vagy hívd ügyfélszolgálatunkat.</p>\n</div>"
+      }
+    ],
+    "handled_at": "2026-09-20T03:26:04.013745"
+  },
+  {
+    "cart_session_id": "CART-NOCOUPON-11",
+    "customer": {
+      "name": "Szabó Anna",
+      "phone": "+36709871122",
+      "email": "szabo.anna@example.hu"
+    },
+    "cart_total_gross_huf": 24000,
+    "hero_product": "Standard Kiegészítő Csomag",
+    "restore_cart_url": "https://profigepesz.hu/cart/restore?session=CART-NOCOUPON-11&token=0896f2eafa6b",
+    "incentive_applied": {
+      "coupon_code": null,
+      "discount_label": "Kupon nélküli értékfókusz",
+      "benefit": "30 napos ingyenes visszaküldés és 100% pénzvisszafizetési garancia",
+      "sms_coupon_text": "garanciaval es ingyenes visszakuldessel"
+    },
+    "sequence_steps": [
+      {
+        "step": 1,
+        "channel": "SMS",
+        "scheduled_at": "2026-09-20T03:56:04.015763",
+        "delay_minutes": 30,
+        "recipient": "+36709871122",
+        "content": "Szia Szabó! A kosaradban levo Standard Kiegészítő Csomag megvar. Fejezd be a rendelest 1 kattintassal garanciaval es ingyenes visszakuldessel: https://profigepesz.hu/cart/restore?session=CART-NOCOUPON-11&token=0896f2eafa6b"
+      },
+      {
+        "step": 2,
+        "channel": "EMAIL",
+        "scheduled_at": "2026-09-21T03:26:04.015763",
+        "delay_hours": 24,
+        "recipient": "szabo.anna@example.hu",
+        "subject": "Kedves Szabó, a kosaradban maradt Standard Kiegészítő Csomag még megvár!",
+        "plain_text": "Kedves Szabó!\n\nA kosaradban maradt tételeket (Standard Kiegészítő Csomag) elmentettük a részedre.\nKosárérték: 24 000 Ft\n\n\nRendelés befejezése 1 kattintással: https://profigepesz.hu/cart/restore?session=CART-NOCOUPON-11&token=0896f2eafa6b\n\nGarancia: 30 Napos Kérdés Nélküli Pénzvisszafizetési Garancia\nÜdvözlettel: ProfiGépész Webáruház",
+        "html_body": "<div style=\"font-family:Arial,sans-serif;max-width:600px;margin:0 auto;color:#333;line-height:1.6;\">\n<h2 style=\"color:#1a237e;\">Kedves Szabó!</h2>\n<p>Észrevettük, hogy a megkezdett megrendelésed befejezése félbeszakadt. Semmi gond, a kosarad tartalmát és az árakat félretettük a részedre!</p>\n\n<table style=\"width:100%;border-collapse:collapse;margin:15px 0;background:#fafafa;border-radius:6px;overflow:hidden;\">\n<tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Standard Kiegészítő Csomag (2 db)</td><td style=\"padding:8px;border-bottom:1px solid #eee;text-align:right;\"><strong>24 000 Ft</strong></td></tr>\n<tr><td style=\"padding:10px;font-size:16px;\"><strong>Összesen:</strong></td><td style=\"padding:10px;text-align:right;font-size:16px;color:#d32f2f;\"><strong>24 000 Ft</strong></td></tr>\n</table>\n<div style=\"background:#f5f5f5;padding:12px;border-radius:6px;margin:15px 0;font-size:13px;\">\n<p style=\"margin:4px 0;\">🛡️ <strong>Biztonság:</strong> 30 Napos Kérdés Nélküli Pénzvisszafizetési Garancia</p>\n<p style=\"margin:4px 0;\">⭐ <strong>Vásárlói visszajelzés:</strong> 4.9 / 5.0 vásárlói elégedettségi értékelés Árukeresőn.</p>\n<p style=\"margin:4px 0;\">⚡ <strong>Raktárkészlet:</strong> Raktáron lévő termék, rendelés esetén holnap átadjuk a futárnak.</p>\n</div>\n<div style=\"text-align:center;margin:25px 0;\"><a href=\"https://profigepesz.hu/cart/restore?session=CART-NOCOUPON-11&token=0896f2eafa6b\" style=\"background:#ff6f00;color:#fff;padding:14px 28px;text-decoration:none;font-size:16px;font-weight:bold;border-radius:6px;display:inline-block;\">KOSÁR BETÖLTÉSE ÉS RENDELÉS BEFEJEZÉSE &raquo;</a></div>\n<p style=\"font-size:12px;color:#777;text-align:center;\">Ha kérdésed merült fel, válaszolj erre az emailre vagy hívd ügyfélszolgálatunkat.</p>\n</div>"
+      }
+    ],
+    "handled_at": "2026-09-20T03:26:04.015763"
+  },
+  {
+    "cart_session_id": "CART-LIVE-TEST-001",
+    "customer": {
+      "name": "Nagy Zoltán",
+      "phone": "+36309876543",
+      "email": "nagy.z@example.hu"
+    },
+    "cart_total_gross_huf": 64990,
+    "hero_product": "Makita DHP484Z Akkus Ütvefúró",
+    "restore_cart_url": "https://profigepesz.hu/cart/restore?session=CART-LIVE-TEST-001&token=feac3f41053c&coupon=VIP5PERCENT",
+    "incentive_applied": {
+      "coupon_code": "VIP5PERCENT",
+      "discount_label": "5% Extra Kedvezmény",
+      "benefit": "3 év kiterjesztett garancia és VIP elsőbbségi szerviz",
+      "sms_coupon_text": "ajandek kuponnal (VIP5PERCENT)"
+    },
+    "sequence_steps": [
+      {
+        "step": 1,
+        "channel": "SMS",
+        "scheduled_at": "2026-09-20T03:56:12.027443",
+        "delay_minutes": 30,
+        "recipient": "+36309876543",
+        "content": "Szia Nagy! A kosaradban levo Makita DHP484Z Akkus Ütvefúró megvar. Fejezd be a rendelest 1 kattintassal ajandek kuponnal (VIP5PERCENT): https://profigepesz.hu/cart/restore?session=CART-LIVE-TEST-001&token=feac3f41053c&coupon=VIP5PERCENT (Mar csak 2 db raktaron!)"
+      },
+      {
+        "step": 2,
+        "channel": "EMAIL",
+        "scheduled_at": "2026-09-21T03:26:12.027443",
+        "delay_hours": 24,
+        "recipient": "nagy.z@example.hu",
+        "subject": "Kedves Nagy, a kosaradban maradt Makita DHP484Z Akkus Ütvefúró még megvár!",
+        "plain_text": "Kedves Nagy!\n\nA kosaradban maradt tételeket (Makita DHP484Z Akkus Ütvefúró) elmentettük a részedre.\nKosárérték: 64 990 Ft\nKuponkedvezmény: 5% Extra Kedvezmény (VIP5PERCENT)\n\nRendelés befejezése 1 kattintással: https://profigepesz.hu/cart/restore?session=CART-LIVE-TEST-001&token=feac3f41053c&coupon=VIP5PERCENT\n\nGarancia: 3 Év Hivatalos Magyar Gyári Garancia\nÜdvözlettel: ProfiGépész Webáruház",
+        "html_body": "<div style=\"font-family:Arial,sans-serif;max-width:600px;margin:0 auto;color:#333;line-height:1.6;\">\n<h2 style=\"color:#1a237e;\">Kedves Nagy!</h2>\n<p>Észrevettük, hogy a megkezdett megrendelésed befejezése félbeszakadt. Semmi gond, a kosarad tartalmát és az árakat félretettük a részedre!</p>\n<div style=\"background:#e8f5e9;border:1px dashed #2e7d32;padding:12px;border-radius:6px;margin:15px 0;\"><strong>Ajándék kuponkód:</strong> <span style=\"color:#2e7d32;font-size:16px;font-weight:bold;\">VIP5PERCENT</span> (5% Extra Kedvezmény)</div>\n<table style=\"width:100%;border-collapse:collapse;margin:15px 0;background:#fafafa;border-radius:6px;overflow:hidden;\">\n<tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Makita DHP484Z Akkus Ütvefúró (1 db)</td><td style=\"padding:8px;border-bottom:1px solid #eee;text-align:right;\"><strong>64 990 Ft</strong></td></tr>\n<tr><td style=\"padding:10px;font-size:16px;\"><strong>Összesen:</strong></td><td style=\"padding:10px;text-align:right;font-size:16px;color:#d32f2f;\"><strong>64 990 Ft</strong></td></tr>\n</table>\n<div style=\"background:#f5f5f5;padding:12px;border-radius:6px;margin:15px 0;font-size:13px;\">\n<p style=\"margin:4px 0;\">🛡️ <strong>Biztonság:</strong> 3 Év Hivatalos Magyar Gyári Garancia</p>\n<p style=\"margin:4px 0;\">⭐ <strong>Vásárlói visszajelzés:</strong> Több mint 4 200 elégedett hazai szakember választása.</p>\n<p style=\"margin:4px 0;\">⚡ <strong>Raktárkészlet:</strong> A beszállítói áremelkedés előtt még a jelenlegi áron garantáljuk a készletet.</p>\n</div>\n<div style=\"text-align:center;margin:25px 0;\"><a href=\"https://profigepesz.hu/cart/restore?session=CART-LIVE-TEST-001&token=feac3f41053c&coupon=VIP5PERCENT\" style=\"background:#ff6f00;color:#fff;padding:14px 28px;text-decoration:none;font-size:16px;font-weight:bold;border-radius:6px;display:inline-block;\">KOSÁR BETÖLTÉSE ÉS RENDELÉS BEFEJEZÉSE &raquo;</a></div>\n<p style=\"font-size:12px;color:#777;text-align:center;\">Ha kérdésed merült fel, válaszolj erre az emailre vagy hívd ügyfélszolgálatunkat.</p>\n</div>"
+      }
+    ],
+    "handled_at": "2026-09-20T03:26:12.027443"
+  },
+  {
+    "cart_session_id": "CART-SESS-982314",
+    "customer": {
+      "name": "Nagy Zoltán",
+      "phone": "+36309876543",
+      "email": "nagy.zoltan@example.hu"
+    },
+    "cart_total_gross_huf": 64990,
+    "hero_product": "Makita DHP484Z Akkus Ütvefúró-csavarbehajtó",
+    "restore_cart_url": "https://profigepesz.hu/cart/restore?session=CART-SESS-982314&token=43e2af67aa2b&coupon=VIP5PERCENT",
+    "incentive_applied": {
+      "coupon_code": "VIP5PERCENT",
+      "discount_label": "5% Extra Kedvezmény",
+      "benefit": "3 év kiterjesztett garancia és VIP elsőbbségi szerviz",
+      "sms_coupon_text": "ajandek kuponnal (VIP5PERCENT)"
+    },
+    "sequence_steps": [
+      {
+        "step": 1,
+        "channel": "SMS",
+        "scheduled_at": "2026-09-20T04:37:08.029773",
+        "delay_minutes": 30,
+        "recipient": "+36309876543",
+        "content": "Szia Nagy! A kosaradban levo Makita DHP484Z Akkus Ütvefúró-csavarbehajtó megvar. Fejezd be a rendelest 1 kattintassal ajandek kuponnal (VIP5PERCENT): https://profigepesz.hu/cart/restore?session=CART-SESS-982314&token=43e2af67aa2b&coupon=VIP5PERCENT (Mar csak 2 db raktaron!)"
+      },
+      {
+        "step": 2,
+        "channel": "EMAIL",
+        "scheduled_at": "2026-09-21T04:07:08.029773",
+        "delay_hours": 24,
+        "recipient": "nagy.zoltan@example.hu",
+        "subject": "Kedves Nagy, a kosaradban maradt Makita DHP484Z Akkus Ütvefúró-csavarbehajtó még megvár!",
+        "plain_text": "Kedves Nagy!\n\nA kosaradban maradt tételeket (Makita DHP484Z Akkus Ütvefúró-csavarbehajtó) elmentettük a részedre.\nKosárérték: 64 990 Ft\nKuponkedvezmény: 5% Extra Kedvezmény (VIP5PERCENT)\n\nRendelés befejezése 1 kattintással: https://profigepesz.hu/cart/restore?session=CART-SESS-982314&token=43e2af67aa2b&coupon=VIP5PERCENT\n\nGarancia: 3 Év Hivatalos Magyar Gyári Garancia\nÜdvözlettel: ProfiGépész Webáruház",
+        "html_body": "<div style=\"font-family:Arial,sans-serif;max-width:600px;margin:0 auto;color:#333;line-height:1.6;\">\n<h2 style=\"color:#1a237e;\">Kedves Nagy!</h2>\n<p>Észrevettük, hogy a megkezdett megrendelésed befejezése félbeszakadt. Semmi gond, a kosarad tartalmát és az árakat félretettük a részedre!</p>\n<div style=\"background:#e8f5e9;border:1px dashed #2e7d32;padding:12px;border-radius:6px;margin:15px 0;\"><strong>Ajándék kuponkód:</strong> <span style=\"color:#2e7d32;font-size:16px;font-weight:bold;\">VIP5PERCENT</span> (5% Extra Kedvezmény)</div>\n<table style=\"width:100%;border-collapse:collapse;margin:15px 0;background:#fafafa;border-radius:6px;overflow:hidden;\">\n<tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Makita DHP484Z Akkus Ütvefúró-csavarbehajtó (1 db)</td><td style=\"padding:8px;border-bottom:1px solid #eee;text-align:right;\"><strong>64 990 Ft</strong></td></tr>\n<tr><td style=\"padding:10px;font-size:16px;\"><strong>Összesen:</strong></td><td style=\"padding:10px;text-align:right;font-size:16px;color:#d32f2f;\"><strong>64 990 Ft</strong></td></tr>\n</table>\n<div style=\"background:#f5f5f5;padding:12px;border-radius:6px;margin:15px 0;font-size:13px;\">\n<p style=\"margin:4px 0;\">🛡️ <strong>Biztonság:</strong> 3 Év Hivatalos Magyar Gyári Garancia</p>\n<p style=\"margin:4px 0;\">⭐ <strong>Vásárlói visszajelzés:</strong> Több mint 4 200 elégedett hazai szakember választása.</p>\n<p style=\"margin:4px 0;\">⚡ <strong>Raktárkészlet:</strong> A beszállítói áremelkedés előtt még a jelenlegi áron garantáljuk a készletet.</p>\n</div>\n<div style=\"text-align:center;margin:25px 0;\"><a href=\"https://profigepesz.hu/cart/restore?session=CART-SESS-982314&token=43e2af67aa2b&coupon=VIP5PERCENT\" style=\"background:#ff6f00;color:#fff;padding:14px 28px;text-decoration:none;font-size:16px;font-weight:bold;border-radius:6px;display:inline-block;\">KOSÁR BETÖLTÉSE ÉS RENDELÉS BEFEJEZÉSE &raquo;</a></div>\n<p style=\"font-size:12px;color:#777;text-align:center;\">Ha kérdésed merült fel, válaszolj erre az emailre vagy hívd ügyfélszolgálatunkat.</p>\n</div>"
+      }
+    ],
+    "handled_at": "2026-09-20T04:07:08.029773"
+  },
+  {
+    "cart_session_id": "CART-SESS-982314",
+    "customer": {
+      "name": "Nagy Zoltán",
+      "phone": "+36309876543",
+      "email": "nagy.zoltan@example.hu"
+    },
+    "cart_total_gross_huf": 64990,
+    "hero_product": "Makita DHP484Z Akkus Ütvefúró-csavarbehajtó",
+    "restore_cart_url": "https://profigepesz.hu/cart/restore?session=CART-SESS-982314&token=43e2af67aa2b&coupon=VIP5PERCENT",
+    "incentive_applied": {
+      "coupon_code": "VIP5PERCENT",
+      "discount_label": "5% Extra Kedvezmény",
+      "benefit": "3 év kiterjesztett garancia és VIP elsőbbségi szerviz",
+      "sms_coupon_text": "ajandek kuponnal (VIP5PERCENT)"
+    },
+    "sequence_steps": [
+      {
+        "step": 1,
+        "channel": "SMS",
+        "scheduled_at": "2026-09-20T04:37:56.952703",
+        "delay_minutes": 30,
+        "recipient": "+36309876543",
+        "content": "Szia Nagy! A kosaradban levo Makita DHP484Z Akkus Ütvefúró-csavarbehajtó megvar. Fejezd be a rendelest 1 kattintassal ajandek kuponnal (VIP5PERCENT): https://profigepesz.hu/cart/restore?session=CART-SESS-982314&token=43e2af67aa2b&coupon=VIP5PERCENT (Mar csak 2 db raktaron!)"
+      },
+      {
+        "step": 2,
+        "channel": "EMAIL",
+        "scheduled_at": "2026-09-21T04:07:56.952703",
+        "delay_hours": 24,
+        "recipient": "nagy.zoltan@example.hu",
+        "subject": "Kedves Nagy, a kosaradban maradt Makita DHP484Z Akkus Ütvefúró-csavarbehajtó még megvár!",
+        "plain_text": "Kedves Nagy!\n\nA kosaradban maradt tételeket (Makita DHP484Z Akkus Ütvefúró-csavarbehajtó) elmentettük a részedre.\nKosárérték: 64 990 Ft\nKuponkedvezmény: 5% Extra Kedvezmény (VIP5PERCENT)\n\nRendelés befejezése 1 kattintással: https://profigepesz.hu/cart/restore?session=CART-SESS-982314&token=43e2af67aa2b&coupon=VIP5PERCENT\n\nGarancia: 3 Év Hivatalos Magyar Gyári Garancia\nÜdvözlettel: ProfiGépész Webáruház",
+        "html_body": "<div style=\"font-family:Arial,sans-serif;max-width:600px;margin:0 auto;color:#333;line-height:1.6;\">\n<h2 style=\"color:#1a237e;\">Kedves Nagy!</h2>\n<p>Észrevettük, hogy a megkezdett megrendelésed befejezése félbeszakadt. Semmi gond, a kosarad tartalmát és az árakat félretettük a részedre!</p>\n<div style=\"background:#e8f5e9;border:1px dashed #2e7d32;padding:12px;border-radius:6px;margin:15px 0;\"><strong>Ajándék kuponkód:</strong> <span style=\"color:#2e7d32;font-size:16px;font-weight:bold;\">VIP5PERCENT</span> (5% Extra Kedvezmény)</div>\n<table style=\"width:100%;border-collapse:collapse;margin:15px 0;background:#fafafa;border-radius:6px;overflow:hidden;\">\n<tr><td style=\"padding:8px;border-bottom:1px solid #eee;\">Makita DHP484Z Akkus Ütvefúró-csavarbehajtó (1 db)</td><td style=\"padding:8px;border-bottom:1px solid #eee;text-align:right;\"><strong>64 990 Ft</strong></td></tr>\n<tr><td style=\"padding:10px;font-size:16px;\"><strong>Összesen:</strong></td><td style=\"padding:10px;text-align:right;font-size:16px;color:#d32f2f;\"><strong>64 990 Ft</strong></td></tr>\n</table>\n<div style=\"background:#f5f5f5;padding:12px;border-radius:6px;margin:15px 0;font-size:13px;\">\n<p style=\"margin:4px 0;\">🛡️ <strong>Biztonság:</strong> 3 Év Hivatalos Magyar Gyári Garancia</p>\n<p style=\"margin:4px 0;\">⭐ <strong>Vásárlói visszajelzés:</strong> Több mint 4 200 elégedett hazai szakember választása.</p>\n<p style=\"margin:4px 0;\">⚡ <strong>Raktárkészlet:</strong> A beszállítói áremelkedés előtt még a jelenlegi áron garantáljuk a készletet.</p>\n</div>\n<div style=\"text-align:center;margin:25px 0;\"><a href=\"https://profigepesz.hu/cart/restore?session=CART-SESS-982314&token=43e2af67aa2b&coupon=VIP5PERCENT\" style=\"background:#ff6f00;color:#fff;padding:14px 28px;text-decoration:none;font-size:16px;font-weight:bold;border-radius:6px;display:inline-block;\">KOSÁR BETÖLTÉSE ÉS RENDELÉS BEFEJEZÉSE &raquo;</a></div>\n<p style=\"font-size:12px;color:#777;text-align:center;\">Ha kérdésed merült fel, válaszolj erre az emailre vagy hívd ügyfélszolgálatunkat.</p>\n</div>"
+      }
+    ],
+    "handled_at": "2026-09-20T04:07:56.952703"
+  }
+]

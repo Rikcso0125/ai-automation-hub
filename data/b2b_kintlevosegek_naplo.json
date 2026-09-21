@@ -1,0 +1,233 @@
+{
+  "last_updated": "2026-09-20T04:07:53.338187",
+  "total_tracked_invoices": 3,
+  "collection_metrics": {
+    "total_overdue_principal_huf": 5410000,
+    "total_accumulated_interest_huf": 59804,
+    "total_recovery_fees_huf": 16220,
+    "total_payable_claims_huf": 5486024,
+    "accounts_under_credit_hold": 2,
+    "fmh_legal_dossiers_prepared": 1
+  },
+  "records": [
+    {
+      "invoice_number": "SZAMLA-2026-0891",
+      "partner_code": "PARTNER-101",
+      "partner_name": "KlímaMaster Szerelő Kft.",
+      "partner_tier": "GOLD",
+      "processed_at": "2026-09-20T04:07:53.338187",
+      "delay_analysis": {
+        "days_overdue": 26,
+        "due_date": "2026-08-25",
+        "reference_date": "2026-09-20",
+        "level": "LEVEL_3_STRICT_HOLD_AND_FEE",
+        "level_title": "3. Lépcső: Szigorú Zárlat & 40 EUR Behajtási Átalány",
+        "severity": "HIGH_URGENT"
+      },
+      "penalties": {
+        "principal_huf": 2850000.0,
+        "interest_rate_percent": 14.5,
+        "accumulated_interest_huf": 29437,
+        "statutory_fee_eur": 40.0,
+        "eur_huf_rate": 405.5,
+        "statutory_fee_huf": 16220,
+        "fee_applied": true,
+        "fee_waived": true,
+        "fee_waiver_note": "Kiemelt VIP partneri méltányosság: A 40 EUR behajtási díj elengedve az azonnali tőketartozás-rendezés fejében.",
+        "billed_recovery_fee_huf": 0,
+        "total_payable_huf": 2879437
+      },
+      "credit_hold": {
+        "credit_hold_policy": "grace_period_days",
+        "is_hold_active": true,
+        "hold_type": "GRACE_PERIOD_EXCEEDED_FREEZE",
+        "hold_message": "RAKTÁRI ZÁROLÁS! A 15 napos türelmi idő lejárt (26 napos késés). Árukiadás tiltva!",
+        "tier_downgrade_warning": "FIGYELEM: A partner GOLD kedvezménye (-22% / -28%) és halasztott fizetési joga felfüggesztésre kerül, amíg a tartozás fennáll!",
+        "frozen_orders_count": 1,
+        "pending_orders": [
+          {
+            "order_id": "ORD-2026-9921",
+            "order_amount_huf": 1450000,
+            "status": "WAITING_FOR_DISPATCH",
+            "dispatch_status": "LOCKED_CREDIT_HOLD",
+            "warehouse_instruction": "Árukiadás megtagadva – Pénzügyi zárlat"
+          }
+        ]
+      },
+      "notice_letter": {
+        "subject": "SZIGORÚ FELSZÓLÍTÁS & 40 EUR KÖLTSÉGÁTALÁNY – RAKTÁRI ZÁROLÁS – SZAMLA-2026-0891",
+        "body": "Tisztelt Nagy Zoltán Építésvezető!\n\nEzúton hivatalosan felszólítjuk a(z) KlímaMaster Szerelő Kft.-t a(z) SZAMLA-2026-0891 számú lejárt számla rendezésére!\nKésedelem időtartama: 26 nap (Esedékesség: 2026-08-25).\n\nKÖVETELÉS ÖSSZESÍTŐ:\n1. Eredeti tőketartozás: 2,850,000 Ft\n2. Ptk. 6:155. § szerinti késedelmi kamat: 29,437 Ft\n3. 2016. évi IX. tv. szerinti 40 EUR behajtási költségátalány: 0 Ft\n-> ÖSSZESEN FIZETENDŐ: 2,879,437 Ft\n\nÉRTESÍTÉS RAKTÁRI SZÁLLÍTÁSI STOPRÓL:\nA kintlévőség fennállása miatt a(z) KlímaMaster Szerelő Kft. részére a raktári árukiadást és új megrendelések teljesítését azonnali hatállyal felfüggesztettük!\nA szállítási zárlat feloldásának feltétele a teljes tartozás banki jóváírása.\n\nAzonnali fizetési határidő: 48 óra.\nÜdvözlettel: ProfiGépész Jogi és Pénzügyi Igazgatóság",
+        "payment_link": "https://fizetes.profigepesz.hu/pay/SZAMLA-2026-0891",
+        "bank_transfer_info": {
+          "bank_name": "OTP Bank Nyrt.",
+          "account_number": "11705008-20498112-00000000",
+          "iban": "HU42117050082049811200000000",
+          "swift": "OTPVHUHB",
+          "beneficiary": "ProfiGépész Nagykereskedelmi Kft.",
+          "reference": "SZAMLA-2026-0891",
+          "amount_huf": 2879437
+        }
+      },
+      "fmh_dossier": null,
+      "kam_alert": {
+        "priority": "URGENT_CREDIT_ALERT",
+        "recipient": "Területi Key Account Manager & Pénzügyi Vezető",
+        "message": "Kintlévőségi zárlat aktiválva: KlímaMaster Szerelő Kft. (26 napja lejárt, Tartozás: 2,879,437 Ft)",
+        "one_click_dial": "tel:+36305551234",
+        "action_required": "Azonnali kapcsolatfelvétel a partner ügyvezetőjével!"
+      }
+    },
+    {
+      "invoice_number": "SZAMLA-2026-0945",
+      "partner_code": "PARTNER-102",
+      "partner_name": "TermoGépész Kivitelező Bt.",
+      "partner_tier": "SILVER",
+      "processed_at": "2026-09-20T04:07:53.338187",
+      "delay_analysis": {
+        "days_overdue": 10,
+        "due_date": "2026-09-10",
+        "reference_date": "2026-09-20",
+        "level": "LEVEL_2_FORMAL_NOTICE",
+        "level_title": "2. Lépcső: Hivatalos Fizetési Felszólítás",
+        "severity": "MEDIUM"
+      },
+      "penalties": {
+        "principal_huf": 920000.0,
+        "interest_rate_percent": 14.5,
+        "accumulated_interest_huf": 3655,
+        "statutory_fee_eur": 40.0,
+        "eur_huf_rate": 405.5,
+        "statutory_fee_huf": 16220,
+        "fee_applied": false,
+        "fee_waived": false,
+        "fee_waiver_note": null,
+        "billed_recovery_fee_huf": 0,
+        "total_payable_huf": 923655
+      },
+      "credit_hold": {
+        "credit_hold_policy": "grace_period_days",
+        "is_hold_active": false,
+        "hold_type": "PRE_HOLD_WARNING",
+        "hold_message": "FIGYELMEZTETŐ ZÓNA: 10 napos késedelem. Raktári zárolásig hátralévő idő: 5 nap.",
+        "tier_downgrade_warning": null,
+        "frozen_orders_count": 0,
+        "pending_orders": [
+          {
+            "order_id": "ORD-2026-9934",
+            "order_amount_huf": 350000,
+            "status": "READY_IN_WAREHOUSE",
+            "dispatch_status": "APPROVED_FOR_DISPATCH",
+            "warehouse_instruction": "Normál kiadás engedélyezve"
+          }
+        ]
+      },
+      "notice_letter": {
+        "subject": "Hivatalos fizetési felszólítás – SZAMLA-2026-0945 – Szállítási zárlat figyelmeztetés",
+        "body": "Tisztelt Horváth Béla Ügyvezető!\n\nHivatkozva a(z) SZAMLA-2026-0945 számú számlánkra (920,000 Ft), sajnálattal tapasztaljuk, hogy az immár 10 napja lejárt (2026-09-10).\n\nTájékoztatjuk, hogy cégünk szigorú hitelkontrolling szabályzata alapján a 15 napot meghaladó késedelem esetén a 2016. évi IX. törvény értelmében 40 EUR behajtási költségátalány és Ptk. késedelmi kamat kerül felszámításra, valamint a raktári árukiadás és új rendelések kiszolgálása zárolásra kerül.\n\nKérjük, a számla összegét 3 banki munkanapon belül hiánytalanul utalják át!\nFizetési határidő: 3 munkanap | Bankszámla: OTP Bank 11705008-20498112\nÜdvözlettel: ProfiGépész Kintlévőség-kezelési Csoport",
+        "payment_link": "https://fizetes.profigepesz.hu/pay/SZAMLA-2026-0945",
+        "bank_transfer_info": {
+          "bank_name": "OTP Bank Nyrt.",
+          "account_number": "11705008-20498112-00000000",
+          "iban": "HU42117050082049811200000000",
+          "swift": "OTPVHUHB",
+          "beneficiary": "ProfiGépész Nagykereskedelmi Kft.",
+          "reference": "SZAMLA-2026-0945",
+          "amount_huf": 923655
+        }
+      },
+      "fmh_dossier": null,
+      "kam_alert": null
+    },
+    {
+      "invoice_number": "SZAMLA-2026-0712",
+      "partner_code": "PARTNER-103",
+      "partner_name": "Hűtés-Fűtés Kisker Kft.",
+      "partner_tier": "BRONZE",
+      "processed_at": "2026-09-20T04:07:53.338187",
+      "delay_analysis": {
+        "days_overdue": 41,
+        "due_date": "2026-08-10",
+        "reference_date": "2026-09-20",
+        "level": "LEVEL_4_LEGAL_FMH_ESCALATION",
+        "level_title": "4. Lépcső: Jogi és FMH (Fizetési Meghagyás) Átadás",
+        "severity": "LEGAL_CRITICAL"
+      },
+      "penalties": {
+        "principal_huf": 1640000.0,
+        "interest_rate_percent": 14.5,
+        "accumulated_interest_huf": 26712,
+        "statutory_fee_eur": 40.0,
+        "eur_huf_rate": 405.5,
+        "statutory_fee_huf": 16220,
+        "fee_applied": true,
+        "fee_waived": false,
+        "fee_waiver_note": null,
+        "billed_recovery_fee_huf": 16220,
+        "total_payable_huf": 1682932
+      },
+      "credit_hold": {
+        "credit_hold_policy": "grace_period_days",
+        "is_hold_active": true,
+        "hold_type": "GRACE_PERIOD_EXCEEDED_FREEZE",
+        "hold_message": "RAKTÁRI ZÁROLÁS! A 15 napos türelmi idő lejárt (41 napos késés). Árukiadás tiltva!",
+        "tier_downgrade_warning": null,
+        "frozen_orders_count": 0,
+        "pending_orders": []
+      },
+      "notice_letter": {
+        "subject": "ÜGYVÉDI ÉS KÖZJEGYZŐI FMH ÁTADÁS ELŐTTI UTOLSÓ FELSZÓLÍTÁS – SZAMLA-2026-0712",
+        "body": "Tisztelt Kiss Tamás Boltvezető!\n\nTájékoztatjuk, hogy a(z) Hűtés-Fűtés Kisker Kft. ellen a(z) SZAMLA-2026-0712 számla kapcsán fennálló 1,682,932 Ft összegű követelésünket (41 napos súlyos késedelem) a mai nappal jogi útra tereljük.\n\nÖnökkel szemben a Magyar Országos Közjegyzői Kamara (MOKK) rendszerén keresztül\nFIZETÉSI MEGHAGYÁSOS (FMH) ÉS VÉGREHAJTÁSI ELJÁRÁST KEZDEMÉNYEZÜNK,\nmelynek valamennyi eljárási, ügyvédi és végrehajtási díja a kötelezettet terheli!\n\nUtolsó jogvesztő határidő a peren kívüli rendezésre: 2 munkanap.\nProfiGépész Nagykereskedelmi Kft. Jogi Képviselet",
+        "payment_link": "https://fizetes.profigepesz.hu/pay/SZAMLA-2026-0712",
+        "bank_transfer_info": {
+          "bank_name": "OTP Bank Nyrt.",
+          "account_number": "11705008-20498112-00000000",
+          "iban": "HU42117050082049811200000000",
+          "swift": "OTPVHUHB",
+          "beneficiary": "ProfiGépész Nagykereskedelmi Kft.",
+          "reference": "SZAMLA-2026-0712",
+          "amount_huf": 1682932
+        }
+      },
+      "fmh_dossier": {
+        "dossier_id": "FMH-MOKK-SZAMLA-2026-0712",
+        "status": "READY_FOR_ATTORNEY_SUBMISSION",
+        "created_at": "2026-09-20T04:07:53.338187",
+        "creditor": {
+          "name": "ProfiGépész Nagykereskedelmi Kft.",
+          "tax_id": "12345678-2-41",
+          "address": "1107 Budapest, Szállás utca 21.",
+          "legal_representative": "Dr. Varga & Partnerei Ügyvédi Iroda"
+        },
+        "debtor": {
+          "company_name": "Hűtés-Fűtés Kisker Kft.",
+          "tax_id": "28765432-2-02",
+          "contact_person": "Kiss Tamás Boltvezető",
+          "email": "rendeles@hutesfuteskisker.hu",
+          "phone": "+36 70 123 9876"
+        },
+        "claim_breakdown": {
+          "principal_huf": 1640000.0,
+          "interest_huf": 26712,
+          "statutory_fee_40_eur_huf": 16220,
+          "total_claim_huf": 1682932,
+          "legal_basis_interest": "Polgári Törvénykönyvről szóló 2013. évi V. törvény (Ptk.) 6:155. §",
+          "legal_basis_recovery_fee": "A behajtási költségátalányról szóló 2016. évi IX. törvény 3. § (1) bek."
+        },
+        "evidence_attached": [
+          "Eredeti számla másolata (SZAMLA-2026-0712)",
+          "Igazolt raktári átadás-átvételi szállítólevél",
+          "Fizetési felszólítások és elektronikus kézbesítési igazolások (L1, L2, L3)",
+          "Törvényes kamatszámítási analitika"
+        ],
+        "recommended_action": "Közjegyzői FMH azonnali kibocsátása a MOKK elektronikus felületén."
+      },
+      "kam_alert": {
+        "priority": "URGENT_CREDIT_ALERT",
+        "recipient": "Területi Key Account Manager & Pénzügyi Vezető",
+        "message": "Kintlévőségi zárlat aktiválva: Hűtés-Fűtés Kisker Kft. (41 napja lejárt, Tartozás: 1,682,932 Ft)",
+        "one_click_dial": "tel:+36701239876",
+        "action_required": "Azonnali kapcsolatfelvétel a partner ügyvezetőjével!"
+      }
+    }
+  ]
+}

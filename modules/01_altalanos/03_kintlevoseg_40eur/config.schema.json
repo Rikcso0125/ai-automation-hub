@@ -1,0 +1,102 @@
+{
+  "title": "Kintlévőség-kezelés és Behajtási Beállítások",
+  "type": "object",
+  "required": [
+    "company_name",
+    "company_bank_account"
+  ],
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "Céged Hivatalos Neve",
+      "default": "ProfiTech Kft.",
+      "description": "A felszólító levelek feladójaként megjelenő cégnév."
+    },
+    "company_bank_account": {
+      "type": "string",
+      "title": "Céges Bankszámlaszám (Utaláshoz)",
+      "default": "11705008-20495812-00000000",
+      "description": "Erre a számlaszámra kéri az átutalásos kiegyenlítést."
+    },
+    "email_provider": {
+      "type": "string",
+      "title": "Email Értesítő Szolgáltató",
+      "enum": [
+        "resend",
+        "smtp",
+        "mock"
+      ],
+      "default": "mock",
+      "description": "Resend API (modern felhős email), saját SMTP szerver, vagy Mock szimuláció."
+    },
+    "resend_api_key": {
+      "type": "string",
+      "title": "Resend API Kulcs (re_...)",
+      "format": "password",
+      "description": "A resend.com felületén létrehozott API kulcs."
+    },
+    "smtp_host": {
+      "type": "string",
+      "title": "SMTP Szerver Címe",
+      "default": "smtp.gmail.com",
+      "description": "Pl. mail.cegem.hu vagy smtp.gmail.com"
+    },
+    "smtp_user": {
+      "type": "string",
+      "title": "SMTP Felhasználónév / Email",
+      "default": "szamlazas@cegem.hu"
+    },
+    "sms_provider": {
+      "type": "string",
+      "title": "SMS Értesítő Szolgáltató",
+      "enum": [
+        "telnyx",
+        "mock"
+      ],
+      "default": "mock",
+      "description": "Telnyx SMS API (villámgyors globális SMS) vagy Mock szimuláció."
+    },
+    "telnyx_api_key": {
+      "type": "string",
+      "title": "Telnyx API Kulcs (KEY...)",
+      "format": "password",
+      "description": "A telnyx.com fiókodban generált Messaging API kulcs."
+    },
+    "telnyx_from_number": {
+      "type": "string",
+      "title": "Telnyx Feladó (Telefonszám vagy Cégnév)",
+      "default": "ProfiTech",
+      "description": "A mobilon megjelenő feladói név (Alphanumeric Sender ID) vagy Telnyx szám."
+    },
+    "payment_gateway": {
+      "type": "string",
+      "title": "Online Azonnali Fizetési Kapu",
+      "enum": [
+        "billingo",
+        "szamlazz_hu",
+        "stripe",
+        "direct_bank_only"
+      ],
+      "default": "billingo",
+      "description": "Milyen típusú azonnali online fizetési linket generáljon az üzenetbe."
+    },
+    "stripe_secret_key": {
+      "type": "string",
+      "title": "Stripe Secret Key (sk_...)",
+      "format": "password",
+      "description": "Opcionális: Stripe direkt fizetési link generálásához."
+    },
+    "grace_period_days": {
+      "type": "string",
+      "title": "40 EUR Költségátalány Türelmi Idő (Nap)",
+      "default": "15",
+      "description": "Ennyi nap késedelem után terheli rá automatikusan a törvényi 40 EUR behajtási díjat."
+    },
+    "eur_huf_rate": {
+      "type": "string",
+      "title": "40 EUR Átváltási Árfolyam (HUF)",
+      "default": "400",
+      "description": "A 40 EUR fix magyar forint egyenértéke (pl. 400 Ft/EUR = 16.000 Ft)."
+    }
+  }
+}

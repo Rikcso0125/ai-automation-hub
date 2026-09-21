@@ -1,0 +1,29 @@
+{
+  "module_id": "0_24_virtualis_ai_telefonos_recepcios_vo",
+  "call_id": "CALL-20260920-0082",
+  "caller_phone": "+36307894561",
+  "caller_name": "Varga Sándor",
+  "call_duration_seconds": 115,
+  "conversation_transcript": [
+    {
+      "speaker": "receptionist",
+      "text": "Jó napot kívánok! A ProfiTech Kft. virtuális recepciósa vagyok, miben segíthetek?"
+    },
+    {
+      "speaker": "caller",
+      "text": "Jó napot! Szeretnék időpontot foglalni klímatisztításra 2 beltéri egységre a 11. kerületben. Mennyibe kerül és mikor tudnának jönni?"
+    },
+    {
+      "speaker": "receptionist",
+      "text": "A klíma tisztítása és fertőtlenítése 18.500 Ft beltéri egységenként, így két egységre 37.000 Ft bruttó. A naptáram szerint csütörtökön, szeptember 24-én délelőtt 10:00-kor lenne szabad időpontunk. Megfelelne Önnek?"
+    },
+    {
+      "speaker": "caller",
+      "text": "Tökéletes, csütörtök 10 óra jó lesz! Varga Sándor vagyok."
+    },
+    {
+      "speaker": "receptionist",
+      "text": "Rögzítettem az időpontot: szeptember 24. csütörtök 10:00 óra, 2 beltéri egység tisztítása, Varga Sándor részére. A részletekről küldök egy megerősítő üzenetet a telefonszámára. Köszönöm a hívását, szép napot kívánok!"
+    }
+  ]
+}

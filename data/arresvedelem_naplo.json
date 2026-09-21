@@ -1,0 +1,428 @@
+{
+  "last_updated": "2026-09-20T04:07:53.804796",
+  "total_orders_audited": 6,
+  "protection_summary": {
+    "blocked_orders_count": 2,
+    "total_margin_loss_prevented_huf": 491810,
+    "circuit_breaker_active": true
+  },
+  "orders": [
+    {
+      "batch_id": "BATCH-20260920-2239",
+      "created_at": "2026-09-20T02:43:57.175860",
+      "supplier_name": "InstallPartner Zrt.",
+      "feed_source": "live_supplier_update.json",
+      "total_items": 2,
+      "increased_items_count": 2,
+      "loss_making_items_count": 0,
+      "total_profit_protected_huf": 30800.0,
+      "critical_alerts": [],
+      "items": [
+        {
+          "sku": "DAIKIN-SENSIRA-35",
+          "product_name": "Daikin Sensira 3.5 kW Inverteres Klíma Szett",
+          "supplier": "InstallPartner Zrt.",
+          "feed_cost_raw": 268000.0,
+          "feed_currency": "HUF",
+          "new_cost_huf": 268000,
+          "old_cost_huf": 245000,
+          "cost_change_pct": 9.39,
+          "current_price_huf": 329000,
+          "current_margin_pct": 18.54,
+          "target_margin_pct": 25.5,
+          "recommended_price_huf": 359730.0,
+          "recommended_margin_pct": 25.5,
+          "recommended_profit_huf": 91730.0,
+          "risk_level": "PRICE_INCREASE",
+          "status_note": "Beszállítói áremelkedés: +9.39%",
+          "sync_status": "PENDING_HUMAN_APPROVAL"
+        },
+        {
+          "sku": "CU-PIPE-15",
+          "product_name": "15x1 mm Rézcső szálban (félkemény)",
+          "supplier": "InstallPartner Zrt.",
+          "feed_cost_raw": 2800.0,
+          "feed_currency": "HUF",
+          "new_cost_huf": 2800,
+          "old_cost_huf": 2750,
+          "cost_change_pct": 1.82,
+          "current_price_huf": 3850.0,
+          "current_margin_pct": 27.27,
+          "target_margin_pct": 28.5,
+          "recommended_price_huf": 3920.0,
+          "recommended_margin_pct": 28.57,
+          "recommended_profit_huf": 1120.0,
+          "risk_level": "PRICE_INCREASE",
+          "status_note": "Beszállítói áremelkedés: +1.82%",
+          "sync_status": "PENDING_HUMAN_APPROVAL"
+        }
+      ],
+      "approval_mode": "manual_approval_only",
+      "approval_status": "PENDING_APPROVAL",
+      "approval_url": "http://localhost:8000/api/v1/modules/01_beszallitoi_arlistak_osszefesulese_suppl/approve_batch?batch_id=BATCH-20260920-2239"
+    },
+    {
+      "batch_id": "BATCH-20260920-7664",
+      "created_at": "2026-09-20T02:43:34.017328",
+      "supplier_name": "EuroGépész Nagyker Kft.",
+      "feed_source": "heti_arlista_2026w38.xlsx",
+      "total_items": 3,
+      "increased_items_count": 2,
+      "loss_making_items_count": 1,
+      "total_profit_protected_huf": 6820.0,
+      "critical_alerts": [
+        {
+          "sku": "CU-PIPE-15",
+          "name": "15x1 mm Rézcső szálban (félkemény)",
+          "risk": "CRITICAL_LOSS_MAKING",
+          "new_cost_huf": 2750,
+          "current_price_huf": 2590,
+          "deficit_huf": 160
+        }
+      ],
+      "items": [
+        {
+          "sku": "CU-PIPE-15",
+          "product_name": "15x1 mm Rézcső szálban (félkemény)",
+          "supplier": "EuroGépész Nagyker Kft.",
+          "feed_cost_raw": 2750.0,
+          "feed_currency": "HUF",
+          "new_cost_huf": 2750,
+          "old_cost_huf": 1850,
+          "cost_change_pct": 48.65,
+          "current_price_huf": 2590,
+          "current_margin_pct": -6.18,
+          "target_margin_pct": 28.5,
+          "recommended_price_huf": 3850.0,
+          "recommended_margin_pct": 28.57,
+          "recommended_profit_huf": 1100.0,
+          "risk_level": "CRITICAL_LOSS_MAKING",
+          "status_note": "VESZTESÉGES! Darabonként -160 Ft veszteség keletkezne a jelenlegi eladási áron!",
+          "sync_status": "PENDING_HUMAN_APPROVAL"
+        },
+        {
+          "sku": "VALVE-BRASS-12",
+          "product_name": "1/2 colos Golyóscsap BB Karos (Olasz réz)",
+          "supplier": "EuroGépész Nagyker Kft.",
+          "feed_cost_raw": 1720.0,
+          "feed_currency": "HUF",
+          "new_cost_huf": 1720,
+          "old_cost_huf": 1650,
+          "cost_change_pct": 4.24,
+          "current_price_huf": 2350,
+          "current_margin_pct": 26.81,
+          "target_margin_pct": 29.8,
+          "recommended_price_huf": 2450.0,
+          "recommended_margin_pct": 29.8,
+          "recommended_profit_huf": 730.0,
+          "risk_level": "PRICE_INCREASE",
+          "status_note": "Beszállítói áremelkedés: +4.24%",
+          "sync_status": "PENDING_HUMAN_APPROVAL"
+        },
+        {
+          "sku": "PUMP-GRUNDFOS-25",
+          "product_name": "Grundfos Alpha 25-60 180 Fűtési Keringető Szivattyú",
+          "supplier": "EuroGépész Nagyker Kft.",
+          "feed_cost_raw": 175.0,
+          "feed_currency": "EUR",
+          "new_cost_huf": 72188,
+          "old_cost_huf": 68000,
+          "cost_change_pct": 6.16,
+          "current_price_huf": 89900,
+          "current_margin_pct": 19.7,
+          "target_margin_pct": 24.3,
+          "recommended_price_huf": 95360.0,
+          "recommended_margin_pct": 24.3,
+          "recommended_profit_huf": 23172.0,
+          "risk_level": "PRICE_INCREASE",
+          "status_note": "Beszállítói áremelkedés: +6.16%",
+          "sync_status": "PENDING_HUMAN_APPROVAL"
+        }
+      ],
+      "approval_mode": "manual_approval_only",
+      "approval_status": "APPROVED_AND_SYNCED_TO_ERP",
+      "approval_url": "http://localhost:8000/api/v1/modules/01_beszallitoi_arlistak_osszefesulese_suppl/approve_batch?batch_id=BATCH-20260920-7664",
+      "approved_at": "2026-09-20T02:43:34.020327"
+    },
+    {
+      "order_id": "ORD-ANOMALY-01",
+      "customer_name": "KlímaTech Generál Kft.",
+      "customer_tier": "GOLD",
+      "order_date": "2026-09-20",
+      "audited_at": "2026-09-20T04:07:53.804796",
+      "totals": {
+        "total_revenue_huf": 925000.0,
+        "total_cost_huf": 1225000.0,
+        "total_profit_huf": -300000.0,
+        "overall_margin_percent": -32.43
+      },
+      "circuit_breaker": {
+        "circuit_breaker_status": "HARD_CIRCUIT_BREAKER_ACTIVE",
+        "status_label": "KEMÉNY ZÁRLAT! Veszteség (444,760 Ft) meghaladja a küszöböt (50,000 Ft)",
+        "dispatch_blocked": true,
+        "total_anomalies_count": 2,
+        "total_calculated_loss_huf": 444760,
+        "action_required": "SZÁLLÍTÁS ÉS SZÁMLÁZÁS LEÁLLÍTVA! Pénzügyi igazgatói jóváhagyás kötelező.",
+        "anomalies_summary": [
+          {
+            "code": "CRITICAL_NEGATIVE_MARGIN",
+            "severity": "CRITICAL",
+            "title": "Ráfizetéses Eladás (Beszerzési Ár Alatti Értékesítés)",
+            "calculated_loss_huf": 300000.0,
+            "description": "Az eladási ár (185,000 Ft) alacsonyabb a beszerzési önköltségnél (245,000 Ft). Tételenkénti veszteség: 60,000 Ft, összesen: 300,000 Ft!"
+          },
+          {
+            "code": "EXCESSIVE_DISCOUNT_STACKING",
+            "severity": "HIGH",
+            "title": "Veszélyes Kedvezményhalmozás",
+            "calculated_loss_huf": 144760,
+            "description": "A kumulált engedmény (43.8%) meghaladja a maximális korlátot (35.0%). Levont tételek: ['Egyedi értékesítői akció -43.7%']."
+          }
+        ]
+      },
+      "manager_override": {
+        "override_available": true,
+        "urgency": "IMMEDIATE_CFO_DECISION",
+        "approver_role": "Pénzügyi Igazgató (CFO) / Ügyvezető",
+        "approval_tokens": {
+          "approve_token": "AUTH-APPROVE-ORD-ANOMALY-01-2026",
+          "reject_token": "AUTH-REJECT-ORD-ANOMALY-01-2026",
+          "web_pin_code": "8842"
+        },
+        "one_click_actions": {
+          "one_click_approve_url": "https://hub.profigepesz.hu/api/v1/override?token=AUTH-APPROVE-ORD-ANOMALY-01-2026&action=APPROVE",
+          "one_click_reject_url": "https://hub.profigepesz.hu/api/v1/override?token=AUTH-REJECT-ORD-ANOMALY-01-2026&action=REJECT"
+        },
+        "alert_broadcast": {
+          "telegram_alert": "ÁRRÉSVÉDELMI VÉSZJELZÉS: KlímaTech Generál Kft. (ORD-ANOMALY-01) zárolva! Várható árrésveszteség: 444,760 Ft! Feloldás: https://hub.profigepesz.hu/api/v1/override?token=AUTH-APPROVE-ORD-ANOMALY-01-2026",
+          "dashboard_banner": "CIRCUIT BREAKER AKTÍV: ORD-ANOMALY-01 szállítás zárolva!"
+        }
+      },
+      "audited_items": [
+        {
+          "sku": "DAIKIN-SENSIRA-35",
+          "product_name": "Daikin Sensira 3.5 kW Klíma Szett",
+          "quantity": 5,
+          "unit_cost_huf": 245000.0,
+          "offered_price_huf": 185000.0,
+          "list_price_huf": 329000.0,
+          "unit_profit_huf": -60000.0,
+          "total_profit_huf": -300000.0,
+          "margin_percent": -32.43,
+          "cumulative_discount_percent": 43.8,
+          "discounts_applied": [
+            "Egyedi értékesítői akció -43.7%"
+          ],
+          "has_anomaly": true,
+          "anomalies": [
+            {
+              "code": "CRITICAL_NEGATIVE_MARGIN",
+              "severity": "CRITICAL",
+              "title": "Ráfizetéses Eladás (Beszerzési Ár Alatti Értékesítés)",
+              "calculated_loss_huf": 300000.0,
+              "description": "Az eladási ár (185,000 Ft) alacsonyabb a beszerzési önköltségnél (245,000 Ft). Tételenkénti veszteség: 60,000 Ft, összesen: 300,000 Ft!"
+            },
+            {
+              "code": "EXCESSIVE_DISCOUNT_STACKING",
+              "severity": "HIGH",
+              "title": "Veszélyes Kedvezményhalmozás",
+              "calculated_loss_huf": 144760,
+              "description": "A kumulált engedmény (43.8%) meghaladja a maximális korlátot (35.0%). Levont tételek: ['Egyedi értékesítői akció -43.7%']."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order_id": "ORD-ANOMALY-02",
+      "customer_name": "TermoGépész Kivitelező Bt.",
+      "customer_tier": "SILVER",
+      "order_date": "2026-09-20",
+      "audited_at": "2026-09-20T04:07:53.804796",
+      "totals": {
+        "total_revenue_huf": 142100.0,
+        "total_cost_huf": 172000.0,
+        "total_profit_huf": -29900.0,
+        "overall_margin_percent": -21.04
+      },
+      "circuit_breaker": {
+        "circuit_breaker_status": "HARD_CIRCUIT_BREAKER_ACTIVE",
+        "status_label": "KEMÉNY ZÁRLAT! Veszteség (47,050 Ft) meghaladja a küszöböt (50,000 Ft)",
+        "dispatch_blocked": true,
+        "total_anomalies_count": 2,
+        "total_calculated_loss_huf": 47050,
+        "action_required": "SZÁLLÍTÁS ÉS SZÁMLÁZÁS LEÁLLÍTVA! Pénzügyi igazgatói jóváhagyás kötelező.",
+        "anomalies_summary": [
+          {
+            "code": "CRITICAL_NEGATIVE_MARGIN",
+            "severity": "CRITICAL",
+            "title": "Ráfizetéses Eladás (Beszerzési Ár Alatti Értékesítés)",
+            "calculated_loss_huf": 29900.0,
+            "description": "Az eladási ár (1,421 Ft) alacsonyabb a beszerzési önköltségnél (1,720 Ft). Tételenkénti veszteség: 299 Ft, összesen: 29,900 Ft!"
+          },
+          {
+            "code": "EXCESSIVE_DISCOUNT_STACKING",
+            "severity": "HIGH",
+            "title": "Veszélyes Kedvezményhalmozás",
+            "calculated_loss_huf": 17150,
+            "description": "A kumulált engedmény (42.0%) meghaladja a maximális korlátot (35.0%). Levont tételek: ['Partner Silver -15%', 'Szezonális kupon -15%', 'Volumen -12%']."
+          }
+        ]
+      },
+      "manager_override": {
+        "override_available": true,
+        "urgency": "IMMEDIATE_CFO_DECISION",
+        "approver_role": "Pénzügyi Igazgató (CFO) / Ügyvezető",
+        "approval_tokens": {
+          "approve_token": "AUTH-APPROVE-ORD-ANOMALY-02-2026",
+          "reject_token": "AUTH-REJECT-ORD-ANOMALY-02-2026",
+          "web_pin_code": "8842"
+        },
+        "one_click_actions": {
+          "one_click_approve_url": "https://hub.profigepesz.hu/api/v1/override?token=AUTH-APPROVE-ORD-ANOMALY-02-2026&action=APPROVE",
+          "one_click_reject_url": "https://hub.profigepesz.hu/api/v1/override?token=AUTH-REJECT-ORD-ANOMALY-02-2026&action=REJECT"
+        },
+        "alert_broadcast": {
+          "telegram_alert": "ÁRRÉSVÉDELMI VÉSZJELZÉS: TermoGépész Kivitelező Bt. (ORD-ANOMALY-02) zárolva! Várható árrésveszteség: 47,050 Ft! Feloldás: https://hub.profigepesz.hu/api/v1/override?token=AUTH-APPROVE-ORD-ANOMALY-02-2026",
+          "dashboard_banner": "CIRCUIT BREAKER AKTÍV: ORD-ANOMALY-02 szállítás zárolva!"
+        }
+      },
+      "audited_items": [
+        {
+          "sku": "VALVE-BRASS-12",
+          "product_name": "1/2 colos Golyóscsap BB Karos",
+          "quantity": 100,
+          "unit_cost_huf": 1720.0,
+          "offered_price_huf": 1421.0,
+          "list_price_huf": 2450.0,
+          "unit_profit_huf": -299.0,
+          "total_profit_huf": -29900.0,
+          "margin_percent": -21.04,
+          "cumulative_discount_percent": 42.0,
+          "discounts_applied": [
+            "Partner Silver -15%",
+            "Szezonális kupon -15%",
+            "Volumen -12%"
+          ],
+          "has_anomaly": true,
+          "anomalies": [
+            {
+              "code": "CRITICAL_NEGATIVE_MARGIN",
+              "severity": "CRITICAL",
+              "title": "Ráfizetéses Eladás (Beszerzési Ár Alatti Értékesítés)",
+              "calculated_loss_huf": 29900.0,
+              "description": "Az eladási ár (1,421 Ft) alacsonyabb a beszerzési önköltségnél (1,720 Ft). Tételenkénti veszteség: 299 Ft, összesen: 29,900 Ft!"
+            },
+            {
+              "code": "EXCESSIVE_DISCOUNT_STACKING",
+              "severity": "HIGH",
+              "title": "Veszélyes Kedvezményhalmozás",
+              "calculated_loss_huf": 17150,
+              "description": "A kumulált engedmény (42.0%) meghaladja a maximális korlátot (35.0%). Levont tételek: ['Partner Silver -15%', 'Szezonális kupon -15%', 'Volumen -12%']."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order_id": "ORD-ANOMALY-03",
+      "customer_name": "Kisker Szerelvénybolt Bt.",
+      "customer_tier": "BRONZE",
+      "order_date": "2026-09-20",
+      "audited_at": "2026-09-20T04:07:53.804796",
+      "totals": {
+        "total_revenue_huf": 88500.0,
+        "total_cost_huf": 84000.0,
+        "total_profit_huf": 4500.0,
+        "overall_margin_percent": 5.08
+      },
+      "circuit_breaker": {
+        "circuit_breaker_status": "WARNING_PROCEED_WITH_FLAG",
+        "status_label": "Alacsony kockázatú anomália (2,580 Ft veszteség) – Folytatás engedélyezve",
+        "dispatch_blocked": false,
+        "total_anomalies_count": 1,
+        "total_calculated_loss_huf": 2580,
+        "action_required": "Audit figyelmeztetés rögzítve a számlán, szállítás engedélyezve.",
+        "anomalies_summary": [
+          {
+            "code": "SUB_MINIMUM_MARGIN_FLOOR",
+            "severity": "MEDIUM",
+            "title": "Minimális Árréshatár Megsértése",
+            "calculated_loss_huf": 2580,
+            "description": "A realizált árrés (5.08%) elmarad a céges minimumtól (8.0%). Elmaradt minimális haszon: 2,580 Ft."
+          }
+        ]
+      },
+      "manager_override": null,
+      "audited_items": [
+        {
+          "sku": "FITTING-ELBOW-90",
+          "product_name": "Forrasztható Réz Könyök 90 fok",
+          "quantity": 300,
+          "unit_cost_huf": 280.0,
+          "offered_price_huf": 295.0,
+          "list_price_huf": 450.0,
+          "unit_profit_huf": 15.0,
+          "total_profit_huf": 4500.0,
+          "margin_percent": 5.08,
+          "cumulative_discount_percent": 34.4,
+          "discounts_applied": [
+            "Nyári kiárusítás -34.4%"
+          ],
+          "has_anomaly": true,
+          "anomalies": [
+            {
+              "code": "SUB_MINIMUM_MARGIN_FLOOR",
+              "severity": "MEDIUM",
+              "title": "Minimális Árréshatár Megsértése",
+              "calculated_loss_huf": 2580,
+              "description": "A realizált árrés (5.08%) elmarad a céges minimumtól (8.0%). Elmaradt minimális haszon: 2,580 Ft."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order_id": "ORD-ANOMALY-04",
+      "customer_name": "Nagyberuházó Projekt Zrt.",
+      "customer_tier": "PLATINUM",
+      "order_date": "2026-09-20",
+      "audited_at": "2026-09-20T04:07:53.804796",
+      "totals": {
+        "total_revenue_huf": 274500.0,
+        "total_cost_huf": 216564.0,
+        "total_profit_huf": 57936.0,
+        "overall_margin_percent": 21.11
+      },
+      "circuit_breaker": {
+        "circuit_breaker_status": "CLEAR_PROCEED",
+        "status_label": "Minden tétel szabályos – Jóváhagyva",
+        "dispatch_blocked": false,
+        "total_anomalies_count": 0,
+        "total_calculated_loss_huf": 0,
+        "action_required": "Automatikus raktári kiadás és számlázás engedélyezve.",
+        "anomalies_summary": []
+      },
+      "manager_override": null,
+      "audited_items": [
+        {
+          "sku": "PUMP-GRUNDFOS-25",
+          "product_name": "Grundfos Alpha 25-60 Keringető Szivattyú",
+          "quantity": 3,
+          "unit_cost_huf": 72188.0,
+          "offered_price_huf": 91500.0,
+          "list_price_huf": 95360.0,
+          "unit_profit_huf": 19312.0,
+          "total_profit_huf": 57936.0,
+          "margin_percent": 21.11,
+          "cumulative_discount_percent": 4.0,
+          "discounts_applied": [
+            "Platinum partner -4%"
+          ],
+          "has_anomaly": false,
+          "anomalies": []
+        }
+      ]
+    }
+  ]
+}

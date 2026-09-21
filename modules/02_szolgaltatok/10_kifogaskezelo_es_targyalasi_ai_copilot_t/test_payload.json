@@ -1,0 +1,21 @@
+{
+  "module_id": "10_kifogaskezelo_es_targyalasi_ai_copilot_t",
+  "interface_source": "mobile_chat_bot",
+  "sales_rep": {
+    "id": "SALES-001",
+    "name": "Kovács László",
+    "phone": "+36 30 111 2233"
+  },
+  "customer": {
+    "name": "Molnár Zoltán",
+    "company": "Molnár Építőipari Kft.",
+    "phone": "+36 30 444 7788"
+  },
+  "quoted_deal": {
+    "quote_id": "AJ-20260920-5512",
+    "service": "2 db Daikin split klíma irodai telepítése",
+    "total_gross_huf": 720000
+  },
+  "customer_objection_input": "A Molnár úr azt mondta telefonon, hogy túl drágák vagyunk, mert a szomszéd Józsi meg a másik brigád 180 ezerrel olcsóbban megcsinálja okosba, és nem érti miért kerül ez nálunk 720 ezerbe.",
+  "objection_category_hint": "price_too_high"
+}

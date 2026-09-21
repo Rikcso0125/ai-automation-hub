@@ -1,0 +1,8 @@
+{
+  "id": "07_helyszini_felmeresbol_automatikus_anyags",
+  "title": "Helyszíni Felmérésből Automatikus Anyagszükséglet- és Normaidő-Számítás",
+  "category": "muszaki",
+  "icon": "🏗️",
+  "version": "1.0.0",
+  "description": "Helyszíni felmérési méretekből automatikus anyagszükséglet-, vágási ráhagyás- és ÉN normaidő-számítás, nehezítő szorzókkal, TERC-kompatibilis költségvetéssel, tüzép beszerzési kosárral és márkázott árajánlattal."
+}

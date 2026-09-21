@@ -1,0 +1,8 @@
+{
+  "id": "conversational_naptarkezeles_idopontfogl",
+  "title": "Conversational Naptárkezelés & Időpontfoglaló Chatbot",
+  "category": "szolgaltatok",
+  "icon": "📅",
+  "version": "1.0.0",
+  "description": "Természetes magyar nyelvű csevegés weboldali widgeten, WhatsAppon és Messengeren. Élő Google/Outlook kétirányú naptárszinkron, személyre szabható utazási pufferidők és szakember-kiosztás, valamint intelligens időpont-átszervezés megerősítési lépéssel."
+}

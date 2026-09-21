@@ -1,0 +1,41 @@
+{
+  "current_bank_balance": 3450000,
+  "current_date": "2026-09-20",
+  "open_receivables": [
+    {
+      "invoice_number": "SZLA-2026-0901",
+      "customer_name": "AgroTech Zrt.",
+      "gross_amount": 1400000,
+      "due_date": "2026-09-24",
+      "historical_delay_days": 8
+    },
+    {
+      "invoice_number": "SZLA-2026-0902",
+      "customer_name": "Alpha Marketing Kft.",
+      "gross_amount": 750000,
+      "due_date": "2026-09-28",
+      "historical_delay_days": 3
+    },
+    {
+      "invoice_number": "SZLA-2026-0903",
+      "customer_name": "BauMaster Építő Kft.",
+      "gross_amount": 920000,
+      "due_date": "2026-10-05",
+      "historical_delay_days": 12
+    }
+  ],
+  "open_payables": [
+    {
+      "invoice_number": "BE-2026-0419",
+      "supplier_name": "Alkatrész Nagyker Kft.",
+      "gross_amount": 1350000,
+      "due_date": "2026-09-25"
+    },
+    {
+      "invoice_number": "BE-2026-0420",
+      "supplier_name": "Irodaház Bérlet Zrt.",
+      "gross_amount": 620000,
+      "due_date": "2026-10-01"
+    }
+  ]
+}

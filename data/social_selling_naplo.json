@@ -1,0 +1,473 @@
+[
+  {
+    "timestamp": "2026-09-20T03:42:47.699053",
+    "event_id": "EVT-IG-2026-001",
+    "platform": "instagram",
+    "post_id": "POST-IG-1102",
+    "comment_id": "CMT-101",
+    "username": "bence_diy",
+    "comment_text": "Mennyibe kerul szallitassal egyutt, es van meg kupon hozza? Kerem a linket!",
+    "intent_analysis": {
+      "intent": "COUPON_REQUEST",
+      "confidence_score": 0.98,
+      "matched_keywords": [
+        "link",
+        "mennyibe",
+        "kupon"
+      ],
+      "should_trigger_funnel": true,
+      "reasoning": "A felhasználó kifejezetten kedvezménykódot / kupont kért."
+    },
+    "public_reply": {
+      "reply_text": "Szia @bence_diy! Elküldtük a közvetlen ajánlatot üzenetben! Te dolgoztál már hasonló prémium szerszámmal? 💬",
+      "action": "POST_PUBLIC_REPLY",
+      "delay_seconds": 3,
+      "anti_spam_fingerprint": "ROT-5e1d0f",
+      "like_user_comment": true
+    },
+    "dm_funnel": {
+      "funnel_type": "hybrid_omnichannel_funnel",
+      "dm_platform": "instagram_dm",
+      "message_text": "Szia Bence! 👋\n\nKöszönjük a hozzászólásodat a(z) **Bosch GBH 2-28 Furokalapacs** posztunk alatt!\n\n🎁 **Exkluzív Villámkedvezmény Csak Neked:**\nEredeti ár: 68,900 Ft\n🔥 **Kedvezményes ár ma: 62,010 Ft** (-10%)\n\nKuponkódod: `INSTA-10-90585B`\n⏳ *Figyelem: A kupon kizárólag a következő 2 órában (ma 05:42-ig) érvényes!*",
+      "flash_coupon": {
+        "code": "INSTA-10-90585B",
+        "discount_percent": 10,
+        "regular_price_huf": 68900,
+        "discounted_price_huf": 62010,
+        "savings_huf": 6890,
+        "valid_until_hours": 2,
+        "expires_at": "05:42"
+      },
+      "product_card": {
+        "title": "Bosch GBH 2-28 Furokalapacs",
+        "sku": "BOSCH-GBH-2-28",
+        "image_url": "https://storage.webshop.hu/products/bosch_gbh228_promo.jpg",
+        "stock_status": "RAKTÁRON (4 db maradt ezen az áron)",
+        "direct_checkout_link": "https://webshop.hu/checkout?sku=BOSCH-GBH-2-28&coupon=INSTA-10-90585B&utm_source=instagram&utm_medium=social_selling_comment&utm_campaign=flash_coupon"
+      },
+      "interactive_buttons": [
+        {
+          "type": "web_url",
+          "url": "https://webshop.hu/checkout?sku=BOSCH-GBH-2-28&coupon=INSTA-10-90585B&utm_source=instagram&utm_medium=social_selling_comment&utm_campaign=flash_coupon",
+          "title": "🛒 Kosárba rakom (-10%)"
+        },
+        {
+          "type": "postback",
+          "payload": "CHECK_STOCK_BOSCH-GBH-2-28",
+          "title": "⚡ Készlet & Garancia info"
+        },
+        {
+          "type": "postback",
+          "payload": "SPEAK_WITH_EXPERT",
+          "title": "💬 Kérdésem van szakértőhöz"
+        }
+      ],
+      "abandoned_dm_followup_scheduled_min": 90
+    },
+    "status": "DELIVERED_SUCCESSFULLY"
+  },
+  {
+    "timestamp": "2026-09-20T03:42:53.520551",
+    "event_id": "EVT-IG-2026-001",
+    "platform": "instagram",
+    "post_id": "POST-IG-1102",
+    "comment_id": "CMT-101",
+    "username": "bence_diy",
+    "comment_text": "Mennyibe kerul szallitassal egyutt, es van meg kupon hozza? Kerem a linket!",
+    "intent_analysis": {
+      "intent": "COUPON_REQUEST",
+      "confidence_score": 0.98,
+      "matched_keywords": [
+        "link",
+        "mennyibe",
+        "kupon"
+      ],
+      "should_trigger_funnel": true,
+      "reasoning": "A felhasználó kifejezetten kedvezménykódot / kupont kért."
+    },
+    "public_reply": {
+      "reply_text": "Kedves @bence_diy! Privát üzenetben válaszoltunk minden kérdésedre a kuponnal együtt! Jó böngészést kívánunk! 🎯",
+      "action": "POST_PUBLIC_REPLY",
+      "delay_seconds": 3,
+      "anti_spam_fingerprint": "ROT-0a326c",
+      "like_user_comment": true
+    },
+    "dm_funnel": {
+      "funnel_type": "hybrid_omnichannel_funnel",
+      "dm_platform": "instagram_dm",
+      "message_text": "Szia Bence! 👋\n\nKöszönjük a hozzászólásodat a(z) **Bosch GBH 2-28 Furokalapacs** posztunk alatt!\n\n🎁 **Exkluzív Villámkedvezmény Csak Neked:**\nEredeti ár: 68,900 Ft\n🔥 **Kedvezményes ár ma: 62,010 Ft** (-10%)\n\nKuponkódod: `INSTA-10-EF161A`\n⏳ *Figyelem: A kupon kizárólag a következő 2 órában (ma 05:42-ig) érvényes!*",
+      "flash_coupon": {
+        "code": "INSTA-10-EF161A",
+        "discount_percent": 10,
+        "regular_price_huf": 68900,
+        "discounted_price_huf": 62010,
+        "savings_huf": 6890,
+        "valid_until_hours": 2,
+        "expires_at": "05:42"
+      },
+      "product_card": {
+        "title": "Bosch GBH 2-28 Furokalapacs",
+        "sku": "BOSCH-GBH-2-28",
+        "image_url": "https://storage.webshop.hu/products/bosch_gbh228_promo.jpg",
+        "stock_status": "RAKTÁRON (4 db maradt ezen az áron)",
+        "direct_checkout_link": "https://webshop.hu/checkout?sku=BOSCH-GBH-2-28&coupon=INSTA-10-EF161A&utm_source=instagram&utm_medium=social_selling_comment&utm_campaign=flash_coupon"
+      },
+      "interactive_buttons": [
+        {
+          "type": "web_url",
+          "url": "https://webshop.hu/checkout?sku=BOSCH-GBH-2-28&coupon=INSTA-10-EF161A&utm_source=instagram&utm_medium=social_selling_comment&utm_campaign=flash_coupon",
+          "title": "🛒 Kosárba rakom (-10%)"
+        },
+        {
+          "type": "postback",
+          "payload": "CHECK_STOCK_BOSCH-GBH-2-28",
+          "title": "⚡ Készlet & Garancia info"
+        },
+        {
+          "type": "postback",
+          "payload": "SPEAK_WITH_EXPERT",
+          "title": "💬 Kérdésem van szakértőhöz"
+        }
+      ],
+      "abandoned_dm_followup_scheduled_min": 90
+    },
+    "status": "DELIVERED_SUCCESSFULLY"
+  },
+  {
+    "timestamp": "2026-09-20T03:42:53.523570",
+    "event_id": "EVT-FB-2026-002",
+    "platform": "facebook",
+    "post_id": "POST-FB-449",
+    "comment_id": "CMT-102",
+    "username": "zoltan_epitesz",
+    "comment_text": "KUPON",
+    "intent_analysis": {
+      "intent": "COUPON_REQUEST",
+      "confidence_score": 0.98,
+      "matched_keywords": [
+        "kupon"
+      ],
+      "should_trigger_funnel": true,
+      "reasoning": "A felhasználó kifejezetten kedvezménykódot / kupont kért."
+    },
+    "public_reply": {
+      "reply_text": "Kedves @zoltan_epitesz! Privát üzenetben válaszoltunk minden kérdésedre a kuponnal együtt! Jó böngészést kívánunk! 🎯",
+      "action": "POST_PUBLIC_REPLY",
+      "delay_seconds": 3,
+      "anti_spam_fingerprint": "ROT-a9ebb2",
+      "like_user_comment": true
+    },
+    "dm_funnel": {
+      "funnel_type": "hybrid_omnichannel_funnel",
+      "dm_platform": "facebook_messenger",
+      "message_text": "Szia Zoltan! 👋\n\nKöszönjük a hozzászólásodat a(z) **Makita DGA504 Sarokcsiszolo** posztunk alatt!\n\n🎁 **Exkluzív Villámkedvezmény Csak Neked:**\nEredeti ár: 54,900 Ft\n🔥 **Kedvezményes ár ma: 46,665 Ft** (-15%)\n\nKuponkódod: `INSTA-15-A38185`\n⏳ *Figyelem: A kupon kizárólag a következő 2 órában (ma 05:42-ig) érvényes!*",
+      "flash_coupon": {
+        "code": "INSTA-15-A38185",
+        "discount_percent": 15,
+        "regular_price_huf": 54900,
+        "discounted_price_huf": 46665,
+        "savings_huf": 8235,
+        "valid_until_hours": 2,
+        "expires_at": "05:42"
+      },
+      "product_card": {
+        "title": "Makita DGA504 Sarokcsiszolo",
+        "sku": "MAK-DGA-504",
+        "image_url": "https://storage.webshop.hu/products/bosch_gbh228_promo.jpg",
+        "stock_status": "RAKTÁRON (4 db maradt ezen az áron)",
+        "direct_checkout_link": "https://webshop.hu/checkout?sku=MAK-DGA-504&coupon=INSTA-15-A38185&utm_source=facebook&utm_medium=social_selling_comment&utm_campaign=flash_coupon"
+      },
+      "interactive_buttons": [
+        {
+          "type": "web_url",
+          "url": "https://webshop.hu/checkout?sku=MAK-DGA-504&coupon=INSTA-15-A38185&utm_source=facebook&utm_medium=social_selling_comment&utm_campaign=flash_coupon",
+          "title": "🛒 Kosárba rakom (-15%)"
+        },
+        {
+          "type": "postback",
+          "payload": "CHECK_STOCK_MAK-DGA-504",
+          "title": "⚡ Készlet & Garancia info"
+        },
+        {
+          "type": "postback",
+          "payload": "SPEAK_WITH_EXPERT",
+          "title": "💬 Kérdésem van szakértőhöz"
+        }
+      ],
+      "abandoned_dm_followup_scheduled_min": 90
+    },
+    "status": "DELIVERED_SUCCESSFULLY"
+  },
+  {
+    "timestamp": "2026-09-20T03:42:53.524551",
+    "event_id": "EVT-IG-2026-003",
+    "platform": "instagram",
+    "post_id": "POST-IG-991",
+    "comment_id": "CMT-103",
+    "username": "profi_mester",
+    "comment_text": "Szuper gep, nagyon jo a minoseg es tartos!",
+    "intent_analysis": {
+      "intent": "POSITIVE_ENGAGEMENT",
+      "confidence_score": 0.75,
+      "matched_keywords": [],
+      "should_trigger_funnel": true,
+      "reasoning": "Pozitív rajongói aktivitás vásárlási kísérlettel."
+    },
+    "public_reply": {
+      "reply_text": "Kedves @profi_mester! A legfrissebb raktárkészlet és az azonnali akciós kupon linkje már az üzeneteidben vár! 🛠️",
+      "action": "POST_PUBLIC_REPLY",
+      "delay_seconds": 3,
+      "anti_spam_fingerprint": "ROT-12756c",
+      "like_user_comment": true
+    },
+    "dm_funnel": {
+      "funnel_type": "hybrid_omnichannel_funnel",
+      "dm_platform": "instagram_dm",
+      "message_text": "Szia profi_mester! 👋\n\nKöszönjük a hozzászólásodat a(z) **DeWalt Utofuron** posztunk alatt!\n\n🎁 **Exkluzív Villámkedvezmény Csak Neked:**\nEredeti ár: 79,900 Ft\n🔥 **Kedvezményes ár ma: 71,910 Ft** (-10%)\n\nKuponkódod: `INSTA-10-29F021`\n⏳ *Figyelem: A kupon kizárólag a következő 2 órában (ma 05:42-ig) érvényes!*",
+      "flash_coupon": {
+        "code": "INSTA-10-29F021",
+        "discount_percent": 10,
+        "regular_price_huf": 79900,
+        "discounted_price_huf": 71910,
+        "savings_huf": 7990,
+        "valid_until_hours": 2,
+        "expires_at": "05:42"
+      },
+      "product_card": {
+        "title": "DeWalt Utofuron",
+        "sku": "SKU-PROMO",
+        "image_url": "https://storage.webshop.hu/products/bosch_gbh228_promo.jpg",
+        "stock_status": "RAKTÁRON (4 db maradt ezen az áron)",
+        "direct_checkout_link": "https://webshop.hu/checkout?sku=SKU-PROMO&coupon=INSTA-10-29F021&utm_source=instagram&utm_medium=social_selling_comment&utm_campaign=flash_coupon"
+      },
+      "interactive_buttons": [
+        {
+          "type": "web_url",
+          "url": "https://webshop.hu/checkout?sku=SKU-PROMO&coupon=INSTA-10-29F021&utm_source=instagram&utm_medium=social_selling_comment&utm_campaign=flash_coupon",
+          "title": "🛒 Kosárba rakom (-10%)"
+        },
+        {
+          "type": "postback",
+          "payload": "CHECK_STOCK_SKU-PROMO",
+          "title": "⚡ Készlet & Garancia info"
+        },
+        {
+          "type": "postback",
+          "payload": "SPEAK_WITH_EXPERT",
+          "title": "💬 Kérdésem van szakértőhöz"
+        }
+      ],
+      "abandoned_dm_followup_scheduled_min": 90
+    },
+    "status": "DELIVERED_SUCCESSFULLY"
+  },
+  {
+    "timestamp": "2026-09-20T03:43:07.373784",
+    "event_id": "EVT-META-LIVE-001",
+    "platform": "instagram",
+    "post_id": "POST-IG-LIVE-901",
+    "comment_id": "CMT-LIVE-882",
+    "username": "toth_marcell_diy",
+    "comment_text": "Szia! Érdekelne, mennyi az ára szállítással és van hozzá kuponkód? Kérem a linket!",
+    "intent_analysis": {
+      "intent": "COUPON_REQUEST",
+      "confidence_score": 0.98,
+      "matched_keywords": [
+        "link",
+        "ár",
+        "kupon",
+        "kérem",
+        "érdekel"
+      ],
+      "should_trigger_funnel": true,
+      "reasoning": "A felhasználó kifejezetten kedvezménykódot / kupont kért."
+    },
+    "public_reply": {
+      "reply_text": "Kedves @toth_marcell_diy! Már át is küldtük privát üzenetben a közvetlen linket és az exkluzív 10%-os kedvezménykupont! 🎁 Nézd meg a beérkező üzeneteidet!",
+      "action": "POST_PUBLIC_REPLY",
+      "delay_seconds": 3,
+      "anti_spam_fingerprint": "ROT-dbee61",
+      "like_user_comment": true
+    },
+    "dm_funnel": {
+      "funnel_type": "hybrid_omnichannel_funnel",
+      "dm_platform": "instagram_dm",
+      "message_text": "Szia Tóth Marcell! 👋\n\nKöszönjük a hozzászólásodat a(z) **Bosch Professional GBH 2-28 Fúrókalapács L-BOXX** posztunk alatt!\n\n🎁 **Exkluzív Villámkedvezmény Csak Neked:**\nEredeti ár: 68,900 Ft\n🔥 **Kedvezményes ár ma: 62,010 Ft** (-10%)\n\nKuponkódod: `INSTA-10-3D59AF`\n⏳ *Figyelem: A kupon kizárólag a következő 2 órában (ma 05:43-ig) érvényes!*",
+      "flash_coupon": {
+        "code": "INSTA-10-3D59AF",
+        "discount_percent": 10,
+        "regular_price_huf": 68900,
+        "discounted_price_huf": 62010,
+        "savings_huf": 6890,
+        "valid_until_hours": 2,
+        "expires_at": "05:43"
+      },
+      "product_card": {
+        "title": "Bosch Professional GBH 2-28 Fúrókalapács L-BOXX",
+        "sku": "BOSCH-GBH-2-28",
+        "image_url": "https://storage.webshop.hu/products/bosch_gbh228_promo.jpg",
+        "stock_status": "RAKTÁRON (4 db maradt ezen az áron)",
+        "direct_checkout_link": "https://webshop.hu/checkout?sku=BOSCH-GBH-2-28&coupon=INSTA-10-3D59AF&utm_source=instagram&utm_medium=social_selling_comment&utm_campaign=flash_coupon"
+      },
+      "interactive_buttons": [
+        {
+          "type": "web_url",
+          "url": "https://webshop.hu/checkout?sku=BOSCH-GBH-2-28&coupon=INSTA-10-3D59AF&utm_source=instagram&utm_medium=social_selling_comment&utm_campaign=flash_coupon",
+          "title": "🛒 Kosárba rakom (-10%)"
+        },
+        {
+          "type": "postback",
+          "payload": "CHECK_STOCK_BOSCH-GBH-2-28",
+          "title": "⚡ Készlet & Garancia info"
+        },
+        {
+          "type": "postback",
+          "payload": "SPEAK_WITH_EXPERT",
+          "title": "💬 Kérdésem van szakértőhöz"
+        }
+      ],
+      "abandoned_dm_followup_scheduled_min": 90
+    },
+    "status": "DELIVERED_SUCCESSFULLY"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:08.484322",
+    "event_id": "EVT-META-2026-9810",
+    "platform": "instagram",
+    "post_id": "POST-IG-884210",
+    "comment_id": "CMT-9921482",
+    "username": "kovacs_bence_diy",
+    "comment_text": "Mennyibe kerül szállítással együtt, és van még raktáron kupon hozzá? Kérem a linket!",
+    "intent_analysis": {
+      "intent": "COUPON_REQUEST",
+      "confidence_score": 0.98,
+      "matched_keywords": [
+        "link",
+        "ár",
+        "mennyibe",
+        "kupon",
+        "kérem",
+        "kerül"
+      ],
+      "should_trigger_funnel": true,
+      "reasoning": "A felhasználó kifejezetten kedvezménykódot / kupont kért."
+    },
+    "public_reply": {
+      "reply_text": "Szia @kovacs_bence_diy! Elküldtük a közvetlen ajánlatot üzenetben! Te dolgoztál már hasonló prémium szerszámmal? 💬",
+      "action": "POST_PUBLIC_REPLY",
+      "delay_seconds": 3,
+      "anti_spam_fingerprint": "ROT-ec0dcb",
+      "like_user_comment": true
+    },
+    "dm_funnel": {
+      "funnel_type": "hybrid_omnichannel_funnel",
+      "dm_platform": "instagram_dm",
+      "message_text": "Szia Kovács Bence! 👋\n\nKöszönjük a hozzászólásodat a(z) **Bosch Professional GBH 2-28 Fúrókalapács L-BOXX** posztunk alatt!\n\n🎁 **Exkluzív Villámkedvezmény Csak Neked:**\nEredeti ár: 68,900 Ft\n🔥 **Kedvezményes ár ma: 62,010 Ft** (-10%)\n\nKuponkódod: `INSTA-10-F970C0`\n⏳ *Figyelem: A kupon kizárólag a következő 2 órában (ma 06:07-ig) érvényes!*",
+      "flash_coupon": {
+        "code": "INSTA-10-F970C0",
+        "discount_percent": 10,
+        "regular_price_huf": 68900,
+        "discounted_price_huf": 62010,
+        "savings_huf": 6890,
+        "valid_until_hours": 2,
+        "expires_at": "06:07"
+      },
+      "product_card": {
+        "title": "Bosch Professional GBH 2-28 Fúrókalapács L-BOXX",
+        "sku": "BOSCH-GBH-2-28",
+        "image_url": "https://storage.webshop.hu/products/bosch_gbh228_promo.jpg",
+        "stock_status": "RAKTÁRON (4 db maradt ezen az áron)",
+        "direct_checkout_link": "https://webshop.hu/checkout?sku=BOSCH-GBH-2-28&coupon=INSTA-10-F970C0&utm_source=instagram&utm_medium=social_selling_comment&utm_campaign=flash_coupon"
+      },
+      "interactive_buttons": [
+        {
+          "type": "web_url",
+          "url": "https://webshop.hu/checkout?sku=BOSCH-GBH-2-28&coupon=INSTA-10-F970C0&utm_source=instagram&utm_medium=social_selling_comment&utm_campaign=flash_coupon",
+          "title": "🛒 Kosárba rakom (-10%)"
+        },
+        {
+          "type": "postback",
+          "payload": "CHECK_STOCK_BOSCH-GBH-2-28",
+          "title": "⚡ Készlet & Garancia info"
+        },
+        {
+          "type": "postback",
+          "payload": "SPEAK_WITH_EXPERT",
+          "title": "💬 Kérdésem van szakértőhöz"
+        }
+      ],
+      "abandoned_dm_followup_scheduled_min": 90
+    },
+    "status": "DELIVERED_SUCCESSFULLY"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:57.368534",
+    "event_id": "EVT-META-2026-9810",
+    "platform": "instagram",
+    "post_id": "POST-IG-884210",
+    "comment_id": "CMT-9921482",
+    "username": "kovacs_bence_diy",
+    "comment_text": "Mennyibe kerül szállítással együtt, és van még raktáron kupon hozzá? Kérem a linket!",
+    "intent_analysis": {
+      "intent": "COUPON_REQUEST",
+      "confidence_score": 0.98,
+      "matched_keywords": [
+        "link",
+        "ár",
+        "mennyibe",
+        "kupon",
+        "kérem",
+        "kerül"
+      ],
+      "should_trigger_funnel": true,
+      "reasoning": "A felhasználó kifejezetten kedvezménykódot / kupont kért."
+    },
+    "public_reply": {
+      "reply_text": "Helló @kovacs_bence_diy! A részleteket és a kedvezményes vásárlási kupont elküldtük üzenetben! Neked melyik funkció a legfontosabb? 😊",
+      "action": "POST_PUBLIC_REPLY",
+      "delay_seconds": 3,
+      "anti_spam_fingerprint": "ROT-e5717b",
+      "like_user_comment": true
+    },
+    "dm_funnel": {
+      "funnel_type": "hybrid_omnichannel_funnel",
+      "dm_platform": "instagram_dm",
+      "message_text": "Szia Kovács Bence! 👋\n\nKöszönjük a hozzászólásodat a(z) **Bosch Professional GBH 2-28 Fúrókalapács L-BOXX** posztunk alatt!\n\n🎁 **Exkluzív Villámkedvezmény Csak Neked:**\nEredeti ár: 68,900 Ft\n🔥 **Kedvezményes ár ma: 62,010 Ft** (-10%)\n\nKuponkódod: `INSTA-10-422F6A`\n⏳ *Figyelem: A kupon kizárólag a következő 2 órában (ma 06:07-ig) érvényes!*",
+      "flash_coupon": {
+        "code": "INSTA-10-422F6A",
+        "discount_percent": 10,
+        "regular_price_huf": 68900,
+        "discounted_price_huf": 62010,
+        "savings_huf": 6890,
+        "valid_until_hours": 2,
+        "expires_at": "06:07"
+      },
+      "product_card": {
+        "title": "Bosch Professional GBH 2-28 Fúrókalapács L-BOXX",
+        "sku": "BOSCH-GBH-2-28",
+        "image_url": "https://storage.webshop.hu/products/bosch_gbh228_promo.jpg",
+        "stock_status": "RAKTÁRON (4 db maradt ezen az áron)",
+        "direct_checkout_link": "https://webshop.hu/checkout?sku=BOSCH-GBH-2-28&coupon=INSTA-10-422F6A&utm_source=instagram&utm_medium=social_selling_comment&utm_campaign=flash_coupon"
+      },
+      "interactive_buttons": [
+        {
+          "type": "web_url",
+          "url": "https://webshop.hu/checkout?sku=BOSCH-GBH-2-28&coupon=INSTA-10-422F6A&utm_source=instagram&utm_medium=social_selling_comment&utm_campaign=flash_coupon",
+          "title": "🛒 Kosárba rakom (-10%)"
+        },
+        {
+          "type": "postback",
+          "payload": "CHECK_STOCK_BOSCH-GBH-2-28",
+          "title": "⚡ Készlet & Garancia info"
+        },
+        {
+          "type": "postback",
+          "payload": "SPEAK_WITH_EXPERT",
+          "title": "💬 Kérdésem van szakértőhöz"
+        }
+      ],
+      "abandoned_dm_followup_scheduled_min": 90
+    },
+    "status": "DELIVERED_SUCCESSFULLY"
+  }
+]

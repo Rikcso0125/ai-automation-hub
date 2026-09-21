@@ -1,0 +1,8 @@
+{
+  "id": "0_24_virtualis_ai_telefonos_recepcios_vo",
+  "title": "0-24 Virtuális AI Telefonos Recepciós (Voice AI)",
+  "category": "szolgaltatok",
+  "icon": "📞",
+  "version": "1.0.0",
+  "description": "Éjjel-nappal élő magyar emberi hangon fogadja a bejövő hívásokat. Vapi.ai, Retell AI, Bland.ai, Twilio/Telnyx SIP és beépített Hub szimulátor támogatás. Árinformációk és tudásbázis alapú tanácsadás, élő naptárfoglalás, hívás utáni WhatsApp/SMS megerősítés (WhatsApp elsődleges, Telnyx SMS tartalék), valamint strukturált leirat mentése különálló fájlba."
+}

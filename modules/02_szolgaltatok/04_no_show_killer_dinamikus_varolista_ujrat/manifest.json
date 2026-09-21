@@ -1,0 +1,8 @@
+{
+  "id": "no_show_killer_dinamikus_varolista_ujrat",
+  "title": "„No-Show Killer” Dinamikus Várólista Újratöltéssel",
+  "category": "szolgaltatok",
+  "icon": "🎯",
+  "version": "1.0.0",
+  "description": "Interaktív WhatsApp/SMS megerősítés testreszabható időzítéssel és szöveggel. Lemondás esetén villámgyors várólista újratöltés (Flash Slot Claim), meg nem jelenés (No-Show) esetén CRM profil zárolás és előleg-kötelezettség, valamint valós idejű admin felületi riasztás."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "10_kereskedelmi_anomalia_detektalas_arreszu",
+  "title": "Kereskedelmi Anomália Detektálás (Árrészuhanás Figyelő & Circuit Breaker)",
+  "category": "kereskedok",
+  "icon": "🚨",
+  "version": "1.0.0",
+  "description": "Autonóm kereskedelmi védőpajzs (Circuit Breaker). Folyamatosan ellenőrzi a megrendeléseket és árajánlatokat: kiszűri a ráfizetéses eladásokat (eladási ár < beszerzési önköltség), a minimális árrés alatti tételeket (<8%), a veszélyes kedvezményhalmozást (>35%) és a gépelési hibákat. Veszteségmértékhez kötött intelligens zárolást alkalmaz 1-kattintásos vezetői feloldással."
+}

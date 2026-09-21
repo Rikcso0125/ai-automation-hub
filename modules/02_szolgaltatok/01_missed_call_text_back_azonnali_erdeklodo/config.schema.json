@@ -1,0 +1,61 @@
+{
+  "title": "Missed Call Text-Back Konfiguráció",
+  "type": "object",
+  "required": [
+    "company_name",
+    "contacts_file_path",
+    "booking_calendar_url"
+  ],
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "Vállalkozás Neve",
+      "default": "ProfiTech Szolgáltató Kft."
+    },
+    "whatsapp_first": {
+      "type": "boolean",
+      "title": "Elsődlegesen WhatsApp Üzenet (Fallback: Telnyx SMS)",
+      "default": true,
+      "description": "Ha be van kapcsolva, először WhatsApp-on próbálja megküldeni. Ha a hívó nem elérhető ott, automatikusan Telnyx SMS-re vált."
+    },
+    "contacts_file_path": {
+      "type": "string",
+      "title": "Külső Ügyfél Adatbázis Fájl Elérési Útja",
+      "default": "data/ugyfelek_kontaktok.json",
+      "description": "JSON vagy CSV fájl, amelyből a rendszer beolvassa a telefonszámokhoz tartozó neveket és cégadatokat."
+    },
+    "booking_calendar_url": {
+      "type": "string",
+      "title": "Online Időpontfoglalási Naptár Link",
+      "default": "https://idopont.profitech.hu/foglalas"
+    },
+    "inquiry_form_url": {
+      "type": "string",
+      "title": "1 Perces Igényfelmérő Űrlap Link",
+      "default": "https://igenyfelmero.profitech.hu/gyorskerdes"
+    },
+    "callback_promise_mins": {
+      "type": "integer",
+      "title": "Ígért Visszahívási Időablak (Perc)",
+      "default": 25,
+      "description": "Hány percen belüli visszahívást ígérünk a hívónak az üzenetben."
+    },
+    "known_client_template": {
+      "type": "string",
+      "title": "Ismert Ügyfél Üzenet Sablon",
+      "format": "textarea",
+      "default": "Kedves {nev}! Épp ügyfélnél vagyok, így nem tudtam felvenni a telefont, de {percek} percen belül visszahívom! Sürgős esetben vagy időpontfoglaláshoz kattintson ide: {naptar_link}"
+    },
+    "new_lead_template": {
+      "type": "string",
+      "title": "Új Érdeklődő Üzenet Sablon",
+      "format": "textarea",
+      "default": "Üdvözlöm! A(z) {ceg} képviseletében sajnos épp tárgyaláson vagyok, de {percek} percen belül visszahívom! Addig is azonnal tud időpontot foglalni naptáramban: {naptar_link} vagy kitöltheti 1 perces igényfelmérőnket: {urlap_link}"
+    },
+    "team_telegram_chat_id": {
+      "type": "string",
+      "title": "Értékesítési Csapat Telegram Csoport ID",
+      "default": "@profitech_sales_hotline"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "title": "Készpénzes és Tankolási Blokkok Fotós Elszámolása Konfiguráció",
+  "type": "object",
+  "required": [
+    "receipt_recognition_mode",
+    "project_allocation_mode",
+    "accounting_workflow"
+  ],
+  "properties": {
+    "receipt_recognition_mode": {
+      "type": "string",
+      "title": "Blokkfelismerési és OCR Motor",
+      "enum": [
+        "standard_ocr",
+        "itemized_vat_breakdown",
+        "vision_hardware_mileage_sync"
+      ],
+      "default": "vision_hardware_mileage_sync",
+      "description": "Standard végösszeg OCR, Tételes ÁFA bontás vagy Vision AI Cikkszám és Menetlevél szinkron."
+    },
+    "project_allocation_mode": {
+      "type": "string",
+      "title": "Projektszám és Költséghely Hozzárendelés",
+      "enum": [
+        "manual_prompt",
+        "geo_smart_matching",
+        "hybrid_geo_work_order_budget"
+      ],
+      "default": "hybrid_geo_work_order_budget",
+      "description": "Kézi kiválasztás, Geolokációs párosítás vagy Hibrid GPS + Munkalap és Keretösszeg-védelem."
+    },
+    "accounting_workflow": {
+      "type": "string",
+      "title": "Pénzügyi és Számviteli Integráció",
+      "enum": [
+        "weekly_csv_export",
+        "petty_cash_voucher",
+        "realtime_erp_card_match_gate"
+      ],
+      "default": "realtime_erp_card_match_gate",
+      "description": "Heti CSV, Kiadási pénztárbizonylat vagy Valós idejű ERP és Céges bankkártya párosítás jóváhagyási kapuval."
+    },
+    "manager_approval_threshold_huf": {
+      "type": "integer",
+      "title": "Vezetői Jóváhagyási Értékhatár (Ft)",
+      "default": 30000,
+      "description": "Ezen összeg felett a kiadás vezetői jóváhagyási kapuba kerül."
+    },
+    "supported_chains": {
+      "type": "array",
+      "title": "Támogatott Partnerláncok",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "MOL",
+        "OMV",
+        "Shell",
+        "Bauhaus",
+        "OBI",
+        "Praktiker",
+        "Würth"
+      ]
+    },
+    "notification_channel": {
+      "type": "string",
+      "title": "Riasztási Értesítési Csatorna",
+      "default": "telegram",
+      "enum": [
+        "telegram",
+        "sms",
+        "email",
+        "slack",
+        "webhook"
+      ]
+    }
+  }
+}

@@ -1,0 +1,307 @@
+[
+  {
+    "sku": "BOSCH-GSR-18V-55",
+    "product_name": "Bosch Professional GSR 18V-55 Akkus Fúrócsavarozó",
+    "raw_input_image": "https://cdn.profigepesz.hu/raw/bosch_gsr18v55_white.jpg",
+    "background_removal_status": "SUCCESS_SUBJECT_ISOLATED",
+    "staging_scene": "Professzionális Asztalosműhely",
+    "lighting": "Warm 3200K side light with soft fill",
+    "ai_prompt_metadata": {
+      "positive_prompt": "Commercial product photo of Bosch Professional GSR 18V-55 Akkus Fúrócsavarozó, placed in Authentic carpentry workshop, rustic oak workbench, soft warm afternoon lighting, subtle wood shavings scattered on surface, blurred background tool wall, commercial 8k product photography, ray tracing shadows, photorealistic material textures, realistic contact shadow",
+      "negative_prompt": "blurry, low quality, distorted brand name, extra buttons, bad anatomy, deformed product, amateur lighting, oversaturated"
+    },
+    "generated_renders_count": 4,
+    "marketing_renders": {
+      "1:1": {
+        "label": "Webshop Termékgaléria",
+        "aspect_ratio": "1:1",
+        "resolution": "1080x1080",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/BOSCH-GSR-18-69c54eb0_1x1.webp",
+        "target_placement": "Webáruház Terméklap"
+      },
+      "4:5": {
+        "label": "Instagram & Facebook Feed",
+        "aspect_ratio": "4:5",
+        "resolution": "1080x1350",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/BOSCH-GSR-18-69c54eb0_4x5.webp",
+        "target_placement": "Instagram Hírfolyam & Termékhirdetés"
+      },
+      "9:16": {
+        "label": "TikTok / Instagram Reels / Story",
+        "aspect_ratio": "9:16",
+        "resolution": "1080x1920",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/BOSCH-GSR-18-69c54eb0_9x16.webp",
+        "target_placement": "Mobil Teljes Képernyős Videó Háttér"
+      },
+      "16:9": {
+        "label": "Weboldal Főoldali Banner & YouTube",
+        "aspect_ratio": "16:9",
+        "resolution": "1920x1080",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/BOSCH-GSR-18-69c54eb0_16x9.webp",
+        "target_placement": "Felső Hero Banner & Facebook Hirdetés"
+      }
+    },
+    "branding_and_sync": {
+      "badge_enabled": true,
+      "badge_type": "3_EV_HIVATALOS_GARANCIA_PECSÉT",
+      "watermark_position": "Jobb alsó sarok (opacity 90%)",
+      "badge_text": "3 ÉV GARANCIA | PROFIGÉPÉSZ",
+      "message": "Bizalmi pecsét sikeresen ráillesztve a generált képekre."
+    },
+    "generated_at": "2026-09-20T03:35:48.711755"
+  },
+  {
+    "sku": "MAKITA-DHP-484",
+    "product_name": "Makita DHP484Z Akkus Ütvefúró",
+    "raw_input_image": null,
+    "background_removal_status": "SUCCESS_SUBJECT_ISOLATED",
+    "staging_scene": "Professzionális Asztalosműhely",
+    "lighting": "Warm 3200K side light with soft fill",
+    "ai_prompt_metadata": {
+      "positive_prompt": "Commercial product photo of Makita DHP484Z Akkus Ütvefúró, placed in Authentic carpentry workshop, rustic oak workbench, soft warm afternoon lighting, subtle wood shavings scattered on surface, blurred background tool wall, commercial 8k product photography, ray tracing shadows. Extra styling: Naplemente meleg fények, fűrészporos tölgyfa deszkák a háttérben, 8k makró részletesség., highly detailed, sharp focus, 8k resolution, Hasselblad shot",
+      "negative_prompt": "blurry, low quality, distorted brand name, extra buttons, bad anatomy, deformed product, amateur lighting, oversaturated"
+    },
+    "generated_renders_count": 4,
+    "marketing_renders": {
+      "1:1": {
+        "label": "Webshop Termékgaléria",
+        "aspect_ratio": "1:1",
+        "resolution": "1080x1080",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/MAKITA-DHP-4-b889194e_1x1.webp",
+        "target_placement": "Webáruház Terméklap"
+      },
+      "4:5": {
+        "label": "Instagram & Facebook Feed",
+        "aspect_ratio": "4:5",
+        "resolution": "1080x1350",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/MAKITA-DHP-4-b889194e_4x5.webp",
+        "target_placement": "Instagram Hírfolyam & Termékhirdetés"
+      },
+      "9:16": {
+        "label": "TikTok / Instagram Reels / Story",
+        "aspect_ratio": "9:16",
+        "resolution": "1080x1920",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/MAKITA-DHP-4-b889194e_9x16.webp",
+        "target_placement": "Mobil Teljes Képernyős Videó Háttér"
+      },
+      "16:9": {
+        "label": "Weboldal Főoldali Banner & YouTube",
+        "aspect_ratio": "16:9",
+        "resolution": "1920x1080",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/MAKITA-DHP-4-b889194e_16x9.webp",
+        "target_placement": "Felső Hero Banner & Facebook Hirdetés"
+      }
+    },
+    "branding_and_sync": {
+      "badge_enabled": true,
+      "badge_type": "3_EV_HIVATALOS_GARANCIA_PECSÉT",
+      "watermark_position": "Jobb alsó sarok (opacity 90%)",
+      "badge_text": "3 ÉV GARANCIA | PROFIGÉPÉSZ",
+      "message": "Bizalmi pecsét sikeresen ráillesztve a generált képekre."
+    },
+    "generated_at": "2026-09-20T03:35:48.715770"
+  },
+  {
+    "sku": "DEWALT-DCD-796",
+    "product_name": "DeWalt DCD796P2 Fúrócsavarozó",
+    "raw_input_image": null,
+    "background_removal_status": "SUCCESS_SUBJECT_ISOLATED",
+    "staging_scene": "Professzionális Asztalosműhely",
+    "lighting": "Warm 3200K side light with soft fill",
+    "ai_prompt_metadata": {
+      "positive_prompt": "Commercial product photo of DeWalt DCD796P2 Fúrócsavarozó, placed in Authentic carpentry workshop, rustic oak workbench, soft warm afternoon lighting, subtle wood shavings scattered on surface, blurred background tool wall, commercial 8k product photography, ray tracing shadows, photorealistic material textures, realistic contact shadow",
+      "negative_prompt": "blurry, low quality, distorted brand name, extra buttons, bad anatomy, deformed product, amateur lighting, oversaturated"
+    },
+    "generated_renders_count": 1,
+    "marketing_renders": {
+      "1:1": {
+        "label": "Webshop Termékgaléria Négyzetes",
+        "aspect_ratio": "1:1",
+        "resolution": "1080x1080",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/DEWALT-DCD-7-6de1f3bc_1x1.webp",
+        "target_placement": "Shopify / WooCommerce 2. Kiemelt Kép"
+      }
+    },
+    "branding_and_sync": {
+      "badge_enabled": true,
+      "preview_gallery_url": "https://admin.profigepesz.hu/studio/compare?sku=DEWALT-DCD-796&token=9b7b922454",
+      "high_res_download_zip": "https://cdn.profigepesz.hu/studio/export/DEWALT-DCD-796_all_ratios.zip",
+      "message": "Előtte-utána összehasonlító galéria és ZIP letöltési csomag elkészült."
+    },
+    "generated_at": "2026-09-20T03:35:48.716759"
+  },
+  {
+    "sku": "BOSCH-LIVE-STUDIO-1",
+    "product_name": "Bosch GSR 18V-55 Akkus Fúrócsavarozó",
+    "raw_input_image": "https://cdn.profigepesz.hu/raw/bosch_white.jpg",
+    "background_removal_status": "SUCCESS_SUBJECT_ISOLATED",
+    "staging_scene": "Professzionális Asztalosműhely",
+    "lighting": "Warm 3200K side light with soft fill",
+    "ai_prompt_metadata": {
+      "positive_prompt": "Commercial product photo of Bosch GSR 18V-55 Akkus Fúrócsavarozó, placed in Authentic carpentry workshop, rustic oak workbench, soft warm afternoon lighting, subtle wood shavings scattered on surface, blurred background tool wall, commercial 8k product photography, ray tracing shadows, photorealistic material textures, realistic contact shadow",
+      "negative_prompt": "blurry, low quality, distorted brand name, extra buttons, bad anatomy, deformed product, amateur lighting, oversaturated"
+    },
+    "generated_renders_count": 4,
+    "marketing_renders": {
+      "1:1": {
+        "label": "Webshop Termékgaléria",
+        "aspect_ratio": "1:1",
+        "resolution": "1080x1080",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/BOSCH-LIVE-S-5ce1fde0_1x1.webp",
+        "target_placement": "Webáruház Terméklap"
+      },
+      "4:5": {
+        "label": "Instagram & Facebook Feed",
+        "aspect_ratio": "4:5",
+        "resolution": "1080x1350",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/BOSCH-LIVE-S-5ce1fde0_4x5.webp",
+        "target_placement": "Instagram Hírfolyam & Termékhirdetés"
+      },
+      "9:16": {
+        "label": "TikTok / Instagram Reels / Story",
+        "aspect_ratio": "9:16",
+        "resolution": "1080x1920",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/BOSCH-LIVE-S-5ce1fde0_9x16.webp",
+        "target_placement": "Mobil Teljes Képernyős Videó Háttér"
+      },
+      "16:9": {
+        "label": "Weboldal Főoldali Banner & YouTube",
+        "aspect_ratio": "16:9",
+        "resolution": "1920x1080",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/BOSCH-LIVE-S-5ce1fde0_16x9.webp",
+        "target_placement": "Felső Hero Banner & Facebook Hirdetés"
+      }
+    },
+    "branding_and_sync": {
+      "badge_enabled": true,
+      "badge_type": "3_EV_HIVATALOS_GARANCIA_PECSÉT",
+      "watermark_position": "Jobb alsó sarok (opacity 90%)",
+      "badge_text": "3 ÉV GARANCIA | PROFIGÉPÉSZ",
+      "message": "Bizalmi pecsét sikeresen ráillesztve a generált képekre."
+    },
+    "generated_at": "2026-09-20T03:35:58.019099"
+  },
+  {
+    "sku": "BOSCH-GSR-18V-55",
+    "product_name": "Bosch Professional GSR 18V-55 Akkus Fúrócsavarozó",
+    "raw_input_image": "https://cdn.profigepesz.hu/raw/bosch_gsr_18v55_white_bg.jpg",
+    "background_removal_status": "SUCCESS_SUBJECT_ISOLATED",
+    "staging_scene": "Professzionális Asztalosműhely",
+    "lighting": "Warm 3200K side light with soft fill",
+    "ai_prompt_metadata": {
+      "positive_prompt": "Commercial product photo of Bosch Professional GSR 18V-55 Akkus Fúrócsavarozó, placed in Authentic carpentry workshop, rustic oak workbench, soft warm afternoon lighting, subtle wood shavings scattered on surface, blurred background tool wall, commercial 8k product photography, ray tracing shadows. Extra styling: Helyezd egy rusztikus tölgyfa munkapadra, háttérben elmosódott profi asztalosműhely szerszámfalával, lágy meleg délutáni fénnyel és finom faforgácsokkal a gép mellett., highly detailed, sharp focus, 8k resolution, Hasselblad shot",
+      "negative_prompt": "blurry, low quality, distorted brand name, extra buttons, bad anatomy, deformed product, amateur lighting, oversaturated"
+    },
+    "generated_renders_count": 4,
+    "marketing_renders": {
+      "1:1": {
+        "label": "Webshop Termékgaléria",
+        "aspect_ratio": "1:1",
+        "resolution": "1080x1080",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/BOSCH-GSR-18-69c54eb0_1x1.webp",
+        "target_placement": "Webáruház Terméklap"
+      },
+      "4:5": {
+        "label": "Instagram & Facebook Feed",
+        "aspect_ratio": "4:5",
+        "resolution": "1080x1350",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/BOSCH-GSR-18-69c54eb0_4x5.webp",
+        "target_placement": "Instagram Hírfolyam & Termékhirdetés"
+      },
+      "9:16": {
+        "label": "TikTok / Instagram Reels / Story",
+        "aspect_ratio": "9:16",
+        "resolution": "1080x1920",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/BOSCH-GSR-18-69c54eb0_9x16.webp",
+        "target_placement": "Mobil Teljes Képernyős Videó Háttér"
+      },
+      "16:9": {
+        "label": "Weboldal Főoldali Banner & YouTube",
+        "aspect_ratio": "16:9",
+        "resolution": "1920x1080",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/BOSCH-GSR-18-69c54eb0_16x9.webp",
+        "target_placement": "Felső Hero Banner & Facebook Hirdetés"
+      }
+    },
+    "branding_and_sync": {
+      "badge_enabled": true,
+      "badge_type": "3_EV_HIVATALOS_GARANCIA_PECSÉT",
+      "watermark_position": "Jobb alsó sarok (opacity 90%)",
+      "badge_text": "3 ÉV GARANCIA | PROFIGÉPÉSZ",
+      "message": "Bizalmi pecsét sikeresen ráillesztve a generált képekre."
+    },
+    "generated_at": "2026-09-20T04:07:07.845631"
+  },
+  {
+    "sku": "BOSCH-GSR-18V-55",
+    "product_name": "Bosch Professional GSR 18V-55 Akkus Fúrócsavarozó",
+    "raw_input_image": "https://cdn.profigepesz.hu/raw/bosch_gsr_18v55_white_bg.jpg",
+    "background_removal_status": "SUCCESS_SUBJECT_ISOLATED",
+    "staging_scene": "Professzionális Asztalosműhely",
+    "lighting": "Warm 3200K side light with soft fill",
+    "ai_prompt_metadata": {
+      "positive_prompt": "Commercial product photo of Bosch Professional GSR 18V-55 Akkus Fúrócsavarozó, placed in Authentic carpentry workshop, rustic oak workbench, soft warm afternoon lighting, subtle wood shavings scattered on surface, blurred background tool wall, commercial 8k product photography, ray tracing shadows. Extra styling: Helyezd egy rusztikus tölgyfa munkapadra, háttérben elmosódott profi asztalosműhely szerszámfalával, lágy meleg délutáni fénnyel és finom faforgácsokkal a gép mellett., highly detailed, sharp focus, 8k resolution, Hasselblad shot",
+      "negative_prompt": "blurry, low quality, distorted brand name, extra buttons, bad anatomy, deformed product, amateur lighting, oversaturated"
+    },
+    "generated_renders_count": 4,
+    "marketing_renders": {
+      "1:1": {
+        "label": "Webshop Termékgaléria",
+        "aspect_ratio": "1:1",
+        "resolution": "1080x1080",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/BOSCH-GSR-18-69c54eb0_1x1.webp",
+        "target_placement": "Webáruház Terméklap"
+      },
+      "4:5": {
+        "label": "Instagram & Facebook Feed",
+        "aspect_ratio": "4:5",
+        "resolution": "1080x1350",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/BOSCH-GSR-18-69c54eb0_4x5.webp",
+        "target_placement": "Instagram Hírfolyam & Termékhirdetés"
+      },
+      "9:16": {
+        "label": "TikTok / Instagram Reels / Story",
+        "aspect_ratio": "9:16",
+        "resolution": "1080x1920",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/BOSCH-GSR-18-69c54eb0_9x16.webp",
+        "target_placement": "Mobil Teljes Képernyős Videó Háttér"
+      },
+      "16:9": {
+        "label": "Weboldal Főoldali Banner & YouTube",
+        "aspect_ratio": "16:9",
+        "resolution": "1920x1080",
+        "format": "image/webp",
+        "image_url": "https://cdn.profigepesz.hu/ai-studio/BOSCH-GSR-18-69c54eb0_16x9.webp",
+        "target_placement": "Felső Hero Banner & Facebook Hirdetés"
+      }
+    },
+    "branding_and_sync": {
+      "badge_enabled": true,
+      "badge_type": "3_EV_HIVATALOS_GARANCIA_PECSÉT",
+      "watermark_position": "Jobb alsó sarok (opacity 90%)",
+      "badge_text": "3 ÉV GARANCIA | PROFIGÉPÉSZ",
+      "message": "Bizalmi pecsét sikeresen ráillesztve a generált képekre."
+    },
+    "generated_at": "2026-09-20T04:07:56.735072"
+  }
+]

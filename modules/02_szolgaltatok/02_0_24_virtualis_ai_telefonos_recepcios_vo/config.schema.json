@@ -1,0 +1,72 @@
+{
+  "title": "0-24 Virtuális AI Telefonos Recepciós Konfiguráció",
+  "type": "object",
+  "required": [
+    "company_name",
+    "telephony_provider",
+    "confirmations_channel"
+  ],
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "Vállalkozás Neve",
+      "default": "ProfiTech Klíma & Hőszivattyú Kft."
+    },
+    "receptionist_name": {
+      "type": "string",
+      "title": "AI Recepciós Neve",
+      "default": "Nikolett (AI Recepciós)"
+    },
+    "telephony_provider": {
+      "type": "string",
+      "title": "Telefonos Voice AI Platform",
+      "enum": [
+        "Vapi.ai Voice Engine",
+        "Retell AI Engine",
+        "Bland.ai Conversational Voice",
+        "Twilio Voice / SIP Trunk",
+        "Telnyx Voice / SIP Trunk",
+        "Beépített Hub Szimulátor (Teszteléshez)"
+      ],
+      "default": "Beépített Hub Szimulátor (Teszteléshez)",
+      "description": "Válassza ki a használni kívánt Voice AI szolgáltatót."
+    },
+    "services_and_pricing": {
+      "type": "string",
+      "title": "Szolgáltatások és Árlista (Tudásbázis)",
+      "format": "textarea",
+      "default": "Klíma karbantartás és tisztítás: 18.500 Ft/beltéri egység. Hőszivattyú éves felülvizsgálat: 35.000 Ft. Helyszíni felmérés új telepítéshez: Ingyenes."
+    },
+    "opening_hours": {
+      "type": "string",
+      "title": "Nyitvatartási és Ügyeleti Rend",
+      "default": "Hétfő-Péntek: 08:00 - 18:00, Sürgősségi ügyelet 0-24"
+    },
+    "calendar_provider": {
+      "type": "string",
+      "title": "Időpontfoglalási Naptár",
+      "enum": [
+        "Google Calendar API",
+        "Microsoft Outlook 365 Calendar",
+        "Cal.com API"
+      ],
+      "default": "Google Calendar API"
+    },
+    "confirmations_channel": {
+      "type": "string",
+      "title": "Hívás Utáni Visszaigazolás Csatornája",
+      "enum": [
+        "Először WhatsApp, ha nem elérhető akkor Telnyx SMS (Ajánlott)",
+        "Csak WhatsApp",
+        "Csak SMS"
+      ],
+      "default": "Először WhatsApp, ha nem elérhető akkor Telnyx SMS (Ajánlott)"
+    },
+    "save_structured_transcripts": {
+      "type": "boolean",
+      "title": "Strukturált Leirat Mentése Külön Fájlba",
+      "default": true,
+      "description": "Minden befejezett hívás teljes párbeszédét és kivonatát lementi az output/transcripts mappába."
+    }
+  }
+}

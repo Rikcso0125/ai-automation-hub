@@ -1,0 +1,8 @@
+{
+  "id": "08_szemantikus_kereso_webes_virtualis_elado",
+  "title": "Szemantikus Kereső & Webes Virtuális Eladó Bot",
+  "category": "webshopok",
+  "icon": "🔎",
+  "version": "1.0.0",
+  "description": "Megérti a laikus vásárlók kötetlen igényeit, és a pontos készletből közvetlenül a kosárba helyezhető ajánlatokat ad választható keresési móddal, tanácsadói dialógussal és készlethiány-kezeléssel."
+}

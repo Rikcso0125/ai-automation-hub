@@ -1,0 +1,26 @@
+{
+  "module_id": "05_hivatalos_whatsapp_business_api_tranzakc",
+  "event_type": "ORDER_CONFIRMATION_OUTBOUND",
+  "order": {
+    "order_id": "ORD-WEB-2026-7711",
+    "customer_name": "Balogh Ádám",
+    "customer_phone": "+36304445566",
+    "total_gross_huf": 49990,
+    "items": [
+      {
+        "sku": "BOSCH-GSR-18V-55",
+        "name": "Bosch Professional GSR 18V-55 Akkus Fúrócsavarozó",
+        "quantity": 1,
+        "price": 49990
+      }
+    ],
+    "carrier": "GLS",
+    "tracking_url": "https://gls-group.com/track/GLS-HU-771199",
+    "invoice_pdf_url": "https://szamlak.profigepesz.hu/pdf/SZAMLA-2026-7711.pdf"
+  },
+  "config": {
+    "template_delivery_mode": "hybrid_sms_fallback",
+    "ai_support_mode": "hitl_approval_gate",
+    "enable_add_to_order": true
+  }
+}

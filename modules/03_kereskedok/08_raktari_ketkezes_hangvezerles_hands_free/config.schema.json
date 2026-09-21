@@ -1,0 +1,66 @@
+{
+  "title": "Raktári Kétkezes Hangvezérlés Konfiguráció",
+  "type": "object",
+  "required": [
+    "service_mode"
+  ],
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (szimulált hangfelismerés és szintetizált szöveg) vagy Production (élő WebRTC/WebSpeech audio kapcsolat)."
+    },
+    "verification_method": {
+      "type": "string",
+      "title": "Polc és Termék Ellenőrzési Mód",
+      "enum": [
+        "check_digit",
+        "sku_last_digits",
+        "hybrid_dual_check"
+      ],
+      "default": "check_digit",
+      "description": "check_digit: 2-jegyű polckód ellenőrzés. sku_last_digits: cikkszám utolsó 3 számjegye. hybrid_dual_check: kettős biztonsági ellenőrzés nagy értékű áruknál."
+    },
+    "shortage_strategy": {
+      "type": "string",
+      "title": "Készlethiány és Sérülés Kezelési Stratégia",
+      "enum": [
+        "redirect_to_backup_shelf",
+        "log_partial_and_continue",
+        "smart_adaptive"
+      ],
+      "default": "smart_adaptive",
+      "description": "smart_adaptive: ha van tartalék polc, odairányítja a raktárost, különben rögzíti a hiányt és értesíti a beszerzést."
+    },
+    "picking_mode": {
+      "type": "string",
+      "title": "Alapértelmezett Szedési Mód",
+      "enum": [
+        "single_order",
+        "batch_wave"
+      ],
+      "default": "single_order",
+      "description": "single_order: rendelésenkénti szedés. batch_wave: több rendelés összevont zóna-optimalizált szedése."
+    },
+    "speech_language": {
+      "type": "string",
+      "title": "Beszéd Nyelve",
+      "default": "hu-HU"
+    },
+    "catalog_db_path": {
+      "type": "string",
+      "title": "Terméktörzs Elérési Útja",
+      "default": "data/termektorzs_katalogus.json"
+    },
+    "warehouse_log_path": {
+      "type": "string",
+      "title": "Raktári Hangvezérlés Napló",
+      "default": "data/raktar_hangvezerles_naplo.json"
+    }
+  }
+}

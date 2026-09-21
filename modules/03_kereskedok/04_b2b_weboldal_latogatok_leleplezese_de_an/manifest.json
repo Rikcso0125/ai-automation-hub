@@ -1,0 +1,8 @@
+{
+  "id": "04_b2b_weboldal_latogatok_leleplezese_de_an",
+  "title": "B2B Weboldal Látogatók Leleplezése (De-Anonymization)",
+  "category": "kereskedok",
+  "icon": "🕵️",
+  "version": "1.0.0",
+  "description": "Azonosítja a B2B weboldalt űrlapkitöltés nélkül meglátogató cégeket (Reverse IP / Network Intelligence). Kiszűri a lakossági szolgáltatókat, pontozza a vásárlási szándékot (Intent Score), felkutatja a döntéshozók LinkedIn profilját és azonnali értékesítői forró lead riasztást küld hideg megkeresési forgatókönyvvel."
+}

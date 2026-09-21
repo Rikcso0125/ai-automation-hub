@@ -1,0 +1,49 @@
+{
+  "module_id": "07_helyszini_felmeresbol_automatikus_anyags",
+  "source": "field_survey_app_laser_disto",
+  "survey_id": "SRV-2026-0920-07",
+  "project": {
+    "project_code": "PRJ-2026-VG-C4",
+    "project_name": "Váci Greens Irodaház C-Szárny 4. Emelet – Belső Szakipari Kivitelezés",
+    "client_name": "Greens Office Hungary Kft.",
+    "location": "Budapest XIII., Bence u. 1.",
+    "surveyor_engineer": "Balogh Tamás (Műszaki Előkészítő Mérnök)"
+  },
+  "measured_dimensions": [
+    {
+      "structure_type": "gipszkarton_valaszfal_w112",
+      "description": "Knauf W112 dupla rétegű hanggátló válaszfal acél vázszerkezeten",
+      "length_meters": 64.0,
+      "height_meters": 3.8,
+      "deductions_sqm": 7.56,
+      "layers_count": 4,
+      "insulation_thickness_mm": 75
+    },
+    {
+      "structure_type": "kazettas_almennyezet_armstrong",
+      "description": "Armstrong 60x60 ásványgyapot akusztikai álmennyezet látszó bordázattal",
+      "floor_area_sqm": 320.0
+    },
+    {
+      "structure_type": "modularis_szonyegpadlo_desso",
+      "description": "Desso 50x50 cm nagy kopásállóságú moduláris irodai szőnyegpadló",
+      "floor_area_sqm": 320.0
+    }
+  ],
+  "site_conditions": {
+    "height_over_3_5m": true,
+    "scaffolding_required": true,
+    "night_or_weekend_drilling_only": true,
+    "elevator_available": true,
+    "distance_from_loading_bay_m": 45
+  },
+  "config": {
+    "survey_calculation_mode": "hybrid_multi_input_scrap_optimization",
+    "labor_norm_engine": "en_norms_dynamic_site_multipliers",
+    "quotation_output_mode": "full_terc_budget_quote_procurement",
+    "default_scrap_waste_pct": 10.0,
+    "target_profit_margin_pct": 22.0,
+    "master_hourly_labor_rate_huf": 8500,
+    "notification_channel": "telegram"
+  }
+}

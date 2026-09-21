@@ -1,0 +1,8 @@
+{
+  "id": "02_tobbcsatornas_keszlet_es_arszinkron_webs",
+  "title": "Többcsatornás Készlet- és Árszinkron (Webshop + eMAG + Alza + POS)",
+  "category": "webshopok",
+  "icon": "🔄",
+  "version": "1.0.0",
+  "description": "Bármelyik csatornán történik eladás, 3 másodpercen belül levonja a készletet az összes többi piactéren, kizárva a készlethiány miatti rendeléstörléseket és bírságokat."
+}

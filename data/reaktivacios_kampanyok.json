@@ -1,0 +1,117 @@
+[
+  {
+    "campaign_id": "SPRINT-20260920-693",
+    "campaign_name": "Őszi Fűtésfelkészítő és Klímatisztítási Sprint 2026",
+    "target_service": "Éves Garanciamegőrző Karbantartás",
+    "dormant_clients_count": 5,
+    "estimated_potential_revenue_huf": 120000,
+    "drip_settings": {
+      "batch_size_per_day": 25,
+      "total_drip_days": 1,
+      "capacity_protected": true
+    },
+    "batches_preview": [
+      {
+        "batch_number": 1,
+        "scheduled_day": "1. munkanap",
+        "client_count": 5,
+        "client_ids": [
+          "CL-101",
+          "CL-102",
+          "CL-103",
+          "CL-104",
+          "CL-105"
+        ]
+      }
+    ],
+    "sample_message_text": "Kedves Kovács Béla!\nKollégánk legutóbb régebben járt Önöknél klímakarbantartáson.\nA fűtési/hűtési szezon előtt most Szezon előtti jótállásmegőrző klímatisztítás 15% előfoglalási kedvezménnyel. biztosítunk visszatérő ügyfeleinknek.\n\nIdőpontját 1 kattintással lefoglalhatja a naptárunkban:\n-> http://127.0.0.1:8000/api/v1/modules/03_conversational_naptarkezeles_idopontfogl/book?c_id=CL-101\n\nVagy egyszerűen válaszoljon erre az üzenetre a kívánt nappal!",
+    "status": "WAITING_FOR_MANAGER_APPROVAL",
+    "one_click_approval_link": "http://127.0.0.1:8000/api/v1/modules/15_alvo_ugyfelbazis_ujraaktivalo_sprint_sms/approve_campaign?campaign_id=SPRINT-20260920-693"
+  },
+  {
+    "campaign_id": "SPRINT-20260920-693",
+    "campaign_name": "Őszi Fűtésfelkészítő és Klímatisztítási Sprint 2026",
+    "target_service": "Éves Garanciamegőrző Karbantartás",
+    "dormant_clients_count": 5,
+    "estimated_potential_revenue_huf": 120000,
+    "drip_settings": {
+      "batch_size_per_day": 25,
+      "total_drip_days": 1,
+      "capacity_protected": true
+    },
+    "batches_preview": [
+      {
+        "batch_number": 1,
+        "scheduled_day": "1. munkanap",
+        "client_count": 5,
+        "client_ids": [
+          "CL-101",
+          "CL-102",
+          "CL-103",
+          "CL-104",
+          "CL-105"
+        ]
+      }
+    ],
+    "sample_message_text": "Kedves Kovács Béla!\nKollégánk legutóbb régebben járt Önöknél klímakarbantartáson.\nA fűtési/hűtési szezon előtt most Szezon előtti jótállásmegőrző klímatisztítás 15% előfoglalási kedvezménnyel. biztosítunk visszatérő ügyfeleinknek.\n\nIdőpontját 1 kattintással lefoglalhatja a naptárunkban:\n-> http://127.0.0.1:8000/api/v1/modules/03_conversational_naptarkezeles_idopontfogl/book?c_id=CL-101\n\nVagy egyszerűen válaszoljon erre az üzenetre a kívánt nappal!",
+    "status": "WAITING_FOR_MANAGER_APPROVAL",
+    "one_click_approval_link": "http://127.0.0.1:8000/api/v1/modules/15_alvo_ugyfelbazis_ujraaktivalo_sprint_sms/approve_campaign?campaign_id=SPRINT-20260920-693"
+  },
+  {
+    "campaign_id": "SPRINT-20260920-693",
+    "campaign_name": "Őszi Fűtésfelkészítő és Klímatisztítási Sprint 2026",
+    "target_service": "Éves Garanciamegőrző Karbantartás",
+    "dormant_clients_count": 5,
+    "estimated_potential_revenue_huf": 120000,
+    "drip_settings": {
+      "batch_size_per_day": 25,
+      "total_drip_days": 1,
+      "capacity_protected": true
+    },
+    "batches_preview": [
+      {
+        "batch_number": 1,
+        "scheduled_day": "1. munkanap",
+        "client_count": 5,
+        "client_ids": [
+          "CL-101",
+          "CL-102",
+          "CL-103",
+          "CL-104",
+          "CL-105"
+        ]
+      }
+    ],
+    "sample_message_text": "Kedves Kovács Béla!\nKollégánk legutóbb régebben járt Önöknél klímakarbantartáson.\nA fűtési/hűtési szezon előtt most Szezon előtti jótállásmegőrző klímatisztítás 15% előfoglalási kedvezménnyel. biztosítunk visszatérő ügyfeleinknek.\n\nIdőpontját 1 kattintással lefoglalhatja a naptárunkban:\n-> http://127.0.0.1:8000/api/v1/modules/03_conversational_naptarkezeles_idopontfogl/book?c_id=CL-101\n\nVagy egyszerűen válaszoljon erre az üzenetre a kívánt nappal!",
+    "status": "WAITING_FOR_MANAGER_APPROVAL",
+    "one_click_approval_link": "http://127.0.0.1:8000/api/v1/modules/15_alvo_ugyfelbazis_ujraaktivalo_sprint_sms/approve_campaign?campaign_id=SPRINT-20260920-693"
+  },
+  {
+    "campaign_id": "SPRINT-20260920-541",
+    "campaign_name": "Őszi Fűtésfelkészítő Sprint 2026",
+    "target_service": "Éves Garanciamegőrző Karbantartás",
+    "dormant_clients_count": 4,
+    "estimated_potential_revenue_huf": 96000,
+    "drip_settings": {
+      "batch_size_per_day": 25,
+      "total_drip_days": 1,
+      "capacity_protected": true
+    },
+    "batches_preview": [
+      {
+        "batch_number": 1,
+        "scheduled_day": "1. munkanap",
+        "client_count": 4,
+        "client_ids": [
+          "CL-101",
+          "CL-102",
+          "CL-103",
+          "CL-105"
+        ]
+      }
+    ],
+    "sample_message_text": "Kedves Kovács Béla!\nKollégánk legutóbb régebben járt Önöknél klímakarbantartáson.\nA fűtési/hűtési szezon előtt most Szezon előtti jótállásmegőrző klímatisztítás 15% előfoglalási kedvezménnyel. biztosítunk visszatérő ügyfeleinknek.\n\nIdőpontját 1 kattintással lefoglalhatja a naptárunkban:\n-> http://127.0.0.1:8000/api/v1/modules/03_conversational_naptarkezeles_idopontfogl/book?c_id=CL-101\n\nVagy egyszerűen válaszoljon erre az üzenetre a kívánt nappal!",
+    "status": "WAITING_FOR_MANAGER_APPROVAL",
+    "one_click_approval_link": "http://127.0.0.1:8000/api/v1/modules/15_alvo_ugyfelbazis_ujraaktivalo_sprint_sms/approve_campaign?campaign_id=SPRINT-20260920-541"
+  }
+]

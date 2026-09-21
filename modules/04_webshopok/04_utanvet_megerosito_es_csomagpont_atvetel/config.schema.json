@@ -1,0 +1,67 @@
+{
+  "title": "Utánvét-Megerősítő és Csomagpont Átvételi Konfiguráció",
+  "type": "object",
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock"
+    },
+    "cod_risk_threshold": {
+      "type": "integer",
+      "title": "Utánvét Kockázati Pontszám Küszöb (0-100)",
+      "default": 45,
+      "description": "1. Kérdés (B): Ha a rendelés kockázati pontszáma eléri ezt, megerősítést kér feladás előtt."
+    },
+    "cod_high_value_limit_huf": {
+      "type": "number",
+      "title": "Nagy Értékű Utánvét Értékhatár (Ft)",
+      "default": 40000.0,
+      "description": "Ennél drágább utánvétes rendelés automatikusan plusz kockázati pontot kap."
+    },
+    "confirmation_grace_hours": {
+      "type": "integer",
+      "title": "Megerősítési Türelmi Idő (óra)",
+      "default": 24,
+      "description": "2. Kérdés (A): Ennyi idő után automatikus csomagfeladási zárlat és ügyfélszolgálati riasztás lép életbe."
+    },
+    "shipping_hold_action": {
+      "type": "string",
+      "title": "Nem Megerősített Utánvét Kezelése",
+      "enum": [
+        "shipping_hold_cs_escalation",
+        "auto_cancel",
+        "manual_approval"
+      ],
+      "default": "shipping_hold_cs_escalation",
+      "description": "2. Kérdés (A): Csomagfeladási zárlat és telefonos tisztázó feladat az ügyfélszolgálatnak."
+    },
+    "locker_alert_channels": {
+      "type": "array",
+      "title": "3. Kérdés (C): Csomagautomata Értesítési Csatornák",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "sms",
+        "whatsapp",
+        "email_proxy_pickup"
+      ]
+    },
+    "locker_warning_hours_before": {
+      "type": "integer",
+      "title": "Csomagautomata Lejárati Riasztás Időzítés (óra)",
+      "default": 24,
+      "description": "A lejárati határidő előtt ennyi órával küld vészjelzést továbbítható átvételi kóddal."
+    },
+    "storage_path": {
+      "type": "string",
+      "title": "Napló Fájl",
+      "default": "data/utanvet_es_csomagpont_naplo.json"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "09_targyalas_utani_ugyfel_osszefoglalo_foll",
+  "title": "Tárgyalás Utáni Ügyfél Összefoglaló (Follow-Up Copilot)",
+  "category": "szolgaltatok",
+  "icon": "🤝",
+  "version": "1.0.0",
+  "description": "A megbeszélés után 5 percen belül professzionális emlékeztető levelet és márkázott PDF jegyzőkönyvet készít az egyeztetett pontokról, határidőkről és felelősökről. Diplomatikus vita-megelőző záradék és 1-kattintásos értékesítői jóváhagyás kiküldés előtt."
+}

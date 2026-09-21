@@ -1,0 +1,53 @@
+[
+  {
+    "lead_id": "LEAD-20260920-LIVE-TEST-9921",
+    "created_at": "2026-09-20T02:40:54.666633",
+    "post_id": "LIVE-TEST-9921",
+    "group_name": "Újbuda - XI. kerületiek csoportja",
+    "author_name": "Farkas Dániel",
+    "author_profile_url": "",
+    "post_url": "https://facebook.com/groups/ujbuda/posts/9921",
+    "post_text": "Sziasztok! Megbízható klímaszerelőt keresek a XI. kerületben. Szeretnénk egy Daikin klímát beszereltetni hivatalos garanciával. Kit ajánlotok?",
+    "relevance_score": 81,
+    "intent": "ajanlaskeres_szakember",
+    "matched_keywords": [
+      "klímaszerelő",
+      "szerelő"
+    ],
+    "matched_locations": [
+      "XI. kerület"
+    ],
+    "generated_comment": "Szia Farkas!\nHa még keresel megbízható csapatot, szívesen segítünk neked XI. kerület! A ProfiKlíma & Épületgépészet Kft. csapata hivatalos F-Gáz képesítéssel, számlaképesen és gyártói garanciával vállalja klímák telepítését és karbantartását.\nEgy gyors szakmai tanács a választáshoz: 3,5 kW-os készüléknél érdemes a helyiség tájolását és a belmagasságot is figyelembe venni, hogy hosszú távon csendes és alacsony fogyasztású maradjon a gép.\nKötetlen, ingyenes helyszíni felméréssel pontos árajánlatot adunk még a szezonális csúcsidőszak előtt. Itt tudsz közvetlenül időpontot egyeztetni: https://profiklima.hu/idopontfoglalas , vagy hívhatsz minket telefonon is: +36 30 123 4567.\nSzép napot és sikeres kivitelezést!\nÜdvözlettel: ProfiKlíma & Épületgépészet Kft.",
+    "generated_dm": "Szia Farkas!\nLáttam a posztodat a(z) 'Újbuda - XI. kerületiek csoportja' csoportban a klímaszereléssel kapcsolatban.\nA ProfiKlíma & Épületgépészet Kft.-től írok, heti rendszerességgel dolgozunk a környéken, számlaképesen és hivatalos F-Gáz garanciával.\nHa még aktuális, szívesen átbeszéljük az igényeidet és adunk egy pontos, díjmentes felmérési javaslatot.\nHa kényelmesebb telefonon: +36 30 123 4567, vagy foglalhatsz közvetlenül egy kötetlen időpontot: https://profiklima.hu/idopontfoglalas\nÜdvözlettel: ProfiKlíma & Épületgépészet Kft.",
+    "approval_mode": "manual_approval_only",
+    "status": "PENDING_SALES_APPROVAL",
+    "approval_url": "http://localhost:8000/api/v1/modules/17_facebook_csoportok_social_listening_ajan/approve?lead_id=LEAD-20260920-LIVE-TEST-9921",
+    "target_response_time_minutes": 5
+  },
+  {
+    "lead_id": "LEAD-20260920-FB-TEST-9001",
+    "created_at": "2026-09-20T02:40:43.110775",
+    "post_id": "FB-TEST-9001",
+    "group_name": "Újbuda - XI. kerületiek csoportja",
+    "author_name": "Kovács László",
+    "author_profile_url": "",
+    "post_url": "https://facebook.com/groups/ujbuda/posts/9001",
+    "post_text": "Sziasztok! Tudtok jó klímást ajánlani a XI. kerületben? Csendes, minőségi klímát keresünk nappaliba garanciával és tisztességes számlával. Köszönöm!",
+    "relevance_score": 81,
+    "intent": "ajanlaskeres_szakember",
+    "matched_keywords": [
+      "klímás",
+      "tudtok jó"
+    ],
+    "matched_locations": [
+      "XI. kerület"
+    ],
+    "generated_comment": "Szia Kovács!\nHa még keresel megbízható csapatot, szívesen segítünk neked XI. kerület! A ProfiKlíma & Épületgépészet Kft. csapata hivatalos F-Gáz képesítéssel, számlaképesen és gyártói garanciával vállalja klímák telepítését és karbantartását.\nEgy gyors szakmai tanács a választáshoz: 3,5 kW-os készüléknél érdemes a helyiség tájolását és a belmagasságot is figyelembe venni, hogy hosszú távon csendes és alacsony fogyasztású maradjon a gép.\nKötetlen, ingyenes helyszíni felméréssel pontos árajánlatot adunk még a szezonális csúcsidőszak előtt. Itt tudsz közvetlenül időpontot egyeztetni: https://profiklima.hu/idopontfoglalas , vagy hívhatsz minket telefonon is: +36 30 123 4567.\nSzép napot és sikeres kivitelezést!\nÜdvözlettel: ProfiKlíma & Épületgépészet Kft.",
+    "generated_dm": "Szia Kovács!\nLáttam a posztodat a(z) 'Újbuda - XI. kerületiek csoportja' csoportban a klímaszereléssel kapcsolatban.\nA ProfiKlíma & Épületgépészet Kft.-től írok, heti rendszerességgel dolgozunk a környéken, számlaképesen és hivatalos F-Gáz garanciával.\nHa még aktuális, szívesen átbeszéljük az igényeidet és adunk egy pontos, díjmentes felmérési javaslatot.\nHa kényelmesebb telefonon: +36 30 123 4567, vagy foglalhatsz közvetlenül egy kötetlen időpontot: https://profiklima.hu/idopontfoglalas\nÜdvözlettel: ProfiKlíma & Épületgépészet Kft.",
+    "approval_mode": "manual_approval_only",
+    "status": "APPROVED_AND_POSTED",
+    "approval_url": "http://localhost:8000/api/v1/modules/17_facebook_csoportok_social_listening_ajan/approve?lead_id=LEAD-20260920-FB-TEST-9001",
+    "target_response_time_minutes": 5,
+    "approved_at": "2026-09-20T02:40:43.112777"
+  }
+]

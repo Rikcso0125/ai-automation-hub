@@ -1,0 +1,63 @@
+{
+  "title": "„Hol a csomagom?” (WISMO) 0-24 Futár API Konfiguráció",
+  "type": "object",
+  "required": [
+    "service_mode"
+  ],
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (szimulált futár státuszok) vagy Production (élő GLS/DPD/Foxpost/Packeta/MPL API-k)."
+    },
+    "supported_carriers": {
+      "type": "array",
+      "title": "Támogatott Futárszolgálatok",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "GLS",
+        "DPD",
+        "Foxpost",
+        "Packeta",
+        "MPL"
+      ]
+    },
+    "response_channel": {
+      "type": "string",
+      "title": "Elsődleges Válaszadási Csatorna",
+      "enum": [
+        "webchat",
+        "email",
+        "whatsapp",
+        "sms",
+        "omnichannel"
+      ],
+      "default": "omnichannel",
+      "description": "A vevői megkeresés forrásához igazított válaszadás vagy többcsatornás szinkron."
+    },
+    "proactive_exception_alerts": {
+      "type": "boolean",
+      "title": "Proaktív Kézbesítési Riasztás Engedélyezése",
+      "default": true,
+      "description": "Sikertelen kézbesítés vagy automata-lejárat esetén azonnali automatikus üzenet 1-kattintásos feloldó linkkel."
+    },
+    "escalation_sla_hours": {
+      "type": "integer",
+      "title": "Ügyfélszolgálati Eszkaláció Határideje (óra)",
+      "default": 24,
+      "description": "Ha a vevő nem reagál a sikertelen kézbesítési értesítésre, ennyi idő után nyit humán jegyet a Dashboardon."
+    },
+    "storage_path": {
+      "type": "string",
+      "title": "WISMO Kérdések és Események Naplója",
+      "default": "data/webshop_wismo_naplo.json"
+    }
+  }
+}

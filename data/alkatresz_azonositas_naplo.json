@@ -1,0 +1,594 @@
+[
+  {
+    "timestamp": "2026-09-20T03:53:46.504238",
+    "request_id": "REQ-PARTID-2026-0920-01",
+    "machine_serial": "KRN-2018-HU-9921",
+    "technician": "Takács Zoltán",
+    "reconstruction": {
+      "ocr_mode_applied": "hybrid_fuzzy_catalog_candidate",
+      "surface_condition": "worn_metal_plate_oily_surface",
+      "raw_ocr_input": "FES?O   CPE14-M1HA-5J?-1/8   MN: 1969??   p: 2.5-8 bar",
+      "enhancement_pipeline": [
+        {
+          "step": "Adaptive_Bilateral_Filtering",
+          "description": "Olajfoltok és tükröződések szűrése",
+          "status": "APPLIED"
+        },
+        {
+          "step": "CLAHE_Contrast_Stretching",
+          "description": "Lekopott fém gravírozás kontrasztkiemelése",
+          "status": "APPLIED"
+        },
+        {
+          "step": "Neural_Super_Resolution_4x",
+          "description": "Karaktertöredékek élesítése",
+          "status": "APPLIED"
+        }
+      ],
+      "confidence_threshold": 0.85,
+      "meets_threshold": true,
+      "best_match": {
+        "rank": 1,
+        "brand": "Festo AG & Co. KG",
+        "model_code": "CPE14-M1HA-5JS-1/8",
+        "part_number": "196941",
+        "full_name": "Festo CPE14 Mágnesszelep (5/2 monostabil, G1/8, 24V DC, rugó-visszatérítésű)",
+        "confidence_score": 0.972,
+        "reconstruction_reason": "A 'FES?O' gyártói védjegy, a 'CPE14-M1HA-5J?-1/8' sorozat és a Krones Canmatic gépkönyvi pneumatika alkatrészlistája 100%-ban ezt a tételt határozza meg.",
+        "is_best_match": true
+      },
+      "alternative_candidates": [
+        {
+          "rank": 2,
+          "brand": "Festo AG & Co. KG",
+          "model_code": "CPE14-M1HA-5J-1/8",
+          "part_number": "196940",
+          "full_name": "Festo CPE14 Mágnesszelep (5/2 bistabil, 2 tekerccsel)",
+          "confidence_score": 0.745,
+          "reconstruction_reason": "Hasonló tokozás, de a fotózott szeleptesten csak egyetlen tekercscsatlakozó látható (monostabil).",
+          "is_best_match": false
+        }
+      ]
+    },
+    "catalog": {
+      "matching_depth_mode": "full_cross_reference_aftermarket",
+      "exploded_view": {
+        "machine_model": "Krones Canmatic 720 Címkéző Gép",
+        "manual_reference": "KRN-CAN-DOC-2018-REV4",
+        "diagram_name": "Fejezet 04: Szelepsziget és Vákuum-Modul Robbantott Rajz",
+        "position_number": "Pos. 14",
+        "plate_code": "Tábla 4B",
+        "diagram_page": 184,
+        "visual_bounding_box": {
+          "x": 482,
+          "y": 630,
+          "width": 95,
+          "height": 55,
+          "highlight_color": "#FF3366"
+        },
+        "diagram_pdf_url": "https://service.krones-docs.internal/manuals/2018/canmatic720_ch04_p184.pdf"
+      },
+      "original_oem": {
+        "brand": "Festo",
+        "part_number": "196941",
+        "type_code": "CPE14-M1HA-5JS-1/8",
+        "list_price_huf": 44800,
+        "lead_time_days": 4,
+        "quality_class": "OEM Eredeti Gyári",
+        "warranty_months": 24
+      },
+      "cross_reference_matrix": [
+        {
+          "brand": "SMC Pneumatics",
+          "part_number": "SY5120-5LZD-01",
+          "compatibility_type": "100% Egyenértékű Prémium Helyettesítő (Drop-in Replacement)",
+          "list_price_huf": 36500,
+          "price_difference_pct": -18.5,
+          "lead_time": "Azonnal raktárról (Győri partner depó)",
+          "availability_status": "IN_STOCK_LOCAL",
+          "technical_fit": {
+            "pneumatic_port": "G 1/8 inch (Azonos)",
+            "voltage": "24V DC (Azonos)",
+            "nominal_flow_rate": "950 l/min (+5% kapacitás)",
+            "operating_pressure": "0.15 - 0.7 MPa (Teljes kompatibilitás)"
+          },
+          "recommendation_badge": "AJÁNLOTT AZONNALI CSERE (0 ÁLLÁSIDŐ)"
+        },
+        {
+          "brand": "Bosch Rexroth",
+          "part_number": "5725050220",
+          "compatibility_type": "Egyenértékű Ipari Szabvány Alternatíva",
+          "list_price_huf": 48900,
+          "price_difference_pct": 9.1,
+          "lead_time": "24 órás szállítás (Budapesti központi raktár)",
+          "availability_status": "IN_STOCK_CENTRAL",
+          "technical_fit": {
+            "pneumatic_port": "G 1/8 inch",
+            "voltage": "24V DC",
+            "nominal_flow_rate": "900 l/min",
+            "operating_pressure": "2 - 8 bar"
+          },
+          "recommendation_badge": "TARTALÉK ALTERNATÍVA"
+        }
+      ],
+      "recommended_action": "SMC SY5120-5LZD-01 beszerzése a győri partner depóból a 4 napos állásidő megelőzésére."
+    },
+    "procurement": {
+      "workflow_mode": "end_to_end_procurement_autopilot",
+      "purchase_order_id": "POR-AB4D3296",
+      "recommended_part_to_order": {
+        "brand": "SMC Pneumatics",
+        "part_number": "SY5120-5LZD-01",
+        "price_net_huf": 36500,
+        "supplier": "Haberkorn Kft. Győri Ipari Szakáruház",
+        "delivery_sla": "Személyes átvétel vagy 2 órás expressz futár"
+      },
+      "stock_availability": {
+        "internal_plant_gyor": 0,
+        "internal_reserve_komarom": 1,
+        "external_supplier_haberkorn_gyor": 4,
+        "supplier_name": "Haberkorn Kft. Győri Ipari Szakáruház",
+        "supplier_distance_km": 6.8,
+        "pickup_option": "Személyes átvétel vagy 2 órás expressz futár"
+      },
+      "economic_impact": {
+        "downtime_hourly_loss_huf": 350000,
+        "estimated_downtime_avoided_hours": 24,
+        "potential_production_loss_prevented_huf": 8400000,
+        "part_cost_vs_savings_ratio": "1 : 230"
+      },
+      "approval_gate": {
+        "status": "AUTO_APPROVED_IMMEDIATE_DISPATCH",
+        "requires_manual_approval": false,
+        "approval_threshold_huf": 40000,
+        "action_url": "http://localhost:8000/api/v1/procurement/approve?order_id=POR-AB4D3296",
+        "note": "Az alkatrész ára kereten belül van, azonnali futárrendelés aktiválva."
+      }
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T03:53:53.541619",
+    "request_id": "REQ-PARTID-2026-0920-01",
+    "machine_serial": "KRN-2018-HU-9921",
+    "technician": "Takács Zoltán",
+    "reconstruction": {
+      "ocr_mode_applied": "hybrid_fuzzy_catalog_candidate",
+      "surface_condition": "worn_metal_plate_oily_surface",
+      "raw_ocr_input": "FES?O   CPE14-M1HA-5J?-1/8   MN: 1969??   p: 2.5-8 bar",
+      "enhancement_pipeline": [
+        {
+          "step": "Adaptive_Bilateral_Filtering",
+          "description": "Olajfoltok és tükröződések szűrése",
+          "status": "APPLIED"
+        },
+        {
+          "step": "CLAHE_Contrast_Stretching",
+          "description": "Lekopott fém gravírozás kontrasztkiemelése",
+          "status": "APPLIED"
+        },
+        {
+          "step": "Neural_Super_Resolution_4x",
+          "description": "Karaktertöredékek élesítése",
+          "status": "APPLIED"
+        }
+      ],
+      "confidence_threshold": 0.85,
+      "meets_threshold": true,
+      "best_match": {
+        "rank": 1,
+        "brand": "Festo AG & Co. KG",
+        "model_code": "CPE14-M1HA-5JS-1/8",
+        "part_number": "196941",
+        "full_name": "Festo CPE14 Mágnesszelep (5/2 monostabil, G1/8, 24V DC, rugó-visszatérítésű)",
+        "confidence_score": 0.972,
+        "reconstruction_reason": "A 'FES?O' gyártói védjegy, a 'CPE14-M1HA-5J?-1/8' sorozat és a Krones Canmatic gépkönyvi pneumatika alkatrészlistája 100%-ban ezt a tételt határozza meg.",
+        "is_best_match": true
+      },
+      "alternative_candidates": [
+        {
+          "rank": 2,
+          "brand": "Festo AG & Co. KG",
+          "model_code": "CPE14-M1HA-5J-1/8",
+          "part_number": "196940",
+          "full_name": "Festo CPE14 Mágnesszelep (5/2 bistabil, 2 tekerccsel)",
+          "confidence_score": 0.745,
+          "reconstruction_reason": "Hasonló tokozás, de a fotózott szeleptesten csak egyetlen tekercscsatlakozó látható (monostabil).",
+          "is_best_match": false
+        }
+      ]
+    },
+    "catalog": {
+      "matching_depth_mode": "full_cross_reference_aftermarket",
+      "exploded_view": {
+        "machine_model": "Krones Canmatic 720 Címkéző Gép",
+        "manual_reference": "KRN-CAN-DOC-2018-REV4",
+        "diagram_name": "Fejezet 04: Szelepsziget és Vákuum-Modul Robbantott Rajz",
+        "position_number": "Pos. 14",
+        "plate_code": "Tábla 4B",
+        "diagram_page": 184,
+        "visual_bounding_box": {
+          "x": 482,
+          "y": 630,
+          "width": 95,
+          "height": 55,
+          "highlight_color": "#FF3366"
+        },
+        "diagram_pdf_url": "https://service.krones-docs.internal/manuals/2018/canmatic720_ch04_p184.pdf"
+      },
+      "original_oem": {
+        "brand": "Festo",
+        "part_number": "196941",
+        "type_code": "CPE14-M1HA-5JS-1/8",
+        "list_price_huf": 44800,
+        "lead_time_days": 4,
+        "quality_class": "OEM Eredeti Gyári",
+        "warranty_months": 24
+      },
+      "cross_reference_matrix": [
+        {
+          "brand": "SMC Pneumatics",
+          "part_number": "SY5120-5LZD-01",
+          "compatibility_type": "100% Egyenértékű Prémium Helyettesítő (Drop-in Replacement)",
+          "list_price_huf": 36500,
+          "price_difference_pct": -18.5,
+          "lead_time": "Azonnal raktárról (Győri partner depó)",
+          "availability_status": "IN_STOCK_LOCAL",
+          "technical_fit": {
+            "pneumatic_port": "G 1/8 inch (Azonos)",
+            "voltage": "24V DC (Azonos)",
+            "nominal_flow_rate": "950 l/min (+5% kapacitás)",
+            "operating_pressure": "0.15 - 0.7 MPa (Teljes kompatibilitás)"
+          },
+          "recommendation_badge": "AJÁNLOTT AZONNALI CSERE (0 ÁLLÁSIDŐ)"
+        },
+        {
+          "brand": "Bosch Rexroth",
+          "part_number": "5725050220",
+          "compatibility_type": "Egyenértékű Ipari Szabvány Alternatíva",
+          "list_price_huf": 48900,
+          "price_difference_pct": 9.1,
+          "lead_time": "24 órás szállítás (Budapesti központi raktár)",
+          "availability_status": "IN_STOCK_CENTRAL",
+          "technical_fit": {
+            "pneumatic_port": "G 1/8 inch",
+            "voltage": "24V DC",
+            "nominal_flow_rate": "900 l/min",
+            "operating_pressure": "2 - 8 bar"
+          },
+          "recommendation_badge": "TARTALÉK ALTERNATÍVA"
+        }
+      ],
+      "recommended_action": "SMC SY5120-5LZD-01 beszerzése a győri partner depóból a 4 napos állásidő megelőzésére."
+    },
+    "procurement": {
+      "workflow_mode": "end_to_end_procurement_autopilot",
+      "purchase_order_id": "POR-CF4A3914",
+      "recommended_part_to_order": {
+        "brand": "SMC Pneumatics",
+        "part_number": "SY5120-5LZD-01",
+        "price_net_huf": 36500,
+        "supplier": "Haberkorn Kft. Győri Ipari Szakáruház",
+        "delivery_sla": "Személyes átvétel vagy 2 órás expressz futár"
+      },
+      "stock_availability": {
+        "internal_plant_gyor": 0,
+        "internal_reserve_komarom": 1,
+        "external_supplier_haberkorn_gyor": 4,
+        "supplier_name": "Haberkorn Kft. Győri Ipari Szakáruház",
+        "supplier_distance_km": 6.8,
+        "pickup_option": "Személyes átvétel vagy 2 órás expressz futár"
+      },
+      "economic_impact": {
+        "downtime_hourly_loss_huf": 350000,
+        "estimated_downtime_avoided_hours": 24,
+        "potential_production_loss_prevented_huf": 8400000,
+        "part_cost_vs_savings_ratio": "1 : 230"
+      },
+      "approval_gate": {
+        "status": "AUTO_APPROVED_IMMEDIATE_DISPATCH",
+        "requires_manual_approval": false,
+        "approval_threshold_huf": 40000,
+        "action_url": "http://localhost:8000/api/v1/procurement/approve?order_id=POR-CF4A3914",
+        "note": "Az alkatrész ára kereten belül van, azonnali futárrendelés aktiválva."
+      }
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:05.548310",
+    "request_id": "REQ-PARTID-2026-0920-01",
+    "machine_serial": "KRN-2018-HU-9921",
+    "technician": "Takács Zoltán",
+    "reconstruction": {
+      "ocr_mode_applied": "hybrid_fuzzy_catalog_candidate",
+      "surface_condition": "worn_metal_plate_oily_surface",
+      "raw_ocr_input": "FES?O   CPE14-M1HA-5J?-1/8   MN: 1969??   p: 2.5-8 bar",
+      "enhancement_pipeline": [
+        {
+          "step": "Adaptive_Bilateral_Filtering",
+          "description": "Olajfoltok és tükröződések szűrése",
+          "status": "APPLIED"
+        },
+        {
+          "step": "CLAHE_Contrast_Stretching",
+          "description": "Lekopott fém gravírozás kontrasztkiemelése",
+          "status": "APPLIED"
+        },
+        {
+          "step": "Neural_Super_Resolution_4x",
+          "description": "Karaktertöredékek élesítése",
+          "status": "APPLIED"
+        }
+      ],
+      "confidence_threshold": 0.85,
+      "meets_threshold": true,
+      "best_match": {
+        "rank": 1,
+        "brand": "Festo AG & Co. KG",
+        "model_code": "CPE14-M1HA-5JS-1/8",
+        "part_number": "196941",
+        "full_name": "Festo CPE14 Mágnesszelep (5/2 monostabil, G1/8, 24V DC, rugó-visszatérítésű)",
+        "confidence_score": 0.972,
+        "reconstruction_reason": "A 'FES?O' gyártói védjegy, a 'CPE14-M1HA-5J?-1/8' sorozat és a Krones Canmatic gépkönyvi pneumatika alkatrészlistája 100%-ban ezt a tételt határozza meg.",
+        "is_best_match": true
+      },
+      "alternative_candidates": [
+        {
+          "rank": 2,
+          "brand": "Festo AG & Co. KG",
+          "model_code": "CPE14-M1HA-5J-1/8",
+          "part_number": "196940",
+          "full_name": "Festo CPE14 Mágnesszelep (5/2 bistabil, 2 tekerccsel)",
+          "confidence_score": 0.745,
+          "reconstruction_reason": "Hasonló tokozás, de a fotózott szeleptesten csak egyetlen tekercscsatlakozó látható (monostabil).",
+          "is_best_match": false
+        }
+      ]
+    },
+    "catalog": {
+      "matching_depth_mode": "full_cross_reference_aftermarket",
+      "exploded_view": {
+        "machine_model": "Krones Canmatic 720 Címkéző Gép",
+        "manual_reference": "KRN-CAN-DOC-2018-REV4",
+        "diagram_name": "Fejezet 04: Szelepsziget és Vákuum-Modul Robbantott Rajz",
+        "position_number": "Pos. 14",
+        "plate_code": "Tábla 4B",
+        "diagram_page": 184,
+        "visual_bounding_box": {
+          "x": 482,
+          "y": 630,
+          "width": 95,
+          "height": 55,
+          "highlight_color": "#FF3366"
+        },
+        "diagram_pdf_url": "https://service.krones-docs.internal/manuals/2018/canmatic720_ch04_p184.pdf"
+      },
+      "original_oem": {
+        "brand": "Festo",
+        "part_number": "196941",
+        "type_code": "CPE14-M1HA-5JS-1/8",
+        "list_price_huf": 44800,
+        "lead_time_days": 4,
+        "quality_class": "OEM Eredeti Gyári",
+        "warranty_months": 24
+      },
+      "cross_reference_matrix": [
+        {
+          "brand": "SMC Pneumatics",
+          "part_number": "SY5120-5LZD-01",
+          "compatibility_type": "100% Egyenértékű Prémium Helyettesítő (Drop-in Replacement)",
+          "list_price_huf": 36500,
+          "price_difference_pct": -18.5,
+          "lead_time": "Azonnal raktárról (Győri partner depó)",
+          "availability_status": "IN_STOCK_LOCAL",
+          "technical_fit": {
+            "pneumatic_port": "G 1/8 inch (Azonos)",
+            "voltage": "24V DC (Azonos)",
+            "nominal_flow_rate": "950 l/min (+5% kapacitás)",
+            "operating_pressure": "0.15 - 0.7 MPa (Teljes kompatibilitás)"
+          },
+          "recommendation_badge": "AJÁNLOTT AZONNALI CSERE (0 ÁLLÁSIDŐ)"
+        },
+        {
+          "brand": "Bosch Rexroth",
+          "part_number": "5725050220",
+          "compatibility_type": "Egyenértékű Ipari Szabvány Alternatíva",
+          "list_price_huf": 48900,
+          "price_difference_pct": 9.1,
+          "lead_time": "24 órás szállítás (Budapesti központi raktár)",
+          "availability_status": "IN_STOCK_CENTRAL",
+          "technical_fit": {
+            "pneumatic_port": "G 1/8 inch",
+            "voltage": "24V DC",
+            "nominal_flow_rate": "900 l/min",
+            "operating_pressure": "2 - 8 bar"
+          },
+          "recommendation_badge": "TARTALÉK ALTERNATÍVA"
+        }
+      ],
+      "recommended_action": "SMC SY5120-5LZD-01 beszerzése a győri partner depóból a 4 napos állásidő megelőzésére."
+    },
+    "procurement": {
+      "workflow_mode": "end_to_end_procurement_autopilot",
+      "purchase_order_id": "POR-B39E4F28",
+      "recommended_part_to_order": {
+        "brand": "SMC Pneumatics",
+        "part_number": "SY5120-5LZD-01",
+        "price_net_huf": 36500,
+        "supplier": "Haberkorn Kft. Győri Ipari Szakáruház",
+        "delivery_sla": "Személyes átvétel vagy 2 órás expressz futár"
+      },
+      "stock_availability": {
+        "internal_plant_gyor": 0,
+        "internal_reserve_komarom": 1,
+        "external_supplier_haberkorn_gyor": 4,
+        "supplier_name": "Haberkorn Kft. Győri Ipari Szakáruház",
+        "supplier_distance_km": 6.8,
+        "pickup_option": "Személyes átvétel vagy 2 órás expressz futár"
+      },
+      "economic_impact": {
+        "downtime_hourly_loss_huf": 350000,
+        "estimated_downtime_avoided_hours": 24,
+        "potential_production_loss_prevented_huf": 8400000,
+        "part_cost_vs_savings_ratio": "1 : 230"
+      },
+      "approval_gate": {
+        "status": "AUTO_APPROVED_IMMEDIATE_DISPATCH",
+        "requires_manual_approval": false,
+        "approval_threshold_huf": 40000,
+        "action_url": "http://localhost:8000/api/v1/procurement/approve?order_id=POR-B39E4F28",
+        "note": "Az alkatrész ára kereten belül van, azonnali futárrendelés aktiválva."
+      }
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:54.263204",
+    "request_id": "REQ-PARTID-2026-0920-01",
+    "machine_serial": "KRN-2018-HU-9921",
+    "technician": "Takács Zoltán",
+    "reconstruction": {
+      "ocr_mode_applied": "hybrid_fuzzy_catalog_candidate",
+      "surface_condition": "worn_metal_plate_oily_surface",
+      "raw_ocr_input": "FES?O   CPE14-M1HA-5J?-1/8   MN: 1969??   p: 2.5-8 bar",
+      "enhancement_pipeline": [
+        {
+          "step": "Adaptive_Bilateral_Filtering",
+          "description": "Olajfoltok és tükröződések szűrése",
+          "status": "APPLIED"
+        },
+        {
+          "step": "CLAHE_Contrast_Stretching",
+          "description": "Lekopott fém gravírozás kontrasztkiemelése",
+          "status": "APPLIED"
+        },
+        {
+          "step": "Neural_Super_Resolution_4x",
+          "description": "Karaktertöredékek élesítése",
+          "status": "APPLIED"
+        }
+      ],
+      "confidence_threshold": 0.85,
+      "meets_threshold": true,
+      "best_match": {
+        "rank": 1,
+        "brand": "Festo AG & Co. KG",
+        "model_code": "CPE14-M1HA-5JS-1/8",
+        "part_number": "196941",
+        "full_name": "Festo CPE14 Mágnesszelep (5/2 monostabil, G1/8, 24V DC, rugó-visszatérítésű)",
+        "confidence_score": 0.972,
+        "reconstruction_reason": "A 'FES?O' gyártói védjegy, a 'CPE14-M1HA-5J?-1/8' sorozat és a Krones Canmatic gépkönyvi pneumatika alkatrészlistája 100%-ban ezt a tételt határozza meg.",
+        "is_best_match": true
+      },
+      "alternative_candidates": [
+        {
+          "rank": 2,
+          "brand": "Festo AG & Co. KG",
+          "model_code": "CPE14-M1HA-5J-1/8",
+          "part_number": "196940",
+          "full_name": "Festo CPE14 Mágnesszelep (5/2 bistabil, 2 tekerccsel)",
+          "confidence_score": 0.745,
+          "reconstruction_reason": "Hasonló tokozás, de a fotózott szeleptesten csak egyetlen tekercscsatlakozó látható (monostabil).",
+          "is_best_match": false
+        }
+      ]
+    },
+    "catalog": {
+      "matching_depth_mode": "full_cross_reference_aftermarket",
+      "exploded_view": {
+        "machine_model": "Krones Canmatic 720 Címkéző Gép",
+        "manual_reference": "KRN-CAN-DOC-2018-REV4",
+        "diagram_name": "Fejezet 04: Szelepsziget és Vákuum-Modul Robbantott Rajz",
+        "position_number": "Pos. 14",
+        "plate_code": "Tábla 4B",
+        "diagram_page": 184,
+        "visual_bounding_box": {
+          "x": 482,
+          "y": 630,
+          "width": 95,
+          "height": 55,
+          "highlight_color": "#FF3366"
+        },
+        "diagram_pdf_url": "https://service.krones-docs.internal/manuals/2018/canmatic720_ch04_p184.pdf"
+      },
+      "original_oem": {
+        "brand": "Festo",
+        "part_number": "196941",
+        "type_code": "CPE14-M1HA-5JS-1/8",
+        "list_price_huf": 44800,
+        "lead_time_days": 4,
+        "quality_class": "OEM Eredeti Gyári",
+        "warranty_months": 24
+      },
+      "cross_reference_matrix": [
+        {
+          "brand": "SMC Pneumatics",
+          "part_number": "SY5120-5LZD-01",
+          "compatibility_type": "100% Egyenértékű Prémium Helyettesítő (Drop-in Replacement)",
+          "list_price_huf": 36500,
+          "price_difference_pct": -18.5,
+          "lead_time": "Azonnal raktárról (Győri partner depó)",
+          "availability_status": "IN_STOCK_LOCAL",
+          "technical_fit": {
+            "pneumatic_port": "G 1/8 inch (Azonos)",
+            "voltage": "24V DC (Azonos)",
+            "nominal_flow_rate": "950 l/min (+5% kapacitás)",
+            "operating_pressure": "0.15 - 0.7 MPa (Teljes kompatibilitás)"
+          },
+          "recommendation_badge": "AJÁNLOTT AZONNALI CSERE (0 ÁLLÁSIDŐ)"
+        },
+        {
+          "brand": "Bosch Rexroth",
+          "part_number": "5725050220",
+          "compatibility_type": "Egyenértékű Ipari Szabvány Alternatíva",
+          "list_price_huf": 48900,
+          "price_difference_pct": 9.1,
+          "lead_time": "24 órás szállítás (Budapesti központi raktár)",
+          "availability_status": "IN_STOCK_CENTRAL",
+          "technical_fit": {
+            "pneumatic_port": "G 1/8 inch",
+            "voltage": "24V DC",
+            "nominal_flow_rate": "900 l/min",
+            "operating_pressure": "2 - 8 bar"
+          },
+          "recommendation_badge": "TARTALÉK ALTERNATÍVA"
+        }
+      ],
+      "recommended_action": "SMC SY5120-5LZD-01 beszerzése a győri partner depóból a 4 napos állásidő megelőzésére."
+    },
+    "procurement": {
+      "workflow_mode": "end_to_end_procurement_autopilot",
+      "purchase_order_id": "POR-357E49AB",
+      "recommended_part_to_order": {
+        "brand": "SMC Pneumatics",
+        "part_number": "SY5120-5LZD-01",
+        "price_net_huf": 36500,
+        "supplier": "Haberkorn Kft. Győri Ipari Szakáruház",
+        "delivery_sla": "Személyes átvétel vagy 2 órás expressz futár"
+      },
+      "stock_availability": {
+        "internal_plant_gyor": 0,
+        "internal_reserve_komarom": 1,
+        "external_supplier_haberkorn_gyor": 4,
+        "supplier_name": "Haberkorn Kft. Győri Ipari Szakáruház",
+        "supplier_distance_km": 6.8,
+        "pickup_option": "Személyes átvétel vagy 2 órás expressz futár"
+      },
+      "economic_impact": {
+        "downtime_hourly_loss_huf": 350000,
+        "estimated_downtime_avoided_hours": 24,
+        "potential_production_loss_prevented_huf": 8400000,
+        "part_cost_vs_savings_ratio": "1 : 230"
+      },
+      "approval_gate": {
+        "status": "AUTO_APPROVED_IMMEDIATE_DISPATCH",
+        "requires_manual_approval": false,
+        "approval_threshold_huf": 40000,
+        "action_url": "http://localhost:8000/api/v1/procurement/approve?order_id=POR-357E49AB",
+        "note": "Az alkatrész ára kereten belül van, azonnali futárrendelés aktiválva."
+      }
+    },
+    "status": "COMPLETED"
+  }
+]

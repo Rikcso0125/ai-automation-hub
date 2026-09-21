@@ -1,0 +1,74 @@
+[
+  {
+    "timestamp": "2026-09-20T03:44:50.081358",
+    "video_id": "VID-TEST-001",
+    "video_title": "Bosch Professional GBH 2-28 Furokalapacs Teljes Teszt",
+    "source_url": "https://storage.webshop.hu/raw/bosch_gbh228.mp4",
+    "clips_count": 3,
+    "clipping_strategy": "hybrid_smart_clips",
+    "caption_style": "selectable_dual_style",
+    "pipeline_status": "READY_WITH_1CLICK_APPROVAL",
+    "top_virality_score": 96,
+    "zip_url": "https://storage.webshop.hu/exports/VID-TEST-001_reels_pack.zip"
+  },
+  {
+    "timestamp": "2026-09-20T03:44:50.082357",
+    "video_id": "VID-TEST-002",
+    "video_title": "DeWalt DCD796 Utofuroncsavarozo melysegi bemutato",
+    "source_url": "https://storage.webshop.hu/sample.mp4",
+    "clips_count": 3,
+    "clipping_strategy": "thematic_product_focus",
+    "caption_style": "minimal_premium_clean",
+    "pipeline_status": "WAITING_FOR_MARKETER_REVIEW",
+    "top_virality_score": 96,
+    "zip_url": "https://storage.webshop.hu/exports/VID-TEST-002_reels_pack.zip"
+  },
+  {
+    "timestamp": "2026-09-20T03:44:50.083354",
+    "video_id": "VID-TEST-003",
+    "video_title": "Makita Akkus Furesz 30 masodperces unboxing",
+    "source_url": "https://storage.webshop.hu/sample.mp4",
+    "clips_count": 3,
+    "clipping_strategy": "virality_score_auto",
+    "caption_style": "hormozi_mrbeast_viral",
+    "pipeline_status": "QUEUED_FOR_AUTO_PUBLISHING",
+    "top_virality_score": 96,
+    "zip_url": "https://storage.webshop.hu/exports/VID-TEST-003_reels_pack.zip"
+  },
+  {
+    "timestamp": "2026-09-20T03:44:58.211501",
+    "video_id": "VID-LIVE-BOSCH-2026",
+    "video_title": "Bosch Professional GBH 2-28 Fúrókalapács Teljes Unboxing és Betonfúrás Teszt",
+    "source_url": "https://storage.webshop.hu/raw_videos/bosch_gbh228_test_1080p.mp4",
+    "clips_count": 3,
+    "clipping_strategy": "hybrid_smart_clips",
+    "caption_style": "selectable_dual_style",
+    "pipeline_status": "READY_WITH_1CLICK_APPROVAL",
+    "top_virality_score": 96,
+    "zip_url": "https://storage.webshop.hu/exports/VID-LIVE-BOSCH-2026_reels_pack.zip"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:07.931020",
+    "video_id": "VID-2026-BOSCH-TEST",
+    "video_title": "Bosch Professional GBH 2-28 Fúrókalapács Teljes Unboxing és Betonfúrás Teszt",
+    "source_url": "https://storage.webshop.hu/raw_videos/bosch_gbh228_test_1080p.mp4",
+    "clips_count": 3,
+    "clipping_strategy": "hybrid_smart_clips",
+    "caption_style": "selectable_dual_style",
+    "pipeline_status": "READY_WITH_1CLICK_APPROVAL",
+    "top_virality_score": 96,
+    "zip_url": "https://storage.webshop.hu/exports/VID-2026-BOSCH-TEST_reels_pack.zip"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:56.859605",
+    "video_id": "VID-2026-BOSCH-TEST",
+    "video_title": "Bosch Professional GBH 2-28 Fúrókalapács Teljes Unboxing és Betonfúrás Teszt",
+    "source_url": "https://storage.webshop.hu/raw_videos/bosch_gbh228_test_1080p.mp4",
+    "clips_count": 3,
+    "clipping_strategy": "hybrid_smart_clips",
+    "caption_style": "selectable_dual_style",
+    "pipeline_status": "READY_WITH_1CLICK_APPROVAL",
+    "top_virality_score": 96,
+    "zip_url": "https://storage.webshop.hu/exports/VID-2026-BOSCH-TEST_reels_pack.zip"
+  }
+]

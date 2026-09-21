@@ -1,0 +1,46 @@
+[
+  {
+    "partner_code": "PARTNER-101",
+    "company_name": "KlímaMaster Szerelő Kft.",
+    "tax_id": "23456789-2-41",
+    "tier": "GOLD",
+    "discount_percent": 22.0,
+    "contact_person": "Nagy Zoltán Építésvezető",
+    "contact_email": "beszerzes@klimamaster.hu",
+    "payment_terms": "15 napos átutalás",
+    "credit_limit_huf": 10000000
+  },
+  {
+    "partner_code": "PARTNER-102",
+    "company_name": "TermoGépész Kivitelező Bt.",
+    "tax_id": "19876543-1-13",
+    "tier": "SILVER",
+    "discount_percent": 15.0,
+    "contact_person": "Horváth Béla Ügyvezető",
+    "contact_email": "horvath@termogepesz.hu",
+    "payment_terms": "8 napos átutalás",
+    "credit_limit_huf": 5000000
+  },
+  {
+    "partner_code": "PARTNER-103",
+    "company_name": "Hűtés-Fűtés Kisker Kft.",
+    "tax_id": "28765432-2-02",
+    "tier": "BRONZE",
+    "discount_percent": 10.0,
+    "contact_person": "Kiss Tamás Boltvezető",
+    "contact_email": "rendeles@hutesfuteskisker.hu",
+    "payment_terms": "Azonnali utánvét / Előreutalás",
+    "credit_limit_huf": 1000000
+  },
+  {
+    "partner_code": "PARTNER-104",
+    "company_name": "Industrial Facility Services Zrt.",
+    "tax_id": "11223344-2-44",
+    "tier": "PLATINUM",
+    "discount_percent": 28.0,
+    "contact_person": "Molnár Erika Beszerzési Igazgató",
+    "contact_email": "erika.molnar@ifs-hungary.hu",
+    "payment_terms": "30 napos átutalás",
+    "credit_limit_huf": 30000000
+  }
+]

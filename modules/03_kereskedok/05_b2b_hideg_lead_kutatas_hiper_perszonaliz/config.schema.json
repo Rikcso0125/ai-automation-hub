@@ -1,0 +1,72 @@
+{
+  "title": "B2B Hideg Lead-Kutatás & Hiper-perszonalizált Megkeresés Konfiguráció",
+  "type": "object",
+  "required": [
+    "company_name",
+    "sending_mode"
+  ],
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (tesztadatokkal) vagy Production (éles Apollo / Smartlead / Instantly API)."
+    },
+    "company_name": {
+      "type": "string",
+      "title": "Nagykereskedés Neve",
+      "default": "ProfiGépész Nagykereskedelmi Kft."
+    },
+    "sender_name": {
+      "type": "string",
+      "title": "Feladó Neve",
+      "default": "Kovács László"
+    },
+    "sender_title": {
+      "type": "string",
+      "title": "Feladó Pozíciója",
+      "default": "B2B Értékesítési Igazgató"
+    },
+    "sender_email": {
+      "type": "string",
+      "title": "Feladó Email Címe",
+      "default": "laszlo.kovacs@profigepesz.hu"
+    },
+    "calendar_booking_url": {
+      "type": "string",
+      "title": "Naptárfoglaló Link (10 perces megbeszéléshez)",
+      "default": "https://profigepesz.hu/talalkozo-egyeztetes"
+    },
+    "sending_mode": {
+      "type": "string",
+      "title": "Kiküldési Mód (A vagy B)",
+      "enum": [
+        "manual_approval_only",
+        "automated_drip"
+      ],
+      "default": "manual_approval_only",
+      "description": "manual_approval_only (A opció): Értékesítői jóváhagyási kapu. automated_drip (B opció): Automatizált adagolt küldés."
+    },
+    "daily_drip_limit": {
+      "type": "integer",
+      "title": "Napi Maximális Kiküldési Limit (Domainvédelem)",
+      "default": 25,
+      "description": "Bemelegített postafiókok védelme a spambe kerülés ellen."
+    },
+    "auto_stop_on_reply": {
+      "type": "boolean",
+      "title": "Levéllánc Automatikus Leállítása Válasz Esetén",
+      "default": true,
+      "description": "Ha a partner válaszol vagy időpontot foglal, a további emailek automatikusan törlődnek."
+    },
+    "leads_db_path": {
+      "type": "string",
+      "title": "Hideg Lead Adatbázis Útvonala",
+      "default": "data/b2b_hideg_leadek_naplo.json"
+    }
+  }
+}

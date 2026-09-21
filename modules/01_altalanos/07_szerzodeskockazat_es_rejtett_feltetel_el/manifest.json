@@ -1,0 +1,8 @@
+{
+  "id": "szerzodeskockazat_es_rejtett_feltetel_el",
+  "title": "Szerződéskockázat és Rejtett Feltétel Elemző (Red-Flag Audit)",
+  "category": "altalanos",
+  "icon": "📝",
+  "version": "1.0.0",
+  "description": "60 másodperces AI jogi átvilágítás PDF és Word (.docx) szerződésekre. Kiszűri az aránytalan kötbéreket, rejtett automatikus hosszabbodást és egyoldalú csapdákat 3 kockázati szinten, és kész jogi ellenjavaslatot fogalmaz meg a partner felé."
+}

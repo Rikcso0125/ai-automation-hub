@@ -1,0 +1,152 @@
+[
+  {
+    "timestamp": "2026-09-20T03:48:58.144786",
+    "event_id": "ANOM-TEST-001",
+    "store_name": "ProfiSzerszam Webshop",
+    "gateway_status": "CRITICAL_GATEWAY_OUTAGE",
+    "coupon_circuit_breaker": true,
+    "intervention": {
+      "coupon_system_action": "COUPON_TEMPORARILY_DISABLED (SUPERVIP50)",
+      "order_handling_action": "ORDER_HELD_FOR_SUPERVISOR_CONFIRMATION",
+      "requires_human_approval": true,
+      "emergency_review_url": "https://admin.webshop.hu/security/anomalies/ORD-TMP-99410/review",
+      "action_summary": "Kupon zárolva az újabb visszaélések megelőzésére. A meglévő rendelés (ORD-TMP-99410) méltányossági felülvizsgálatra átadva a boltvezetőnek."
+    },
+    "status": "ANOMALY_HANDLED"
+  },
+  {
+    "timestamp": "2026-09-20T03:48:58.147794",
+    "event_id": "ANOM-TEST-002",
+    "store_name": "ProfiSzerszam Webshop",
+    "gateway_status": "CRITICAL_GATEWAY_OUTAGE",
+    "coupon_circuit_breaker": false,
+    "intervention": {
+      "coupon_system_action": "COUPON_TEMPORARILY_DISABLED (NORMAL10)",
+      "order_handling_action": "ORDER_HELD_FOR_SUPERVISOR_CONFIRMATION",
+      "requires_human_approval": true,
+      "emergency_review_url": "https://admin.webshop.hu/security/anomalies/ORD-TMP-99411/review",
+      "action_summary": "Kupon zárolva az újabb visszaélések megelőzésére. A meglévő rendelés (ORD-TMP-99411) méltányossági felülvizsgálatra átadva a boltvezetőnek."
+    },
+    "status": "ANOMALY_HANDLED"
+  },
+  {
+    "timestamp": "2026-09-20T03:48:58.148777",
+    "event_id": "ANOM-TEST-003",
+    "store_name": "ProfiSzerszam Webshop",
+    "gateway_status": "GATEWAY_HEALTHY",
+    "coupon_circuit_breaker": false,
+    "intervention": {
+      "coupon_system_action": "COUPON_TEMPORARILY_DISABLED (SPRING10)",
+      "order_handling_action": "ORDER_HELD_FOR_SUPERVISOR_CONFIRMATION",
+      "requires_human_approval": true,
+      "emergency_review_url": "https://admin.webshop.hu/security/anomalies/ORD-UNKNOWN/review",
+      "action_summary": "Kupon zárolva az újabb visszaélések megelőzésére. A meglévő rendelés (ORD-UNKNOWN) méltányossági felülvizsgálatra átadva a boltvezetőnek."
+    },
+    "status": "ANOMALY_HANDLED"
+  },
+  {
+    "timestamp": "2026-09-20T03:49:07.748410",
+    "event_id": "ANOM-LIVE-TEST-999",
+    "store_name": "ProfiSzerszam Webáruház",
+    "gateway_status": "CRITICAL_GATEWAY_OUTAGE",
+    "coupon_circuit_breaker": true,
+    "intervention": {
+      "coupon_system_action": "COUPON_TEMPORARILY_DISABLED (SUPERVIP50)",
+      "order_handling_action": "ORDER_HELD_FOR_SUPERVISOR_CONFIRMATION",
+      "requires_human_approval": true,
+      "emergency_review_url": "https://admin.webshop.hu/security/anomalies/ORD-LIVE-90412/review",
+      "action_summary": "Kupon zárolva az újabb visszaélések megelőzésére. A meglévő rendelés (ORD-LIVE-90412) méltányossági felülvizsgálatra átadva a boltvezetőnek."
+    },
+    "status": "ANOMALY_HANDLED"
+  },
+  {
+    "timestamp": "2026-09-20T03:49:26.424363",
+    "event_id": "ANOM-TEST-001",
+    "store_name": "ProfiSzerszam Webshop",
+    "gateway_status": "CRITICAL_GATEWAY_OUTAGE",
+    "coupon_circuit_breaker": true,
+    "intervention": {
+      "coupon_system_action": "COUPON_TEMPORARILY_DISABLED (SUPERVIP50)",
+      "order_handling_action": "ORDER_HELD_FOR_SUPERVISOR_CONFIRMATION",
+      "requires_human_approval": true,
+      "emergency_review_url": "https://admin.webshop.hu/security/anomalies/ORD-TMP-99410/review",
+      "action_summary": "Kupon zárolva az újabb visszaélések megelőzésére. A meglévő rendelés (ORD-TMP-99410) méltányossági felülvizsgálatra átadva a boltvezetőnek."
+    },
+    "status": "ANOMALY_HANDLED"
+  },
+  {
+    "timestamp": "2026-09-20T03:49:26.426361",
+    "event_id": "ANOM-TEST-002",
+    "store_name": "ProfiSzerszam Webshop",
+    "gateway_status": "CRITICAL_GATEWAY_OUTAGE",
+    "coupon_circuit_breaker": false,
+    "intervention": {
+      "coupon_system_action": "COUPON_TEMPORARILY_DISABLED (NORMAL10)",
+      "order_handling_action": "ORDER_HELD_FOR_SUPERVISOR_CONFIRMATION",
+      "requires_human_approval": true,
+      "emergency_review_url": "https://admin.webshop.hu/security/anomalies/ORD-TMP-99411/review",
+      "action_summary": "Kupon zárolva az újabb visszaélések megelőzésére. A meglévő rendelés (ORD-TMP-99411) méltányossági felülvizsgálatra átadva a boltvezetőnek."
+    },
+    "status": "ANOMALY_HANDLED"
+  },
+  {
+    "timestamp": "2026-09-20T03:49:26.427393",
+    "event_id": "ANOM-TEST-003",
+    "store_name": "ProfiSzerszam Webshop",
+    "gateway_status": "GATEWAY_HEALTHY",
+    "coupon_circuit_breaker": false,
+    "intervention": {
+      "coupon_system_action": "NONE_HEALTHY",
+      "order_handling_action": "ORDER_PROCESSED_SUCCESSFULLY",
+      "requires_human_approval": false,
+      "emergency_review_url": null,
+      "action_summary": "Nincs anomália, a tranzakció zökkenőmentesen és biztonságosan végrehajtható."
+    },
+    "status": "ANOMALY_HANDLED"
+  },
+  {
+    "timestamp": "2026-09-20T03:49:33.317406",
+    "event_id": "ANOM-LIVE-TEST-999",
+    "store_name": "ProfiSzerszam Webáruház",
+    "gateway_status": "CRITICAL_GATEWAY_OUTAGE",
+    "coupon_circuit_breaker": true,
+    "intervention": {
+      "coupon_system_action": "COUPON_TEMPORARILY_DISABLED (SUPERVIP50)",
+      "order_handling_action": "ORDER_HELD_FOR_SUPERVISOR_CONFIRMATION",
+      "requires_human_approval": true,
+      "emergency_review_url": "https://admin.webshop.hu/security/anomalies/ORD-LIVE-90412/review",
+      "action_summary": "Kupon zárolva az újabb visszaélések megelőzésére. A meglévő rendelés (ORD-LIVE-90412) méltányossági felülvizsgálatra átadva a boltvezetőnek."
+    },
+    "status": "ANOMALY_HANDLED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:08.996260",
+    "event_id": "ANOM-2026-CHECK-901",
+    "store_name": "ProfiSzerszam Webáruház",
+    "gateway_status": "CRITICAL_GATEWAY_OUTAGE",
+    "coupon_circuit_breaker": true,
+    "intervention": {
+      "coupon_system_action": "COUPON_TEMPORARILY_DISABLED (SUPERVIP50)",
+      "order_handling_action": "ORDER_HELD_FOR_SUPERVISOR_CONFIRMATION",
+      "requires_human_approval": true,
+      "emergency_review_url": "https://admin.webshop.hu/security/anomalies/ORD-TMP-99410/review",
+      "action_summary": "Kupon zárolva az újabb visszaélések megelőzésére. A meglévő rendelés (ORD-TMP-99410) méltányossági felülvizsgálatra átadva a boltvezetőnek."
+    },
+    "status": "ANOMALY_HANDLED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:57.850818",
+    "event_id": "ANOM-2026-CHECK-901",
+    "store_name": "ProfiSzerszam Webáruház",
+    "gateway_status": "CRITICAL_GATEWAY_OUTAGE",
+    "coupon_circuit_breaker": true,
+    "intervention": {
+      "coupon_system_action": "COUPON_TEMPORARILY_DISABLED (SUPERVIP50)",
+      "order_handling_action": "ORDER_HELD_FOR_SUPERVISOR_CONFIRMATION",
+      "requires_human_approval": true,
+      "emergency_review_url": "https://admin.webshop.hu/security/anomalies/ORD-TMP-99410/review",
+      "action_summary": "Kupon zárolva az újabb visszaélések megelőzésére. A meglévő rendelés (ORD-TMP-99410) méltányossági felülvizsgálatra átadva a boltvezetőnek."
+    },
+    "status": "ANOMALY_HANDLED"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "module_id": "08_ajanlat_megnyitas_kovetes_hoterkep_riasz",
+  "event_type": "OFFER_OPENED_AND_VIEWED",
+  "quote_id": "AJ-20260920-6067",
+  "sales_rep": {
+    "id": "SALES-001",
+    "name": "Kovács László",
+    "phone": "+36 30 111 2233",
+    "preferred_channel": "whatsapp"
+  },
+  "customer": {
+    "name": "Kiss Péter",
+    "phone": "+36 30 987 6543",
+    "email": "peter.kiss@example.hu",
+    "company": "Kiss & Társa Kft."
+  },
+  "telemetry": {
+    "session_number": 2,
+    "device_type": "Mobile (iPhone / Safari)",
+    "total_dwell_seconds": 118,
+    "scroll_depth_percent": 95,
+    "sections_visited": {
+      "pricing_packages": {
+        "dwell_seconds": 65,
+        "percentage": 55
+      },
+      "warranty_terms": {
+        "dwell_seconds": 32,
+        "percentage": 27
+      },
+      "technical_specs": {
+        "dwell_seconds": 15,
+        "percentage": 13
+      },
+      "header": {
+        "dwell_seconds": 6,
+        "percentage": 5
+      }
+    },
+    "clicked_elements": [
+      "view_better_package_details",
+      "read_warranty_faq"
+    ]
+  }
+}

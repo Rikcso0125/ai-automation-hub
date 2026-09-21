@@ -1,0 +1,484 @@
+[
+  {
+    "sync_event_id": "SYNC-1789867391652",
+    "timestamp": "2026-09-20T03:23:11.652890",
+    "event_type": "ORDER_PLACED",
+    "source_channel": "webshop",
+    "sku": "MAKITA-DHP-484",
+    "product_name": "Makita DHP484Z Akkus Ütvefúró-csavarbehajtó",
+    "quantity_affected": 1,
+    "inventory_state": {
+      "master_stock": 1,
+      "reserved_stock": 0,
+      "available_stock": 1,
+      "channel_visibility": {
+        "webshop": 1,
+        "pos": 1,
+        "emag": 0,
+        "alza": 0
+      }
+    },
+    "pricing_state": {
+      "pricing_mode": "margin_protected",
+      "channel_prices_gross": {
+        "webshop": 64990,
+        "pos": 64990,
+        "emag": 75390,
+        "alza": 74090
+      },
+      "channel_margins_pct": {
+        "webshop": 12.1,
+        "pos": 12.1,
+        "emag": 24.2,
+        "alza": 22.9
+      }
+    },
+    "buffer_strategy_applied": "fixed_buffer",
+    "pos_sync_status": {},
+    "dispatch_results": {
+      "emag": {
+        "target": "emag",
+        "stock_pushed": 0,
+        "price_pushed_gross": 75390,
+        "api_status": "200_OK",
+        "latency_ms": 145
+      },
+      "alza": {
+        "target": "alza",
+        "stock_pushed": 0,
+        "price_pushed_gross": 74090,
+        "api_status": "200_OK",
+        "latency_ms": 130
+      },
+      "pos": {
+        "target": "pos",
+        "stock_pushed": 1,
+        "price_pushed_gross": 64990,
+        "api_status": "200_OK",
+        "latency_ms": 130
+      }
+    },
+    "execution_sla": {
+      "elapsed_ms": 45.0,
+      "target_sla_ms": 3000,
+      "sla_met": true
+    },
+    "system_flags": [
+      "BUFFER_ZEROED_ON_MARKETPLACES_OVERSOLD_PROTECTION",
+      "COMMISSION_ABSORBING_PRICE_PROTECTION_APPLIED"
+    ]
+  },
+  {
+    "sync_event_id": "SYNC-1789867391654",
+    "timestamp": "2026-09-20T03:23:11.654874",
+    "event_type": "ORDER_PLACED",
+    "source_channel": "emag",
+    "sku": "BOSCH-GSR-18V-55",
+    "product_name": "Bosch Professional GSR 18V-55 Akkus Fúrócsavarozó",
+    "quantity_affected": 1,
+    "inventory_state": {
+      "master_stock": 6,
+      "reserved_stock": 0,
+      "available_stock": 6,
+      "channel_visibility": {
+        "webshop": 6,
+        "pos": 6,
+        "emag": 6,
+        "alza": 6
+      }
+    },
+    "pricing_state": {
+      "pricing_mode": "margin_protected",
+      "channel_prices_gross": {
+        "webshop": 49990,
+        "pos": 49990,
+        "emag": 57990,
+        "alza": 56990
+      },
+      "channel_margins_pct": {
+        "webshop": 13.6,
+        "pos": 13.6,
+        "emag": 25.5,
+        "alza": 24.2
+      }
+    },
+    "buffer_strategy_applied": "fixed_buffer",
+    "pos_sync_status": {},
+    "dispatch_results": {
+      "webshop": {
+        "target": "webshop",
+        "stock_pushed": 6,
+        "price_pushed_gross": 49990,
+        "api_status": "200_OK",
+        "latency_ms": 85
+      },
+      "alza": {
+        "target": "alza",
+        "stock_pushed": 6,
+        "price_pushed_gross": 56990,
+        "api_status": "200_OK",
+        "latency_ms": 130
+      },
+      "pos": {
+        "target": "pos",
+        "stock_pushed": 6,
+        "price_pushed_gross": 49990,
+        "api_status": "200_OK",
+        "latency_ms": 130
+      }
+    },
+    "execution_sla": {
+      "elapsed_ms": 45.0,
+      "target_sla_ms": 3000,
+      "sla_met": true
+    },
+    "system_flags": [
+      "COMMISSION_ABSORBING_PRICE_PROTECTION_APPLIED"
+    ]
+  },
+  {
+    "sync_event_id": "SYNC-1789867391655",
+    "timestamp": "2026-09-20T03:23:11.655872",
+    "event_type": "POS_SALE",
+    "source_channel": "pos",
+    "sku": "BOSCH-GSR-18V-55",
+    "product_name": "Bosch Professional GSR 18V-55 Akkus Fúrócsavarozó",
+    "quantity_affected": 3,
+    "inventory_state": {
+      "master_stock": 4,
+      "reserved_stock": 0,
+      "available_stock": 4,
+      "channel_visibility": {
+        "webshop": 4,
+        "pos": 4,
+        "emag": 4,
+        "alza": 4
+      }
+    },
+    "pricing_state": {
+      "pricing_mode": "margin_protected",
+      "channel_prices_gross": {
+        "webshop": 49990,
+        "pos": 49990,
+        "emag": 57990,
+        "alza": 56990
+      },
+      "channel_margins_pct": {
+        "webshop": 13.6,
+        "pos": 13.6,
+        "emag": 25.5,
+        "alza": 24.2
+      }
+    },
+    "buffer_strategy_applied": "fixed_buffer",
+    "pos_sync_status": {
+      "mode": "hybrid_instant_escalation",
+      "status": "TRIGGERED_INSTANT_PUSH_DUE_TO_LOW_STOCK",
+      "broadcast_sla_ms": 140,
+      "message": "Alacsony készlet (4 db <= 5 db) miatt azonnali szinkron lefutott!"
+    },
+    "dispatch_results": {
+      "webshop": {
+        "target": "webshop",
+        "stock_pushed": 4,
+        "price_pushed_gross": 49990,
+        "api_status": "200_OK",
+        "latency_ms": 85
+      },
+      "emag": {
+        "target": "emag",
+        "stock_pushed": 4,
+        "price_pushed_gross": 57990,
+        "api_status": "200_OK",
+        "latency_ms": 145
+      },
+      "alza": {
+        "target": "alza",
+        "stock_pushed": 4,
+        "price_pushed_gross": 56990,
+        "api_status": "200_OK",
+        "latency_ms": 130
+      }
+    },
+    "execution_sla": {
+      "elapsed_ms": 45.0,
+      "target_sla_ms": 3000,
+      "sla_met": true
+    },
+    "system_flags": [
+      "COMMISSION_ABSORBING_PRICE_PROTECTION_APPLIED"
+    ]
+  },
+  {
+    "sync_event_id": "SYNC-1789867398640",
+    "timestamp": "2026-09-20T03:23:18.640845",
+    "event_type": "ORDER_PLACED",
+    "source_channel": "emag",
+    "sku": "BOSCH-GSR-18V-55",
+    "product_name": "Bosch Professional GSR 18V-55 Akkus Fúrócsavarozó",
+    "quantity_affected": 1,
+    "inventory_state": {
+      "master_stock": 6,
+      "reserved_stock": 0,
+      "available_stock": 6,
+      "channel_visibility": {
+        "webshop": 6,
+        "pos": 6,
+        "emag": 6,
+        "alza": 6
+      }
+    },
+    "pricing_state": {
+      "pricing_mode": "margin_protected",
+      "channel_prices_gross": {
+        "webshop": 49990,
+        "pos": 49990,
+        "emag": 57990,
+        "alza": 56990
+      },
+      "channel_margins_pct": {
+        "webshop": 13.6,
+        "pos": 13.6,
+        "emag": 25.5,
+        "alza": 24.2
+      }
+    },
+    "buffer_strategy_applied": "fixed_buffer",
+    "pos_sync_status": {},
+    "dispatch_results": {
+      "webshop": {
+        "target": "webshop",
+        "stock_pushed": 6,
+        "price_pushed_gross": 49990,
+        "api_status": "200_OK",
+        "latency_ms": 85
+      },
+      "alza": {
+        "target": "alza",
+        "stock_pushed": 6,
+        "price_pushed_gross": 56990,
+        "api_status": "200_OK",
+        "latency_ms": 130
+      },
+      "pos": {
+        "target": "pos",
+        "stock_pushed": 6,
+        "price_pushed_gross": 49990,
+        "api_status": "200_OK",
+        "latency_ms": 130
+      }
+    },
+    "execution_sla": {
+      "elapsed_ms": 45.0,
+      "target_sla_ms": 3000,
+      "sla_met": true
+    },
+    "system_flags": [
+      "COMMISSION_ABSORBING_PRICE_PROTECTION_APPLIED"
+    ]
+  },
+  {
+    "sync_event_id": "SYNC-1789867405961",
+    "timestamp": "2026-09-20T03:23:25.961363",
+    "event_type": "ORDER_PLACED",
+    "source_channel": "emag",
+    "sku": "BOSCH-GSR-18V-55",
+    "product_name": "Bosch Professional GSR 18V-55 Akkus Fúrócsavarozó",
+    "quantity_affected": 1,
+    "inventory_state": {
+      "master_stock": 6,
+      "reserved_stock": 0,
+      "available_stock": 6,
+      "channel_visibility": {
+        "webshop": 6,
+        "pos": 6,
+        "emag": 6,
+        "alza": 6
+      }
+    },
+    "pricing_state": {
+      "pricing_mode": "margin_protected",
+      "channel_prices_gross": {
+        "webshop": 49990,
+        "pos": 49990,
+        "emag": 57990,
+        "alza": 56990
+      },
+      "channel_margins_pct": {
+        "webshop": 13.6,
+        "pos": 13.6,
+        "emag": 25.5,
+        "alza": 24.2
+      }
+    },
+    "buffer_strategy_applied": "fixed_buffer",
+    "pos_sync_status": {},
+    "dispatch_results": {
+      "webshop": {
+        "target": "webshop",
+        "stock_pushed": 6,
+        "price_pushed_gross": 49990,
+        "api_status": "200_OK",
+        "latency_ms": 85
+      },
+      "alza": {
+        "target": "alza",
+        "stock_pushed": 6,
+        "price_pushed_gross": 56990,
+        "api_status": "200_OK",
+        "latency_ms": 130
+      },
+      "pos": {
+        "target": "pos",
+        "stock_pushed": 6,
+        "price_pushed_gross": 49990,
+        "api_status": "200_OK",
+        "latency_ms": 130
+      }
+    },
+    "execution_sla": {
+      "elapsed_ms": 45.0,
+      "target_sla_ms": 3000,
+      "sla_met": true
+    },
+    "system_flags": [
+      "COMMISSION_ABSORBING_PRICE_PROTECTION_APPLIED"
+    ]
+  },
+  {
+    "sync_event_id": "SYNC-1789870028694",
+    "timestamp": "2026-09-20T04:07:08.694858",
+    "event_type": "ORDER_PLACED",
+    "source_channel": "emag",
+    "sku": "BOSCH-GSR-18V-55",
+    "product_name": "Bosch Professional GSR 18V-55 Akkus Fúrócsavarozó",
+    "quantity_affected": 1,
+    "inventory_state": {
+      "master_stock": 6,
+      "reserved_stock": 0,
+      "available_stock": 6,
+      "channel_visibility": {
+        "webshop": 6,
+        "pos": 6,
+        "emag": 6,
+        "alza": 6
+      }
+    },
+    "pricing_state": {
+      "pricing_mode": "margin_protected",
+      "channel_prices_gross": {
+        "webshop": 49990,
+        "pos": 49990,
+        "emag": 57990,
+        "alza": 56990
+      },
+      "channel_margins_pct": {
+        "webshop": 13.6,
+        "pos": 13.6,
+        "emag": 25.5,
+        "alza": 24.2
+      }
+    },
+    "buffer_strategy_applied": "fixed_buffer",
+    "pos_sync_status": {},
+    "dispatch_results": {
+      "webshop": {
+        "target": "webshop",
+        "stock_pushed": 6,
+        "price_pushed_gross": 49990,
+        "api_status": "200_OK",
+        "latency_ms": 85
+      },
+      "alza": {
+        "target": "alza",
+        "stock_pushed": 6,
+        "price_pushed_gross": 56990,
+        "api_status": "200_OK",
+        "latency_ms": 130
+      },
+      "pos": {
+        "target": "pos",
+        "stock_pushed": 6,
+        "price_pushed_gross": 49990,
+        "api_status": "200_OK",
+        "latency_ms": 130
+      }
+    },
+    "execution_sla": {
+      "elapsed_ms": 46.0,
+      "target_sla_ms": 3000,
+      "sla_met": true
+    },
+    "system_flags": [
+      "COMMISSION_ABSORBING_PRICE_PROTECTION_APPLIED"
+    ]
+  },
+  {
+    "sync_event_id": "SYNC-1789870077543",
+    "timestamp": "2026-09-20T04:07:57.543086",
+    "event_type": "ORDER_PLACED",
+    "source_channel": "emag",
+    "sku": "BOSCH-GSR-18V-55",
+    "product_name": "Bosch Professional GSR 18V-55 Akkus Fúrócsavarozó",
+    "quantity_affected": 1,
+    "inventory_state": {
+      "master_stock": 6,
+      "reserved_stock": 0,
+      "available_stock": 6,
+      "channel_visibility": {
+        "webshop": 6,
+        "pos": 6,
+        "emag": 6,
+        "alza": 6
+      }
+    },
+    "pricing_state": {
+      "pricing_mode": "margin_protected",
+      "channel_prices_gross": {
+        "webshop": 49990,
+        "pos": 49990,
+        "emag": 57990,
+        "alza": 56990
+      },
+      "channel_margins_pct": {
+        "webshop": 13.6,
+        "pos": 13.6,
+        "emag": 25.5,
+        "alza": 24.2
+      }
+    },
+    "buffer_strategy_applied": "fixed_buffer",
+    "pos_sync_status": {},
+    "dispatch_results": {
+      "webshop": {
+        "target": "webshop",
+        "stock_pushed": 6,
+        "price_pushed_gross": 49990,
+        "api_status": "200_OK",
+        "latency_ms": 85
+      },
+      "alza": {
+        "target": "alza",
+        "stock_pushed": 6,
+        "price_pushed_gross": 56990,
+        "api_status": "200_OK",
+        "latency_ms": 130
+      },
+      "pos": {
+        "target": "pos",
+        "stock_pushed": 6,
+        "price_pushed_gross": 49990,
+        "api_status": "200_OK",
+        "latency_ms": 130
+      }
+    },
+    "execution_sla": {
+      "elapsed_ms": 45.0,
+      "target_sla_ms": 3000,
+      "sla_met": true
+    },
+    "system_flags": [
+      "COMMISSION_ABSORBING_PRICE_PROTECTION_APPLIED"
+    ]
+  }
+]

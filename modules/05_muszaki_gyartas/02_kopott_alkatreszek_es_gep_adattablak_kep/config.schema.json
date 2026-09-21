@@ -1,0 +1,84 @@
+{
+  "title": "Kopott Alkatrészek és Gép-Adattáblák Képazonosítása Konfiguráció",
+  "type": "object",
+  "required": [
+    "ocr_reconstruction_mode",
+    "catalog_matching_depth",
+    "field_workflow_mode"
+  ],
+  "properties": {
+    "ocr_reconstruction_mode": {
+      "type": "string",
+      "title": "Képfelismerési és OCR Rekonstrukciós Mód",
+      "enum": [
+        "standard_ocr",
+        "deep_vision_contrast",
+        "hybrid_fuzzy_catalog_candidate"
+      ],
+      "default": "hybrid_fuzzy_catalog_candidate",
+      "description": "Standard OCR, Mély Vision AI képjavítás vagy Hibrid Fuzzy Gépkönyvi Rekonstrukció."
+    },
+    "catalog_matching_depth": {
+      "type": "string",
+      "title": "Robbantott Ábra és Katalógus Párosítási Mélység",
+      "enum": [
+        "oem_only",
+        "exploded_view_pos",
+        "full_cross_reference_aftermarket"
+      ],
+      "default": "full_cross_reference_aftermarket",
+      "description": "Csak gyári OEM cikkszám, Robbantott ábra pozíció vagy Teljes kompatibilitási helyettesítő mátrix."
+    },
+    "field_workflow_mode": {
+      "type": "string",
+      "title": "Terepi Karbantartói és Beszerzési Munkafolyamat",
+      "enum": [
+        "datasheet_only",
+        "internal_stock_sync",
+        "end_to_end_procurement_autopilot"
+      ],
+      "default": "end_to_end_procurement_autopilot",
+      "description": "Adatlap megjelenítés, Belső raktárkészlet szinkron vagy Teljes End-to-End beszerzési autopilot."
+    },
+    "min_confidence_threshold": {
+      "type": "number",
+      "title": "Minimális Megbízhatósági Küszöb (0.0 - 1.0)",
+      "default": 0.85,
+      "description": "Ezen érték alatt a rendszer emberi felülvizsgálatra és tisztább fotóra kéri a szerelőt."
+    },
+    "require_chief_approval_over_huf": {
+      "type": "integer",
+      "title": "Műszaki Vezetői Jóváhagyási Értékhatár (Ft)",
+      "default": 50000,
+      "description": "Ezen összeg feletti alkatrészrendelésnél kötelező vezetői jóváhagyás szükséges."
+    },
+    "supported_oem_brands": {
+      "type": "array",
+      "title": "Támogatott Gyártói Katalógusok",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "Festo",
+        "Bosch Rexroth",
+        "SKF",
+        "Siemens",
+        "SMC",
+        "Schneider Electric",
+        "Danfoss"
+      ]
+    },
+    "notification_channel": {
+      "type": "string",
+      "title": "Karbantartási Riasztási Csatorna",
+      "default": "telegram",
+      "enum": [
+        "telegram",
+        "email",
+        "sms",
+        "slack",
+        "webhook"
+      ]
+    }
+  }
+}

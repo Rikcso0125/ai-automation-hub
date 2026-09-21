@@ -1,0 +1,66 @@
+[
+  {
+    "timestamp": "2026-09-20 01:45:00",
+    "incident_id": "INC-2026-0891",
+    "source_module": "02_szamla_ocr_nav",
+    "operation": "NAV_ONLINE_SZAMLA_SYNC",
+    "error": "A NAV Online Szamla szerver nem valaszolt 30 masodpercen belul (HTTP 504 Gateway Timeout).",
+    "payload": {
+      "source_module": "02_szamla_ocr_nav",
+      "operation": "NAV_ONLINE_SZAMLA_SYNC",
+      "error_code": "NAV_TIMEOUT_504",
+      "error_message": "A NAV Online Szamla szerver nem valaszolt 30 masodpercen belul (HTTP 504 Gateway Timeout).",
+      "affected_invoice_id": "SZAMLA-2026-0891",
+      "gross_amount_huf": 1485000
+    },
+    "status": "QUEUED_SAFELY_ON_DISK"
+  },
+  {
+    "timestamp": "2026-09-20 01:45:00",
+    "incident_id": "INC-2026-0891",
+    "source_module": "02_szamla_ocr_nav",
+    "operation": "NAV_ONLINE_SZAMLA_SYNC",
+    "error": "A NAV Online Szamla szerver nem valaszolt 30 masodpercen belul (HTTP 504 Gateway Timeout).",
+    "payload": {
+      "source_module": "02_szamla_ocr_nav",
+      "operation": "NAV_ONLINE_SZAMLA_SYNC",
+      "error_code": "NAV_TIMEOUT_504",
+      "error_message": "A NAV Online Szamla szerver nem valaszolt 30 masodpercen belul (HTTP 504 Gateway Timeout).",
+      "affected_invoice_id": "SZAMLA-2026-0891",
+      "gross_amount_huf": 1485000
+    },
+    "status": "QUEUED_SAFELY_ON_DISK"
+  },
+  {
+    "timestamp": "2026-09-20 01:45:00",
+    "incident_id": "INC-2026-0891",
+    "source_module": "02_szamla_ocr_nav",
+    "operation": "NAV_ONLINE_SZAMLA_SYNC",
+    "error": "A NAV Online Szamla szerver nem valaszolt 30 masodpercen belul (HTTP 504 Gateway Timeout).",
+    "payload": {
+      "source_module": "02_szamla_ocr_nav",
+      "operation": "NAV_ONLINE_SZAMLA_SYNC",
+      "error_code": "NAV_TIMEOUT_504",
+      "error_message": "A NAV Online Szamla szerver nem valaszolt 30 masodpercen belul (HTTP 504 Gateway Timeout).",
+      "affected_invoice_id": "SZAMLA-2026-0891",
+      "gross_amount_huf": 1485000
+    },
+    "status": "QUEUED_SAFELY_ON_DISK"
+  },
+  {
+    "timestamp": "2026-09-20 01:45:00",
+    "incident_id": "INC-2026-0891",
+    "source_module": "02_szamla_ocr_nav",
+    "operation": "NAV_ONLINE_SZAMLA_SYNC",
+    "error": "A NAV Online Szamla szerver nem valaszolt 30 masodpercen belul (HTTP 504 Gateway Timeout).",
+    "payload": {
+      "source_module": "02_szamla_ocr_nav",
+      "operation": "NAV_ONLINE_SZAMLA_SYNC",
+      "error_code": "NAV_TIMEOUT_504",
+      "error_message": "A NAV Online Szamla szerver nem valaszolt 30 masodpercen belul (HTTP 504 Gateway Timeout).",
+      "affected_invoice_id": "SZAMLA-2026-0891",
+      "gross_amount_huf": 1485000
+    },
+    "status": "QUEUED_SAFELY_ON_DISK"
+  }
+]

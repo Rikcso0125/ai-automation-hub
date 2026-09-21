@@ -1,0 +1,28 @@
+{
+  "action": "DE_ANONYMIZE_VISITOR",
+  "session_id": "SESS-2026-99120",
+  "ip_address": "194.149.24.88",
+  "isp_name": "GTS Datanet / Corporate Leased Line",
+  "domain": "duna-epgep.hu",
+  "company_hint": "Duna-ÉpítőGépész Kivitelező Zrt.",
+  "time_on_site_seconds": 245,
+  "visit_count": 2,
+  "pages_visited": [
+    {
+      "url": "/fooldal",
+      "duration_seconds": 15
+    },
+    {
+      "url": "/termekek/ipari-klimak-es-hoszivattyuk",
+      "duration_seconds": 90
+    },
+    {
+      "url": "/nagyker-viszonteladoi-arlista",
+      "duration_seconds": 110
+    },
+    {
+      "url": "/kapcsolat-nagykereskedes",
+      "duration_seconds": 30
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Conversational Naptárkezelés & Időpontfoglaló Konfiguráció",
+  "type": "object",
+  "required": [
+    "company_name",
+    "calendar_system",
+    "buffer_time_minutes"
+  ],
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "Vállalkozás Neve",
+      "default": "ProfiTech Szolgáltató Kft."
+    },
+    "active_channels": {
+      "type": "string",
+      "title": "Aktív Kommunikációs Csatornák",
+      "enum": [
+        "Minden csatorna aktív (Weboldali Widget, WhatsApp Business, Messenger)",
+        "Csak Weboldali Lebegő Chat Widget",
+        "Csak WhatsApp Business",
+        "Csak Facebook Messenger"
+      ],
+      "default": "Minden csatorna aktív (Weboldali Widget, WhatsApp Business, Messenger)",
+      "description": "A chatbot egyaránt beágyazható a weboldalra és összekapcsolható a közösségi csatornákkal."
+    },
+    "calendar_system": {
+      "type": "string",
+      "title": "Naptár Rendszer (Kétirányú Szinkron)",
+      "enum": [
+        "Google Calendar API",
+        "Microsoft Outlook 365",
+        "Cal.com / Belső Naptár"
+      ],
+      "default": "Google Calendar API"
+    },
+    "buffer_time_minutes": {
+      "type": "integer",
+      "title": "Utazási & Felkészülési Pufferidő (Perc)",
+      "default": 30,
+      "description": "Ennyi perc szünetet tart automatikusan a naptárban két találkozó között."
+    },
+    "meeting_duration_minutes": {
+      "type": "integer",
+      "title": "Találkozó Alapértelmezett Hossza (Perc)",
+      "default": 45
+    },
+    "staff_assignment_mode": {
+      "type": "string",
+      "title": "Munkatárs / Szakember Hozzárendelés",
+      "enum": [
+        "Automatikus Round-Robin (Egyenletes elosztás)",
+        "Szakértelem / Témakör alapú hozzárendelés",
+        "Fixen a vezető naptára"
+      ],
+      "default": "Automatikus Round-Robin (Egyenletes elosztás)"
+    },
+    "require_reschedule_confirmation": {
+      "type": "boolean",
+      "title": "Kötelező Megerősítés Időpont Módosításakor",
+      "default": true,
+      "description": "Ha az ügyfél módosítást kér, a bot visszakérdez megerősítésre a naptár végleges átírása előtt."
+    },
+    "cancellation_notice_hours": {
+      "type": "integer",
+      "title": "Díjmentes Lemondási Határidő (Óra)",
+      "default": 12
+    }
+  }
+}

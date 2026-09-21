@@ -1,0 +1,562 @@
+[
+  {
+    "timestamp": "2026-09-20T04:02:00.008415",
+    "survey_id": "SRV-2026-0920-07",
+    "project_code": "PRJ-2026-VG-C4",
+    "client": "Greens Office Hungary Kft.",
+    "materials": {
+      "calculation_mode_applied": "hybrid_multi_input_scrap_optimization",
+      "total_materials_cost_net_huf": 5820000,
+      "materials_itemized": [
+        {
+          "category": "Gipszkarton Falazat",
+          "material_name": "Knauf Diamant 12.5 mm hanggátló és tűzgátló gipszkarton lap",
+          "net_requirement": 942.6,
+          "waste_allowance_pct": 10.0,
+          "gross_order_quantity": 1036.8,
+          "unit": "m2",
+          "unit_cost_net_huf": 1850,
+          "total_cost_net_huf": 1918080
+        },
+        {
+          "category": "Gipszkarton Profilváz",
+          "material_name": "CW 75 és UW 75 horganyzott acélprofilok + rögzítő dűbelek",
+          "net_requirement": 435.0,
+          "waste_allowance_pct": 10.0,
+          "gross_order_quantity": 480.0,
+          "unit": "fm",
+          "unit_cost_net_huf": 1450,
+          "total_cost_net_huf": 696000
+        },
+        {
+          "category": "Hangszigetelés",
+          "material_name": "Isover Akusto 75 mm akusztikai ásványgyapot szigetelés",
+          "net_requirement": 235.6,
+          "waste_allowance_pct": 5.0,
+          "gross_order_quantity": 247.4,
+          "unit": "m2",
+          "unit_cost_net_huf": 2165,
+          "total_cost_net_huf": 535920
+        },
+        {
+          "category": "Álmennyezet",
+          "material_name": "Armstrong Sahara 60x60 akusztikus ásványgyapot lapok és T24 bordaváz",
+          "net_requirement": 320.0,
+          "waste_allowance_pct": 7.0,
+          "gross_order_quantity": 342.4,
+          "unit": "m2",
+          "unit_cost_net_huf": 4147,
+          "total_cost_net_huf": 1420000
+        },
+        {
+          "category": "Padlóburkolat",
+          "material_name": "Desso Essence 50x50 cm moduláris irodai szőnyeg + fixáló diszperziós ragasztó",
+          "net_requirement": 320.0,
+          "waste_allowance_pct": 8.0,
+          "gross_order_quantity": 345.6,
+          "unit": "m2",
+          "unit_cost_net_huf": 3616,
+          "total_cost_net_huf": 1250000
+        }
+      ]
+    },
+    "labor": {
+      "norm_engine_applied": "en_norms_dynamic_site_multipliers",
+      "hourly_labor_rate_huf": 8500,
+      "site_multipliers": [
+        {
+          "factor_name": "Magassági és Állványozási Pótlék (>3.5 m)",
+          "factor_value": 1.18
+        },
+        {
+          "factor_name": "Zajkorlátozás / Műszakpótlék (Hétvégi/Éjszakai munkavégzés)",
+          "factor_value": 1.15
+        }
+      ],
+      "combined_difficulty_factor": 1.357,
+      "labor_tasks_itemized": [
+        {
+          "task_name": "W112 Gipszkarton dupla fal építése (Knauf technológia)",
+          "base_norm_hours_per_sqm": 0.85,
+          "net_quantity_sqm": 235.64,
+          "adjusted_hours": 271.8,
+          "subtotal_cost_huf": 2310300
+        },
+        {
+          "task_name": "Armstrong kazettás álmennyezet szerelés függesztőkkel",
+          "base_norm_hours_per_sqm": 0.55,
+          "net_quantity_sqm": 320.0,
+          "adjusted_hours": 238.8,
+          "subtotal_cost_huf": 2029800
+        },
+        {
+          "task_name": "Desso moduláris szőnyegpadló fektetése ragasztással",
+          "base_norm_hours_per_sqm": 0.35,
+          "net_quantity_sqm": 320.0,
+          "adjusted_hours": 117.6,
+          "subtotal_cost_huf": 999600
+        }
+      ],
+      "total_man_hours": 628.2,
+      "total_labor_cost_net_huf": 5339700,
+      "crew_scheduling": {
+        "recommended_crew_size": 6,
+        "estimated_working_days": 13.1,
+        "estimated_calendar_weeks": 2.6
+      }
+    },
+    "quotation": {
+      "quotation_mode_applied": "full_terc_budget_quote_procurement",
+      "financial_summary": {
+        "materials_prime_cost_net_huf": 5820000,
+        "labor_prime_cost_net_huf": 5339700,
+        "total_internal_prime_cost_net_huf": 11159700,
+        "target_margin_pct": 22.0,
+        "profit_margin_net_huf": 2455134,
+        "final_offer_price_net_huf": 13614834,
+        "vat_amount_27_pct_huf": 3676005,
+        "final_offer_price_gross_huf": 17290839
+      },
+      "formal_quotation": {
+        "quote_id": "QTE-PRJ-2026-VG-C4-01",
+        "client_name": "Greens Office Hungary Kft.",
+        "project_name": "Váci Greens Irodaház C-Szárny 4. Emelet – Belső Szakipari Kivitelezés",
+        "validity_days": 30,
+        "payment_terms": "40% Előleg, 60% Teljesítéskor 8 napos utalással",
+        "pdf_download_url": "http://localhost:8000/api/v1/quote/view?quote_id=QTE-PRJ-2026-VG-C4-01"
+      },
+      "procurement_cart": {
+        "cart_id": "PO-REQ-PRJ-2026-VG-C4",
+        "preferred_suppliers": [
+          "Lambda Systeme Kft. (Gipszkarton & Szigetelés)",
+          "Inku Kft. (Desso Szőnyeg)"
+        ],
+        "delivery_address": "Budapest XIII., Bence u. 1.",
+        "total_procurement_net_huf": 5820000,
+        "item_count": 5,
+        "status": "READY_FOR_SUPPLIER_DISPATCH"
+      }
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:02:08.430356",
+    "survey_id": "SRV-2026-0920-07",
+    "project_code": "PRJ-2026-VG-C4",
+    "client": "Greens Office Hungary Kft.",
+    "materials": {
+      "calculation_mode_applied": "hybrid_multi_input_scrap_optimization",
+      "total_materials_cost_net_huf": 5820000,
+      "materials_itemized": [
+        {
+          "category": "Gipszkarton Falazat",
+          "material_name": "Knauf Diamant 12.5 mm hanggátló és tűzgátló gipszkarton lap",
+          "net_requirement": 942.6,
+          "waste_allowance_pct": 10.0,
+          "gross_order_quantity": 1036.8,
+          "unit": "m2",
+          "unit_cost_net_huf": 1850,
+          "total_cost_net_huf": 1918080
+        },
+        {
+          "category": "Gipszkarton Profilváz",
+          "material_name": "CW 75 és UW 75 horganyzott acélprofilok + rögzítő dűbelek",
+          "net_requirement": 435.0,
+          "waste_allowance_pct": 10.0,
+          "gross_order_quantity": 480.0,
+          "unit": "fm",
+          "unit_cost_net_huf": 1450,
+          "total_cost_net_huf": 696000
+        },
+        {
+          "category": "Hangszigetelés",
+          "material_name": "Isover Akusto 75 mm akusztikai ásványgyapot szigetelés",
+          "net_requirement": 235.6,
+          "waste_allowance_pct": 5.0,
+          "gross_order_quantity": 247.4,
+          "unit": "m2",
+          "unit_cost_net_huf": 2165,
+          "total_cost_net_huf": 535920
+        },
+        {
+          "category": "Álmennyezet",
+          "material_name": "Armstrong Sahara 60x60 akusztikus ásványgyapot lapok és T24 bordaváz",
+          "net_requirement": 320.0,
+          "waste_allowance_pct": 7.0,
+          "gross_order_quantity": 342.4,
+          "unit": "m2",
+          "unit_cost_net_huf": 4147,
+          "total_cost_net_huf": 1420000
+        },
+        {
+          "category": "Padlóburkolat",
+          "material_name": "Desso Essence 50x50 cm moduláris irodai szőnyeg + fixáló diszperziós ragasztó",
+          "net_requirement": 320.0,
+          "waste_allowance_pct": 8.0,
+          "gross_order_quantity": 345.6,
+          "unit": "m2",
+          "unit_cost_net_huf": 3616,
+          "total_cost_net_huf": 1250000
+        }
+      ]
+    },
+    "labor": {
+      "norm_engine_applied": "en_norms_dynamic_site_multipliers",
+      "hourly_labor_rate_huf": 8500,
+      "site_multipliers": [
+        {
+          "factor_name": "Magassági és Állványozási Pótlék (>3.5 m)",
+          "factor_value": 1.18
+        },
+        {
+          "factor_name": "Zajkorlátozás / Műszakpótlék (Hétvégi/Éjszakai munkavégzés)",
+          "factor_value": 1.15
+        }
+      ],
+      "combined_difficulty_factor": 1.357,
+      "labor_tasks_itemized": [
+        {
+          "task_name": "W112 Gipszkarton dupla fal építése (Knauf technológia)",
+          "base_norm_hours_per_sqm": 0.85,
+          "net_quantity_sqm": 235.64,
+          "adjusted_hours": 271.8,
+          "subtotal_cost_huf": 2310300
+        },
+        {
+          "task_name": "Armstrong kazettás álmennyezet szerelés függesztőkkel",
+          "base_norm_hours_per_sqm": 0.55,
+          "net_quantity_sqm": 320.0,
+          "adjusted_hours": 238.8,
+          "subtotal_cost_huf": 2029800
+        },
+        {
+          "task_name": "Desso moduláris szőnyegpadló fektetése ragasztással",
+          "base_norm_hours_per_sqm": 0.35,
+          "net_quantity_sqm": 320.0,
+          "adjusted_hours": 117.6,
+          "subtotal_cost_huf": 999600
+        }
+      ],
+      "total_man_hours": 628.2,
+      "total_labor_cost_net_huf": 5339700,
+      "crew_scheduling": {
+        "recommended_crew_size": 6,
+        "estimated_working_days": 13.1,
+        "estimated_calendar_weeks": 2.6
+      }
+    },
+    "quotation": {
+      "quotation_mode_applied": "full_terc_budget_quote_procurement",
+      "financial_summary": {
+        "materials_prime_cost_net_huf": 5820000,
+        "labor_prime_cost_net_huf": 5339700,
+        "total_internal_prime_cost_net_huf": 11159700,
+        "target_margin_pct": 22.0,
+        "profit_margin_net_huf": 2455134,
+        "final_offer_price_net_huf": 13614834,
+        "vat_amount_27_pct_huf": 3676005,
+        "final_offer_price_gross_huf": 17290839
+      },
+      "formal_quotation": {
+        "quote_id": "QTE-PRJ-2026-VG-C4-01",
+        "client_name": "Greens Office Hungary Kft.",
+        "project_name": "Váci Greens Irodaház C-Szárny 4. Emelet – Belső Szakipari Kivitelezés",
+        "validity_days": 30,
+        "payment_terms": "40% Előleg, 60% Teljesítéskor 8 napos utalással",
+        "pdf_download_url": "http://localhost:8000/api/v1/quote/view?quote_id=QTE-PRJ-2026-VG-C4-01"
+      },
+      "procurement_cart": {
+        "cart_id": "PO-REQ-PRJ-2026-VG-C4",
+        "preferred_suppliers": [
+          "Lambda Systeme Kft. (Gipszkarton & Szigetelés)",
+          "Inku Kft. (Desso Szőnyeg)"
+        ],
+        "delivery_address": "Budapest XIII., Bence u. 1.",
+        "total_procurement_net_huf": 5820000,
+        "item_count": 5,
+        "status": "READY_FOR_SUPPLIER_DISPATCH"
+      }
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:05.453184",
+    "survey_id": "SRV-2026-0920-07",
+    "project_code": "PRJ-2026-VG-C4",
+    "client": "Greens Office Hungary Kft.",
+    "materials": {
+      "calculation_mode_applied": "hybrid_multi_input_scrap_optimization",
+      "total_materials_cost_net_huf": 5820000,
+      "materials_itemized": [
+        {
+          "category": "Gipszkarton Falazat",
+          "material_name": "Knauf Diamant 12.5 mm hanggátló és tűzgátló gipszkarton lap",
+          "net_requirement": 942.6,
+          "waste_allowance_pct": 10.0,
+          "gross_order_quantity": 1036.8,
+          "unit": "m2",
+          "unit_cost_net_huf": 1850,
+          "total_cost_net_huf": 1918080
+        },
+        {
+          "category": "Gipszkarton Profilváz",
+          "material_name": "CW 75 és UW 75 horganyzott acélprofilok + rögzítő dűbelek",
+          "net_requirement": 435.0,
+          "waste_allowance_pct": 10.0,
+          "gross_order_quantity": 480.0,
+          "unit": "fm",
+          "unit_cost_net_huf": 1450,
+          "total_cost_net_huf": 696000
+        },
+        {
+          "category": "Hangszigetelés",
+          "material_name": "Isover Akusto 75 mm akusztikai ásványgyapot szigetelés",
+          "net_requirement": 235.6,
+          "waste_allowance_pct": 5.0,
+          "gross_order_quantity": 247.4,
+          "unit": "m2",
+          "unit_cost_net_huf": 2165,
+          "total_cost_net_huf": 535920
+        },
+        {
+          "category": "Álmennyezet",
+          "material_name": "Armstrong Sahara 60x60 akusztikus ásványgyapot lapok és T24 bordaváz",
+          "net_requirement": 320.0,
+          "waste_allowance_pct": 7.0,
+          "gross_order_quantity": 342.4,
+          "unit": "m2",
+          "unit_cost_net_huf": 4147,
+          "total_cost_net_huf": 1420000
+        },
+        {
+          "category": "Padlóburkolat",
+          "material_name": "Desso Essence 50x50 cm moduláris irodai szőnyeg + fixáló diszperziós ragasztó",
+          "net_requirement": 320.0,
+          "waste_allowance_pct": 8.0,
+          "gross_order_quantity": 345.6,
+          "unit": "m2",
+          "unit_cost_net_huf": 3616,
+          "total_cost_net_huf": 1250000
+        }
+      ]
+    },
+    "labor": {
+      "norm_engine_applied": "en_norms_dynamic_site_multipliers",
+      "hourly_labor_rate_huf": 8500,
+      "site_multipliers": [
+        {
+          "factor_name": "Magassági és Állványozási Pótlék (>3.5 m)",
+          "factor_value": 1.18
+        },
+        {
+          "factor_name": "Zajkorlátozás / Műszakpótlék (Hétvégi/Éjszakai munkavégzés)",
+          "factor_value": 1.15
+        }
+      ],
+      "combined_difficulty_factor": 1.357,
+      "labor_tasks_itemized": [
+        {
+          "task_name": "W112 Gipszkarton dupla fal építése (Knauf technológia)",
+          "base_norm_hours_per_sqm": 0.85,
+          "net_quantity_sqm": 235.64,
+          "adjusted_hours": 271.8,
+          "subtotal_cost_huf": 2310300
+        },
+        {
+          "task_name": "Armstrong kazettás álmennyezet szerelés függesztőkkel",
+          "base_norm_hours_per_sqm": 0.55,
+          "net_quantity_sqm": 320.0,
+          "adjusted_hours": 238.8,
+          "subtotal_cost_huf": 2029800
+        },
+        {
+          "task_name": "Desso moduláris szőnyegpadló fektetése ragasztással",
+          "base_norm_hours_per_sqm": 0.35,
+          "net_quantity_sqm": 320.0,
+          "adjusted_hours": 117.6,
+          "subtotal_cost_huf": 999600
+        }
+      ],
+      "total_man_hours": 628.2,
+      "total_labor_cost_net_huf": 5339700,
+      "crew_scheduling": {
+        "recommended_crew_size": 6,
+        "estimated_working_days": 13.1,
+        "estimated_calendar_weeks": 2.6
+      }
+    },
+    "quotation": {
+      "quotation_mode_applied": "full_terc_budget_quote_procurement",
+      "financial_summary": {
+        "materials_prime_cost_net_huf": 5820000,
+        "labor_prime_cost_net_huf": 5339700,
+        "total_internal_prime_cost_net_huf": 11159700,
+        "target_margin_pct": 22.0,
+        "profit_margin_net_huf": 2455134,
+        "final_offer_price_net_huf": 13614834,
+        "vat_amount_27_pct_huf": 3676005,
+        "final_offer_price_gross_huf": 17290839
+      },
+      "formal_quotation": {
+        "quote_id": "QTE-PRJ-2026-VG-C4-01",
+        "client_name": "Greens Office Hungary Kft.",
+        "project_name": "Váci Greens Irodaház C-Szárny 4. Emelet – Belső Szakipari Kivitelezés",
+        "validity_days": 30,
+        "payment_terms": "40% Előleg, 60% Teljesítéskor 8 napos utalással",
+        "pdf_download_url": "http://localhost:8000/api/v1/quote/view?quote_id=QTE-PRJ-2026-VG-C4-01"
+      },
+      "procurement_cart": {
+        "cart_id": "PO-REQ-PRJ-2026-VG-C4",
+        "preferred_suppliers": [
+          "Lambda Systeme Kft. (Gipszkarton & Szigetelés)",
+          "Inku Kft. (Desso Szőnyeg)"
+        ],
+        "delivery_address": "Budapest XIII., Bence u. 1.",
+        "total_procurement_net_huf": 5820000,
+        "item_count": 5,
+        "status": "READY_FOR_SUPPLIER_DISPATCH"
+      }
+    },
+    "status": "COMPLETED"
+  },
+  {
+    "timestamp": "2026-09-20T04:07:54.148869",
+    "survey_id": "SRV-2026-0920-07",
+    "project_code": "PRJ-2026-VG-C4",
+    "client": "Greens Office Hungary Kft.",
+    "materials": {
+      "calculation_mode_applied": "hybrid_multi_input_scrap_optimization",
+      "total_materials_cost_net_huf": 5820000,
+      "materials_itemized": [
+        {
+          "category": "Gipszkarton Falazat",
+          "material_name": "Knauf Diamant 12.5 mm hanggátló és tűzgátló gipszkarton lap",
+          "net_requirement": 942.6,
+          "waste_allowance_pct": 10.0,
+          "gross_order_quantity": 1036.8,
+          "unit": "m2",
+          "unit_cost_net_huf": 1850,
+          "total_cost_net_huf": 1918080
+        },
+        {
+          "category": "Gipszkarton Profilváz",
+          "material_name": "CW 75 és UW 75 horganyzott acélprofilok + rögzítő dűbelek",
+          "net_requirement": 435.0,
+          "waste_allowance_pct": 10.0,
+          "gross_order_quantity": 480.0,
+          "unit": "fm",
+          "unit_cost_net_huf": 1450,
+          "total_cost_net_huf": 696000
+        },
+        {
+          "category": "Hangszigetelés",
+          "material_name": "Isover Akusto 75 mm akusztikai ásványgyapot szigetelés",
+          "net_requirement": 235.6,
+          "waste_allowance_pct": 5.0,
+          "gross_order_quantity": 247.4,
+          "unit": "m2",
+          "unit_cost_net_huf": 2165,
+          "total_cost_net_huf": 535920
+        },
+        {
+          "category": "Álmennyezet",
+          "material_name": "Armstrong Sahara 60x60 akusztikus ásványgyapot lapok és T24 bordaváz",
+          "net_requirement": 320.0,
+          "waste_allowance_pct": 7.0,
+          "gross_order_quantity": 342.4,
+          "unit": "m2",
+          "unit_cost_net_huf": 4147,
+          "total_cost_net_huf": 1420000
+        },
+        {
+          "category": "Padlóburkolat",
+          "material_name": "Desso Essence 50x50 cm moduláris irodai szőnyeg + fixáló diszperziós ragasztó",
+          "net_requirement": 320.0,
+          "waste_allowance_pct": 8.0,
+          "gross_order_quantity": 345.6,
+          "unit": "m2",
+          "unit_cost_net_huf": 3616,
+          "total_cost_net_huf": 1250000
+        }
+      ]
+    },
+    "labor": {
+      "norm_engine_applied": "en_norms_dynamic_site_multipliers",
+      "hourly_labor_rate_huf": 8500,
+      "site_multipliers": [
+        {
+          "factor_name": "Magassági és Állványozási Pótlék (>3.5 m)",
+          "factor_value": 1.18
+        },
+        {
+          "factor_name": "Zajkorlátozás / Műszakpótlék (Hétvégi/Éjszakai munkavégzés)",
+          "factor_value": 1.15
+        }
+      ],
+      "combined_difficulty_factor": 1.357,
+      "labor_tasks_itemized": [
+        {
+          "task_name": "W112 Gipszkarton dupla fal építése (Knauf technológia)",
+          "base_norm_hours_per_sqm": 0.85,
+          "net_quantity_sqm": 235.64,
+          "adjusted_hours": 271.8,
+          "subtotal_cost_huf": 2310300
+        },
+        {
+          "task_name": "Armstrong kazettás álmennyezet szerelés függesztőkkel",
+          "base_norm_hours_per_sqm": 0.55,
+          "net_quantity_sqm": 320.0,
+          "adjusted_hours": 238.8,
+          "subtotal_cost_huf": 2029800
+        },
+        {
+          "task_name": "Desso moduláris szőnyegpadló fektetése ragasztással",
+          "base_norm_hours_per_sqm": 0.35,
+          "net_quantity_sqm": 320.0,
+          "adjusted_hours": 117.6,
+          "subtotal_cost_huf": 999600
+        }
+      ],
+      "total_man_hours": 628.2,
+      "total_labor_cost_net_huf": 5339700,
+      "crew_scheduling": {
+        "recommended_crew_size": 6,
+        "estimated_working_days": 13.1,
+        "estimated_calendar_weeks": 2.6
+      }
+    },
+    "quotation": {
+      "quotation_mode_applied": "full_terc_budget_quote_procurement",
+      "financial_summary": {
+        "materials_prime_cost_net_huf": 5820000,
+        "labor_prime_cost_net_huf": 5339700,
+        "total_internal_prime_cost_net_huf": 11159700,
+        "target_margin_pct": 22.0,
+        "profit_margin_net_huf": 2455134,
+        "final_offer_price_net_huf": 13614834,
+        "vat_amount_27_pct_huf": 3676005,
+        "final_offer_price_gross_huf": 17290839
+      },
+      "formal_quotation": {
+        "quote_id": "QTE-PRJ-2026-VG-C4-01",
+        "client_name": "Greens Office Hungary Kft.",
+        "project_name": "Váci Greens Irodaház C-Szárny 4. Emelet – Belső Szakipari Kivitelezés",
+        "validity_days": 30,
+        "payment_terms": "40% Előleg, 60% Teljesítéskor 8 napos utalással",
+        "pdf_download_url": "http://localhost:8000/api/v1/quote/view?quote_id=QTE-PRJ-2026-VG-C4-01"
+      },
+      "procurement_cart": {
+        "cart_id": "PO-REQ-PRJ-2026-VG-C4",
+        "preferred_suppliers": [
+          "Lambda Systeme Kft. (Gipszkarton & Szigetelés)",
+          "Inku Kft. (Desso Szőnyeg)"
+        ],
+        "delivery_address": "Budapest XIII., Bence u. 1.",
+        "total_procurement_net_huf": 5820000,
+        "item_count": 5,
+        "status": "READY_FOR_SUPPLIER_DISPATCH"
+      }
+    },
+    "status": "COMPLETED"
+  }
+]

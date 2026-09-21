@@ -1,0 +1,53 @@
+{
+  "total_lost_deals": 5,
+  "lost_by_category": {
+    "PRICE_BUDGET": 4,
+    "TIMING_POSTPONED": 1,
+    "COMPETITOR_CHOSEN": 0,
+    "TECHNICAL_SCOPE": 0
+  },
+  "winback_offers_generated": 4,
+  "potential_recovered_revenue_huf": 3026000,
+  "recent_events": [
+    {
+      "quote_id": "AJ-20260920-7741",
+      "timestamp": "2026-09-20T04:07:55.453035",
+      "category": "PRICE_BUDGET",
+      "reason_title": "Ár és Költségvetési Szűkösség",
+      "deal_value": 890000,
+      "winback_type": "SLIMMED_COUNTER_OFFER"
+    },
+    {
+      "quote_id": "AJ-20260920-7741",
+      "timestamp": "2026-09-20T04:07:06.677953",
+      "category": "PRICE_BUDGET",
+      "reason_title": "Ár és Költségvetési Szűkösség",
+      "deal_value": 890000,
+      "winback_type": "SLIMMED_COUNTER_OFFER"
+    },
+    {
+      "quote_id": "AJ-20260920-7741",
+      "timestamp": "2026-09-20T02:24:06.397659",
+      "category": "PRICE_BUDGET",
+      "reason_title": "Ár és Költségvetési Szűkösség",
+      "deal_value": 890000,
+      "winback_type": "SLIMMED_COUNTER_OFFER"
+    },
+    {
+      "quote_id": "AJ-20260920-7742",
+      "timestamp": "2026-09-20T02:23:59.148996",
+      "category": "TIMING_POSTPONED",
+      "reason_title": "Időzítés / Elhalasztott Beruházás",
+      "deal_value": 1200000,
+      "winback_type": "RE_ENGAGEMENT_SCHEDULED"
+    },
+    {
+      "quote_id": "AJ-20260920-7741",
+      "timestamp": "2026-09-20T02:23:59.143989",
+      "category": "PRICE_BUDGET",
+      "reason_title": "Ár és Költségvetési Szűkösség",
+      "deal_value": 890000,
+      "winback_type": "SLIMMED_COUNTER_OFFER"
+    }
+  ]
+}

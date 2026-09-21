@@ -1,0 +1,8 @@
+{
+  "id": "onjavito_munkafolyamat_felugyelet_self_h",
+  "title": "Önjavító Munkafolyamat-Felügyelet (Self-Healing Watchdog)",
+  "category": "altalanos",
+  "icon": "🛡️",
+  "version": "1.0.0",
+  "description": "Folyamatosan felügyeli a Hub moduljait és külső API kapcsolatait. Hiba esetén 3-lépcsős autonóm önjavítást végez: exponenciális újrapróbálkozás (Retry 3x), automatikus tartalék útvonalra váltás (Failover), és lemezre mentett Dead-Letter Queue az adatvesztés kizárására. Telegram és Email riasztás 1-kattintásos javító linkkel és élő diagnosztikával."
+}

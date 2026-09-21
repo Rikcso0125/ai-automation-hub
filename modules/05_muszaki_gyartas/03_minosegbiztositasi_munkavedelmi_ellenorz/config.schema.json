@@ -1,0 +1,72 @@
+{
+  "title": "Minőségbiztosítási & Munkavédelmi Ellenőrző Robot Konfiguráció",
+  "type": "object",
+  "required": [
+    "audit_scope",
+    "severity_rule_engine",
+    "remediation_workflow"
+  ],
+  "properties": {
+    "audit_scope": {
+      "type": "string",
+      "title": "Ellenőrzési Terület és Hatókör",
+      "enum": [
+        "safety_ppe_only",
+        "technical_quality_only",
+        "hybrid_safety_and_technical_audit"
+      ],
+      "default": "hybrid_safety_and_technical_audit",
+      "description": "Csak PPE munkavédelem, Csak műszaki minőség vagy Hibrid kombinált ellenőrzés."
+    },
+    "severity_rule_engine": {
+      "type": "string",
+      "title": "Kockázati és Jogszabályi Besorolási Motor",
+      "enum": [
+        "basic_pass_fail",
+        "three_level_matrix",
+        "regulatory_legal_penalty_engine"
+      ],
+      "default": "regulatory_legal_penalty_engine",
+      "description": "Alap pontozás, Háromszintű mátrix vagy Jogszabályi és hatósági bírságkockázati motor."
+    },
+    "remediation_workflow": {
+      "type": "string",
+      "title": "Javítási és Visszaigazolási Munkafolyamat",
+      "enum": [
+        "daily_pdf_summary",
+        "task_ticket_generation",
+        "realtime_push_photo_gate"
+      ],
+      "default": "realtime_push_photo_gate",
+      "description": "Napi PDF riport, Hibajegy készítés vagy Valós idejű terepi riasztás fotós igazoló kapuval."
+    },
+    "stop_work_on_critical_danger": {
+      "type": "boolean",
+      "title": "Azonnali Munkabeszüntetési Javaslat Életveszély Esetén (Stop-Work Order)",
+      "default": true,
+      "description": "Ha közvetlen súlyos élet- vagy balesetveszély detektálható, a rendszer azonnal leállítja a munkafázist."
+    },
+    "legal_framework": {
+      "type": "string",
+      "title": "Alkalmazott Jogszabályi Keret",
+      "default": "1993. évi XCIII. Mvt. & 54/2014. BM rendelet (OTSZ)"
+    },
+    "remediation_grace_period_hours": {
+      "type": "integer",
+      "title": "Alapértelmezett Javítási Határidő (óra)",
+      "default": 24
+    },
+    "notification_channel": {
+      "type": "string",
+      "title": "Riasztási Csatorna",
+      "default": "telegram",
+      "enum": [
+        "telegram",
+        "email",
+        "sms",
+        "slack",
+        "webhook"
+      ]
+    }
+  }
+}

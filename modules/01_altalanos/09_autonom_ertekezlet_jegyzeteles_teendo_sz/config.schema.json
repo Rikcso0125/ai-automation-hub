@@ -1,0 +1,78 @@
+{
+  "title": "Meeting Ops Beállítások",
+  "type": "object",
+  "required": [
+    "company_name",
+    "task_management_system"
+  ],
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "Céged Neve",
+      "default": "ProfiTech Kft."
+    },
+    "stt_engine": {
+      "type": "string",
+      "title": "Beszédfelismerő (STT) Motor",
+      "enum": [
+        "Helyi Faster-Whisper (Privát, ingyenes, gépen fut)",
+        "OpenAI Whisper API (Felhős)",
+        "Saját Szerver / Egyedi Whisper API Endpoint",
+        "Csak Szöveges Leirat Feldolgozás (Mock / Integrált)"
+      ],
+      "default": "Helyi Faster-Whisper (Privát, ingyenes, gépen fut)",
+      "description": "Válassz STT motort. A helyi modell 100% privát és díjmentes."
+    },
+    "custom_stt_server_url": {
+      "type": "string",
+      "title": "Saját STT Szerver URL (Opcionális)",
+      "default": "http://localhost:9000/v1/audio/transcriptions",
+      "description": "Ha saját dedikált szerveren futó Whisper API-t használsz."
+    },
+    "task_management_system": {
+      "type": "string",
+      "title": "Cél Feladatkezelő Rendszer",
+      "enum": [
+        "ClickUp API",
+        "Asana API",
+        "Notion Database",
+        "Trello Board",
+        "Google Calendar & Tasks",
+        "Webhook / Egyedi Céges ERP"
+      ],
+      "default": "ClickUp API",
+      "description": "Ide menti automatikusan a kinyert feladatokat határidőkkel és felelősökkel."
+    },
+    "pm_api_token": {
+      "type": "string",
+      "title": "Feladatkezelő API Kulcs / Token",
+      "format": "password",
+      "description": "A ClickUp / Asana / Notion személyes hozzáférési tokenje."
+    },
+    "require_human_approval": {
+      "type": "string",
+      "title": "Emberi Jóváhagyás és Szerkesztés a Kiküldés Előtt",
+      "enum": [
+        "Igen (Jóváhagyási és szerkesztési fázis a szinkron előtt)",
+        "Nem (Azonnali automatikus szinkron és email kiküldés)"
+      ],
+      "default": "Igen (Jóváhagyási és szerkesztési fázis a szinkron előtt)",
+      "description": "Lehetőséget ad a vezetőnek a feladatok és határidők áttekintésére/módosítására a kiküldés előtt."
+    },
+    "default_organizer_email": {
+      "type": "string",
+      "title": "Szervező / Vezető Email Címe",
+      "default": "ugyvezeto@cegem.hu",
+      "description": "Ide érkezik a szerkeszthető jóváhagyási vázlat a megbeszélés után."
+    },
+    "send_summary_to_participants": {
+      "type": "string",
+      "title": "Összefoglaló Email a Résztvevőknek",
+      "enum": [
+        "Igen (Minden résztvevő megkapja a saját feladatait)",
+        "Nem (Csak feladatkezelőbe mentés)"
+      ],
+      "default": "Igen (Minden résztvevő megkapja a saját feladatait)"
+    }
+  }
+}

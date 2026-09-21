@@ -1,0 +1,76 @@
+{
+  "title": "B2B Lemorzsolódás Előrejelzés & RFM Konfiguráció",
+  "type": "object",
+  "required": [
+    "service_mode"
+  ],
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (szimulált ERP vásárlási előzmények) vagy Production (élő ERP/CRM tranzakciós szinkron)."
+    },
+    "churn_sensitivity": {
+      "type": "object",
+      "title": "Lemorzsolódási Kockázat Riasztási Küszöbértékek",
+      "properties": {
+        "cycle_delay_multiplier_threshold": {
+          "type": "number",
+          "title": "Ciklusidő Késési Szorzó Küszöb (pl. 1.5x átlagos ciklus)",
+          "default": 1.5
+        },
+        "revenue_drop_percent_threshold": {
+          "type": "number",
+          "title": "Havi Költés Visszaesési Küszöb (%)",
+          "default": 40.0
+        }
+      },
+      "default": {
+        "cycle_delay_multiplier_threshold": 1.5,
+        "revenue_drop_percent_threshold": 40.0
+      }
+    },
+    "retention_strategy_mode": {
+      "type": "string",
+      "title": "Visszatartó és Reaktivációs Ajánlat Mód",
+      "enum": [
+        "bonus_discount_offer",
+        "talking_points_only",
+        "tier_adaptive"
+      ],
+      "default": "tier_adaptive",
+      "description": "tier_adaptive: VIP (Gold/Platinum) partnereknél automatikus extra +5% visszatérő kedvezmény és ingyenes kiszállítás, míg alacsonyabb szinteken kérdéssor és KAM beszélgetésindító."
+    },
+    "vip_retention_extra_discount_percent": {
+      "type": "number",
+      "title": "VIP Visszatérő Bónusz Kedvezmény (%)",
+      "default": 5.0
+    },
+    "escalation_mode": {
+      "type": "string",
+      "title": "Eszkalációs és Értékesítői Értesítési Mód",
+      "enum": [
+        "instant_vip_alert",
+        "weekly_digest",
+        "hybrid_dual_channel"
+      ],
+      "default": "hybrid_dual_channel",
+      "description": "hybrid_dual_channel: azonnali Telegram/Dashboard/SMS riasztás a veszélyeztetett VIP partnereknél 48h határidővel, és heti összesítő riport a meetingre."
+    },
+    "partners_db_path": {
+      "type": "string",
+      "title": "B2B Partnertörzs Fájl",
+      "default": "data/b2b_partnerek.json"
+    },
+    "churn_log_path": {
+      "type": "string",
+      "title": "Lemorzsolódási Napló Fájl",
+      "default": "data/b2b_lemorzsolodas_naplo.json"
+    }
+  }
+}

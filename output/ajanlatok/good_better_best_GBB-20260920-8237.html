@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width  initial-scale=1.0">
+    <title>Személyre Szabott Ajánlati Csomagok | GBB-20260920-8237</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system  BlinkMacSystemFont  "Segoe UI"  Roboto  sans-serif; }
+        body { background: #0f172a; color: #f8fafc; padding: 24px; }
+        .header { text-align: center; max-width: 800px; margin: 0 auto 32px; }
+        .header h1 { font-size: 28px; color: #38bdf8; margin-bottom: 8px; }
+        .header p { color: #94a3b8; font-size: 14px; }
+        .cards-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 1200px; margin: 0 auto; }
+        .card {
+            background: #1e293b; border: 1px solid #334155; border-radius: 16px; width: 340px; padding: 24px;
+            display: flex; flex-direction: column; position: relative; transition: transform 0.2s  box-shadow 0.2s;
+        }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0 0 0 0.4); }
+        .card.highlighted {
+            border: 2px solid #38bdf8; background: linear-gradient(180deg  #1e293b 0%  #0c4a6e 100%);
+            transform: scale(1.04); z-index: 2; box-shadow: 0 16px 32px rgba(56  189  248  0.25);
+        }
+        .ribbon {
+            position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+            background: #0284c7; color: white; font-size: 11px; font-weight: bold;
+            padding: 4px 16px; border-radius: 20px; letter-spacing: 0.5px;
+        }
+        .tier-name { font-size: 18px; font-weight: bold; margin-top: 8px; margin-bottom: 6px; }
+        .tier-price { font-size: 26px; font-weight: 800; color: #f8fafc; margin-bottom: 4px; }
+        .tier-subprice { font-size: 12px; color: #94a3b8; margin-bottom: 16px; }
+        .features-list { list-style: none; margin-bottom: 24px; flex-grow: 1; }
+        .features-list li { font-size: 13px; color: #cbd5e1; margin-bottom: 10px; display: flex; align-items: flex-start; }
+        .features-list li span.icon { margin-right: 8px; color: #38bdf8; font-weight: bold; }
+        .btn {
+            width: 100%; padding: 12px; border-radius: 8px; border: none; font-size: 14px; font-weight: bold;
+            cursor: pointer; text-align: center; text-decoration: none; transition: background 0.2s;
+        }
+        .btn-default { background: #334155; color: white; }
+        .btn-default:hover { background: #475569; }
+        .btn-primary { background: #0284c7; color: white; }
+        .btn-primary:hover { background: #0369a1; }
+        .btn-gold { background: #d97706; color: white; }
+        .btn-gold:hover { background: #b45309; }
+        
+        /* Modal for Good package downsell/upsell */
+        #upsellModal {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0 0 0 0.75); z-index: 100; justify-content: center; align-items: center;
+        }
+        .modal-box {
+            background: #1e293b; border: 1px solid #38bdf8; border-radius: 16px; max-width: 500px;
+            padding: 24px; text-align: center;
+        }
+        .modal-box h2 { color: #38bdf8; margin-bottom: 12px; }
+        .modal-box p { font-size: 14px; color: #cbd5e1; margin-bottom: 20px; line-height: 1.5; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Válassza ki az Önnek legmegfelelőbb megoldást!</h1>
+        <p>Ajánlatszám: <b>GBB-20260920-8237</b> | Megrendelő: <b>Varga Mihály</b> (1134 Budapest  Váci út 45.)</p>
+    </div>
+
+    <div class="cards-container">
+        <!-- 1. GOOD CARD -->
+        <div class="card">
+            <div class="tier-name">Alap (Racionális Választás)</div>
+            <div class="tier-price">361 950 Ft</div>
+            <div class="tier-subprice">Nettó: 285 000 Ft (+27% ÁFA)</div>
+            <ul class="features-list">
+                <li><span class="icon">✓</span> Gree Pulse 3.2 kW A+/A+ Inverteres Klíma</li>
+                <li><span class="icon">✓</span> Energiaosztály: A+ / A+</li>
+                <li><span class="icon">✓</span> Zajszint: 28 dB (Standard)</li>
+                <li><span class="icon">✓</span> 1 év törvényi garancia</li>
+                <li><span class="icon">✗</span> WiFi vezérlés: Opcionális (+15 000 Ft)</li>
+                <li><span class="icon">✗</span> Karbantartás: Díjköteles (22 000 Ft/év)</li>
+            </ul>
+            <button class="btn btn-default" onclick="openUpsellModal('GBB-20260920-8237'  'good')">Kiválasztom az Alapot</button>
+        </div>
+
+        <!-- 2. BETTER CARD (HIGHLIGHTED) -->
+        <div class="card highlighted">
+            <div class="ribbon">★ LEGNÉPSZERŰBB - LEGJOBB ÁR/ÉRTÉK ARÁNY ★</div>
+            <div class="tier-name" style="color: #38bdf8;">Ajánlott Prémium (Legnépszerűbb)</div>
+            <div class="tier-price">438 150 Ft</div>
+            <div class="tier-subprice">Nettó: 345 000 Ft (+27% ÁFA)</div>
+            <ul class="features-list">
+                <li><span class="icon">✓</span> <b>Gree Comfort X 3.5 kW A++/A+ Japán Kompresszoros Klíma</b></li>
+                <li><span class="icon">✓</span> <b>Energiaosztály: A++ / A+</b></li>
+                <li><span class="icon">✓</span> <b>Zajszint: 21 dB (Suttogó halk éjszakai üzemmód)</b></li>
+                <li><span class="icon">✓</span> <b>3 Év Kiterjesztett Garancia</b></li>
+                <li><span class="icon">✓</span> <b>Beépített Okosotthon & Mobilapplikáció (Alaptartozék)</b></li>
+                <li><span class="icon">✓</span> <b>1. ÉVI AJÁNDÉK Szezonális Tisztítás & Ózonos Fertőtlenítés</b></li>
+                <li><span class="icon">✓</span> <b>48 órás garantált szakember reakció</b></li>
+            </ul>
+            <a href="http://127.0.0.1:8000/api/v1/modules/07_pszichologiai_tobbszintu_ajanlatok_good_/select?quote_id=GBB-20260920-8237&tier=better" class="btn btn-primary">Megrendelem a Prémium Csomagot</a>
+        </div>
+
+        <!-- 3. BEST CARD -->
+        <div class="card">
+            <div class="tier-name" style="color: #fbbf24;">VIP All-Inclusive (Csúcsminőség)</div>
+            <div class="tier-price">559 118 Ft</div>
+            <div class="tier-subprice">Nettó: 440 250 Ft (+27% ÁFA)</div>
+            <ul class="features-list">
+                <li><span class="icon">✓</span> <b>Daikin Perfera / Stylish 3.5 kW A+++ Csúcskategóriás Dizájn Klíma</b></li>
+                <li><span class="icon">✓</span> Energiaosztály: A+++ / A+++ (Minimális fogyasztás)</li>
+                <li><span class="icon">✓</span> Zajszint: 19 dB (Alig hallható prémium komfort)</li>
+                <li><span class="icon">✓</span> <b>5 ÉV Teljes Körű Garancia</b></li>
+                <li><span class="icon">✓</span> Beépített 5G WiFi + Hangvezérlés (Alexa  Google Assistant)</li>
+                <li><span class="icon">✓</span> <b>2 ÉV DÍJMENTES Teljes Karbantartás és Klímatakarítás</b></li>
+                <li><span class="icon">✓</span> <b>VIP 24 órás azonnali helyszíni cseregarancia hétvégén is</b></li>
+            </ul>
+            <a href="http://127.0.0.1:8000/api/v1/modules/07_pszichologiai_tobbszintu_ajanlatok_good_/select?quote_id=GBB-20260920-8237&tier=best" class="btn btn-gold">Megrendelem a VIP Csomagot</a>
+        </div>
+    </div>
+
+    <!-- Upsell Modal for Option B -->
+    <div id="upsellModal">
+        <div class="modal-box">
+            <h2>Várjon egy pillanatra!</h2>
+            <p>
+                Kiváló döntés az Alap csomag  de most <b>rendkívüli kedvezménnyel (+15 000 Ft)</b>
+                kérheti a készülékéhez a <b>+1 Év Extra Garanciát</b> és a <b>Szezonális Klímatisztítást</b>!
+            </p>
+            <div style="display: flex; gap: 12px; justify-content: center;">
+                <a href="http://127.0.0.1:8000/api/v1/modules/07_pszichologiai_tobbszintu_ajanlatok_good_/select?quote_id=GBB-20260920-8237&tier=good_with_upsell" class="btn btn-primary">Kérem a Kedvezményes Extrát (+15 000 Ft)</a>
+                <a href="http://127.0.0.1:8000/api/v1/modules/07_pszichologiai_tobbszintu_ajanlatok_good_/select?quote_id=GBB-20260920-8237&tier=good" class="btn btn-default">Köszönöm  csak az Alap kell</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openUpsellModal(quoteId  tier) {
+            document.getElementById('upsellModal').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>

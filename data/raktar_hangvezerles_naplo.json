@@ -1,0 +1,83 @@
+{
+  "last_updated": "2026-09-20T04:07:53.919967",
+  "total_completed_tours": 8,
+  "warehouse_kpi": {
+    "total_items_picked_hands_free": 256,
+    "total_shortages_detected": 0,
+    "average_speed_lines_per_hour": 58
+  },
+  "tours": [
+    {
+      "tour_id": "TOUR-ORD-2026-8841",
+      "order_id": "ORD-2026-8841",
+      "operator": "Tóth Gábor (Raktáros)",
+      "completed_at": "2026-09-20T03:11:03.600373",
+      "items_picked": 32,
+      "items_shortage": 0,
+      "slip_number": "SLIP-ORD-2026-8841"
+    },
+    {
+      "tour_id": "TOUR-ORD-2026-8841",
+      "order_id": "ORD-2026-8841",
+      "operator": "Tóth Gábor (Raktáros)",
+      "completed_at": "2026-09-20T03:11:03.601901",
+      "items_picked": 32,
+      "items_shortage": 0,
+      "slip_number": "SLIP-ORD-2026-8841"
+    },
+    {
+      "tour_id": "TOUR-ORD-2026-8841",
+      "order_id": "ORD-2026-8841",
+      "operator": "Tóth Gábor (Raktáros)",
+      "completed_at": "2026-09-20T03:11:22.051331",
+      "items_picked": 32,
+      "items_shortage": 0,
+      "slip_number": "SLIP-ORD-2026-8841"
+    },
+    {
+      "tour_id": "TOUR-ORD-2026-8841",
+      "order_id": "ORD-2026-8841",
+      "operator": "Tóth Gábor (Raktáros)",
+      "completed_at": "2026-09-20T03:11:22.052328",
+      "items_picked": 32,
+      "items_shortage": 0,
+      "slip_number": "SLIP-ORD-2026-8841"
+    },
+    {
+      "tour_id": "TOUR-ORD-2026-8841",
+      "order_id": "ORD-2026-8841",
+      "operator": "Tóth Gábor (Raktáros)",
+      "completed_at": "2026-09-20T03:11:22.054841",
+      "items_picked": 32,
+      "items_shortage": 0,
+      "slip_number": "SLIP-ORD-2026-8841"
+    },
+    {
+      "tour_id": "TOUR-ORD-2026-8841",
+      "order_id": "ORD-2026-8841",
+      "operator": "Tóth Gábor (Raktáros)",
+      "completed_at": "2026-09-20T03:11:29.660734",
+      "items_picked": 32,
+      "items_shortage": 0,
+      "slip_number": "SLIP-ORD-2026-8841"
+    },
+    {
+      "tour_id": "TOUR-ORD-2026-8841",
+      "order_id": "ORD-2026-8841",
+      "operator": "Tóth Gábor (Raktáros)",
+      "completed_at": "2026-09-20T04:07:05.269157",
+      "items_picked": 32,
+      "items_shortage": 0,
+      "slip_number": "SLIP-ORD-2026-8841"
+    },
+    {
+      "tour_id": "TOUR-ORD-2026-8841",
+      "order_id": "ORD-2026-8841",
+      "operator": "Tóth Gábor (Raktáros)",
+      "completed_at": "2026-09-20T04:07:53.919967",
+      "items_picked": 32,
+      "items_shortage": 0,
+      "slip_number": "SLIP-ORD-2026-8841"
+    }
+  ]
+}

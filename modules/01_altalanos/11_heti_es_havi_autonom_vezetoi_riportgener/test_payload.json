@@ -1,0 +1,35 @@
+{
+  "module_id": "heti_es_havi_autonom_vezetoi_riportgener",
+  "report_title": "Heti Vezetoi Gyorsjelentes - 38. Het",
+  "period_label": "2026. szeptember 14 - 2026. szeptember 20.",
+  "kpi_data": {
+    "finance": {
+      "invoiced_revenue_huf": 8450000,
+      "expenses_huf": 4820000,
+      "gross_profit_huf": 3630000,
+      "margin_pct": 43.0,
+      "outstanding_receivables_huf": 3200000
+    },
+    "banking": {
+      "closing_cash_huf": 14820000,
+      "net_cash_flow_weekly_huf": 1240000,
+      "two_week_liquidity_status": "STABIL",
+      "runway_months": 3.1
+    },
+    "crm": {
+      "new_leads_count": 24,
+      "sent_proposals_count": 11,
+      "sent_proposals_value_huf": 18500000,
+      "won_deals_count": 6,
+      "won_deals_value_huf": 7950000,
+      "conversion_rate_pct": 25.0
+    },
+    "operations": {
+      "active_projects_count": 8,
+      "completed_tasks_count": 84,
+      "on_time_delivery_pct": 94.2,
+      "critical_blockers_count": 1,
+      "blocker_summary": "13. kerületi munkaterületen alvállalkozói késés (villanyszerelés)."
+    }
+  }
+}

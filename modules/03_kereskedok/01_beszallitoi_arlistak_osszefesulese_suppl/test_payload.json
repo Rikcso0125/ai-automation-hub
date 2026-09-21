@@ -1,0 +1,43 @@
+{
+  "action": "HARMONIZE_FEED",
+  "supplier_name": "EuroGépész Nagyker Kft.",
+  "feed_source": "weekly_price_update.xlsx",
+  "currency": "HUF",
+  "feed_items": [
+    {
+      "cikkszam": "CU-PIPE-15",
+      "termek_nev": "15x1 mm Rézcső szálban félkemény",
+      "beszerzesi_ar": 2750,
+      "keszlet": 450,
+      "valuta": "HUF"
+    },
+    {
+      "cikkszam": "VALVE-BRASS-12",
+      "termek_nev": "1/2 colos olasz réz golyóscsap",
+      "beszerzesi_ar": 1720,
+      "keszlet": 1200,
+      "valuta": "HUF"
+    },
+    {
+      "cikkszam": "FITTING-ELBOW-90",
+      "termek_nev": "Forrasztható Réz Könyök 90 fok 15 mm",
+      "beszerzesi_ar": 270,
+      "keszlet": 3500,
+      "valuta": "HUF"
+    },
+    {
+      "cikkszam": "PUMP-GRUNDFOS-25",
+      "termek_nev": "Grundfos Alpha 25-60 keringető",
+      "beszerzesi_ar": 185.0,
+      "keszlet": 45,
+      "valuta": "EUR"
+    },
+    {
+      "cikkszam": "DAIKIN-SENSIRA-35",
+      "termek_nev": "Daikin Sensira 3.5kW Klíma szett",
+      "beszerzesi_ar": 252000,
+      "keszlet": 28,
+      "valuta": "HUF"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "title": "Számla OCR & NAV Beállítások",
+  "type": "object",
+  "required": [
+    "company_tax_number",
+    "billing_system"
+  ],
+  "properties": {
+    "ocr_provider": {
+      "type": "string",
+      "title": "Vision OCR AI Motor",
+      "enum": [
+        "openai",
+        "gemini",
+        "mock"
+      ],
+      "default": "mock",
+      "description": "OpenAI GPT-4o Vision, Google Gemini 1.5 Flash Vision, vagy Mock (azonnali próba kulcs nélkül)."
+    },
+    "api_key": {
+      "type": "string",
+      "title": "Vision AI API Kulcs",
+      "format": "password",
+      "description": "OpenAI vagy Google Gemini API kulcs a képek/PDF-ek vizuális beolvasásához."
+    },
+    "company_tax_number": {
+      "type": "string",
+      "title": "Saját Cég Adószáma (Vevő)",
+      "default": "12345678-2-41",
+      "description": "A rendszer ellenőrzi, hogy a beérkező számla valóban a Te céged nevére és adószámára szól-e."
+    },
+    "billing_system": {
+      "type": "string",
+      "title": "Cél Számlázó / Könyvelő Rendszer",
+      "enum": [
+        "billingo",
+        "szamlazz_hu",
+        "webhook_only"
+      ],
+      "default": "billingo",
+      "description": "Hova rögzítse be a jóváhagyott bejövő költségszámlát."
+    },
+    "billing_api_key": {
+      "type": "string",
+      "title": "Számlázó API Kulcs (Billingo / Számlázz.hu)",
+      "format": "password",
+      "description": "A Billingo API v3 token vagy Számlázz.hu agent kulcs."
+    },
+    "nav_verification_enabled": {
+      "type": "string",
+      "title": "NAV Online Számla Érvényesítés",
+      "enum": [
+        "igen",
+        "nem"
+      ],
+      "default": "igen",
+      "description": "Ellenőrizze-e a partner adószámának és a számla létének érvényességét a NAV adatbázisában."
+    },
+    "approval_limit_huf": {
+      "type": "string",
+      "title": "Automatikus Jóváhagyási Limit (HUF)",
+      "default": "250000",
+      "description": "Ezen bruttó összeg felett a rendszer nem könyveli le automatikusan, hanem emberi jóváhagyást kér a vezetőtől."
+    },
+    "notification_email": {
+      "type": "string",
+      "title": "Riasztási Értesítési Email",
+      "default": "penzugy@cegem.hu",
+      "description": "Ide érkezik riasztás hibás számla, eltérő összegek vagy limit feletti számla esetén."
+    }
+  }
+}

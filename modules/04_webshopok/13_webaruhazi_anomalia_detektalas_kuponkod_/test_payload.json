@@ -1,0 +1,41 @@
+{
+  "module_id": "13_webaruhazi_anomalia_detektalas_kuponkod_",
+  "event_type": "CHECKOUT_ANOMALY_EVALUATION",
+  "event_id": "ANOM-2026-CHECK-901",
+  "store_name": "ProfiSzerszam Webáruház",
+  "cart_order_context": {
+    "order_temp_id": "ORD-TMP-99410",
+    "customer_email": "gyanu_vevo@pelda.hu",
+    "customer_phone": "+36309871234",
+    "item_sku": "BOSCH-GBH-2-28",
+    "item_name": "Bosch Professional GBH 2-28 Fúrókalapács L-BOXX",
+    "regular_retail_price_huf": 68900,
+    "wholesale_cost_price_huf": 48500,
+    "applied_coupon_code": "SUPERVIP50",
+    "coupon_discount_percent": 50,
+    "coupon_discount_huf": 34450,
+    "discounted_checkout_price_huf": 34450,
+    "expected_margin_huf": -14050
+  },
+  "payment_gateway_health": {
+    "primary_gateway": "SimplePay OTP",
+    "last_15min_failures_count": 3,
+    "consecutive_failures": 3,
+    "last_error_code": "HTTP_504_GATEWAY_TIMEOUT",
+    "hourly_success_rate_pct": 82.5,
+    "baseline_success_rate_pct": 98.2
+  },
+  "traffic_health": {
+    "current_active_visitors": 340,
+    "minutes_since_last_successful_order": 58,
+    "cart_abandonment_spike_detected": true
+  },
+  "config": {
+    "gateway_monitoring_mode": "hybrid_gateway_guard",
+    "coupon_guard_mode": "hybrid_coupon_protection",
+    "intervention_level": "hybrid_loss_threshold_action",
+    "consecutive_payment_failures_threshold": 3,
+    "max_allowed_discount_percent": 40,
+    "loss_threshold_huf_for_auto_pause": 20000
+  }
+}

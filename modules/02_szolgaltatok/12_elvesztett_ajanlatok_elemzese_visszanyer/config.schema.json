@@ -1,0 +1,59 @@
+{
+  "title": "Elvesztett Ajánlatok Elemzése és Visszanyerése Konfiguráció",
+  "type": "object",
+  "properties": {
+    "collection_channels": {
+      "type": "array",
+      "title": "Elvesztési Ok Gyűjtési Csatornák",
+      "items": {
+        "type": "string",
+        "enum": [
+          "whatsapp_sms_poll",
+          "email_inquiry",
+          "dashboard_manual_entry"
+        ]
+      },
+      "default": [
+        "whatsapp_sms_poll",
+        "email_inquiry",
+        "dashboard_manual_entry"
+      ]
+    },
+    "approval_gate_mode": {
+      "type": "string",
+      "title": "Jóváhagyási Mód",
+      "enum": [
+        "review_required",
+        "auto_dispatch"
+      ],
+      "default": "review_required",
+      "description": "review_required (A opció: Értékesítő/Vezető jóváhagyja kiküldés előtt)."
+    },
+    "win_back_customization": {
+      "type": "object",
+      "title": "Visszanyerő Ajánlat Beállításai",
+      "properties": {
+        "price_reduction_percent": {
+          "type": "number",
+          "default": 15.0,
+          "title": "Karcsúsított árkedvezmény mértéke (%)"
+        },
+        "re_engagement_delay_days": {
+          "type": "integer",
+          "default": 45,
+          "title": "Időzítési ok esetén hány nap múlva keresse újra az ügyfelet"
+        },
+        "allow_installment_option": {
+          "type": "boolean",
+          "default": true,
+          "title": "Részletfizetési opció felajánlása"
+        }
+      }
+    },
+    "dashboard_analytics_enabled": {
+      "type": "boolean",
+      "title": "Központi Win/Loss Hőtérkép és Statisztika Mentése",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "module_id": "06_helyszini_felmeresbol_arajanlat_hangfelv",
+  "technician": {
+    "id": "TECH-001",
+    "name": "Kovács László (Főszerelő)",
+    "phone": "+36 30 111 2233",
+    "channel": "whatsapp"
+  },
+  "customer": {
+    "name": "Kiss Péter",
+    "company": "Kiss & Társa Kft.",
+    "phone": "+36 30 987 6543",
+    "email": "peter.kiss@example.hu",
+    "site_address": "1024 Budapest, Margit körút 12. 3. em. 4."
+  },
+  "input_type": "voice_note",
+  "voice_transcript": "Szia! Kiss Péternél jártam a Margit körút 12-ben, harmadik emelet lift nincs. Egy 3.5 kW-os Gree Comfort X inverteres klíma kell a nappaliba, a kültérit a gangra szereljük rozsdamentes 450-es konzolra. Kb 6 méter rézcsővezetés kell, ebből 3 méter az alap, 3 méter feláras plusz nyomvonal kábelcsatornában. A régi split klímát szakszerűen le kell bontani és elszállítani. 25 centis vasbeton falat át kell fúrni gyémántfúróval. Kér még egy külön Schneider B16-os kismegszakítót a kiselosztóba. Kb 4 órás munka két embernek. Készítsd el az ajánlatot 15 napos határidővel!",
+  "attached_photos": [
+    {
+      "url": "https://storage.example.hu/photos/site_margit_12_indoor.jpg",
+      "description": "Beltéri egység tervezett helye"
+    },
+    {
+      "url": "https://storage.example.hu/photos/site_margit_12_electrical.jpg",
+      "description": "Kiselosztó tábla kismegszakító hely"
+    }
+  ],
+  "requested_mode": "review_required"
+}

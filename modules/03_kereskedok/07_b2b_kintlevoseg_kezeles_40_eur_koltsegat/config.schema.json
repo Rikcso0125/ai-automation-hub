@@ -1,0 +1,85 @@
+{
+  "title": "B2B Kintlévőség-kezelés 40 EUR Költségátalánnyal Konfiguráció",
+  "type": "object",
+  "required": [
+    "service_mode"
+  ],
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (szimulált MNB árfolyam és tesztkintlévőségek) vagy Production (élő számlázó/ERP szinkron)."
+    },
+    "credit_hold_policy": {
+      "type": "string",
+      "title": "Raktári / ERP Rendelés Zárolási Szabályzat",
+      "enum": [
+        "immediate_freeze",
+        "manager_override_warning",
+        "grace_period_days"
+      ],
+      "default": "grace_period_days",
+      "description": "immediate_freeze: azonnali rendelés- és árukiadás-zárolás 1 nap csúszástól. manager_override_warning: figyelmeztetés, vezetői feloldással. grace_period_days: megadott türelmi nap után aktiválódó szigorú zárlat."
+    },
+    "credit_hold_grace_days": {
+      "type": "integer",
+      "title": "Zárolási Türelmi Napok (grace_period_days esetén)",
+      "default": 15,
+      "description": "Hány napos késedelem után aktiválódjon a szigorú raktári szállítási zárlat."
+    },
+    "fee_calculation_mode": {
+      "type": "string",
+      "title": "40 EUR Költségátalány & Kamat Stratégia",
+      "enum": [
+        "auto_invoice_immediate",
+        "notice_first_then_invoice",
+        "configurable_per_partner"
+      ],
+      "default": "configurable_per_partner",
+      "description": "auto_invoice_immediate: azonnali terhelő számla kiállítás. notice_first_then_invoice: jogi figyelmeztetés először, számlázás 15 nap után. configurable_per_partner: VIP partnereknél egyedileg elengedhető méltányossági opcióval."
+    },
+    "allow_vip_fee_waiver": {
+      "type": "boolean",
+      "title": "VIP Partnereknél (Gold/Platinum) 40 EUR Elengedés Engedélyezése",
+      "default": true,
+      "description": "Ha igaz, Gold és Platinum partnereknél a 40 EUR elengedhető kereskedelmi méltányosságból a tőketartozás azonnali megfizetése fejében."
+    },
+    "escalation_mode": {
+      "type": "string",
+      "title": "Eszkalációs és Jogi Előkészítési Mód",
+      "enum": [
+        "multichannel_alert",
+        "auto_fmh_package",
+        "both_combined"
+      ],
+      "default": "both_combined",
+      "description": "multichannel_alert: Email + SMS + azonnali KAM riasztás. auto_fmh_package: MOKK FMH csomag 30 nap felett. both_combined: mindkettő kombinálva."
+    },
+    "eur_huf_exchange_rate": {
+      "type": "number",
+      "title": "MNB EUR/HUF Árfolyam (40 EUR átszámításához)",
+      "default": 405.5
+    },
+    "annual_interest_rate_percent": {
+      "type": "number",
+      "title": "Ptk. Szerinti Éves Késedelmi Kamatláb (%)",
+      "default": 14.5,
+      "description": "Jegybanki alapkamat + 8% a vállalkozások közötti szerződésekben (Ptk. 6:155. §)."
+    },
+    "partners_db_path": {
+      "type": "string",
+      "title": "B2B Partner Adatbázis Elérési Útja",
+      "default": "data/b2b_partnerek.json"
+    },
+    "collection_db_path": {
+      "type": "string",
+      "title": "Kintlévőség és Behajtási Napló Elérési Útja",
+      "default": "data/b2b_kintlevosegek_naplo.json"
+    }
+  }
+}

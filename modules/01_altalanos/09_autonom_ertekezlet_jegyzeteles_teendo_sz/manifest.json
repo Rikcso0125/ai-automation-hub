@@ -1,0 +1,8 @@
+{
+  "id": "autonom_ertekezlet_jegyzeteles_teendo_sz",
+  "title": "Autonóm Értekezlet Jegyzetelés & Teendő Szinkron (Meeting Ops)",
+  "category": "altalanos",
+  "icon": "🎙️",
+  "version": "1.0.0",
+  "description": "Értekezletek hanganyagának és leiratának feldolgozása. Vezetői döntéslista, feladatok kinyerése felelősökkel és határidőkkel, ClickUp/Asana/Notion szinkron, és jóváhagyás előtti emberi szerkesztési lehetőség a résztvevők email értesítése előtt."
+}

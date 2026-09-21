@@ -1,0 +1,79 @@
+{
+  "title": "Kifogáskezelő és Tárgyalási AI Copilot Konfiguráció",
+  "type": "object",
+  "properties": {
+    "supported_objection_types": {
+      "type": "array",
+      "title": "Kezelt Kifogástípusok",
+      "items": {
+        "type": "string",
+        "enum": [
+          "price_too_high",
+          "delay_thinking",
+          "budget_constrained",
+          "scope_skepticism"
+        ]
+      },
+      "default": [
+        "price_too_high",
+        "delay_thinking",
+        "budget_constrained",
+        "scope_skepticism"
+      ]
+    },
+    "response_strategies": {
+      "type": "array",
+      "title": "Engedélyezett Válaszstratégiák",
+      "items": {
+        "type": "string",
+        "enum": [
+          "roi_tco",
+          "socratic_probing",
+          "downsell_compromise"
+        ]
+      },
+      "default": [
+        "roi_tco",
+        "socratic_probing",
+        "downsell_compromise"
+      ]
+    },
+    "delivery_interfaces": {
+      "type": "array",
+      "title": "Elérési Felületek",
+      "items": {
+        "type": "string",
+        "enum": [
+          "mobile_chat_bot",
+          "web_dashboard_simulator"
+        ]
+      },
+      "default": [
+        "mobile_chat_bot",
+        "web_dashboard_simulator"
+      ]
+    },
+    "company_differentiators": {
+      "type": "object",
+      "title": "Céges Versenyelőnyök és Garanciák",
+      "properties": {
+        "warranty_years": {
+          "type": "integer",
+          "default": 3
+        },
+        "service_sla_hours": {
+          "type": "integer",
+          "default": 48
+        },
+        "free_maintenance_included": {
+          "type": "boolean",
+          "default": true
+        },
+        "official_invoice_and_nav": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
+  }
+}

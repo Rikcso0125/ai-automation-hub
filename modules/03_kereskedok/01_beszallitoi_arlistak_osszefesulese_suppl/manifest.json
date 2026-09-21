@@ -1,0 +1,8 @@
+{
+  "id": "01_beszallitoi_arlistak_osszefesulese_suppl",
+  "title": "Beszállítói Árlisták Összefésülése (Supplier Feed Harmonizer & Árrésvédelem)",
+  "category": "kereskedok",
+  "icon": "📊",
+  "version": "1.0.0",
+  "description": "Automatikusan beolvassa és összehangolja a különböző nagykereskedők eltérő formátumú árlistáit (Excel, CSV, XML, JSON). Azonnal figyelmeztet a haszonkulcsot veszélyeztető drágulásokra, kiszűri a ráfizetéses termékeket, támogatja a többdevizás beszerzést és a legolcsóbb beszállító kiválasztását (Best Buy)."
+}

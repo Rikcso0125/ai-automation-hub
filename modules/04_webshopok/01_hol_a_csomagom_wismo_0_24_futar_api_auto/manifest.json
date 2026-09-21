@@ -1,0 +1,8 @@
+{
+  "id": "01_hol_a_csomagom_wismo_0_24_futar_api_auto",
+  "title": "„Hol a csomagom?” (WISMO) 0-24 Futár API Autopilot",
+  "category": "webshopok",
+  "icon": "🚚",
+  "version": "1.0.0",
+  "description": "0-24 autonóm vevőtájékoztató és csomagkövető robot. Közvetlen integráció a futárcégekkel (GLS, DPD, Foxpost, Packeta, MPL). Keresés rendelésszám, csomagszám vagy email/telefonszám alapján. Omnichannel válaszadás (Webchat, Email, WhatsApp, SMS) valós idejű futár idősávval és automatikus proaktív kivételkezeléssel (sikertelen kézbesítés, lejáró csomagautomata)."
+}

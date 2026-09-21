@@ -1,0 +1,76 @@
+{
+  "title": "Tömeges B2B Árajánlatadás Konfiguráció",
+  "type": "object",
+  "required": [
+    "company_name",
+    "quote_validity_days"
+  ],
+  "properties": {
+    "service_mode": {
+      "type": "string",
+      "title": "Működési Mód",
+      "enum": [
+        "mock",
+        "production"
+      ],
+      "default": "mock",
+      "description": "Mock (tesztadatokkal) vagy Production (éles ERP / CRM összeköttetés)."
+    },
+    "company_name": {
+      "type": "string",
+      "title": "Nagykereskedés Neve",
+      "default": "ProfiGépész Nagykereskedelmi Kft."
+    },
+    "quote_validity_days": {
+      "type": "integer",
+      "title": "Ajánlati Kötöttség Időtartama (nap)",
+      "default": 15,
+      "description": "Hány napig érvényes a kiadott árajánlat."
+    },
+    "discount_tiers": {
+      "type": "object",
+      "title": "Szerződéses Partner Kedvezményszintek (%)",
+      "default": {
+        "RETAIL": 0.0,
+        "BRONZE": 10.0,
+        "SILVER": 15.0,
+        "GOLD": 22.0,
+        "PLATINUM": 28.0
+      }
+    },
+    "volume_discount_thresholds": {
+      "type": "object",
+      "title": "Mennyiségi Sávos Bónusz Kedvezmények (HUF / %)",
+      "default": {
+        "500000": 2.0,
+        "1000000": 4.0
+      },
+      "description": "Nagy rendelési összeg esetén adott extra bónusz engedmény."
+    },
+    "approval_mode": {
+      "type": "string",
+      "title": "Jóváhagyási Mód",
+      "enum": [
+        "manual_approval_only",
+        "auto_send_trusted_partners"
+      ],
+      "default": "manual_approval_only",
+      "description": "manual_approval_only: Értékesítői jóváhagyási kapu. auto_send_trusted_partners: Arany és Platina partnereknek azonnali kiküldés."
+    },
+    "partners_db_path": {
+      "type": "string",
+      "title": "Partner Adatbázis Elérési Út",
+      "default": "data/b2b_partnerek.json"
+    },
+    "catalog_db_path": {
+      "type": "string",
+      "title": "Terméktörzs és Készlet Adatbázis",
+      "default": "data/termektorzs_katalogus.json"
+    },
+    "quotes_db_path": {
+      "type": "string",
+      "title": "Ajánlati Napló Elérési Út",
+      "default": "data/b2b_ajanlatok_naplo.json"
+    }
+  }
+}

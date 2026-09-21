@@ -1,0 +1,293 @@
+[
+  {
+    "session_id": "SESS-CONCRETE-001",
+    "user_query": "olyan akkus gépet keresek, amivel panel betonfalba tudok polcot feltenni és kéne hozzá fúrószár is",
+    "intent_analysis": {
+      "raw_query": "olyan akkus gépet keresek, amivel panel betonfalba tudok polcot feltenni és kéne hozzá fúrószár is",
+      "intents": [
+        "CONCRETE_OR_WALL_DRILLING",
+        "WOOD_OR_SCREWDRIVING"
+      ],
+      "requires_pneumatic_hammer": true,
+      "power_source_preference": "akkus",
+      "wants_accessories": true,
+      "expert_advice": "Panel lakás betonfalához a hagyományos ütvefúrók nem elegek, mert csak hangosak és elkopik a hegyük. Ide valódi pneumatikus ütőművel rendelkező SDS-Plus fúrókalapács szükséges, ami erőfeszítés nélkül, másodpercek alatt fúrja ki a tipli helyét!"
+    },
+    "search_mode_used": "hybrid_full_semantic",
+    "ui_dialogue_mode": "comparative_decision_matrix",
+    "comparative_matrix": [
+      {
+        "tier": "BESTSELLER",
+        "sku": "BOSCH-GBH-18V-22",
+        "name": "Bosch Professional GBH 18V-22 Akkus Fúrókalapács",
+        "price_gross_huf": 74990,
+        "in_stock": true,
+        "stock_count": 6,
+        "power_joules": 1.9,
+        "expert_verdict": "Ideális panel betonfalhoz! Pneumatikus ütőműve erőfeszítés nélkül viszi a kemény vasbetont.",
+        "relevance_score": 105,
+        "add_to_cart_url": "https://profigepesz.hu/cart/add?sku=BOSCH-GBH-18V-22&qty=1"
+      },
+      {
+        "tier": "PREMIUM",
+        "sku": "DEWALT-DCH-273",
+        "name": "DeWalt DCH273P2T Akkus Fúrókalapács 2x5.0Ah",
+        "price_gross_huf": 139990,
+        "in_stock": true,
+        "stock_count": 4,
+        "power_joules": 2.1,
+        "expert_verdict": "Profi építőipari csúcsmodell 2 db nagy kapacitású 5.0Ah akkuval és kofferrel.",
+        "relevance_score": 105,
+        "add_to_cart_url": "https://profigepesz.hu/cart/add?sku=DEWALT-DCH-273&qty=1"
+      },
+      {
+        "tier": "ENTRY_HAMMER",
+        "sku": "MAKITA-DHR-171",
+        "name": "Makita DHR171Z Akkus Fúrókalapács",
+        "price_gross_huf": 54990,
+        "in_stock": false,
+        "stock_count": 0,
+        "power_joules": 1.2,
+        "expert_verdict": "Kompakt, könnyű gép, de jelenleg beszállítói készlethiány miatt nem elérhető.",
+        "relevance_score": 85,
+        "add_to_cart_url": "https://profigepesz.hu/cart/add?sku=MAKITA-DHR-171&qty=1"
+      }
+    ],
+    "alternative_replacement": {
+      "original_requested_sku": "MAKITA-DHR-171",
+      "original_name": "Makita DHR171Z Akkus Fúrókalapács",
+      "recommended_alternative_sku": "BOSCH-GBH-18V-22",
+      "recommended_name": "Bosch Professional GBH 18V-22 Akkus Fúrókalapács",
+      "in_stock_units": 6,
+      "explanation": "A(z) Makita DHR171Z Akkus Fúrókalapács átmenetileg elfogyott, de a(z) Bosch Professional GBH 18V-22 Akkus Fúrókalapács azonnal raktáron van, ráadásul erősebb (1.9J ütőerő) és azonnal szállítható!"
+    },
+    "smart_cross_sell_bundle": {
+      "accessory_sku": "BOSCH-SDS-PLUS-SET-5",
+      "accessory_name": "Bosch 5-részes SDS-Plus Betonfúró Készlet (5, 6, 6, 8, 10 mm)",
+      "original_price_huf": 5490,
+      "bundle_price_huf": 4490,
+      "savings_huf": 1000,
+      "why_needed": "Kifejezetten panel falazathoz és dűbelezéshez optimalizált 4-élű keményfém fúrószárak.",
+      "add_bundle_to_cart_url": "https://profigepesz.hu/cart/add-bundle?primary=BOSCH-GBH-18V-22&acc=BOSCH-SDS-PLUS-SET-5"
+    },
+    "handled_at": "2026-09-20T03:37:27.061299"
+  },
+  {
+    "session_id": "SESS-LIVE-008",
+    "user_query": "betonba szeretnek polcot furni a panelban, akkus fúrókalapács kellene",
+    "intent_analysis": {
+      "raw_query": "betonba szeretnek polcot furni a panelban, akkus fúrókalapács kellene",
+      "intents": [
+        "CONCRETE_OR_WALL_DRILLING"
+      ],
+      "requires_pneumatic_hammer": true,
+      "power_source_preference": "akkus",
+      "wants_accessories": false,
+      "expert_advice": "Panel lakás betonfalához a hagyományos ütvefúrók nem elegek, mert csak hangosak és elkopik a hegyük. Ide valódi pneumatikus ütőművel rendelkező SDS-Plus fúrókalapács szükséges, ami erőfeszítés nélkül, másodpercek alatt fúrja ki a tipli helyét!"
+    },
+    "search_mode_used": "hybrid_full_semantic",
+    "ui_dialogue_mode": "comparative_decision_matrix",
+    "comparative_matrix": [
+      {
+        "tier": "BESTSELLER",
+        "sku": "BOSCH-GBH-18V-22",
+        "name": "Bosch Professional GBH 18V-22 Akkus Fúrókalapács",
+        "price_gross_huf": 74990,
+        "in_stock": true,
+        "stock_count": 6,
+        "power_joules": 1.9,
+        "expert_verdict": "Ideális panel betonfalhoz! Pneumatikus ütőműve erőfeszítés nélkül viszi a kemény vasbetont.",
+        "relevance_score": 105,
+        "add_to_cart_url": "https://profigepesz.hu/cart/add?sku=BOSCH-GBH-18V-22&qty=1"
+      },
+      {
+        "tier": "PREMIUM",
+        "sku": "DEWALT-DCH-273",
+        "name": "DeWalt DCH273P2T Akkus Fúrókalapács 2x5.0Ah",
+        "price_gross_huf": 139990,
+        "in_stock": true,
+        "stock_count": 4,
+        "power_joules": 2.1,
+        "expert_verdict": "Profi építőipari csúcsmodell 2 db nagy kapacitású 5.0Ah akkuval és kofferrel.",
+        "relevance_score": 105,
+        "add_to_cart_url": "https://profigepesz.hu/cart/add?sku=DEWALT-DCH-273&qty=1"
+      },
+      {
+        "tier": "ENTRY_HAMMER",
+        "sku": "MAKITA-DHR-171",
+        "name": "Makita DHR171Z Akkus Fúrókalapács",
+        "price_gross_huf": 54990,
+        "in_stock": false,
+        "stock_count": 0,
+        "power_joules": 1.2,
+        "expert_verdict": "Kompakt, könnyű gép, de jelenleg beszállítói készlethiány miatt nem elérhető.",
+        "relevance_score": 85,
+        "add_to_cart_url": "https://profigepesz.hu/cart/add?sku=MAKITA-DHR-171&qty=1"
+      }
+    ],
+    "alternative_replacement": {
+      "original_requested_sku": "MAKITA-DHR-171",
+      "original_name": "Makita DHR171Z Akkus Fúrókalapács",
+      "recommended_alternative_sku": "BOSCH-GBH-18V-22",
+      "recommended_name": "Bosch Professional GBH 18V-22 Akkus Fúrókalapács",
+      "in_stock_units": 6,
+      "explanation": "A(z) Makita DHR171Z Akkus Fúrókalapács átmenetileg elfogyott, de a(z) Bosch Professional GBH 18V-22 Akkus Fúrókalapács azonnal raktáron van, ráadásul erősebb (1.9J ütőerő) és azonnal szállítható!"
+    },
+    "smart_cross_sell_bundle": {
+      "accessory_sku": "BOSCH-SDS-PLUS-SET-5",
+      "accessory_name": "Bosch 5-részes SDS-Plus Betonfúró Készlet (5, 6, 6, 8, 10 mm)",
+      "original_price_huf": 5490,
+      "bundle_price_huf": 4490,
+      "savings_huf": 1000,
+      "why_needed": "Kifejezetten panel falazathoz és dűbelezéshez optimalizált 4-élű keményfém fúrószárak.",
+      "add_bundle_to_cart_url": "https://profigepesz.hu/cart/add-bundle?primary=BOSCH-GBH-18V-22&acc=BOSCH-SDS-PLUS-SET-5"
+    },
+    "handled_at": "2026-09-20T03:37:34.687527"
+  },
+  {
+    "session_id": "SESS-CHAT-9921",
+    "user_query": "olyan akkus gépet keresek, amivel panel betonfalba tudok polcot felfúrni, és legyen hozzá fúrószár is",
+    "intent_analysis": {
+      "raw_query": "olyan akkus gépet keresek, amivel panel betonfalba tudok polcot felfúrni, és legyen hozzá fúrószár is",
+      "intents": [
+        "CONCRETE_OR_WALL_DRILLING",
+        "WOOD_OR_SCREWDRIVING"
+      ],
+      "requires_pneumatic_hammer": true,
+      "power_source_preference": "akkus",
+      "wants_accessories": true,
+      "expert_advice": "Panel lakás betonfalához a hagyományos ütvefúrók nem elegek, mert csak hangosak és elkopik a hegyük. Ide valódi pneumatikus ütőművel rendelkező SDS-Plus fúrókalapács szükséges, ami erőfeszítés nélkül, másodpercek alatt fúrja ki a tipli helyét!"
+    },
+    "search_mode_used": "hybrid_full_semantic",
+    "ui_dialogue_mode": "comparative_decision_matrix",
+    "comparative_matrix": [
+      {
+        "tier": "BESTSELLER",
+        "sku": "BOSCH-GBH-18V-22",
+        "name": "Bosch Professional GBH 18V-22 Akkus Fúrókalapács",
+        "price_gross_huf": 74990,
+        "in_stock": true,
+        "stock_count": 6,
+        "power_joules": 1.9,
+        "expert_verdict": "Ideális panel betonfalhoz! Pneumatikus ütőműve erőfeszítés nélkül viszi a kemény vasbetont.",
+        "relevance_score": 105,
+        "add_to_cart_url": "https://profigepesz.hu/cart/add?sku=BOSCH-GBH-18V-22&qty=1"
+      },
+      {
+        "tier": "PREMIUM",
+        "sku": "DEWALT-DCH-273",
+        "name": "DeWalt DCH273P2T Akkus Fúrókalapács 2x5.0Ah",
+        "price_gross_huf": 139990,
+        "in_stock": true,
+        "stock_count": 4,
+        "power_joules": 2.1,
+        "expert_verdict": "Profi építőipari csúcsmodell 2 db nagy kapacitású 5.0Ah akkuval és kofferrel.",
+        "relevance_score": 105,
+        "add_to_cart_url": "https://profigepesz.hu/cart/add?sku=DEWALT-DCH-273&qty=1"
+      },
+      {
+        "tier": "ENTRY_HAMMER",
+        "sku": "MAKITA-DHR-171",
+        "name": "Makita DHR171Z Akkus Fúrókalapács",
+        "price_gross_huf": 54990,
+        "in_stock": false,
+        "stock_count": 0,
+        "power_joules": 1.2,
+        "expert_verdict": "Kompakt, könnyű gép, de jelenleg beszállítói készlethiány miatt nem elérhető.",
+        "relevance_score": 85,
+        "add_to_cart_url": "https://profigepesz.hu/cart/add?sku=MAKITA-DHR-171&qty=1"
+      }
+    ],
+    "alternative_replacement": {
+      "original_requested_sku": "MAKITA-DHR-171",
+      "original_name": "Makita DHR171Z Akkus Fúrókalapács",
+      "recommended_alternative_sku": "BOSCH-GBH-18V-22",
+      "recommended_name": "Bosch Professional GBH 18V-22 Akkus Fúrókalapács",
+      "in_stock_units": 6,
+      "explanation": "A(z) Makita DHR171Z Akkus Fúrókalapács átmenetileg elfogyott, de a(z) Bosch Professional GBH 18V-22 Akkus Fúrókalapács azonnal raktáron van, ráadásul erősebb (1.9J ütőerő) és azonnal szállítható!"
+    },
+    "smart_cross_sell_bundle": {
+      "accessory_sku": "BOSCH-SDS-PLUS-SET-5",
+      "accessory_name": "Bosch 5-részes SDS-Plus Betonfúró Készlet (5, 6, 6, 8, 10 mm)",
+      "original_price_huf": 5490,
+      "bundle_price_huf": 4490,
+      "savings_huf": 1000,
+      "why_needed": "Kifejezetten panel falazathoz és dűbelezéshez optimalizált 4-élű keményfém fúrószárak.",
+      "add_bundle_to_cart_url": "https://profigepesz.hu/cart/add-bundle?primary=BOSCH-GBH-18V-22&acc=BOSCH-SDS-PLUS-SET-5"
+    },
+    "handled_at": "2026-09-20T04:07:08.573354"
+  },
+  {
+    "session_id": "SESS-CHAT-9921",
+    "user_query": "olyan akkus gépet keresek, amivel panel betonfalba tudok polcot felfúrni, és legyen hozzá fúrószár is",
+    "intent_analysis": {
+      "raw_query": "olyan akkus gépet keresek, amivel panel betonfalba tudok polcot felfúrni, és legyen hozzá fúrószár is",
+      "intents": [
+        "CONCRETE_OR_WALL_DRILLING",
+        "WOOD_OR_SCREWDRIVING"
+      ],
+      "requires_pneumatic_hammer": true,
+      "power_source_preference": "akkus",
+      "wants_accessories": true,
+      "expert_advice": "Panel lakás betonfalához a hagyományos ütvefúrók nem elegek, mert csak hangosak és elkopik a hegyük. Ide valódi pneumatikus ütőművel rendelkező SDS-Plus fúrókalapács szükséges, ami erőfeszítés nélkül, másodpercek alatt fúrja ki a tipli helyét!"
+    },
+    "search_mode_used": "hybrid_full_semantic",
+    "ui_dialogue_mode": "comparative_decision_matrix",
+    "comparative_matrix": [
+      {
+        "tier": "BESTSELLER",
+        "sku": "BOSCH-GBH-18V-22",
+        "name": "Bosch Professional GBH 18V-22 Akkus Fúrókalapács",
+        "price_gross_huf": 74990,
+        "in_stock": true,
+        "stock_count": 6,
+        "power_joules": 1.9,
+        "expert_verdict": "Ideális panel betonfalhoz! Pneumatikus ütőműve erőfeszítés nélkül viszi a kemény vasbetont.",
+        "relevance_score": 105,
+        "add_to_cart_url": "https://profigepesz.hu/cart/add?sku=BOSCH-GBH-18V-22&qty=1"
+      },
+      {
+        "tier": "PREMIUM",
+        "sku": "DEWALT-DCH-273",
+        "name": "DeWalt DCH273P2T Akkus Fúrókalapács 2x5.0Ah",
+        "price_gross_huf": 139990,
+        "in_stock": true,
+        "stock_count": 4,
+        "power_joules": 2.1,
+        "expert_verdict": "Profi építőipari csúcsmodell 2 db nagy kapacitású 5.0Ah akkuval és kofferrel.",
+        "relevance_score": 105,
+        "add_to_cart_url": "https://profigepesz.hu/cart/add?sku=DEWALT-DCH-273&qty=1"
+      },
+      {
+        "tier": "ENTRY_HAMMER",
+        "sku": "MAKITA-DHR-171",
+        "name": "Makita DHR171Z Akkus Fúrókalapács",
+        "price_gross_huf": 54990,
+        "in_stock": false,
+        "stock_count": 0,
+        "power_joules": 1.2,
+        "expert_verdict": "Kompakt, könnyű gép, de jelenleg beszállítói készlethiány miatt nem elérhető.",
+        "relevance_score": 85,
+        "add_to_cart_url": "https://profigepesz.hu/cart/add?sku=MAKITA-DHR-171&qty=1"
+      }
+    ],
+    "alternative_replacement": {
+      "original_requested_sku": "MAKITA-DHR-171",
+      "original_name": "Makita DHR171Z Akkus Fúrókalapács",
+      "recommended_alternative_sku": "BOSCH-GBH-18V-22",
+      "recommended_name": "Bosch Professional GBH 18V-22 Akkus Fúrókalapács",
+      "in_stock_units": 6,
+      "explanation": "A(z) Makita DHR171Z Akkus Fúrókalapács átmenetileg elfogyott, de a(z) Bosch Professional GBH 18V-22 Akkus Fúrókalapács azonnal raktáron van, ráadásul erősebb (1.9J ütőerő) és azonnal szállítható!"
+    },
+    "smart_cross_sell_bundle": {
+      "accessory_sku": "BOSCH-SDS-PLUS-SET-5",
+      "accessory_name": "Bosch 5-részes SDS-Plus Betonfúró Készlet (5, 6, 6, 8, 10 mm)",
+      "original_price_huf": 5490,
+      "bundle_price_huf": 4490,
+      "savings_huf": 1000,
+      "why_needed": "Kifejezetten panel falazathoz és dűbelezéshez optimalizált 4-élű keményfém fúrószárak.",
+      "add_bundle_to_cart_url": "https://profigepesz.hu/cart/add-bundle?primary=BOSCH-GBH-18V-22&acc=BOSCH-SDS-PLUS-SET-5"
+    },
+    "handled_at": "2026-09-20T04:07:57.458852"
+  }
+]

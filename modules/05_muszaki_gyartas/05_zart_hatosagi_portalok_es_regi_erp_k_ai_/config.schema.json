@@ -1,0 +1,67 @@
+{
+  "title": "Zárt Hatósági Portálok és Régi ERP-k AI-RPA Robotjai Konfiguráció",
+  "type": "object",
+  "required": [
+    "target_platform_mode",
+    "security_auth_vault_mode",
+    "resilience_and_audit_mode"
+  ],
+  "properties": {
+    "target_platform_mode": {
+      "type": "string",
+      "title": "Támogatott Rendszerek és Portálok",
+      "enum": [
+        "hungarian_government_portals",
+        "legacy_desktop_erp",
+        "hybrid_universal_ai_browser_rpa"
+      ],
+      "default": "hybrid_universal_ai_browser_rpa",
+      "description": "Állami szakrendszerek, Régi belső ERP-k vagy Univerzális hibrid AI-RPA böngésző."
+    },
+    "security_auth_vault_mode": {
+      "type": "string",
+      "title": "Biztonsági Hitelesítés és DÁP / AVDH",
+      "enum": [
+        "basic_credentials",
+        "totp_sms_automation",
+        "zero_trust_vault_push_avdh"
+      ],
+      "default": "zero_trust_vault_push_avdh",
+      "description": "Alap jelszavak, TOTP automatizáció vagy Zero-Trust Vault mobil push jóváhagyással és AVDH aláírással."
+    },
+    "resilience_and_audit_mode": {
+      "type": "string",
+      "title": "Reziliencia, Önjavítás és Dokumentumtár",
+      "enum": [
+        "basic_screenshot_status",
+        "pdf_resolution_archive",
+        "self_healing_dom_video_dms_sync"
+      ],
+      "default": "self_healing_dom_video_dms_sync",
+      "description": "Képernyőkép, Hatósági PDF mentés vagy Önjavító vizuális DOM-navigáció DMS/Cloud szinkronnal."
+    },
+    "auto_avdh_signing_enabled": {
+      "type": "boolean",
+      "title": "Automatikus AVDH Digitális Aláírás Csatolása",
+      "default": true,
+      "description": "Feltöltés előtt a robot digitális hitelesítő pecsétet és időbélyeget helyez el a PDF terveken."
+    },
+    "max_dom_self_healing_attempts": {
+      "type": "integer",
+      "title": "Maximális Önjavítási Próbálkozások Száma",
+      "default": 3
+    },
+    "notification_channel": {
+      "type": "string",
+      "title": "Riasztási Értesítési Csatorna",
+      "default": "telegram",
+      "enum": [
+        "telegram",
+        "sms",
+        "email",
+        "slack",
+        "webhook"
+      ]
+    }
+  }
+}

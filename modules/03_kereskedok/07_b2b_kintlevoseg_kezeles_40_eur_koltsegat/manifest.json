@@ -1,0 +1,8 @@
+{
+  "id": "07_b2b_kintlevoseg_kezeles_40_eur_koltsegat",
+  "title": "B2B Kintlévőség-kezelés 40 EUR Költségátalánnyal",
+  "category": "kereskedok",
+  "icon": "⚖️",
+  "version": "1.0.0",
+  "description": "Szigorú B2B kintlévőség-kezelő és behajtási rendszer nagykereskedőknek. 4-lépcsős felszólító láncolat, választható raktári/ERP rendelés-zárolás (Credit Hold), a 2016. évi IX. tv. szerinti 40 EUR behajtási költségátalány és Ptk. késedelmi kamat kalkuláció, valamint 30+ napos csúszás esetén MOKK-kompatibilis FMH jogi csomag generálás."
+}

@@ -1,0 +1,8 @@
+{
+  "module_id": "16_b2b_thought_leadership_linkedin_szakerto",
+  "action": "GENERATE_POST",
+  "content_type": "voice_dictation",
+  "voice_transcript": "Az autóban ülök, most jöttem el egy 50 fős szoftvercégtől a Váci úton. Tegnap este leállt a szerverterem klímája, amit valami noname olcsó szaki rakott be 2 éve garancia nélkül. 48 fok volt bent mire beértek reggel, majdnem leégett az egész szerverpark. 2 óra alatt tettünk be egy redundáns Daikint és megmentettük a hétfői release-t. A tanulság: 150 ezer forint spórolás a szerelésen majdnem 30 milliós kárt okozott nekik. Írj ebből egy ütős tanulságos LinkedIn posztot cégvezetőknek!",
+  "target_platform": "linkedin",
+  "include_newsletter_variant": true
+}
